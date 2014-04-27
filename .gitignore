@@ -5,6 +5,10 @@
 *.suo
 *.user
 *.sln.docstates
+*.userprefs
+
+# Xamarin Components
+Components/
 
 # Build results
 [Dd]ebug/
