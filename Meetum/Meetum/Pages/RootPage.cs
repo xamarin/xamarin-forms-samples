@@ -5,20 +5,20 @@ namespace Meetum.Views
 {
     public class RootPage : MasterDetailPage
     {
-        MapDisplayPage displayPage;
+        DetailPage displayPage;
         OptionItem previousItem;
 
         public RootPage ()
         {
             Master = CreateMenuPage();
-            Detail = new NavigationPage(new MapDisplayPage { Title = "Accounts" }) {
+            Detail = new NavigationPage(new DetailPage { Title = "Accounts" }) {
                 Tint = Color.FromHex("5AA09B") 
             };
         }
 
-        MapOptionsPage CreateMenuPage()
+        MenuPage CreateMenuPage()
         {
-            var page = new MapOptionsPage { Icon = "settings.png" };
+            var page = new MenuPage { Icon = "settings.png" };
             page.Menu.ItemSelected += (sender, e) => NavigateTo(e.Data as OptionItem);
 
             return page;
@@ -32,7 +32,7 @@ namespace Meetum.Views
             option.Selected = true;
             previousItem = option;
 
-            var page = new MapDisplayPage();
+            var page = new DetailPage();
             page.Title =  option.Title;
 
             if (displayPage == null)

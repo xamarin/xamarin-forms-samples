@@ -31,14 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Converters\GenericValueConverter.cs" />
-    <Compile Include="Views\StripedListView.cs" />
-    <Compile Include="Views\StripedViewCell.cs" />
     <Compile Include="Models\OptionItem.cs" />
     <Compile Include="Views\DarkTextCell.cs" />
     <Compile Include="Models\TabItem.cs" />
-    <Compile Include="Pages\MapOptionsPage.cs" />
-    <Compile Include="Pages\MapDisplayPage.cs" />
     <Compile Include="Pages\RootPage.cs" />
     <Compile Include="Views\MapFactory.cs" />
     <Compile Include="Models\Author.cs" />
@@ -52,6 +47,8 @@
     <Compile Include="Models\Point.cs" />
     <Compile Include="Models\TestData.cs" />
     <Compile Include="Meetum.cs" />
+    <Compile Include="Pages\DetailPage.cs" />
+    <Compile Include="Pages\MenuPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.QuickUI.Core">
@@ -69,7 +66,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Models\Poi.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.QuickUI.1.0.6175\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.QuickUI.targets" Condition="Exists('..\packages\Xamarin.QuickUI.1.0.6175\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.QuickUI.targets')" />

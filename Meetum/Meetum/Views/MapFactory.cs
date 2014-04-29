@@ -11,6 +11,8 @@ namespace Meetum.Views
 {
     public static class MapFactory
     {
+        static readonly Position xamarin = new Position(37.797536, -122.401933);
+
         public static StackLayout InitalizeList (ContentPage parent)
         {
             var data = LoadData ();
@@ -57,38 +59,56 @@ namespace Meetum.Views
                 });
             };
 
-            var buttonAddressFromPosition = new Button { Text = "Address From Position", TextColor = Color.White };
-            buttonAddressFromPosition.Clicked += async (e, a) => {
-                var addresses = (await (new Geocoder ()).GetAddressesForPositionAsync (new Position (41.8902, 12.4923))).ToList ();
-                foreach (var ad in addresses)
-                    Debug.WriteLine (ad);
+            parent.ToolbarItems.Add(new ToolbarItem("Filter", "filter.png", async () => {
+                await parent.DisplayActionSheet ("Filter By", null, null, "Accounts", "Opportunities", "Leads");
+            }));
+
+            var buttonZoomIn = new Button { Text = "Zoom In", TextColor = Color.White };
+            buttonZoomIn.Clicked += (e, a) => map.MoveToRegion (map.VisibleRegion.WithZoom (5f));
+
+            var buttonZoomOut = new Button { Text = "Zoom Out", TextColor = Color.White };
+            buttonZoomOut.Clicked += (e, a) => map.MoveToRegion (map.VisibleRegion.WithZoom (1 / 3f));
+
+            var mapTypeButton = new Button { Text = "Map Type", TextColor = Color.White };
+            mapTypeButton.Clicked += async (e, a) => {
+                var result = await parent.DisplayActionSheet ("Select Map Type", null, null, "Street", "Satellite", "Hybrid");
+                switch (result) {
+                case "Street":
+                    map.MapType = MapType.Street;
+                    break;
+                case "Satellite":
+                    map.MapType = MapType.Satellite;
+                    break;
+                case "Hybrid":
+                    map.MapType = MapType.Hybrid;
+                    break;
+                }
             };
 
-            parent.ToolbarItems.Add(new ToolbarItem("Zoom In", "zoom_in.png", () => map.MoveToRegion (map.VisibleRegion.WithZoom (5f))));
-            parent.ToolbarItems.Add(new ToolbarItem("Zoom Out", "zoom_out.png", () => map.MoveToRegion (map.VisibleRegion.WithZoom (1 / 3f))));
-            parent.ToolbarItems.Add(new ToolbarItem("Map Type", "map.png", async ()=> {
-                    var result = await parent.DisplayActionSheet ("Select Map Type", null, null, "Street", "Satellite", "Hybrid");
-                    switch (result) {
-                    case "Street":
-                        map.MapType = MapType.Street;
-                        break;
-                    case "Satellite":
-                        map.MapType = MapType.Satellite;
-                        break;
-                    case "Hybrid":
-                        map.MapType = MapType.Hybrid;
-                        break;
-                    }
-                }));
-                
-            var stack = new StackLayout { Spacing = 0, BackgroundColor = Color.FromHex("DAD0C8")};
+            var myLocationButton = new Button { Text = "My Location", TextColor = Color.White };
+            myLocationButton.Clicked += (e, a) => map.MoveToRegion(MapSpan.FromCenterAndRadius(xamarin, Distance.FromMiles(0.1)));
+
+            var stack = new StackLayout { Spacing = 0, BackgroundColor = Color.FromHex("A19887")};
 
             map.VerticalOptions = LayoutOptions.FillAndExpand;
             map.HeightRequest = 100;
             map.WidthRequest = 960;
-
             stack.Children.Add (searchAddress);
             stack.Children.Add (map);
+
+            var buttonStack = new StackLayout { 
+                Orientation = StackOrientation.Horizontal,
+                Spacing = 30,
+                Padding = new Thickness(20, 0, 20, 0)
+            };
+
+            buttonStack.Children.Add (mapTypeButton);
+            buttonStack.Children.Add (buttonZoomIn);
+            buttonStack.Children.Add (buttonZoomOut);
+            buttonStack.Children.Add (myLocationButton);
+
+            // Wrap in a horizonal scroll view to handle small screens.
+            stack.Children.Add(new ScrollView { Content = buttonStack, HeightRequest = 44, Orientation = ScrollView.ScrollOrientation.Horizontal });
 
             return stack;
         }
@@ -123,8 +143,7 @@ namespace Meetum.Views
                 };
                 return pin;
             }).ToList();
-
-            var xamarin = new Position(37.797536, -122.401933);;
+                
             var m = new Map(MapSpan.FromCenterAndRadius(xamarin, Distance.FromMiles(0.1)));
 
             foreach(var p in pins) 

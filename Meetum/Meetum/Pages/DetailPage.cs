@@ -1,14 +1,13 @@
 using Xamarin.QuickUI;
 using System.Collections.ObjectModel;
-using System.Reflection.Emit;
 
 namespace Meetum.Views
 {
-    public class MapDisplayPage : TabbedPage
+    public class DetailPage : TabbedPage
     {
         readonly ObservableCollection<TabItem> buttons = new ObservableCollection<TabItem>();
 
-        public MapDisplayPage()
+        public DetailPage()
         {
             BackgroundColor = Color.Black;
 
@@ -27,7 +26,7 @@ namespace Meetum.Views
             });
         }
 
-        Page CreateMapTab ()
+        static Page CreateMapTab ()
         {
             var page = new ContentPage();
             page.Content = MapFactory.InitializeMap(page);
@@ -38,12 +37,11 @@ namespace Meetum.Views
             return page;
         }
 
-        Page CreateListTab ()
+        static Page CreateListTab ()
         {
             var page = new ContentPage();
             page.Content = MapFactory.InitalizeList(page);
 
-            //page.SetBinding(BindableObject.BindingContextProperty, "Tab2");
             page.SetBinding(Page.TitleProperty, "Title");
             page.SetBinding(Page.IconProperty, "Icon");
 
