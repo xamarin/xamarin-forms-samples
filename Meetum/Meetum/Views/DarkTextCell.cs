@@ -7,6 +7,5 @@ using System.Linq;
 
 namespace Meetum.Views
 {
-    
     public class DarkTextCell : TextCell { }
 }

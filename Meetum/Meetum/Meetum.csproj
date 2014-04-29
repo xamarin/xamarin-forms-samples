@@ -34,13 +34,24 @@
     <Compile Include="Converters\GenericValueConverter.cs" />
     <Compile Include="Views\StripedListView.cs" />
     <Compile Include="Views\StripedViewCell.cs" />
-    <Compile Include="Pages\SearchPage.cs" />
     <Compile Include="Models\OptionItem.cs" />
     <Compile Include="Views\DarkTextCell.cs" />
     <Compile Include="Models\TabItem.cs" />
-    <Compile Include="Pages\CustomerMapDisplayView.cs" />
-    <Compile Include="Pages\CustomerMapOptionsView.cs" />
-    <Compile Include="Views\CustomerMapFactory.cs" />
+    <Compile Include="Pages\MapOptionsPage.cs" />
+    <Compile Include="Pages\MapDisplayPage.cs" />
+    <Compile Include="Pages\RootPage.cs" />
+    <Compile Include="Views\MapFactory.cs" />
+    <Compile Include="Models\Author.cs" />
+    <Compile Include="Models\Author2.cs" />
+    <Compile Include="Models\Author3.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Label.cs" />
+    <Compile Include="Models\Link.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\POI.cs" />
+    <Compile Include="Models\Point.cs" />
+    <Compile Include="Models\TestData.cs" />
+    <Compile Include="Meetum.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.QuickUI.Core">
@@ -52,9 +63,13 @@
     <Reference Include="Xamarin.QuickUI.Xaml">
       <HintPath>..\packages\Xamarin.QuickUI.1.0.6175\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.QuickUI.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Models\Poi.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.QuickUI.1.0.6175\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.QuickUI.targets" Condition="Exists('..\packages\Xamarin.QuickUI.1.0.6175\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.QuickUI.targets')" />
@@ -64,4 +79,10 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Xamarin.QuickUI.1.0.6175\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.QuickUI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.QuickUI.1.0.6175\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.QuickUI.targets'))" />
   </Target>
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\Poi.json" />
+  </ItemGroup>
 </Project>

@@ -13,6 +13,7 @@ namespace Meetum.Android
         {
             base.OnCreate (bundle);
 
+            Meetum.Init(typeof(Meetum).Assembly);
             QuickUI.Init(this, bundle);
             QuickUIMaps.Init(this, bundle);
 
@@ -22,7 +23,7 @@ namespace Meetum.Android
 
         static Page BuildView()
         {
-            return new SearchPage();
+            return new RootPage();
         }
     }
 }

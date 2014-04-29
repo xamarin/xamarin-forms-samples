@@ -93,24 +93,19 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
-    <Reference Include="Xamarin.QuickUI.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Xamarin.QuickUI.Core">
       <HintPath>..\packages\Xamarin.QuickUI.1.0.6175\lib\MonoTouch10\Xamarin.QuickUI.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.QuickUI.Maps, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Xamarin.QuickUI.Maps">
       <HintPath>..\packages\Xamarin.QuickUI.Maps.1.0.6175\lib\MonoTouch10\Xamarin.QuickUI.Maps.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.QuickUI.Maps.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Xamarin.QuickUI.Maps.iOS">
       <HintPath>..\packages\Xamarin.QuickUI.Maps.1.0.6175\lib\MonoTouch10\Xamarin.QuickUI.Maps.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.QuickUI.Platform.iOS, Version=1.0.5190.31761, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Xamarin.QuickUI.Platform.iOS">
       <HintPath>..\packages\Xamarin.QuickUI.1.0.6175\lib\MonoTouch10\Xamarin.QuickUI.Platform.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.QuickUI.Xaml, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Xamarin.QuickUI.Xaml">
       <HintPath>..\packages\Xamarin.QuickUI.1.0.6175\lib\MonoTouch10\Xamarin.QuickUI.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>

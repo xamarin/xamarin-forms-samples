@@ -45,34 +45,30 @@
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="Mono.Android.Support.v13" />
-    <Reference Include="Xamarin.QuickUI.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Xamarin.QuickUI.1.0.6175\lib\MonoAndroid10\Xamarin.QuickUI.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.QuickUI.Maps, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Xamarin.QuickUI.Maps.1.0.6175\lib\MonoAndroid10\Xamarin.QuickUI.Maps.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.QuickUI.Maps.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Xamarin.QuickUI.Maps.1.0.6175\lib\MonoAndroid10\Xamarin.QuickUI.Maps.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.QuickUI.Platform.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Xamarin.QuickUI.1.0.6175\lib\MonoAndroid10\Xamarin.QuickUI.Platform.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.QuickUI.Xaml, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Xamarin.QuickUI.1.0.6175\lib\MonoAndroid10\Xamarin.QuickUI.Xaml.dll</HintPath>
-    </Reference>
     <Reference Include="GooglePlayServicesLib">
       <HintPath>..\Components\googleplayservices-13.0\lib\android\GooglePlayServicesLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.QuickUI.Core">
+      <HintPath>..\packages\Xamarin.QuickUI.1.0.6175\lib\MonoAndroid10\Xamarin.QuickUI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.QuickUI.Maps">
+      <HintPath>..\packages\Xamarin.QuickUI.Maps.1.0.6175\lib\MonoAndroid10\Xamarin.QuickUI.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.QuickUI.Maps.Android">
+      <HintPath>..\packages\Xamarin.QuickUI.Maps.1.0.6175\lib\MonoAndroid10\Xamarin.QuickUI.Maps.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.QuickUI.Platform.Android">
+      <HintPath>..\packages\Xamarin.QuickUI.1.0.6175\lib\MonoAndroid10\Xamarin.QuickUI.Platform.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.QuickUI.Xaml">
+      <HintPath>..\packages\Xamarin.QuickUI.1.0.6175\lib\MonoAndroid10\Xamarin.QuickUI.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers\DarkTextCellRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -109,4 +105,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Xamarin.QuickUI.1.0.6175\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.QuickUI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.QuickUI.1.0.6175\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.QuickUI.targets'))" />
   </Target>
+  <ItemGroup>
+    <Folder Include="Renderers\" />
+  </ItemGroup>
 </Project>

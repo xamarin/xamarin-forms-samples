@@ -18,6 +18,7 @@ namespace Meetum.iOS
         {
             window = new UIWindow (UIScreen.MainScreen.Bounds);
             
+            Meetum.Init(typeof(Meetum).Assembly);
             QuickUI.Init();
             QuickUIMaps.Init();
 
@@ -29,7 +30,7 @@ namespace Meetum.iOS
 
         static UIViewController BuildView()
         {
-            var root = new SearchPage();
+            var root = new RootPage();
             var controller = root.CreateViewController();
             return controller;
         }
