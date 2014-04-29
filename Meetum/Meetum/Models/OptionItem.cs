@@ -10,6 +10,7 @@ namespace Meetum.Views
 	{
         public string Title { get; set; }
         public string Subtitle { get; set; }
+        public bool Selected { get; set; }
 	}
 }
 

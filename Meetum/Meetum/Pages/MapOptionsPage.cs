@@ -14,7 +14,7 @@ namespace Meetum.Views
     public class MapOptionsPage : ContentPage
     {
         static readonly List<OptionItem> OptionItems = new List<OptionItem> {
-            new OptionItem { Title = "Dashboard", Subtitle = "" },
+//            new OptionItem { Title = "Dashboard", Subtitle = "" },
             new OptionItem { Title = "Favorites", Subtitle = "" },
             new OptionItem { Title = "Accounts", Subtitle = "3" },
             new OptionItem { Title = "Opportunities", Subtitle = "103" },
