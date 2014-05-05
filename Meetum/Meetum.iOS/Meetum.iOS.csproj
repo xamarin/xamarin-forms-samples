@@ -89,6 +89,9 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -126,6 +129,7 @@
     <BundleResource Include="Resources\Default-Portrait%402x.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Data\Poi.json" />
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
@@ -135,13 +139,8 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Renderers\DarkTextCellRenderer.cs" />
   </ItemGroup>
+  <Import Project="..\Meetup.Shared\Meetup.Shared.projitems" Label="Shared" Condition="Exists('..\Meetup.Shared\Meetup.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\Meetum\Meetum.csproj">
-      <Project>{2025E1CB-D139-482E-B35E-A2C35082A207}</Project>
-      <Name>Meetum</Name>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup />
   <Import Project="..\packages\Xamarin.QuickUI.1.0.6175\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.QuickUI.targets" Condition="Exists('..\packages\Xamarin.QuickUI.1.0.6175\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.QuickUI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
