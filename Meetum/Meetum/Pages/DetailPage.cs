@@ -31,6 +31,7 @@ namespace Meetum.Views
             var page = new ContentPage();
             page.Content = MapFactory.InitializeMap(page);
 
+            page.SetBinding(BindableObject.BindingContextProperty, "MapTab");
             page.SetBinding(Page.TitleProperty, "Title");
             page.SetBinding(Page.IconProperty, "Icon");
 
@@ -42,6 +43,7 @@ namespace Meetum.Views
             var page = new ContentPage();
             page.Content = MapFactory.InitalizeList(page);
 
+            page.SetBinding(BindableObject.BindingContextProperty, "ListTab");
             page.SetBinding(Page.TitleProperty, "Title");
             page.SetBinding(Page.IconProperty, "Icon");
 
