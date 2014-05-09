@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
+# Visual Studio 2012
 VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetum.iOS", "Meetum.iOS\Meetum.iOS.csproj", "{6A02ABA0-EE87-4C04-A065-BEF98D7F4E53}"
@@ -9,15 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetum.Android", "Meetum.An
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetum.WindowsPhone", "Meetum.WindowsPhone\Meetum.WindowsPhone.csproj", "{91CD0EDB-85F3-4281-B340-1DA6977C233B}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Meetup.Shared", "Meetup.Shared\Meetup.Shared.shproj", "{2DDBD0EB-9989-4194-86D0-216F141CB69A}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Meetup.Shared", "Meetup.Shared\Meetup.Shared.shproj", "2DDBD0EB-9989-4194-86D0-216F141CB69A"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Meetup.Shared\Meetup.Shared.projitems*{2ddbd0eb-9989-4194-86d0-216f141cb69a}*SharedItemsImports = 13
-		Meetup.Shared\Meetup.Shared.projitems*{83491f6d-ba09-477d-9dc0-3e670794579f}*SharedItemsImports = 4
-		Meetup.Shared\Meetup.Shared.projitems*{91cd0edb-85f3-4281-b340-1da6977c233b}*SharedItemsImports = 4
-		Meetup.Shared\Meetup.Shared.projitems*{6a02aba0-ee87-4c04-a065-bef98d7f4e53}*SharedItemsImports = 4
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|ARM = Ad-Hoc|ARM
@@ -192,10 +186,16 @@ Global
 		{91CD0EDB-85F3-4281-B340-1DA6977C233B}.Release|x86.Build.0 = Release|x86
 		{91CD0EDB-85F3-4281-B340-1DA6977C233B}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Meetum.iOS\Meetum.iOS.csproj
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Meetup.Shared\Meetup.Shared.projitems*{2ddbd0eb-9989-4194-86d0-216f141cb69a}*SharedItemsImports = 13
+		Meetup.Shared\Meetup.Shared.projitems*{83491f6d-ba09-477d-9dc0-3e670794579f}*SharedItemsImports = 4
+		Meetup.Shared\Meetup.Shared.projitems*{91cd0edb-85f3-4281-b340-1da6977c233b}*SharedItemsImports = 4
+		Meetup.Shared\Meetup.Shared.projitems*{6a02aba0-ee87-4c04-a065-bef98d7f4e53}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
