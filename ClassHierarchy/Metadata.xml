@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>5181B971-4D1E-4BF0-BD03-76CB6D60DD3C</ID>
+	<IsFullApplication>true</IsFullApplication>
+	<Level>Intermediate</Level>
+	<Tags>Reflection, User interface</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+</SampleMetadata>
