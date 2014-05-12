@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Core"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:RssFeedWithImages;assembly=RssFeedWithImages"
+             x:Class="RssFeedWithImages.RssFeedPage">
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <local:RssFeed x:Key="rssFeed"
+                     Url="http://earthobservatory.nasa.gov/Feeds/rss/eo_iotd.rss" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <StackLayout BindingContext="{StaticResource rssFeed}">
+    
+    <Label Text="{Binding Title}"
+           Font="Bold,Large"
+           XAlign="Center" />
+
+    <ListView ItemSource="{Binding Items}"
+              ItemSelected="OnListViewItemSelected">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ImageCell Text="{Binding Title}"
+                     Detail="{Binding PubDate}"
+                     ImageSource="{Binding Thumbnail}" />    
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>
