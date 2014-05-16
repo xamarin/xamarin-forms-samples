@@ -21,6 +21,7 @@ namespace Todo
 			};
 			listView.ItemTemplate = new DataTemplate (typeof (TodoItemCell));
 
+			// These commented-out lines were used to test the ListView prior to integrating the database
 //			listView.ItemSource = new string [] { "Buy pears", "Buy oranges", "Buy mangos", "Buy apples", "Buy bananas" };
 //			listView.ItemSource = new TodoItem [] { 
 //				new TodoItem {Name = "Buy pears`"}, 
@@ -35,7 +36,7 @@ namespace Todo
 				listView.ItemSource = new string [1] {""};
 
 			listView.ItemSelected += (sender, e) => {
-				var todoItem = (TodoItem)e.Data;
+				var todoItem = (TodoItem)e.SelectedItem;
 				var todoPage = new TodoItemPage();
 				todoPage.BindingContext = todoItem;
 				Navigation.Push(todoPage);

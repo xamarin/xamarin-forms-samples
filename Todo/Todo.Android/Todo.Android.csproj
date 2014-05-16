@@ -16,8 +16,6 @@
     <AssemblyName>QuickTodo.Android</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
-    <ProductVersion>12.0.0</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,16 +50,16 @@
       <HintPath>..\packages\SQLite.Net.Platform.XamarinAndroid.2.0.2\lib\MonoAndroid\SQLite.Net.Platform.XamarinAndroid.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.v4">
-      <HintPath>..\Components\xamandroidsupportv4-18-4.19.0.1\lib\android\Xamarin.Android.Support.v4.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Android.Support.v4.19.0.2\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform.Android">
-      <HintPath>..\packages\Xamarin.Forms.Master.1.0.6471\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.1.0.6183\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\packages\Xamarin.Forms.Master.1.0.6471\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.1.0.6183\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\packages\Xamarin.Forms.Master.1.0.6471\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.1.0.6183\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +84,7 @@
     <AndroidResource Include="Resources\drawable\check2x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <Import Project="../packages/Xamarin.Forms.1.0.6183/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Todo\Todo.csproj">
       <Project>{5F610EA1-9E35-4870-AE9B-5E18B4B4D5B8}</Project>
@@ -95,11 +94,4 @@
   <ItemGroup>
     <Folder Include="Resources\raw\" />
   </ItemGroup>
-  <ItemGroup>
-    <XamarinComponentReference Include="xamandroidsupportv4-18">
-      <Version>4.19.0.1</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
-  </ItemGroup>
-  <Import Project="../packages/Xamarin.Forms.Master.1.0.6471/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.Master.targets" Condition="Exists('../packages/Xamarin.Forms.Master.1.0.6471/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.Master.targets')" />
 </Project>
