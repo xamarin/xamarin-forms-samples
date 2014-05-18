@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetum.Android", "Meetum.An
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetum.WindowsPhone", "Meetum.WindowsPhone\Meetum.WindowsPhone.csproj", "{91CD0EDB-85F3-4281-B340-1DA6977C233B}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Meetup.Shared", "Meetup.Shared\Meetup.Shared.shproj", "2DDBD0EB-9989-4194-86D0-216F141CB69A"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Meetup.Shared", "Meetup.Shared\Meetup.Shared.shproj", "{2DDBD0EB-9989-4194-86D0-216F141CB69A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +62,7 @@ Global
 		{6A02ABA0-EE87-4C04-A065-BEF98D7F4E53}.AppStore|Mixed Platforms.Deploy.0 = AppStore|iPhone
 		{6A02ABA0-EE87-4C04-A065-BEF98D7F4E53}.AppStore|x86.ActiveCfg = AppStore|iPhone
 		{6A02ABA0-EE87-4C04-A065-BEF98D7F4E53}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{6A02ABA0-EE87-4C04-A065-BEF98D7F4E53}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{6A02ABA0-EE87-4C04-A065-BEF98D7F4E53}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{6A02ABA0-EE87-4C04-A065-BEF98D7F4E53}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{6A02ABA0-EE87-4C04-A065-BEF98D7F4E53}.Debug|iPhone.Build.0 = Debug|iPhone
@@ -111,9 +112,7 @@ Global
 		{83491F6D-BA09-477D-9DC0-3E670794579F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{83491F6D-BA09-477D-9DC0-3E670794579F}.Debug|ARM.ActiveCfg = Debug|Any CPU
 		{83491F6D-BA09-477D-9DC0-3E670794579F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{83491F6D-BA09-477D-9DC0-3E670794579F}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{83491F6D-BA09-477D-9DC0-3E670794579F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{83491F6D-BA09-477D-9DC0-3E670794579F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{83491F6D-BA09-477D-9DC0-3E670794579F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{83491F6D-BA09-477D-9DC0-3E670794579F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{83491F6D-BA09-477D-9DC0-3E670794579F}.Debug|Mixed Platforms.Deploy.0 = Debug|Any CPU
