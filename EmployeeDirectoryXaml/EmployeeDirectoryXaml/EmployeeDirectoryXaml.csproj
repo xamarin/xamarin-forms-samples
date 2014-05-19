@@ -61,15 +61,13 @@
     <Compile Include="Services\IDirectoryService.cs" />
     <Compile Include="Services\LdapDirectoryService.cs" />
     <Compile Include="Services\MemoryDirectoryService.cs" />
-    <Compile Include="Views\LoginXaml.xaml.cs">
-      <DependentUpon>LoginXaml.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\SearchListXaml.xaml.cs">
       <DependentUpon>SearchListXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utilities\MD5.cs" />
     <Compile Include="Services\IPhoneFeatureService.cs" />
     <Compile Include="Data\FileCache.cs" />
+    <Compile Include="Views\LoginView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -114,7 +112,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Views\EmployeeXaml.xaml" />
     <EmbeddedResource Include="Views\EmployeeListXaml.xaml" />
-    <EmbeddedResource Include="Views\LoginXaml.xaml" />
     <EmbeddedResource Include="Views\SearchListXaml.xaml" />
   </ItemGroup>
   <Import Project="../packages/Xamarin.Forms.Master.1.0.6471/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.Master.targets" Condition="Exists('../packages/Xamarin.Forms.Master.1.0.6471/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.Master.targets')" />
