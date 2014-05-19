@@ -126,6 +126,10 @@
     <BundleResource Include="Resources\DetailsPlaceholder%402x.jpg" />
     <BundleResource Include="Resources\Placeholder.jpg" />
     <BundleResource Include="Resources\Placeholder%402x.jpg" />
+    <BundleResource Include="Resources\logo.png" />
+    <BundleResource Include="Resources\logo%402x.png" />
+    <BundleResource Include="Resources\login_box.png" />
+    <BundleResource Include="Resources\login_box%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
