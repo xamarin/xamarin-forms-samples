@@ -81,17 +81,9 @@ namespace AnimationSampler
             isCurrentPage = false;
             System.Diagnostics.Debug.WriteLine("OnDisappearing");
         }
-
-        Task<bool> task;
-
         async void AnimationLoop()
         {
-
-           
-
             bool backwards = false;
-
-            
 
             while (isCurrentPage)
             {

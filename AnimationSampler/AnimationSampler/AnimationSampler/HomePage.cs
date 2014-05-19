@@ -35,6 +35,13 @@ namespace AnimationSampler
                         {
                             new TextCell
                             {
+                                Text = "Spinning Text",
+                                Command = navigateCommands,
+                                CommandParameter = typeof(SpinningTextAnimationPage)
+                            },
+
+                            new TextCell
+                            {
                                 Text = "Fading Text",
                                 Command = navigateCommands,
                                 CommandParameter = typeof(FadingTextAnimationPage)
