@@ -9,7 +9,7 @@ namespace FormsGallery
     {
         public HomePage()
         {
-            Command<Type> navigateCommands = 
+            Command<Type> navigateCommand = 
                 new Command<Type>((Type pageType) =>
                 {
                     if (pageType == null)
@@ -45,63 +45,53 @@ namespace FormsGallery
                             new TextCell
                             {
                                 Text = "Label",
-                                Command = navigateCommands,
+                                Command = navigateCommand,
                                 CommandParameter = typeof(LabelDemoPage)
                             },
 
                             new TextCell
                             {
                                 Text = "Image",
-                                Command = navigateCommands,
+                                Command = navigateCommand,
                                 CommandParameter = typeof(ImageDemoPage)
                             },
 
                             new TextCell
                             {
                                 Text = "BoxView",
-                                Command = navigateCommands,
+                                Command = navigateCommand,
                                 CommandParameter = typeof(BoxViewDemoPage)
                             },
 
                             new TextCell
                             {
                                 Text = "WebView",
-                                Command = navigateCommands,
+                                Command = navigateCommand,
                                 CommandParameter = typeof(WebViewDemoPage)
                             },
 
                             new TextCell
                             {
                                 Text = "Map",
-                                Command = navigateCommands,
+                                Command = navigateCommand,
                                 CommandParameter = typeof(MapDemoPage)
                             }
                         }, 
 
-                        new TableSection("Views to Indicate Activity")
-                        {
-                            new TextCell
-                            {
-                                Text = "ActivityIndicator",
-                                Command = navigateCommands,
-                                CommandParameter = typeof(ActivityIndicatorDemoPage)
-                            },
-
-                            new TextCell
-                            {
-                                Text = "ProgressBar",
-                                Command = navigateCommands,
-                                CommandParameter = typeof(ProgressBarDemoPage)
-                            }
-                        },
-
-                        new TableSection("Views for Commands")
+                        new TableSection("Views that Initiate Commands")
                         {
                             new TextCell
                             {
                                 Text = "Button",
-                                Command = navigateCommands,
+                                Command = navigateCommand,
                                 CommandParameter = typeof(ButtonDemoPage)
+                            },
+
+                            new TextCell
+                            {
+                                Text = "SearchBar",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(SearchBarDemoPage)
                             }
                         },
 
@@ -110,35 +100,35 @@ namespace FormsGallery
                             new TextCell
                             {
                                 Text = "Slider (double)",
-                                Command = navigateCommands,
+                                Command = navigateCommand,
                                 CommandParameter = typeof(SliderDemoPage)
                             },
 
                             new TextCell
                             {
                                 Text = "Stepper (double)",
-                                Command = navigateCommands,
+                                Command = navigateCommand,
                                 CommandParameter = typeof(StepperDemoPage)
                             },
 
                             new TextCell
                             {
                                 Text = "Switch (bool)",
-                                Command = navigateCommands,
+                                Command = navigateCommand,
                                 CommandParameter = typeof(SwitchDemoPage)
                             },
 
                             new TextCell
                             {
                                 Text = "DatePicker",
-                                Command = navigateCommands,
+                                Command = navigateCommand,
                                 CommandParameter = typeof(DatePickerDemoPage)
                             },
 
                             new TextCell
                             {
                                 Text = "TimePicker",
-                                Command = navigateCommands,
+                                Command = navigateCommand,
                                 CommandParameter = typeof(TimePickerDemoPage)
                             }
                         },
@@ -148,15 +138,49 @@ namespace FormsGallery
                             new TextCell
                             {
                                 Text = "Entry (single line)",
-                                Command = navigateCommands,
+                                Command = navigateCommand,
                                 CommandParameter = typeof(EntryDemoPage)
                             },
 
                             new TextCell
                             {
                                 Text = "Editor (multiple lines)",
-                                Command = navigateCommands,
+                                Command = navigateCommand,
                                 CommandParameter = typeof(EditorDemoPage)
+                            }
+                        },
+
+                        new TableSection("Views to Indicate Activity")
+                        {
+                            new TextCell
+                            {
+                                Text = "ActivityIndicator",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(ActivityIndicatorDemoPage)
+                            },
+
+                            new TextCell
+                            {
+                                Text = "ProgressBar",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(ProgressBarDemoPage)
+                            }
+                        },
+
+                        new TableSection("Views that Display Collections")
+                        {
+                            new TextCell
+                            {
+                                Text = "Picker",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(PickerDemoPage)
+                            },
+
+                            new TextCell
+                            {
+                                Text = "ListView",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(ListViewDemoPage)
                             }
                         }
                     }
