@@ -20,6 +20,7 @@ namespace FormsGallery.WinPhone
             InitializeComponent();
 
             Forms.Init();
+            Xamarin.FormsMaps.Init();
             Content = FormsGallery.App.GetMainPage().ConvertPageToUIElement(this);
         }
     }

@@ -19,6 +19,7 @@ namespace FormsGallery.Droid
             base.OnCreate(bundle);
 
             Xamarin.Forms.Forms.Init(this, bundle);
+            Xamarin.FormsMaps.Init(this, bundle);
 
             SetPage(App.GetMainPage());
         }

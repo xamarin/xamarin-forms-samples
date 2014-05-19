@@ -68,6 +68,13 @@ namespace FormsGallery
                                 Text = "WebView",
                                 Command = navigateCommands,
                                 CommandParameter = typeof(WebViewDemoPage)
+                            },
+
+                            new TextCell
+                            {
+                                Text = "Map",
+                                Command = navigateCommands,
+                                CommandParameter = typeof(MapDemoPage)
                             }
                         }, 
 

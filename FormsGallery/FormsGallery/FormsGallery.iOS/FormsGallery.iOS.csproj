@@ -11,7 +11,7 @@
     <RootNamespace>FormsGallery.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>FormsTemplateiOS</AssemblyName>
-    <NuGetPackageImportStamp>9b17a7f9</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>f9c2c03e</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -93,22 +93,31 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
-    <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\..\packages\Xamarin.Forms.Master.1.0.6661\lib\MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Xamarin.Forms.Master.1.0.6673\lib\MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Forms.Platform.iOS">
-      <HintPath>..\..\packages\Xamarin.Forms.Master.1.0.6661\lib\MonoTouch10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Maps">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.Master.1.0.6673\lib\MonoTouch10\Xamarin.Forms.Maps.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\..\packages\Xamarin.Forms.Master.1.0.6661\lib\MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Maps.iOS">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.Master.1.0.6673\lib\MonoTouch10\Xamarin.Forms.Maps.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS, Version=1.0.5249.19833, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Xamarin.Forms.Master.1.0.6673\lib\MonoTouch10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Xamarin.Forms.Master.1.0.6673\lib\MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
-  <Import Project="..\..\packages\Xamarin.Forms.Master.1.0.6661\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Master.targets" Condition="Exists('..\..\packages\Xamarin.Forms.Master.1.0.6661\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Master.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.Master.1.0.6673\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Master.targets" Condition="Exists('..\..\packages\Xamarin.Forms.Master.1.0.6673\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Master.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.Master.1.0.6661\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Master.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.Master.1.0.6661\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Master.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.Master.1.0.6673\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Master.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.Master.1.0.6673\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Master.targets'))" />
   </Target>
 </Project>

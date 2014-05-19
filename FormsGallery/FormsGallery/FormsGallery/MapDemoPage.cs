@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
-// Maps requires Xamarin.Forms.Maps assembly, 
-//  a platform-specific call to Xamarin.FormsMaps.Init(),
-//  and platform-specific permission.
+// Map requires:
+//      - Xamarin.Forms.Maps and Xamarin.Forms.Maps.* assemblies, 
+//      - a platform-specific call to Xamarin.FormsMaps.Init() in:
+//              - iOS: AppDelegate.cs
+//              - Android: MainActivity.cs
+//              - WP: MainPage.xaml.cs 
+//      - platform-specific permission:
+//              - iOS: None
+//              -
+//              - WP: WMAppManifest.xaml, Capabilities, ID_CAP_MAP
 
 namespace FormsGallery
 {
