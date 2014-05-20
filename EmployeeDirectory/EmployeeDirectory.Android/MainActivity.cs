@@ -19,7 +19,7 @@ namespace EmployeeDirectory.Android
 			CopyInfoIntoWorkingFolder ();
 
 			Xamarin.Forms.Forms.Init (this, bundle);
-			//EmployeeDirectoryCSharp.App.PhoneFeatureService = new AndroidPhoneFeatureService ();
+			EmployeeDirectoryCSharp.App.PhoneFeatureService = new AndroidPhoneFeatureService ();
 			SetPage (EmployeeDirectoryCSharp.App.GetMainPage ());
 		}
 
