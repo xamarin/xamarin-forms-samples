@@ -3,7 +3,7 @@
 	<ID>CB688DAB-D9C1-4851-8B2E-F194EC6473F0</ID>
 	<IsFullApplication>true</IsFullApplication>
 	<Level>Intermediate</Level>
-	<Tags>Layout, Touch, Animation</Tags>
+	<Tags>User Interface, Touch, Graphics, Xamarin.Forms</Tags>
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>

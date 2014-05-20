@@ -3,7 +3,7 @@
 	<ID>	8371df9b-73a5-41d1-a360-0babfadd2891</ID>
   	<IsFullApplication>false</IsFullApplication>
 	<Level>Intermediate</Level>
-	<Tags>User Interface</Tags>
+	<Tags>User Interface, Xamarin.Forms</Tags>
 	<SupportedPlatforms>Android, iOS</SupportedPlatforms>
     <LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
