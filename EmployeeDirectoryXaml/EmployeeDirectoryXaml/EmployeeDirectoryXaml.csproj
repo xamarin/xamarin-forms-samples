@@ -37,9 +37,6 @@
     <Compile Include="Views\EmployeeXaml.xaml.cs">
       <DependentUpon>EmployeeXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\EmployeeListXaml.xaml.cs">
-      <DependentUpon>EmployeeListXaml.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Data\IFavoritesRepository.cs" />
     <Compile Include="Data\Person.cs" />
     <Compile Include="Data\PropertyAttribute.cs" />
@@ -68,6 +65,7 @@
     <Compile Include="Services\IPhoneFeatureService.cs" />
     <Compile Include="Data\FileCache.cs" />
     <Compile Include="Views\LoginView.cs" />
+    <Compile Include="Views\EmployeeListView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -111,7 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\EmployeeXaml.xaml" />
-    <EmbeddedResource Include="Views\EmployeeListXaml.xaml" />
     <EmbeddedResource Include="Views\SearchListXaml.xaml" />
   </ItemGroup>
   <Import Project="../packages/Xamarin.Forms.Master.1.0.6471/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.Master.targets" Condition="Exists('../packages/Xamarin.Forms.Master.1.0.6471/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.Master.targets')" />
