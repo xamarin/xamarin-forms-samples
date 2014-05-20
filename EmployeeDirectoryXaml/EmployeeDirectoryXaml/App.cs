@@ -15,7 +15,7 @@ namespace EmployeeDirectory
 		/// * Memory (uses CSV file)
 		/// * LDAP (requires network)
 		/// </remarks>
-		public static IDirectoryService Service;
+		public static IDirectoryService service;
 
 		public static IPhoneFeatureService PhoneFeatureService;
 
@@ -26,25 +26,10 @@ namespace EmployeeDirectory
 
 		public static Page GetMainPage ()
 		{
-			//
-			// Create the service
-			//
+			service = MemoryDirectoryService.FromCsv ("XamarinDirectory.csv").Result;
 
-			//
-			// Local CSV file
-			Service = MemoryDirectoryService.FromCsv ("XamarinDirectory.csv").Result;
-
-			//
-			// LDAP service - uncomment to try it out.
-			//Service = new LdapDirectoryService {
-			//	Host = "ldap.mit.edu",
-			//	SearchBase = "dc=mit,dc=edu",
-			//};
-
-			var employeeList = new EmployeeListXaml ();
-
-			var mainNav = new NavigationPage (employeeList);
-
+			var employeeListView = new EmployeeListView ();
+			var mainNav = new NavigationPage (employeeListView);
 			return mainNav;
 		}
 	}
