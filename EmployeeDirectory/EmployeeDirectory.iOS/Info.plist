@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>EmployeeDirectoryXaml</string>
+	<string>EmployeeDirectory</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.your-company.EmployeeDirectoryXaml.iOS</string>
+	<string>com.your-company.EmployeeDirectory.iOS</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
