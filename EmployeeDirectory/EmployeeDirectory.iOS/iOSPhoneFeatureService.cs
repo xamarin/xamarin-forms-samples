@@ -3,10 +3,11 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.MessageUI;
 using Xamarin.Forms;
+using EmployeeDirectoryCSharp;
 
 namespace EmployeeDirectory.iOS
 {
-	public class iOSPhoneFeatureService //: IPhoneFeatureService
+	public class iOSPhoneFeatureService : IPhoneFeatureService
 	{
 		public bool Call (string phoneNumber)
 		{
