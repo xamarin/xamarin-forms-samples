@@ -52,21 +52,21 @@ namespace ScaleAndRotate
 
                             new TextCell
                             {
-                                Text = "Rotate",
+                                Text = "Rotation",
                                 Command = navigateCommand,
-                           //     CommandParameter = typeof(RotateDemoPage)
+                                CommandParameter = typeof(RotationDemoPage)
                             },
 
                             new TextCell
                             {
-                                Text = "RotateX",
+                                Text = "RotationX",
                                 Command = navigateCommand,
                             //    CommandParameter = typeof(RotateXDemoPage)
                             },
 
                             new TextCell
                             {
-                                Text = "RotateY",
+                                Text = "RotationY",
                                 Command = navigateCommand,
                           //      CommandParameter = typeof(RotateYDemoPage)
                             }
