@@ -39,6 +39,7 @@
     <Compile Include="Views\LoginView.cs" />
     <Compile Include="Views\SearchListView.cs" />
     <Compile Include="Views\TableItems.cs" />
+    <Compile Include="IPhoneFeatureService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="../packages/Xamarin.Forms.Master.1.0.6673/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.Master.targets" />

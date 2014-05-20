@@ -54,7 +54,6 @@
     <Compile Include="Services\LdapDirectoryService.cs" />
     <Compile Include="Services\MemoryDirectoryService.cs" />
     <Compile Include="Utilities\MD5.cs" />
-    <Compile Include="Services\IPhoneFeatureService.cs" />
     <Compile Include="Data\FileCache.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
