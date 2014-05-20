@@ -88,6 +88,8 @@
     <AndroidResource Include="Resources\raw\XamarinDirectory.csv" />
     <AndroidResource Include="Resources\raw\XamarinFavorites.xml" />
     <AndroidResource Include="Resources\drawable\Search.png" />
+    <AndroidResource Include="Resources\drawable\logo_2x.png" />
+    <AndroidResource Include="Resources\drawable\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
