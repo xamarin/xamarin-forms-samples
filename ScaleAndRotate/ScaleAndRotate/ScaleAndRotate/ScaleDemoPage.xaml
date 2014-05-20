@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="ScaleAndRotate.ScaleDemoPage">
+  
+  <StackLayout>
+    <Label x:Name="label"
+           Text="SCALE"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+
+    <Grid Padding="10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <!-- Code-behind sets BindingContext to 'scaleSider' -->
+      <Label x:Name="scaleSliderValue"
+             Text="{Binding Value, Mode=OneWay, StringFormat='Scale = {0:F1}'}"
+             Grid.Row="0" Grid.Column="0"
+             YAlign="Center" />
+
+      <!-- Code-behind sets BindingContext to 'label' -->
+      <Slider x:Name="scaleSlider"
+              Value="{Binding Scale, Mode=TwoWay}"
+              Grid.Row="0" Grid.Column="1"
+              Maximum="10" />
+
+      <!-- Code-behind sets BindingContext to 'anchorxStepper' -->
+      <Label x:Name="anchorxStepperValue"
+             Text="{Binding Value, Mode=OneWay, StringFormat='AnchorX = {0:F1}'}"
+             Grid.Row="1" Grid.Column="0"
+             YAlign="Center" />
+
+      <!-- Code-behind sets BindingContext to 'label' -->
+      <Stepper x:Name="anchorxStepper"
+               Value="{Binding AnchorX, Mode=TwoWay}"
+               Grid.Row="1" Grid.Column="1"
+               Maximum="2"
+               Minimum="-1"
+               Increment="0.5" />
+
+      <!-- Code-behind sets BindingContext to 'anchoryStepper' -->
+      <Label x:Name="anchoryStepperValue"
+             Text="{Binding Value, Mode=OneWay, StringFormat='AnchorY = {0:F1}'}"
+             Grid.Row="2" Grid.Column="0"
+             YAlign="Center" />
+
+      <!-- Code-behind sets BindingContext to 'label' -->
+      <Stepper x:Name="anchoryStepper"
+               Value="{Binding AnchorY, Mode=TwoWay}"
+               Grid.Row="2" Grid.Column="1"
+               Maximum="2"
+               Minimum="-1"
+               Increment="0.5" />
+
+    </Grid>
+    
+    
+  </StackLayout>
+</ContentPage>
