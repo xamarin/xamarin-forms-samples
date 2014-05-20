@@ -15,9 +15,9 @@ namespace EmployeeDirectory
 		/// * Memory (uses CSV file)
 		/// * LDAP (requires network)
 		/// </remarks>
-		public static IDirectoryService service;
+		public static IDirectoryService Service { get; set; }
 
-		public static IPhoneFeatureService PhoneFeatureService;
+		public static IPhoneFeatureService PhoneFeatureService { get; set; }
 
 		/// <summary>
 		/// last time the device was used
@@ -26,7 +26,7 @@ namespace EmployeeDirectory
 
 		public static Page GetMainPage ()
 		{
-			service = MemoryDirectoryService.FromCsv ("XamarinDirectory.csv").Result;
+			Service = MemoryDirectoryService.FromCsv ("XamarinDirectory.csv").Result;
 
 			var employeeListView = new EmployeeListView ();
 			var mainNav = new NavigationPage (employeeListView);
