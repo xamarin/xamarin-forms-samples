@@ -42,7 +42,7 @@
     <Compile Include="IPhoneFeatureService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <Import Project="../packages/Xamarin.Forms.Master.1.0.6673/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.Master.targets" />
+  <Import Project="../packages/Xamarin.Forms.Master.1.0.6714/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.Master.targets" />
   <ItemGroup>
     <Folder Include="Views\" />
   </ItemGroup>
@@ -51,17 +51,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\packages\Xamarin.Forms.Master.1.0.6673\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\packages\Xamarin.Forms.Master.1.0.6673\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\EmployeeDirectory\EmployeeDirectory.csproj">
       <Project>{5F610EA1-9E35-4870-AE9B-5E18B4B4D5B8}</Project>
       <Name>EmployeeDirectory</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.Master.1.0.6714\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.Master.1.0.6714\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
