@@ -64,9 +64,6 @@
     <Reference Include="PCLStorage">
       <HintPath>..\packages\PCLStorage.0.9.3\lib\portable-net45+wp8+win8+monoandroid+monotouch\PCLStorage.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net">
-      <HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
-    </Reference>
     <Reference Include="System.Net.Http">
       <HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
     </Reference>
