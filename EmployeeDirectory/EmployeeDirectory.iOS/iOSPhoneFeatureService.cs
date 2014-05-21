@@ -46,9 +46,10 @@ namespace EmployeeDirectory.iOS
 			if (MFMailComposeViewController.CanSendMail) {
 				var composer = new MFMailComposeViewController ();
 				composer.SetToRecipients (new string[] { emailAddress });
-				//TODO: open the Mail View Controller
-//				composer.Finished += (sender, e) => DismissViewController (true, null);
-//				PresentViewController (composer, true, null);
+				composer.SetSubject ("Hello from EmployeeDirectory!");
+
+				composer.Finished += (sender, e) => rootViewController.DismissViewController (true, null);
+				rootViewController.PresentViewController (composer, true, null);
 
 				return true;
 			} else {
@@ -58,7 +59,7 @@ namespace EmployeeDirectory.iOS
 
 		public bool Tweet (string twitterName)
 		{
-			string messageText = string.Format ("Let me introduce to you, the one and only {0} using #xamarin EmployeeDirectory!", TwitterName);
+			string messageText = string.Format ("Let me introduce to you, the one and only {0} using #xamarin EmployeeDirectory!", twitterName);
 
 			var item = new Item {
 				Text = messageText,
