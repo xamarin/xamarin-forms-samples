@@ -158,7 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.social">
-      <InstallationInProgress>True</InstallationInProgress>
       <Version>1.1.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
