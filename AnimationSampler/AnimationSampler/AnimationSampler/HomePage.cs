@@ -20,7 +20,7 @@ namespace AnimationSampler
                         if (constructor.GetParameters().Length == 0)
                         {
                             Page page = (Page)constructor.Invoke(null);
-                            this.Navigation.Push(page);
+                            this.Navigation.PushAsync(page);
                             break;
                         }
                     }
