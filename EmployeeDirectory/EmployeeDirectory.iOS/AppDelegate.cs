@@ -19,10 +19,10 @@ namespace EmployeeDirectory.iOS
 			Forms.Init ();
 
 			CopyInfoIntoWorkingFolder ();
-			EmployeeDirectoryCSharp.App.PhoneFeatureService = new iOSPhoneFeatureService ();
 
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 			window.RootViewController = EmployeeDirectoryCSharp.App.GetMainPage ().CreateViewController ();
+			EmployeeDirectoryCSharp.App.PhoneFeatureService = new iOSPhoneFeatureService (window.RootViewController);
 
 			window.MakeKeyAndVisible ();
 
