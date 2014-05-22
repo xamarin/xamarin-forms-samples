@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace EmployeeDirectoryCSharp
+namespace EmployeeDirectoryUI.CSharp
 {
 	public class GroupHeaderTemplate : ViewCell
 	{

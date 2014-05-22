@@ -5,7 +5,7 @@ using EmployeeDirectory.ViewModels;
 using EmployeeDirectory.Utilities;
 using System.Diagnostics;
 
-namespace EmployeeDirectoryCSharp
+namespace EmployeeDirectoryUI.CSharp
 {
 	public class EmployeeView : ContentPage
 	{
@@ -64,7 +64,7 @@ namespace EmployeeDirectoryCSharp
 		{
 			var personInfo = (PersonViewModel)BindingContext;
 			personInfo.ToggleFavorite ();
-			Navigation.Pop ();
+			Navigation.PopAsync ();
 		}
 
 		private void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
@@ -93,7 +93,7 @@ namespace EmployeeDirectoryCSharp
 
 		private void OnCancelClicked (object sender, EventArgs e)
 		{
-			Navigation.Pop ();
+			Navigation.PopAsync ();
 		}
 
 		private void DownloadImage ()
@@ -104,8 +104,7 @@ namespace EmployeeDirectoryCSharp
 			if (person.HasEmail) {
 				var imageUrl = Gravatar.GetImageUrl (person.Email, IMAGE_SIZE);
 
-				var loader = new ImageLoader { Uri = imageUrl };
-				photo.Source = loader;
+				photo.Source = new UriImageSource { Uri = imageUrl };
 			}
 		}
 	}

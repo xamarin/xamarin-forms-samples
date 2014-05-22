@@ -3,34 +3,24 @@ using Xamarin.Forms;
 using System.Linq;
 using EmployeeDirectory.Data;
 using EmployeeDirectory.ViewModels;
-using EmployeeDirectory;
 
-namespace EmployeeDirectoryCSharp
+namespace EmployeeDirectoryUI.Xaml
 {
-	public class EmployeeListView : ContentPage
+	public partial class EmployeeListXaml : ContentPage
 	{
 		private FavoritesViewModel viewModel;
 		private IFavoritesRepository favoritesRepository;
-		private ListView listView;
 
-		public EmployeeListView ()
+		public EmployeeListXaml ()
 		{
+			InitializeComponent ();
+
 			var toolBarItem = new ToolbarItem ("?", "Search.png", () => {
-				var search = new SearchListView ();
-				Navigation.Push (search);
+				var search = new SearchListXaml();
+				Navigation.PushAsync(search);
 			}, 0, 0);
 
 			ToolbarItems.Add (toolBarItem);
-
-			listView = new ListView () {
-				IsGroupingEnabled = true,
-				GroupHeaderTemplate = new DataTemplate (typeof(GroupHeaderTemplate)),
-				ItemTemplate = new DataTemplate (typeof(ListItemTemplate)),
-			};
-
-			listView.ItemTapped += OnItemSelected;
-			Content = listView;
-			Title = "Employee Directory";
 		}
 
 		protected async override void OnAppearing ()
@@ -38,7 +28,7 @@ namespace EmployeeDirectoryCSharp
 			base.OnAppearing ();
 
 			if (LoginViewModel.ShouldShowLogin (App.LastUseTime))
-				await Navigation.PushModal (new LoginView ());
+				Navigation.PushModalAsync (new LoginXaml ());
 
 			favoritesRepository = await XmlFavoritesRepository.OpenIsolatedStorage ("XamarinFavorites.xml");
 
@@ -50,14 +40,14 @@ namespace EmployeeDirectoryCSharp
 			listView.ItemSource = viewModel.Groups;
 		}
 
-		private void OnItemSelected (object sender, ItemTappedEventArgs e)
+		public void OnItemSelected (object sender, SelectedItemChangedEventArgs e) 
 		{
-			var person = e.Item as Person;
-			var selectedEmployee = new EmployeeView {
+			var person = e.SelectedItem as Person;
+			var employeeView = new EmployeeXaml {
 				BindingContext = new PersonViewModel (person, favoritesRepository)
 			};
 
-			Navigation.Push (selectedEmployee);
+			Navigation.PushModalAsync(employeeView);
 		}
 	}
 }

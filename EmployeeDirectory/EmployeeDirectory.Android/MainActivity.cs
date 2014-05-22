@@ -7,6 +7,7 @@ using Android.Widget;
 using Android.OS;
 using System.IO;
 using EmployeeDirectory;
+using EmployeeDirectoryUI;
 
 namespace EmployeeDirectory.Android
 {
@@ -19,8 +20,8 @@ namespace EmployeeDirectory.Android
 			CopyInfoIntoWorkingFolder ();
 
 			Xamarin.Forms.Forms.Init (this, bundle);
-			EmployeeDirectoryCSharp.App.PhoneFeatureService = new AndroidPhoneFeatureService ();
-			SetPage (EmployeeDirectoryCSharp.App.GetMainPage ());
+			App.PhoneFeatureService = new AndroidPhoneFeatureService ();
+			SetPage (App.GetMainPage (FormsImplementation.Xaml));
 		}
 
 		private void CopyInfoIntoWorkingFolder ()

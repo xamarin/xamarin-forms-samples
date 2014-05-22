@@ -4,7 +4,7 @@ using System.Linq;
 using EmployeeDirectory.Data;
 using EmployeeDirectory.ViewModels;
 
-namespace EmployeeDirectoryCSharp
+namespace EmployeeDirectoryUI.CSharp
 {
 	public class SearchListView : ContentPage
 	{
@@ -71,7 +71,7 @@ namespace EmployeeDirectoryCSharp
 				BindingContext = new PersonViewModel (person, favoritesRepository)
 			};
 					
-			Navigation.Push (employeeView);
+			Navigation.PushAsync (employeeView);
 		}
 	}
 }

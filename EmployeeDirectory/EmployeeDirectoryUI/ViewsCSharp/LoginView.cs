@@ -3,7 +3,7 @@ using Xamarin.Forms;
 using EmployeeDirectory.Data;
 using EmployeeDirectory.ViewModels;
 
-namespace EmployeeDirectoryCSharp
+namespace EmployeeDirectoryUI.CSharp
 {
 	public class LoginView : ContentPage
 	{
@@ -78,10 +78,10 @@ namespace EmployeeDirectoryCSharp
 				.ContinueWith (_ => {
 					App.LastUseTime = System.DateTime.UtcNow;
 
-					Navigation.PopModal ();
+					Navigation.PopAsync ();
 				});
 
-				Navigation.PopModal ();
+				Navigation.PopModalAsync ();
 			} else {
 				DisplayAlert ("Error", loginViewModel.ValidationErrors, "OK", null);
 			}

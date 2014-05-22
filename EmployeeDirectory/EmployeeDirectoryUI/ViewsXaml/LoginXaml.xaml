@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="EmployeeDirectoryUI.Xaml.LoginXaml">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand" Padding="30">
+
+	        <Label Text="Username" />
+	        <Entry Text="{Binding Path=Username}" x:Name="usernameEntry" />
+
+			<Label Text="Password" />
+	        <Entry Text="{Binding Path=Password}" IsPassword="true" x:Name="passwordEntry" />
+
+	        <Button Text="Login" Clicked="OnLoginClicked" />
+			
+			<Button Text="Help" Clicked="OnHelpClicked" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>		
