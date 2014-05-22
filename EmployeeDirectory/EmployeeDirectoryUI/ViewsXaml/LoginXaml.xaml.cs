@@ -12,7 +12,8 @@ namespace EmployeeDirectoryUI.Xaml
 		public LoginXaml ()
 		{
 			InitializeComponent ();
-			BindingContext = new LoginViewModel (App.Service);
+			viewModel = new LoginViewModel (App.Service);
+			BindingContext = viewModel;
 		}
 
 		protected override void OnAppearing ()
