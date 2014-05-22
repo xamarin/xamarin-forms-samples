@@ -9,7 +9,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Xamarin.Forms;
-using EmployeeDirectoryCSharp;
+using EmployeeDirectoryUI;
 
 namespace EmployeeDirectory.Android
 {
