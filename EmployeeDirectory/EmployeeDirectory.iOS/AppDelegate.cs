@@ -6,6 +6,7 @@ using MonoTouch.UIKit;
 using Xamarin.Forms;
 using System.IO;
 using EmployeeDirectory;
+using EmployeeDirectoryUI;
 
 namespace EmployeeDirectory.iOS
 {
@@ -21,8 +22,8 @@ namespace EmployeeDirectory.iOS
 			CopyInfoIntoWorkingFolder ();
 
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			window.RootViewController = EmployeeDirectoryCSharp.App.GetMainPage ().CreateViewController ();
-			EmployeeDirectoryCSharp.App.PhoneFeatureService = new iOSPhoneFeatureService (window.RootViewController);
+			window.RootViewController = App.GetMainPage (FormsImplementation.Xaml).CreateViewController ();
+			App.PhoneFeatureService = new iOSPhoneFeatureService (window.RootViewController);
 
 			window.MakeKeyAndVisible ();
 

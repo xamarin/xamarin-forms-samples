@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using EmployeeDirectoryCSharp;
 using MonoTouch.Foundation;
 using MonoTouch.MessageUI;
 using MonoTouch.UIKit;
 using Xamarin.Forms;
 using Xamarin.Social;
 using Xamarin.Social.Services;
+using EmployeeDirectoryUI;
 
 namespace EmployeeDirectory.iOS
 {
