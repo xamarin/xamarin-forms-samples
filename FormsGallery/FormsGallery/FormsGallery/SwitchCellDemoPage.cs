@@ -3,24 +3,30 @@ using Xamarin.Forms;
 
 namespace FormsGallery
 {
-    class BoxViewDemoPage : ContentPage
+    class SwitchCellDemoPage : ContentPage
     {
-        public BoxViewDemoPage()
+        public SwitchCellDemoPage()
         {
             Label header = new Label
             {
-                Text = "BoxView",
+                Text = "SwitchCell",
                 Font = Font.BoldSystemFontOfSize(50),
                 HorizontalOptions = LayoutOptions.Center
             };
 
-            BoxView boxView = new BoxView
+            TableView tableView = new TableView
             {
-                Color = Color.Accent,
-                WidthRequest = 150,
-                HeightRequest = 150,
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.CenterAndExpand
+                Intent = TableIntent.Form,
+                Root = new TableRoot
+                {
+                    new TableSection
+                    {
+                        new SwitchCell
+                        {
+                            Text = "SwitchCell:"
+                        }
+                    }
+                }
             };
 
             // Accomodate iPhone status bar.
@@ -32,7 +38,7 @@ namespace FormsGallery
                 Children = 
                 {
                     header,
-                    boxView
+                    tableView
                 }
             };
         }

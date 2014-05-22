@@ -3,24 +3,32 @@ using Xamarin.Forms;
 
 namespace FormsGallery
 {
-    class WebViewDemoPage : ContentPage
+    class TextCellDemoPage : ContentPage
     {
-        public WebViewDemoPage()
+        public TextCellDemoPage()
         {
             Label header = new Label
             {
-                Text = "WebView",
+                Text = "TextCell",
                 Font = Font.BoldSystemFontOfSize(50),
                 HorizontalOptions = LayoutOptions.Center
             };
 
-            WebView webView = new WebView
+            TableView tableView = new TableView
             {
-                Source = new UrlWebViewSource
+                Intent = TableIntent.Form,
+                Root = new TableRoot
                 {
-                    Url = "http://blog.xamarin.com/",
-                },
-                VerticalOptions = LayoutOptions.FillAndExpand
+                    new TableSection
+                    {
+                        new TextCell
+                        {
+                            Text = "This is a TextCell",
+                            Detail = "This is some detail text",
+                            Style = TextCellStyle.Vertical
+                        }
+                    }
+                }
             };
 
             // Accomodate iPhone status bar.
@@ -32,7 +40,7 @@ namespace FormsGallery
                 Children = 
                 {
                     header,
-                    webView
+                    tableView
                 }
             };
         }

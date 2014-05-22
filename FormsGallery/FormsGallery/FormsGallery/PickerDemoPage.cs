@@ -1,11 +1,24 @@
 ﻿using System;
-using System.Reflection;
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace FormsGallery
 {
     class PickerDemoPage : ContentPage
     {
+        // Dictionary to get Color from color name.
+        Dictionary<string, Color> nameToColor = new Dictionary<string, Color>
+        {
+            { "Aqua", Color.Aqua },         { "Black", Color.Black },
+            { "Blue", Color.Blue },         { "Fuschia", Color.Fuschia },
+            { "Gray", Color.Gray },         { "Green", Color.Green },
+            { "Lime", Color.Lime },         { "Maroon", Color.Maroon },
+            { "Navy", Color.Navy },         { "Olive", Color.Olive },
+            { "Purple", Color.Purple },     { "Red", Color.Red },
+            { "Silver", Color.Silver },     { "Teal", Color.Teal },
+            { "White", Color.White },       { "Yellow", Color.Yellow }
+        };
+
         public PickerDemoPage()
         {
             Label header = new Label
@@ -21,18 +34,12 @@ namespace FormsGallery
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
 
-            foreach (string color in new string[]
-                {
-                    "Aqua", "Black", "Blue", "Fuschia",
-                    "Gray", "Green", "Lime", "Maroon",
-                    "Navy", "Olive", "Purple", "Red",
-                    "Silver", "Teal", "White", "Yellow"
-                })
+            foreach (string colorName in nameToColor.Keys)
             {
-                picker.Items.Add(color);
+                picker.Items.Add(colorName);
             }
 
-            // Create BoxView for displaying pickedColor
+            // Create BoxView for displaying picked Color
             BoxView boxView = new BoxView
             {
                 WidthRequest = 150,
@@ -49,14 +56,13 @@ namespace FormsGallery
                     }
                     else
                     {
-                        string selectedItem = picker.Items[picker.SelectedIndex];
-                        FieldInfo colorField = typeof(Color).GetTypeInfo().GetDeclaredField(selectedItem);
-                        boxView.Color = (Color)colorField.GetValue(null);
+                        string colorName = picker.Items[picker.SelectedIndex];
+                        boxView.Color = nameToColor[colorName];
                     }
                 };
 
             // Accomodate iPhone status bar.
-            this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 0);
+            this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);
 
             // Build the page.
             this.Content = new StackLayout

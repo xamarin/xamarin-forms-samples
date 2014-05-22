@@ -3,24 +3,27 @@ using Xamarin.Forms;
 
 namespace FormsGallery
 {
-    class BoxViewDemoPage : ContentPage
+    class FrameDemoPage : ContentPage
     {
-        public BoxViewDemoPage()
+        public FrameDemoPage()
         {
             Label header = new Label
             {
-                Text = "BoxView",
+                Text = "Frame",
                 Font = Font.BoldSystemFontOfSize(50),
                 HorizontalOptions = LayoutOptions.Center
             };
 
-            BoxView boxView = new BoxView
+            Frame frame = new Frame
             {
-                Color = Color.Accent,
-                WidthRequest = 150,
-                HeightRequest = 150,
+                OutlineColor = Color.Accent,
+                HasShadow = true,
                 HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.CenterAndExpand
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+                Content = new Label
+                {
+                    Text = "I've been framed!"
+                }
             };
 
             // Accomodate iPhone status bar.
@@ -32,7 +35,7 @@ namespace FormsGallery
                 Children = 
                 {
                     header,
-                    boxView
+                    frame
                 }
             };
         }

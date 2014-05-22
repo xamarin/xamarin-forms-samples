@@ -10,11 +10,12 @@ namespace FormsGallery
         public HomePage()
         {
             Command<Type> navigateCommand = 
-                new Command<Type>((Type pageType) =>
+                new Command<Type>(async (Type pageType) =>
                 {
                     if (pageType == null)
                     {
-                        this.DisplayAlert("Gallery", "Page not yet implemented", "OK", null);
+                        await this.DisplayAlert("Forms Gallery", 
+                            "Page not yet implemented", "OK", null);
                         return;
                     }
 
@@ -29,12 +30,30 @@ namespace FormsGallery
                         {
                             // If so, instantiate it, and navigate to it.
                             Page page = (Page)constructor.Invoke(null);
-                            this.Navigation.Push(page);
+                            await this.Navigation.PushAsync(page);
                             break;
                         }
                     }
                 });
 
+            Command<Tuple<string, string>> alertCommand =
+                new Command<Tuple<string, string>>
+                    (async (Tuple<string, string> display) =>
+                {
+                    if (display == null)
+                    {
+                        await this.DisplayAlert("Forms Gallery",
+                            "Page not yet implemented",
+                            "OK", null);
+                    }
+                    else
+                    {
+                        await this.DisplayAlert(display.Item1,
+                            display.Item2, "OK", null);
+                    }
+                });
+
+            this.Title = "Forms Gallery";
             this.Content = new TableView
                 {
                     Intent = TableIntent.Menu,
@@ -181,6 +200,151 @@ namespace FormsGallery
                                 Text = "ListView",
                                 Command = navigateCommand,
                                 CommandParameter = typeof(ListViewDemoPage)
+                            },
+
+                            new TextCell
+                            {
+                                Text = "TableView for a menu",
+                                Command = alertCommand,
+                                CommandParameter = 
+                                    new Tuple<string, string>
+                                        ("TableView for a menu",
+                                         "You're looking at one! " +
+                                         "This home page consists largely of a TableView " +
+                                         "used as a navigation menu. Each tappable " +
+                                         "item is a TextCell, which are organized " +
+                                         "into TableSection groups.")
+                            },
+
+                            new TextCell
+                            {
+                                Text = "TableView for a form",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(TableViewDemoPage)
+                            }
+                        },
+
+                        new TableSection("Cells")
+                        {
+                            new TextCell
+                            {
+                                Text = "TextCell",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(TextCellDemoPage)
+                            },
+
+                            new TextCell
+                            {
+                                Text = "ImageCell",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(ImageCellDemoPage)
+                            },
+
+                            new TextCell
+                            {
+                                Text = "SwitchCell",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(SwitchCellDemoPage)
+                            },
+
+                            new TextCell
+                            {
+                                Text = "EntryCell",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(EntryCellDemoPage)
+                            }
+                        },
+
+                        new TableSection("Layouts with Single Content")
+                        {
+                            new TextCell
+                            {
+                                Text = "ContentView",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(ContentViewDemoPage)
+                            },
+                            new TextCell
+                            {
+                                Text = "Frame",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(FrameDemoPage)
+                            },
+                            new TextCell
+                            {
+                                Text = "ScrollView",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(ScrollViewDemoPage)
+                            }
+                        },
+
+                        new TableSection("Layouts with Multiple Children")
+                        {
+                            new TextCell
+                            {
+                                Text = "StackLayout",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(StackLayoutDemoPage)
+                            },
+                            new TextCell
+                            {
+                                Text = "AbsoluteLayout",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(AbsoluteLayoutDemoPage)
+                            },
+                            new TextCell
+                            {
+                                Text = "Grid",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(GridDemoPage)
+                            },
+                            new TextCell
+                            {
+                                Text = "RelativeLayout",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(RelativeLayoutDemoPage)
+                            }
+                        },
+
+                        new TableSection("Pages")
+                        {
+                            new TextCell
+                            {
+                                Text = "ContentPage",
+                                Command = alertCommand,
+                                CommandParameter = 
+                                    new Tuple<string, string>("ContentPage",
+                                        "You've probably already seen a few. " +
+                                        "Every page you've navigated to with " +
+                                        "any item above has been a ContentPage.")
+                            },
+                            new TextCell
+                            {
+                                Text = "NavigationPage",
+                                Command = alertCommand,
+                                CommandParameter = 
+                                    new Tuple<string, string>("NavigationPage",
+                                        "You're looking at one! " +
+                                        "This home page is a NavigationPage " +
+                                        "and allows navigating to other pages " +
+                                        "and returning back, safe and sound.")
+                            },
+                            new TextCell
+                            {
+                                Text = "MasterDetailPage",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(MasterDetailPageDemoPage)
+                            },
+                            new TextCell
+                            {
+                                Text = "TabbedPage",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(TabbedPageDemoPage)
+                            },
+                            new TextCell
+                            {
+                                Text = "CarouselPage",
+                                Command = navigateCommand,
+                                CommandParameter = typeof(CarouselPageDemoPage)
                             }
                         }
                     }

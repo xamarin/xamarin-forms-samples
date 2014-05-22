@@ -3,24 +3,31 @@ using Xamarin.Forms;
 
 namespace FormsGallery
 {
-    class BoxViewDemoPage : ContentPage
+    class EntryCellDemoPage : ContentPage
     {
-        public BoxViewDemoPage()
+        public EntryCellDemoPage()
         {
             Label header = new Label
             {
-                Text = "BoxView",
+                Text = "EntryCell",
                 Font = Font.BoldSystemFontOfSize(50),
                 HorizontalOptions = LayoutOptions.Center
             };
 
-            BoxView boxView = new BoxView
+            TableView tableView = new TableView
             {
-                Color = Color.Accent,
-                WidthRequest = 150,
-                HeightRequest = 150,
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.CenterAndExpand
+                Intent = TableIntent.Form,
+                Root = new TableRoot
+                {
+                    new TableSection
+                    {
+                        new EntryCell
+                        {
+                            Label = "EntryCell:",
+                            Placeholder = "Type Text Here"
+                        }
+                    }
+                }
             };
 
             // Accomodate iPhone status bar.
@@ -32,7 +39,7 @@ namespace FormsGallery
                 Children = 
                 {
                     header,
-                    boxView
+                    tableView
                 }
             };
         }

@@ -16,7 +16,7 @@ namespace FormsGallery
 
             Image image = new Image
             {
-                Source = new ImageLoader
+                Source = new UriImageSource
                 {
                     Uri = new Uri("http://xamarin.com/images/index/ide-xamarin-studio.png")
                 },
@@ -24,7 +24,7 @@ namespace FormsGallery
             };
 
             // Accomodate iPhone status bar.
-            this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 0);
+            this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);
 
             // Build the page.
             this.Content = new StackLayout
