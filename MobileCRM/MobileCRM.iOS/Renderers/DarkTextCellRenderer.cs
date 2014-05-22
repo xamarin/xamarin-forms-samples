@@ -1,5 +1,5 @@
 using Xamarin.Forms.Platform.iOS;
-using MobileCRM.Views;
+using MobileCRM.Shared.CustomViews;
 using Xamarin.Forms;
 using MonoTouch.UIKit;
 using MobileCRM.iOS;

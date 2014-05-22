@@ -5,7 +5,8 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Xamarin.Forms;
 using Xamarin;
-using MobileCRM.Views;
+using MobileCRM.Shared.CustomViews;
+using Meetup.Shared.Pages;
 
 namespace MobileCRM.iOS
 {
@@ -18,7 +19,7 @@ namespace MobileCRM.iOS
         {
             window = new UIWindow (UIScreen.MainScreen.Bounds);
             
-            MobileCRM.Init(typeof(MobileCRM).Assembly);
+            MobileCRMApp.Init(typeof(MobileCRMApp).Assembly);
             Forms.Init();
             FormsMaps.Init();
 

@@ -2,7 +2,7 @@
 using Android.OS;
 using Xamarin.Forms;
 using Xamarin;
-using MobileCRM.Views;
+using Meetup.Shared.Pages;
 
 namespace MobileCRM.Android
 {
