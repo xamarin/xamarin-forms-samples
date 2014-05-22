@@ -21,7 +21,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\OptionItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\POI.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Point.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\TabItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\TestData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\CustomerDetailPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\CustomersPages.cs" />

@@ -1,5 +1,5 @@
 ﻿using MobileCRM;
-using MobileCRM.Models;
+using MobileCRM.Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -31,7 +31,7 @@ namespace Meetup.Shared.ViewModels
 
         protected void ExecuteLoadCustomersCommand()
         {
-            if (App.PointsOfInterest != null && Customers.Count != 0)
+            if (MobileCRMApp.PointsOfInterest != null && Customers.Count != 0)
                 return;
 
             var name = string.Empty;
@@ -42,14 +42,14 @@ namespace Meetup.Shared.ViewModels
 #elif WINDOWS_PHONE
 			name = "MobileCRM.WindowsPhone.Data.Poi.json";
 #endif
-            var jsonStream = App.LoadResource(name);
+            var jsonStream = MobileCRMApp.LoadResource(name);
             TestData data = null;
             using (var jsonReader = new StreamReader(jsonStream))
             {
                 var json = jsonReader.ReadToEnd();
                 data = global::Newtonsoft.Json.JsonConvert.DeserializeObject<TestData>(json);
             }
-            App.PointsOfInterest = data.PointsOfInterest;
+            MobileCRMApp.PointsOfInterest = data.PointsOfInterest;
             foreach (var point in data.PointsOfInterest)
                 Customers.Add(point);
 

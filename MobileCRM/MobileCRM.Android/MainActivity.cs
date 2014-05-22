@@ -13,7 +13,7 @@ namespace MobileCRM.Android
         {
             base.OnCreate (bundle);
 
-            App.Init(typeof(App).Assembly);
+            MobileCRMApp.Init(typeof(MobileCRMApp).Assembly);
             Forms.Init(this, bundle);
             FormsMaps.Init(this, bundle);
 

@@ -2,7 +2,7 @@ using Xamarin.Forms;
 using System.Collections.ObjectModel;
 using Meetup.Shared.Pages;
 
-namespace MobileCRM.Views
+namespace Meetup.Shared.Pages
 {
     public class MainPage : TabbedPage
     {

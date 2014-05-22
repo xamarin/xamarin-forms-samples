@@ -4,14 +4,14 @@ using System.Runtime.CompilerServices;
 using System.Resources;
 using System.IO;
 using System.Collections.Generic;
-using MobileCRM.Models;
+using MobileCRM.Shared.Models;
 
 namespace MobileCRM
 {
     /// <summary>
     /// MobileCRM placeholder.
     /// </summary>
-    public static class App
+    public static class MobileCRMApp
     {
         static Assembly _reflectionAssembly;
 

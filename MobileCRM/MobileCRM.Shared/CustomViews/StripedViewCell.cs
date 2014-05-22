@@ -1,6 +1,6 @@
 using Xamarin.Forms;
 
-namespace MobileCRM.Views
+namespace MobileCRM.Shared.CustomViews
 {
     public class StripedViewCell : TextCell { }
 }

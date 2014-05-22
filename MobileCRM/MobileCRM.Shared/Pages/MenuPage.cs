@@ -6,9 +6,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Diagnostics;
+using MobileCRM.Shared.Models;
+using MobileCRM.Shared.CustomViews;
 
 
-namespace MobileCRM.Views
+namespace Meetup.Shared.Pages
 {
 
     public class MenuPage : ContentPage
@@ -34,15 +36,15 @@ namespace MobileCRM.Views
             var label = new ContentView {
                 Padding = new Thickness(10, 36, 0, 5),
                 BackgroundColor = Color.Transparent,
-                Content = new Label {
+                Content = new Xamarin.Forms.Label {
                     Text = "MENU", 
                     TextColor = Color.FromHex("AAAAAA")
                 }
             };
 
             Device.OnPlatform (
-                iOS: () => ((Label)label.Content).Font = Font.SystemFontOfSize (NamedSize.Micro),
-                Android: () => ((Label)label.Content).Font = Font.SystemFontOfSize (NamedSize.Medium)
+                iOS: () => ((Xamarin.Forms.Label)label.Content).Font = Font.SystemFontOfSize (NamedSize.Micro),
+                Android: () => ((Xamarin.Forms.Label)label.Content).Font = Font.SystemFontOfSize (NamedSize.Medium)
             );
 
             layout.Children.Add(label);

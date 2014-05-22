@@ -1,4 +1,4 @@
-﻿using MobileCRM.Models;
+﻿using MobileCRM.Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;

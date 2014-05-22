@@ -36,7 +36,7 @@ namespace Meetup.Shared.ViewModels
         {
             get
             {
-                return loginCommand ?? (loginCommand = new Command(async () => ExecuteLoginCommand()));
+                return loginCommand ?? (loginCommand = new Command(async () => await ExecuteLoginCommand()));
             }
         }
 

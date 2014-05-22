@@ -4,9 +4,10 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using Xamarin.Forms.Maps;
 using Meetup.Shared.Pages;
+using MobileCRM.Shared.Models;
 
 
-namespace MobileCRM.Views
+namespace Meetup.Shared.Pages
 {
     public class RootPage : MasterDetailPage
     {

@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json;
 
-namespace MobileCRM.Models
+namespace MobileCRM.Shared.Models
 {
     public class TestData
     {

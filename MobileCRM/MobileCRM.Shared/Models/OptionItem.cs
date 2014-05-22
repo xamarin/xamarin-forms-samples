@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace MobileCRM.Views
+namespace MobileCRM.Shared.Models
 {
     public class OptionItem
 	{
