@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="EmployeeDirectoryUI.Xaml.EmployeeXaml"
+    Title="Employee">
+    <ContentPage.Content>
+
+    	<StackLayout VerticalOptions="StartAndExpand">
+
+    		<StackLayout Padding="20,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+				<Image x:Name="PersonImage" 
+						WidthRequest="176" HeightRequest="176" 
+						Source="DetailsPlaceholder.jpg" />
+	    		<StackLayout VerticalOptions="StartAndExpand" Orientation="Vertical">
+				    <Label Text="{Binding Path=Person.Name}" x:Name="NameLabel" />
+			        <Button Text="Is Favorite" Clicked="OnFavoriteClicked" IsVisible="{Binding IsFavorite}" />
+			        <Button Text="Make Favorite" Clicked="OnFavoriteClicked" IsVisible="{Binding IsNotFavorite}" />
+				</StackLayout>
+			</StackLayout>
+
+			<ListView x:Name="listView" ItemSource="{Binding PropertyGroups}" IsGroupingEnabled="true" ItemSelected="OnItemSelected" >
+			 <ListView.GroupHeaderTemplate>
+			    <DataTemplate>
+			      <ViewCell>
+			     	 <Label Text="{Binding Title}" YAlign="Center" />
+			      </ViewCell>
+			    </DataTemplate>
+			  </ListView.GroupHeaderTemplate>
+			  <ListView.ItemTemplate>
+			    <DataTemplate>
+			      <ViewCell>
+			     	 <StackLayout Padding="20,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+			        	<Label Text="{Binding Name}" YAlign="Center" Font="Bold,Medium"/>
+			        	<Label Text="{Binding Value}" YAlign="Center" />
+			         </StackLayout>
+			      </ViewCell>
+			    </DataTemplate>
+			  </ListView.ItemTemplate>
+			</ListView>
+	        
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>	
