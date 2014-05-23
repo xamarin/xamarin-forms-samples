@@ -23,8 +23,10 @@ namespace MobileCRM.Shared.Pages
             this.SetBinding(Page.TitleProperty, "Title");
             this.SetBinding(Page.IconProperty, "Icon");
             var map = MakeMap();
+            var stack = new StackLayout { Spacing = 0 };
 
-            var searchAddress = new SearchBar { Placeholder = "Search Address" };
+#if __ANDROID__ || __IOS__
+            var searchAddress = new SearchBar { Placeholder = "Search Address", BackgroundColor = Color.White };
 
             searchAddress.SearchButtonPressed += async (e, a) =>
             {
@@ -47,20 +49,37 @@ namespace MobileCRM.Shared.Pages
                 });
             };
 
-            /*ToolbarItems.Add(new ToolbarItem("Filter", "filter.png", async () =>
+            stack.Children.Add(searchAddress);
+
+            ToolbarItems.Add(new ToolbarItem("Filter", "filter.png", async () =>
             {
                 var page = new ContentPage();
                 var result = await page.DisplayAlert("Title", "Message", "Accept", "Cancel");
                 Debug.WriteLine("success: {0}", result);
-            }));*/
+            }));
 
-        
-            var stack = new StackLayout { Spacing = 0 };
+
+
+#elif WINDOWS_PHONE
+           ToolbarItems.Add(new ToolbarItem("filter", "filter.png", async () =>
+            {
+                var page = new ContentPage();
+                var result = await page.DisplayAlert("Title", "Message", "Accept", "Cancel");
+                Debug.WriteLine("success: {0}", result);
+            }));
+
+          ToolbarItems.Add(new ToolbarItem("search", "search.png", async () =>
+            {
+            }));
+#endif
+
+
+
 
             map.VerticalOptions = LayoutOptions.FillAndExpand;
             map.HeightRequest = 100;
             map.WidthRequest = 960;
-            stack.Children.Add(searchAddress);
+
             stack.Children.Add(map);
             Content = stack;
         }

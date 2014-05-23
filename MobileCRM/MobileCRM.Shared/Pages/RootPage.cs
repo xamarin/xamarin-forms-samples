@@ -17,7 +17,7 @@ namespace MobileCRM.Shared.Pages
         public RootPage ()
         {
             
-            var optionsPage = new MenuPage { Icon = "settings.png", Title = "settings" };
+            var optionsPage = new MenuPage { Icon = "settings.png", Title = "menu" };
             
             optionsPage.Menu.ItemSelected += (sender, e) => NavigateTo(e.SelectedItem as OptionItem);
 

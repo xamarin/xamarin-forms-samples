@@ -125,6 +125,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="search.png" />
     <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="filter.png" />
     <Content Include="README_FIRST.txt" />
