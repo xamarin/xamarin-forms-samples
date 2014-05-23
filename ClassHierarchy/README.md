@@ -13,9 +13,6 @@ the StackLayout and ScrollView from code.
 The solution contains four projects: the iOS, Android, and Windows Phone projects are small and standard
 Xamarin.Forms stub applications. All the common application code is in the ClassHierarchy portable class library.
 
-**An issue exist as of 5/8/14 and Build 1.0.6560: 
-the default XAML namespace will soon undergo a change. **
-
 Author
 ------
 
