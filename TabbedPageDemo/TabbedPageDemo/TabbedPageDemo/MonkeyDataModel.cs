@@ -25,7 +25,7 @@ namespace TabbedPageDemo
                     Family = "Hominidae",
                     Subfamily = "Ponginae",
                     Genus = "Pongo",
-                    PhotoUrl="http://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Orangutan_-Zoologischer_Garten_Berlin-8a.jpg/202px-Orangutan_-Zoologischer_Garten_Berlin-8a.jpg"
+                    PhotoUrl="http://upload.wikimedia.org/wikipedia/commons/b/be/Orang_Utan%2C_Semenggok_Forest_Reserve%2C_Sarawak%2C_Borneo%2C_Malaysia.JPG"
                 },
                 new MonkeyDataModel
                 {

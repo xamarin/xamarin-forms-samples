@@ -16,6 +16,7 @@
     <Label Text="{Binding Title}"
            Font="Bold,Large"
            XAlign="Center" />
+    
     <ListView ItemsSource="{Binding Items}"
               ItemSelected="OnListViewItemSelected">
       <ListView.ItemTemplate>

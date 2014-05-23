@@ -21,9 +21,9 @@
                  HorizontalOptions="Center" />
 
           <!-- Picture -->
-          <!--<Image Source="{Binding PhotoUrl}"
+          <Image Source="{Binding PhotoUrl}"
                  WidthRequest="200" 
-                 HeightRequest="200" />-->
+                 HeightRequest="200" />
 
           <StackLayout Padding="50, 10">
 

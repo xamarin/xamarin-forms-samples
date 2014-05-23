@@ -9,7 +9,7 @@ namespace TabbedPageDemo
         {
             InitializeComponent();
 
-            this.ItemSource = MonkeyDataModel.All;
+            this.ItemsSource = MonkeyDataModel.All;
         }
     }
 }

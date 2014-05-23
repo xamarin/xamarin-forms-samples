@@ -17,10 +17,6 @@ namespace RssFeedWithImages
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public RssFeed()
-        {
-        }
-
         public string Url
         {
             set
@@ -70,14 +66,11 @@ namespace RssFeedWithImages
                                   })
                                   .ToList();
 
-                // Because Title and Items are probably bound to UI items,
+                // Although Title and Items are probably bound to UI items,
                 //  and UI items can only be accessd from the UI thread, 
-                //  only set the properties on the UI thread.
-                Device.BeginInvokeOnMainThread(() =>
-                {
-                    this.Title = title;
-                    this.Items = new ObservableCollection<RssItem>(list);
-                });
+                //  it's OK to set data bound properties on a secondary thread.
+                this.Title = title;
+                this.Items = new ObservableCollection<RssItem>(list);
             }, null);
         }
 
