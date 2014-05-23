@@ -20,27 +20,17 @@ namespace TableParts
                     {
                         new TableSection("Section 1 Title")
                         {
-
-
-                            // The Text and Detail strings are vertically stacked
-                            // in Android and Windows Phone but horizontally
-                            // stacked on iPhone.
-
-
                             new TextCell
                             {
                                 Text = "TextCell Text",
-                                Detail = "TextCell Detail"
+                                Detail = "TextCell Detail",
+                                Style = TextCellStyle.Vertical
                             },
-
-
-                            // The image below doesn't show up on iPhone and Android
-
-
                             new ImageCell
                             {
                                 Text = "ImageCell Text",
                                 Detail = "ImageCell Detail",
+                                Style = TextCellStyle.Vertical,
                                 ImageSource = "http://xamarin.com/images/index/ide-xamarin-studio.png"
                             },
                             new EntryCell
@@ -62,13 +52,6 @@ namespace TableParts
                             {
                                 Text = "SwitchCell:"
                             },
-
-
-                            // This custom ViewCell raises an exception on Windows Phone
-                            // because ViewToRendererConverter.WrapperControl returns infinity
-                            // from its MeasureOverride.
-
-
                             new ViewCell
                             {
                                 View = new StackLayout
