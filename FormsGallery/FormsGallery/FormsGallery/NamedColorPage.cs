@@ -7,11 +7,15 @@ using Xamarin.Forms;
 
 namespace FormsGallery
 {
-    // Used in TabbedPageDemoPage & CarouselPageDemoPage.
-    //  Expects BindingContext to be of type NamedColor.
-    class NamedColorPageTemplate : ContentPage
+    // Used in:
+    //      MasterDetailPageDemoPage (as a page)
+    //      TabbedPageDemoPage (as a page template)
+    //      CarouselPageDemoPage (as a page template)
+    //
+    //  Expects BindingContext to be of type NamedColor!
+    class NamedColorPage : ContentPage
     {
-        public NamedColorPageTemplate(bool includeBigLabel)
+        public NamedColorPage(bool includeBigLabel)
         {
             // This binding is necessary to label the tabs in 
             //      the TabbedPage.

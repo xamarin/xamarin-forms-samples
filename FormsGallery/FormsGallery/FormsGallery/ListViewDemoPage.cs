@@ -66,7 +66,7 @@ namespace FormsGallery
             ListView listView = new ListView
             {
                 // Source of data items.
-                ItemSource = people,
+                ItemsSource = people,
 
                 // Define template for displaying each item.
                 // (Argument of DataTemplate constructor is called for 

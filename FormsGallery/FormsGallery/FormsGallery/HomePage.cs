@@ -9,6 +9,7 @@ namespace FormsGallery
     {
         public HomePage()
         {
+            // Define two commands for the items in the TableView.
             Command<Type> navigateCommand = 
                 new Command<Type>(async (Type pageType) =>
                 {
@@ -348,6 +349,7 @@ namespace FormsGallery
                             }
                         }
                     }
+                    
                 };
         }
     }

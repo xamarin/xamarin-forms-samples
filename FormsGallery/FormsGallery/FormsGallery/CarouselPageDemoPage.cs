@@ -13,19 +13,19 @@ namespace FormsGallery
         {
             this.Title = "CarouselPage";
 
-            this.ItemSource = new NamedColor[] 
+            this.ItemsSource = new NamedColor[] 
             {
-                new NamedColor { Name = "Red", Color = Color.Red },
-                new NamedColor { Name = "Yellow", Color = Color.Yellow },
-                new NamedColor { Name = "Green", Color = Color.Green },
-                new NamedColor { Name = "Aqua", Color = Color.Aqua },
-                new NamedColor { Name = "Blue", Color = Color.Blue },
-                new NamedColor { Name = "Purple", Color = Color.Purple }
+                new NamedColor("Red", Color.Red),
+                new NamedColor("Yellow", Color.Yellow),
+                new NamedColor("Green", Color.Green),
+                new NamedColor("Aqua", Color.Aqua),
+                new NamedColor("Blue", Color.Blue),
+                new NamedColor("Purple", Color.Purple)
             };
 
             this.ItemTemplate = new DataTemplate(() =>
             {
-                return new NamedColorPageTemplate(true);
+                return new NamedColorPage(true);
             });
         }
     }
