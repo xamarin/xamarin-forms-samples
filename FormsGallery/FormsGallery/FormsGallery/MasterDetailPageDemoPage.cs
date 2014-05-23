@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using Xamarin.Forms;
 
 namespace FormsGallery
@@ -49,7 +48,9 @@ namespace FormsGallery
                 {
                     // Set the BindingContext of the detail page.
                     this.Detail.BindingContext = args.SelectedItem;
-                    this.IsPresented = true;
+
+                    // Show the detail page.
+                    this.IsPresented = false;
                 };
 
             // Initialize the ListView selection.

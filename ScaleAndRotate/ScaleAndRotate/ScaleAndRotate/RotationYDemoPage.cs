@@ -3,22 +3,22 @@ using Xamarin.Forms;
 
 namespace ScaleAndRotate
 {
-    class RotationDemoPage : ContentPage
+    class RotationYDemoPage : ContentPage
     {
-        public RotationDemoPage()
+        public RotationYDemoPage()
         {
-            this.Title = "Rotation";
+            this.Title = "RotationY";
 
             // Label to be transformed.
             Label label = new Label
             {
-                Text = "ROTATION",
+                Text = "ROTATIONY",
                 Font = Font.SystemFontOfSize(50),
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
 
-            // Label and Slider for Rotation property.
+            // Label and Slider for RotationY property.
             Label rotationSliderValue = new Label
             {
                 YAlign = TextAlignment.Center
@@ -36,12 +36,12 @@ namespace ScaleAndRotate
             // Set Bindings.
             rotationSliderValue.BindingContext = rotationSlider;
             rotationSliderValue.SetBinding(Label.TextProperty,
-                new Binding("Value", BindingMode.OneWay, 
-                            null, null, "Rotation = {0:F0}\u00B0"));
+                new Binding("Value", BindingMode.OneWay,
+                            null, null, "RotationY = {0:F0}\u00B0"));
 
             rotationSlider.BindingContext = label;
             rotationSlider.SetBinding(Slider.ValueProperty,
-                new Binding("Rotation", BindingMode.TwoWay));
+                new Binding("RotationY", BindingMode.TwoWay));
 
             // Label and Slider for AnchorX property.
             Label anchorxStepperValue = new Label
@@ -63,7 +63,7 @@ namespace ScaleAndRotate
             // Set bindings.
             anchorxStepperValue.BindingContext = anchorxStepper;
             anchorxStepperValue.SetBinding(Label.TextProperty,
-                new Binding("Value", BindingMode.OneWay, 
+                new Binding("Value", BindingMode.OneWay,
                             null, null, "AnchorX = {0:F1}"));
 
             anchorxStepper.BindingContext = label;
@@ -90,7 +90,7 @@ namespace ScaleAndRotate
             // Set bindings.
             anchoryStepperValue.BindingContext = anchoryStepper;
             anchoryStepperValue.SetBinding(Label.TextProperty,
-                new Binding("Value", BindingMode.OneWay, 
+                new Binding("Value", BindingMode.OneWay,
                             null, null, "AnchorY = {0:F1}"));
 
             anchoryStepper.BindingContext = label;
@@ -129,6 +129,7 @@ namespace ScaleAndRotate
                     }
                 }
             };
+
         }
     }
 }

@@ -10,11 +10,11 @@ namespace ScaleAndRotate
         public HomePage()
         {
             Command<Type> navigateCommand = 
-                new Command<Type>((Type pageType) =>
+                new Command<Type>(async (Type pageType) =>
                 {
                     if (pageType == null)
                     {
-                        this.DisplayAlert("ScaleAndRotate", 
+                        await this.DisplayAlert("ScaleAndRotate", 
                                     "Page not yet implemented", "OK", null);
                         return;
                     }
@@ -30,11 +30,13 @@ namespace ScaleAndRotate
                         {
                             // If so, instantiate it, and navigate to it.
                             Page page = (Page)constructor.Invoke(null);
-                            this.Navigation.Push(page);
+                            await this.Navigation.PushAsync(page);
                             break;
                         }
                     }
                 });
+
+            this.Title = "Scale and Rotate";
 
             this.Content = new TableView
                 {
@@ -61,14 +63,14 @@ namespace ScaleAndRotate
                             {
                                 Text = "RotationX",
                                 Command = navigateCommand,
-                            //    CommandParameter = typeof(RotateXDemoPage)
+                                CommandParameter = typeof(RotationXDemoPage)
                             },
 
                             new TextCell
                             {
                                 Text = "RotationY",
                                 Command = navigateCommand,
-                          //      CommandParameter = typeof(RotateYDemoPage)
+                                CommandParameter = typeof(RotationYDemoPage)
                             }
                         }
                     }

@@ -7,6 +7,9 @@ namespace ScaleAndRotate
     {
         public ScaleDemoPage()
         {
+            this.Title = "Scale";
+
+            // Label to be transformed.
             Label label = new Label
             {
                 Text = "SCALE",
@@ -32,7 +35,8 @@ namespace ScaleAndRotate
             // Set Bindings.
             scaleSliderValue.BindingContext = scaleSlider;
             scaleSliderValue.SetBinding(Label.TextProperty, 
-                new Binding("Value", BindingMode.OneWay, null, null, "Scale = {0:F1}"));
+                new Binding("Value", BindingMode.OneWay, 
+                            null, null, "Scale = {0:F1}"));
 
             scaleSlider.BindingContext = label;
             scaleSlider.SetBinding(Slider.ValueProperty,
@@ -58,7 +62,8 @@ namespace ScaleAndRotate
             // Set bindings.
             anchorxStepperValue.BindingContext = anchorxStepper;
             anchorxStepperValue.SetBinding(Label.TextProperty,
-                new Binding("Value", BindingMode.OneWay, null, null, "AnchorX = {0:F1}"));
+                new Binding("Value", BindingMode.OneWay, 
+                            null, null, "AnchorX = {0:F1}"));
 
             anchorxStepper.BindingContext = label;
             anchorxStepper.SetBinding(Stepper.ValueProperty, 
@@ -84,7 +89,8 @@ namespace ScaleAndRotate
             // Set bindings.
             anchoryStepperValue.BindingContext = anchoryStepper;
             anchoryStepperValue.SetBinding(Label.TextProperty,
-                new Binding("Value", BindingMode.OneWay, null, null, "AnchorY = {0:F1}"));
+                new Binding("Value", BindingMode.OneWay, 
+                            null, null, "AnchorY = {0:F1}"));
 
             anchoryStepper.BindingContext = label;
             anchoryStepper.SetBinding(Stepper.ValueProperty, 
