@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace Meetup.Shared.ViewModels
+namespace MobileCRM.Shared.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged, INotifyPropertyChanging
     {

@@ -15,11 +15,7 @@ namespace MobileCRM.iOS
         {
             var cellView = base.GetCell (item, tv);
 
-            cellView.BackgroundColor = Color.Transparent.ToUIColor();
-            cellView.TextLabel.TextColor = Color.FromHex("FFFFFF").ToUIColor();
-            cellView.DetailTextLabel.TextColor = Color.FromHex("AAAAAA").ToUIColor();
-
-            tv.SeparatorColor = Color.FromHex("444444").ToUIColor();
+            tv.SeparatorColor = Color.FromHex("00FFFFFF").ToUIColor();
 
             return cellView;
         }

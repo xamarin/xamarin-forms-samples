@@ -9,6 +9,7 @@
     <Import_RootNamespace>Meetup.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CustomViews\ListTextCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Color.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MobileCRM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Author.cs" />
@@ -36,11 +37,5 @@
     <Compile Include="$(MSBuildThisFileDirectory)CustomViews\DarkTextCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CustomViews\StripedListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CustomViews\StripedViewCell.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Data\Poi.json" />
   </ItemGroup>
 </Project>

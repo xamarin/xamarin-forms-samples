@@ -5,7 +5,7 @@ using System.Text;
 using System.Linq;
 using Xamarin.Forms.Maps;
 
-namespace Meetup.Shared.ViewModels
+namespace MobileCRM.Shared.ViewModels
 {
     public class MapViewModel : CustomersViewModel
     {

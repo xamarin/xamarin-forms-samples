@@ -1,10 +1,10 @@
-﻿using Meetup.Shared.ViewModels;
+﻿using MobileCRM.Shared.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
-namespace Meetup.Shared.Pages
+namespace MobileCRM.Shared.Pages
 {
     public class LoginPage : ContentPage
     {

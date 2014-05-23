@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("MobileCRM.Android.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("MobileCRMAndroid.Resource", IsApplication=true)]
 
-namespace MobileCRM.Android
+namespace MobileCRMAndroid
 {
 	
 	
@@ -1530,7 +1530,13 @@ namespace MobileCRM.Android
 		{
 			
 			// aapt resource value: 0x7f060087
-			public const int LightTheme = 2131099783;
+			public const int MyTheme = 2131099783;
+			
+			// aapt resource value: 0x7f060089
+			public const int MyTheme_ActionBar_TitleTextStyle = 2131099785;
+			
+			// aapt resource value: 0x7f060088
+			public const int MyTheme_ActionBarStyle = 2131099784;
 			
 			// aapt resource value: 0x7f060067
 			public const int TextAppearance_AppCompat_Base_CompactMenu_Dialog = 2131099751;
@@ -2298,7 +2304,7 @@ namespace MobileCRM.Android
 					16843055,
 					16843056,
 					16843057,
-					16843788};
+					16843829};
 			
 			// aapt resource value: 4
 			public const int MenuView_android_headerBackground = 4;

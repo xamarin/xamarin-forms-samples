@@ -1,11 +1,12 @@
-﻿using Meetup.Shared.ViewModels;
+﻿using MobileCRM.Shared.ViewModels;
 using MobileCRM.Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
+using MobileCRM.Shared.CustomViews;
 
-namespace Meetup.Shared.Pages
+namespace MobileCRM.Shared.Pages
 {
     public class CustomersPages : ContentPage
     {
@@ -23,13 +24,14 @@ namespace Meetup.Shared.Pages
 
             var list = new ListView();
             list.ItemSource = ViewModel.Customers;
-            list.BackgroundColor = Helpers.Color.Tan.ToFormsColor();
 
+#if __ANDROID__
+            var cell = new DataTemplate(typeof(ListTextCell));
+#else
             var cell = new DataTemplate(typeof(TextCell));
+#endif
 
-            cell.SetValue(TextCell.TextColorProperty, Color.Black);
-            cell.SetValue(TextCell.DetailColorProperty, Color.Gray);
-
+            
             cell.SetBinding(TextCell.TextProperty, "DisplayLabel");
             cell.SetBinding(TextCell.DetailProperty, "DisplayCategory");
 

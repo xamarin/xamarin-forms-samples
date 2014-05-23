@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace Meetup.Shared.ViewModels
+namespace MobileCRM.Shared.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {

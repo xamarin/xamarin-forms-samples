@@ -6,7 +6,8 @@ using MonoTouch.UIKit;
 using Xamarin.Forms;
 using Xamarin;
 using MobileCRM.Shared.CustomViews;
-using Meetup.Shared.Pages;
+using MobileCRM.Shared.Pages;
+using MobileCRM.Shared.Pages;
 
 namespace MobileCRM.iOS
 {
@@ -23,6 +24,15 @@ namespace MobileCRM.iOS
             Forms.Init();
             FormsMaps.Init();
 
+
+            UINavigationBar.Appearance.BackgroundColor = UIColor.FromRGBA(0, 0, 0, 0);
+            UINavigationBar.Appearance.TintColor = MobileCRM.Shared.Helpers.Color.Blue.ToUIColor();
+            UINavigationBar.Appearance.BarTintColor = UIColor.White;
+            UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes()
+            {
+                TextColor = UIColor.White
+            });
+   
             window.RootViewController = BuildView();
             window.MakeKeyAndVisible ();
             

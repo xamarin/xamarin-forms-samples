@@ -10,7 +10,7 @@ using MobileCRM.Shared.Models;
 using MobileCRM.Shared.CustomViews;
 
 
-namespace Meetup.Shared.Pages
+namespace MobileCRM.Shared.Pages
 {
 
     public class MenuPage : ContentPage
@@ -29,16 +29,12 @@ namespace Meetup.Shared.Pages
 
         public MenuPage ()
         {
-            BackgroundColor = Color.FromHex("333333");
-
-            var layout = new StackLayout { Spacing = 0 };
+            var layout = new StackLayout { Spacing = 0, VerticalOptions = LayoutOptions.FillAndExpand };
 
             var label = new ContentView {
                 Padding = new Thickness(10, 36, 0, 5),
-                BackgroundColor = Color.Transparent,
                 Content = new Xamarin.Forms.Label {
                     Text = "MENU", 
-                    TextColor = Color.FromHex("AAAAAA")
                 }
             };
 
@@ -51,15 +47,13 @@ namespace Meetup.Shared.Pages
 
             Menu = new ListView {
                 ItemSource = OptionItems,
-                VerticalOptions = LayoutOptions.StartAndExpand,
-                BackgroundColor = Color.Transparent
+                VerticalOptions = LayoutOptions.FillAndExpand
             };
 
             var cell = new DataTemplate(typeof(DarkTextCell));
             cell.SetBinding(TextCell.TextProperty, "Title");
             cell.SetBinding(TextCell.DetailProperty, "Subtitle");
 
-            cell.SetValue(VisualElement.BackgroundColorProperty, Color.Transparent);
             Menu.ItemTemplate = cell;
 
             layout.Children.Add(Menu);

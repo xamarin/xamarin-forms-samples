@@ -144,16 +144,30 @@
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
+    <InterfaceDefinition Include="Renderers\CustomerDetailsStoryboard.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="PieChartView.cs" />
+    <Compile Include="Renderers\BlueNavigationRenderer.cs" />
+    <Compile Include="Renderers\CustomerDetailsPageRenderer.cs" />
     <Compile Include="Renderers\DarkTextCellRenderer.cs" />
+    <Compile Include="Renderers\CustomerDetailsStoryboard.cs" />
+    <Compile Include="Renderers\CustomerDetailsStoryboard.designer.cs">
+      <DependentUpon>CustomerDetailsStoryboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderers\StoryBoardRenderer.cs" />
   </ItemGroup>
   <Import Project="..\Meetup.Shared\Meetup.Shared.projitems" Label="Shared" Condition="Exists('..\Meetup.Shared\Meetup.Shared.projitems')" />
   <Import Project="..\MobileCRM.Shared\MobileCRM.Shared.projitems" Label="Shared" Condition="Exists('..\MobileCRM.Shared\MobileCRM.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
-  <ItemGroup />
+  <ItemGroup>
+    <BundleResource Include="Resources\xamarin-icon-simplified.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chart.png" />
+  </ItemGroup>
   <Import Project="..\packages\Xamarin.Forms.1.0.6184\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.0.6184\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

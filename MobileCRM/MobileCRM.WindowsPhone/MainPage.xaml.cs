@@ -11,7 +11,7 @@ using MobileCRM.WindowsPhone.Resources;
 using Xamarin.Forms;
 using Xamarin;
 using MobileCRM.Shared.CustomViews;
-using Meetup.Shared.Pages;
+using MobileCRM.Shared.Pages;
 
 namespace MobileCRM.WindowsPhone
 {

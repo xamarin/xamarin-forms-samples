@@ -15,11 +15,11 @@ using Context = global::Android.Content.Context;
 using ListView = global::Android.Widget.ListView;
 using Android.App;
 
-[assembly: ExportCell (typeof (DarkTextCell), typeof (DarkTextCellRenderer))]
+[assembly: ExportCell(typeof(ListTextCell), typeof(ListTextCellRenderer))]
 
 namespace MobileCRMAndroid
 {
-    public class DarkTextCellRenderer : TextCellRenderer
+    public class ListTextCellRenderer : TextCellRenderer
     {
         protected override View GetCellCore (Cell item, View convertView, ViewGroup parent, Context context)
         {
@@ -29,7 +29,7 @@ namespace MobileCRMAndroid
 
             var div = new ShapeDrawable();
             div.SetIntrinsicHeight(1);
-            div.Paint.Set(new Paint { Color = Color.FromHex("00FFFFFF").ToAndroid() });
+            //div.Paint.Set(new Paint { Color = Color.FromHex("00FFFFFF").ToAndroid() });
 
             if (parent is ListView) {
                 ((ListView)parent).Divider = div;

@@ -4,7 +4,7 @@ using MonoTouch.UIKit;
 using MonoTouch.CoreGraphics;
 #endif
 
-namespace Meetup.Shared.Helpers
+namespace MobileCRM.Shared.Helpers
 {
     public struct Color
     {
@@ -60,12 +60,12 @@ namespace Meetup.Shared.Helpers
         }
 
 #if __ANDROID__
-        public Android.Graphics.Color ToAndroidColor()
+        public global::Android.Graphics.Color ToAndroidColor()
         {
-            return Android.Graphics.Color.Rgb((int)(255 * R), (int)(255 * G), (int)(255 * B));
+          return global::Android.Graphics.Color.Rgb((int)(255 * R), (int)(255 * G), (int)(255 * B));
         }
 
-        public static implicit operator Android.Graphics.Color(Color color)
+        public static implicit operator global::Android.Graphics.Color(Color color)
         {
             return color.ToAndroidColor();
         }

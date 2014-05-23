@@ -2,9 +2,10 @@
 using Android.OS;
 using Xamarin.Forms;
 using Xamarin;
-using Meetup.Shared.Pages;
+using MobileCRM.Shared.Pages;
+using MobileCRM;
 
-namespace MobileCRM.Android
+namespace MobileCRMAndroid
 {
     [Activity (Label = "MobileCRM", MainLauncher = true)]
     public class MainActivity : Xamarin.Forms.Platform.Android.AndroidActivity

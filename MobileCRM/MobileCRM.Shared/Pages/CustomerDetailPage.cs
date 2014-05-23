@@ -5,13 +5,16 @@ using System.Text;
 using Xamarin.Forms;
 using System.Reflection;
 using System.Linq;
+using MobileCRM.Shared.CustomViews;
 
-namespace Meetup.Shared.Pages
+namespace MobileCRM.Shared.Pages
 {
     public class CustomerDetailPage : ContentPage
     {
         public CustomerDetailPage(POI poi)
         {
+
+            this.BindingContext = poi;
             // Use reflection to turn our object
             // into a property bag.
             var detailList = new ListView();
@@ -22,15 +25,15 @@ namespace Meetup.Shared.Pages
                 .Select(pi => new KeyValuePair<string, object>(pi.Name, pi.GetValue(poi)));
 
             // Then bind our template to the key value pairs.
-            detailList.ItemTemplate = new DataTemplate(typeof(TextCell));
+#if __ANDROID__
+            var cell = new DataTemplate(typeof(ListTextCell));
+#else
+            var cell = new DataTemplate(typeof(TextCell));
+#endif
+            detailList.ItemTemplate = cell;
 
             detailList.ItemTemplate.SetBinding(TextCell.TextProperty, "Key");
             detailList.ItemTemplate.SetBinding(TextCell.DetailProperty, "Value");
-
-            detailList.ItemTemplate.SetValue(TextCell.TextColorProperty, Color.Black);
-            detailList.ItemTemplate.SetValue(TextCell.DetailColorProperty, Color.Gray);
-
-            detailList.BackgroundColor = Helpers.Color.Tan.ToFormsColor();
 
             Content = detailList;
             Title = poi.DisplayLabel;

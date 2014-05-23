@@ -7,7 +7,7 @@ using System.IO;
 using System.Text;
 using Xamarin.Forms;
 
-namespace Meetup.Shared.ViewModels
+namespace MobileCRM.Shared.ViewModels
 {
     public class CustomersViewModel : BaseViewModel
     {
@@ -38,7 +38,7 @@ namespace Meetup.Shared.ViewModels
 #if __IOS__
 			name = "MobileCRM.iOS.Data.Poi.json";
 #elif __ANDROID__
-            name = "MobileCRM.Android.Data.Poi.json";
+            name = "MobileCRMAndroid.Data.Poi.json";
 #elif WINDOWS_PHONE
 			name = "MobileCRM.WindowsPhone.Data.Poi.json";
 #endif
