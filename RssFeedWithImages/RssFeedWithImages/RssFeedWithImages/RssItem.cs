@@ -30,6 +30,6 @@ namespace RssFeedWithImages
 
         public string PubDate { protected set; get; }
 
-        public string Thumbnail { set; get; }
+        public string Thumbnail { protected set; get; }
     }
 }

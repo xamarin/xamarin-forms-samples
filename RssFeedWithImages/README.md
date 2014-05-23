@@ -13,9 +13,8 @@ Xamarin.Forms stub applications. All the common application code is in the RssFe
 Most of the RSS-specific code is in two data models named RssFeed and RssItem. Properties in these classes
 are bound to properties of items in the RssFeedPage and RssItemPage XAML files.
 
-**Several issues exist as of 5/8/14 and Build 1.0.6560: 
-(1) the default XAML namespace will soon undergo a change. 
-(2) the iOS and Android versions to do display images.
+**As of 5/23/14 and Build 1.0.6186, the Windows Phone version does not work
+due to the binding on ImageSource in ImageCell in RssFeedPage.xaml.** 
 
 Author
 ------

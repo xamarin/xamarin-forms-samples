@@ -10,13 +10,13 @@ namespace RssFeedWithImages
             InitializeComponent();
         }
 
-        void OnListViewItemSelected(object sender, EventArg<object> args)
+        async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            if (args.Data != null)
+            if (args.SelectedItem != null)
             {
-                this.Navigation.Push(new RssItemPage
+                await this.Navigation.PushAsync(new RssItemPage
                         {
-                            BindingContext = (RssItem)args.Data
+                            BindingContext = (RssItem)args.SelectedItem
                         });
             }
         }
