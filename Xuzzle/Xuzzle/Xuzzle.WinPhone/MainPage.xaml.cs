@@ -18,6 +18,7 @@ namespace Xuzzle.WinPhone
         public MainPage()
         {
             InitializeComponent();
+            this.SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             Forms.Init();
             Content = Xuzzle.App.GetMainPage().ConvertPageToUIElement(this);

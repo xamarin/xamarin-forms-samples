@@ -15,21 +15,37 @@ namespace Xuzzle
         {
             Label label;
 
-            public Square(string text)
+            public Square(string text, int number)
             {
-                // Just a Frame surrounding a Label.
+                // A Frame surrounding two Labels.
                 label = new Label
                 {
                     Text = text,
                     HorizontalOptions = LayoutOptions.Center,
-                    VerticalOptions = LayoutOptions.Center
+                    VerticalOptions = LayoutOptions.CenterAndExpand
                 };
 
-                this.Padding = new Thickness(5);
+                Label tinyLabel = new Label
+                {
+                    Text = number.ToString(),
+                    Font = Font.SystemFontOfSize(NamedSize.Micro),
+                    HorizontalOptions = LayoutOptions.End
+                };
+
+                this.Padding = new Thickness(3);
                 this.Content = new Frame
                 {
                     OutlineColor = Color.Accent,
-                    Content = label
+                    Padding = new Thickness(5, 10, 5, 0),
+                    Content = new StackLayout
+                    {
+                        Spacing = 0,
+                        Children = 
+                        {
+                            label,
+                            tinyLabel,
+                        }
+                    }
                 };
 
                 // Don't let touch pass us by.
@@ -72,6 +88,9 @@ namespace Xuzzle
             };
 
             // Create Square's for all the rows and columns.
+            string text = "{XAMARIN.FORMS}";
+            int index = 0;
+
             for (int row = 0; row < NUM; row++)
             {
                 for (int col = 0; col < NUM; col++)
@@ -80,9 +99,8 @@ namespace Xuzzle
                     if (row == NUM - 1 && col == NUM - 1)
                         break;
 
-                    // Create the Square with hex text.
-                    string text = (NUM * row + col).ToString("X");
-                    Square square = new Square(text)
+                    // Create the Square with text.
+                    Square square = new Square(text[index].ToString(), index + 1)
                     {
                         Row = row,
                         Col = col
@@ -92,6 +110,7 @@ namespace Xuzzle
                     // Add it to the array and the AbsoluteLayout
                     squares[row, col] = square;
                     absoluteLayout.Children.Add(square);
+                    index++;
                 }
             }
 
@@ -130,13 +149,14 @@ namespace Xuzzle
                 return;
 
             // Orient StackLayout based on portrait/landscape mode.
-            stackLayout.Orientation = (width < height) ? StackOrientation.Vertical : StackOrientation.Horizontal;
+            stackLayout.Orientation = (width < height) ? StackOrientation.Vertical : 
+                                                         StackOrientation.Horizontal;
 
             // Calculate Square size and position based on stack size.
             squareSize = Math.Min(width, height) / NUM;
             absoluteLayout.WidthRequest = NUM * squareSize;
             absoluteLayout.HeightRequest = NUM * squareSize;
-            Font font = Font.BoldSystemFontOfSize(squareSize / 3);
+            Font font = Font.BoldSystemFontOfSize(0.4 * squareSize);
 
             foreach (View view in absoluteLayout.Children)
             {
