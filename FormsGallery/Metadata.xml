@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>ba28828a-4fca-462a-aa13-e861a8b809c2</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Beginning</Level>
+	<Tags>User Interface, Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+</SampleMetadata>
