@@ -11,12 +11,16 @@ namespace MobileCRM.Shared.Pages
         public LoginPage()
         {
             BindingContext = new LoginViewModel(Navigation);
-            
-            var layout = new StackLayout();
+
+            BackgroundColor = Helpers.Color.Blue.ToFormsColor();
+
+            var layout = new StackLayout { Padding = 10 };
+
             var label = new Label
             {
                 Text = "Connect with Your Data",
                 Font = Font.BoldSystemFontOfSize(NamedSize.Large),
+                TextColor = Color.White,
                 VerticalOptions = LayoutOptions.CenterAndExpand,
                 XAlign = TextAlignment.Center, // Center the text in the blue box.
                 YAlign = TextAlignment.Center, // Center the text in the blue box.
@@ -24,22 +28,22 @@ namespace MobileCRM.Shared.Pages
 
             layout.Children.Add(label);
 
-            var username = new Entry() { Placeholder = "Username" };
+            var username = new Entry { Placeholder = "Username" };
             username.SetBinding(Entry.TextProperty, LoginViewModel.UsernamePropertyName);
             layout.Children.Add(username);
 
-            var password = new Entry() { Placeholder = "Password" };
+            var password = new Entry { Placeholder = "Password" };
             password.SetBinding(Entry.TextProperty, LoginViewModel.PasswordPropertyName);
             layout.Children.Add(password);
 
 
             
-            var button = new Button() { Text = "Sign In" };
+            var button = new Button { Text = "Sign In", TextColor = Color.White };
             button.SetBinding(Button.CommandProperty, LoginViewModel.LoginCommandPropertyName);
 
             layout.Children.Add(button);
 
-            Content = layout;
+            Content = new ScrollView { Content = layout };
         }
     }
 }
