@@ -10,7 +10,7 @@ namespace XamlScaleAndRotate
         public HomePage()
         {
             Command<Type> navigateCommand = 
-                new Command<Type>((Type pageType) =>
+                new Command<Type>(async (Type pageType) =>
                 {
                     if (pageType == null)
                     {
@@ -30,7 +30,7 @@ namespace XamlScaleAndRotate
                         {
                             // If so, instantiate it, and navigate to it.
                             Page page = (Page)constructor.Invoke(null);
-                            this.Navigation.Push(page);
+                            await this.Navigation.PushAsync(page);
                             break;
                         }
                     }
