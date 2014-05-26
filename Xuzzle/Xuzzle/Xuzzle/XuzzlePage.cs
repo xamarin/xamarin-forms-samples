@@ -7,70 +7,21 @@ namespace Xuzzle
     class XuzzlePage : ContentPage
     {
         // Number of squares horizontally and vertically,
-        //  but if you change it, modify font size as well.
+        //  but if you change it, some code will break.
         static readonly int NUM = 4;
 
-        // Internal custom view for square
-        class Square : ContentView
-        {
-            Label label;
-
-            public Square(string text, int number)
-            {
-                // A Frame surrounding two Labels.
-                label = new Label
-                {
-                    Text = text,
-                    HorizontalOptions = LayoutOptions.Center,
-                    VerticalOptions = LayoutOptions.CenterAndExpand
-                };
-
-                Label tinyLabel = new Label
-                {
-                    Text = number.ToString(),
-                    Font = Font.SystemFontOfSize(NamedSize.Micro),
-                    HorizontalOptions = LayoutOptions.End
-                };
-
-                this.Padding = new Thickness(3);
-                this.Content = new Frame
-                {
-                    OutlineColor = Color.Accent,
-                    Padding = new Thickness(5, 10, 5, 0),
-                    Content = new StackLayout
-                    {
-                        Spacing = 0,
-                        Children = 
-                        {
-                            label,
-                            tinyLabel,
-                        }
-                    }
-                };
-
-                // Don't let touch pass us by.
-                this.BackgroundColor = Color.Transparent;
-            }
-
-            // Retain current Row and Col position.
-            public int Row { set; get; }
-            public int Col { set; get; }
-
-            public Font Font
-            {
-                set { label.Font = value; }
-            }
-        }
-
-        // Array of Square views, and empty row & column.
-        Square[,] squares = new Square[NUM, NUM];
+        // Array of XuzzleSquare views, and empty row & column.
+        XuzzleSquare[,] squares = new XuzzleSquare[NUM, NUM];
         int emptyRow = NUM - 1;
         int emptyCol = NUM - 1;
 
         StackLayout stackLayout;
         AbsoluteLayout absoluteLayout;
+        Button randomizeButton;
+        Label timeLabel;
         double squareSize;
         bool isBusy;
+        bool isPlaying;
 
         public XuzzlePage()
         {
@@ -87,8 +38,9 @@ namespace Xuzzle
                 TappedCallback = OnSquareTapped
             };
 
-            // Create Square's for all the rows and columns.
+            // Create XuzzleSquare's for all the rows and columns.
             string text = "{XAMARIN.FORMS}";
+            string winText = "CONGRATULATIONS";
             int index = 0;
 
             for (int row = 0; row < NUM; row++)
@@ -99,15 +51,15 @@ namespace Xuzzle
                     if (row == NUM - 1 && col == NUM - 1)
                         break;
 
-                    // Create the Square with text.
-                    Square square = new Square(text[index].ToString(), index + 1)
+                    // Instantiate XuzzleSquare.
+                    XuzzleSquare square = new XuzzleSquare(text[index], winText[index], index)
                     {
                         Row = row,
                         Col = col
                     };
                     square.GestureRecognizers.Add(tapGestureRecognizer);
 
-                    // Add it to the array and the AbsoluteLayout
+                    // Add it to the array and the AbsoluteLayout.
                     squares[row, col] = square;
                     absoluteLayout.Children.Add(square);
                     index++;
@@ -115,20 +67,37 @@ namespace Xuzzle
             }
 
             // This is the "Randomize" button.
-            Button button = new Button 
+            randomizeButton = new Button 
             {
                 Text = "Randomize",
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
-            button.Clicked += OnRandomizeButtonClicked;
+            randomizeButton.Clicked += OnRandomizeButtonClicked;
+
+            // Label to display elapsed time.
+            timeLabel = new Label
+            {
+                Font = Font.BoldSystemFontOfSize(NamedSize.Large),
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.CenterAndExpand
+            };
 
             // Put everything in a StackLayout.
             stackLayout = new StackLayout
             {
                 Children = 
                 {
-                    button,
+                    new StackLayout
+                    {
+                        VerticalOptions = LayoutOptions.FillAndExpand,
+                        HorizontalOptions = LayoutOptions.FillAndExpand,
+                        Children = 
+                        {
+                            randomizeButton,
+                            timeLabel
+                        }
+                    },
                     absoluteLayout
                 }
             };
@@ -152,7 +121,7 @@ namespace Xuzzle
             stackLayout.Orientation = (width < height) ? StackOrientation.Vertical : 
                                                          StackOrientation.Horizontal;
 
-            // Calculate Square size and position based on stack size.
+            // Calculate square size and position based on stack size.
             squareSize = Math.Min(width, height) / NUM;
             absoluteLayout.WidthRequest = NUM * squareSize;
             absoluteLayout.HeightRequest = NUM * squareSize;
@@ -160,7 +129,7 @@ namespace Xuzzle
 
             foreach (View view in absoluteLayout.Children)
             {
-                Square square = (Square)view;
+                XuzzleSquare square = (XuzzleSquare)view;
                 square.Font = font;
 
                 AbsoluteLayout.SetLayoutBounds(square,
@@ -177,9 +146,31 @@ namespace Xuzzle
                 return;
 
             isBusy = true;
-            Square tappedSquare = (Square)view;
+            XuzzleSquare tappedSquare = (XuzzleSquare)view;
             await ShiftIntoEmpty (tappedSquare.Row, tappedSquare.Col);
             isBusy = false;
+
+            // Check for a "win".
+            if (isPlaying)
+            {
+                int index;
+
+                for (index = 0; index < NUM * NUM - 1; index++)
+                {
+                    int row = index / NUM;
+                    int col = index % NUM;
+                    XuzzleSquare square = squares[row, col];
+                    if (square == null || square.Index != index)
+                        break;
+                }
+                
+                // We have a winner!
+                if (index == NUM * NUM - 1)
+                {
+                    isPlaying = false;
+                    await DoWinAnimation();
+                }
+            }
         }
 
         async Task ShiftIntoEmpty(int tappedRow, int tappedCol, uint length = 100)
@@ -213,7 +204,7 @@ namespace Xuzzle
         async Task AnimateSquare(int row, int col, int newRow, int newCol, uint length)
         {
             // The Square to be animated.
-            Square animaSquare = squares[row, col];
+            XuzzleSquare animaSquare = squares[row, col];
 
             // The destination rectangle.
             Rectangle rect = new Rectangle(squareSize * emptyCol,
@@ -246,6 +237,44 @@ namespace Xuzzle
                 await ShiftIntoEmpty (emptyRow, rand.Next(NUM), 25);
             }
             button.IsEnabled = true;
+
+            // Prepare for playing.
+            DateTime startTime = DateTime.Now;
+
+            Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+                {
+                    // Round duration and get rid of milliseconds.
+                    TimeSpan timeSpan = (DateTime.Now - startTime) + 
+                                            TimeSpan.FromSeconds(0.5);
+                    timeSpan = new TimeSpan(timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
+
+                    // Display the duration.
+                    if (isPlaying)
+                        timeLabel.Text = timeSpan.ToString("t");
+                    return isPlaying;
+                });
+            this.isPlaying = true;
+        }
+
+        async Task DoWinAnimation()
+        {
+            // Inhibit all input.
+            randomizeButton.IsEnabled = false;
+            isBusy = true;
+
+            for (int cycle = 0; cycle < 2; cycle++)
+            {
+                foreach (XuzzleSquare square in squares)
+                    if (square != null)
+                        await square.AnimateWinAsync(cycle == 1);
+
+                if (cycle == 0)
+                    await Task.Delay(1500);
+            }
+
+            // All input.
+            randomizeButton.IsEnabled = true;
+            isBusy = false;
         }
     }
 }
