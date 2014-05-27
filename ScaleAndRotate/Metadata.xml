@@ -3,7 +3,7 @@
 	<ID>571FEA2E-A180-4DD5-89BE-78CEAC432F13</ID>
 	<IsFullApplication>false</IsFullApplication>
 	<Level>Intermediate</Level>
-	<Tags>Graphics, Transforms</Tags>
+	<Tags>Graphics, Xamarin.Forms</Tags>
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
