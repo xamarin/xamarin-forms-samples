@@ -23,10 +23,11 @@ namespace FormsGallery
                     {
                         new ImageCell
                         {
-                            ImageSource = new UriImageSource
-                            {
-                                Uri = new Uri("http://xamarin.com/images/index/ide-xamarin-studio.png")
-                            },
+                            // Some differences with loading images in initial release.
+                            ImageSource = 
+                                Device.OnPlatform(ImageSource.FromUri(new Uri("http://xamarin.com/images/index/ide-xamarin-studio.png")),
+                                                  ImageSource.FromFile("ide_xamarin_studio.png"),
+                                                  ImageSource.FromFile("Images/ide-xamarin-studio.png")),
                             Text = "This is an ImageCell",
                             Detail = "This is some detail text",
                             Style = TextCellStyle.Vertical

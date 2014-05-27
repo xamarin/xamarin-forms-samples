@@ -95,6 +95,9 @@
     <AndroidResource Include="Resources\Drawable\Icon_144x144.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ide_xamarin_studio.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>

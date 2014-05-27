@@ -16,10 +16,18 @@ namespace FormsGallery
 
             Image image = new Image
             {
-                Source = new UriImageSource
-                {
-                    Uri = new Uri("http://xamarin.com/images/index/ide-xamarin-studio.png")
-                },
+                // Some differences with loading images in initial release.
+                Source =
+                    Device.OnPlatform(ImageSource.FromUri(new Uri("http://xamarin.com/images/index/ide-xamarin-studio.png")),
+                                      ImageSource.FromFile("ide_xamarin_studio.png"),
+                                      ImageSource.FromUri(new Uri("http://xamarin.com/images/index/ide-xamarin-studio.png"))),
+
+
+
+                //Source = new UriImageSource
+                //{
+                //    Uri = new Uri("http://xamarin.com/images/index/ide-xamarin-studio.png")
+                //},
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
 
