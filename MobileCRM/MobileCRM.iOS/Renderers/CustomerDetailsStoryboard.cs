@@ -52,7 +52,7 @@ namespace MobileCRM.iOS.Renderers
     public override void ViewDidLoad()
     {
       base.ViewDidLoad();
-      if (model.BindingContext != null)
+      if (model != null && model.BindingContext != null)
       {
           var poi = (POI)model.BindingContext;
           LabelCustomerCategory.Text = poi.DisplayLabel;

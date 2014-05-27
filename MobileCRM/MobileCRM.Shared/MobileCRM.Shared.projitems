@@ -12,17 +12,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)CustomViews\ListTextCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Color.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MobileCRM.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Author.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Author2.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Author3.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Category.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Label.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Link.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Location.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\OptionItem.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\POI.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Point.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\TestData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\CustomerDetailPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\CustomersPages.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\LoginPage.cs" />
@@ -37,5 +26,29 @@
     <Compile Include="$(MSBuildThisFileDirectory)CustomViews\DarkTextCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CustomViews\StripedListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CustomViews\StripedViewCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\Author.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\Author2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\Author3.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\Category.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\Label.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\Link.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\Location.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\OptionItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\POI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\Point.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\TestData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Account.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Lead.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Opportunity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Proposal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Contact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DefaultContact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\IContact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Address.cs">
+      <Link>$(MSBuildThisFileDirectory)Models\Address.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\Old\" />
   </ItemGroup>
 </Project>

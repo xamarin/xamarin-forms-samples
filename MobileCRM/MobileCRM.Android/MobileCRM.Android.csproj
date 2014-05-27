@@ -12,8 +12,6 @@
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>
-    </AndroidUseLatestPlatformSdk>
     <AssemblyName>MobileCRMAndroid</AssemblyName>
     <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
@@ -34,7 +32,6 @@
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
     <ConsolePause>false</ConsolePause>
-    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -47,9 +44,6 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GooglePlayServicesLib">
-      <HintPath>..\Components\googleplayservicesjellybean-16.0\lib\android\GooglePlayServicesLib.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -81,6 +75,9 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.1.0.6186\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="GooglePlayServicesLib">
+      <HintPath>..\Components\googleplayservicesjellybean-16.0\lib\android\GooglePlayServicesLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -106,7 +103,6 @@
     <AndroidResource Include="Resources\drawable\zoom_out.png" />
     <AndroidResource Include="Resources\drawable\zoom_in.png" />
   </ItemGroup>
-  <Import Project="..\Meetup.Shared\Meetup.Shared.projitems" Label="Shared" Condition="Exists('..\Meetup.Shared\Meetup.Shared.projitems')" />
   <Import Project="..\MobileCRM.Shared\MobileCRM.Shared.projitems" Label="Shared" Condition="Exists('..\MobileCRM.Shared\MobileCRM.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -131,8 +127,8 @@
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="googleplayservicesjellybean">
-      <Visible>False</Visible>
       <Version>16.0</Version>
+      <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
   <Import Project="..\packages\Xamarin.Forms.1.0.6186\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.0.6186\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />

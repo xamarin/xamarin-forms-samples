@@ -29,11 +29,14 @@ namespace MobileCRM.Shared.Pages
 
         public MenuPage ()
         {
+            BackgroundColor = Color.FromHex("333333");
+
             var layout = new StackLayout { Spacing = 0, VerticalOptions = LayoutOptions.FillAndExpand };
 
             var label = new ContentView {
                 Padding = new Thickness(10, 36, 0, 5),
                 Content = new Xamarin.Forms.Label {
+                    TextColor = Color.FromHex("AAAAAA"),
                     Text = "MENU", 
                 }
             };
@@ -47,12 +50,14 @@ namespace MobileCRM.Shared.Pages
 
             Menu = new ListView {
                 ItemsSource = OptionItems,
-                VerticalOptions = LayoutOptions.FillAndExpand
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                BackgroundColor = Color.Transparent
             };
 
             var cell = new DataTemplate(typeof(DarkTextCell));
             cell.SetBinding(TextCell.TextProperty, "Title");
             cell.SetBinding(TextCell.DetailProperty, "Subtitle");
+            cell.SetValue(VisualElement.BackgroundColorProperty, Color.Transparent);
 
             Menu.ItemTemplate = cell;
 
