@@ -11,15 +11,13 @@ using Xamarin.Forms.Maps;
 //              - WP: MainPage.xaml.cs 
 //      - platform-specific permission:
 //              - iOS: None
-//              -
+//              - Android: API key!
 //              - WP: WMAppManifest.xaml, Capabilities, ID_CAP_MAP
 
 namespace FormsGallery
 {
     class MapDemoPage : ContentPage
     {
-        Map map;
-
         public MapDemoPage()
         {
             Label header = new Label
@@ -29,18 +27,32 @@ namespace FormsGallery
                 HorizontalOptions = LayoutOptions.Center
             };
 
-            map = new Map
-            {
-            };
+            View view;
 
-            // Let's visit Xamarin HQ in San Francisco!
-            Position position = new Position(37.79762, -122.40181);
-            map.MoveToRegion(new MapSpan(position, 0.01, 0.01));
-            map.Pins.Add(new Pin
+            if (Device.OS == TargetPlatform.Android)
+            {
+                view = new Label
                 {
-                    Label = "Xamarin",
-                    Position = position
-                });
+                    Text = "Android applications require API key " +
+                           "to use the Google Map service.",
+                    Font = Font.SystemFontOfSize(NamedSize.Large),
+                    VerticalOptions = LayoutOptions.CenterAndExpand
+                };
+            }
+            else
+            {
+                Map map = new Map();
+                view = map;
+
+                // Let's visit Xamarin HQ in San Francisco!
+                Position position = new Position(37.79762, -122.40181);
+                map.MoveToRegion(new MapSpan(position, 0.01, 0.01));
+                map.Pins.Add(new Pin
+                    {
+                        Label = "Xamarin",
+                        Position = position
+                    });
+            }
 
             // Accomodate iPhone status bar.
             this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);
@@ -51,7 +63,7 @@ namespace FormsGallery
                 Children = 
                 {
                     header,
-                    map
+                    view
                 }
             };
         }
