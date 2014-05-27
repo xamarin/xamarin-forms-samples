@@ -44,9 +44,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Contact.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\DefaultContact.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\IContact.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Address.cs">
-      <Link>$(MSBuildThisFileDirectory)Models\Address.cs</Link>
-    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Address.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Models\Old\" />
