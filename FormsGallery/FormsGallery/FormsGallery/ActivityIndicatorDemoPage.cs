@@ -16,6 +16,7 @@ namespace FormsGallery
 
             ActivityIndicator activityIndicator = new ActivityIndicator
             {
+                Color = Device.OnPlatform(Color.Black, Color.Default, Color.Default),
                 IsRunning = true,
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
