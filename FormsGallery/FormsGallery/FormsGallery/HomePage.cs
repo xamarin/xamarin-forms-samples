@@ -9,17 +9,10 @@ namespace FormsGallery
     {
         public HomePage()
         {
-            // Define two commands for the items in the TableView.
+            // Define command for the items in the TableView.
             Command<Type> navigateCommand = 
                 new Command<Type>(async (Type pageType) =>
                 {
-                    if (pageType == null)
-                    {
-                        await this.DisplayAlert("Forms Gallery", 
-                            "Page not yet implemented", "OK", null);
-                        return;
-                    }
-
                     // Get all the constructors of the page type.
                     IEnumerable<ConstructorInfo> constructors = 
                             pageType.GetTypeInfo().DeclaredConstructors;
@@ -34,23 +27,6 @@ namespace FormsGallery
                             await this.Navigation.PushAsync(page);
                             break;
                         }
-                    }
-                });
-
-            Command<Tuple<string, string>> alertCommand =
-                new Command<Tuple<string, string>>
-                    (async (Tuple<string, string> display) =>
-                {
-                    if (display == null)
-                    {
-                        await this.DisplayAlert("Forms Gallery",
-                            "Page not yet implemented",
-                            "OK", null);
-                    }
-                    else
-                    {
-                        await this.DisplayAlert(display.Item1,
-                            display.Item2, "OK", null);
                     }
                 });
 
@@ -206,22 +182,15 @@ namespace FormsGallery
                             new TextCell
                             {
                                 Text = "TableView for a menu",
-                                Command = alertCommand,
-                                CommandParameter = 
-                                    new Tuple<string, string>
-                                        ("TableView for a menu",
-                                         "You're looking at one! " +
-                                         "This home page consists largely of a TableView " +
-                                         "used as a navigation menu. Each tappable " +
-                                         "item is a TextCell, which are organized " +
-                                         "into TableSection groups.")
+                                Command = navigateCommand,
+                                CommandParameter = typeof(TableViewMenuDemoPage) 
                             },
 
                             new TextCell
                             {
                                 Text = "TableView for a form",
                                 Command = navigateCommand,
-                                CommandParameter = typeof(TableViewDemoPage)
+                                CommandParameter = typeof(TableViewFormDemoPage)
                             }
                         },
 
@@ -311,23 +280,14 @@ namespace FormsGallery
                             new TextCell
                             {
                                 Text = "ContentPage",
-                                Command = alertCommand,
-                                CommandParameter = 
-                                    new Tuple<string, string>("ContentPage",
-                                        "You've probably already seen a few. " +
-                                        "Every page you've navigated to with " +
-                                        "any item above has been a ContentPage.")
+                                Command = navigateCommand,
+                                CommandParameter = typeof(ContentPageDemoPage) 
                             },
                             new TextCell
                             {
                                 Text = "NavigationPage",
-                                Command = alertCommand,
-                                CommandParameter = 
-                                    new Tuple<string, string>("NavigationPage",
-                                        "You're looking at one! " +
-                                        "This home page is a NavigationPage " +
-                                        "and allows navigating to other pages " +
-                                        "and returning back, safe and sound.")
+                                Command = navigateCommand,
+                                CommandParameter = typeof(NavigationPageDemoPage) 
                             },
                             new TextCell
                             {
@@ -349,7 +309,6 @@ namespace FormsGallery
                             }
                         }
                     }
-                    
                 };
         }
     }

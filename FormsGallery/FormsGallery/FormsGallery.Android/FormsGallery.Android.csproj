@@ -23,7 +23,7 @@
     <MandroidI18n />
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     <JavaOptions />
-    <NuGetPackageImportStamp>15c3cde6</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>77ef62fd</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

@@ -14,7 +14,7 @@
     <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <NuGetPackageImportStamp>4dd82e31</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>07713349</NuGetPackageImportStamp>
     <ProductVersion>12.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
@@ -42,6 +42,7 @@
     <Compile Include="BoxViewDemoPage.cs" />
     <Compile Include="ButtonDemoPage.cs" />
     <Compile Include="CarouselPageDemoPage.cs" />
+    <Compile Include="ContentPageDemoPage.cs" />
     <Compile Include="ContentViewDemoPage.cs" />
     <Compile Include="DatePickerDemoPage.cs" />
     <Compile Include="EditorDemoPage.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="MasterDetailPageDemoPage.cs" />
     <Compile Include="NamedColor.cs" />
     <Compile Include="NamedColorPage.cs" />
+    <Compile Include="NavigationPageDemoPage.cs" />
     <Compile Include="PickerDemoPage.cs" />
     <Compile Include="ProgressBarDemoPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,7 +72,8 @@
     <Compile Include="SwitchCellDemoPage.cs" />
     <Compile Include="SwitchDemoPage.cs" />
     <Compile Include="TabbedPageDemoPage.cs" />
-    <Compile Include="TableViewDemoPage.cs" />
+    <Compile Include="TableViewFormDemoPage.cs" />
+    <Compile Include="TableViewMenuDemoPage.cs" />
     <Compile Include="TextCellDemoPage.cs" />
     <Compile Include="TimePickerDemoPage.cs" />
     <Compile Include="WebViewDemoPage.cs" />

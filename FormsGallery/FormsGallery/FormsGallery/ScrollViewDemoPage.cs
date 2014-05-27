@@ -24,7 +24,7 @@ namespace FormsGallery
                            "on many occasions, the content of the page " +
                            "is much too large for the page, or only " +
                            "becomes available at runtime." +
-                           "\r\n\r\n" +
+                           "\n\n" +
                            "For cases such as these, the ScrollView " +
                            "provides a solution. Simply set its " +
                            "Content property to your content \u2014 in this " +
@@ -33,12 +33,12 @@ namespace FormsGallery
                            "children \u2014 and the ScrollView provides " +
                            "scrolling with the distinctive look and touch " +
                            "familiar to the user." +
-                           "\r\n\r\n" +
+                           "\n\n" +
                            "The ScrollView is also capable of " +
                            "horizontal scrolling, and while that's " +
                            "usually not as common as vertical scrolling, " +
                            "sometimes it comes in handy." +
-                           "\r\n\r\n" +
+                           "\n\n" +
                            "Most often, the content of a ScrollView is " +
                            "a StackLayout. Whenever you're using a " +
                            "StackLayout with a number of items determined " +

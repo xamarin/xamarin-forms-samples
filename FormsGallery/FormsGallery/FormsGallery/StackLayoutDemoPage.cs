@@ -100,7 +100,6 @@ namespace FormsGallery
                     stackLayout
                 }
             };
-
         }
     }
 }

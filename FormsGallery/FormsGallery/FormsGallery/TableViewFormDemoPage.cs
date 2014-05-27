@@ -3,9 +3,9 @@ using Xamarin.Forms;
 
 namespace FormsGallery
 {
-    class TableViewDemoPage : ContentPage
+    class TableViewFormDemoPage : ContentPage
     {
-        public TableViewDemoPage()
+        public TableViewFormDemoPage()
         {
             Label header = new Label
             {
@@ -69,7 +69,6 @@ namespace FormsGallery
                     tableView
                 }
             };
-
         }
     }
 }
