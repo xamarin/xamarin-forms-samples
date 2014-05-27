@@ -68,7 +68,7 @@ namespace MobileCRM.Shared.Pages
                 Debug.WriteLine("success: {0}", result);
             }));
 
-          ToolbarItems.Add(new ToolbarItem("search", "search.png", async () =>
+          ToolbarItems.Add(new ToolbarItem("search", "search.png", () =>
             {
             }));
 #endif

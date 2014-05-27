@@ -490,8 +490,8 @@ namespace MobileCRMAndroid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f09000d
-			public const int abc_search_url_text_holo = 2131296269;
+			// aapt resource value: 0x7f09000e
+			public const int abc_search_url_text_holo = 2131296270;
 			
 			// aapt resource value: 0x7f090000
 			public const int abc_search_url_text_normal = 2131296256;
@@ -532,11 +532,14 @@ namespace MobileCRMAndroid
 			// aapt resource value: 0x7f090008
 			public const int common_signin_btn_light_text_pressed = 2131296264;
 			
-			// aapt resource value: 0x7f09000e
-			public const int common_signin_btn_text_dark = 2131296270;
-			
 			// aapt resource value: 0x7f09000f
-			public const int common_signin_btn_text_light = 2131296271;
+			public const int common_signin_btn_text_dark = 2131296271;
+			
+			// aapt resource value: 0x7f090010
+			public const int common_signin_btn_text_light = 2131296272;
+			
+			// aapt resource value: 0x7f09000d
+			public const int xamarinblue = 2131296269;
 			
 			static Color()
 			{
@@ -1414,8 +1417,8 @@ namespace MobileCRMAndroid
 			// aapt resource value: 0x7f050011
 			public const int abc_shareactionprovider_share_with_application = 2131034129;
 			
-			// aapt resource value: 0x7f05002e
-			public const int app_name = 2131034158;
+			// aapt resource value: 0x7f05002f
+			public const int app_name = 2131034159;
 			
 			// aapt resource value: 0x7f050028
 			public const int auth_client_needs_enabling_title = 2131034152;
@@ -1495,8 +1498,11 @@ namespace MobileCRMAndroid
 			// aapt resource value: 0x7f050026
 			public const int common_signin_button_text_long = 2131034150;
 			
+			// aapt resource value: 0x7f05002e
+			public const int hello = 2131034158;
+			
 			// aapt resource value: 0x7f05002d
-			public const int hello = 2131034157;
+			public const int location_client_powered_by_google = 2131034157;
 			
 			// aapt resource value: 0x7f050002
 			public const int mr_media_route_button_content_description = 2131034114;
@@ -2304,7 +2310,7 @@ namespace MobileCRMAndroid
 					16843055,
 					16843056,
 					16843057,
-					16843829};
+					16843788};
 			
 			// aapt resource value: 4
 			public const int MenuView_android_headerBackground = 4;

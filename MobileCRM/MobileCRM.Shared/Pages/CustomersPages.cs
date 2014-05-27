@@ -23,7 +23,7 @@ namespace MobileCRM.Shared.Pages
             this.SetBinding(Page.IconProperty, "Icon");
 
             var list = new ListView();
-            list.ItemSource = ViewModel.Customers;
+            list.ItemsSource = ViewModel.Customers;
 
 #if __ANDROID__
             var cell = new DataTemplate(typeof(ListTextCell));

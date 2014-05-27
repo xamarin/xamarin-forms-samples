@@ -18,7 +18,7 @@ namespace MobileCRM.Shared.Pages
             // Use reflection to turn our object
             // into a property bag.
             var detailList = new ListView();
-            detailList.ItemSource = poi.GetType()
+            detailList.ItemsSource = poi.GetType()
                 .GetRuntimeProperties()
                 .Where(pi =>
                     pi.GetValue(poi) != null)

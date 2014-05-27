@@ -25,11 +25,9 @@ namespace MobileCRM.Shared.Pages
 
             ShowLoginDialog();
 
-            NavigateTo(optionsPage.Menu.ItemSource.Cast<OptionItem>().First());
+            NavigateTo(optionsPage.Menu.ItemsSource.Cast<OptionItem>().First());
       
         }
-
-
 
         async void ShowLoginDialog()
         {

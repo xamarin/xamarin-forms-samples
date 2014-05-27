@@ -25,7 +25,9 @@
 
   <style name="MyTheme.ActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
     <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
-    <item name="android:background">@android:color/transparent</item>
+    <item name="android:background">@color/xamarinblue</item>
+    <item name="android:windowActionBar">false</item>
+    <item name="android:windowNoTitle">true</item>
   </style>
 
   <style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">

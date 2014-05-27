@@ -46,7 +46,7 @@ namespace MobileCRM.Shared.Pages
             layout.Children.Add(label);
 
             Menu = new ListView {
-                ItemSource = OptionItems,
+                ItemsSource = OptionItems,
                 VerticalOptions = LayoutOptions.FillAndExpand
             };
 
