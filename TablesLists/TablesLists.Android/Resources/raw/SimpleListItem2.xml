@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<MenuItems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Group Title="SimpleListItem2">
+		<Item Title="Fiji" Subtitle="A nice beach" />
+		<Item Title="Beijing" Subtitle="Aka Shanghai" />
+		<Item Title="Seedlings" Subtitle="Tiny plants" />
+		<Item Title="Plants" Subtitle="Green plants" />
+	</Group>
+</MenuItems>

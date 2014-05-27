@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<MenuItems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Group Title="ActivityListItem">
+		<Item Title="Fiji" Subtitle="A nice beach" ImageSource="Beach.png" />
+		<Item Title="Beijing" Subtitle="Aka Shanghai" ImageSource="Shanghai.png" />
+		<Item Title="Seedlings" Subtitle="Tiny plants" ImageSource="Seeds.png" />
+		<Item Title="Plants" Subtitle="Green plants" ImageSource="Plants.png" />
+	</Group>
+</MenuItems>

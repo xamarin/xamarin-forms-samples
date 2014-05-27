@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<MenuItems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Group Title="Table Styles">
+		<Item Title="Plain" NavigationPage="TablesLists.View.SimpleList" ItemsSourceFile="PlainTable.xml"/>
+	</Group>
+	<Group Title="Cell Styles">
+		<Item Title="Default" NavigationPage="TablesLists.View.DefaultItem" ItemsSourceFile="DefaultCellStyle.xml"/>
+		<Item Title="Subtitle" NavigationPage="TablesLists.View.ImageAndSubtitle" ItemsSourceFile="DefaultCellStyle.xml"/>
+		<Item Title="Value1 (Right-Aligned Subtitle)" NavigationPage="TablesLists.View.RightAlignedSubtitle" ItemsSourceFile="DefaultCellStyle.xml"/>
+		<Item Title="Value2 (Contact Style)" NavigationPage="TablesLists.View.ContactStyleItem" ItemsSourceFile="DefaultCellStyle.xml" />
+	</Group>
+	<Group Title="Accessory Styles">
+		<Item Title="Checkmark" NavigationPage="TablesLists.View.AccessoryCheckmark" ItemsSourceFile="DefaultCellStyle.xml" />
+		<Item Title="Detail Disclosure Button" NavigationPage="TablesLists.View.AccessoryDetailDisclosure" ItemsSourceFile="DefaultCellStyle.xml"/>
+		<Item Title="Disclosure Indicator" NavigationPage="TablesLists.View.AccessoryDisclosure" ItemsSourceFile="DefaultCellStyle.xml" />
+	</Group>
+</MenuItems>

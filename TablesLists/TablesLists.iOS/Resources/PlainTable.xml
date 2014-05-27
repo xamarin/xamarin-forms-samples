@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<MenuItems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Group Title="Section 0">
+		<Item Title="Row 0" />
+		<Item Title="Row 1" />
+		<Item Title="Row 2" />
+	</Group>
+	<Group Title="Section 1">
+		<Item Title="Row 0" />
+		<Item Title="Row 1" />
+		<Item Title="Row 2" />
+	</Group>
+	<Group Title="Section 2">
+		<Item Title="Row 0" />
+		<Item Title="Row 1" />
+		<Item Title="Row 2" />
+	</Group>
+</MenuItems>
