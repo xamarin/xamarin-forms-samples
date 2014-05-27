@@ -230,6 +230,8 @@ namespace Xuzzle
             button.IsEnabled = false;
             Random rand = new Random ();
 
+            isBusy = true;
+
             // Simulate some fast crazy taps.
             for (int i = 0; i < 100; i++)
             {
@@ -237,6 +239,8 @@ namespace Xuzzle
                 await ShiftIntoEmpty (emptyRow, rand.Next(NUM), 25);
             }
             button.IsEnabled = true;
+
+            isBusy = false;
 
             // Prepare for playing.
             DateTime startTime = DateTime.Now;
