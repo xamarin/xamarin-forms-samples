@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Linq;
 using Xamarin.Forms;
 using TablesLists.Data;
 using TablesLists.ViewModel;
-using System.Linq;
 
 namespace TablesLists
 {

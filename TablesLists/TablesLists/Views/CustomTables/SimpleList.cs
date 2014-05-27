@@ -1,9 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
 using TablesLists.Data;
 using TablesLists.ViewModel;
-using System.Collections.Generic;
 
 namespace TablesLists.View
 {
