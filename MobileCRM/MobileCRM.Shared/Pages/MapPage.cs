@@ -6,7 +6,6 @@ using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using System.Linq;
 using System.Diagnostics;
-using System.Security.Policy;
 using System.Threading.Tasks;
 using MobileCRM.Models;
 
