@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace TabbedPageDemo
 {
-    public partial class TabbedPageDemoPage
+	public partial class TabbedPageDemoPage : TabbedPage
     {
         public TabbedPageDemoPage()
         {
