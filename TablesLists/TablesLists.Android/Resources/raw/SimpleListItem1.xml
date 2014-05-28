@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
-<MenuItems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<Group Title="SimpleListItem1">
-		<Item Title="Row 1" />
-		<Item Title="Row 2" />
-		<Item Title="Row 3" />
-	</Group>
-</MenuItems>
