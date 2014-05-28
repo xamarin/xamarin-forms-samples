@@ -8,7 +8,7 @@
 
     	<StackLayout VerticalOptions="StartAndExpand">
 
-    		<StackLayout Padding="20,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+    		<StackLayout Padding="10,20,10,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
 				<Image x:Name="PersonImage" 
 						WidthRequest="176" HeightRequest="176" 
 						Source="DetailsPlaceholder.jpg" />
@@ -19,7 +19,7 @@
 				</StackLayout>
 			</StackLayout>
 
-			<ListView x:Name="listView" ItemSource="{Binding PropertyGroups}" IsGroupingEnabled="true" ItemSelected="OnItemSelected" >
+			<ListView x:Name="listView" ItemsSource="{Binding PropertyGroups}" IsGroupingEnabled="true" ItemSelected="OnItemSelected" >
 			 <ListView.GroupHeaderTemplate>
 			    <DataTemplate>
 			      <ViewCell>
