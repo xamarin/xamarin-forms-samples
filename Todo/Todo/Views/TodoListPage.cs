@@ -33,13 +33,13 @@ namespace Todo
 
 			// HACK: workaround issue #894 for now
 			if (Device.OS == TargetPlatform.iOS)
-				listView.ItemSource = new string [1] {""};
+				listView.ItemsSource = new string [1] {""};
 
 			listView.ItemSelected += (sender, e) => {
 				var todoItem = (TodoItem)e.SelectedItem;
 				var todoPage = new TodoItemPage();
 				todoPage.BindingContext = todoItem;
-				Navigation.Push(todoPage);
+				Navigation.PushAsync(todoPage);
 			};
 
 			Content = new StackLayout {
@@ -51,14 +51,14 @@ namespace Todo
 				var todoItem = new TodoItem();
 				var todoPage = new TodoItemPage();
 				todoPage.BindingContext = todoItem;
-				Navigation.Push(todoPage);
+				Navigation.PushAsync(todoPage);
 			}, 0, 0);
 			if (Device.OS == TargetPlatform.Android) { // BUG: Android doesn't support the icon being null
 				tbi = new ToolbarItem ("+", "plus", () => {
 					var todoItem = new TodoItem();
 					var todoPage = new TodoItemPage();
 					todoPage.BindingContext = todoItem;
-					Navigation.Push(todoPage);
+					Navigation.PushAsync(todoPage);
 				}, 0, 0);
 			}
 
@@ -81,7 +81,7 @@ namespace Todo
 		protected override void OnAppearing ()
 		{
 			base.OnAppearing ();
-			listView.ItemSource = App.Database.GetItems ();
+			listView.ItemsSource = App.Database.GetItems ();
 		}
 	}
 }

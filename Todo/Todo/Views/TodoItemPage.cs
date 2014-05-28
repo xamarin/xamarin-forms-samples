@@ -32,20 +32,20 @@ namespace Todo
 			saveButton.Clicked += (sender, e) => {
 				var todoItem = (TodoItem)BindingContext;
 				App.Database.SaveItem(todoItem);
-				this.Navigation.Pop();
+				this.Navigation.PopAsync();
 			};
 
 			var deleteButton = new Button { Text = "Delete" };
 			deleteButton.Clicked += (sender, e) => {
 				var todoItem = (TodoItem)BindingContext;
 				App.Database.DeleteItem(todoItem.ID);
-				this.Navigation.Pop();
+                this.Navigation.PopAsync();
 			};
 							
 			var cancelButton = new Button { Text = "Cancel" };
 			cancelButton.Clicked += (sender, e) => {
 				var todoItem = (TodoItem)BindingContext;
-				this.Navigation.Pop();
+                this.Navigation.PopAsync();
 			};
 
 
