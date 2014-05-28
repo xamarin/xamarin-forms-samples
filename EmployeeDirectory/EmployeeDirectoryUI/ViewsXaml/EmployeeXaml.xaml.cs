@@ -12,8 +12,7 @@ namespace EmployeeDirectoryUI.Xaml
 
 		public EmployeeXaml () 
 		{
-			InitializeComponent ();	
-			NameLabel.Font = Font.BoldSystemFontOfSize (NamedSize.Large);
+			InitializeComponent ();
 		}
 
 		protected override void OnBindingContextChanged ()
