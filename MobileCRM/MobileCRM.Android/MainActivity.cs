@@ -22,7 +22,6 @@ namespace MobileCRMAndroid
 
             // Set our view from the "main" layout resource
             SetPage (BuildView());
-            ActionBar.Hide();
         }
 
         static Page BuildView()

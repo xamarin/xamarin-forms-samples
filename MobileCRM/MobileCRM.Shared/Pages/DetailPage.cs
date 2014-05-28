@@ -6,8 +6,6 @@ using Xamarin.Forms;
 using System.Reflection;
 using System.Linq;
 using MobileCRM.Shared.CustomViews;
-using MobileCRM.Models;
-using MonoTouch.ObjCRuntime;
 
 namespace MobileCRM.Shared.Pages
 {

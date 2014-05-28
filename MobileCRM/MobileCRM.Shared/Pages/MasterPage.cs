@@ -1,7 +1,6 @@
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
 using MobileCRM.Shared.Pages;
-using MonoTouch.ObjCRuntime;
 using MobileCRM.Shared.ViewModels;
 using Xamarin.Forms.Maps;
 
