@@ -99,12 +99,6 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
-    <Reference Include="PCLStorage.Abstractions">
-      <HintPath>..\packages\PCLStorage.0.9.3\lib\monotouch\PCLStorage.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="PCLStorage">
-      <HintPath>..\packages\PCLStorage.0.9.3\lib\monotouch\PCLStorage.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Auth.iOS">
       <HintPath>..\Components\xamarin.social-1.1.1\lib\ios\Xamarin.Auth.iOS.dll</HintPath>
     </Reference>
@@ -113,13 +107,19 @@
     </Reference>
     <Reference Include="MonoTouch.Dialog-1" />
     <Reference Include="Xamarin.Forms.Platform.iOS">
-      <HintPath>..\packages\Xamarin.Forms.1.0.6184\lib\MonoTouch10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.1.0.6186\lib\MonoTouch10\Xamarin.Forms.Platform.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\packages\Xamarin.Forms.1.0.6184\lib\MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.1.0.6186\lib\MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\packages\Xamarin.Forms.1.0.6184\lib\MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.1.0.6186\lib\MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage">
+      <HintPath>..\packages\PCLStorage.0.9.6\lib\monotouch\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions">
+      <HintPath>..\packages\PCLStorage.0.9.6\lib\monotouch\PCLStorage.Abstractions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -149,7 +149,7 @@
     <Compile Include="iOSPhoneFeatureService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="../packages/Xamarin.Forms.1.0.6184/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets" />
+  <Import Project="../packages/Xamarin.Forms.1.0.6186/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets" />
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.social">
       <Version>1.1.1</Version>
