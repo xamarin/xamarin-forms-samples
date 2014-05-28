@@ -23,7 +23,7 @@ namespace EmployeeDirectoryUI
 
 		public static Page GetMainPage (FormsImplementation uiVersion)
 		{
-			Service = MemoryDirectoryService.FromCsv ("XamarinDirectory.csv");
+			Service = MemoryDirectoryService.FromCsv ("XamarinDirectory.csv").Result;
 
 			var employeeList = new ContentPage ();
 			if (uiVersion == FormsImplementation.CSharp) {

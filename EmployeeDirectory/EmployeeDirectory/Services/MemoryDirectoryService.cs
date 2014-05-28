@@ -36,7 +36,7 @@ namespace EmployeeDirectory
 		public MemoryDirectoryService (IEnumerable<Person> people)
 		{
 			this.people = people.ToList ();
-			this.properties = typeof (Person).GetRuntimeProperties ().ToDictionary (p => p.Name);
+			this.properties = typeof(Person).GetRuntimeProperties ().ToDictionary (p => p.Name);
 		}
 
 		#region IDirectoryService implementation
@@ -71,34 +71,29 @@ namespace EmployeeDirectory
 					r = r.Concat (Search (sf));
 				}
 				return r.Distinct ();
-			}
-			else if (filter is AndFilter) {
+			} else if (filter is AndFilter) {
 				throw new NotImplementedException ();
-			}
-			else if (filter is NotFilter) {
+			} else if (filter is NotFilter) {
 				throw new NotImplementedException ();
-			}
-			else if (filter is EqualsFilter) {
+			} else if (filter is EqualsFilter) {
 				var f = (EqualsFilter)filter;
 				var upper = f.Value.ToUpperInvariant ();
-				var prop = properties[f.PropertyName];
+				var prop = properties [f.PropertyName];
 				var q = from p in people
-						let v = prop.GetValue (p, null)
-						where v != null && v.ToString ().ToUpperInvariant () == upper
-						select p;
+				        let v = prop.GetValue (p, null)
+				        where v != null && v.ToString ().ToUpperInvariant () == upper
+				        select p;
 				return q;
-			}
-			else if (filter is ContainsFilter) {
+			} else if (filter is ContainsFilter) {
 				var f = (ContainsFilter)filter;
-				var re = new Regex (Regex.Escape(f.Value).Replace("\\ ", "|"), RegexOptions.IgnoreCase);
-				var prop = properties[f.PropertyName];
+				var re = new Regex (Regex.Escape (f.Value).Replace ("\\ ", "|"), RegexOptions.IgnoreCase);
+				var prop = properties [f.PropertyName];
 				var q = from p in people
-						let v = prop.GetValue (p, null)
-						where v != null && re.IsMatch (v.ToString ())
-						select p;
+				        let v = prop.GetValue (p, null)
+				        where v != null && re.IsMatch (v.ToString ())
+				        select p;
 				return q;
-			}
-			else {
+			} else {
 				throw new NotSupportedException ("Unsupported filter type: " + filter.GetType ());
 			}
 		}
@@ -107,15 +102,12 @@ namespace EmployeeDirectory
 
 		#region File IO
 
-		public static MemoryDirectoryService FromCsv (string path)
+		public async static Task<MemoryDirectoryService> FromCsv (string path)
 		{
 			IFolder store = FileSystem.Current.LocalStorage;
-			var getFileTask = store.GetFileAsync (path);
-			getFileTask.Wait ();
-			var inputStreamTask = getFileTask.Result.OpenAsync(FileAccess.Read);
-			inputStreamTask.Wait ();
+			IFile file = await store.GetFileAsync (path);
 
-			using (var reader = new StreamReader(inputStreamTask.Result)) {
+			using (var reader = new StreamReader (await file.OpenAsync (FileAccess.Read))) {
 				return FromCsv (reader);
 			}
 		}

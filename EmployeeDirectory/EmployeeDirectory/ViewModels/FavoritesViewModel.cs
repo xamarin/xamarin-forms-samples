@@ -30,9 +30,8 @@ namespace EmployeeDirectory.ViewModels
 
 		public FavoritesViewModel (IFavoritesRepository favoritesRepository, bool groupByLastName)
 		{
-			if (favoritesRepository == null) {
+			if (favoritesRepository == null)
 				throw new ArgumentNullException ("favoritesRepository");
-			}
 
 			this.favoritesRepository = favoritesRepository;
 			this.groupByLastName = groupByLastName;

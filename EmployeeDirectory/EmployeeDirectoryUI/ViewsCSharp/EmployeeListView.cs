@@ -38,12 +38,12 @@ namespace EmployeeDirectoryUI.CSharp
 			base.OnAppearing ();
 
 			if (LoginViewModel.ShouldShowLogin (App.LastUseTime))
-				await Navigation.PushAsync (new LoginView ());
+				await Navigation.PushModalAsync (new LoginView ());
 
 			favoritesRepository = await XmlFavoritesRepository.OpenIsolatedStorage ("XamarinFavorites.xml");
 
 			if (favoritesRepository.GetAll ().Count () == 0)
-				favoritesRepository = XmlFavoritesRepository.OpenFile ("XamarinFavorites.xml");
+				favoritesRepository = await XmlFavoritesRepository.OpenFile ("XamarinFavorites.xml");
 
 			viewModel = new FavoritesViewModel (favoritesRepository, false);
 
