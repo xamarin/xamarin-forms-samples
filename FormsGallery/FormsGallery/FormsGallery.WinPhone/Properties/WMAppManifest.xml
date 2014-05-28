@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{5d1404ec-45b7-4bfb-94b0-d2f09b4dbc0c}" Title="FormsGallery.WinPhone" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="FormsGallery.WinPhone author" Description="Sample description" Publisher="FormsGallery.WinPhone" PublisherID="{a4410233-4f22-4a1d-8a14-9762e81c5fc1}">
+  <App xmlns="" ProductID="{C7816DBC-7318-43E4-97B8-B0BB994E174B}" Title="FormsGallery.WinPhone" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="FormsGallery.WinPhone author" Description="Sample description" Publisher="FormsGallery.WinPhone" PublisherID="{CF34AD6D-4752-491C-BB8C-3F66F2BA6295}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
