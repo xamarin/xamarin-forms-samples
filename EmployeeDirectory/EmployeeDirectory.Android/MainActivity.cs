@@ -17,33 +17,23 @@ namespace EmployeeDirectory.Android
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-			CopyInfoIntoWorkingFolder ();
+			CopyInfoIntoWorkingFolder ("XamarinDirectory.csv", EmployeeDirectory.Android.Resource.Raw.XamarinDirectory);
+			CopyInfoIntoWorkingFolder ("XamarinFavorites.xml", EmployeeDirectory.Android.Resource.Raw.XamarinFavorites);
 
 			Xamarin.Forms.Forms.Init (this, bundle);
 			App.PhoneFeatureService = new AndroidPhoneFeatureService ();
 			SetPage (App.GetMainPage (FormsImplementation.Xaml));
 		}
 
-		private void CopyInfoIntoWorkingFolder ()
+		private void CopyInfoIntoWorkingFolder (string fileName, int resourceId)
 		{
 			string documentsPath = System.Environment.GetFolderPath (System.Environment.SpecialFolder.Personal);
 
-			var path = Path.Combine (documentsPath, "XamarinDirectory.csv");
+			var path = Path.Combine (documentsPath, fileName);
 
 			if (!File.Exists (path)) {
-				var s = Resources.OpenRawResource (EmployeeDirectory.Android.Resource.Raw.XamarinDirectory);
-				// create a write stream
+				var s = Resources.OpenRawResource (resourceId);
 				var writeStream = new FileStream (path, FileMode.OpenOrCreate, FileAccess.Write);
-				// write to the stream
-				ReadWriteStream (s, writeStream);
-			}
-			path = Path.Combine (documentsPath, "XamarinFavorites.xml");
-
-			if (!File.Exists (path)) {
-				var s = Resources.OpenRawResource (EmployeeDirectory.Android.Resource.Raw.XamarinFavorites);
-				// create a write stream
-				var writeStream = new FileStream (path, FileMode.OpenOrCreate, FileAccess.Write);
-				// write to the stream
 				ReadWriteStream (s, writeStream);
 			}
 		}
