@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
+using EmployeeDirectory.Data;
 
 namespace EmployeeDirectoryUI.CSharp
 {
@@ -18,7 +19,7 @@ namespace EmployeeDirectoryUI.CSharp
 		public ListItemTemplate ()
 		{
 			var photo = new Image { HeightRequest = 44.0, WidthRequest = 44.0 };
-			photo.SetBinding (Image.SourceProperty, "LocalImagePath");
+			photo.SetBinding (Image.SourceProperty, "Photo");
 
 			var nameLabel = new Label { 
 				YAlign = TextAlignment.Center,

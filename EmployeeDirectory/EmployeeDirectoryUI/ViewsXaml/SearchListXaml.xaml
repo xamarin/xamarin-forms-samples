@@ -23,7 +23,7 @@
 				    <DataTemplate>
 				      <ViewCell>
 				     	<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">	
-				      		<Image Source="{Binding LocalImagePath}" WidthRequest="44" HeightRequest="44" />
+				      		<Image Source="{Binding Photo}" WidthRequest="44" HeightRequest="44" />
 					     	<StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
 					        	<Label Text="{Binding Name}" YAlign="Center" />
 					        	<Label Text="{Binding Title}" YAlign="Center" Font="Micro"  />
