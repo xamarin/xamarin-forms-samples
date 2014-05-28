@@ -16,7 +16,7 @@ namespace EmployeeDirectoryUI.Xaml
 		{
 			InitializeComponent ();
 
-			favoritesRepository = XmlFavoritesRepository.OpenFile ("XamarinFavorites.xml");
+			favoritesRepository = XmlFavoritesRepository.OpenFile ("XamarinFavorites.xml").Result;
 
 			search = new Search ("test");
 			viewModel = new SearchViewModel (App.Service, search);

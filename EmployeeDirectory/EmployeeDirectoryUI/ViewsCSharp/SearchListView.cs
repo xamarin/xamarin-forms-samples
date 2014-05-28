@@ -35,9 +35,9 @@ namespace EmployeeDirectoryUI.CSharp
 			Title = "Search";
 		}
 
-		private void InitializeViewModel ()
+		private async void InitializeViewModel ()
 		{
-			favoritesRepository = XmlFavoritesRepository.OpenFile ("XamarinFavorites.xml");
+			favoritesRepository = await XmlFavoritesRepository.OpenFile ("XamarinFavorites.xml");
 
 			search = new Search (string.Empty);
 			viewModel = new SearchViewModel (App.Service, search);
