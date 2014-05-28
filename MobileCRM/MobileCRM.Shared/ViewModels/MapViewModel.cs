@@ -1,14 +1,13 @@
-﻿using MobileCRM.Shared.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms.Maps;
+using MobileCRM.Models;
 
 namespace MobileCRM.Shared.ViewModels
 {
-    public class MapViewModel : CustomersViewModel
+    public class MapViewModel : ContactsViewModel
     {
+        public static readonly Position NullPosition = new Position(0, 0);
          
         public MapViewModel()
         {
@@ -18,18 +17,20 @@ namespace MobileCRM.Shared.ViewModels
 
         public List<Pin> LoadPins()
         {
-            this.ExecuteLoadCustomersCommand();
-            var pins = this.Customers.Select(p =>
+            ExecuteLoadModelsCommand();
+
+            var pins = Models.Select(p =>
             {
-                var pos = p.Location.Points[0];
-                var poslist = pos.Poslist.Split(' ');
+                var address = p.Address ?? p.ShippingAddress ?? p.BillingAddress;
+
+                var position = address != null ? new Position(address.Latitude, address.Longitude) : NullPosition;
                 var pin = new Pin
-                {
-                    Type = PinType.Place,
-                    Position = new Position(Convert.ToDouble(poslist[0]), Convert.ToDouble(poslist[1])),
-                    Label = p.Labels[0].Value,
-                    Address = (String)p.Location.Address ?? (String)p.Location.Value ?? (String)p.Location.Points[0].Value
-                };
+                    {
+                        Type = PinType.Place,
+                        Position = position,
+                        Label = p.ToString(),
+                        Address = address.ToString()
+                    };
                 return pin;
             }).ToList();
 

@@ -1,29 +1,30 @@
 ﻿using MobileCRM.Shared.ViewModels;
-using MobileCRM.Shared.Models;
+using MobileCRM.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 using MobileCRM.Shared.CustomViews;
+using MobileCRM.Models;
 
 namespace MobileCRM.Shared.Pages
 {
     public class CustomersPages : ContentPage
     {
-        private CustomersViewModel ViewModel
+        private ContactsViewModel ViewModel
         {
-            get { return BindingContext as CustomersViewModel; }
+            get { return BindingContext as ContactsViewModel; }
         }
 
         public CustomersPages()
         {
-            BindingContext = new CustomersViewModel();
+            BindingContext = new ContactsViewModel();
 
             this.SetBinding(Page.TitleProperty, "Title");
             this.SetBinding(Page.IconProperty, "Icon");
 
             var list = new ListView();
-            list.ItemsSource = ViewModel.Customers;
+            list.ItemsSource = ViewModel.Models;
 
 #if __ANDROID__
             var cell = new DataTemplate(typeof(ListTextCell));
@@ -32,13 +33,13 @@ namespace MobileCRM.Shared.Pages
 #endif
 
             
-            cell.SetBinding(TextCell.TextProperty, "DisplayLabel");
-            cell.SetBinding(TextCell.DetailProperty, "DisplayCategory");
+            cell.SetBinding(TextCell.TextProperty, "FirstName");
+            cell.SetBinding(TextCell.DetailProperty, "Industry");
 
             list.ItemTemplate = cell;
             list.ItemSelected += (sender, e) =>
             {
-                var details = new CustomerDetailPage(e.SelectedItem as POI);
+                var details = new ContactDetailPage(e.SelectedItem as IContact);
                 Navigation.PushAsync(details);
             };
             var stack = new StackLayout();
@@ -50,8 +51,8 @@ namespace MobileCRM.Shared.Pages
         {
             base.OnAppearing();
 
-            if(ViewModel.Customers.Count == 0)
-                ViewModel.LoadCustomersCommand.Execute(null);
+            if(ViewModel.Models.Count == 0)
+                ViewModel.LoadModelsCommand.Execute(null);
         }
     }
 }

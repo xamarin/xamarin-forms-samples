@@ -6,13 +6,11 @@
     <SharedGUID>2ddbd0eb-9989-4194-86d0-216f141cb69a</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>Meetup.Shared</Import_RootNamespace>
+    <Import_RootNamespace>MobileCRM</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)CustomViews\ListTextCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Color.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MobileCRM.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\CustomerDetailPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\CustomersPages.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\LoginPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\MainPage.cs" />
@@ -20,33 +18,15 @@
     <Compile Include="$(MSBuildThisFileDirectory)Pages\MenuPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\RootPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CustomersViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MapViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)CustomViews\DarkTextCell.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)CustomViews\StripedListView.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)CustomViews\StripedViewCell.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\Author.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\Author2.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\Author3.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\Category.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\Label.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\Link.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\Location.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\OptionItem.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\POI.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\Point.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Old\TestData.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Account.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Lead.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Opportunity.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Proposal.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Contact.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\DefaultContact.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\IContact.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Address.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Models\Old\" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ListTextCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DarkTextCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\StripedListView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\StripedViewCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ContactsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\ContactDetailPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LeadsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\OptionItem.cs" />
   </ItemGroup>
 </Project>

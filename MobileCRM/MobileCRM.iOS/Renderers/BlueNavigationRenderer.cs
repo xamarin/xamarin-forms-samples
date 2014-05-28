@@ -10,7 +10,7 @@ using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
 
 
-[assembly: ExportRenderer(typeof(NavigationRenderer), typeof(BlueNavigationRenderer))]
+//[assembly: ExportRenderer(typeof(NavigationRenderer), typeof(BlueNavigationRenderer))]
 namespace MobileCRM.iOS.Renderers
 {
   public class BlueNavigationRenderer : NavigationRenderer

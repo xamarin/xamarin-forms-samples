@@ -1,17 +1,15 @@
 ﻿using System.Linq;
 using Xamarin.Forms;
-using System.Threading.Tasks;
-using System.Diagnostics;
-using Xamarin.Forms.Maps;
+
 using MobileCRM.Shared.Pages;
-using MobileCRM.Shared.Models;
+using MobileCRM.Models;
 
 
 namespace MobileCRM.Shared.Pages
 {
     public class RootPage : MasterDetailPage
     {
-        MainPage displayPage;
+//        MainPage displayPage;
         OptionItem previousItem;
 
         public RootPage ()
@@ -23,9 +21,9 @@ namespace MobileCRM.Shared.Pages
 
             Master = optionsPage;
 
-            ShowLoginDialog();
-
             NavigateTo(optionsPage.Menu.ItemsSource.Cast<OptionItem>().First());
+            //ShowLoginDialog();
+
       
         }
 
@@ -44,7 +42,7 @@ namespace MobileCRM.Shared.Pages
             option.Selected = true;
             previousItem = option;
 
-            displayPage = new MainPage { Title = option.Title };
+            var displayPage = new MainPage { Title = option.Title };
 
          
             Detail = new NavigationPage(displayPage)

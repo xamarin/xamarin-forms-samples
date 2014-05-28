@@ -2,10 +2,67 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using Xamarin.Forms;
+using System.Reflection;
+using System.Linq;
+using MobileCRM.Services;
+using MobileCRM.Models;
 
 namespace MobileCRM.Shared.ViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged, INotifyPropertyChanging
+    public abstract class BaseViewModel<T> : BaseViewModel
+        where T: class, new()
+    {
+        static readonly MethodInfo GetDependency;
+
+        static BaseViewModel() 
+        {
+            var repoType = MobileCRMApp.TypeMap[typeof(T)];
+            var getMethod = typeof(DependencyService)
+                .GetRuntimeMethods()
+                .Single((method)=>
+                    method.Name.Equals("Get"));
+            GetDependency = getMethod.MakeGenericMethod(repoType);
+
+
+            //            DependencyService.Get<IRepository<T>>()
+        }
+
+        const string IconFormat = "{0}.png";
+
+        public BaseViewModel()
+        {
+            Title = typeof(T).Name;
+            Icon = string.Format(IconFormat, Title) ;
+            Models = new System.Collections.ObjectModel.ObservableCollection<T>();
+        }
+
+        public System.Collections.ObjectModel.ObservableCollection<T> Models { get; set; }
+
+        private Command loadModelsCommand;
+        public Command LoadModelsCommand
+        {
+            get
+            {
+                return loadModelsCommand ?? (loadModelsCommand = new Command(ExecuteLoadModelsCommand));
+            }
+        }
+
+        protected virtual async void ExecuteLoadModelsCommand()
+        {
+
+            using (var service = (IRepository<T>)GetDependency.Invoke(null, new object[] { DependencyFetchTarget.GlobalInstance }))
+            {
+                var contacts = await service.All();
+
+                foreach(var contact in contacts)
+                    Models.Add(contact);
+            }
+            OnPropertyChanged("Models");
+        }
+    }
+
+    public abstract class BaseViewModel : INotifyPropertyChanged
     {
         public BaseViewModel()
         {
@@ -46,15 +103,15 @@ namespace MobileCRM.Shared.ViewModels
             set { SetProperty(ref icon, value, IconPropertyName); }
         }
 
-        protected void SetProperty<T>(
-          ref T backingStore, T value,
-          string propertyName,
-          Action onChanged = null,
-          Action<T> onChanging = null)
+        protected void SetProperty<U>(
+            ref U backingStore, U value,
+            string propertyName,
+            Action onChanged = null,
+            Action<U> onChanging = null)
         {
 
 
-            if (EqualityComparer<T>.Default.Equals(backingStore, value))
+            if (EqualityComparer<U>.Default.Equals(backingStore, value))
                 return;
 
             if (onChanging != null)
@@ -71,7 +128,7 @@ namespace MobileCRM.Shared.ViewModels
         }
 
         #region INotifyPropertyChanging implementation
-        public event PropertyChangingEventHandler PropertyChanging;
+        public event Xamarin.Forms.PropertyChangingEventHandler PropertyChanging ;
         #endregion
 
         public void OnPropertyChanging(string propertyName)
@@ -79,7 +136,7 @@ namespace MobileCRM.Shared.ViewModels
             if (PropertyChanging == null)
                 return;
 
-            PropertyChanging(this, new PropertyChangingEventArgs(propertyName));
+            PropertyChanging(this, new Xamarin.Forms.PropertyChangingEventArgs(propertyName));
         }
 
 

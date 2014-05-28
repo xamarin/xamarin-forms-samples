@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Diagnostics;
-using MobileCRM.Shared.Models;
+using MobileCRM.Models;
 using MobileCRM.Shared.CustomViews;
 
 
@@ -15,20 +15,17 @@ namespace MobileCRM.Shared.Pages
 
     public class MenuPage : ContentPage
     {
-        static readonly List<OptionItem> OptionItems = new List<OptionItem> {
-            new OptionItem { Title = "Favorites", Subtitle = "" },
-            new OptionItem { Title = "Accounts", Subtitle = "3" },
-            new OptionItem { Title = "Opportunities", Subtitle = "103" },
-            new OptionItem { Title = "Leads", Subtitle = "203" },
-            new OptionItem { Title = "Contacts", Subtitle = "392" },
-            new OptionItem { Title = "Reminders", Subtitle = "9" },
-            new OptionItem { Title = "Recents", Subtitle = "" },
-        };
+        static readonly List<OptionItem> OptionItems = new List<OptionItem>();
 
         public ListView Menu { get; set; }
 
         public MenuPage ()
         {
+            OptionItems.Add(new OptionItem<Lead>());
+            OptionItems.Add(new OptionItem<Contact>());
+            OptionItems.Add(new OptionItem<Account>());
+            OptionItems.Add(new OptionItem<Opportunity>());
+
             BackgroundColor = Color.FromHex("333333");
 
             var layout = new StackLayout { Spacing = 0, VerticalOptions = LayoutOptions.FillAndExpand };
@@ -56,7 +53,7 @@ namespace MobileCRM.Shared.Pages
 
             var cell = new DataTemplate(typeof(DarkTextCell));
             cell.SetBinding(TextCell.TextProperty, "Title");
-            cell.SetBinding(TextCell.DetailProperty, "Subtitle");
+            cell.SetBinding(TextCell.DetailProperty, "Count");
             cell.SetValue(VisualElement.BackgroundColorProperty, Color.Transparent);
 
             Menu.ItemTemplate = cell;

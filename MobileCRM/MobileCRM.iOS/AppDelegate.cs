@@ -7,7 +7,6 @@ using Xamarin.Forms;
 using Xamarin;
 using MobileCRM.Shared.CustomViews;
 using MobileCRM.Shared.Pages;
-using MobileCRM.Shared.Pages;
 
 namespace MobileCRM.iOS
 {

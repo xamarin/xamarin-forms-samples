@@ -1,4 +1,4 @@
-﻿using MobileCRM.Shared.Models;
+﻿using MobileCRM.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,23 +6,24 @@ using Xamarin.Forms;
 using System.Reflection;
 using System.Linq;
 using MobileCRM.Shared.CustomViews;
+using MobileCRM.Models;
 
 namespace MobileCRM.Shared.Pages
 {
-    public class CustomerDetailPage : ContentPage
+    public class ContactDetailPage : ContentPage
     {
-        public CustomerDetailPage(POI poi)
+        public ContactDetailPage(IContact contact)
         {
 
-            this.BindingContext = poi;
+            this.BindingContext = contact;
             // Use reflection to turn our object
             // into a property bag.
             var detailList = new ListView();
-            detailList.ItemsSource = poi.GetType()
+            detailList.ItemsSource = contact.GetType()
                 .GetRuntimeProperties()
                 .Where(pi =>
-                    pi.GetValue(poi) != null)
-                .Select(pi => new KeyValuePair<string, object>(pi.Name, pi.GetValue(poi)));
+                    pi.GetValue(contact) != null)
+                .Select(pi => new KeyValuePair<string, object>(pi.Name, pi.GetValue(contact)));
 
             // Then bind our template to the key value pairs.
 #if __ANDROID__
@@ -36,7 +37,7 @@ namespace MobileCRM.Shared.Pages
             detailList.ItemTemplate.SetBinding(TextCell.DetailProperty, "Value");
 
             Content = detailList;
-            Title = poi.DisplayLabel;
+            Title = contact.Title;
         }
     }
 }
