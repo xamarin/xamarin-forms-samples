@@ -20,7 +20,7 @@
 				</OnPlatform.iOS>
 
 				<OnPlatform.Android>
-		        	<StackLayout VerticalOptions="Center">
+		        	<StackLayout VerticalOptions="Center" Padding="30">
 		        		<Grid HorizontalOptions="Center">
 			        		<Image Source="logo" Grid.Row="0" Grid.Column="0" />
 			        		<Button x:Name="helpButtonAndroid" Text="Help" Grid.Row="0" Grid.Column="1" />
