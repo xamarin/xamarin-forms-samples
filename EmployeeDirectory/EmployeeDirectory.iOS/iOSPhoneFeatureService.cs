@@ -29,18 +29,6 @@ namespace EmployeeDirectory.iOS
 			this.rootViewController = rootViewController;
 		}
 
-		public bool Call (string phoneNumber)
-		{
-			var url = NSUrl.FromString ("tel:" + Uri.EscapeDataString (phoneNumber));
-
-			if (UIApplication.SharedApplication.CanOpenUrl (url)) {
-				UIApplication.SharedApplication.OpenUrl (url);
-				return true;
-			} else {
-				return false;
-			}
-		}
-
 		public bool Email (string emailAddress)
 		{
 			if (MFMailComposeViewController.CanSendMail) {
@@ -55,6 +43,13 @@ namespace EmployeeDirectory.iOS
 			} else {
 				return false;
 			}
+		}
+
+		public bool Browse (string websiteUrl)
+		{
+			UIApplication.SharedApplication.OpenUrl (NSUrl.FromString (websiteUrl));
+
+			return true;
 		}
 
 		public bool Tweet (string twitterName)
@@ -73,11 +68,16 @@ namespace EmployeeDirectory.iOS
 			return true;
 		}
 
-		public bool Browse (string websiteUrl)
+		public bool Call (string phoneNumber)
 		{
-			UIApplication.SharedApplication.OpenUrl (NSUrl.FromString (websiteUrl));
+			var url = NSUrl.FromString ("tel:" + Uri.EscapeDataString (phoneNumber));
 
-			return true;
+			if (UIApplication.SharedApplication.CanOpenUrl (url)) {
+				UIApplication.SharedApplication.OpenUrl (url);
+				return true;
+			} else {
+				return false;
+			}
 		}
 
 		public bool Map (string address)
