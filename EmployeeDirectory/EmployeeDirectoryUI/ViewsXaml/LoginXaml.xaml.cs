@@ -19,7 +19,9 @@ namespace EmployeeDirectoryUI.Xaml
 		protected override void OnAppearing ()
 		{
 			base.OnAppearing ();
-
+			string platformName= Device.OS.ToString ();
+			Content.FindByName<Button> ("loginButton" + platformName).Clicked += OnLoginClicked;
+			Content.FindByName<Button> ("helpButton" + platformName).Clicked += OnHelpClicked;
 		}
 
 		private void OnLoginClicked (object sender, EventArgs e)
