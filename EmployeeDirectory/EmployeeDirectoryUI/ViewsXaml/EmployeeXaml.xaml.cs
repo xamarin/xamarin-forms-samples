@@ -15,17 +15,27 @@ namespace EmployeeDirectoryUI.Xaml
 			InitializeComponent ();
 		}
 
+		protected override void OnAppearing ()
+		{
+			base.OnAppearing ();
+			favoriteSwitch.Toggled += OnFavoriteClicked;
+		}
+
+
 		protected override void OnBindingContextChanged ()
 		{
 			base.OnBindingContextChanged ();
+			var personInfo = (PersonViewModel)BindingContext;
+			Title = personInfo.Person.Name;
+			favoriteLabel.Text = personInfo.IsFavorite ? "Added to favorites" : "Not in favorites";
 			GetImage ();
 		}
 
 		private void OnFavoriteClicked (object sender, EventArgs e) 
 		{
-			var p = (PersonViewModel)BindingContext;
-			p.ToggleFavorite ();
-			Navigation.PopAsync();
+			var personInfo = (PersonViewModel)BindingContext;
+			personInfo.ToggleFavorite ();
+			favoriteLabel.Text = personInfo.IsFavorite ? "Added to favorites" : "Not in favorites";
 		}
 
 		private void OnItemSelected (object sender, SelectedItemChangedEventArgs e) {

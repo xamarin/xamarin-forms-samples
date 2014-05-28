@@ -11,32 +11,27 @@ namespace EmployeeDirectoryUI.CSharp
 	{
 		private const int IMAGE_SIZE = 176;
 		private Image photo;
+		private Label favoriteLabel;
+		private Switch favoriteSwitch;
 
 		public EmployeeView ()
 		{
-			Title = "Employee";
-
 			photo = new Image { WidthRequest = IMAGE_SIZE, HeightRequest = IMAGE_SIZE };
 			photo.SetBinding (Image.SourceProperty, "DetailsPlaceholder.jpg");
 
-			var nameLabel = new Label { Font = Font.BoldSystemFontOfSize (NamedSize.Large) };
-			nameLabel.SetBinding (Label.TextProperty, "Person.Name");
+			favoriteLabel = new Label ();
 
-			var removeButton = new Button { Text = "Remove Favorite" };
-			removeButton.Clicked += OnFavoriteClicked;
-			removeButton.SetBinding (Button.IsVisibleProperty, "Path=Person.IsFavorite");
-
-			var addButton = new Button { Text = "Add Favorite" };
-			addButton.Clicked += OnFavoriteClicked;
-			addButton.SetBinding (Button.IsVisibleProperty, "Path=Person.IsNotFavorite");
+			favoriteSwitch = new Switch();
+			favoriteSwitch.SetBinding (Switch.IsToggledProperty, "Path=Person.IsFavorite");
 
 			var optionsView = new StackLayout { 
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				Orientation = StackOrientation.Vertical,
-				Children = { nameLabel, removeButton, addButton }
+				Children = { favoriteLabel, favoriteSwitch }
 			};
 
 			var headerView = new StackLayout {
+				Padding = new Thickness(10, 20, 10, 0),
 				HorizontalOptions = LayoutOptions.StartAndExpand,
 				Orientation = StackOrientation.Horizontal,
 				Children = { photo, optionsView }
@@ -54,17 +49,26 @@ namespace EmployeeDirectoryUI.CSharp
 			};
 		}
 
+		protected override void OnAppearing ()
+		{
+			base.OnAppearing ();
+			favoriteSwitch.Toggled += OnFavoriteClicked;
+		}
+
 		protected override void OnBindingContextChanged ()
 		{
 			base.OnBindingContextChanged ();
+			var personInfo = (PersonViewModel)BindingContext;
+			Title = personInfo.Person.Name;
+			favoriteLabel.Text = personInfo.IsFavorite ? "Added to favorites" : "Not in favorites";
 			DownloadImage ();
 		}
 
-		private void OnFavoriteClicked (object sender, EventArgs e)
+		private void OnFavoriteClicked (object sender, ToggledEventArgs e)
 		{
 			var personInfo = (PersonViewModel)BindingContext;
 			personInfo.ToggleFavorite ();
-			Navigation.PopAsync ();
+			favoriteLabel.Text = personInfo.IsFavorite ? "Added to favorites" : "Not in favorites";
 		}
 
 		private void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
@@ -103,7 +107,6 @@ namespace EmployeeDirectoryUI.CSharp
 
 			if (person.HasEmail) {
 				var imageUrl = Gravatar.GetImageUrl (person.Email, IMAGE_SIZE);
-
 				photo.Source = new UriImageSource { Uri = imageUrl };
 			}
 		}

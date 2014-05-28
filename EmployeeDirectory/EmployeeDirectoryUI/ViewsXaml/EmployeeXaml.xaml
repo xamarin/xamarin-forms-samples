@@ -13,8 +13,8 @@
 						WidthRequest="176" HeightRequest="176" 
 						Source="DetailsPlaceholder.jpg" />
 	    		<StackLayout VerticalOptions="StartAndExpand" Orientation="Vertical">
-			        <Button Text="Is Favorite" Clicked="OnFavoriteClicked" IsVisible="{Binding IsFavorite}" />
-			        <Button Text="Make Favorite" Clicked="OnFavoriteClicked" IsVisible="{Binding IsNotFavorite}" />
+	    			<Label x:Name="favoriteLabel" />
+	    			<Switch x:Name="favoriteSwitch" IsToggled="{Binding IsFavorite}" />
 				</StackLayout>
 			</StackLayout>
 
