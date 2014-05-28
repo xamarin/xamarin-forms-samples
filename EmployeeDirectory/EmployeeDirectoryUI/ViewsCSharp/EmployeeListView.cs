@@ -47,7 +47,7 @@ namespace EmployeeDirectoryUI.CSharp
 
 			viewModel = new FavoritesViewModel (favoritesRepository, false);
 
-			listView.ItemSource = viewModel.Groups;
+			listView.ItemsSource = viewModel.Groups;
 		}
 
 		private void OnItemSelected (object sender, ItemTappedEventArgs e)

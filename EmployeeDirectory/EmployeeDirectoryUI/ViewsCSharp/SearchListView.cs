@@ -24,7 +24,7 @@ namespace EmployeeDirectoryUI.CSharp
 				IsGroupingEnabled = true,
 				GroupHeaderTemplate = new DataTemplate (typeof(GroupHeaderTemplate)),
 				ItemTemplate = new DataTemplate (typeof(ListItemTemplate)),
-				ItemSource = viewModel.Groups
+				ItemsSource = viewModel.Groups
 			};
 
 			listView.ItemSelected += OnItemSelected;
@@ -53,9 +53,9 @@ namespace EmployeeDirectoryUI.CSharp
 		private void OnSearchCompleted (object sender, SearchCompletedEventArgs e)
 		{
 			if (viewModel.Groups == null) {
-				listView.ItemSource = new string [1];
+				listView.ItemsSource = new string [1];
 			} else {
-				listView.ItemSource = viewModel.Groups;
+				listView.ItemsSource = viewModel.Groups;
 			}
 		}
 

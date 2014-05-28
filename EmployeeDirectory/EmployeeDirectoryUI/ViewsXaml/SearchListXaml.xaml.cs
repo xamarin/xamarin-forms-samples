@@ -23,9 +23,9 @@ namespace EmployeeDirectoryUI.Xaml
 
 			viewModel.SearchCompleted += (sender, e) => {
 				if (viewModel.Groups == null) {
-					listView.ItemSource = new string [1];
+					listView.ItemsSource = new string [1];
 				} else {
-					listView.ItemSource = viewModel.Groups;
+					listView.ItemsSource = viewModel.Groups;
 				}
 			};
 

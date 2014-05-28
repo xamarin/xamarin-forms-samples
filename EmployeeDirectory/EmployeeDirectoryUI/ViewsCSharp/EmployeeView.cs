@@ -44,7 +44,7 @@ namespace EmployeeDirectoryUI.CSharp
 
 			var listView = new ListView { IsGroupingEnabled = true };
 			listView.ItemSelected += OnItemSelected;
-			listView.SetBinding (ListView.ItemSourceProperty, "PropertyGroups");
+			listView.SetBinding (ListView.ItemsSourceProperty, "PropertyGroups");
 			listView.GroupHeaderTemplate = new DataTemplate (typeof(GroupHeaderTemplate));
 			listView.ItemTemplate = new DataTemplate (typeof(DetailsItemTemplate));
 

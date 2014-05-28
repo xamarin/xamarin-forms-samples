@@ -37,7 +37,7 @@ namespace EmployeeDirectoryUI.Xaml
 
 			viewModel = new FavoritesViewModel (favoritesRepository, false);
 
-			listView.ItemSource = viewModel.Groups;
+			listView.ItemsSource = viewModel.Groups;
 		}
 
 		public void OnItemSelected (object sender, SelectedItemChangedEventArgs e) 
