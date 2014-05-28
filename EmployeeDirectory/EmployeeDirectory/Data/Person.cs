@@ -17,6 +17,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using Xamarin.Forms;
 
 namespace EmployeeDirectory.Data
 {
@@ -160,6 +161,13 @@ namespace EmployeeDirectory.Data
 				} else {
 					localImagePath = value;
 				}
+			}
+		}
+
+		public ImageSource Photo
+		{
+			get {
+				return FileImageSource.FromFile (LocalImagePath);
 			}
 		}
 
