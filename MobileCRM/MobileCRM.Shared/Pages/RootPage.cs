@@ -1,17 +1,17 @@
 ﻿using System.Linq;
 using Xamarin.Forms;
-using System.Threading.Tasks;
-using System.Diagnostics;
-using Xamarin.Forms.Maps;
+
 using MobileCRM.Shared.Pages;
-using MobileCRM.Shared.Models;
+using MobileCRM.Models;
+using System;
+using System.Threading.Tasks;
 
 
 namespace MobileCRM.Shared.Pages
 {
     public class RootPage : MasterDetailPage
     {
-        MainPage displayPage;
+//        MainPage displayPage;
         OptionItem previousItem;
 
         public RootPage ()
@@ -23,13 +23,11 @@ namespace MobileCRM.Shared.Pages
 
             Master = optionsPage;
 
-            ShowLoginDialog();
+            NavigateTo(optionsPage.Menu.ItemsSource.Cast<OptionItem>().First());
+            //ShowLoginDialog();
 
-            NavigateTo(optionsPage.Menu.ItemSource.Cast<OptionItem>().First());
       
         }
-
-
 
         async void ShowLoginDialog()
         {
@@ -46,9 +44,8 @@ namespace MobileCRM.Shared.Pages
             option.Selected = true;
             previousItem = option;
 
-            displayPage = new MainPage { Title = option.Title };
-
-         
+            var displayPage = PageForOption(option);
+                     
             Detail = new NavigationPage(displayPage)
             {
               Tint = Helpers.Color.Blue.ToFormsColor(),
@@ -56,6 +53,28 @@ namespace MobileCRM.Shared.Pages
 
 
             IsPresented = false;
+        }
+
+        Page PageForOption (OptionItem option)
+        {
+            if (option.Title == "Contacts")
+                return new MasterPage<Contact> { Title = option.Title };
+            if (option.Title == "Leads")
+                return new MasterPage<Lead> { Title = option.Title };
+            if (option.Title == "Accounts") {
+                var page = new MasterPage<Account> { Title = option.Title };
+                var cell = page.List.Cell;
+                cell.SetBinding(TextCell.TextProperty, "Company");
+                return page;
+            }
+            if (option.Title == "Opportunities") {
+                var page = new MasterPage<Opportunity> { Title = option.Title };
+                var cell = page.List.Cell;
+                cell.SetBinding(TextCell.TextProperty, "Company");
+                cell.SetBinding(TextCell.DetailProperty, "EstimatedAmount");
+                return page;
+            }
+            throw new NotImplementedException("Unknown menu option: " + option.Title);
         }
     }
 }

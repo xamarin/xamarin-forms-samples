@@ -4,7 +4,7 @@ using MobileCRM.iOS.Renderers;
 using Xamarin.Forms;
 
 
-[assembly: ExportCell(typeof(CustomerDetailPage), typeof(CustomerDetailsPageRenderer))]
+//[assembly: ExportCell(typeof(DetailPage), typeof(CustomerDetailsPageRenderer))]
 namespace MobileCRM.iOS.Renderers
 {
     class CustomerDetailsPageRenderer : StoryBoardRenderer<CustomerDetailsStoryboard>

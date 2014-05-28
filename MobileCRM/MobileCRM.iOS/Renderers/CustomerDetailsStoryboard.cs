@@ -5,7 +5,7 @@ using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Xamarin.Forms;
-using MobileCRM.Shared.Models;
+using MobileCRM.Models;
 
 namespace MobileCRM.iOS.Renderers
 {
@@ -38,9 +38,9 @@ namespace MobileCRM.iOS.Renderers
             model = value;
             this.model.BindingContextChanged += (sender, args) =>
                 {
-                    var poi = (POI)model.BindingContext;
-                    LabelCustomerCategory.Text = poi.DisplayLabel;
-                    LabelCustomerName.Text = poi.DisplayCategory;
+                    var customer = (Contact)model.BindingContext;
+                    LabelCustomerCategory.Text = customer.Industry;
+                    LabelCustomerName.Text = customer.ToString();
 
                 }; 
  
@@ -52,11 +52,11 @@ namespace MobileCRM.iOS.Renderers
     public override void ViewDidLoad()
     {
       base.ViewDidLoad();
-      if (model.BindingContext != null)
+      if (model != null && model.BindingContext != null)
       {
-          var poi = (POI)model.BindingContext;
-          LabelCustomerCategory.Text = poi.DisplayLabel;
-          LabelCustomerName.Text = poi.DisplayCategory;
+        var customer = (Contact)model.BindingContext;
+        LabelCustomerCategory.Text = customer.Industry;
+        LabelCustomerName.Text = customer.ToString();
       }
       // Perform any additional setup after loading the view, typically from a nib.
     }

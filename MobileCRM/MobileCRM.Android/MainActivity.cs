@@ -1,9 +1,11 @@
 ﻿using Android.App;
 using Android.OS;
+using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
 using Xamarin;
 using MobileCRM.Shared.Pages;
 using MobileCRM;
+using Android.Graphics.Drawables;
 
 namespace MobileCRMAndroid
 {
@@ -20,6 +22,7 @@ namespace MobileCRMAndroid
 
             // Set our view from the "main" layout resource
             SetPage (BuildView());
+            ActionBar.Hide();
         }
 
         static Page BuildView()

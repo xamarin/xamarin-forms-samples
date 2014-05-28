@@ -4,13 +4,17 @@ using System.Collections.ObjectModel;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace MobileCRM.Shared.Models
+namespace MobileCRM.Models
 {
-    public class OptionItem
+    public class OptionItem<T> : OptionItem
 	{
-        public string Title { get; set; }
-        public string Subtitle { get; set; }
-        public bool Selected { get; set; }
 	}
+
+    public class OptionItem
+    {
+        public string Title { get { return GetType().Name; } }
+        public int Count { get; set; }
+        public bool Selected { get; set; }
+    }
 }
 

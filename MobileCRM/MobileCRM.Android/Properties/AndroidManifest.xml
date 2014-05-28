@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.xamarin.mobilecrm" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="15" />
+	<uses-sdk />
 	<application android:label="MobileCRM" android:theme="@style/MyTheme" android:icon="@drawable/Icon">
-		<!--<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBCheymF6UzLVaVG6dlTvSBC6EHL4Yv6Qw" />-->
-		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyA8BjZodaBWOZVfWHIrIViNBp9BkXHKDvM" />
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBCheymF6UzLVaVG6dlTvSBC6EHL4Yv6Qw" />
+		<!--<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyA8BjZodaBWOZVfWHIrIViNBp9BkXHKDvM" />-->
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 	</application>
 	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />

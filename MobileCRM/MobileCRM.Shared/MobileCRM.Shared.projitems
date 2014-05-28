@@ -6,36 +6,27 @@
     <SharedGUID>2ddbd0eb-9989-4194-86d0-216f141cb69a</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>Meetup.Shared</Import_RootNamespace>
+    <Import_RootNamespace>MobileCRM</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)CustomViews\ListTextCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Color.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MobileCRM.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Author.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Author2.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Author3.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Category.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Label.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Link.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Location.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\OptionItem.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\POI.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Point.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\TestData.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\CustomerDetailPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\CustomersPages.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\LoginPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\MainPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\MapPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\MenuPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\RootPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CustomersViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MapViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)CustomViews\DarkTextCell.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)CustomViews\StripedListView.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)CustomViews\StripedViewCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ListTextCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DarkTextCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\StripedListView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\StripedViewCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ContactsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LeadsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\OptionItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\ListPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\MasterPage.cs" />
   </ItemGroup>
 </Project>
