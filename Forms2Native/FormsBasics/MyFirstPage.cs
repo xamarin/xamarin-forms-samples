@@ -24,14 +24,14 @@ namespace Forms2Native
 
 			var button1 = new Button { Text = "Click to see a native page" };
 
-			button1.Clicked += (s, e) => Navigation.Push(new MySecondPage());
+			button1.Clicked += (s, e) => Navigation.PushAsync(new MySecondPage());
 
 			if (Device.OS == TargetPlatform.iOS) {
 				button2 = new Button { Text = "Click to see a native UIViewController" };
 			} else {
 				button2 = new Button { Text = "Click to see an Intent work" };
 			}
-			button2.Clicked += (s, e) => Navigation.Push(new MyThirdPage());
+			button2.Clicked += (s, e) => Navigation.PushAsync(new MyThirdPage());
 			
 			Content = new StackLayout {
 				Spacing = 10,
