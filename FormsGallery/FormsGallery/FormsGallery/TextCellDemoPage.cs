@@ -25,7 +25,6 @@ namespace FormsGallery
                         {
                             Text = "This is a TextCell",
                             Detail = "This is some detail text",
-                            Style = TextCellStyle.Vertical
                         }
                     }
                 }

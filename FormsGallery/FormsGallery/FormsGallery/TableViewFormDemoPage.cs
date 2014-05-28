@@ -25,7 +25,6 @@ namespace FormsGallery
                         {
                             Text = "Text Cell",
                             Detail = "With Detail Text",
-                            Style = TextCellStyle.Vertical
                         },
                         new ImageCell
                         {
@@ -36,7 +35,6 @@ namespace FormsGallery
                                                   ImageSource.FromFile("Images/ide-xamarin-studio.png")),
                             Text = "Image Cell",
                             Detail = "With Detail Text",
-                            Style = TextCellStyle.Vertical
                         },
                         new SwitchCell
                         {

@@ -30,7 +30,6 @@ namespace FormsGallery
                                                   ImageSource.FromFile("Images/ide-xamarin-studio.png")),
                             Text = "This is an ImageCell",
                             Detail = "This is some detail text",
-                            Style = TextCellStyle.Vertical
                         }
                     }
                 }
