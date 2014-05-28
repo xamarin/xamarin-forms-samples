@@ -31,7 +31,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="InMemoryRepository.cs" />
     <Compile Include="IAuthenticationResponse.cs" />
     <Compile Include="IAuthenticationService.cs" />
     <Compile Include="IContactRepository.cs" />
@@ -45,10 +44,11 @@
     <Compile Include="Models\Lead.cs" />
     <Compile Include="Models\Opportunity.cs" />
     <Compile Include="Models\Proposal.cs" />
-    <Compile Include="LeadRepository.cs" />
-    <Compile Include="OpportunityRepository.cs" />
-    <Compile Include="AccountRepository.cs" />
-    <Compile Include="ContactRepository.cs" />
+    <Compile Include="Repositories\AccountRepository.cs" />
+    <Compile Include="Repositories\ContactRepository.cs" />
+    <Compile Include="Repositories\LeadRepository.cs" />
+    <Compile Include="Repositories\OpportunityRepository.cs" />
+    <Compile Include="Repositories\InMemoryRepository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="../packages/Xamarin.Forms.1.0.6186/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets" />
@@ -68,5 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 </Project>

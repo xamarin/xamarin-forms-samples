@@ -17,6 +17,11 @@ namespace MobileCRM.Models
         public double Longitude { get; set; }
 
         #endregion
+
+        public override string ToString ()
+        {
+            return string.Format ("{0}{1} {2} {3} {4}", Street, !string.IsNullOrWhiteSpace(Unit) ? Unit + "," : string.Empty, !string.IsNullOrWhiteSpace(City) ? City + "," : string.Empty, State, PostalCode);
+        }
 	}
 }
 

@@ -9,6 +9,7 @@ namespace MobileCRM.Models
         public Opportunity (ILead lead) : base ((IContact)lead) { }
 
         public bool IsQualified { get; set; }
+        public string EstimatedAmount { get; set; }
     }
 }
 

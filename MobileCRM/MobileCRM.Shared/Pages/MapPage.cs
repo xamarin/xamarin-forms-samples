@@ -6,19 +6,22 @@ using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using System.Linq;
 using System.Diagnostics;
+using System.Security.Policy;
+using System.Threading.Tasks;
+using MobileCRM.Models;
 
 namespace MobileCRM.Shared.Pages
 {
-    public class MapPage : ContentPage
+    public class MapPage<T> : ContentPage where T: class, new()
     {
-        private MapViewModel ViewModel
+        private MapViewModel<T> ViewModel
         {
-            get { return BindingContext as MapViewModel; }
+            get { return BindingContext as MapViewModel<T>; }
         }
         static readonly Position xamarin = new Position(37.797536, -122.401933);
-        public MapPage()
+        public MapPage(MapViewModel<T> viewModel)
         {
-            BindingContext = new MapViewModel();
+            BindingContext = viewModel;
 
             this.SetBinding(Page.TitleProperty, "Title");
             this.SetBinding(Page.IconProperty, "Icon");
@@ -38,9 +41,9 @@ namespace MobileCRM.Shared.Pages
                 if (!positions.Any())
                     return;
 
-                var position = positions.First();
+                var position = positions.Skip(1).First();
                 map.MoveToRegion(MapSpan.FromCenterAndRadius(position,
-                    Distance.FromMeters(4000)));
+                    Distance.FromMiles(0.1)));
                 map.Pins.Add(new Pin
                 {
                     Label = addressQuery,
@@ -88,8 +91,10 @@ namespace MobileCRM.Shared.Pages
         public Map MakeMap()
         {
 
-            var m = new Map(MapSpan.FromCenterAndRadius(xamarin, Distance.FromMiles(0.1)));
             var pins = ViewModel.LoadPins();
+
+            // TODO: Compute a proper bounding box.
+            var m = new Map(MapSpan.FromCenterAndRadius(pins[0].Position, Distance.FromMiles(1)));
 
             foreach (var p in pins)
             {

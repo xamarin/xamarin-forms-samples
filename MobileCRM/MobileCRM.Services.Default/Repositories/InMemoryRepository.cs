@@ -15,7 +15,14 @@ namespace MobileCRM.Services
 {
     public class InMemoryRepository<T> : IRepository<T> where T: class, new()
     {
-        protected IList<T> Items = new List<T>();
+        static readonly protected IList<T> GlobalItems = new List<T>();
+
+        public InMemoryRepository()
+        {
+            Items = new List<T>(GlobalItems);
+        }
+
+        protected IList<T> Items { get; set; }
 
         #region IRepository implementation
 
@@ -70,8 +77,7 @@ namespace MobileCRM.Services
 
         public void Dispose ()
         {
-            Items.Clear();
-            Items = null;
+
         }
 
         #endregion

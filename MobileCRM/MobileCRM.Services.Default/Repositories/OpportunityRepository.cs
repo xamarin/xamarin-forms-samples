@@ -14,11 +14,11 @@ using MobileCRM.Models;
 namespace MobileCRM.Services
 {
 
-    public class LeadRepository : InMemoryRepository<Lead>, IRepository<Lead> 
+    public class OpportunityRepository : InMemoryRepository<Opportunity> 
     {
-        public LeadRepository()
+        public OpportunityRepository()
         {
-            Add(new Lead { FirstName = "Bob", LastName = "Harlan", Industry = "Software" });
+            Add(new Opportunity { Company = "Capricorn Media", Industry = "Entertainment", EstimatedAmount = "$15,000.00"});
         }
     }
     

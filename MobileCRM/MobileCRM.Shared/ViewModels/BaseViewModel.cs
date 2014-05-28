@@ -10,7 +10,7 @@ using MobileCRM.Models;
 
 namespace MobileCRM.Shared.ViewModels
 {
-    public abstract class BaseViewModel<T> : BaseViewModel
+    public class BaseViewModel<T> : BaseViewModel
         where T: class, new()
     {
         static readonly MethodInfo GetDependency;
@@ -33,11 +33,11 @@ namespace MobileCRM.Shared.ViewModels
         public BaseViewModel()
         {
             Title = typeof(T).Name;
-            Icon = string.Format(IconFormat, Title) ;
+            Icon = string.Format(IconFormat, Title).ToLower() ;
             Models = new System.Collections.ObjectModel.ObservableCollection<T>();
         }
 
-        public System.Collections.ObjectModel.ObservableCollection<T> Models { get; set; }
+        public System.Collections.ObjectModel.ObservableCollection<T> Models { get; private set; }
 
         private Command loadModelsCommand;
         public Command LoadModelsCommand

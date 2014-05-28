@@ -11,9 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Color.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MobileCRM.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\CustomersPages.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\LoginPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\MainPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\MapPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\MenuPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\RootPage.cs" />
@@ -25,8 +23,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\StripedListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\StripedViewCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ContactsViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\ContactDetailPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LeadsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\OptionItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\ListPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\MasterPage.cs" />
   </ItemGroup>
 </Project>

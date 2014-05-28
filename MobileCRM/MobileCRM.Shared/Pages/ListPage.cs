@@ -9,37 +9,44 @@ using MobileCRM.Models;
 
 namespace MobileCRM.Shared.Pages
 {
-    public class CustomersPages : ContentPage
+    public class ListPageBase<T> : ContentPage where T: class, new()
     {
-        private ContactsViewModel ViewModel
+        public ListPageBase(BaseViewModel<T> viewModel)
         {
-            get { return BindingContext as ContactsViewModel; }
+            BindingContext = viewModel;
+        }
+    }
+    public class ListPage<T> : ListPageBase<T> where T: class, new()
+    {
+        public DataTemplate Cell { get; private set; }
+
+        private BaseViewModel<T> ViewModel
+        {
+            get { return BindingContext as BaseViewModel<T>; }
         }
 
-        public CustomersPages()
+        public ListPage(BaseViewModel<T> viewModel) : base(viewModel)
         {
-            BindingContext = new ContactsViewModel();
-
-            this.SetBinding(Page.TitleProperty, "Title");
+            this.SetValue(Page.TitleProperty, "List");
             this.SetBinding(Page.IconProperty, "Icon");
 
             var list = new ListView();
             list.ItemsSource = ViewModel.Models;
 
 #if __ANDROID__
-            var cell = new DataTemplate(typeof(ListTextCell));
+            Cell = new DataTemplate(typeof(ListTextCell));
 #else
-            var cell = new DataTemplate(typeof(TextCell));
+            Cell = new DataTemplate(typeof(TextCell));
 #endif
 
             
-            cell.SetBinding(TextCell.TextProperty, "FirstName");
-            cell.SetBinding(TextCell.DetailProperty, "Industry");
+            Cell.SetBinding(TextCell.TextProperty, "FirstName");
+            Cell.SetBinding(TextCell.DetailProperty, "Industry");
 
-            list.ItemTemplate = cell;
+            list.ItemTemplate = Cell;
             list.ItemSelected += (sender, e) =>
             {
-                var details = new ContactDetailPage(e.SelectedItem as IContact);
+                var details = new DetailPage<T>(e.SelectedItem as T);
                 Navigation.PushAsync(details);
             };
             var stack = new StackLayout();

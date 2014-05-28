@@ -3,6 +3,8 @@ using Xamarin.Forms;
 
 using MobileCRM.Shared.Pages;
 using MobileCRM.Models;
+using System;
+using System.Threading.Tasks;
 
 
 namespace MobileCRM.Shared.Pages
@@ -42,9 +44,8 @@ namespace MobileCRM.Shared.Pages
             option.Selected = true;
             previousItem = option;
 
-            var displayPage = new MainPage { Title = option.Title };
-
-         
+            var displayPage = PageForOption(option);
+                     
             Detail = new NavigationPage(displayPage)
             {
               Tint = Helpers.Color.Blue.ToFormsColor(),
@@ -52,6 +53,28 @@ namespace MobileCRM.Shared.Pages
 
 
             IsPresented = false;
+        }
+
+        Page PageForOption (OptionItem option)
+        {
+            if (option.Title == "Contacts")
+                return new MasterPage<Contact> { Title = option.Title };
+            if (option.Title == "Leads")
+                return new MasterPage<Lead> { Title = option.Title };
+            if (option.Title == "Accounts") {
+                var page = new MasterPage<Account> { Title = option.Title };
+                var cell = page.List.Cell;
+                cell.SetBinding(TextCell.TextProperty, "Company");
+                return page;
+            }
+            if (option.Title == "Opportunities") {
+                var page = new MasterPage<Opportunity> { Title = option.Title };
+                var cell = page.List.Cell;
+                cell.SetBinding(TextCell.TextProperty, "Company");
+                cell.SetBinding(TextCell.DetailProperty, "EstimatedAmount");
+                return page;
+            }
+            throw new NotImplementedException("Unknown menu option: " + option.Title);
         }
     }
 }

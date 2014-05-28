@@ -5,7 +5,7 @@ using MobileCRM.Models;
 
 namespace MobileCRM.Shared.ViewModels
 {
-    public class MapViewModel : ContactsViewModel
+    public class MapViewModel<T> : BaseViewModel<T> where T: class, new()
     {
         public static readonly Position NullPosition = new Position(0, 0);
          
@@ -19,16 +19,17 @@ namespace MobileCRM.Shared.ViewModels
         {
             ExecuteLoadModelsCommand();
 
-            var pins = Models.Select(p =>
+            var pins = Models.Select(model =>
             {
-                var address = p.Address ?? p.ShippingAddress ?? p.BillingAddress;
+                var item = (IContact)model;
+                var address = item.Address ?? item.ShippingAddress ?? item.BillingAddress;
 
                 var position = address != null ? new Position(address.Latitude, address.Longitude) : NullPosition;
                 var pin = new Pin
                     {
                         Type = PinType.Place,
                         Position = position,
-                        Label = p.ToString(),
+                        Label = item.ToString(),
                         Address = address.ToString()
                     };
                 return pin;

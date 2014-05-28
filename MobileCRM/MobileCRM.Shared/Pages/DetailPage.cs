@@ -7,23 +7,23 @@ using System.Reflection;
 using System.Linq;
 using MobileCRM.Shared.CustomViews;
 using MobileCRM.Models;
+using MonoTouch.ObjCRuntime;
 
 namespace MobileCRM.Shared.Pages
 {
-    public class ContactDetailPage : ContentPage
+    public class DetailPage<T> : ContentPage where T: class, new()
     {
-        public ContactDetailPage(IContact contact)
+        public DetailPage(T bindingContext)
         {
-
-            this.BindingContext = contact;
+            BindingContext = bindingContext;
             // Use reflection to turn our object
             // into a property bag.
             var detailList = new ListView();
-            detailList.ItemsSource = contact.GetType()
+            detailList.ItemsSource = BindingContext.GetType()
                 .GetRuntimeProperties()
                 .Where(pi =>
-                    pi.GetValue(contact) != null)
-                .Select(pi => new KeyValuePair<string, object>(pi.Name, pi.GetValue(contact)));
+                    pi.GetValue(BindingContext) != null)
+                .Select(pi => new KeyValuePair<string, object>(pi.Name, pi.GetValue(BindingContext)));
 
             // Then bind our template to the key value pairs.
 #if __ANDROID__
@@ -37,7 +37,7 @@ namespace MobileCRM.Shared.Pages
             detailList.ItemTemplate.SetBinding(TextCell.DetailProperty, "Value");
 
             Content = detailList;
-            Title = contact.Title;
+            Title = BindingContext.ToString();
         }
     }
 }
