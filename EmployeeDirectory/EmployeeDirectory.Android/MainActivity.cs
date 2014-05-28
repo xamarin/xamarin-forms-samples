@@ -32,9 +32,9 @@ namespace EmployeeDirectory.Android
 			var path = Path.Combine (documentsPath, fileName);
 
 			if (!File.Exists (path)) {
-				var s = Resources.OpenRawResource (resourceId);
+				var readStream = Resources.OpenRawResource (resourceId);
 				var writeStream = new FileStream (path, FileMode.OpenOrCreate, FileAccess.Write);
-				ReadWriteStream (s, writeStream);
+				ReadWriteStream (readStream, writeStream);
 			}
 		}
 
