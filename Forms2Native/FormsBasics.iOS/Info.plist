@@ -13,7 +13,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
-	<string>7.0</string>
+	<string>6.1</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
@@ -28,12 +28,14 @@
 	</array>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>Icon-60@2x</string>
-		<string>Icon@2x</string>
-		<string>Icon</string>
-		<string>Icon-Small</string>
-		<string>Icon-Small@2x</string>
-		<string>Icon-Small-40@2x</string>
+		<string>Icon@2x.png</string>
+		<string>Icon.png</string>
+		<string>Icon-60@2x.png</string>
+		<string>Icon-Small@2x.png</string>
+		<string>Icon-Small.png</string>
+		<string>Icon-Small-40@2x.png</string>
 	</array>
+	<key>NSMainNibFile</key>
+	<string></string>
 </dict>
 </plist>
