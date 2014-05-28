@@ -43,7 +43,7 @@ namespace EmployeeDirectoryUI.CSharp
 			favoritesRepository = await XmlFavoritesRepository.OpenIsolatedStorage ("XamarinFavorites.xml");
 
 			if (favoritesRepository.GetAll ().Count () == 0)
-				favoritesRepository = await XmlFavoritesRepository.OpenFile ("XamarinFavorites.xml");
+				favoritesRepository = XmlFavoritesRepository.OpenFile ("XamarinFavorites.xml");
 
 			viewModel = new FavoritesViewModel (favoritesRepository, false);
 

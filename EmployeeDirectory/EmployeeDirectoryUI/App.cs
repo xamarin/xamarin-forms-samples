@@ -3,6 +3,7 @@ using EmployeeDirectory;
 using Xamarin.Forms;
 using EmployeeDirectoryUI.CSharp;
 using EmployeeDirectoryUI.Xaml;
+using System.Threading.Tasks;
 
 namespace EmployeeDirectoryUI
 {
@@ -22,7 +23,7 @@ namespace EmployeeDirectoryUI
 
 		public static Page GetMainPage (FormsImplementation uiVersion)
 		{
-			Service = MemoryDirectoryService.FromCsv ("XamarinDirectory.csv").Result;
+			Service = MemoryDirectoryService.FromCsv ("XamarinDirectory.csv");
 
 			var employeeList = new ContentPage ();
 			if (uiVersion == FormsImplementation.CSharp) {

@@ -9,7 +9,7 @@
 
 		    <Entry x:Name="SearchEntry" Placeholder="search for" 
 				    Text="{Binding Path=SearchText}" 
-				    ValueChanged="OnValueChanged" />
+				    TextChanged="OnValueChanged" />
 
 	        <ListView x:Name="listView" ItemSelected="OnItemSelected" IsGroupingEnabled="true">
 		        <ListView.GroupHeaderTemplate>

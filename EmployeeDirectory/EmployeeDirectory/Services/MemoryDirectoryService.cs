@@ -107,12 +107,15 @@ namespace EmployeeDirectory
 
 		#region File IO
 
-		public async static Task<MemoryDirectoryService> FromCsv (string path)
+		public static MemoryDirectoryService FromCsv (string path)
 		{
 			IFolder store = FileSystem.Current.LocalStorage;
-			IFile file = await store.GetFileAsync (path);
+			var getFileTask = store.GetFileAsync (path);
+			getFileTask.Wait ();
+			var inputStreamTask = getFileTask.Result.OpenAsync(FileAccess.Read);
+			inputStreamTask.Wait ();
 
-			using (var reader = new StreamReader(await file.OpenAsync(FileAccess.Read))) {
+			using (var reader = new StreamReader(inputStreamTask.Result)) {
 				return FromCsv (reader);
 			}
 		}

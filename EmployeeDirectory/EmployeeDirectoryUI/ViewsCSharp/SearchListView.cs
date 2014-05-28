@@ -37,7 +37,7 @@ namespace EmployeeDirectoryUI.CSharp
 
 		private void InitializeViewModel ()
 		{
-			favoritesRepository = XmlFavoritesRepository.OpenFile ("XamarinFavorites.xml").Result;
+			favoritesRepository = XmlFavoritesRepository.OpenFile ("XamarinFavorites.xml");
 
 			search = new Search (string.Empty);
 			viewModel = new SearchViewModel (App.Service, search);

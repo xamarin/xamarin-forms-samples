@@ -55,16 +55,17 @@ namespace EmployeeDirectory.Data
 			}
 		}
 
-		public async static Task<XmlFavoritesRepository> OpenFile (string path)
+		public static XmlFavoritesRepository OpenFile (string path)
 		{
 			var serializer = new XmlSerializer (typeof(XmlFavoritesRepository));
 
 			IFolder store = FileSystem.Current.LocalStorage;
-			//var iso = IsolatedStorageFile.GetUserStoreForApplication ();
+			var getFileTask = store.GetFileAsync (path);
+			getFileTask.Wait ();
+			var inputStreamTask = getFileTask.Result.OpenAsync(FileAccess.Read);
+			inputStreamTask.Wait ();
 
-			IFile file = await store.GetFileAsync (path);
-
-			using (var f = new StreamReader(await file.OpenAsync(FileAccess.Read))) {
+			using (var f = new StreamReader(inputStreamTask.Result)) {
 //#if WINDOWS_PHONE
 //            using(var f = System.Windows.Application.GetResourceStream(new Uri(path, UriKind.RelativeOrAbsolute)).Stream){
 //#else
