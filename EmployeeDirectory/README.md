@@ -22,10 +22,21 @@ Switch to C#:
         ...
     }
 
-Nugets used in this solution: [PCLStorage](http://www.nuget.org/packages/PCLStorage/0.9.3), [Xamarin.Forms]("http://xamarin.com/forms"), [Microsoft.Bcl]("https://www.nuget.org/packages/Microsoft.Bcl/1.1.8"), [Microsoft.Bcl.Build]("http://www.nuget.org/packages/Microsoft.Bcl.Build/1.0.14"), [Microsoft.Net.Http]("https://www.nuget.org/packages/Microsoft.Net.Http/2.2.22") 
+Nugets used in this solution: [PCLStorage][pclHref],
+[Xamarin.Forms][xFormsHref],
+[Microsoft.Bcl][mBclHref], 
+[Microsoft.Bcl.Build][mBclBuildHref], 
+[Microsoft.Net.Http][mNetHttpHref]
 
-Components used in this solution: [Xamarin.Social]("http://components.xamarin.com/view/xamarin.social")
+Components used in this solution: [Xamarin.Social][xSocialHref]
 
 Authors
 ---------
 Oleg Demchenko
+
+[pclHref]: http://www.nuget.org/packages/PCLStorage/0.9.3
+[xFormsHref]: http://xamarin.com/forms
+[mBclHref]: https://www.nuget.org/packages/Microsoft.Bcl/1.1.8
+[mBclBuildHref]: http://www.nuget.org/packages/Microsoft.Bcl.Build/1.0.14
+[mNetHttpHref]: https://www.nuget.org/packages/Microsoft.Net.Http/2.2.22
+[xSocialHref]: http://components.xamarin.com/view/xamarin.social
