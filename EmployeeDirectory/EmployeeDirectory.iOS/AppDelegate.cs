@@ -23,7 +23,7 @@ namespace EmployeeDirectory.iOS
 			CopyInfoIntoWorkingFolder ("XamarinFavorites.xml");
 
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			window.RootViewController = App.GetMainPage (FormsImplementation.Xaml).CreateViewController ();
+			window.RootViewController = App.GetMainPage ().CreateViewController ();
 			App.PhoneFeatureService = new iOSPhoneFeatureService (window.RootViewController);
 
 			window.MakeKeyAndVisible ();

@@ -24,7 +24,7 @@ namespace EmployeeDirectory.Android
 
 			Xamarin.Forms.Forms.Init (this, bundle);
 			App.PhoneFeatureService = new AndroidPhoneFeatureService ();
-			SetPage (App.GetMainPage (FormsImplementation.Xaml));
+			SetPage (App.GetMainPage ());
 		}
 
 		private void CopyInfoIntoWorkingFolder (string fileName, int resourceId)
