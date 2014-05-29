@@ -12,10 +12,11 @@ namespace EmployeeDirectoryUI.CSharp
 		private const int IMAGE_SIZE = 176;
 		private Label favoriteLabel;
 		private Switch favoriteSwitch;
+		private Image photo;
 
 		public EmployeeView ()
 		{
-			var photo = new Image { WidthRequest = IMAGE_SIZE, HeightRequest = IMAGE_SIZE };
+			photo = new Image { WidthRequest = IMAGE_SIZE, HeightRequest = IMAGE_SIZE };
 			photo.SetBinding (Image.SourceProperty, "DetailsPlaceholder.jpg");
 
 			favoriteLabel = new Label ();

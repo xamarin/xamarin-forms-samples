@@ -10,7 +10,10 @@ namespace EmployeeDirectoryUI.CSharp
 		{
 			var label = new Label { YAlign = TextAlignment.Center };
 			label.SetBinding (Label.TextProperty, "Title");
-			View = label;
+			View = new StackLayout {
+				Padding = new Thickness(5, 0, 0, 0),
+				Children = { label }
+			};
 		}
 	}
 
@@ -23,14 +26,14 @@ namespace EmployeeDirectoryUI.CSharp
 
 			var nameLabel = new Label { 
 				YAlign = TextAlignment.Center,
-				Font = Font.BoldSystemFontOfSize (NamedSize.Medium)
+				Font = Font.SystemFontOfSize (NamedSize.Medium)
 			};
 
 			nameLabel.SetBinding (Label.TextProperty, "Name");
 
 			var titleLabel = new Label { 
 				YAlign = TextAlignment.Center,
-				Font = Font.BoldSystemFontOfSize (NamedSize.Micro)
+				Font = Font.SystemFontOfSize (NamedSize.Micro)
 			};
 
 			titleLabel.SetBinding (Label.TextProperty, "Title");
