@@ -76,10 +76,6 @@
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="packages.config" />
-    <None Include="Resources\drawable\DetailsPlaceholder_2x.jpg" />
-    <None Include="Resources\drawable\DetailsPlaceholder.jpg" />
-    <None Include="Resources\drawable\Placeholder_2x.jpg" />
-    <None Include="Resources\drawable\Placeholder.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -87,15 +83,32 @@
     <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\raw\XamarinDirectory.csv" />
     <AndroidResource Include="Resources\raw\XamarinFavorites.xml" />
-    <AndroidResource Include="Resources\drawable\Search.png" />
-    <AndroidResource Include="Resources\drawable\logo_2x.png" />
-    <AndroidResource Include="Resources\drawable\logo.png" />
-    <AndroidResource Include="Resources\drawable\login_box.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\DetailsPlaceholder_2x.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Placeholder.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\Search.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\login_box.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\logo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\DetailsPlaceholder.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Placeholder.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\Search.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\login_box.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\logo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\DetailsPlaceholder.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Placeholder.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_search.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\login_box.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="../packages/Xamarin.Forms.1.0.6188/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets" />
   <ItemGroup>
     <Folder Include="Resources\raw\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamandroidsupportv4-18">
