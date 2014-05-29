@@ -9,7 +9,7 @@ namespace EmployeeDirectoryUI.CSharp
 {
 	public class EmployeeView : ContentPage
 	{
-		private const int IMAGE_SIZE = 176;
+		private const int IMAGE_SIZE = 150;
 		private Label favoriteLabel;
 		private Switch favoriteSwitch;
 		private Image photo;

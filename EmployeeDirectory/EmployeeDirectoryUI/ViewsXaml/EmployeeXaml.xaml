@@ -10,7 +10,7 @@
 
     		<StackLayout Padding="10,20,10,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
 				<Image x:Name="PersonImage" 
-						WidthRequest="176" HeightRequest="176" 
+						WidthRequest="150" HeightRequest="150"
 						Source="DetailsPlaceholder.jpg" />
 	    		<StackLayout VerticalOptions="StartAndExpand" Orientation="Vertical">
 	    			<Label x:Name="favoriteLabel" />
