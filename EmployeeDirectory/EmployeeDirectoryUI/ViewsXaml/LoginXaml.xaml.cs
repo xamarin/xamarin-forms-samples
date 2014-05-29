@@ -19,7 +19,7 @@ namespace EmployeeDirectoryUI.Xaml
 		protected override void OnAppearing ()
 		{
 			base.OnAppearing ();
-			string platformName= Device.OS.ToString ();
+			string platformName = Device.OS.ToString ();
 			Content.FindByName<Button> ("loginButton" + platformName).Clicked += OnLoginClicked;
 			Content.FindByName<Button> ("helpButton" + platformName).Clicked += OnHelpClicked;
 		}
@@ -32,7 +32,7 @@ namespace EmployeeDirectoryUI.Xaml
 				.ContinueWith (_ => {
 					App.LastUseTime = System.DateTime.UtcNow;
 
-						Navigation.PopModalAsync ();
+					Navigation.PopModalAsync ();
 				});
 
 				Navigation.PopModalAsync ();

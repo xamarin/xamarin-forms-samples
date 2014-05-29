@@ -16,8 +16,8 @@ namespace EmployeeDirectoryUI.Xaml
 			InitializeComponent ();
 
 			var toolBarItem = new ToolbarItem ("search", "Search.png", () => {
-				var search = new SearchListXaml();
-				Navigation.PushAsync(search);
+				var search = new SearchListXaml ();
+				Navigation.PushAsync (search);
 			}, 0, 0);
 
 			ToolbarItems.Add (toolBarItem);
@@ -35,19 +35,19 @@ namespace EmployeeDirectoryUI.Xaml
 			if (favoritesRepository.GetAll ().Count () == 0)
 				favoritesRepository = await XmlFavoritesRepository.OpenFile ("XamarinFavorites.xml");
 
-			viewModel = new FavoritesViewModel (favoritesRepository, false);
+			viewModel = new FavoritesViewModel (favoritesRepository, true);
 
 			listView.ItemsSource = viewModel.Groups;
 		}
 
-		public void OnItemSelected (object sender, SelectedItemChangedEventArgs e) 
+		public void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
 		{
 			var person = e.SelectedItem as Person;
 			var employeeView = new EmployeeXaml {
 				BindingContext = new PersonViewModel (person, favoritesRepository)
 			};
 
-			Navigation.PushAsync(employeeView);
+			Navigation.PushAsync (employeeView);
 		}
 	}
 }

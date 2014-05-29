@@ -22,7 +22,7 @@ namespace EmployeeDirectoryUI.CSharp
 		{
 			BindingContext = Model;
 
-			var titleImage = new Image { Source = FileImageSource.FromFile ("logo") };
+			var logo = new Image { Source = FileImageSource.FromFile ("logo") };
 
 			var usernameEntry = new Entry { Placeholder = "Username" };
 			usernameEntry.SetBinding (Entry.TextProperty, "Username");
@@ -47,13 +47,13 @@ namespace EmployeeDirectoryUI.CSharp
 				Content = new StackLayout () { 
 					VerticalOptions = LayoutOptions.StartAndExpand,
 					Padding = new Thickness (30),
-					Children = { titleImage, usernameEntry, passwordEntry, grid }
+					Children = { logo, usernameEntry, passwordEntry, grid }
 				};
 
 				BackgroundImage = "login_box";
 
 			} else if (Device.OS == TargetPlatform.Android) {
-				grid.Children.Add (titleImage, 0, 0);
+				grid.Children.Add (logo, 0, 0);
 				grid.Children.Add (helpButton, 1, 0);
 
 				Content = new StackLayout () {

@@ -17,8 +17,10 @@ namespace EmployeeDirectory.Android
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-			CopyInfoIntoWorkingFolder ("XamarinDirectory.csv", EmployeeDirectory.Android.Resource.Raw.XamarinDirectory);
-			CopyInfoIntoWorkingFolder ("XamarinFavorites.xml", EmployeeDirectory.Android.Resource.Raw.XamarinFavorites);
+			CopyInfoIntoWorkingFolder ("XamarinDirectory.csv",
+				EmployeeDirectory.Android.Resource.Raw.XamarinDirectory);
+			CopyInfoIntoWorkingFolder ("XamarinFavorites.xml",
+				EmployeeDirectory.Android.Resource.Raw.XamarinFavorites);
 
 			Xamarin.Forms.Forms.Init (this, bundle);
 			App.PhoneFeatureService = new AndroidPhoneFeatureService ();

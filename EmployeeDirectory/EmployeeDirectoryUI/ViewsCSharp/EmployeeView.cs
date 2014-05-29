@@ -10,18 +10,17 @@ namespace EmployeeDirectoryUI.CSharp
 	public class EmployeeView : ContentPage
 	{
 		private const int IMAGE_SIZE = 176;
-		private Image photo;
 		private Label favoriteLabel;
 		private Switch favoriteSwitch;
 
 		public EmployeeView ()
 		{
-			photo = new Image { WidthRequest = IMAGE_SIZE, HeightRequest = IMAGE_SIZE };
+			var photo = new Image { WidthRequest = IMAGE_SIZE, HeightRequest = IMAGE_SIZE };
 			photo.SetBinding (Image.SourceProperty, "DetailsPlaceholder.jpg");
 
 			favoriteLabel = new Label ();
 
-			favoriteSwitch = new Switch();
+			favoriteSwitch = new Switch ();
 			favoriteSwitch.SetBinding (Switch.IsToggledProperty, "Path=Person.IsFavorite");
 
 			var optionsView = new StackLayout { 
@@ -31,7 +30,7 @@ namespace EmployeeDirectoryUI.CSharp
 			};
 
 			var headerView = new StackLayout {
-				Padding = new Thickness(10, 20, 10, 0),
+				Padding = new Thickness (10, 20, 10, 0),
 				HorizontalOptions = LayoutOptions.StartAndExpand,
 				Orientation = StackOrientation.Horizontal,
 				Children = { photo, optionsView }

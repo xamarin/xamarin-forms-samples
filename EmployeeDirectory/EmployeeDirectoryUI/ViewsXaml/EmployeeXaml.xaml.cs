@@ -10,7 +10,7 @@ namespace EmployeeDirectoryUI.Xaml
 	{
 		private const int ImageSize = 176;
 
-		public EmployeeXaml () 
+		public EmployeeXaml ()
 		{
 			InitializeComponent ();
 		}
@@ -21,24 +21,24 @@ namespace EmployeeDirectoryUI.Xaml
 			favoriteSwitch.Toggled += OnFavoriteClicked;
 		}
 
-
 		protected override void OnBindingContextChanged ()
 		{
 			base.OnBindingContextChanged ();
 			var personInfo = (PersonViewModel)BindingContext;
 			Title = personInfo.Person.Name;
 			favoriteLabel.Text = personInfo.IsFavorite ? "Added to favorites" : "Not in favorites";
-			GetImage ();
+			DownloadImage ();
 		}
 
-		private void OnFavoriteClicked (object sender, EventArgs e) 
+		private void OnFavoriteClicked (object sender, EventArgs e)
 		{
 			var personInfo = (PersonViewModel)BindingContext;
 			personInfo.ToggleFavorite ();
 			favoriteLabel.Text = personInfo.IsFavorite ? "Added to favorites" : "Not in favorites";
 		}
 
-		private void OnItemSelected (object sender, SelectedItemChangedEventArgs e) {
+		private void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
+		{
 
 			var property = (PersonViewModel.Property)e.SelectedItem;
 			System.Diagnostics.Debug.WriteLine ("Property clicked " + property.Type + " " + property.Value);
@@ -62,12 +62,12 @@ namespace EmployeeDirectoryUI.Xaml
 			}
 		}
 
-		private void OnCancelClicked (object sender, EventArgs e) 
+		private void OnCancelClicked (object sender, EventArgs e)
 		{
-			Navigation.PopAsync();
+			Navigation.PopAsync ();
 		}
 
-		private void GetImage () 
+		private void DownloadImage ()
 		{
 			var personInfo = (PersonViewModel)BindingContext;
 			var person = personInfo.Person;

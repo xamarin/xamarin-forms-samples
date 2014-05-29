@@ -18,7 +18,7 @@ namespace EmployeeDirectoryUI.CSharp
 	{
 		public ListItemTemplate ()
 		{
-			var photo = new Image { HeightRequest = 44.0, WidthRequest = 44.0 };
+			var photo = new Image { HeightRequest = 44, WidthRequest = 44 };
 			photo.SetBinding (Image.SourceProperty, "Photo");
 
 			var nameLabel = new Label { 
@@ -36,7 +36,7 @@ namespace EmployeeDirectoryUI.CSharp
 			titleLabel.SetBinding (Label.TextProperty, "Title");
 
 			var information = new StackLayout {
-				Padding = new Thickness (5.0, 0.0, 0.0, 0.0),
+				Padding = new Thickness (5, 0, 0, 0),
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				Orientation = StackOrientation.Vertical,
 				Children = { nameLabel, titleLabel }
@@ -64,7 +64,7 @@ namespace EmployeeDirectoryUI.CSharp
 			propertyValueLabel.SetBinding (Label.TextProperty, "Value");
 
 			View = new StackLayout {
-				Padding = new Thickness (20.0, 0.0, 0.0, 0.0),
+				Padding = new Thickness (20, 0, 0, 0),
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				Orientation = StackOrientation.Horizontal,
 				Children = { propertyNameLabel, propertyValueLabel }

@@ -19,7 +19,8 @@ namespace EmployeeDirectory.iOS
 		{
 			Forms.Init ();
 
-			CopyInfoIntoWorkingFolder ();
+			CopyInfoIntoWorkingFolder ("XamarinDirectory.csv");
+			CopyInfoIntoWorkingFolder ("XamarinFavorites.xml");
 
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 			window.RootViewController = App.GetMainPage (FormsImplementation.Xaml).CreateViewController ();
@@ -30,20 +31,14 @@ namespace EmployeeDirectory.iOS
 			return true;
 		}
 
-		private void CopyInfoIntoWorkingFolder ()
+		private void CopyInfoIntoWorkingFolder (string fileName)
 		{
 			string documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.Personal);
 			string libraryPath = documentsPath.Replace ("Documents", "Library");
 
-			var path = Path.Combine (libraryPath, "XamarinDirectory.csv");
-			if (!File.Exists (path)) {
-				File.Copy ("XamarinDirectory.csv", path);
-			}
-			path = Path.Combine (libraryPath, "XamarinFavorites.xml");
-
-			if (!File.Exists (path)) {
-				File.Copy ("XamarinFavorites.xml", path);
-			}
+			var path = Path.Combine (libraryPath, fileName);
+			if (!File.Exists (path))
+				File.Copy (fileName, path);
 		}
 	}
 }

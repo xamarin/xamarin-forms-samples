@@ -48,7 +48,7 @@ namespace EmployeeDirectoryUI.Xaml
 				BindingContext = new PersonViewModel (personInfo, favoritesRepository)
 			};
 
-			Navigation.PushAsync(employeeView);
+			Navigation.PushAsync (employeeView);
 		}
 	}
 }

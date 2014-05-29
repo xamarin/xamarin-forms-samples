@@ -46,7 +46,6 @@ namespace EmployeeDirectoryUI.CSharp
 				favoritesRepository = await XmlFavoritesRepository.OpenFile ("XamarinFavorites.xml");
 
 			viewModel = new FavoritesViewModel (favoritesRepository, false);
-
 			listView.ItemsSource = viewModel.Groups;
 		}
 

@@ -12,7 +12,7 @@ namespace EmployeeDirectory.iOS
 {
 	public class iOSPhoneFeatureService : IPhoneFeatureService
 	{
-		private UIViewController rootViewController;
+		public UIViewController RootViewController { get; private set; }
 
 		public  TwitterService Twitter {
 			get {
@@ -26,7 +26,7 @@ namespace EmployeeDirectory.iOS
 
 		public iOSPhoneFeatureService (UIViewController rootViewController)
 		{
-			this.rootViewController = rootViewController;
+			RootViewController = rootViewController;
 		}
 
 		public bool Email (string emailAddress)
@@ -36,9 +36,8 @@ namespace EmployeeDirectory.iOS
 				composer.SetToRecipients (new string[] { emailAddress });
 				composer.SetSubject ("Hello from EmployeeDirectory!");
 
-				composer.Finished += (sender, e) => rootViewController.DismissViewController (true, null);
-				rootViewController.PresentViewController (composer, true, null);
-
+				composer.Finished += (sender, e) => RootViewController.DismissViewController (true, null);
+				RootViewController.PresentViewController (composer, true, null);
 				return true;
 			} else {
 				return false;
@@ -48,13 +47,13 @@ namespace EmployeeDirectory.iOS
 		public bool Browse (string websiteUrl)
 		{
 			UIApplication.SharedApplication.OpenUrl (NSUrl.FromString (websiteUrl));
-
 			return true;
 		}
 
 		public bool Tweet (string twitterName)
 		{
-			string messageText = string.Format ("Let me introduce to you, the one and only {0} using #xamarin EmployeeDirectory!", twitterName);
+			string messageText = string.Format ("Let me introduce to you, " +
+			                     "the one and only {0} using #xamarin EmployeeDirectory!", twitterName);
 
 			var item = new Item {
 				Text = messageText,
@@ -62,9 +61,9 @@ namespace EmployeeDirectory.iOS
 			};
 
 			var shareViewController = Twitter.GetShareUI (item, shareResult => {
-				rootViewController.DismissViewController (true, null);
+				RootViewController.DismissViewController (true, null);
 			});
-			rootViewController.PresentViewController (shareViewController, true, null);
+			RootViewController.PresentViewController (shareViewController, true, null);
 			return true;
 		}
 

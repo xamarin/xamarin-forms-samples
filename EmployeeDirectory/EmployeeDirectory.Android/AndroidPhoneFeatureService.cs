@@ -31,8 +31,7 @@ namespace EmployeeDirectory.Android
 				websiteUrl :
 				"http://" + websiteUrl;
 
-			var intent = new Intent (Intent.ActionView, 
-				global::Android.Net.Uri.Parse (url));
+			var intent = new Intent (Intent.ActionView, global::Android.Net.Uri.Parse (url));
 			Forms.Context.StartActivity (intent);
 
 			return true;
@@ -41,13 +40,11 @@ namespace EmployeeDirectory.Android
 		public bool Tweet (string twitterName)
 		{
 			var username = twitterName.Trim ();
-			if (username.StartsWith ("@")) {
+			if (username.StartsWith ("@"))
 				username = username.Substring (1);
-			}
-			var url = "http://twitter.com/" + username;
 
-			var intent = new Intent (Intent.ActionView, 
-				global::Android.Net.Uri.Parse (url));
+			var url = "http://twitter.com/" + username;
+			var intent = new Intent (Intent.ActionView, global::Android.Net.Uri.Parse (url));
 			Forms.Context.StartActivity (intent);
 
 			return true;
@@ -56,7 +53,7 @@ namespace EmployeeDirectory.Android
 		public bool Call (string phoneNumber)
 		{
 			var intent = new Intent (Intent.ActionCall, global::Android.Net.Uri.Parse (
-				"tel:" + Uri.EscapeDataString (phoneNumber)));
+				             "tel:" + Uri.EscapeDataString (phoneNumber)));
 			Forms.Context.StartActivity (intent);
 
 			return true;
