@@ -8,22 +8,28 @@ using System.Linq;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using MobileCRM.Models;
+using System.Runtime.Remoting.Channels;
 
 namespace MobileCRM.Shared.Pages
 {
     public class MapPage<T> : ContentPage where T: class, new()
     {
+        static readonly Position xamarin = new Position(37.797536, -122.401933);
+
         private MapViewModel<T> ViewModel
         {
             get { return BindingContext as MapViewModel<T>; }
         }
-        static readonly Position xamarin = new Position(37.797536, -122.401933);
+
+        IDictionary<Pin,T> PinMap;
+
         public MapPage(MapViewModel<T> viewModel)
         {
             BindingContext = viewModel;
 
             this.SetBinding(Page.TitleProperty, "Title");
             this.SetBinding(Page.IconProperty, "Icon");
+
             var map = MakeMap();
             var stack = new StackLayout { Spacing = 0 };
 
@@ -75,9 +81,6 @@ namespace MobileCRM.Shared.Pages
             }));
 #endif
 
-
-
-
             map.VerticalOptions = LayoutOptions.FillAndExpand;
             map.HeightRequest = 100;
             map.WidthRequest = 960;
@@ -86,21 +89,30 @@ namespace MobileCRM.Shared.Pages
             Content = stack;
         }
 
-
         public Map MakeMap()
         {
 
             var pins = ViewModel.LoadPins();
 
+            var dict = pins.Zip(ViewModel.Models, (p, m)=>new KeyValuePair<Pin,T>(p, m)).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+            PinMap = dict;
             // TODO: Compute a proper bounding box.
-            var m = new Map(MapSpan.FromCenterAndRadius(pins[0].Position, Distance.FromMiles(1)));
+            var map = new Map(MapSpan.FromCenterAndRadius(pins[0].Position, Distance.FromMiles(0.3)));
 
             foreach (var p in pins)
             {
-                m.Pins.Add(p);
+                map.Pins.Add(p);
             }
 
-            return m;
+//            map.PinSelected += (sender, args)=>
+//            {
+//                var pin = args.SelectedItem as Pin;
+//                var details = PinMap[pin];
+//                var page = new DetailPage<T>(details);
+//                Navigation.PushAsync(page);
+//            };
+
+            return map;
         }
     }
 }

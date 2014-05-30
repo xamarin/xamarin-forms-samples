@@ -1,11 +1,6 @@
 ﻿using MobileCRM.Shared.ViewModels;
-using MobileCRM.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xamarin.Forms;
 using MobileCRM.Shared.CustomViews;
-using MobileCRM.Models;
 
 namespace MobileCRM.Shared.Pages
 {

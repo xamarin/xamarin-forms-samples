@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using MobileCRM.Services;
 using MobileCRM.Models;
@@ -18,7 +14,8 @@ namespace MobileCRM.Services
     {
         public OpportunityRepository()
         {
-            Add(new Opportunity { Company = "Capricorn Media", Industry = "Entertainment", EstimatedAmount = "$15,000.00"});
+            var contact = new Contact { FirstName = "Henry", LastName = "Hunan", Address = new Address { Street = "518 Sansome St", City = "San Francisco", State = "CA", PostalCode = "94111", Latitude = 37.7980160, Longitude = -122.4019871 } };
+            Add(new Opportunity(contact) { Company = "Capricorn Media", Industry = "Entertainment", EstimatedAmount = 15000.00});
         }
     }
     

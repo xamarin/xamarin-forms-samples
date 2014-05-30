@@ -7,7 +7,7 @@
     <ProjectGuid>{ABDE5DEF-A5D7-410A-B9BE-FF897688EB8F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>MobileCRM.Services.Default</RootNamespace>
-    <AssemblyName>MobileCRM.Services.Default</AssemblyName>
+    <AssemblyName>MobileCRM.Services</AssemblyName>
     <TargetFrameworkProfile>Profile49</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <NuGetPackageImportStamp>62675cc5</NuGetPackageImportStamp>
