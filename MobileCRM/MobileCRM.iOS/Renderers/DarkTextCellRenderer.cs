@@ -9,7 +9,7 @@ using MobileCRM.iOS;
 namespace MobileCRM.iOS
 {
 
-    public class DarkTextCellRenderer : TextCellRenderer
+    public class DarkTextCellRenderer : ImageCellRenderer
     {
         public override UITableViewCell GetCell (Cell item, UITableView tv)
         {

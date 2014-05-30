@@ -7,5 +7,5 @@ using System.Linq;
 
 namespace MobileCRM.Shared.CustomViews
 {
-    public class DarkTextCell : TextCell { }
+    public class DarkTextCell : ImageCell { }
 }

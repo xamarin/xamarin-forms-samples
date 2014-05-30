@@ -11,7 +11,6 @@ namespace MobileCRM.Shared.Pages
 {
     public class RootPage : MasterDetailPage
     {
-//        MainPage displayPage;
         OptionItem previousItem;
 
         public RootPage ()
@@ -24,9 +23,8 @@ namespace MobileCRM.Shared.Pages
             Master = optionsPage;
 
             NavigateTo(optionsPage.Menu.ItemsSource.Cast<OptionItem>().First());
-            //ShowLoginDialog();
 
-      
+            //ShowLoginDialog();    
         }
 
         async void ShowLoginDialog()
@@ -58,19 +56,18 @@ namespace MobileCRM.Shared.Pages
         Page PageForOption (OptionItem option)
         {
             if (option.Title == "Contacts")
-                return new MasterPage<Contact> { Title = option.Title };
+                return new MasterPage<Contact>(option);
             if (option.Title == "Leads")
-                return new MasterPage<Lead> { Title = option.Title };
+                return new MasterPage<Lead>(option);
             if (option.Title == "Accounts") {
-                var page = new MasterPage<Account> { Title = option.Title };
+                var page = new MasterPage<Account>(option);
                 var cell = page.List.Cell;
                 cell.SetBinding(TextCell.TextProperty, "Company");
                 return page;
             }
             if (option.Title == "Opportunities") {
-                var page = new MasterPage<Opportunity> { Title = option.Title };
+                var page = new MasterPage<Opportunity>(option);
                 var cell = page.List.Cell;
-                cell.SetBinding(TextCell.TextProperty, "Company");
                 cell.SetBinding(TextCell.DetailProperty, "EstimatedAmount");
                 return page;
             }

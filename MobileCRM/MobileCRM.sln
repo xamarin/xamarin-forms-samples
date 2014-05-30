@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{56200ACA-E
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MobileCRM.Shared", "MobileCRM.Shared\MobileCRM.Shared.shproj", "{2DDBD0EB-9989-4194-86D0-216F141CB69A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileCRM.Services.Default", "MobileCRM.Services.Default\MobileCRM.Services.Default.csproj", "{ABDE5DEF-A5D7-410A-B9BE-FF897688EB8F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileCRM.Services", "MobileCRM.Services.Default\MobileCRM.Services.csproj", "{ABDE5DEF-A5D7-410A-B9BE-FF897688EB8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
