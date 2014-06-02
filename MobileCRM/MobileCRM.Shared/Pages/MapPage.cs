@@ -8,7 +8,6 @@ using System.Linq;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using MobileCRM.Models;
-using System.Runtime.Remoting.Channels;
 
 namespace MobileCRM.Shared.Pages
 {

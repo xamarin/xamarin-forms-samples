@@ -22,27 +22,32 @@ namespace MobileCRM.Shared.Pages
 
         public ListPage(BaseViewModel<T> viewModel) : base(viewModel)
         {
+            //Set value will directly set the value to "List"
             this.SetValue(Page.TitleProperty, "List");
+            //This will bind to our BindingContext.Icon
             this.SetBinding(Page.IconProperty, "Icon");
 
             var list = new ListView();
+
+            //Bind the items in our list to the observable collection of models
             list.ItemsSource = ViewModel.Models;
 
-#if __ANDROID__
             Cell = new DataTemplate(typeof(ListTextCell));
-#else
-            Cell = new DataTemplate(typeof(TextCell));
-#endif
 
-            
+            //Bind our cell's text and details properties
             Cell.SetBinding(TextCell.TextProperty, "FirstName");
             Cell.SetBinding(TextCell.DetailProperty, "Industry");
 
             list.ItemTemplate = Cell;
+
             list.ItemSelected += (sender, e) =>
             {
+                if (e.SelectedItem == null)
+                  return;
                 var details = new DetailPage<T>(e.SelectedItem as T);
                 Navigation.PushAsync(details);
+                //deselect item when pushing
+                list.SelectedItem = null;
             };
             var stack = new StackLayout();
             stack.Children.Add(list);
@@ -52,7 +57,7 @@ namespace MobileCRM.Shared.Pages
         protected override void OnAppearing()
         {
             base.OnAppearing();
-
+            //lazy load data when appearing, simply call the command if no data
             if(ViewModel.Models.Count == 0)
                 ViewModel.LoadModelsCommand.Execute(null);
         }

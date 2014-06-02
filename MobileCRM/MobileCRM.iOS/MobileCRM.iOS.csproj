@@ -143,19 +143,12 @@
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
-    <InterfaceDefinition Include="Renderers\CustomerDetailsStoryboard.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Renderers\BlueNavigationRenderer.cs" />
-    <Compile Include="Renderers\CustomerDetailsPageRenderer.cs" />
     <Compile Include="Renderers\DarkTextCellRenderer.cs" />
-    <Compile Include="Renderers\CustomerDetailsStoryboard.cs" />
-    <Compile Include="Renderers\CustomerDetailsStoryboard.designer.cs">
-      <DependentUpon>CustomerDetailsStoryboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Renderers\StoryBoardRenderer.cs" />
   </ItemGroup>
   <Import Project="..\MobileCRM.Shared\MobileCRM.Shared.projitems" Label="Shared" Condition="Exists('..\MobileCRM.Shared\MobileCRM.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />

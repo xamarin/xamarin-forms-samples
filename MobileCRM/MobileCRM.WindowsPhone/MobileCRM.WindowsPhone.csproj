@@ -193,9 +193,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MobileCRM.Services.Default\MobileCRM.Services.Default.csproj">
+    <ProjectReference Include="..\MobileCRM.Services.Default\MobileCRM.Services.csproj">
       <Project>{abde5def-a5d7-410a-b9be-ff897688eb8f}</Project>
-      <Name>MobileCRM.Services.Default</Name>
+      <Name>MobileCRM.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="..\MobileCRM.Shared\MobileCRM.Shared.projitems" Label="Shared" Condition="Exists('..\MobileCRM.Shared\MobileCRM.Shared.projitems')" />
