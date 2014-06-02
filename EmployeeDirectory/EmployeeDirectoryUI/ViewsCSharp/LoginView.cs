@@ -22,7 +22,7 @@ namespace EmployeeDirectoryUI.CSharp
 		{
 			BindingContext = Model;
 
-			var logo = new Image { Source = FileImageSource.FromFile ("logo") };
+			var logo = new Image { Source = FileImageSource.FromFile ("logo.png") };
 
 			var usernameEntry = new Entry { Placeholder = "Username" };
 			usernameEntry.SetBinding (Entry.TextProperty, "Username");
@@ -52,7 +52,7 @@ namespace EmployeeDirectoryUI.CSharp
 
 				BackgroundImage = "login_box";
 
-			} else if (Device.OS == TargetPlatform.Android) {
+			} else {
 				grid.Children.Add (logo, 0, 0);
 				grid.Children.Add (helpButton, 1, 0);
 
@@ -77,7 +77,6 @@ namespace EmployeeDirectoryUI.CSharp
 				.LoginAsync (System.Threading.CancellationToken.None)
 				.ContinueWith (_ => {
 					App.LastUseTime = System.DateTime.UtcNow;
-
 					Navigation.PopAsync ();
 				});
 

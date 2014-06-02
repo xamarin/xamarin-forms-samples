@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:layout_width="324dp"
+        android:layout_height="276dp"
+        android:id="@+id/dialogLayout"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/dialogImage"
+            android:background="@drawable/loginbox" />
+        <ImageView
+            android:src="@drawable/XamarinTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialogTitle"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp" />
+        <EditText
+            android:inputType="textPassword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userName"
+            android:id="@+id/password"
+            android:hint="Password"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            android:imeOptions="actionGo" />
+        <Button
+            android:text="Log In"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/logIn"
+            android:layout_below="@+id/password"
+            android:layout_marginTop="36dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/disabledText"
+            android:background="@drawable/login_button"
+            android:layout_marginBottom="12dp" />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userName"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Username"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:layout_below="@id/dialogTitle"
+            android:layout_marginTop="50dp"
+            android:textSize="16dp"
+            android:imeOptions="actionNext"
+            android:inputType="text" />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginProgress"
+            android:layout_alignTop="@+id/logIn"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible" />
+        <ImageButton
+            android:src="@drawable/questionmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginQuestion"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:padding="15dp" />
+    </RelativeLayout>
+</RelativeLayout>

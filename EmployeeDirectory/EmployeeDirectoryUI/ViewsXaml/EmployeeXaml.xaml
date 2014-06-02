@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="EmployeeDirectoryUI.Xaml.EmployeeXaml"
     Title="{Binding Path=Person.Name}">
     <ContentPage.Content>
 
     	<StackLayout VerticalOptions="StartAndExpand">
-
+        <Label x:Name="PersonName" XAlign="Center" Font="Bold,Large" />
     		<StackLayout Padding="10,20,10,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
-				<Image x:Name="PersonImage" 
+				  <Image x:Name="PersonImage" 
 						WidthRequest="150" HeightRequest="150"
 						Source="DetailsPlaceholder.jpg" />
 	    		<StackLayout VerticalOptions="StartAndExpand" Orientation="Vertical">

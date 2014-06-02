@@ -16,7 +16,7 @@ namespace EmployeeDirectoryUI
 	public static class App
 	{
 		//Change the following line to switch between XAML and C# versions
-		private UIImplementation uiImplementation = UIImplementation.CSharp;
+		private static UIImplementation uiImplementation = UIImplementation.CSharp;
 
 		public static IDirectoryService Service { get; set; }
 
@@ -26,7 +26,10 @@ namespace EmployeeDirectoryUI
 
 		public static Page GetMainPage ()
 		{
-			Service = MemoryDirectoryService.FromCsv ("XamarinDirectory.csv").Result;
+			var task = Task.Run(async () => { 
+				Service = await MemoryDirectoryService.FromCsv("XamarinDirectory.csv"); 
+			});
+			task.Wait();
 
 			var employeeList = new ContentPage ();
 			if (uiImplementation == UIImplementation.CSharp) {

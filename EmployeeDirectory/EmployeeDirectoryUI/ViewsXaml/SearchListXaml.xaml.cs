@@ -16,8 +16,6 @@ namespace EmployeeDirectoryUI.Xaml
 		{
 			InitializeComponent ();
 
-			favoritesRepository = XmlFavoritesRepository.OpenFile ("XamarinFavorites.xml").Result;
-
 			search = new Search ("test");
 			viewModel = new SearchViewModel (App.Service, search);
 
@@ -34,6 +32,8 @@ namespace EmployeeDirectoryUI.Xaml
 			};
 
 			BindingContext = viewModel;
+
+            InitFavorites ();
 		}
 
 		private void OnValueChanged (object sender, TextChangedEventArgs e)
@@ -41,7 +41,7 @@ namespace EmployeeDirectoryUI.Xaml
 			viewModel.Search ();
 		}
 
-		public void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
+        private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
 			var personInfo = e.SelectedItem as Person;
 			var employeeView = new EmployeeXaml {
@@ -50,5 +50,10 @@ namespace EmployeeDirectoryUI.Xaml
 
 			Navigation.PushAsync (employeeView);
 		}
+
+        private async void InitFavorites() 
+        {
+            favoritesRepository = await XmlFavoritesRepository.OpenFile("XamarinFavorites.xml");
+        }
 	}
 }

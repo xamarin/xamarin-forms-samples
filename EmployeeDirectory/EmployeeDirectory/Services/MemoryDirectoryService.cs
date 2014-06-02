@@ -105,7 +105,7 @@ namespace EmployeeDirectory
 		public async static Task<MemoryDirectoryService> FromCsv (string path)
 		{
 			IFolder store = FileSystem.Current.LocalStorage;
-			IFile file = await store.GetFileAsync (path);
+			var file = await store.GetFileAsync (path);
 
 			using (var reader = new StreamReader (await file.OpenAsync (FileAccess.Read))) {
 				return FromCsv (reader);

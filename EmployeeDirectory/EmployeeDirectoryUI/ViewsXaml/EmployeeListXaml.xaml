@@ -20,7 +20,7 @@
 		      <ViewCell>
 		      	<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">	
 		      		<Image WidthRequest="44" HeightRequest="44" Source="{Binding Photo}" />
-			     	<StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
+			     	  <StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
 			        	<Label Text="{Binding Name}" YAlign="Center" Font="Medium" />
 			        	<Label Text="{Binding Title}" YAlign="Center" Font="Micro" />
 			        </StackLayout>

@@ -2,12 +2,12 @@
 using System.Threading.Tasks;
 using System.Text;
 using System.IO;
-using System.Net;
-using System.Collections.Generic;
 using System.Net.Http;
+using System.Collections.Generic;
 using PCLStorage;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 
 namespace EmployeeDirectory
 {
@@ -23,9 +23,12 @@ namespace EmployeeDirectory
 
 		static async void Init ()
 		{
+            md5 = JeffWilcox.Utilities.Silverlight.MD5.Create("MD5");
 			IFolder rootFolder = FileSystem.Current.LocalStorage;
-			folder = await rootFolder.CreateFolderAsync ("Cache", CreationCollisionOption.OpenIfExists);
-			md5 = JeffWilcox.Utilities.Silverlight.MD5.Create ("MD5");
+            await rootFolder.CreateFolderAsync("Cache", CreationCollisionOption.OpenIfExists).ContinueWith(createFolderTask => {
+                createFolderTask.Wait();
+                folder = createFolderTask.Result;
+            });
 		}
 
 		public static async Task<string> Download (string url)
@@ -38,7 +41,7 @@ namespace EmployeeDirectory
 
 		public static async Task<string> Download (Uri url, string email)
 		{
-			var hash = md5.ComputeHash (Encoding.UTF8.GetBytes (email.Trim ()));
+            var hash = md5.ComputeHash(Encoding.UTF8.GetBytes(email.Trim()));
 			var fileName = string.Join ("", hash.Select (x => x.ToString ("x2")));
 
 			return await Download (url.AbsoluteUri, fileName);
@@ -78,23 +81,29 @@ namespace EmployeeDirectory
 		}
 
 		static async Task<bool> download (string url, string fileName)
-		{ 
-			IFile file = null;
-			try {
-				var client = new HttpClient ();
-				var data = await client.GetByteArrayAsync (url);
-				file = await folder.CreateFileAsync (fileName,
-					CreationCollisionOption.ReplaceExisting);
-				using (var fileStream = await file.OpenAsync (FileAccess.ReadAndWrite)) {
-					fileStream.Write (data, 0, data.Length);
-				}
-				return true;
-			} catch (Exception ex) {
-				Debug.WriteLine (ex);
-			}
-			if (file != null)
-				await file.DeleteAsync ();
-			return false;
+		{
+            IFile file = null;
+            try
+            {
+                var client = new HttpClient();
+                var data = await client.GetByteArrayAsync(url);
+                var fileNamePaths = fileName.Split('\\');
+                fileName = fileNamePaths [fileNamePaths.Length - 1];
+                file = await FileSystem.Current.LocalStorage.CreateFileAsync(fileName,
+                    CreationCollisionOption.ReplaceExisting);
+                using (var fileStream = await file.OpenAsync(FileAccess.ReadAndWrite))
+                {
+                    fileStream.Write(data, 0, data.Length);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            if (file != null)
+                await file.DeleteAsync();
+            return false;
 		}
 
 		static void removeTask (string fileName)

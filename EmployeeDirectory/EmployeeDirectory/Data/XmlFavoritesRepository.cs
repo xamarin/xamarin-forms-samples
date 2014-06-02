@@ -63,11 +63,6 @@ namespace EmployeeDirectory.Data
 			IFile file = await store.GetFileAsync (path);
 
 			using (var f = new StreamReader(await file.OpenAsync(FileAccess.Read))) {
-//#if WINDOWS_PHONE
-//            using(var f = System.Windows.Application.GetResourceStream(new Uri(path, UriKind.RelativeOrAbsolute)).Stream){
-//#else
-//			using (var f = File.OpenRead (path)) {
-//#endif
 				var repo = (XmlFavoritesRepository)serializer.Deserialize (f);
 				repo.IsolatedStorageName = Path.GetFileName (path);
 				return repo;
@@ -78,12 +73,12 @@ namespace EmployeeDirectory.Data
 		{
 			var serializer = new XmlSerializer (typeof(XmlFavoritesRepository));
 			IFolder store = FileSystem.Current.LocalStorage;
-			//var iso = IsolatedStorageFile.GetUserStoreForApplication ();
 
 			IFile file = await store.GetFileAsync (IsolatedStorageName);
-			await file.DeleteAsync (); // so we can write a new one
-			store.CreateFileAsync (IsolatedStorageName, CreationCollisionOption.OpenIfExists);
-			using (var f = await file.OpenAsync(FileAccess.ReadAndWrite)) {
+            await file.DeleteAsync(); // so we can write a new one
+            file = await store.CreateFileAsync(IsolatedStorageName, CreationCollisionOption.OpenIfExists);
+
+            using (var f = await file.OpenAsync(FileAccess.ReadAndWrite)) {
 				serializer.Serialize (f, this);
 			}
 
@@ -117,7 +112,8 @@ namespace EmployeeDirectory.Data
 				People.Remove (existing);
 			}
 			People.Add (person);
-			Commit ().Wait();
+            var task = Task.Run(async () => { await Commit(); });
+            task.Wait();
 		}
 
 		public void Delete (Person person)
@@ -127,7 +123,8 @@ namespace EmployeeDirectory.Data
 			var n = People.Count - newPeople.Count;
 			People = newPeople;
 			if (n != 0) {
-				Commit ().Wait();
+                var task = Task.Run(async () => { await Commit(); });
+                task.Wait();
 			}
 		}
 

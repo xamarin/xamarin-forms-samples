@@ -26,6 +26,7 @@ namespace EmployeeDirectoryUI.Xaml
 			base.OnBindingContextChanged ();
 			var personInfo = (PersonViewModel)BindingContext;
 			Title = personInfo.Person.Name;
+            PersonName.Text = personInfo.Person.Name;
 			favoriteLabel.Text = personInfo.IsFavorite ? "Added to favorites" : "Not in favorites";
 			DownloadImage ();
 		}
@@ -35,11 +36,11 @@ namespace EmployeeDirectoryUI.Xaml
 			var personInfo = (PersonViewModel)BindingContext;
 			personInfo.ToggleFavorite ();
 			favoriteLabel.Text = personInfo.IsFavorite ? "Added to favorites" : "Not in favorites";
+            Navigation.PopAsync();
 		}
 
-		private void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
+		public void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
 		{
-
 			var property = (PersonViewModel.Property)e.SelectedItem;
 			System.Diagnostics.Debug.WriteLine ("Property clicked " + property.Type + " " + property.Value);
 

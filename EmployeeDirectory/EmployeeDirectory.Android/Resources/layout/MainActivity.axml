@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <employeedirectory.android.PeopleGroupsListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@android:id/list"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_marginLeft="12dip"
+        android:layout_marginRight="12dip"
+        android:layout_weight="1" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@android:id/empty">
+        <TextView
+            android:text="@string/NoFavoritesText"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView1"
+            android:gravity="center"
+            android:layout_marginLeft="12dip"
+            android:layout_marginRight="12dip"
+            android:textColor="#ff5a5a5a"
+            android:layout_marginTop="80dip" />
+    </LinearLayout>
+</LinearLayout>

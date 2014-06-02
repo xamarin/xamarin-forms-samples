@@ -146,7 +146,7 @@ namespace EmployeeDirectory.Data
 				return;
 			try {
 				System.Diagnostics.Debug.WriteLine (GravatarUrl.AbsoluteUri);
-				LocalImagePath = await FileCache.Download (GravatarUrl, Email);
+                LocalImagePath = await FileCache.Download(GravatarUrl, Email);
 			} catch (Exception ex) {
 				System.Diagnostics.Debug.WriteLine (ex);
 			}
@@ -157,7 +157,7 @@ namespace EmployeeDirectory.Data
 			get { return localImagePath; }
 			set { 
 				if (string.IsNullOrEmpty (value)) {
-					value = "Placeholder.jpg";
+					localImagePath = "Placeholder.jpg";
 				} else {
 					localImagePath = value;
 				}
@@ -167,7 +167,11 @@ namespace EmployeeDirectory.Data
 		public ImageSource Photo
 		{
 			get {
-				return FileImageSource.FromFile (LocalImagePath);
+                return Device.OnPlatform(
+                    FileImageSource.FromFile(LocalImagePath), 
+                    FileImageSource.FromFile(LocalImagePath),
+                    FileImageSource.FromUri(GravatarUrl)
+                );
 			}
 		}
 

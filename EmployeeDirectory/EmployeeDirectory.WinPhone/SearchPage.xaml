@@ -1,0 +1,71 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="EmployeeDirectory.WinPhone.SearchPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,16">
+            <TextBlock x:Name="ApplicationTitle" Text="EMPLOYEE DIRECTORY" Style="{StaticResource PhoneTextNormalStyle}"/>
+        </StackPanel>
+
+        <Grid
+            x:Name="SearchPanel"
+            Grid.Row="1"
+            Margin="12,10,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBox
+                x:Name="SearchText"
+                Grid.Column="0"
+                KeyDown="HandleSearchTextKeyDown"
+                TextChanged="OnSearchTextChanged"
+                Text="{Binding Path=SearchText, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>
+            <Button               
+                Grid.Column="1"
+                Click="HandleSearch" Padding="0">
+                <Button.Content>
+                    <Image Source="Resources/search.rest.png"/>
+                </Button.Content>
+            </Button>
+        </Grid>
+
+        <Grid x:Name="ContentPanel" Grid.Row="2" Margin="12,0,12,0">
+            <toolkit:LongListSelector
+                x:Name="SearchResults"
+                ItemsSource="{Binding Path=Groups}"
+                ItemTemplate="{StaticResource PersonListItem}"
+                GroupHeaderTemplate="{StaticResource PersonGroupListHeader}"
+                GroupItemTemplate="{StaticResource PersonGroupListItem}">
+                <toolkit:LongListSelector.GroupItemsPanel>
+                    <ItemsPanelTemplate>
+                        <toolkit:WrapPanel/>
+                    </ItemsPanelTemplate>
+                </toolkit:LongListSelector.GroupItemsPanel>
+                <toolkit:LongListSelector.ListFooter>
+                    <Border
+                        Height="100"/>
+                </toolkit:LongListSelector.ListFooter>
+            </toolkit:LongListSelector>
+        </Grid>
+    </Grid>
+ 
+</phone:PhoneApplicationPage>

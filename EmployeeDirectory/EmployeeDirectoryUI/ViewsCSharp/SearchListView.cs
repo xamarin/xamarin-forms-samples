@@ -37,8 +37,6 @@ namespace EmployeeDirectoryUI.CSharp
 
 		private async void InitializeViewModel ()
 		{
-			favoritesRepository = await XmlFavoritesRepository.OpenFile ("XamarinFavorites.xml");
-
 			search = new Search (string.Empty);
 			viewModel = new SearchViewModel (App.Service, search);
 
@@ -48,6 +46,7 @@ namespace EmployeeDirectoryUI.CSharp
 			};
 
 			BindingContext = viewModel;
+            favoritesRepository = await XmlFavoritesRepository.OpenFile("XamarinFavorites.xml");
 		}
 
 		private void OnSearchCompleted (object sender, SearchCompletedEventArgs e)
