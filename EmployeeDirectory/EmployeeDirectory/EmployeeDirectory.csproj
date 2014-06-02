@@ -87,15 +87,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="Toolkit.Content\ApplicationBar.Add.png" />
-    <None Include="Toolkit.Content\ApplicationBar.Cancel.png" />
-    <None Include="Toolkit.Content\ApplicationBar.Check.png" />
-    <None Include="Toolkit.Content\ApplicationBar.Delete.png" />
-    <None Include="Toolkit.Content\ApplicationBar.Select.png" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="README_FIRST.txt" />
   </ItemGroup>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
