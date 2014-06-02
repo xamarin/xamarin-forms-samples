@@ -168,7 +168,7 @@ namespace EmployeeDirectory.Data
 		{
 			get {
                 return Device.OnPlatform(
-                    FileImageSource.FromFile(LocalImagePath), 
+					FileImageSource.FromUri(GravatarUrl),
                     FileImageSource.FromFile(LocalImagePath),
                     FileImageSource.FromUri(GravatarUrl)
                 );
