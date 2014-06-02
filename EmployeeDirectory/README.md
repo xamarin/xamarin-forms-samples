@@ -9,7 +9,7 @@ Switch to XAML:
     public static class App
     {
         //Change the following line to switch between XAML and C# versions
-        private UIImplementation uiImplementation = UIImplementation.Xaml;
+        private static UIImplementation uiImplementation = UIImplementation.Xaml;
         ...
     }
     
@@ -18,7 +18,7 @@ Switch to C#:
     public static class App
     {
         //Change the following line to switch between XAML and C# versions
-        private UIImplementation uiImplementation = UIImplementation.CSharp;
+        private static UIImplementation uiImplementation = UIImplementation.CSharp;
         ...
     }
 
