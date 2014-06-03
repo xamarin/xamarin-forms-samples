@@ -10,17 +10,18 @@ namespace EmployeeDirectoryUI.Xaml
 	{
 		private FavoritesViewModel viewModel;
 		private IFavoritesRepository favoritesRepository;
+		private ToolbarItem toolbarItem;
 
 		public EmployeeListXaml ()
 		{
 			InitializeComponent ();
 
-			var toolBarItem = new ToolbarItem ("search", "Search.png", () => {
+			toolbarItem = new ToolbarItem ("search", "Search.png", () => {
 				var search = new SearchListXaml ();
 				Navigation.PushAsync (search);
 			}, 0, 0);
 
-			ToolbarItems.Add (toolBarItem);
+			ToolbarItems.Add (toolbarItem);
 		}
 
 		protected async override void OnAppearing ()
@@ -38,6 +39,14 @@ namespace EmployeeDirectoryUI.Xaml
 			viewModel = new FavoritesViewModel (favoritesRepository, true);
 
 			listView.ItemsSource = viewModel.Groups;
+
+			SetToolbarItems (true);
+		}
+
+		protected override void OnDisappearing ()
+		{
+			base.OnDisappearing ();
+			SetToolbarItems (false);
 		}
 
 		public void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
@@ -48,6 +57,18 @@ namespace EmployeeDirectoryUI.Xaml
 			};
 
 			Navigation.PushAsync (employeeView);
+		}
+
+		private void SetToolbarItems(bool show)
+		{
+			if (Device.OS != TargetPlatform.WinPhone)
+				return;
+
+			if (show) {
+				ToolbarItems.Add (toolbarItem);
+			} else if (Device.OS == TargetPlatform.WinPhone) {
+				ToolbarItems.Remove (toolbarItem);
+			}
 		}
 	}
 }

@@ -12,15 +12,16 @@ namespace EmployeeDirectoryUI.CSharp
 		private FavoritesViewModel viewModel;
 		private IFavoritesRepository favoritesRepository;
 		private ListView listView;
+		private ToolbarItem toolbarItem;
 
 		public EmployeeListView ()
 		{
-			var toolBarItem = new ToolbarItem ("?", "Search.png", () => {
+			toolbarItem = new ToolbarItem ("?", "Search.png", () => {
 				var search = new SearchListView ();
 				Navigation.PushAsync (search);
 			}, 0, 0);
 
-			ToolbarItems.Add (toolBarItem);
+			ToolbarItems.Add (toolbarItem);
 
 			listView = new ListView () {
 				IsGroupingEnabled = true,
@@ -47,6 +48,13 @@ namespace EmployeeDirectoryUI.CSharp
 
 			viewModel = new FavoritesViewModel (favoritesRepository, false);
 			listView.ItemsSource = viewModel.Groups;
+			SetToolbarItems (true);
+		}
+
+		protected override void OnDisappearing ()
+		{
+			base.OnDisappearing ();
+			SetToolbarItems (false);
 		}
 
 		private void OnItemSelected (object sender, ItemTappedEventArgs e)
@@ -57,6 +65,18 @@ namespace EmployeeDirectoryUI.CSharp
 			};
 
 			Navigation.PushAsync (selectedEmployee);
+		}
+
+		private void SetToolbarItems(bool show)
+		{
+			if (Device.OS != TargetPlatform.WinPhone)
+				return;
+
+			if (show) {
+				ToolbarItems.Add (toolbarItem);
+			} else {
+				ToolbarItems.Remove (toolbarItem);
+			}
 		}
 	}
 }
