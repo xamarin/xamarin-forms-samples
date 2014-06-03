@@ -8,7 +8,7 @@ namespace EmployeeDirectoryUI.Xaml
 {
 	public partial class EmployeeXaml : ContentPage
 	{
-		private const int ImageSize = 176;
+		private const int IMAGE_SIZE = 150;
 
 		public EmployeeXaml ()
 		{
@@ -19,6 +19,7 @@ namespace EmployeeDirectoryUI.Xaml
 		{
 			base.OnAppearing ();
 			favoriteSwitch.Toggled += OnFavoriteClicked;
+			PersonName.IsVisible = Device.OS == TargetPlatform.WinPhone;
 		}
 
 		protected override void OnBindingContextChanged ()
@@ -74,11 +75,8 @@ namespace EmployeeDirectoryUI.Xaml
 			var person = personInfo.Person;
 
 			if (person.HasEmail) {
-				var imageUrl = Gravatar.GetImageUrl (person.Email, ImageSize);
-
-				var loader = new UriImageSource ();
-				loader.Uri = imageUrl;
-				PersonImage.Source = loader;
+				var imageUrl = Gravatar.GetImageUrl (person.Email, IMAGE_SIZE);
+				PersonImage.Source = new UriImageSource { Uri = imageUrl };
 			}
 		}
 	}

@@ -13,6 +13,7 @@ namespace EmployeeDirectoryUI.CSharp
 		private Label favoriteLabel;
 		private Switch favoriteSwitch;
 		private Image photo;
+		private Label personName;
 
 		public EmployeeView ()
 		{
@@ -23,6 +24,12 @@ namespace EmployeeDirectoryUI.CSharp
 
 			favoriteSwitch = new Switch ();
 			favoriteSwitch.SetBinding (Switch.IsToggledProperty, "Path=Person.IsFavorite");
+
+			personName = new Label {
+				XAlign = TextAlignment.Center,
+				Font = Font.BoldSystemFontOfSize(NamedSize.Large),
+				IsVisible = Device.OS == TargetPlatform.WinPhone
+			};
 
 			var optionsView = new StackLayout { 
 				VerticalOptions = LayoutOptions.StartAndExpand,
@@ -45,7 +52,7 @@ namespace EmployeeDirectoryUI.CSharp
 
 			Content = new StackLayout {
 				VerticalOptions = LayoutOptions.StartAndExpand,
-				Children = { headerView, listView }
+				Children = { personName, headerView, listView }
 			};
 		}
 
@@ -60,6 +67,7 @@ namespace EmployeeDirectoryUI.CSharp
 			base.OnBindingContextChanged ();
 			var personInfo = (PersonViewModel)BindingContext;
 			Title = personInfo.Person.Name;
+			personName.Text = personInfo.Person.Name;
 			favoriteLabel.Text = personInfo.IsFavorite ? "Added to favorites" : "Not in favorites";
 			DownloadImage ();
 		}
