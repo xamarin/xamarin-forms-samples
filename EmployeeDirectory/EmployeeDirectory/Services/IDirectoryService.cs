@@ -25,6 +25,7 @@ namespace EmployeeDirectory
 	public interface IDirectoryService : IDisposable
 	{
 		Task LoginAsync (string username, string password, CancellationToken cancellationToken);
+
 		Task<IList<Person>> SearchAsync (Filter filter, int sizeLimit, CancellationToken cancellationToken);
 	}
 }

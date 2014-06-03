@@ -25,7 +25,7 @@ namespace EmployeeDirectory.ViewModels
 		private IDirectoryService service;
 
 		private static TimeSpan ForceLoginTimespan {
-			get{ 
+			get {
 				return TimeSpan.FromMinutes (5);
 			}
 		}

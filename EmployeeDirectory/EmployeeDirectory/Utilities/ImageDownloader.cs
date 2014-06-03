@@ -23,14 +23,13 @@ namespace EmployeeDirectory.Utilities
 {
 	public abstract class ImageDownloader
 	{
-		readonly IFolder store;// = IsolatedStorageFile.GetUserStoreForApplication ();
+		readonly IFolder store;
 
 		readonly ThrottledHttp http;
 
 		readonly TimeSpan cacheDuration;
 
-		public ImageDownloader (int maxConcurrentDownloads = 2)
-			: this (TimeSpan.FromDays (1))
+		public ImageDownloader (int maxConcurrentDownloads = 2) : this (TimeSpan.FromDays (1))
 		{
 			http = new ThrottledHttp (maxConcurrentDownloads);
 		}
@@ -40,11 +39,6 @@ namespace EmployeeDirectory.Utilities
 			this.cacheDuration = cacheDuration;
 
 			store = FileSystem.Current.LocalStorage;
-
-			//HACK: move this somewhere...
-//			if (!store.CheckExistsAsync ("ImageCache")) {
-//				store.CreateFolderAsync ("ImageCache");
-//			}
 		}
 
 		public bool HasLocallyCachedCopy (Uri uri)
@@ -56,19 +50,13 @@ namespace EmployeeDirectory.Utilities
 			var lastWriteTime = GetLastWriteTimeUtc (filename);
 
 			return lastWriteTime.HasValue &&
-				(now - lastWriteTime.Value) < cacheDuration;
+			(now - lastWriteTime.Value) < cacheDuration;
 		}
 
 		public async Task<object> GetImageAsync (Uri uri)
 		{
-//			var exists = await store.CheckExistsAsync ("ImageCache");
-//			if (exists != ExistenceCheckResult.FolderExists) {
-				await store.CreateFolderAsync ("ImageCache", CreationCollisionOption.OpenIfExists);
-//			}
-
-			//return Task.Factory.StartNew (() => {
+			await store.CreateFolderAsync ("ImageCache", CreationCollisionOption.OpenIfExists);
 			return await GetImage (uri);
-			//});
 		}
 
 		public async Task<object> GetImage (Uri uri)
@@ -79,13 +67,13 @@ namespace EmployeeDirectory.Utilities
 				using (var o = await OpenStorage (filename, FileAccess.Read)) {
 					return LoadImage (o);
 				}
-			}
-			else {
-				using (var d = http.Get (uri)) {
-					using (var o = await OpenStorage (filename, FileAccess.ReadAndWrite)) {
-						d.CopyTo (o);
-					}
+			} else {
+
+				using (var d = http.Get (uri))
+				using (var o = await OpenStorage (filename, FileAccess.ReadAndWrite)) {
+					d.CopyTo (o);
 				}
+
 				using (var o = await OpenStorage (filename, FileAccess.Read)) {
 					return LoadImage (o);
 				}
@@ -94,13 +82,6 @@ namespace EmployeeDirectory.Utilities
 
 		protected virtual DateTime? GetLastWriteTimeUtc (string fileName)
 		{
-//			var path = Path.Combine ("ImageCache", fileName);
-			//HACK: todo fix this
-//			if (store.FileExists (path)) {
-//				return store.GetLastWriteTime (path).UtcDateTime;
-//			} else {
-//				return null;
-//			}
 			return null;
 		}
 
@@ -108,9 +89,7 @@ namespace EmployeeDirectory.Utilities
 		{
 			IFolder store = FileSystem.Current.LocalStorage;
 			IFile file = await store.GetFileAsync (fileName);
-			return await file.OpenAsync(FileAccess.ReadAndWrite);
-
-			//return store.GetFileAsync (Path.Combine ("ImageCache", fileName));//, mode);
+			return await file.OpenAsync (FileAccess.ReadAndWrite);
 		}
 
 		protected abstract object LoadImage (Stream stream);

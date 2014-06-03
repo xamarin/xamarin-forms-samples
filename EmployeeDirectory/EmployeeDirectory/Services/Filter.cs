@@ -34,7 +34,9 @@ namespace EmployeeDirectory
 		/// </param>
 		public AndFilter And (Filter filter)
 		{
-			if (filter == null) throw new ArgumentNullException ("filter");
+			if (filter == null)
+				throw new ArgumentNullException ("filter");
+
 			return new AndFilter (this, filter);
 		}
 
@@ -49,7 +51,9 @@ namespace EmployeeDirectory
 		/// </param>
 		public OrFilter Or (Filter filter)
 		{
-			if (filter == null) throw new ArgumentNullException ("filter");
+			if (filter == null)
+				throw new ArgumentNullException ("filter");
+
 			return new OrFilter (this, filter);
 		}
 
@@ -82,7 +86,9 @@ namespace EmployeeDirectory
 
 		public AndFilter (params Filter[] filters)
 		{
-			if (filters == null) throw new ArgumentNullException ("filters");
+			if (filters == null)
+				throw new ArgumentNullException ("filters");
+
 			Filters = new List<Filter> (filters);
 		}
 	}
@@ -98,7 +104,9 @@ namespace EmployeeDirectory
 
 		public OrFilter (params Filter[] filters)
 		{
-			if (filters == null) throw new ArgumentNullException ("filters");
+			if (filters == null)
+				throw new ArgumentNullException ("filters");
+
 			Filters = new List<Filter> (filters);
 		}
 	}
@@ -113,7 +121,9 @@ namespace EmployeeDirectory
 
 		public NotFilter (Filter innerFilter)
 		{
-			if (innerFilter == null) throw new ArgumentNullException ("innerFilter");
+			if (innerFilter == null)
+				throw new ArgumentNullException ("innerFilter");
+
 			InnerFilter = innerFilter;
 		}
 	}

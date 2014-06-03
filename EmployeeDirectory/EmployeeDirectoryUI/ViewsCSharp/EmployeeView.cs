@@ -69,7 +69,7 @@ namespace EmployeeDirectoryUI.CSharp
 			var personInfo = (PersonViewModel)BindingContext;
 			personInfo.ToggleFavorite ();
 			favoriteLabel.Text = personInfo.IsFavorite ? "Added to favorites" : "Not in favorites";
-            Navigation.PopAsync();
+			Navigation.PopAsync ();
 		}
 
 		private void OnItemSelected (object sender, SelectedItemChangedEventArgs e)

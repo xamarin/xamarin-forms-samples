@@ -23,11 +23,10 @@ using System.Globalization;
 
 namespace EmployeeDirectory
 {
-	public class CsvReader<T>
-		where T : new ()
+	public class CsvReader<T> where T : new()
 	{
-		IFormatProvider formatProvider;
-		TextReader reader;
+		private IFormatProvider formatProvider;
+		private TextReader reader;
 
 		string[] headerNames;
 
@@ -39,23 +38,19 @@ namespace EmployeeDirectory
 
 		public IEnumerable<T> ReadAll ()
 		{
-			//
 			// Associate header names with properties
-			//
 			headerNames = reader.ReadLine ().Split (',');
 
 			var props = new PropertyInfo[headerNames.Length];
 			for (var hi = 0; hi < props.Length; hi++) {
-				//var p = typeof(T).GetProperty (headerNames[hi]);
-				var p = typeof(T).GetRuntimeProperty (headerNames[hi]);
-				if (p == null) throw new Exception (
-					"Property '" + headerNames[hi] + "' not found in " + typeof (T).Name);
-				props[hi] = p;
+				var p = typeof(T).GetRuntimeProperty (headerNames [hi]);
+				if (p == null)
+					throw new Exception (
+						"Property '" + headerNames [hi] + "' not found in " + typeof(T).Name);
+				props [hi] = p;
 			}
 
-			//
 			// Read all the records
-			//
 			var r = new T ();
 			var i = 0;
 
@@ -66,24 +61,20 @@ namespace EmployeeDirectory
 					r = new T ();
 					i = 0;
 					ch = reader.Read ();
-				}
-				else if (ch == '\r') {
+				} else if (ch == '\r') {
 					ch = reader.Read ();
-				}
-				else if (ch == '"') {
-					ch = ReadQuoted (r, props[i]);
-				}
-				else if (ch == ',') {
+				} else if (ch == '"') {
+					ch = ReadQuoted (r, props [i]);
+				} else if (ch == ',') {
 					i++;
 					ch = reader.Read ();
-				}
-				else {
-					ch = ReadNonQuoted (r, props[i], (char)ch);
+				} else {
+					ch = ReadNonQuoted (r, props [i], (char)ch);
 				}
 			}
 		}
 
-		int ReadNonQuoted (T r, PropertyInfo prop, char first)
+		private int ReadNonQuoted (T r, PropertyInfo prop, char first)
 		{
 			var sb = new StringBuilder ();
 
@@ -98,7 +89,7 @@ namespace EmployeeDirectory
 
 			var valueString = sb.ToString ().Trim ();
 
-			if (typeof(System.Collections.IList).GetTypeInfo().IsAssignableFrom (prop.PropertyType.GetTypeInfo())) {
+			if (typeof(System.Collections.IList).GetTypeInfo ().IsAssignableFrom (prop.PropertyType.GetTypeInfo ())) {
 				var coll = (System.Collections.IList)prop.GetValue (r, null);
 				coll.Add (valueString);
 			} else {
@@ -114,7 +105,7 @@ namespace EmployeeDirectory
 			return ch;
 		}
 
-		int ReadQuoted (T r, PropertyInfo prop)
+		private int ReadQuoted (T r, PropertyInfo prop)
 		{
 			var sb = new StringBuilder ();
 
@@ -128,17 +119,14 @@ namespace EmployeeDirectory
 					if (hasQuote) {
 						sb.Append ('"');
 						hasQuote = false;
-					}
-					else {
+					} else {
 						hasQuote = true;
 					}
-				}
-				else {
+				} else {
 					if (hasQuote) {
 						prop.SetValue (r, Convert.ChangeType (sb.ToString ().Trim (), prop.PropertyType, formatProvider), null);
 						return ch;
-					}
-					else {
+					} else {
 						sb.Append ((char)ch);
 					}
 				}

@@ -48,7 +48,7 @@ namespace EmployeeDirectory.Utilities
 			var req = WebRequest.Create (uri);
 
 			var getTask = Task.Factory.FromAsync<WebResponse> (
-				req.BeginGetResponse, req.EndGetResponse, null);
+				              req.BeginGetResponse, req.EndGetResponse, null);
 
 			return getTask.ContinueWith (task => {
 				throttle.Release ();

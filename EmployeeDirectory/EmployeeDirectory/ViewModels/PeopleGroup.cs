@@ -24,7 +24,9 @@ namespace EmployeeDirectory.ViewModels
 	public class PeopleGroup : IEnumerable<Person>
 	{
 		public string Title { get; private set; }
+
 		public List<Person> People { get; private set; }
+
 		public PeopleGroup (string title)
 		{
 			Title = title;

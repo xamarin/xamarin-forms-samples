@@ -38,11 +38,10 @@ namespace EmployeeDirectory.Data
 			var serializer = new XmlSerializer (typeof(XmlFavoritesRepository));
 
 			IFolder store = FileSystem.Current.LocalStorage;
-			//var iso = IsolatedStorageFile.GetUserStoreForApplication ();
-
 			IFile file = await store.GetFileAsync (isolatedStorageName);
+
 			try {
-				using (var f = new StreamReader(await file.OpenAsync(FileAccess.Read))) {
+				using (var f = new StreamReader (await file.OpenAsync (FileAccess.Read))) {
 					var repo = (XmlFavoritesRepository)serializer.Deserialize (f);
 					repo.IsolatedStorageName = isolatedStorageName;
 					return repo;
@@ -62,23 +61,24 @@ namespace EmployeeDirectory.Data
 			IFolder store = FileSystem.Current.LocalStorage;
 			IFile file = await store.GetFileAsync (path);
 
-			using (var f = new StreamReader(await file.OpenAsync(FileAccess.Read))) {
+			using (var f = new StreamReader (await file.OpenAsync (FileAccess.Read))) {
 				var repo = (XmlFavoritesRepository)serializer.Deserialize (f);
 				repo.IsolatedStorageName = Path.GetFileName (path);
 				return repo;
 			}
 		}
 
-		async Task Commit ()
+		private async Task Commit ()
 		{
 			var serializer = new XmlSerializer (typeof(XmlFavoritesRepository));
+
 			IFolder store = FileSystem.Current.LocalStorage;
-
 			IFile file = await store.GetFileAsync (IsolatedStorageName);
-            await file.DeleteAsync(); // so we can write a new one
-            file = await store.CreateFileAsync(IsolatedStorageName, CreationCollisionOption.OpenIfExists);
 
-            using (var f = await file.OpenAsync(FileAccess.ReadAndWrite)) {
+			await file.DeleteAsync ();
+			file = await store.CreateFileAsync (IsolatedStorageName, CreationCollisionOption.OpenIfExists);
+
+			using (var f = await file.OpenAsync (FileAccess.ReadAndWrite)) {
 				serializer.Serialize (f, this);
 			}
 
@@ -108,23 +108,29 @@ namespace EmployeeDirectory.Data
 		public void InsertOrUpdate (Person person)
 		{
 			var existing = People.FirstOrDefault (x => x.Id == person.Id);
-			if (existing != null) {
+			if (existing != null)
 				People.Remove (existing);
-			}
+
 			People.Add (person);
-            var task = Task.Run(async () => { await Commit(); });
-            task.Wait();
+			var task = Task.Run (async () => {
+				await Commit ();
+			});
+			task.Wait ();
 		}
 
 		public void Delete (Person person)
 		{
-			var newPeopleQ = from p in People where p.Id != person.Id select p;
+			var newPeopleQ = from p in People
+			                 where p.Id != person.Id
+			                 select p;
 			var newPeople = newPeopleQ.ToList ();
 			var n = People.Count - newPeople.Count;
 			People = newPeople;
 			if (n != 0) {
-                var task = Task.Run(async () => { await Commit(); });
-                task.Wait();
+				var task = Task.Run (async () => {
+					await Commit ();
+				});
+				task.Wait ();
 			}
 		}
 

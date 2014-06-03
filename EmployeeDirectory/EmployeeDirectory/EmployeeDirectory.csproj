@@ -49,7 +49,6 @@
     <Compile Include="Utilities\ThrottledHttp.cs" />
     <Compile Include="Services\Filter.cs" />
     <Compile Include="Services\IDirectoryService.cs" />
-    <Compile Include="Services\LdapDirectoryService.cs" />
     <Compile Include="Services\MemoryDirectoryService.cs" />
     <Compile Include="Utilities\MD5.cs" />
     <Compile Include="Data\FileCache.cs" />

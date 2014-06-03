@@ -11,7 +11,7 @@ namespace EmployeeDirectoryUI.CSharp
 			var label = new Label { YAlign = TextAlignment.Center };
 			label.SetBinding (Label.TextProperty, "Title");
 			View = new StackLayout {
-				Padding = new Thickness(5, 0, 0, 0),
+				Padding = new Thickness (5, 0, 0, 0),
 				Children = { label }
 			};
 		}

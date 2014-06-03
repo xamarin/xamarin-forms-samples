@@ -21,22 +21,20 @@ namespace EmployeeDirectory.Utilities
 {
 	public class Gravatar
 	{
-		static JeffWilcox.Utilities.Silverlight.MD5 md5;
+		private static JeffWilcox.Utilities.Silverlight.MD5 md5;
 
-        static Gravatar ()
-        {
-			// MD5 not available in PCL, using an open-source implementation
+		static Gravatar ()
+		{
 			md5 = JeffWilcox.Utilities.Silverlight.MD5.Create ("MD5");
-        }
+		}
 
 		public static Uri GetImageUrl (string email, int size)
 		{
-			if (string.IsNullOrEmpty (email)) {
+			if (string.IsNullOrEmpty (email))
 				throw new ArgumentException ("Email must be a valid email address.", "email");
-			}
-			if (size <= 0) {
+
+			if (size <= 0)
 				throw new ArgumentException ("Size must be greater than 0.", "size");
-			}
 
 			var hash = md5.ComputeHash (Encoding.UTF8.GetBytes (email.Trim ()));
 			var hashString = string.Join ("", hash.Select (x => x.ToString ("x2")));

@@ -19,7 +19,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.Collections.ObjectModel;
-using PCLStorage; // ported from IsolatedStorage
+using PCLStorage;
 
 namespace EmployeeDirectory.Data
 {
@@ -43,24 +43,21 @@ namespace EmployeeDirectory.Data
 
 		public Search (string name)
 		{
-			this.Name = name;
-			this.Text = "";
-			this.Property = SearchProperty.Name;
-			this.Results = new Collection<Person> ();
+			Name = name;
+			Text = "";
+			Property = SearchProperty.Name;
+			Results = new Collection<Person> ();
 		}
 
-		public Filter Filter
-		{
-			get
-			{
+		public Filter Filter {
+			get {
 				var trimmed = Text.Trim ();
 				if (Property == SearchProperty.All) {
 					return new OrFilter (
 						new ContainsFilter ("Name", trimmed),
 						new ContainsFilter ("Title", trimmed),
 						new ContainsFilter ("Department", trimmed));
-				}
-				else {
+				} else {
 					var propName = Property.ToString ();
 					return new ContainsFilter (propName, trimmed);
 				}
@@ -69,16 +66,14 @@ namespace EmployeeDirectory.Data
 
 		public async static Task<Search> Open (string name)
 		{
-			if (string.IsNullOrWhiteSpace (name)) {
+			if (string.IsNullOrWhiteSpace (name))
 				throw new ArgumentException ("Name must be given.", "name");
-			}
 
 			IFolder store = FileSystem.Current.LocalStorage;
-			//var store = IsolatedStorageFile.GetUserStoreForApplication ();
-			var serializer = new XmlSerializer (typeof (Search));
+			var serializer = new XmlSerializer (typeof(Search));
 
 			IFile file = await store.GetFileAsync (name);
-			using (var stream = new StreamReader(await file.OpenAsync(FileAccess.Read))) {
+			using (var stream = new StreamReader (await file.OpenAsync (FileAccess.Read))) {
 				var s = (Search)serializer.Deserialize (stream);
 				s.Name = name;
 				return s;
@@ -87,16 +82,14 @@ namespace EmployeeDirectory.Data
 
 		public async Task Save ()
 		{
-			if (string.IsNullOrWhiteSpace (Name)) {
+			if (string.IsNullOrWhiteSpace (Name))
 				throw new InvalidOperationException ("Name must be set.");
-			}
 
 			IFolder store = FileSystem.Current.LocalStorage;
-			//var store = IsolatedStorageFile.GetUserStoreForApplication ();
-			var serializer = new XmlSerializer (typeof (Search));
+			var serializer = new XmlSerializer (typeof(Search));
 
 			IFile file = await store.GetFileAsync (Name);
-			using (var stream = await file.OpenAsync(FileAccess.ReadAndWrite)) {
+			using (var stream = await file.OpenAsync (FileAccess.ReadAndWrite)) {
 				serializer.Serialize (stream, this);
 			}
 		}

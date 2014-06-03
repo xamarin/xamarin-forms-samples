@@ -31,10 +31,10 @@ namespace EmployeeDirectoryUI.Xaml
 				.LoginAsync (System.Threading.CancellationToken.None)
 				.ContinueWith (_ => {
 					App.LastUseTime = System.DateTime.UtcNow;
-                    Navigation.PopModalAsync ();
+					Navigation.PopModalAsync ();
 				});
 
-                Navigation.PopModalAsync();
+				Navigation.PopModalAsync ();
 			} else {
 				DisplayAlert ("Error", viewModel.ValidationErrors, "OK", null);
 			}

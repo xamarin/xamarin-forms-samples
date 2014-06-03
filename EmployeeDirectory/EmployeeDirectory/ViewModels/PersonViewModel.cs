@@ -23,19 +23,18 @@ namespace EmployeeDirectory.ViewModels
 {
 	public class PersonViewModel : ViewModelBase
 	{
-		readonly IFavoritesRepository favoritesRepository;
+		private IFavoritesRepository FavoritesRepository { get; set; }
 
 		public PersonViewModel (Person person, IFavoritesRepository favoritesRepository)
 		{
-			if (person == null) {
+			if (person == null)
 				throw new ArgumentNullException ("person");
-			}
-			if (favoritesRepository == null) {
+
+			if (favoritesRepository == null)
 				throw new ArgumentNullException ("favoritesRepository");
-			}
 
 			Person = person;
-			this.favoritesRepository = favoritesRepository;
+			FavoritesRepository = favoritesRepository;
 
 			PropertyGroups = new ObservableCollection<PropertyGroup> ();
 
@@ -45,41 +44,43 @@ namespace EmployeeDirectory.ViewModels
 			general.Add ("Company", person.Company, PropertyType.Generic);
 			general.Add ("Manager", person.Manager, PropertyType.Generic);
 			general.Add ("Description", person.Description, PropertyType.Generic);
-			if (general.Properties.Count > 0) {
+
+			if (general.Properties.Count > 0)
 				PropertyGroups.Add (general);
-			}
 
 			var phone = new PropertyGroup ("Phone");
 			foreach (var p in person.TelephoneNumbers) {
 				phone.Add ("Phone", p, PropertyType.Phone);
 			}
+
 			foreach (var p in person.HomeNumbers) {
 				phone.Add ("Home", p, PropertyType.Phone);
 			}
+
 			foreach (var p in person.MobileNumbers) {
 				phone.Add ("Mobile", p, PropertyType.Phone);
 			}
-			if (phone.Properties.Count > 0) {
+
+			if (phone.Properties.Count > 0)
 				PropertyGroups.Add (phone);
-			}
 
 			var online = new PropertyGroup ("Online");
 			online.Add ("Email", person.Email, PropertyType.Email);
 			online.Add ("WebPage", CleanUrl (person.WebPage), PropertyType.Url);			
 			online.Add ("Twitter", CleanTwitter (person.Twitter), PropertyType.Twitter);
-			if (online.Properties.Count > 0) {
+
+			if (online.Properties.Count > 0)
 				PropertyGroups.Add (online);
-			}
 
 			var address = new PropertyGroup ("Address");
 			address.Add ("Office", person.Office, PropertyType.Generic);
 			address.Add ("Address", AddressString, PropertyType.Address);
-			if (address.Properties.Count > 0) {
+
+			if (address.Properties.Count > 0)
 				PropertyGroups.Add (address);
-			}
 		}
 
-		static string CleanUrl (string url)
+		private static string CleanUrl (string url)
 		{
 			var trimmed = (url ?? "").Trim ();
 			if (trimmed.Length == 0) return "";
@@ -87,21 +88,19 @@ namespace EmployeeDirectory.ViewModels
 			var upper = trimmed.ToUpperInvariant ();
 			if (!upper.StartsWith ("HTTP")) {
 				return "http://" + trimmed;
-			}
-			else {
+			} else {
 				return trimmed;
 			}
 		}
 
-		static string CleanTwitter (string username)
+		private static string CleanTwitter (string username)
 		{
 			var trimmed = (username ?? "").Trim ();
 			if (trimmed.Length == 0) return "";
 
 			if (!trimmed.StartsWith ("@")) {
 				return "@" + trimmed;
-			}
-			else {
+			} else {
 				return trimmed;
 			}
 		}
@@ -113,33 +112,34 @@ namespace EmployeeDirectory.ViewModels
 		public ObservableCollection<PropertyGroup> PropertyGroups { get; private set; }
 
 		public bool IsFavorite {
-			get { return favoritesRepository.IsFavorite (Person); }
+			get { return FavoritesRepository.IsFavorite (Person); }
 		}
 		public bool IsNotFavorite {
-			get { return !favoritesRepository.IsFavorite (Person); }
+			get { return !FavoritesRepository.IsFavorite (Person); }
 		}
 
 		string AddressString {
 			get {
 				var sb = new StringBuilder ();
-				if (!string.IsNullOrWhiteSpace (Person.Street)) {
+
+				if (!string.IsNullOrWhiteSpace (Person.Street))
 					sb.AppendLine (Person.Street.Trim ());
-				}
-				if (!string.IsNullOrWhiteSpace (Person.POBox)) {
+
+				if (!string.IsNullOrWhiteSpace (Person.POBox))
 					sb.AppendLine (Person.POBox.Trim ());
-				}
-				if (!string.IsNullOrWhiteSpace (Person.City)) {
+
+				if (!string.IsNullOrWhiteSpace (Person.City))
 					sb.AppendLine (Person.City.Trim ());
-				}
-				if (!string.IsNullOrWhiteSpace (Person.State)) {
+
+				if (!string.IsNullOrWhiteSpace (Person.State))
 					sb.AppendLine (Person.State.Trim ());
-				}
-				if (!string.IsNullOrWhiteSpace (Person.PostalCode)) {
+
+				if (!string.IsNullOrWhiteSpace (Person.PostalCode))
 					sb.AppendLine (Person.PostalCode.Trim ());
-				}
-				if (!string.IsNullOrWhiteSpace (Person.Country)) {
+
+				if (!string.IsNullOrWhiteSpace (Person.Country))
 					sb.AppendLine (Person.Country.Trim ());
-				}
+
 				return sb.ToString ();
 			}
 		}
@@ -157,9 +157,8 @@ namespace EmployeeDirectory.ViewModels
 
 			public void Add (string name, string value, PropertyType type)
 			{
-				if (!string.IsNullOrWhiteSpace (value)) {
+				if (!string.IsNullOrWhiteSpace (value))
 					Properties.Add (new Property (name, value, type));
-				}
 			}
 
 			IEnumerator<Property> IEnumerable<Property>.GetEnumerator ()
@@ -208,11 +207,10 @@ namespace EmployeeDirectory.ViewModels
 
 		public void ToggleFavorite ()
 		{			
-			if (favoritesRepository.IsFavorite (Person)) {
-				favoritesRepository.Delete (Person);
-			}
-			else {
-				favoritesRepository.InsertOrUpdate (Person);
+			if (FavoritesRepository.IsFavorite (Person)) {
+				FavoritesRepository.Delete (Person);
+			} else {
+				FavoritesRepository.InsertOrUpdate (Person);
 			}
 			OnPropertyChanged ("IsFavorite");
 		}

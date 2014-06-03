@@ -28,6 +28,12 @@ namespace EmployeeDirectory.ViewModels
 
 		public ObservableCollection<Person> People { get; private set; }
 
+		public bool IsEmpty {
+			get {
+				return Groups.Count == 0;
+			}
+		}
+
 		public FavoritesViewModel (IFavoritesRepository favoritesRepository, bool groupByLastName)
 		{
 			if (favoritesRepository == null)
@@ -43,21 +49,13 @@ namespace EmployeeDirectory.ViewModels
 			};
 		}
 
-		void CreateGroups ()
+		private void CreateGroups ()
 		{
 			People = new ObservableCollection<Person> (favoritesRepository.GetAll ());
 			Groups = PeopleGroup.CreateGroups (
 				favoritesRepository.GetAll (),
 				groupByLastName);
 			OnPropertyChanged ("Groups");
-		}
-
-		public bool IsEmpty
-		{
-			get
-			{
-				return Groups.Count == 0;
-			}
 		}
 	}
 }

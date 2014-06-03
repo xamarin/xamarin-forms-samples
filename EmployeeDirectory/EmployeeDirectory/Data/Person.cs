@@ -31,15 +31,14 @@ namespace EmployeeDirectory.Data
 	public class Person
 	{
 		string id;
+
 		public string Id {
 			get {
 				if (!string.IsNullOrEmpty (id)) {
 					return id;
-				}
-				else if (!string.IsNullOrEmpty (Email)) {
+				} else if (!string.IsNullOrEmpty (Email)) {
 					return Email;
-				}
-				else {
+				} else {
 					return Name;
 				}
 			}
@@ -81,10 +80,18 @@ namespace EmployeeDirectory.Data
 		public List<string> MobileNumbers { get; set; }
 
 		string email;
+
 		[Property (Group = "Contact", Ldap = "mail")]
 		public string Email { 
-			get{ return email; } 
-			set{ email = value; PrecacheImage ();} }
+			get {
+				return email;
+			}
+
+			set {
+				email = value;
+				PrecacheImage ();
+			}
+		}
 
 		[Property (Group = "Contact", Ldap = "wWWHomePage")]
 		public string WebPage { get; set; }
@@ -132,46 +139,52 @@ namespace EmployeeDirectory.Data
 
 		public Uri GravatarUrl {
 			get {
-				return HasEmail ? EmployeeDirectory.Utilities.Gravatar.GetImageUrl (Email, 80) : null;
+				return HasEmail ? EmployeeDirectory.Utilities.Gravatar.GetImageUrl (Email, 80) :
+					new Uri("http://www.fao.org/fileadmin/templates/aiq2013/images/user-placeholder.jpg");
 			}
 		}
 
 		public bool HasEmail {
-			get { return !string.IsNullOrWhiteSpace (Email); }
+			get {
+				return !string.IsNullOrWhiteSpace (Email);
+			}
 		}
 
-		async void PrecacheImage ()
+		private async void PrecacheImage ()
 		{
 			if (!HasEmail)
 				return;
 			try {
 				System.Diagnostics.Debug.WriteLine (GravatarUrl.AbsoluteUri);
-                LocalImagePath = await FileCache.Download(GravatarUrl, Email);
+				LocalImagePath = await FileCache.Download (GravatarUrl, Email);
 			} catch (Exception ex) {
 				System.Diagnostics.Debug.WriteLine (ex);
 			}
 		}
 
 		string localImagePath = "Placeholder.jpg";
+
 		public string LocalImagePath {
-			get { return localImagePath; }
+			get {
+				return localImagePath;
+			}
+
 			set { 
 				if (string.IsNullOrEmpty (value)) {
-					localImagePath = "Placeholder.jpg";
+					value = "Placeholder.jpg";
 				} else {
 					localImagePath = value;
 				}
 			}
 		}
 
-		public ImageSource Photo
-		{
+		public ImageSource Photo {
 			get {
-                return Device.OnPlatform(
-					FileImageSource.FromUri(GravatarUrl),
-                    FileImageSource.FromFile(LocalImagePath),
-                    FileImageSource.FromUri(GravatarUrl)
-                );
+				return Device.OnPlatform (
+					FileImageSource.FromUri (GravatarUrl),
+					FileImageSource.FromFile (LocalImagePath),
+					FileImageSource.FromUri (GravatarUrl)
+				);
 			}
 		}
 
@@ -181,14 +194,11 @@ namespace EmployeeDirectory.Data
 				var hasDepartment = !string.IsNullOrEmpty (Department);
 				if (hasTitle && hasDepartment) {
 					return (Title + " - " + Department).Trim ();
-				}
-				else if (hasTitle && !hasDepartment) {
+				} else if (hasTitle && !hasDepartment) {
 					return Title.Trim ();
-				}
-				else if (!hasTitle && hasDepartment) {
+				} else if (!hasTitle && hasDepartment) {
 					return Department.Trim ();
-				}
-				else {
+				} else {
 					return "";
 				}
 			}
@@ -199,13 +209,11 @@ namespace EmployeeDirectory.Data
 				if (!string.IsNullOrWhiteSpace (FirstName)) {
 					if (!string.IsNullOrWhiteSpace (Initials)) {
 						return FirstName + " " + Initials;
-					}
-					else {
+					} else {
 						return FirstName;
 					}
-				}
-				else {
-					return SplitFirstAndLastName ()[0];
+				} else {
+					return SplitFirstAndLastName () [0];
 				}
 			}
 		}
@@ -214,9 +222,8 @@ namespace EmployeeDirectory.Data
 			get {
 				if (!string.IsNullOrWhiteSpace (FirstName)) {
 					return FirstName;
-				}
-				else {
-					return SplitFirstAndLastName ()[0];
+				} else {
+					return SplitFirstAndLastName () [0];
 				}
 			}
 		}
@@ -225,9 +232,8 @@ namespace EmployeeDirectory.Data
 			get {
 				if (!string.IsNullOrWhiteSpace (LastName)) {
 					return LastName;
-				}
-				else {
-					return SplitFirstAndLastName ()[1];
+				} else {
+					return SplitFirstAndLastName () [1];
 				}
 			}
 		}
@@ -236,14 +242,11 @@ namespace EmployeeDirectory.Data
 			get {
 				if (!string.IsNullOrWhiteSpace (DisplayName)) {
 					return DisplayName;
-				}
-				else if (!string.IsNullOrWhiteSpace (Name)) {
+				} else if (!string.IsNullOrWhiteSpace (Name)) {
 					return Name;
-				}
-				else if (!string.IsNullOrEmpty (Initials)) {
+				} else if (!string.IsNullOrEmpty (Initials)) {
 					return FirstName + " " + Initials + " " + LastName;
-				}
-				else {
+				} else {
 					return FirstName + " " + LastName;
 				}
 			}
@@ -270,19 +273,17 @@ namespace EmployeeDirectory.Data
 			var r = new [] { "", "" };
 			var parts = SafeDisplayName.Split (WS, StringSplitOptions.RemoveEmptyEntries);
 			if (parts.Length == 1) {
-				r[0] = parts[0];
-			}
-			else if (parts.Length == 2) {
-				r[0] = parts[0];
-				r[1] = parts[1];
-			}
-			else {
+				r [0] = parts [0];
+			} else if (parts.Length == 2) {
+				r [0] = parts [0];
+				r [1] = parts [1];
+			} else {
 				var li = parts.Length - 1;
-				while (li - 1 > 0 && char.IsLower (parts[li-1][0])) {
+				while (li - 1 > 0 && char.IsLower (parts [li - 1] [0])) {
 					li--;
 				}
-				r[0] = string.Join (" ", parts.Take (li));
-				r[1] = string.Join (" ", parts.Skip (li));
+				r [0] = string.Join (" ", parts.Take (li));
+				r [1] = string.Join (" ", parts.Skip (li));
 			}
 			return r;
 		}

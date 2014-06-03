@@ -30,10 +30,12 @@ namespace EmployeeDirectory.ViewModels
 
 		public SearchViewModel (IDirectoryService service, Search search)
 		{
-			if (service == null) throw new ArgumentNullException ("service");
+			if (service == null)
+				throw new ArgumentNullException ("service");
 			this.service = service;
 
-			if (search == null) throw new ArgumentNullException ("search");
+			if (search == null)
+				throw new ArgumentNullException ("search");
 			this.search = search;
 
 			SetGroupedPeople ();
@@ -45,15 +47,13 @@ namespace EmployeeDirectory.ViewModels
 			get {
 				if (string.IsNullOrEmpty (search.Name)) {
 					return "Search";
-				}
-				else {
+				} else {
 					return System.IO.Path.GetFileName (search.Name);
 				}
 			}
 		}
 
 		public ObservableCollection<PeopleGroup> Groups { get; private set; }
-		//HACK: for testing
 		public ObservableCollection<Person> People { get; private set; }
 
 		public SearchProperty SearchProperty {
@@ -67,6 +67,7 @@ namespace EmployeeDirectory.ViewModels
 		}
 
 		bool groupByLastName = true;
+
 		public bool GroupByLastName {
 			get { return groupByLastName; }
 			set {
@@ -85,16 +86,11 @@ namespace EmployeeDirectory.ViewModels
 
 		public void Search ()
 		{
-			//
 			// Stop previous search
-			//
-			if (lastCancelSource != null) {
+			if (lastCancelSource != null)
 				lastCancelSource.Cancel ();
-			}
-
-			//
+				
 			// Perform the search
-			//
 			lastCancelSource = new CancellationTokenSource ();
 			var token = lastCancelSource.Token;
 			service.SearchAsync (search.Filter, 200, token).ContinueWith (
@@ -104,7 +100,7 @@ namespace EmployeeDirectory.ViewModels
 				TaskScheduler.FromCurrentSynchronizationContext ());
 		}
 
-		async Task OnSearchCompleted (string searchText, SearchProperty searchProperty, Task<IList<Person>> searchTask)
+		private async Task OnSearchCompleted (string searchText, SearchProperty searchProperty, Task<IList<Person>> searchTask)
 		{
 			if (searchTask.IsFaulted) {
 				var ev = Error;
@@ -113,11 +109,8 @@ namespace EmployeeDirectory.ViewModels
 				}
 			} else {
 				search.Results = new Collection<Person> (searchTask.Result);
-				//HACK: uncomment this
-//				await search.Save ();
-				SetGroupedPeople ();				
 
-				//HACK: just for testing
+				SetGroupedPeople ();				
 				People = new ObservableCollection<Person> (search.Results);
 
 				var ev = SearchCompleted;
@@ -133,7 +126,7 @@ namespace EmployeeDirectory.ViewModels
 		/// <summary>
 		/// Groups people by the initial letter of their last name
 		/// </summary>
-		void SetGroupedPeople ()
+		private void SetGroupedPeople ()
 		{
 			Groups = PeopleGroup.CreateGroups (search.Results, groupByLastName);
 			OnPropertyChanged ("Groups");
@@ -153,6 +146,7 @@ namespace EmployeeDirectory.ViewModels
 	public class SearchCompletedEventArgs : EventArgs
 	{
 		public string SearchText { get; set; }
+
 		public SearchProperty SearchProperty { get; set; }
 	}
 }

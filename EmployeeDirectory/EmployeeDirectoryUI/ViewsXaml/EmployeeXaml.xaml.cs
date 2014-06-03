@@ -26,7 +26,7 @@ namespace EmployeeDirectoryUI.Xaml
 			base.OnBindingContextChanged ();
 			var personInfo = (PersonViewModel)BindingContext;
 			Title = personInfo.Person.Name;
-            PersonName.Text = personInfo.Person.Name;
+			PersonName.Text = personInfo.Person.Name;
 			favoriteLabel.Text = personInfo.IsFavorite ? "Added to favorites" : "Not in favorites";
 			DownloadImage ();
 		}
@@ -36,7 +36,7 @@ namespace EmployeeDirectoryUI.Xaml
 			var personInfo = (PersonViewModel)BindingContext;
 			personInfo.ToggleFavorite ();
 			favoriteLabel.Text = personInfo.IsFavorite ? "Added to favorites" : "Not in favorites";
-            Navigation.PopAsync();
+			Navigation.PopAsync ();
 		}
 
 		public void OnItemSelected (object sender, SelectedItemChangedEventArgs e)

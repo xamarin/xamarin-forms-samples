@@ -1,8 +1,9 @@
 ﻿using System;
-using Xamarin.Forms;
 using System.Linq;
+using System.Threading.Tasks;
 using EmployeeDirectory.Data;
 using EmployeeDirectory.ViewModels;
+using Xamarin.Forms;
 
 namespace EmployeeDirectoryUI.CSharp
 {
@@ -35,8 +36,13 @@ namespace EmployeeDirectoryUI.CSharp
 			Title = "Search";
 		}
 
-		private async void InitializeViewModel ()
+		private void InitializeViewModel ()
 		{
+			var task = Task.Run(async () => {
+				favoritesRepository = await XmlFavoritesRepository.OpenFile ("XamarinFavorites.xml");
+			});
+			task.Wait();
+
 			search = new Search (string.Empty);
 			viewModel = new SearchViewModel (App.Service, search);
 
@@ -46,7 +52,6 @@ namespace EmployeeDirectoryUI.CSharp
 			};
 
 			BindingContext = viewModel;
-            favoritesRepository = await XmlFavoritesRepository.OpenFile("XamarinFavorites.xml");
 		}
 
 		private void OnSearchCompleted (object sender, SearchCompletedEventArgs e)
