@@ -28,15 +28,17 @@ namespace TablesLists.View
 			public ItemTemplate ()
 			{
 				var titleLabel = new Label {
-					Font = Font.SystemFontOfSize (NamedSize.Small),
+                    Font = Device.OS == TargetPlatform.WinPhone ? Font.SystemFontOfSize(NamedSize.Medium) :
+                        Font.SystemFontOfSize (NamedSize.Small),
 					YAlign = TextAlignment.Center,
 					XAlign = TextAlignment.End,
 					TextColor = Color.Blue
 				};
 
 				var subtitleLabel = new Label {
-					Font = Font.SystemFontOfSize (NamedSize.Small),
-					YAlign = TextAlignment.Center,
+                    Font = Device.OS == TargetPlatform.WinPhone ? Font.SystemFontOfSize(NamedSize.Medium) :
+                        Font.SystemFontOfSize(NamedSize.Small),
+                    YAlign = TextAlignment.Center,
 					XAlign = TextAlignment.Start
 				};
 

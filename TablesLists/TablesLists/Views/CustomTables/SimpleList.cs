@@ -41,7 +41,8 @@ namespace TablesLists.View
 			{
 				var label = new Label () {
 					YAlign = TextAlignment.End,
-					Font = Font.SystemFontOfSize (NamedSize.Medium)
+					Font = Device.OS == TargetPlatform.WinPhone ? Font.SystemFontOfSize (NamedSize.Large) :
+                    Font.SystemFontOfSize (NamedSize.Medium)
 				};
 
 				label.SetBinding (Label.TextProperty, "Title");

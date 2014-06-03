@@ -41,8 +41,8 @@ namespace TablesLists.View
 
 				var image = new Image {
 					HorizontalOptions = LayoutOptions.Center,
-					HeightRequest = 30,
-					WidthRequest = 50
+					HeightRequest = Device.OS == TargetPlatform.WinPhone ? 60 : 30,
+					WidthRequest = Device.OS == TargetPlatform.WinPhone ? 100 : 50
 				};
 
 				titleLabel.SetBinding (Label.TextProperty, "Title");
@@ -50,7 +50,8 @@ namespace TablesLists.View
 				image.SetBinding (Image.SourceProperty, "ImageSource");
 
 				var gridView = new Grid {
-					Padding = new Thickness (10, 10, 60, 10)
+                    Padding = Device.OS == TargetPlatform.WinPhone ? new Thickness(10, 10, 230, 10) :
+                    new Thickness(10, 10, 60, 10)
 				};
 
 				gridView.Children.Add (image, 0, 0);

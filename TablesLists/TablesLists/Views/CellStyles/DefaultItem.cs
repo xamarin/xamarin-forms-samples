@@ -10,8 +10,23 @@ namespace TablesLists.View
 	{
 		public DefaultItem (string itemsSourceFile, string title) : base (itemsSourceFile, title)
 		{
+            if (Device.OS == TargetPlatform.WinPhone) {
+                ListView.IsGroupingEnabled = true;
+                ListView.GroupHeaderTemplate = new DataTemplate(typeof(HeaderTemplate));
+            }
+
 			ListView.ItemTemplate = new DataTemplate (typeof(ItemTemplate));
 		}
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            if (Device.OS == TargetPlatform.WinPhone) {
+                var menuItems = await ItemsRepository.OpenIsolatedStorage(ItemsSourceFile);
+                var viewModel = new PageViewModel(menuItems);
+                ListView.ItemsSource = viewModel.Groups;
+            }
+        }
 
 		public class ItemTemplate : ViewCell
 		{

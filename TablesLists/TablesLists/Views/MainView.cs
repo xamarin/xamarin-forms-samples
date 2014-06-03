@@ -58,7 +58,8 @@ namespace TablesLists.View
 			{
 				var label = new Label () {
 					YAlign = TextAlignment.End,
-					Font = Font.SystemFontOfSize (NamedSize.Medium)
+					Font = Device.OS == TargetPlatform.WinPhone ? Font.SystemFontOfSize (NamedSize.Large) : 
+                    Font.SystemFontOfSize (NamedSize.Medium)
 				};
 
 				label.SetBinding (Label.TextProperty, "Title");
@@ -68,7 +69,7 @@ namespace TablesLists.View
 					Children = { label }
 				};
 
-				if (Device.OS == TargetPlatform.Android) {
+				if (Device.OS != TargetPlatform.iOS) {
 					label.Font = Font.BoldSystemFontOfSize (NamedSize.Small);
 					stackLayout.Padding = new Thickness (15, 10, 0, 0);
 					Height = 25;
@@ -83,7 +84,9 @@ namespace TablesLists.View
 			public ItemTemplate ()
 			{
 				var label = new Label { 
-					YAlign = TextAlignment.Center
+					YAlign = TextAlignment.Center,
+				    Font = Device.OS == TargetPlatform.WinPhone ? Font.SystemFontOfSize (NamedSize.Large) : 
+                    Font.SystemFontOfSize (NamedSize.Medium)
 				};
 
 				label.SetBinding (Label.TextProperty, "Title");
@@ -95,7 +98,7 @@ namespace TablesLists.View
 
 				View = stackView;
 
-				if (Device.OS == TargetPlatform.Android) {
+				if (Device.OS != TargetPlatform.iOS) {
 					label.Font = Font.SystemFontOfSize (NamedSize.Large);
 					stackView.Padding = new Thickness (15, 10, 0, 0);
 					Height = 50;

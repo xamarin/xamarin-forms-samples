@@ -18,19 +18,21 @@ namespace TablesLists.View
 			public ItemTemplate ()
 			{
 				var titleLabel = new Label {
-					Font = Font.SystemFontOfSize (NamedSize.Medium),
+					Font = Device.OS == TargetPlatform.WinPhone ? Font.SystemFontOfSize (NamedSize.Large) :
+                        Font.SystemFontOfSize (NamedSize.Medium),
 					YAlign = TextAlignment.Center
 				};
 
-				var subtitleLabel = new Label { 
-					Font = Font.SystemFontOfSize (NamedSize.Micro),
+				var subtitleLabel = new Label {
+                    Font = Device.OS == TargetPlatform.WinPhone ? Font.SystemFontOfSize(NamedSize.Medium) :
+                        Font.SystemFontOfSize(NamedSize.Micro),
 					YAlign = TextAlignment.Center
 				};
 
 				var image = new Image {
 					HorizontalOptions = LayoutOptions.Center,
-					HeightRequest = 30,
-					WidthRequest = 50
+					HeightRequest = Device.OS == TargetPlatform.WinPhone ? 60 : 30,
+					WidthRequest = Device.OS == TargetPlatform.WinPhone ? 100 : 50
 				};
 						
 				titleLabel.SetBinding (Label.TextProperty, "Title");
