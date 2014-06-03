@@ -22,7 +22,7 @@
 			 <ListView.GroupHeaderTemplate>
 			    <DataTemplate>
 			      <ViewCell>
-			      	<StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
+			      	<StackLayout VerticalOptions="StartAndExpand" Orientation="Vertical">
 			      		<Label Text="{Binding Title}" YAlign="Center" />
 			      	</StackLayout>
 			      </ViewCell>
