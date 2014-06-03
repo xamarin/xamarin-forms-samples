@@ -82,9 +82,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LabelledSections\LabelledSections.csproj">
-      <Name>LabelledSections</Name>
+    <ProjectReference Include="..\LabelledSections\LabelledSectionsList.csproj">
       <Project>{5C7B1628-7ABC-4A86-9F1F-517AC1EE0E86}</Project>
+      <Name>LabelledSectionsList</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

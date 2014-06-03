@@ -20,7 +20,7 @@ namespace LabelledSections.Droid
 
             Xamarin.Forms.Forms.Init(this, bundle);
 
-            SetPage(App.GetMainPage());
+			SetPage(App.GetMainPage());
         }
     }
 }
