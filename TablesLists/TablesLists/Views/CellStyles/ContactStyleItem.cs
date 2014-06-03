@@ -28,7 +28,7 @@ namespace TablesLists.View
 			public ItemTemplate ()
 			{
 				var titleLabel = new Label {
-                    Font = Device.OS == TargetPlatform.WinPhone ? Font.SystemFontOfSize(NamedSize.Medium) :
+					Font = Device.OS == TargetPlatform.WinPhone ? Font.SystemFontOfSize (NamedSize.Medium) :
                         Font.SystemFontOfSize (NamedSize.Small),
 					YAlign = TextAlignment.Center,
 					XAlign = TextAlignment.End,
@@ -36,9 +36,9 @@ namespace TablesLists.View
 				};
 
 				var subtitleLabel = new Label {
-                    Font = Device.OS == TargetPlatform.WinPhone ? Font.SystemFontOfSize(NamedSize.Medium) :
-                        Font.SystemFontOfSize(NamedSize.Small),
-                    YAlign = TextAlignment.Center,
+					Font = Device.OS == TargetPlatform.WinPhone ? Font.SystemFontOfSize (NamedSize.Medium) :
+                        Font.SystemFontOfSize (NamedSize.Small),
+					YAlign = TextAlignment.Center,
 					XAlign = TextAlignment.Start
 				};
 

@@ -50,8 +50,8 @@ namespace TablesLists.View
 				image.SetBinding (Image.SourceProperty, "ImageSource");
 
 				var gridView = new Grid {
-                    Padding = Device.OS == TargetPlatform.WinPhone ? new Thickness(10, 10, 230, 10) :
-                    new Thickness(10, 10, 60, 10)
+					Padding = Device.OS == TargetPlatform.WinPhone ? new Thickness (10, 10, 230, 10) :
+                    new Thickness (10, 10, 60, 10)
 				};
 
 				gridView.Children.Add (image, 0, 0);

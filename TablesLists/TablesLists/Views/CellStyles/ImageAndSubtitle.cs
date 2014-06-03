@@ -24,8 +24,8 @@ namespace TablesLists.View
 				};
 
 				var subtitleLabel = new Label {
-                    Font = Device.OS == TargetPlatform.WinPhone ? Font.SystemFontOfSize(NamedSize.Medium) :
-                        Font.SystemFontOfSize(NamedSize.Micro),
+					Font = Device.OS == TargetPlatform.WinPhone ? Font.SystemFontOfSize (NamedSize.Medium) :
+                        Font.SystemFontOfSize (NamedSize.Micro),
 					YAlign = TextAlignment.Center
 				};
 
