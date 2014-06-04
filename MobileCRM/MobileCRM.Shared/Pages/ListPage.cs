@@ -1,17 +1,18 @@
 ﻿using MobileCRM.Shared.ViewModels;
 using Xamarin.Forms;
 using MobileCRM.Shared.CustomViews;
+using MobileCRM.Models;
 
 namespace MobileCRM.Shared.Pages
 {
-    public class ListPageBase<T> : ContentPage where T: class, new()
+    public class ListPageBase<T> : ContentPage where T: class, IContact, new()
     {
         public ListPageBase(BaseViewModel<T> viewModel)
         {
             BindingContext = viewModel;
         }
     }
-    public class ListPage<T> : ListPageBase<T> where T: class, new()
+    public class ListPage<T> : ListPageBase<T> where T: class, IContact, new()
     {
         public DataTemplate Cell { get; private set; }
 

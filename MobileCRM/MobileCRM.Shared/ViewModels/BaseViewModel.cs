@@ -11,7 +11,7 @@ using MobileCRM.Models;
 namespace MobileCRM.Shared.ViewModels
 {
     public class BaseViewModel<T> : BaseViewModel
-        where T: class, new()
+        where T: class, IContact, new()
     {
         static readonly MethodInfo GetDependency;
 

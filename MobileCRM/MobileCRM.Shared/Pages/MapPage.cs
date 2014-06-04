@@ -11,7 +11,7 @@ using MobileCRM.Models;
 
 namespace MobileCRM.Shared.Pages
 {
-    public class MapPage<T> : ContentPage where T: class, new()
+    public class MapPage<T> : ContentPage where T: class, IContact, new()
     {
         static readonly Position xamarin = new Position(37.797536, -122.401933);
 
@@ -103,6 +103,7 @@ namespace MobileCRM.Shared.Pages
                 map.Pins.Add(p);
             }
 
+            // TODO: Uncomment once Xamarin.Forms supports this, hopefully w/ version 1.1.
 //            map.PinSelected += (sender, args)=>
 //            {
 //                var pin = args.SelectedItem as Pin;

@@ -5,7 +5,7 @@ using MobileCRM.Models;
 
 namespace MobileCRM.Shared.ViewModels
 {
-    public class MapViewModel<T> : BaseViewModel<T> where T: class, new()
+    public class MapViewModel<T> : BaseViewModel<T> where T: class, IContact, new()
     {
         public static readonly Position NullPosition = new Position(0, 0);
          

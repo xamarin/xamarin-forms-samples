@@ -68,7 +68,8 @@ namespace MobileCRM.Shared.Pages
             if (option.Title == "Opportunities") {
                 var page = new MasterPage<Opportunity>(option);
                 var cell = page.List.Cell;
-                cell.SetBinding(TextCell.DetailProperty, "EstimatedAmount");
+                cell.SetBinding(TextCell.TextProperty, "Company");
+                cell.SetBinding(TextCell.DetailProperty, "EstimatedAmountString");
                 return page;
             }
             throw new NotImplementedException("Unknown menu option: " + option.Title);

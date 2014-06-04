@@ -28,5 +28,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Pages\ListPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\MasterPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\AddressToPositionConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\AddressToStringConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\OwnerToStringConverter.cs" />
   </ItemGroup>
 </Project>

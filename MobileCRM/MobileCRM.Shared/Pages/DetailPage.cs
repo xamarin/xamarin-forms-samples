@@ -7,10 +7,11 @@ using System.Reflection;
 using System.Linq;
 using MobileCRM.Shared.CustomViews;
 using System.Collections;
+using Xamarin.Forms.Maps;
 
 namespace MobileCRM.Shared.Pages
 {
-    public class DetailPage<T> : ContentPage where T: class, new()
+    public class DetailPage<T> : ContentPage where T: class, IContact, new()
     {
         static string ConvertToString (object obj)
         {
@@ -23,8 +24,14 @@ namespace MobileCRM.Shared.Pages
             return Convert.ToString(obj);
         }
 
+        IValueConverter AddressConverter;
+
+        IValueConverter AddressToStringConverter;
+
         public DetailPage(T bindingContext)
         {
+            AddressConverter = new AddressToPositionConverter();
+            AddressToStringConverter = new AddressToStringConverter<Address,String>();
             BindingContext = bindingContext;
             // Use reflection to turn our object
             // into a property bag.
@@ -38,23 +45,75 @@ namespace MobileCRM.Shared.Pages
                     if (value is IEnumerable)
                         return ((IEnumerable)value).Cast<object>().Any ();
                     return true;
-                })
-                .Select(pi => new KeyValuePair<string, object>(pi.Name, ConvertToString(pi.GetValue(BindingContext))))
-                .ToList();
+                });                
+
             detailList.ItemsSource = items;
-            // Then bind our template to the key value pairs.
-#if __ANDROID__
-            var cell = new DataTemplate(typeof(ListTextCell));
-#else
-            var cell = new DataTemplate(typeof(TextCell));
-#endif
-            detailList.ItemTemplate = cell;
 
-            detailList.ItemTemplate.SetBinding(TextCell.TextProperty, "Value");
-            detailList.ItemTemplate.SetBinding(TextCell.DetailProperty, "Key");
+            // Create a TableView to properly visualize our record.
+            var detailTable = CreateTableForProperties(items);
 
-            Content = detailList;
+            Content = detailTable;
             Title = BindingContext.ToString();
+        }
+
+        TableView CreateTableForProperties (IEnumerable<PropertyInfo> items)
+        {
+            var table = new TableView {
+                Intent = TableIntent.Settings,
+                HasUnevenRows = true,
+                Root = new TableRoot(BindingContext.ToString()),
+            };
+
+            table.Root.Add(new TableSection {
+                items.Select(ToTableCell)
+            });
+
+            return table;
+        }
+
+        Cell ToTableCell(PropertyInfo pi)
+        {
+            Cell cell = null;
+
+            if (pi.PropertyType == typeof(bool)) {
+                cell = new SwitchCell();
+                cell.SetValue(SwitchCell.TextProperty, pi.Name);
+                cell.SetBinding(SwitchCell.OnProperty, pi.Name);
+            } else if (pi.PropertyType == typeof(int)) {
+                cell = new EntryCell();
+                cell.SetValue(EntryCell.LabelProperty, pi.Name);
+                cell.SetBinding(EntryCell.TextProperty, new Binding(pi.Name, converter: new OwnerToStringConverter()));
+                cell.BindingContext = BindingContext;
+            } else if (pi.PropertyType == typeof(Address)) {
+                var viewCell = new ViewCell 
+                {
+                    Height = 150D
+                };
+                var pin = new Pin { Label = BindingContext.ToString() };
+                pin.SetBinding(Pin.AddressProperty, new Binding("Address", converter: AddressToStringConverter));
+                pin.SetBinding(Pin.PositionProperty, new Binding("Address", converter: AddressConverter));
+                pin.BindingContext = BindingContext;
+                var map = new Map(MapSpan.FromCenterAndRadius(pin.Position, Distance.FromMiles(0.1D)))
+                {
+                    IsShowingUser = false,
+                    InputTransparent = true,
+                    Pins = { pin }
+                };
+                viewCell.View = map;
+                cell = viewCell;
+
+            } else if (pi.PropertyType == typeof(int)) {
+                cell = new TextCell();
+                cell.SetBinding(TextCell.TextProperty, pi.Name);
+                cell.SetBinding(TextCell.DetailProperty, Convert.ToString(pi.GetValue(BindingContext)));
+                cell.BindingContext = BindingContext;
+            } else {
+                cell = new EntryCell();
+                cell.SetValue(EntryCell.LabelProperty, pi.Name);
+                cell.SetBinding(EntryCell.TextProperty, pi.Name);
+            }
+
+            return cell;
         }
     }
 }

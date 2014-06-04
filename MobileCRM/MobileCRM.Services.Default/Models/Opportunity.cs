@@ -10,7 +10,7 @@ namespace MobileCRM.Models
 
         public bool IsQualified { get; set; }
         public double EstimatedAmount { get; set; }
-
+        public string EstimatedAmountString { get { return EstimatedAmount.ToString("C"); } }
         public override string ToString ()
         {
             return string.Format ("{0}{1}", Company, Math.Abs (EstimatedAmount) < Double.Epsilon 

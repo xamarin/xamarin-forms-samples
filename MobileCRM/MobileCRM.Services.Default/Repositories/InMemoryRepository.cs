@@ -13,7 +13,7 @@ using MobileCRM.Models;
 
 namespace MobileCRM.Services
 {
-    public class InMemoryRepository<T> : IRepository<T> where T: class, new()
+    public class InMemoryRepository<T> : IRepository<T> where T: class, IContact, new()
     {
         static readonly protected IList<T> GlobalItems = new List<T>();
 
