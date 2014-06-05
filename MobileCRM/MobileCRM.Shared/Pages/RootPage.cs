@@ -5,6 +5,7 @@ using MobileCRM.Shared.Pages;
 using MobileCRM.Models;
 using System;
 using System.Threading.Tasks;
+using MobileCRM.Services;
 
 
 namespace MobileCRM.Shared.Pages
@@ -69,7 +70,7 @@ namespace MobileCRM.Shared.Pages
                 var page = new MasterPage<Opportunity>(option);
                 var cell = page.List.Cell;
                 cell.SetBinding(TextCell.TextProperty, "Company");
-                cell.SetBinding(TextCell.DetailProperty, "EstimatedAmountString");
+                cell.SetBinding(TextCell.DetailProperty, new Binding("EstimatedAmount", stringFormat: "{0:C}"));
                 return page;
             }
             throw new NotImplementedException("Unknown menu option: " + option.Title);

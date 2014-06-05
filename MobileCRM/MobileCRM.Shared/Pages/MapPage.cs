@@ -13,14 +13,12 @@ namespace MobileCRM.Shared.Pages
 {
     public class MapPage<T> : ContentPage where T: class, IContact, new()
     {
-        static readonly Position xamarin = new Position(37.797536, -122.401933);
-
         private MapViewModel<T> ViewModel
         {
             get { return BindingContext as MapViewModel<T>; }
         }
-
-        IDictionary<Pin,T> PinMap;
+        // TODO: Uncomment once Xamarin.Forms supports this, hopefully w/ version 1.1.
+        //IDictionary<Pin,T> PinMap;
 
         public MapPage(MapViewModel<T> viewModel)
         {
@@ -45,7 +43,7 @@ namespace MobileCRM.Shared.Pages
                 if (!positions.Any())
                     return;
 
-                var position = positions.Skip(1).First();
+                var position = positions.First();
                 map.MoveToRegion(MapSpan.FromCenterAndRadius(position,
                     Distance.FromMiles(0.1)));
                 map.Pins.Add(new Pin
@@ -93,8 +91,10 @@ namespace MobileCRM.Shared.Pages
 
             var pins = ViewModel.LoadPins();
 
-            var dict = pins.Zip(ViewModel.Models, (p, m)=>new KeyValuePair<Pin,T>(p, m)).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-            PinMap = dict;
+            // TODO: Uncomment once Xamarin.Forms supports this, hopefully w/ version 1.1.
+            //var dict = pins.Zip(ViewModel.Models, (p, m)=>new KeyValuePair<Pin,T>(p, m)).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+            //PinMap = dict;
+
             // TODO: Compute a proper bounding box.
             var map = new Map(MapSpan.FromCenterAndRadius(pins[0].Position, Distance.FromMiles(0.3)));
 

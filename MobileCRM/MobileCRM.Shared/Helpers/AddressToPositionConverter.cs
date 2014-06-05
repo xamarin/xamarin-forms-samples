@@ -9,6 +9,7 @@ using MobileCRM.Shared.CustomViews;
 using System.Collections;
 using Xamarin.Forms.Maps;
 using System.Globalization;
+using System.Diagnostics;
 
 namespace MobileCRM.Shared.Pages
 {
@@ -17,6 +18,7 @@ namespace MobileCRM.Shared.Pages
         #region IValueConverter implementation
         public object Convert (object value, Type targetType, object parameter, CultureInfo culture)
         {
+            Trace.WriteLine(value, "AddressToPositionConverter.Convert");
             var address = value as Address;
             if (address == null) return null;
 
@@ -25,6 +27,7 @@ namespace MobileCRM.Shared.Pages
         }
         public object ConvertBack (object value, Type targetType, object parameter, CultureInfo culture)
         {
+            Trace.WriteLine(value, "AddressToPositionConverter.ConvertBack");
             throw new NotImplementedException ();
         }
         #endregion

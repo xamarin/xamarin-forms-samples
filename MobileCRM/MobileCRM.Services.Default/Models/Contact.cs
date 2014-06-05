@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using MobileCRM.Services;
 
 
 namespace MobileCRM.Models
@@ -18,6 +19,7 @@ namespace MobileCRM.Models
 
         #region IContact implementation
 
+        [Display("First Name")]
         public string FirstName {
             get {
                 return InnerContact.FirstName;
@@ -27,6 +29,7 @@ namespace MobileCRM.Models
             }
         }
 
+        [Display("Last Name")]
         public string LastName {
             get {
                 return InnerContact.LastName ;
@@ -117,6 +120,7 @@ namespace MobileCRM.Models
             }
         }
 
+        [Display("Billing Address")]
         public Address BillingAddress {
             get {
                 return InnerContact.BillingAddress ;
@@ -126,6 +130,7 @@ namespace MobileCRM.Models
             }
         }
 
+        [Display("Shipping Address")]
         public Address ShippingAddress {
             get {
                 return InnerContact.ShippingAddress ;
@@ -171,7 +176,7 @@ namespace MobileCRM.Models
             }
         }
 
-        public int Owner {
+        public IUser Owner {
             get {
                 return InnerContact.Owner ;
             }
@@ -276,7 +281,8 @@ namespace MobileCRM.Models
             get;
             private set;
         }
-        public int Owner {
+
+        public IUser Owner {
             get;
             set;
         }
