@@ -31,7 +31,7 @@ namespace EmployeeDirectoryUI.CSharp
 
 			listView.ItemTapped += OnItemSelected;
 			Content = listView;
-			Title = "Employee Directory";
+			Title = "Favorites";
 		}
 
 		protected async override void OnAppearing ()
