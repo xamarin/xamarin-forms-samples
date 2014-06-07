@@ -1,13 +1,13 @@
-﻿using MobileCRM.Shared.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
-using Xamarin.Forms.Maps;
-using System.Linq;
 using System.Diagnostics;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using MobileCRM.Models;
+using MobileCRM.Shared.ViewModels;
+using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 
 namespace MobileCRM.Shared.Pages
 {
@@ -96,7 +96,10 @@ namespace MobileCRM.Shared.Pages
             //PinMap = dict;
 
             // TODO: Compute a proper bounding box.
-            var map = new Map(MapSpan.FromCenterAndRadius(pins[0].Position, Distance.FromMiles(0.3)));
+            var map = new Map(MapSpan.FromCenterAndRadius(pins[0].Position, Distance.FromMiles(0.3)))
+            {
+                IsShowingUser = true
+            };
 
             foreach (var p in pins)
             {

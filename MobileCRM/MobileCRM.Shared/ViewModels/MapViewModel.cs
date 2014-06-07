@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Xamarin.Forms.Maps;
 using MobileCRM.Models;
+using Xamarin.Forms.Maps;
 
 namespace MobileCRM.Shared.ViewModels
 {
-    public class MapViewModel<T> : BaseViewModel<T> where T: class, IContact, new()
+    public class MapViewModel<T> : MasterViewModel<T> where T: class, IContact, new()
     {
         public static readonly Position NullPosition = new Position(0, 0);
          

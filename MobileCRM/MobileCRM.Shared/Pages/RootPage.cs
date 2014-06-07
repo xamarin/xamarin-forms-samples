@@ -1,10 +1,9 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
 using Xamarin.Forms;
-
 using MobileCRM.Shared.Pages;
 using MobileCRM.Models;
-using System;
-using System.Threading.Tasks;
 using MobileCRM.Services;
 
 
@@ -44,7 +43,7 @@ namespace MobileCRM.Shared.Pages
             previousItem = option;
 
             var displayPage = PageForOption(option);
-                     
+
             Detail = new NavigationPage(displayPage)
             {
               Tint = Helpers.Color.Blue.ToFormsColor(),
@@ -56,6 +55,7 @@ namespace MobileCRM.Shared.Pages
 
         Page PageForOption (OptionItem option)
         {
+            // TODO: Refactor this to the Builder pattern (see ICellFactory).
             if (option.Title == "Contacts")
                 return new MasterPage<Contact>(option);
             if (option.Title == "Leads")

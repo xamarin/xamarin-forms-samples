@@ -12,6 +12,7 @@ namespace MobileCRM.Services
         public UserRepository ()
         {
             Add(new User(new Contact { FirstName = "Javier", LastName = "Vasquez" }) { Username = "jvasquez" });
+            Add(new User(new Contact { FirstName = "Davon", LastName = "Smith" }) { Username = "dsmith" });
         }
     }
 }

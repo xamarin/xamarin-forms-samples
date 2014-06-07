@@ -4,7 +4,7 @@ using System.Globalization;
 using MobileCRM.Services;
 using System.Diagnostics;
 
-namespace MobileCRM
+namespace MobileCRM.Helpers
 {
     public class ConvertableConverter : IValueConverter
     {

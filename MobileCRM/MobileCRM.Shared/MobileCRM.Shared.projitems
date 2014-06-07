@@ -15,15 +15,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Pages\MapPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\MenuPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\RootPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MapViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ListTextCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\DarkTextCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\StripedListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\StripedViewCell.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ContactsViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LeadsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\OptionItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\ListPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailPage.cs" />
@@ -31,6 +28,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\AddressToPositionConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\AddressToStringConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ConvertableConverter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Helpers\UserToStringConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailEditPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ICellFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\EditCellFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\EditCellBuilderMap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ViewCellBuilderMap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ViewCellFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\UserConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MasterViewModel.cs" />
   </ItemGroup>
 </Project>

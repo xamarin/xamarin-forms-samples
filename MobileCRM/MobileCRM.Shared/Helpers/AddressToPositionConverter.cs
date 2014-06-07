@@ -11,7 +11,7 @@ using Xamarin.Forms.Maps;
 using System.Globalization;
 using System.Diagnostics;
 
-namespace MobileCRM.Shared.Pages
+namespace MobileCRM.Helpers
 {
     public class AddressToPositionConverter : IValueConverter
 	{

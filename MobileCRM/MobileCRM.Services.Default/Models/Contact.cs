@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using MobileCRM.Services;
+using System.ComponentModel;
 
 
 namespace MobileCRM.Models
 {
-    public class Contact : IContact
+    public class Contact : IContact, INotifyPropertyChanged
     {
         readonly IContact innerContact;
 
@@ -16,6 +17,21 @@ namespace MobileCRM.Models
         }
 
         protected IContact InnerContact {  get { return innerContact; } }
+
+
+        #region INotifyPropertyChanged implementation
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+
+        protected void OnPropertyChanged (string propertyName)
+        {
+            var evt = PropertyChanged;
+            if (evt == null) return;
+            evt(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
 
         #region IContact implementation
 
@@ -182,6 +198,7 @@ namespace MobileCRM.Models
             }
             set {
                 InnerContact.Owner = value ;
+                OnPropertyChanged("Owner");
             }
         }
 
@@ -199,13 +216,27 @@ namespace MobileCRM.Models
         }
     }
 
-    public class DefaultContact : IContact
+    public class DefaultContact : IContact, INotifyPropertyChanged
     {
         public DefaultContact()
         {
             Tags = new List<string>();
             Address = new Address();
         }
+
+        #region INotifyPropertyChanged implementation
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+
+        protected void OnPropertyChanged (string propertyName)
+        {
+            var evt = PropertyChanged;
+            if (evt == null) return;
+            evt(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
 
         #region IContact implementation
         public string FirstName {
@@ -282,9 +313,15 @@ namespace MobileCRM.Models
             private set;
         }
 
+        IUser owner;
         public IUser Owner {
-            get;
-            set;
+            get {
+                return owner;
+            }
+            set {
+                owner = value;
+                OnPropertyChanged("Owner");
+            }
         }
         #endregion
     }

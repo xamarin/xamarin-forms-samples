@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using MobileCRM.Services;
 
-namespace MobileCRM.Shared.Pages
+namespace MobileCRM.Helpers
 {
     public class AddressToStringConverter : IValueConverter
 	{

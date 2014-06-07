@@ -3,25 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using MobileCRM.Models;
-using MobileCRM.Services;
-using Xamarin.Forms;
-using Xamarin.Forms.Maps;
 using MobileCRM.Helpers;
+using MobileCRM.Models;
+using Xamarin.Forms;
+using MobileCRM.Shared.ViewModels;
+using Xamarin.Forms.Maps;
 
 namespace MobileCRM.Shared.Pages
 {
-    public class DetailPage<T> : ContentPage where T: class, IContact, new()
+    public class DetailEditPage<T> : ContentPage where T: class, IContact, new()
     {
-        public DetailPage(T bindingContext)
+        public DetailEditPage(MasterViewModel<T> viewModel)
         {
-            BindingContext = bindingContext;
+            BindingContext = viewModel;
             // Use reflection to turn our object
             // into a property bag.
-            var items = BindingContext.GetType()
+            var items = typeof(T)
                 .GetProperties(BindingFlags.Instance | BindingFlags.Public)
                 .Where(pi =>{
-                    var value = pi.GetValue(BindingContext);
+                    var value = pi.GetValue(viewModel.SelectedModel);
                     if (value == null) return false;
                     if (value is string || value is Address) return !string.IsNullOrWhiteSpace(value.ToString());
                     if (value is IEnumerable)
@@ -30,19 +30,18 @@ namespace MobileCRM.Shared.Pages
                 });                
 
             // Create a TableView to properly visualize our record.
-            var detailTable = CreateTableForProperties(items);
-
+            var detailTable = CreateTableForProperties(items, viewModel.SelectedModel);
+            ToolbarItems.Add(new ToolbarItem("Done", null, async ()=>{
+                var confirmed = await DisplayAlert("Unsaved Changes", "Save changes?", "Save", "Discard");
+                if (confirmed) {
+                    // TODO: Tell the view model, aka BindingContext, to save.
+                    viewModel.SaveSelectedModel.Execute(null);
+                    await Navigation.PopAsync();
+                } else {
+                    Console.WriteLine("cancel changes!");
+                }
+            }));
             Content = detailTable;
-            Title = BindingContext.ToString();
-        }
-
-        protected async override void OnDisappearing ()
-        {
-            var confirmed = await DisplayAlert("Unsaved Changes", "Save changes?", "Save", "Discard");
-            if (confirmed)
-                base.OnDisappearing ();
-            else
-                Console.WriteLine("cancel changes!");
         }
 
         protected override void OnPropertyChanging (string propertyName = null)
@@ -64,25 +63,25 @@ namespace MobileCRM.Shared.Pages
 
         }
 
-        TableView CreateTableForProperties (IEnumerable<PropertyInfo> items)
+        TableView CreateTableForProperties (IEnumerable<PropertyInfo> items, IContact context)
         {
             var table = new TableView {
                 HasUnevenRows = true,
-                Root = new TableRoot(BindingContext.ToString()),
+                Root = new TableRoot(),
                 VerticalOptions = LayoutOptions.FillAndExpand,
             };
 
             table.Root.Add(new TableSection {
-                items.Select(ToTableCell)
+                items.Select((pi => ToTableCell(pi, context)))
             });
 
             return table;
         }
 
-        Cell ToTableCell(PropertyInfo pi)
+        Cell ToTableCell(PropertyInfo pi, IContact context)
         {
-            var factory = DependencyService.Get<ViewCellFactory>();
-            var cell = factory.CellForProperty(pi, (IContact)BindingContext, this);
+            var factory = DependencyService.Get<EditCellFactory>();
+            var cell = factory.CellForProperty(pi, context, this);
 
             cell.BindingContextChanged  += (sender, e) =>
                 Console.WriteLine("cell.BindingContextChanged fired");
