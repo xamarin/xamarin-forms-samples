@@ -46,7 +46,7 @@ namespace EmployeeDirectoryUI.CSharp
 			if (favoritesRepository.GetAll ().Count () == 0)
 				favoritesRepository = await XmlFavoritesRepository.OpenFile ("XamarinFavorites.xml");
 
-			viewModel = new FavoritesViewModel (favoritesRepository, false);
+			viewModel = new FavoritesViewModel (favoritesRepository, true);
 			listView.ItemsSource = viewModel.Groups;
 			SetToolbarItems (true);
 		}
