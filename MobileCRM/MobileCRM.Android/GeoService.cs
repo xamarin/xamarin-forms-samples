@@ -8,7 +8,7 @@ namespace MobileCRM.Services
 
         public System.Collections.Generic.IEnumerable<MobileCRM.Models.Address> ValidateAddress (string address)
         {
-            throw new NotImplementedException ();
+          return null;
         }
 
         #endregion

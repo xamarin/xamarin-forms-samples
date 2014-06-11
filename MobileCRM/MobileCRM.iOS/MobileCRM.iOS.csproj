@@ -9,6 +9,7 @@
     <RootNamespace>MobileCRM.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <NuGetPackageImportStamp>41c3583f</NuGetPackageImportStamp>
+    <AssemblyName>MobileCRM</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>

@@ -19,13 +19,14 @@ using Android.App;
 
 namespace MobileCRMAndroid
 {
-    public class DarkTextCellRenderer : TextCellRenderer
+    public class DarkTextCellRenderer : ImageCellRenderer
     {
         protected override View GetCellCore (Cell item, View convertView, ViewGroup parent, Context context)
         {
             var cell = (LinearLayout)base.GetCellCore (item, convertView, parent, context);
-            cell.SetPadding(20, 10, 0, 10);
+            cell.SetPadding(20, 30, 0, 30);
             cell.DividerPadding = 50;
+        
 
             var div = new ShapeDrawable();
             div.SetIntrinsicHeight(1);
@@ -37,13 +38,22 @@ namespace MobileCRMAndroid
             }
 
 
-            var label = (TextView)((LinearLayout)cell.GetChildAt(1)).GetChildAt(0);
-            label.SetTextColor(Color.FromHex("000000").ToAndroid());
-            label.TextSize = Font.SystemFontOfSize(NamedSize.Large).ToScaledPixel();
+            var image = (ImageView)cell.GetChildAt(0);
+            image.SetScaleType(ImageView.ScaleType.FitCenter);
 
-            var secondaryLabel = (TextView)((LinearLayout)cell.GetChildAt(1)).GetChildAt(1);
-            secondaryLabel.SetTextColor(Color.FromHex("738182").ToAndroid());
-            secondaryLabel.TextSize = Font.SystemFontOfSize(NamedSize.Medium).ToScaledPixel();
+            image.LayoutParameters.Width = 60;
+            image.LayoutParameters.Height = 60;
+            
+
+            var linear = (LinearLayout)cell.GetChildAt(1);
+            linear.SetGravity(Android.Views.GravityFlags.CenterVertical);
+
+            var label = (TextView)linear.GetChildAt(0);
+            label.SetTextColor(Color.White.ToAndroid());
+            label.TextSize = Font.SystemFontOfSize(NamedSize.Large).ToScaledPixel();
+            label.Gravity = (Android.Views.GravityFlags.CenterVertical);
+            var secondaryLabel = (TextView)linear.GetChildAt(1);
+            secondaryLabel.Visibility = Android.Views.ViewStates.Gone;
 
 
             return cell;

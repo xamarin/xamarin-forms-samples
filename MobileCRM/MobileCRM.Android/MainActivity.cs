@@ -6,10 +6,11 @@ using Xamarin;
 using MobileCRM.Shared.Pages;
 using MobileCRM;
 using Android.Graphics.Drawables;
+using Android.Content.PM;
 
 namespace MobileCRMAndroid
 {
-    [Activity (Label = "MobileCRM", MainLauncher = true)]
+    [Activity (Label = "MobileCRM", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : Xamarin.Forms.Platform.Android.AndroidActivity
     {
         protected override void OnCreate (Bundle bundle)
