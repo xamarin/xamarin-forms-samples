@@ -1,12 +1,15 @@
 using System;
+using MobileCRM.Services;
 
 namespace MobileCRM.Models
 {
     public class Address : ILocatable
 	{
+        public string Description { get; set; }
         public string Street { get; set; }
         public string Unit { get; set; }
         public string City { get; set; }
+        [Display("Postal Code")]
         public string PostalCode { get; set; }
         public string State { get; set; }
         public string Country { get; set; }

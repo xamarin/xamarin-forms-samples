@@ -7,9 +7,6 @@ using MobileCRM.Services;
 using MobileCRM.Models;
 
 [assembly:Dependency(typeof(LeadRepository))]
-[assembly:Dependency(typeof(ContactRepository))]
-[assembly:Dependency(typeof(AccountRepository))]
-[assembly:Dependency(typeof(OpportunityRepository))]
 
 namespace MobileCRM.Services
 {
@@ -18,7 +15,7 @@ namespace MobileCRM.Services
     {
         public LeadRepository()
         {
-            Add(new Lead { FirstName = "Roy", LastName = "Ginsberg", Industry = "Retail", Address = new Address { Street = "700 Pacific Ave", City = "San Francisco", State = "CA", PostalCode = "94111", Latitude = 37.7970564, Longitude = -122.4034628 } });
+            Add(new Lead { FirstName = "Roy", LastName = "Ginsberg", Industry = "Retail", Address = new Address { Street = "394 Pacific Ave", City = "San Francisco", State = "CA", PostalCode = "94111", Latitude = 37.7970564, Longitude = -122.4034628 } });
         }
     }
     

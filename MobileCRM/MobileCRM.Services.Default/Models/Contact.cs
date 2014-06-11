@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
+using MobileCRM.Services;
+using System.ComponentModel;
 
 
 namespace MobileCRM.Models
 {
-    public class Contact : IContact
+    public class Contact : IContact, INotifyPropertyChanged
     {
         readonly IContact innerContact;
 
@@ -16,8 +18,24 @@ namespace MobileCRM.Models
 
         protected IContact InnerContact {  get { return innerContact; } }
 
+
+        #region INotifyPropertyChanged implementation
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+
+        protected void OnPropertyChanged (string propertyName)
+        {
+            var evt = PropertyChanged;
+            if (evt == null) return;
+            evt(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
+
         #region IContact implementation
 
+        [Display("First Name")]
         public string FirstName {
             get {
                 return InnerContact.FirstName;
@@ -27,6 +45,7 @@ namespace MobileCRM.Models
             }
         }
 
+        [Display("Last Name")]
         public string LastName {
             get {
                 return InnerContact.LastName ;
@@ -117,6 +136,7 @@ namespace MobileCRM.Models
             }
         }
 
+        [Display("Billing Address")]
         public Address BillingAddress {
             get {
                 return InnerContact.BillingAddress ;
@@ -126,6 +146,7 @@ namespace MobileCRM.Models
             }
         }
 
+        [Display("Shipping Address")]
         public Address ShippingAddress {
             get {
                 return InnerContact.ShippingAddress ;
@@ -171,12 +192,13 @@ namespace MobileCRM.Models
             }
         }
 
-        public int Owner {
+        public IUser Owner {
             get {
                 return InnerContact.Owner ;
             }
             set {
                 InnerContact.Owner = value ;
+                OnPropertyChanged("Owner");
             }
         }
 
@@ -194,13 +216,27 @@ namespace MobileCRM.Models
         }
     }
 
-    public class DefaultContact : IContact
+    public class DefaultContact : IContact, INotifyPropertyChanged
     {
         public DefaultContact()
         {
             Tags = new List<string>();
             Address = new Address();
         }
+
+        #region INotifyPropertyChanged implementation
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+
+        protected void OnPropertyChanged (string propertyName)
+        {
+            var evt = PropertyChanged;
+            if (evt == null) return;
+            evt(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
 
         #region IContact implementation
         public string FirstName {
@@ -276,9 +312,16 @@ namespace MobileCRM.Models
             get;
             private set;
         }
-        public int Owner {
-            get;
-            set;
+
+        IUser owner;
+        public IUser Owner {
+            get {
+                return owner;
+            }
+            set {
+                owner = value;
+                OnPropertyChanged("Owner");
+            }
         }
         #endregion
     }

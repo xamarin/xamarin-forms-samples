@@ -1,27 +1,30 @@
-﻿using MobileCRM.Shared.ViewModels;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
+using MobileCRM.Models;
 using MobileCRM.Shared.CustomViews;
+using MobileCRM.Shared.ViewModels;
+using MobileCRM.Helpers;
 
 namespace MobileCRM.Shared.Pages
 {
-    public class ListPageBase<T> : ContentPage where T: class, new()
+    public class ListPageBase<T> : ContentPage where T: class, IContact, new()
     {
-        public ListPageBase(BaseViewModel<T> viewModel)
+        public ListPageBase(MasterViewModel<T> viewModel)
         {
             BindingContext = viewModel;
         }
     }
-    public class ListPage<T> : ListPageBase<T> where T: class, new()
+    public class ListPage<T> : ListPageBase<T> where T: class, IContact, new()
     {
         public DataTemplate Cell { get; private set; }
 
-        private BaseViewModel<T> ViewModel
+        private MasterViewModel<T> ViewModel
         {
-            get { return BindingContext as BaseViewModel<T>; }
+            get { return BindingContext as MasterViewModel<T>; }
         }
 
-        public ListPage(BaseViewModel<T> viewModel) : base(viewModel)
+        public ListPage(MasterViewModel<T> viewModel) : base(viewModel)
         {
+            BindingContext = viewModel;
             //Set value will directly set the value to "List"
             this.SetValue(Page.TitleProperty, "List");
             //This will bind to our BindingContext.Icon
@@ -39,13 +42,14 @@ namespace MobileCRM.Shared.Pages
             Cell.SetBinding(TextCell.DetailProperty, "Industry");
 
             list.ItemTemplate = Cell;
-
-            list.ItemSelected += (sender, e) =>
+            list.ItemSelected += async(sender, e) =>
             {
                 if (e.SelectedItem == null)
                   return;
-                var details = new DetailPage<T>(e.SelectedItem as T);
-                Navigation.PushAsync(details);
+                viewModel.SelectedModel = e.SelectedItem as T;
+                var details = new DetailEditPage<T>(viewModel);
+                details.SetValue(Page.TitleProperty, e.SelectedItem.ToString());
+                await Navigation.PushAsync(details);
                 //deselect item when pushing
                 list.SelectedItem = null;
             };

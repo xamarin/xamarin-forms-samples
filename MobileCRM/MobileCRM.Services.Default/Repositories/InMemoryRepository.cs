@@ -6,14 +6,9 @@ using Xamarin.Forms;
 using MobileCRM.Services;
 using MobileCRM.Models;
 
-[assembly:Dependency(typeof(LeadRepository))]
-[assembly:Dependency(typeof(ContactRepository))]
-[assembly:Dependency(typeof(AccountRepository))]
-[assembly:Dependency(typeof(OpportunityRepository))]
-
 namespace MobileCRM.Services
 {
-    public class InMemoryRepository<T> : IRepository<T> where T: class, new()
+    public class InMemoryRepository<T> : IRepository<T> where T: class, IContact, new()
     {
         static readonly protected IList<T> GlobalItems = new List<T>();
 

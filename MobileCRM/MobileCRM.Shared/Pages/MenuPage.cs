@@ -48,7 +48,7 @@ namespace MobileCRM.Shared.Pages
             Menu = new ListView {
                 ItemsSource = OptionItems,
                 VerticalOptions = LayoutOptions.FillAndExpand,
-                BackgroundColor = Color.Transparent
+                BackgroundColor = Color.Transparent,
             };
 
             var cell = new DataTemplate(typeof(DarkTextCell));

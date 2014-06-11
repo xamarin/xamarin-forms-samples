@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using MobileCRM.Services;
 
 namespace MobileCRM.Models
 {
@@ -31,7 +32,7 @@ namespace MobileCRM.Models
 
         IEnumerable<string> Tags { get; }
 
-        int Owner { get; set; }
+        IUser Owner { get; set; }
 	}
 }
 

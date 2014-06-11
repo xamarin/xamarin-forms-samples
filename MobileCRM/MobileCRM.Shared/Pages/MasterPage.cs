@@ -1,13 +1,11 @@
 using Xamarin.Forms;
-using System.Collections.ObjectModel;
 using MobileCRM.Shared.Pages;
 using MobileCRM.Shared.ViewModels;
-using Xamarin.Forms;
 using MobileCRM.Models;
 
 namespace MobileCRM.Shared.Pages
 {
-    public class MasterPage<T> : TabbedPage where T: class, new()
+    public class MasterPage<T> : TabbedPage where T: class, IContact, new()
     {
         public MapPage<T> Map { get; private set; }
         public ListPage<T> List { get; private set; }
