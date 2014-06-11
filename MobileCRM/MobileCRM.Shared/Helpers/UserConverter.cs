@@ -16,7 +16,7 @@ namespace MobileCRM.Helpers
 
             if (value == null) return string.Empty;
 
-            Trace.WriteLine(value, "OwnerConverter.Convert");
+            Debug.WriteLine(value.ToString(), new []{"OwnerConverter.Convert"});
             return value.ToString();
         }
         public object ConvertBack (object value, Type targetType, object parameter, CultureInfo culture)
@@ -26,7 +26,7 @@ namespace MobileCRM.Helpers
 
             if (value == null) return string.Empty;
 
-            Trace.WriteLine(value, "OwnerConverter.ConvertBack");
+            Debug.WriteLine(value.ToString(), new []{"OwnerConverter.ConvertBack"});
 
             Debug.Assert(parameter != null, "The original user should be passed as a converterParameter in the binding definition.");
 

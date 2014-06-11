@@ -39,7 +39,7 @@ namespace MobileCRM.Helpers
             var hasBuilder = map.TryGetValue(info.PropertyType, out func);
             if (!hasBuilder) {
                 map.TryGetValue(typeof(object), out func);
-                Trace.WriteLine("Using default cell for property " + info.PropertyType.Name);
+                Debug.WriteLine("Using default cell for property " + info.PropertyType.Name);
             }
             var cell = func(info, context, parent);
             return cell;

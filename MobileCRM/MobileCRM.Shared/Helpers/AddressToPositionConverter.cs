@@ -18,7 +18,7 @@ namespace MobileCRM.Helpers
         #region IValueConverter implementation
         public object Convert (object value, Type targetType, object parameter, CultureInfo culture)
         {
-            Trace.WriteLine(value, "AddressToPositionConverter.Convert");
+            Debug.WriteLine(value.ToString(), new []{"AddressToPositionConverter.Convert"});
             var address = value as Address;
             if (address == null) return null;
 
@@ -27,7 +27,7 @@ namespace MobileCRM.Helpers
         }
         public object ConvertBack (object value, Type targetType, object parameter, CultureInfo culture)
         {
-            Trace.WriteLine(value, "AddressToPositionConverter.ConvertBack");
+            Debug.WriteLine(value.ToString(), new []{ "AddressToPositionConverter.ConvertBack"});
             throw new NotImplementedException ();
         }
         #endregion

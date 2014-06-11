@@ -21,7 +21,7 @@ namespace MobileCRM.Helpers
         #region IValueConverter implementation
         public object Convert (object value, Type targetType, object parameter, CultureInfo culture)
         {
-            Trace.WriteLine(value, "AddressToStringConverter.Convert");
+            Debug.WriteLine(value.ToString(), new []{ "AddressToStringConverter.Convert"});
             return ((Address)value).ToString();
         }
         public object ConvertBack (object value, Type targetType, object parameter, CultureInfo culture)
