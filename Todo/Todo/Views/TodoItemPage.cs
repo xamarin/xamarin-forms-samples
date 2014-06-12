@@ -52,7 +52,7 @@ namespace Todo
 			var speakButton = new Button { Text = "Speak" };
 			speakButton.Clicked += (sender, e) => {
 				var todoItem = (TodoItem)BindingContext;
-				App.Speech.Speak(todoItem.Name + " " + todoItem.Notes);
+				DependencyService.Get<ITextToSpeech>().Speak(todoItem.Name + " " + todoItem.Notes);
 			};
 
 			Content = new StackLayout {

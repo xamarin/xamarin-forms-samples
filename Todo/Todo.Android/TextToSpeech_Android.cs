@@ -2,14 +2,17 @@
 using Xamarin.Forms;
 using System.Collections.Generic;
 using Java.Lang;
+using Todo;
+
+[assembly: Dependency (typeof (TextToSpeech_Android))]
 
 namespace Todo
 {
-	public class Speech : Object, ITextToSpeech, TextToSpeech.IOnInitListener
+	public class TextToSpeech_Android : Object, ITextToSpeech, TextToSpeech.IOnInitListener
 	{
 		TextToSpeech speaker;
 		string toSpeak;
-		public Speech ()
+		public TextToSpeech_Android ()
 		{
 		}
 

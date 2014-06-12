@@ -1,11 +1,15 @@
 ﻿using System;
 using MonoTouch.AVFoundation;
+using Xamarin.Forms;
+using Todo;
+
+[assembly: Dependency (typeof (TextToSpeech_iOS))]
 
 namespace Todo
 {
-	public class Speech : ITextToSpeech
+	public class TextToSpeech_iOS : ITextToSpeech
 	{
-		public Speech ()
+		public TextToSpeech_iOS ()
 		{
 		}
 

@@ -47,8 +47,6 @@ namespace Todo
 			// Set the database connection string
 			App.SetDatabaseConnection (conn);
 
-			App.SetTextToSpeech (new Speech ());
-
 			SetPage (App.GetMainPage ());
 		}
 

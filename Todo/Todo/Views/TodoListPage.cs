@@ -71,7 +71,8 @@ namespace Todo
 					foreach (var t in todos)
 						tospeak += t.Name + " ";
 					if (tospeak == "") tospeak = "there are no tasks to do";
-					App.Speech.Speak(tospeak);
+
+					DependencyService.Get<ITextToSpeech>().Speak(tospeak);
 				}, 0, 0);
 				ToolbarItems.Add (tbi2);
 			}

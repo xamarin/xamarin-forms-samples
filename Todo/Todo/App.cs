@@ -22,16 +22,6 @@ namespace Todo
 		public static TodoItemDatabase Database {
 			get { return database; }
 		}
-
-
-		static ITextToSpeech TextToSpeech;
-		public static void SetTextToSpeech (ITextToSpeech speech)
-		{
-			TextToSpeech = speech;
-		}
-		public static ITextToSpeech Speech {
-			get { return TextToSpeech; }
-		}
 	}
 }
 
