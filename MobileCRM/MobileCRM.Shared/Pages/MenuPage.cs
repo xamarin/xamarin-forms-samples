@@ -15,7 +15,7 @@ namespace MobileCRM.Shared.Pages
 
     public class MenuPage : ContentPage
     {
-        static readonly List<OptionItem> OptionItems = new List<OptionItem>();
+        readonly List<OptionItem> OptionItems = new List<OptionItem>();
 
         public ListView Menu { get; set; }
 
