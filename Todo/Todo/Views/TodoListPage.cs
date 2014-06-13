@@ -42,17 +42,26 @@ namespace Todo
 				Navigation.PushAsync(todoPage);
 			};
 
-			Content = new StackLayout {
-				VerticalOptions = LayoutOptions.FillAndExpand,
-				Children = {listView}
-			};
+			var layout = new StackLayout();
+			if (Device.OS == TargetPlatform.WinPhone) { // WinPhone doesn't have the title showing
+				layout.Children.Add(new Label{Text="Todo", Font=Font.BoldSystemFontOfSize(NamedSize.Large)});
+			}
+			layout.Children.Add(listView);
+			layout.VerticalOptions = LayoutOptions.FillAndExpand;
+			Content = layout;
 
-			var tbi = new ToolbarItem ("+", null, () => {
-				var todoItem = new TodoItem();
-				var todoPage = new TodoItemPage();
-				todoPage.BindingContext = todoItem;
-				Navigation.PushAsync(todoPage);
-			}, 0, 0);
+
+			ToolbarItem tbi = null;
+			if (Device.OS == TargetPlatform.iOS)
+			{
+				tbi = new ToolbarItem("+", null, () =>
+					{
+						var todoItem = new TodoItem();
+						var todoPage = new TodoItemPage();
+						todoPage.BindingContext = todoItem;
+						Navigation.PushAsync(todoPage);
+					}, 0, 0);
+			}
 			if (Device.OS == TargetPlatform.Android) { // BUG: Android doesn't support the icon being null
 				tbi = new ToolbarItem ("+", "plus", () => {
 					var todoItem = new TodoItem();
@@ -60,6 +69,16 @@ namespace Todo
 					todoPage.BindingContext = todoItem;
 					Navigation.PushAsync(todoPage);
 				}, 0, 0);
+			}
+			if (Device.OS == TargetPlatform.WinPhone)
+			{
+				tbi = new ToolbarItem("Add", "add.png", () =>
+					{
+						var todoItem = new TodoItem();
+						var todoPage = new TodoItemPage();
+						todoPage.BindingContext = todoItem;
+						Navigation.PushAsync(todoPage);
+					}, 0, 0);
 			}
 
 			ToolbarItems.Add (tbi);
