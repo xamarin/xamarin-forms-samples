@@ -3,6 +3,9 @@ Todo (Xamarin.Forms)
 
 Xamarin.Forms provides two solution templates for building cross-platform applications: PCL or Shared Project. This **Todo** sample application is provided using both templates. The Xamarin.Forms application code is fundamentally the same, except where the database connection is created (because it requires a file-system reference to the SQLite data file).
 
+![screenshot](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo/Screenshots/Todo-list-sml.png "ListView")
+
+![screenshot](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo/Screenshots/Todo-detail-sml.png "Detail View")
 
 PCL (Portable Class Library)
 ---
