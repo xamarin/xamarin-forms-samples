@@ -24,7 +24,7 @@ namespace Todo
 				var path = Path.Combine(documentsPath, sqliteFilename);
 				#else
 				// WinPhone
-				var path = Path.Combine(ApplicationData.Current.LocalFolder.Path, sqliteFilename);;
+				var path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, sqliteFilename);;
 				#endif
 				#endif
 				return path;
