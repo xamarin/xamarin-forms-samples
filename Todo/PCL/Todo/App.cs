@@ -16,9 +16,11 @@ namespace Todo
 
 		public static TodoItemDatabase Database {
 			get { 
-				if (database == null)
+				if (database == null) {
 					database = new TodoItemDatabase ();
-				return database; }
+				}
+				return database; 
+			}
 		}
 	}
 }

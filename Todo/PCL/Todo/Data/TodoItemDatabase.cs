@@ -21,7 +21,7 @@ namespace Todo
 		/// </param>
 		public TodoItemDatabase()
 		{
-			database = DependencyService.Get<ISQLite> ().GetConnection ();;
+			database = DependencyService.Get<ISQLite> ().GetConnection ();
 			// create the tables
 			database.CreateTable<TodoItem>();
 		}

@@ -1,8 +1,9 @@
 ﻿using System;
-using Todo;
-using Xamarin.Forms;
-using Todo.iOS;
 using System.IO;
+using Todo;
+using Todo.WinPhone;
+using Xamarin.Forms;
+using Windows.Storage;
 
 [assembly: Dependency (typeof (SQLite_WinPhone))]
 
