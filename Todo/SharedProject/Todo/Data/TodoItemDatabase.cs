@@ -15,12 +15,13 @@ namespace Todo
 		string DatabasePath {
 			get { 
 				var sqliteFilename = "TodoSQLite.db3";
-				string documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.Personal); // Documents folder
 				#if __IOS__
+				string documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.Personal); // Documents folder
 				string libraryPath = Path.Combine (documentsPath, "..", "Library"); // Library folder
 				var path = Path.Combine(libraryPath, sqliteFilename);
 				#else
 				#if __ANDROID__
+				string documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.Personal); // Documents folder
 				var path = Path.Combine(documentsPath, sqliteFilename);
 				#else
 				// WinPhone
