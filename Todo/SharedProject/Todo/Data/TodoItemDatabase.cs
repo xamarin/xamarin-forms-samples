@@ -20,7 +20,12 @@ namespace Todo
 				string libraryPath = Path.Combine (documentsPath, "..", "Library"); // Library folder
 				var path = Path.Combine(libraryPath, sqliteFilename);
 				#else
-				var path = Path.Combine(documentsPath, sqliteFilename);;
+				#if __ANDROID__
+				var path = Path.Combine(documentsPath, sqliteFilename);
+				#else
+				// WinPhone
+				var path = Path.Combine(ApplicationData.Current.LocalFolder.Path, sqliteFilename);;
+				#endif
 				#endif
 				return path;
 			}
