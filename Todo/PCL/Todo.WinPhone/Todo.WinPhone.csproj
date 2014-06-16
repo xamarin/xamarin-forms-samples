@@ -121,6 +121,7 @@
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
     </None>
+    <None Include="SQLite_WinPhone.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\AlignmentGrid.png" />

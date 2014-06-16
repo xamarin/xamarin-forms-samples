@@ -1,29 +1,22 @@
 ﻿using System;
-using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Android.OS;
+using Todo;
+using Xamarin.Forms;
+using Todo.iOS;
 using System.IO;
-using Android.Speech.Tts;
 
-namespace Todo
+[assembly: Dependency (typeof (SQLite_Android))]
+
+namespace Todo.iOS
 {
-	[Activity (Label = "Todo", MainLauncher = true)]
-	public class Activity1 : Xamarin.Forms.Platform.Android.AndroidActivity
+	public class SQLite_Android : ISQLite
 	{
-		// I apologize in advance for this awful hack, I'm sure there's a better way...
-		public static Activity1 SpeakingActivityContext; 
-
-		protected override void OnCreate (Bundle bundle)
+		public SQLite_Android ()
 		{
-			base.OnCreate (bundle);
+		}
 
-			SpeakingActivityContext = this; // HACK: for SpeakButtonRenderer to get an Activity/Context reference
-
-			Xamarin.Forms.Forms.Init (this, bundle);
-
+		#region ISQLite implementation
+		public SQLite.Net.SQLiteConnection GetConnection ()
+		{
 			var sqliteFilename = "TodoSQLite.db3";
 			string documentsPath = System.Environment.GetFolderPath (System.Environment.SpecialFolder.Personal); // Documents folder
 			var path = Path.Combine(documentsPath, sqliteFilename);
@@ -32,7 +25,7 @@ namespace Todo
 			Console.WriteLine (path);
 			if (!File.Exists(path))
 			{
-				var s = Resources.OpenRawResource(Resource.Raw.TodoSQLite);  // RESOURCE NAME ###
+				var s = Forms.Context.Resources.OpenRawResource(Resource.Raw.TodoSQLite);  // RESOURCE NAME ###
 
 				// create a write stream
 				FileStream writeStream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
@@ -40,15 +33,13 @@ namespace Todo
 				ReadWriteStream(s, writeStream);
 			}
 
-
 			var plat = new SQLite.Net.Platform.XamarinAndroid.SQLitePlatformAndroid();
 			var conn = new SQLite.Net.SQLiteConnection(plat, path);
 
-			// Set the database connection string
-			App.SetDatabaseConnection (conn);
-
-			SetPage (App.GetMainPage ());
+			// Return the database connection 
+			return conn;
 		}
+		#endregion
 
 		/// <summary>
 		/// helper method to get the database out of /raw/ and into the user filesystem
@@ -69,5 +60,3 @@ namespace Todo
 		}
 	}
 }
-
-

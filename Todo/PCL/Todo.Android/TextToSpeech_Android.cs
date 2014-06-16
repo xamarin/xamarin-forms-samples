@@ -29,7 +29,6 @@ namespace Todo
 			}
         }
 
-
 		#region IOnInitListener implementation
 		public void OnInit (OperationResult status)
 		{
@@ -44,4 +43,3 @@ namespace Todo
 		#endregion
 	}
 }
-

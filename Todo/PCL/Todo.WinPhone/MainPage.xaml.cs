@@ -23,15 +23,6 @@ namespace Todo.WinPhone
 
             Forms.Init();
 
-            var sqliteFilename = "TodoSQLite.db3";
-            string path = Path.Combine(ApplicationData.Current.LocalFolder.Path, sqliteFilename);
-
-            var plat = new SQLite.Net.Platform.WindowsPhone8.SQLitePlatformWP8();
-            var conn = new SQLite.Net.SQLiteConnection(plat, path);
-
-            // Set the database connection string
-            Todo.App.SetDatabaseConnection(conn);
-
             Content = Todo.App.GetMainPage().ConvertPageToUIElement(this);
         }
     }

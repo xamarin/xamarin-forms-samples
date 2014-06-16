@@ -2,6 +2,7 @@
 using SQLite.Net;
 using System.Collections.Generic;
 using System.Linq;
+using Xamarin.Forms;
 
 namespace Todo
 {
@@ -18,9 +19,9 @@ namespace Todo
 		/// <param name='path'>
 		/// Path.
 		/// </param>
-		public TodoItemDatabase(SQLiteConnection conn)
+		public TodoItemDatabase()
 		{
-			database = conn;
+			database = DependencyService.Get<ISQLite> ().GetConnection ();;
 			// create the tables
 			database.CreateTable<TodoItem>();
 		}

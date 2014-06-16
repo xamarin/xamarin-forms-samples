@@ -5,6 +5,8 @@ namespace Todo
 {
 	public static class App
 	{
+		static TodoItemDatabase database;
+
 		public static Page GetMainPage ()
 		{
 			var mainNav = new NavigationPage (new TodoListPage ());
@@ -12,15 +14,11 @@ namespace Todo
 			return mainNav;
 		}
 
-		static SQLite.Net.SQLiteConnection conn;
-		static TodoItemDatabase database;
-		public static void SetDatabaseConnection (SQLite.Net.SQLiteConnection connection)
-		{
-			conn = connection;
-			database = new TodoItemDatabase (conn);
-		}
 		public static TodoItemDatabase Database {
-			get { return database; }
+			get { 
+				if (database == null)
+					database = new TodoItemDatabase ();
+				return database; }
 		}
 	}
 }
