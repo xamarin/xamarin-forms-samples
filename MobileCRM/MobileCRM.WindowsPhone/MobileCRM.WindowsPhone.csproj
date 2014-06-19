@@ -114,10 +114,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Data\Poi.json">
-      <LogicalName>
-      </LogicalName>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Poi.json" />
     <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
@@ -162,8 +159,6 @@
     <EmbeddedResource Include="Resources\AppResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
-      <LogicalName>
-      </LogicalName>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -197,7 +192,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MobileCRM.Services.Default\MobileCRM.Services.csproj">
+    <ProjectReference Include="..\MobileCRM.Services\MobileCRM.Services.csproj">
       <Project>{abde5def-a5d7-410a-b9be-ff897688eb8f}</Project>
       <Name>MobileCRM.Services</Name>
     </ProjectReference>
