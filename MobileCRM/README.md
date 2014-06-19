@@ -9,13 +9,26 @@ MobileCRM (Xamarin.Forms)
 
 ![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/MobileCRM/Screenshots/MobileCRM-WinPhone-sml.png "Windows Phone")
 
+<span style="color:red"><b>NOTE:</b> The Shared Project type used in this sample [requires](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/shared_projects/) Visual Studio 2013 Update 2 or Xamarin Studio 5.</span>
+
 
 Xamarin.Forms
 -------------
 
 Visit the [Xamarin.Forms documentation](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/) for more information on the APIs and controls available for building cross-platform apps with 100% shared C# code.
 
-Maps
+The Xamarin.Forms code in this solution is split between two projects (this is for demonstration purposes, you could choose to use either type in your own apps):
+
+* **MobileCRM.Services** - a [PCL](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/pcl/) project that contains model classes and repositories to store them.
+* **MobileCRM.Shared** - a [Shared Project](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/shared_projects/) containing view models, pages and custom controls.
+
+Both those projects use Xamarin.Forms to ensure complete code sharing across platforms. This solution also has the following three application projects that reference the common code:
+
+* **MobileCRM.Android**
+* **MobileCRM.iOS**
+* **MobileCRM.WindowsPhone** (Visual Studio is required to build & run)
+
+Maps (special note)
 ----
 
 `Xamarin.Forms.Maps` uses the native map APIs on each platform. If you are creating your own Xamarin.Forms app, **Xamarin.Forms.Maps** is a a separate NuGet package that you should download. On Android, this also has a dependency on **GooglePlayServices** (another NuGet) which is downloaded automatically. These have already been added to the MobileCRM solution.
