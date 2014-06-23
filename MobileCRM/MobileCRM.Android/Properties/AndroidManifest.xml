@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="GooglePlayServicesApp.GooglePlayServicesApp" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.xamarin.Meetum" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="15" />
 	<application android:theme="@style/MyTheme" android:icon="@drawable/Icon" android:label="Mobile CRM">
-		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCpDTadcQieWWmv4brVjYH3DAtKLu3Rmxs" />
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyA8BjZodaBWOZVfWHIrIViNBp9BkXHKDvM" />
 		<!--<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyA8BjZodaBWOZVfWHIrIViNBp9BkXHKDvM" />-->
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 	</application>
