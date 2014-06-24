@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamlSamples.HomePage"
+             Title="XAML Samples">
+
+  <ListView x:Name="listView">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout Orientation="Horizontal"
+                       Padding="5, 0">
+            <Label Text="{Binding PageName}"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="Center" />
+
+            <Button Text="View"
+                    Command="{Binding GoToCommand}"
+                    CommandParameter="{Binding PageType}" />
+
+            <Button Text="Source"
+                    Command="{Binding BrowseCommand}"
+                    CommandParameter="{Binding PageName}" />
+
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>

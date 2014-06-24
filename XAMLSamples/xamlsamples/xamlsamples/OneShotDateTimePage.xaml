@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="XamlSamples.OneShotDateTimePage"
+             Title="One-Shot DateTime Page">
+
+  <StackLayout BindingContext="{x:Static sys:DateTime.Now}"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+
+    <Label Text="{Binding Year, StringFormat='The year is {0}'}" />
+    <Label Text="{Binding StringFormat='The month is {0:MMMM}'}" />
+    <Label Text="{Binding Day, StringFormat='The day is {0}'}" />
+    <Label Text="{Binding StringFormat='The time is {0:T}'}" />
+    
+  </StackLayout>
+</ContentPage>

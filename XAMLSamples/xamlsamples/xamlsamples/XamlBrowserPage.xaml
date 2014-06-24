@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamlSamples.XamlBrowserPage"
+             Title="XAML Browser">
+
+  <ScrollView>
+    <Label x:Name="label">
+      <Label.Font>
+        <OnPlatform x:TypeArguments="Font">
+          <OnPlatform.iOS>
+            Courier New, 10
+          </OnPlatform.iOS>
+
+          <!-- doesn't work -->
+          <OnPlatform.Android>
+            Droid Sans Mono, 12
+          </OnPlatform.Android>
+
+          <OnPlatform.WinPhone>
+            Courier New, 15
+          </OnPlatform.WinPhone>
+        </OnPlatform>
+      </Label.Font>
+    </Label>
+  </ScrollView>
+</ContentPage>

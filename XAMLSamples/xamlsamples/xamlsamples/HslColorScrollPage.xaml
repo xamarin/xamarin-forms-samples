@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamlSamples;assembly=XamlSamples"
+             x:Class="XamlSamples.HslColorScrollPage"
+             Title="HSL Color Scroll Page">
+  
+  <ContentPage.BindingContext>
+    <local:HslViewModel Color="Aqua" />
+  </ContentPage.BindingContext>
+
+  <StackLayout Padding="10, 0">
+    <BoxView Color="{Binding Color}"
+             VerticalOptions="FillAndExpand" />
+
+    <Label Text="{Binding Hue, 
+                      StringFormat='Hue = {0:F2}'}"
+           HorizontalOptions="Center" />
+
+    <Slider Value="{Binding Hue, Mode=TwoWay}" />
+
+    <Label Text="{Binding Saturation, 
+                      StringFormat='Saturation = {0:F2}'}"
+           HorizontalOptions="Center" />
+
+    <Slider Value="{Binding Saturation, Mode=TwoWay}" />
+    
+    <Label Text="{Binding Luminosity, 
+                      StringFormat='Luminosity = {0:F2}'}"
+           HorizontalOptions="Center" />
+
+    <Slider Value="{Binding Luminosity, Mode=TwoWay}" />
+  </StackLayout>
+</ContentPage>

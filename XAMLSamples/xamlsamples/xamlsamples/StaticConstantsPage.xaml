@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamlSamples;assembly=XamlSamples"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="XamlSamples.StaticConstantsPage"
+             Title="Static Constants Page"
+             Padding="{x:Static local:AppConstants.PagePadding}">
+
+  <StackLayout>
+    <Label Text="Hello, XAML!"
+           TextColor="{x:Static local:AppConstants.BackgroundColor}"
+           BackgroundColor="{x:Static local:AppConstants.ForegroundColor}"
+           Font="{x:Static local:AppConstants.TitleFont}"
+           HorizontalOptions="Center" />
+
+    <BoxView WidthRequest="{x:Static sys:Math.PI}"
+             HeightRequest="{x:Static sys:Math.E}"
+             Color="{x:Static local:AppConstants.ForegroundColor}"
+             HorizontalOptions="Center"
+             VerticalOptions="CenterAndExpand"
+             Scale="100" />
+  </StackLayout>
+</ContentPage>
