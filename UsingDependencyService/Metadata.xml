@@ -6,5 +6,5 @@
 	<Tags>Xamarin.Forms</Tags>
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
-	<Gallery>true</Gallery>
+	<Gallery>false</Gallery>
 </SampleMetadata>
