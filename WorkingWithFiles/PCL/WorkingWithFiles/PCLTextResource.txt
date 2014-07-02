@@ -1,0 +1,7 @@
+﻿Text files can easily be loaded from an assembly if their BuildAction: EmbeddedResource.
+It requires using System.Reflection and System.IO namespaces.
+Remember the Resource ID format requires period (.) separators if files are placed inside folders.
+To debug, use 
+foreach (var res in assembly.GetManifestResourceNames) {
+   System.Diagnostics.Debug.WriteLine(res);
+}

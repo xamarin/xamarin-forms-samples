@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WorkingWithImages.DownloadImagesXaml">
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness">
+			<OnPlatform.iOS>0, 20, 0, 0</OnPlatform.iOS>
+		</OnPlatform>
+	</ContentPage.Padding>
+  <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+    <Label Text="Image UriSource Xaml" />
+
+    <Image Source="http://xamarin.com/content/images/pages/forms/example-app.png" />
+
+    <Label Text="example-app.png gets downloaded from xamarin.com" />
+  </StackLayout>
+</ContentPage>

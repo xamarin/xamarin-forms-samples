@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			x:Class="WorkingWithColors.ColorsInXaml">
+	<StackLayout Spacing="10">
+ 
+       <StackLayout.Resources>
+          <ResourceDictionary>
+              <Color x:Key="ButtonBackColor">
+                <x:Arguments>
+                    <x:Double>.95</x:Double>
+                    <x:Double>.73</x:Double>
+                    <x:Double>.4</x:Double>
+                </x:Arguments>
+              </Color>
+              <Color x:Key="ButtonTextColor">
+               <x:Arguments>
+                    <x:Double>.4</x:Double> <!-- R/255 -->
+                    <x:Double>.62</x:Double>
+                    <x:Double>.95</x:Double>
+                </x:Arguments>
+              </Color>
+          </ResourceDictionary>
+       </StackLayout.Resources>
+
+       <Button Text="Button"
+            BackgroundColor="{StaticResource ButtonBackColor}"
+            TextColor="{StaticResource ButtonTextColor}" />
+
+   </StackLayout>
+</ContentPage>
