@@ -8,7 +8,23 @@ using MobileCRM.Models;
 using MobileCRM.Shared.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+/*
 
+Xamarin.Forms uses the native MAP control on each platform.
+
+Both Android and Windows Phone require additional configuration to make MAPs work.
+
+See the document here for more information:
+http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/maps/
+
+If you see either of these errors in the console output when running on Android, you have not correctly configured your Google Maps API v2 Key.
+
+[Google Maps Android API] Failed to contact Google servers. Another attempt will be made when connectivity is established.
+[Google Maps Android API] Failed to load map. Error contacting Google servers. This is probably an authentication issue (but could be due to network errors).
+
+Refer to the notes in the MainActivity.cs file in the Android project for how to add an API Key.
+
+*/
 namespace MobileCRM.Shared.Pages
 {
     public class MapPage<T> : ContentPage where T: class, IContact, new()

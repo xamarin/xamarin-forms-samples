@@ -1,9 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.xamarin.Meetum" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.xamarin.mobilecrm" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="15" />
 	<application android:theme="@style/MyTheme" android:icon="@drawable/Icon" android:label="Mobile CRM">
-		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyA8BjZodaBWOZVfWHIrIViNBp9BkXHKDvM" />
-		<!--<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyA8BjZodaBWOZVfWHIrIViNBp9BkXHKDvM" />-->
+		<!--
+		For the MAP to work, you *must* create your own API key. See instructions here:
+			http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/maps/
+		which will require you to visit the Google Developer Console here:
+			https://console.developers.google.com/
+		note the package name (listed above) is com.xamarin.mobilecrm - this value must be appended to the generated SHA1 hash that you enter into the console
+		-->
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="YOUR_API_KEY_HERE" />
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 	</application>
 	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
