@@ -7,20 +7,11 @@
   <ScrollView>
     <Label x:Name="label">
       <Label.Font>
-        <OnPlatform x:TypeArguments="Font">
-          <OnPlatform.iOS>
-            Courier New, 10
-          </OnPlatform.iOS>
-
-          <!-- doesn't work -->
-          <OnPlatform.Android>
-            Droid Sans Mono, 12
-          </OnPlatform.Android>
-
-          <OnPlatform.WinPhone>
-            Courier New, 15
-          </OnPlatform.WinPhone>
-        </OnPlatform>
+        <!-- Android font doesn't work -->
+        <OnPlatform x:TypeArguments="Font"
+                    iOS="Courier New, 10"
+                    Android="Droid Sans Mono, 12"
+                    WinPhone="Courier New, 15" />
       </Label.Font>
     </Label>
   </ScrollView>

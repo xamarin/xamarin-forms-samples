@@ -5,11 +5,8 @@
              Title="Grid Demo Page">
 
   <ContentPage.Padding>
-    <OnPlatform x:TypeArguments="Thickness">
-      <OnPlatform.iOS>
-        0, 20, 0, 0
-      </OnPlatform.iOS>
-    </OnPlatform>
+    <OnPlatform x:TypeArguments="Thickness"
+                iOS="0, 20, 0, 0" />
   </ContentPage.Padding>
   
   <Grid>

@@ -17,11 +17,11 @@
 
       <x:Double x:Key="rotationAngle">-15</x:Double>
 
-      <OnPlatform x:Key="textColor" x:TypeArguments="Color">
-          <OnPlatform.iOS>Red</OnPlatform.iOS>
-          <OnPlatform.Android>Aqua</OnPlatform.Android>
-          <OnPlatform.WinPhone>#80FF80</OnPlatform.WinPhone>
-      </OnPlatform>
+      <OnPlatform x:Key="textColor"
+                  x:TypeArguments="Color"
+                  iOS="Red"
+                  Android="Aqua"
+                  WinPhone="#80FF80" />
 
       <x:String x:Key="font">Large</x:String>
     </ResourceDictionary>
