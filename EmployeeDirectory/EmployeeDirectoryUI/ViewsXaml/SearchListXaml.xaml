@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="EmployeeDirectoryUI.Xaml.SearchListXaml"
+    Title="Search">
+    <ContentPage.Content>
+	    <StackLayout>
+
+		    <Entry x:Name="SearchEntry" Placeholder="search for" 
+				    Text="{Binding Path=SearchText}" 
+				    TextChanged="OnValueChanged" />
+
+	        <ListView x:Name="listView" ItemSelected="OnItemSelected" IsGroupingEnabled="true">
+		        <ListView.GroupHeaderTemplate>
+				    <DataTemplate>
+				      <ViewCell>
+				      	<StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
+				      		<Label Text="{Binding Title}" YAlign="Center" />
+				      	</StackLayout>
+				      </ViewCell>
+				    </DataTemplate>
+				  </ListView.GroupHeaderTemplate>
+				  <ListView.ItemTemplate>
+				    <DataTemplate>
+				      <ViewCell>
+				     	<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">	
+				      		<Image Source="{Binding Photo}" WidthRequest="44" HeightRequest="44" />
+					     	<StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
+					        	<Label Text="{Binding Name}" YAlign="Center" />
+					        	<Label Text="{Binding Title}" YAlign="Center" Font="Micro"  />
+					        </StackLayout>
+				         </StackLayout>
+				      </ViewCell>
+				    </DataTemplate>
+				  </ListView.ItemTemplate>
+			</ListView>
+
+		</StackLayout>
+    </ContentPage.Content>
+</ContentPage>	
