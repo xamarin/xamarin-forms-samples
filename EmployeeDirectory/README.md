@@ -32,7 +32,11 @@ Components used in this solution: [Xamarin.Social][xSocialHref]
 
 Authors
 ---------
-Oleg Demchenko
+
+Original: Jonathan Peppers, Bryan Phillips, Frank Krueger, James Clancey, Zack Gramana
+
+Xamarin.Forms: Oleg Demchenko, Craig Dunn
+
 
 [pclHref]: http://www.nuget.org/packages/PCLStorage/0.9.3
 [xFormsHref]: http://xamarin.com/forms
