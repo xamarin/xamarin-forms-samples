@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="WorkingWithGestures.TapInsideFrameXaml">
+  <StackLayout>
+    <Frame OutlineColor="Accent"
+           BackgroundColor="Transparent"
+           Padding="20, 100"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand">
+      <Frame.GestureRecognizers>
+		<!-- Using the Command property works fine -->
+        <TapGestureRecognizer 
+        		Command="{Binding TapCommand}" />
+        <!--
+		Cannot currently set the Tapped property via Xaml, s/b fixed in 1.2
+        <TapGestureRecognizer 
+				Tapped="OnTapGestureRecognizerTapped" 
+				NumberOfTapsRequired="2" />
+        -->
+      </Frame.GestureRecognizers>
+      
+      <Label Text="Tap Inside Frame" Font="Large" />
+
+    </Frame>
+
+    <Label x:Name="label"
+           Text="{Binding NumberOfTapsTapped}"
+           Font="Large"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"
+            />
+
+  </StackLayout>
+
+</ContentPage>
