@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using System.Reflection;
 
 namespace WorkingWithImages
 {
@@ -27,6 +28,11 @@ namespace WorkingWithImages
                 VerticalOptions = LayoutOptions.StartAndExpand,
                 HorizontalOptions = LayoutOptions.CenterAndExpand
             };
+
+			// NOTE: use for debugging, not in released app code!
+			//var assembly = typeof(EmbeddedImages).GetTypeInfo().Assembly;
+			//foreach (var res in assembly.GetManifestResourceNames()) 
+			//	System.Diagnostics.Debug.WriteLine("found resource: " + res);
         }
     }
 }

@@ -34,6 +34,10 @@ namespace WorkingWithFiles
 						Font = Font.BoldSystemFontOfSize(NamedSize.Medium) }
 					, listView}
 			};
+
+			// NOTE: use for debugging, not in released app code!
+			//foreach (var res in assembly.GetManifestResourceNames()) 
+			//	System.Diagnostics.Debug.WriteLine("found resource: " + res);
 		}
 	}
 }

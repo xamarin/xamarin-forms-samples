@@ -12,10 +12,14 @@ namespace WorkingWithImages
     {
         public static Page GetMainPage()
         {
-//            return new LocalImages();
-            return new LocalImagesXaml();
-//            return new DownloadImages();
-//			  return new DownloadImagesXaml();
+			//
+			// NOTE: uncomment the relevant page that you'd like to test
+			//
+
+            return new LocalImages();
+//          return new LocalImagesXaml();
+//          return new DownloadImages();
+//			return new DownloadImagesXaml();
 //			return new EmbeddedImages ();
 //			return new EmbeddedImagesXaml ();
 

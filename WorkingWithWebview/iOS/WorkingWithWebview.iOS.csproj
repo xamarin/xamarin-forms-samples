@@ -105,6 +105,15 @@
     <BundleResource Include="Resources\default.css" />
     <BundleResource Include="Resources\Images\XamarinLogo.png" />
     <BundleResource Include="Resources\local.html" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon-76.png" />
+    <BundleResource Include="Resources\Icon-76%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40.png" />
+    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

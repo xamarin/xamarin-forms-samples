@@ -7,6 +7,10 @@ namespace WorkingWithFiles
 	{
 		public static Page GetMainPage ()
 		{	
+			//
+			// NOTE: uncomment the relevant page that you'd like to test
+			//
+
 			return new LoadResourceText ();
 
 //			return new LoadResourceXml ();
