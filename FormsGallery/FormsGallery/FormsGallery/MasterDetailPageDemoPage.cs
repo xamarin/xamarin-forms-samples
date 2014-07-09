@@ -44,6 +44,7 @@ namespace FormsGallery
             // Create the master page with the ListView.
             this.Master = new ContentPage
             {
+                Title = "Color List",       // Title required!
                 Content = new StackLayout
                 {
                     Children = 
@@ -55,16 +56,20 @@ namespace FormsGallery
             };
 
             // Create the detail page using NamedColorPage
-            this.Detail = new NamedColorPage(true);
+            NamedColorPage detailPage = new NamedColorPage(true);
+            this.Detail = detailPage;
 
-            // For Windows Phone, provide a way to get back to the master page.
-            if (Device.OS == TargetPlatform.WinPhone)
+            // For Android & Windows Phone, provide a way to get back to the master page.
+            if (Device.OS != TargetPlatform.iOS)
             {
-                (this.Detail as ContentPage).Content.GestureRecognizers.Add(
-                    new TapGestureRecognizer((view) =>
+                TapGestureRecognizer tap = new TapGestureRecognizer();
+                tap.Tapped += (sender, args) =>
                     {
                         this.IsPresented = true;
-                    }));
+                    };
+
+                detailPage.Content.BackgroundColor = Color.Transparent;
+                detailPage.Content.GestureRecognizers.Add(tap);
             }
 
             // Define a selected handler for the ListView.
