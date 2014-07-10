@@ -2,6 +2,7 @@
 
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
@@ -11,7 +12,8 @@ using Xamarin.Forms.Platform.Android;
 
 namespace FormsGallery.Droid
 {
-    [Activity(Label = "FormsGallery", MainLauncher = true)]
+    [Activity(Label = "FormsGallery", MainLauncher = true,
+        ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize)]
     public class MainActivity : AndroidActivity
     {
         protected override void OnCreate(Bundle bundle)
