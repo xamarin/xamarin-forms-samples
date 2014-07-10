@@ -7,7 +7,11 @@ namespace WorkingWithMaps
 	{
 		public static Page GetMainPage ()
 		{	
+			// demonstrates the map control with zooming and map-types
 			return new MapPage ();
+
+			// demonstrates the Geocoder class
+//			return new GeocoderPage ();
 		}
 	}
 }
