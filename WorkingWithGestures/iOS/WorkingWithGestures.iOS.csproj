@@ -111,6 +111,8 @@
     <BundleResource Include="Resources\Icon-Small-40%402x.png" />
     <BundleResource Include="Resources\Icon-Small.png" />
     <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\tapped.jpg" />
+    <BundleResource Include="Resources\tapped_bw.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

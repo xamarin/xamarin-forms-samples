@@ -3,6 +3,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Diagnostics;
 
 namespace WorkingWithGestures
 {
@@ -37,8 +38,9 @@ namespace WorkingWithGestures
 		/// <summary>
 		/// Called whenever TapCommand is executed (because it was wired up in the constructor)
 		/// </summary>
-		void OnTapped () {
+		void OnTapped (object s) {
 			taps++;
+			Debug.WriteLine ("parameter: " + s);
 			NumberOfTapsTapped = String.Format("{0} tap{1} so far!",
 				taps, 
 				taps == 1 ? "" : "s");

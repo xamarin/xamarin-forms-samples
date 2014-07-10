@@ -11,7 +11,8 @@
       <Frame.GestureRecognizers>
 		<!-- Using the Command property works fine -->
         <TapGestureRecognizer 
-        		Command="{Binding TapCommand}" />
+        		Command="{Binding TapCommand}" 
+        		CommandParameter="Frame1" />
         <!--
 		Cannot currently set the Tapped property via Xaml, s/b fixed in 1.2
         <TapGestureRecognizer 
