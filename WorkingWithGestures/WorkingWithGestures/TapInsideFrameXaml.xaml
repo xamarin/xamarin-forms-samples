@@ -3,9 +3,26 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 x:Class="WorkingWithGestures.TapInsideFrameXaml">
   <StackLayout>
+
+	<Image Source="tapped.jpg" HeightRequest="150" WidthRequest="150">
+		<Image.GestureRecognizers>
+		<!-- Using the Command property works fine -->
+	    <TapGestureRecognizer 
+	    		Command="{Binding TapCommand}" 
+	    		CommandParameter="Image1" />
+	    <!--
+		Cannot currently set the Tapped property via Xaml, s/b fixed in 1.2
+	    <TapGestureRecognizer 
+				Tapped="OnTapGestureRecognizerTapped" 
+				NumberOfTapsRequired="2" />
+	    -->
+	  </Image.GestureRecognizers>
+	  
+	</Image>
+
     <Frame OutlineColor="Accent"
            BackgroundColor="Transparent"
-           Padding="20, 100"
+           Padding="20, 20"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand">
       <Frame.GestureRecognizers>
@@ -21,7 +38,7 @@
         -->
       </Frame.GestureRecognizers>
       
-      <Label Text="Tap Inside Frame" Font="Large" />
+      <Label Text="Tap inside frame (or on the monkey!)" Font="Large" />
 
     </Frame>
 

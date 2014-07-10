@@ -21,7 +21,7 @@ namespace WorkingWithGestures
 
 
 			var tapGestureRecognizer = new TapGestureRecognizer();
-			//tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
+			tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
 			tapGestureRecognizer.Tapped += OnTapGestureRecognizerTapped;
 			image.GestureRecognizers.Add(tapGestureRecognizer);
 
@@ -58,9 +58,9 @@ namespace WorkingWithGestures
 			// watch the monkey go from color to black&white!
 			if (tapCount % 2 == 0) {
 				imageSender.Source = "tapped.jpg";
-			} else
+			} else {
 				imageSender.Source = "tapped_bw.jpg";
-
+			}
 			Debug.WriteLine ("image tapped: " + ((FileImageSource)imageSender.Source).File);
 		}
 	}
