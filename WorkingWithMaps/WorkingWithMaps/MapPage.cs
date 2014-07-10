@@ -19,7 +19,7 @@ namespace WorkingWithMaps
 
 			// You can use MapSpan.FromCenterAndRadius 
 //			map.MoveToRegion (MapSpan.FromCenterAndRadius (
-//				new Position (37, -122), Distance.FromMiles (0.3));
+//				new Position (37, -122), Distance.FromMiles (0.3)));
 			// or create a new MapSpan object directly
 			map.MoveToRegion (new MapSpan (new Position (0,0), 360, 360) );
 

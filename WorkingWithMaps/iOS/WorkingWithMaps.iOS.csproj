@@ -125,6 +125,9 @@
     <BundleResource Include="Resources\Icon-Small-40%402x.png" />
     <BundleResource Include="Resources\Icon-Small.png" />
     <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\glyphish_07_map_marker.png" />
+    <BundleResource Include="Resources\glyphish_103_map.png" />
+    <BundleResource Include="Resources\glyphish_13_target.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

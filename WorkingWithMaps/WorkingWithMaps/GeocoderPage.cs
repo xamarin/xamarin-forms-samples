@@ -13,7 +13,7 @@ namespace WorkingWithMaps
 		{
 			geoCoder = new Geocoder ();
 
-			var b1 = new Button { Text = "Geocode '37.808, -122.432'" };
+			var b1 = new Button { Text = "Reverse geocode '37.808, -122.432'" };
 			b1.Clicked += async (sender, e) => {
 				var fortMasonPosition = new Position (37.8044866, -122.4324132);
 				var possibleAddresses = await geoCoder.GetAddressesForPositionAsync (fortMasonPosition);
@@ -22,7 +22,7 @@ namespace WorkingWithMaps
 				}
 			};
 
-			var b2 = new Button { Text = "Reverse geocode '394 Pacific'" };
+			var b2 = new Button { Text = "Geocode '394 Pacific Ave'" };
 			b2.Clicked += async (sender, e) => {
 				var xamarinAddress = "394 Pacific Ave, San Francisco, California";
 				var approximateLocation = await geoCoder.GetPositionsForAddressAsync (xamarinAddress);
@@ -34,8 +34,8 @@ namespace WorkingWithMaps
 			Content = new StackLayout {
 				Padding = new Thickness (0, 20, 0, 0),
 				Children = {
-					b1,
 					b2,
+					b1,
 					l
 				}
 			};
