@@ -145,6 +145,9 @@
     <BundleResource Include="Toolkit.Content\ApplicationBar.Check.png" />
     <BundleResource Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <BundleResource Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <BundleResource Include="glyphish_07_map_marker.png" />
+    <BundleResource Include="glyphish_13_target.png" />
+    <BundleResource Include="glyphish_103_map.png" />
     <Content Include="README_FIRST.txt" />
   </ItemGroup>
   <ItemGroup>
