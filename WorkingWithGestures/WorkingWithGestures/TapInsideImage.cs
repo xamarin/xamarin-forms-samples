@@ -21,7 +21,7 @@ namespace WorkingWithGestures
 
 
 			var tapGestureRecognizer = new TapGestureRecognizer();
-			tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
+//			tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
 			tapGestureRecognizer.Tapped += OnTapGestureRecognizerTapped;
 			image.GestureRecognizers.Add(tapGestureRecognizer);
 
