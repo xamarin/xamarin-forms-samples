@@ -1,0 +1,25 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<UsingTask TaskName="Xamarin.Forms.Build.Tasks.XamlG" AssemblyFile="Xamarin.Forms.Build.Tasks.dll"/>
+		
+	<!-- generate xaml.g.cs files at edit time, to feed intellisense, as well as at build time, for msbuild and XS -->
+	<PropertyGroup>
+		<CompileDependsOn>
+			GenerateXamlG;
+			$(CompileDependsOn);
+		</CompileDependsOn>
+	</PropertyGroup>
+
+	<Target Name="GenerateXamlG">
+		<CreateItem Include="@(EmbeddedResource)" Condition="'%(Extension)' == '.xaml'">
+			<Output TaskParameter="Include" ItemName="XamlFiles"/>
+		</CreateItem>
+		<XamlG
+			Sources="@(XamlFiles)"
+			Language = "$(Language)"
+			AssemblyName = "$(AssemblyName)"
+			OutputFiles = "@(XamlFiles->'$(IntermediateOutputPath)%(Filename).xaml.g$(DefaultLanguageSourceExtension)')">
+			<Output TaskParameter="OutputFiles" ItemName="Compile"/>
+			<Output TaskParameter="OutputFiles" ItemName="FileWrites"/>
+		</XamlG>
+	</Target>
+</Project>
