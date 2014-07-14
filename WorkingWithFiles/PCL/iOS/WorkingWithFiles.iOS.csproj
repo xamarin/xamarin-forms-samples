@@ -9,6 +9,7 @@
     <RootNamespace>WorkingWithFiles.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>WorkingWithFilesiOS</AssemblyName>
+    <NuGetPackageImportStamp>bf4cbf1f</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
