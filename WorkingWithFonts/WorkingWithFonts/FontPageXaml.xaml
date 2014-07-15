@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:local="clr-namespace:WorkingWithFonts;assembly=WorkingWithFonts"
+			 x:Class="WorkingWithFonts.FontPageXaml">
+	<StackLayout 
+			VerticalOptions = "CenterAndExpand" 
+			HorizontalOptions="CenterAndExpand">
+
+		<Label Text="Hello Forms with XAML">
+		    <Label.Font>
+		        <OnPlatform x:TypeArguments="Font">
+		            <OnPlatform.iOS>MarkerFelt-Thin,Medium</OnPlatform.iOS>
+		            <OnPlatform.Android>Large</OnPlatform.Android>
+		            <OnPlatform.WinPhone>Bold,Medium</OnPlatform.WinPhone>
+		        </OnPlatform>
+		    </Label.Font>
+		</Label>
+
+		<StackLayout Orientation="Horizontal">
+			<Label Text="Italics" Font="Italic" />
+			<Label Text="Bold" Font="Bold" />
+		</StackLayout>
+
+		<Label Text="Biggest NamedSize" Font="Large" />
+
+		<!-- Font string should be formatted as 
+			"[name],[attributes],[size]" 
+		there may be multiple attributes -->
+
+		<Label Text="Use size 72" Font="Italic,72" />
+
+		<Label Text="Specify Bold Attribute and Micro Size">
+		    <Label.Font>Bold,Micro</Label.Font>
+		</Label>
+
+
+		<Label Text="Multiple FontAttributes" Font="Bold, Italic" />
+
+	</StackLayout>
+</ContentPage>
