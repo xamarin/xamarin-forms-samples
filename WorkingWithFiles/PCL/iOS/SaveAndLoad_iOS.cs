@@ -1,6 +1,8 @@
 ﻿using System;
 using Xamarin.Forms;
 using WorkingWithFiles.iOS;
+using System.IO;
+using System.Threading.Tasks;
 
 [assembly: Dependency (typeof (SaveAndLoad_iOS))]
 
@@ -10,14 +12,23 @@ namespace WorkingWithFiles.iOS
 	{
 		#region ISaveAndLoad implementation
 
-		public void SaveText (string filename, string text)
+		public async Task SaveTextAsync (string filename, string text)
 		{
-			System.IO.File.WriteAllText (filename, text);
+			using (StreamWriter sw = File.CreateText(filename))
+			{
+				await sw.WriteAsync(text);
+			}
 		}
 
-		public string LoadText (string filename)
+		public async Task<string> LoadTextAsync (string filename)
 		{
-			return System.IO.File.ReadAllText (filename);
+			string text;
+
+			using (StreamReader sr = File.OpenText(filename))
+			{
+				text = await sr.ReadToEndAsync();
+			}
+			return text;
 		}
 
 		#endregion

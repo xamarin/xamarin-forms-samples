@@ -12,8 +12,8 @@ namespace WorkingWithFiles
 	/// </summary>
 	public interface ISaveAndLoad
 	{
-		void SaveText (string filename, string text);
-		string LoadText (string filename);
+		Task SaveTextAsync (string filename, string text);
+		Task<string> LoadTextAsync (string filename);
 	}
 }
 

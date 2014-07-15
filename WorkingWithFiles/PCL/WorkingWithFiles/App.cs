@@ -7,15 +7,15 @@ namespace WorkingWithFiles
 	{
 		public static Page GetMainPage ()
 		{	
-			//
-			// NOTE: uncomment the relevant page that you'd like to test
-			//
+			var tabs = new TabbedPage ();
 
-			return new LoadResourceText ();
+			tabs.Children.Add (new LoadResourceText {Title = "Resource", Icon = "txt.png" });
 
-//			return new LoadResourceXml ();
+			tabs.Children.Add (new LoadResourceXml {Title = "Resource", Icon = "xml.png"});
 
-//			return new SaveAndLoadText ();
+			tabs.Children.Add (new SaveAndLoadText {Title = "Save/Load", Icon = "saveload.png"});
+
+			return tabs;
 		}
 	}
 }

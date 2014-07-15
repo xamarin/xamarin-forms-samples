@@ -11,25 +11,33 @@ namespace WorkingWithFiles
 	/// </summary>
 	public class SaveAndLoadText : ContentPage
 	{
+		Button loadButton, saveButton;
+
 		public SaveAndLoadText ()
 		{
 			var input = new Editor { Text = "" };
 			if (Device.OS == TargetPlatform.iOS)
 				input.HeightRequest = 40;
 			var output = new Label { Text = "" };
-			var saveButton = new Button {Text = "Save"};
+			saveButton = new Button {Text = "Save"};
 
-			saveButton.Clicked += (sender, e) => {
+			saveButton.Clicked += async (sender, e) => {
+				loadButton.IsEnabled = saveButton.IsEnabled = false;
 				// uses the Interface defined in this project, and the implementations that must
 				// be written in the iOS, Android and WinPhone app projects to do the actual file manipulation
-				DependencyService.Get<ISaveAndLoad>().SaveText("temp.txt", input.Text);
+				await DependencyService.Get<ISaveAndLoad>().SaveTextAsync("temp.txt", input.Text);
+
+				loadButton.IsEnabled = saveButton.IsEnabled = true;
 			};
 
-			var loadButton = new Button {Text = "Load"};
-			loadButton.Clicked += (sender, e) => {
+			loadButton = new Button {Text = "Load"};
+			loadButton.Clicked += async (sender, e) => {
+				loadButton.IsEnabled = saveButton.IsEnabled = false;
+
 				// uses the Interface defined in this project, and the implementations that must
 				// be written in the iOS, Android and WinPhone app projects to do the actual file manipulation
-				output.Text = DependencyService.Get<ISaveAndLoad>().LoadText("temp.txt");
+				output.Text = await DependencyService.Get<ISaveAndLoad>().LoadTextAsync("temp.txt");
+				loadButton.IsEnabled = saveButton.IsEnabled = true;
 			};
 
 			var buttonLayout = new StackLayout {

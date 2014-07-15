@@ -12,18 +12,28 @@ namespace WorkingWithFiles.Android
 	{
 		#region ISaveAndLoad implementation
 
-		public void SaveText (string filename, string text)
+		public async Task SaveTextAsync (string filename, string text)
 		{
-			var documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.Personal); // Documents folder
-			var filePath = Path.Combine (documentsPath, filename);
-			System.IO.File.WriteAllText (filePath, text);
+			var docsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+			var path = Path.Combine(docsPath, filename);
+
+			using (StreamWriter sw = File.CreateText(path))
+			{
+				await sw.WriteAsync(text);
+			}
 		}
 
-		public string LoadText (string filename)
+		public async Task<string> LoadTextAsync (string filename)
 		{
-			var documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.Personal); // Documents folder
-			var filePath = Path.Combine (documentsPath, filename);
-			return System.IO.File.ReadAllText (filePath);
+			string text;
+			var docsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+			var path = Path.Combine(docsPath, filename);
+
+			using (StreamReader sr = File.OpenText(path))
+			{
+				text = await sr.ReadToEndAsync();
+			}
+			return text;
 		}
 
 		#endregion
