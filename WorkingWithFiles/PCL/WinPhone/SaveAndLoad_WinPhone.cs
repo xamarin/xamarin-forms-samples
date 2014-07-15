@@ -23,7 +23,7 @@ namespace WorkingWithFiles.WinPhone
 			}
         }
 
-		async Task<string> LoadTextAsync (string filename)
+		public async Task<string> LoadTextAsync (string filename)
 		{
 			StorageFolder localFolder = ApplicationData.Current.LocalFolder;
 			IStorageFile file = await localFolder.GetFileAsync(filename);
