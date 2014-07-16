@@ -16,14 +16,15 @@ namespace WorkingWithImages
 			// NOTE: uncomment the relevant page that you'd like to test
 			//
 
-            return new LocalImages();
-//          return new LocalImagesXaml();
-//          return new DownloadImages();
-//			return new DownloadImagesXaml();
-//			return new EmbeddedImages ();
-//			return new EmbeddedImagesXaml ();
+			// HACK the NavigationPage has been added to get around the tint bug in Xamarin.Forms 1.2.1
+			return new NavigationPage(new LocalImages());
+//          return new NavigationPage(LocalImagesXaml());
+//          return new NavigationPage(DownloadImages());
+//			return new NavigationPage(DownloadImagesXaml());
+//			return new NavigationPage(EmbeddedImages ());
+//			return new NavigationPage(EmbeddedImagesXaml ());
 
-//			return new LoadingPlaceholder ();
+//			return new NavigationPage(LoadingPlaceholder ());
 
 		}
     }

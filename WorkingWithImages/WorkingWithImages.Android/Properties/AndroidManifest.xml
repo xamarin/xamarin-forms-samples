@@ -3,4 +3,5 @@
 	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="19" />
 	<application android:icon="@drawable/icon" android:label="Working with Images">
 	</application>
+	<uses-permission android:name="android.permission.INTERNET" />
 </manifest>
