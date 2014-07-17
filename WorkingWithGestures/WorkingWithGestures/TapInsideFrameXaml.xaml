@@ -20,7 +20,7 @@
 	  
 	</Image>
 
-    <Frame OutlineColor="Accent"
+	<Frame OutlineColor="Accent"
            BackgroundColor="Transparent"
            Padding="20, 20"
            HorizontalOptions="Center"

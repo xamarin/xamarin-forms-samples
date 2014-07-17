@@ -7,14 +7,18 @@ namespace WorkingWithGestures
 	{
 		public static Page GetMainPage ()
 		{	
+			var tabs = new TabbedPage ();
+
 			// demonstrates an Image tap (and changing the image)
-			return new TapInsideImage ();
+			tabs.Children.Add (new TapInsideImage {Title = "Image", Icon = "csharp.png" });
 
 			// demonstrates adding GestureRecognizer to a Frame
-//			return new TapInsideFrame ();
+			tabs.Children.Add ( new TapInsideFrame {Title = "Frame", Icon = "csharp.png" });
 
 			// demonstrates using Xaml, Command and databinding
-//			return new TapInsideFrameXaml ();
+			tabs.Children.Add (new TapInsideFrameXaml {Title = "In Xaml", Icon = "xaml.png" });
+
+			return tabs;
 		}
 	}
 }
