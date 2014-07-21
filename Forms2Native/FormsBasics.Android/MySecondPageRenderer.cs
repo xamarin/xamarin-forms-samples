@@ -24,10 +24,12 @@ namespace Forms2Native
 	public class MySecondPageRenderer : PageRenderer
 	{
 		Android.Views.View view;
-		protected override void OnModelChanged (VisualElement oldModel, VisualElement newModel)
+
+		protected override void OnElementChanged (ElementChangedEventArgs<Page> e)
 		{
-			base.OnModelChanged (oldModel, newModel);
-			var page = newModel as MySecondPage;
+			base.OnElementChanged (e);
+		
+			var page = e.NewElement as MySecondPage;
 
 			// this is a ViewGroup - so should be able to load an AXML file and FindView<>
 			var activity = this.Context as Activity;

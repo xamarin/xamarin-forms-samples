@@ -16,11 +16,11 @@ namespace Forms2Native
 	/// </summary>
 	public class MyThirdPageRenderer : PageRenderer
 	{
-		protected override void OnModelSet (Xamarin.Forms.VisualElement model)
+		protected override void OnElementChanged (VisualElementChangedEventArgs e)
 		{
-			base.OnModelSet (model);
+			base.OnElementChanged (e);
 
-			var page = model as MyThirdPage;
+			var page = e.NewElement as MyThirdPage;
 		
 			var hostViewController = ViewController;
 

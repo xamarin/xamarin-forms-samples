@@ -18,11 +18,11 @@ namespace Forms2Native
 		UILabel label;
 		String heading;
 
-		protected override void OnModelSet (Xamarin.Forms.VisualElement model)
+		protected override void OnElementChanged (VisualElementChangedEventArgs e)
 		{
-			base.OnModelSet (model);
+			base.OnElementChanged (e);
 
-			var page = model as MySecondPage;
+			var page = e.NewElement as MySecondPage;
 			var view = NativeView;
 
 			var viewController = ViewController;

@@ -23,11 +23,10 @@ namespace Forms2Native
 	/// </summary>
 	public class MyThirdPageRenderer : PageRenderer
 	{
-		Android.Views.View view;
-		protected override void OnModelChanged (VisualElement oldModel, VisualElement newModel)
+		protected override void OnElementChanged (ElementChangedEventArgs<Page> e)
 		{
-			base.OnModelChanged (oldModel, newModel);
-
+			base.OnElementChanged (e);
+		
 			// this is a ViewGroup - so should be able to load an AXML file and FindView<>
 			var activity = this.Context as Activity;
 
