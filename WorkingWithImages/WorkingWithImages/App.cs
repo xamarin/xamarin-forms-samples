@@ -16,16 +16,23 @@ namespace WorkingWithImages
 			// NOTE: uncomment the relevant page that you'd like to test
 			//
 
-			// HACK the NavigationPage has been added to get around the tint bug in Xamarin.Forms 1.2.1
-			return new NavigationPage(new LocalImages());
-//          return new NavigationPage(LocalImagesXaml());
-//          return new NavigationPage(DownloadImages());
-//			return new NavigationPage(DownloadImagesXaml());
-//			return new NavigationPage(EmbeddedImages ());
-//			return new NavigationPage(EmbeddedImagesXaml ());
+			// C# examples
+			var csTab = new TabbedPage ();
+			csTab.Children.Add(new LocalImages {Title = "Local", Icon="csharp.png"});
+			csTab.Children.Add(new DownloadImages {Title = "Download", Icon="csharp.png"});
+			csTab.Children.Add(new EmbeddedImages {Title = "Embedded", Icon="csharp.png"});
+//			return csTab;
 
-//			return new NavigationPage(LoadingPlaceholder ());
 
+			// Xaml examples
+			var xamlTab = new TabbedPage ();
+			xamlTab.Children.Add(new LocalImagesXaml { Title = "Local", Icon="xaml.png"});
+			xamlTab.Children.Add(new DownloadImagesXaml {Title = "Downloaded", Icon="xaml.png"});
+			xamlTab.Children.Add(new EmbeddedImagesXaml {Title = "Embedded", Icon="xaml.png"});
+			return xamlTab;
+
+
+			//return new LoadingPlaceholder ());
 		}
     }
 }

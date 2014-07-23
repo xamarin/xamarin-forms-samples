@@ -119,6 +119,8 @@
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\waterfront.jpg" />
     <BundleResource Include="Resources\waterfront%402x.jpg" />
+    <BundleResource Include="Resources\csharp.png" />
+    <BundleResource Include="Resources\xaml.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

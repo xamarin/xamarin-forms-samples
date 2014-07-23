@@ -15,7 +15,7 @@ namespace WorkingWithImages
 			var embeddedImage = new Image { Aspect = Aspect.AspectFit };
 
 			// resource identifiers start with assembly-name DOT filename
-			embeddedImage.Source = ImageSource.FromResource("beach.jpg");
+			embeddedImage.Source = ImageSource.FromResource("WorkingWithImages.beach.jpg");
             
             Content = new StackLayout
             {

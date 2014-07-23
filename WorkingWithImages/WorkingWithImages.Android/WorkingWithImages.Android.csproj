@@ -87,6 +87,8 @@
     <AndroidResource Include="Resources\drawable-mdpi\waterfront.jpg" />
     <AndroidResource Include="Resources\drawable-xhdpi\waterfront.jpg" />
     <AndroidResource Include="Resources\drawable-xxhdpi\waterfront.jpg" />
+    <AndroidResource Include="Resources\drawable\csharp.png" />
+    <AndroidResource Include="Resources\drawable\xaml.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />

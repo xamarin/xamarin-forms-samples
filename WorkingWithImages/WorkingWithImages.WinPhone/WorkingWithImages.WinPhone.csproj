@@ -149,6 +149,8 @@
     <BundleResource Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <BundleResource Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="README_FIRST.txt" />
+    <Content Include="csharp.png" />
+    <Content Include="xaml.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">
