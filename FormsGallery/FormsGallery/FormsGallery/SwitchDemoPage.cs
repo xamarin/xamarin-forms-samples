@@ -12,7 +12,7 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "Switch",
-                Font = Font.BoldSystemFontOfSize(50),
+                Font = Font.SystemFontOfSize(50, FontAttributes.Bold),
                 HorizontalOptions = LayoutOptions.Center
             };
 

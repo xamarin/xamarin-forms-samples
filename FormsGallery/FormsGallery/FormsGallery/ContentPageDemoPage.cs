@@ -10,7 +10,7 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "ContentPage",
-                Font = Font.BoldSystemFontOfSize(40),
+                Font = Font.SystemFontOfSize(40, FontAttributes.Bold),
                 HorizontalOptions = LayoutOptions.Center
             };
 

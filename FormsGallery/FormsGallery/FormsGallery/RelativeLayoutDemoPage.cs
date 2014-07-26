@@ -10,7 +10,7 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "RelativeLayout",
-                Font = Font.BoldSystemFontOfSize(40),
+                Font = Font.SystemFontOfSize(40, FontAttributes.Bold),
                 XAlign = TextAlignment.Center
             };
 

@@ -13,7 +13,7 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "ProgressBar",
-                Font = Font.BoldSystemFontOfSize(50),
+                Font = Font.SystemFontOfSize(50, FontAttributes.Bold),
                 HorizontalOptions = LayoutOptions.Center
             };
 
