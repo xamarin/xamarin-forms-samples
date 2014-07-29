@@ -53,9 +53,7 @@
     <Compile Include="LoadingPlaceholder.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="beach.jpg">
-      <LogicalName>beach.jpg</LogicalName>
-    </EmbeddedResource>
+    <EmbeddedResource Include="beach.jpg" />
     <EmbeddedResource Include="DownloadImagesXaml.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
