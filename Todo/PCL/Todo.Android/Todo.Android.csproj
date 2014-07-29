@@ -88,7 +88,6 @@
     <AndroidResource Include="Resources\drawable\check2x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <Import Project="../packages/Xamarin.Forms.1.0.6186/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.0.6186\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
   <ItemGroup>
     <ProjectReference Include="..\Todo\Todo.csproj">
       <Project>{5F610EA1-9E35-4870-AE9B-5E18B4B4D5B8}</Project>
@@ -96,10 +95,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
-  <Import Project="../packages/Xamarin.Forms.1.1.0.6202/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-  </Target>
+  <Import Project="../packages/Xamarin.Forms.1.2.2.6241-pre3/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets" />
+
 </Project>

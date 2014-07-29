@@ -24,7 +24,7 @@
     <ValidateXaml>true</ValidateXaml>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
-    <NuGetPackageImportStamp>0b1d740e</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>e5616cd6</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -123,6 +123,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="add.png" />
     <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -171,13 +172,13 @@
       <HintPath>..\packages\SQLite.Net.Platform.WindowsPhone8.2.3.0\lib\windowsphone8\x86\SQLite.Net.Platform.WindowsPhone8.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\packages\Xamarin.Forms.1.1.0.6201\lib\WP80\Xamarin.Forms.Core.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.1.2.2.6241-pre3\lib\WP80\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform.WP8">
-      <HintPath>..\packages\Xamarin.Forms.1.1.0.6201\lib\WP80\Xamarin.Forms.Platform.WP8.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.1.2.2.6241-pre3\lib\WP80\Xamarin.Forms.Platform.WP8.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\packages\Xamarin.Forms.1.1.0.6201\lib\WP80\Xamarin.Forms.Xaml.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.1.2.2.6241-pre3\lib\WP80\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -195,15 +196,15 @@
   </Target>
   -->
   <ProjectExtensions />
-  <Import Project="..\packages\Xamarin.Forms.1.1.0.6201\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.1.0.6201\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Xamarin.Forms.1.1.0.6201\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.1.1.0.6201\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets'))" />
     <Error Condition="!Exists('..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.props'))" />
     <Error Condition="!Exists('..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.targets'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.1.2.2.6241-pre3\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.1.2.2.6241-pre3\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets'))" />
   </Target>
   <Import Project="..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.targets" Condition="Exists('..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.targets')" />
   <Import Project="..\Todo\Todo.projitems" Label="Shared" Condition="Exists('..\Todo\Todo.projitems')" />
+  <Import Project="..\packages\Xamarin.Forms.1.2.2.6241-pre3\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.2.6241-pre3\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
 </Project>

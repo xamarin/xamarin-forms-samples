@@ -77,5 +77,5 @@
   </ItemGroup>
   <Import Project="..\Todo\Todo.projitems" Label="Shared" Condition="Exists('..\Todo\Todo.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <Import Project="../packages/Xamarin.Forms.1.0.6186/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets" />
+  <Import Project="../packages/Xamarin.Forms.1.2.2.6241-pre3/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets" />
 </Project>
