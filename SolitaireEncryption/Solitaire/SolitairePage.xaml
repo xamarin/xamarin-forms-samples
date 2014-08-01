@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			xmlns:local="clr-namespace:Solitaire;assembly=Solitaire"
+			x:Class="Solitaire.SolitairePage"
+			Title="Solitaire">
+	<StackLayout Padding="5, 20, 5, 5">
+
+		<Label  Text="Solitaire♠♥♦♣" Font="Large" />
+
+		<Label Text="Encryption algorithm from the book Cryptonomicon by Bruce Schneier. Enter the plain text and key to Encrypt, or the ciphertext and key to Decrypt." Font="Micro" />
+
+		<Entry x:Name="plaintext" Placeholder="plaintext or ciphertext" />
+
+		<Entry x:Name="key" Placeholder="key" />
+
+		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+			<Button Text="Encrypt" Clicked="EncryptClicked" HorizontalOptions="FillAndExpand"/>
+			<Button Text="Decrypt" Clicked="DecryptClicked" HorizontalOptions="FillAndExpand" />
+		</StackLayout>
+
+		<Entry x:Name="ciphertext" Placeholder="result appears here" />
+
+		<local:TweetButton x:Name="Tweet" Text="Tweet with blog link" IsVisible="true" />
+
+	</StackLayout>
+</ContentPage>
