@@ -10,6 +10,6 @@ This sample illustrates the inclusion of a Unit Test project in a Xamarin.Forms 
 Author
 ------
 
-Craig Dunn ^
+Craig Dunn
 
 *^ The original port of this algorithm was done (by me) in 2002, and I've used that 2002-era code *unchanged* in this mobile app. It's kinda cool that 12-year-old C# code can just be dropped into an app that runs on iOS, Android, and Windows Phone.*
