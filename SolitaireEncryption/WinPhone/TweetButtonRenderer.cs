@@ -1,4 +1,5 @@
-﻿using Solitaire;
+﻿using Microsoft.Phone.Tasks;
+using Solitaire;
 using Solitaire.WinPhone;
 using System;
 using System.Collections.Generic;
@@ -20,8 +21,23 @@ namespace Solitaire.WinPhone
 
             var tweetButton = e.NewElement as TweetButton;
 
-            // sadly I don't know an easy way to trigger a Tweet in Windows Phone 8 :-(
-            Control.Visibility = System.Windows.Visibility.Collapsed;
+            Control.Click += async (object sender, System.Windows.RoutedEventArgs ea) =>
+            {
+                // not sure which of these two methods is preferable for tweeting
+
+                var message = tweetButton.FormattedText + " " + tweetButton.AttachedUrl;
+                // http://developer.nokia.com/community/wiki/URI_Association_Schemes_List
+                var success = await Windows.System.Launcher.LaunchUriAsync(
+                    new Uri("twitter:tweet?text=" + message + "")
+                );
+
+                //ShareLinkTask twitter = new ShareLinkTask();
+                //twitter.Title = "Tweet the Code";
+                //twitter.LinkUri = new Uri(tweetButton.AttachedUrl, UriKind.Absolute);
+                //twitter.Message = tweetButton.FormattedText;
+                //twitter.Show();
+
+            };
         }
     }
 }
