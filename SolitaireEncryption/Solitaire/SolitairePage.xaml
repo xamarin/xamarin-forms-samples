@@ -21,7 +21,7 @@
 
 		<Entry x:Name="ciphertext" Placeholder="result appears here" />
 
-		<local:TweetButton x:Name="Tweet" Text="Tweet with blog link" IsVisible="false" />
+		<local:TweetButton x:Name="Tweet" Text="Tweet with blog link" IsVisible="true" />
 
 	</StackLayout>
 </ContentPage>
