@@ -28,9 +28,11 @@ namespace Forms2Native
 
 			if (Device.OS == TargetPlatform.iOS) {
 				button2 = new Button { Text = "Click to see a native UIViewController" };
-			} else {
+			} else if (Device.OS == TargetPlatform.Android) {
 				button2 = new Button { Text = "Click to see an Intent work" };
-			}
+			} else {
+                button2 = new Button { Text = "Click to see a Windows Phone Page" };
+            }
 			button2.Clicked += (s, e) => Navigation.PushAsync(new MyThirdPage());
 			
 			Content = new StackLayout {

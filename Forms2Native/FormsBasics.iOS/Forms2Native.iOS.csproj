@@ -132,7 +132,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="MySecondPageRenderer.cs" />
-    <Compile Include="MyThirdPage.cs" />
+    <Compile Include="MyThirdPageRenderer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
