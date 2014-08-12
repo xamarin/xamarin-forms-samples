@@ -30,11 +30,12 @@ namespace WorkingWithFonts
 
 			var myLabel = new MyLabel {
 				Text = "MyLabel for Android!",
-				Font = Device.OnPlatform (
-					Font.SystemFontOfSize (NamedSize.Small),
-					Font.SystemFontOfSize (NamedSize.Medium), // will get overridden in custom Renderer
-					Font.SystemFontOfSize (NamedSize.Large)
-				),
+				// temporarily disable the size setting, since it's breaking the custom font on 1.2.2 :-(
+//				Font = Device.OnPlatform (
+//					Font.SystemFontOfSize (NamedSize.Small),
+//					Font.SystemFontOfSize (NamedSize.Medium), // will get overridden in custom Renderer
+//					Font.SystemFontOfSize (NamedSize.Large)
+//				),
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 			};
