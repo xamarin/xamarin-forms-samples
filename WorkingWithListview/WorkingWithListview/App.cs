@@ -6,8 +6,8 @@ namespace WorkingWithListview
 	public class App
 	{
 		public static Page GetMainPage ()
-		{	
-			var tabs = new TabbedPage ();
+		{
+            var tabs = new TabbedPage { Title = "Working with ListView" };
 
 			tabs.Children.Add (new BasicListPage {Title="Basic", Icon = "csharp.png" });
 
