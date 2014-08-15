@@ -31,6 +31,8 @@ namespace WorkingWithListview
 
 			tabsXaml.Children.Add (new BasicListXaml {Title="BasicX", Icon = "xaml.png" });
 
+			tabsXaml.Children.Add (new UnevenRowsXaml {Title="UnevenX", Icon = "xaml.png" });
+
 			tabsXaml.Children.Add (new CustomCellXaml {Title="ButtonX", Icon = "xaml.png" });
 
 //			return tabsXaml;

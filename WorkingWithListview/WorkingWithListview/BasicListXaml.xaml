@@ -4,6 +4,8 @@
 			x:Class="WorkingWithListview.BasicListXaml"
 			Padding="0,20,0,0">
 
-	<ListView ItemsSource="{Binding .}" />
+	<ListView x:Name="listView" 
+			  ItemTapped="OnItemTapped"
+			  ItemsSource="{Binding .}" />
 
 </ContentPage>

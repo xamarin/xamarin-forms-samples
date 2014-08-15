@@ -11,7 +11,6 @@ namespace WorkingWithListview
 			var label1 = new Label { Text = "Label 1", Font = Font.SystemFontOfSize(NamedSize.Small) };
 			label1.SetBinding(Label.TextProperty, new Binding("."));
 
-
 			View = new StackLayout {
 				Orientation = StackOrientation.Vertical,
 				VerticalOptions = LayoutOptions.StartAndExpand,
