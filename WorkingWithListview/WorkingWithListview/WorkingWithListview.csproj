@@ -40,11 +40,17 @@
     <Compile Include="CustomCell.cs" />
     <Compile Include="UnevenRowsPage.cs" />
     <Compile Include="UnevenRowsCell.cs" />
+    <Compile Include="CustomCellXaml.xaml.cs">
+      <DependentUpon>CustomCellXaml.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
   <ItemGroup>
     <EmbeddedResource Include="BasicListXaml.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomCellXaml.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
