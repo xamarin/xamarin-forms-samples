@@ -7,4 +7,5 @@
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
+	<brief>This sample demonstrates how to create an alphabetically ordered list with labelled sections.</brief>
 </SampleMetadata>
