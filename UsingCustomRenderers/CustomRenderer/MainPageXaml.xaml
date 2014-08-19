@@ -8,7 +8,7 @@
 	    VerticalOptions="CenterAndExpand"
 	    HorizontalOptions="CenterAndExpand">
 	    <Label Text="Hello, Custom Renderer!" />
-        <local:MyEntry Text="In Shared Xaml" />
+        <local:MyEntry x:Name="custom" Text="In Shared Xaml" />
     </StackLayout>
 </ContentPage>
 

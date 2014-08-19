@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 
@@ -9,6 +9,8 @@ namespace CustomRenderer
 		public MainPageXaml ()
 		{
 			InitializeComponent ();
+
+			custom.Text = "In Shared Xaml, with code too";
 		}
 	}
 }
