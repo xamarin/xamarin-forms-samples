@@ -16,12 +16,19 @@ namespace WorkingWithListview
 
 			listView.ItemsSource = new [] { "a", "b", "c" };
 
+			// Using ItemTapped
 			listView.ItemTapped += (sender, e) => {
-				if (e == null) return; // has been set to null, do not 'process' tapped event
 				Debug.WriteLine("Tapped: " + e.Item);
 				((ListView)sender).SelectedItem = null; // de-select the row
 			};
-				
+
+			// If using ItemSelected
+//			listView.ItemSelected += (sender, e) => {
+//				if (e.SelectedItem == null) return;
+//				Debug.WriteLine("Selected: " + e.SelectedItem);
+//				((ListView)sender).SelectedItem = null; // de-select the row
+//			};
+
 			Padding = new Thickness (0,20,0,0);
 			Content = listView;
 		}
