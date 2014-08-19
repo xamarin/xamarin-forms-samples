@@ -7,4 +7,6 @@
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
+	<Brief>Xamarin.Forms provides two solution templates for building cross-platform applications: PCL or Shared Project. 
+	This Todo sample application is provided using both templates.</Brief>
 </SampleMetadata>
