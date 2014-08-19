@@ -7,4 +7,6 @@
 	<SupportedPlatforms>Android, iOS, windows-rt</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
+	<Brief>XAML—the eXtensible Application Markup Language—allows developers to define user interfaces in Xamarin.Forms applications using markup rather than code. These samples demonstrate how to utilize XAML with Xamarin.Forms. 
+</Brief>
 </SampleMetadata>
