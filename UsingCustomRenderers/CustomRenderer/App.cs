@@ -7,8 +7,8 @@ namespace CustomRenderer
 	{
 		public static Page GetMainPage ()
 		{	
-			return new MainPage ();
-			//			return new MainPageXaml (); // uncomment this to test the Xaml version
+//			return new MainPage ();
+			return new MainPageXaml (); // uncomment this to test the Xaml version
 		}
 	}
 }
