@@ -93,20 +93,20 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
-    <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\packages\Xamarin.Forms.1.2.2.6240-pre2\lib\MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Maps.iOS">
+      <HintPath>..\packages\Xamarin.Forms.Maps.1.2.2.6243\lib\MonoTouch10\Xamarin.Forms.Maps.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Maps">
-      <HintPath>..\packages\Xamarin.Forms.Maps.1.2.2.6240-pre2\lib\MonoTouch10\Xamarin.Forms.Maps.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Maps.iOS">
-      <HintPath>..\packages\Xamarin.Forms.Maps.1.2.2.6240-pre2\lib\MonoTouch10\Xamarin.Forms.Maps.iOS.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.Maps.1.2.2.6243\lib\MonoTouch10\Xamarin.Forms.Maps.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform.iOS">
-      <HintPath>..\packages\Xamarin.Forms.1.2.2.6240-pre2\lib\MonoTouch10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.1.2.2.6243\lib\MonoTouch10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.1.2.2.6243\lib\MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\packages\Xamarin.Forms.1.2.2.6240-pre2\lib\MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.1.2.2.6243\lib\MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +140,5 @@
     <Compile Include="AppDelegate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
-  <Import Project="..\packages\Xamarin.Forms.1.2.2.6240-pre2\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.2.6240-pre2\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
-
+  <Import Project="..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
 </Project>
