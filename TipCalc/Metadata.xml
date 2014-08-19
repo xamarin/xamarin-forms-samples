@@ -7,4 +7,6 @@
 	<SupportedPlatforms>Android, iOS, windows-rt</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
+	<Brief>TipCalc is based on an existing iOS and Android sample but has been completely rewritten for Xamarin.Forms using XAML and data-binding. 
+	This new version now builds for iOS, Android, and Windows Phone.</Brief>
 </SampleMetadata>
