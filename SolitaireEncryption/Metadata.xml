@@ -7,4 +7,5 @@
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
+	<Brief>This sample is a C# port of the Solitaire encryption algorithm featured in Neal Stephenson's novel Cryptonomicon.</Brief>
 </SampleMetadata>
