@@ -7,4 +7,5 @@
 	<SupportedPlatforms>Android, iOS, windows-rt</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>false</Gallery>
+	<brief>MobileCRM is a pre-built Xamarin.Forms app for Customer Relationship Management.</brief>
 </SampleMetadata>
