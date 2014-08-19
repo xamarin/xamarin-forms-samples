@@ -7,4 +7,5 @@
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>false</Gallery>
+	<Brief>These samples demonstrate how to work with Images using Xamarin Forms.</Brief>
 </SampleMetadata>
