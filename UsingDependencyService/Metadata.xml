@@ -7,4 +7,5 @@
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>false</Gallery>
+	<Brief>The sample shows how to implement text to speech on iOS, Android and Windows Phone using Xamarin.Forms but calling out to the native platform SDKs for speech.</Brief>
 </SampleMetadata>
