@@ -7,4 +7,5 @@
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>false</Gallery>
+	<Brief>This sample demonstrates the ability to override the renderer in Xamarin.Forms.</Brief>
 </SampleMetadata>
