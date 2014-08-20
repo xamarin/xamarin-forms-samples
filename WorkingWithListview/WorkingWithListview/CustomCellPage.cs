@@ -14,7 +14,6 @@ namespace WorkingWithListview
 			listView.ItemTemplate = new DataTemplate(typeof(CustomCell));
 
 			listView.ItemTapped += (sender, e) => {
-				if (e == null) return; // has been set to null, do not 'process' tapped event
 				DisplayAlert("Tapped", e.Item + " row was tapped", "OK");
 				((ListView)sender).SelectedItem = null; // de-select the row
 			};

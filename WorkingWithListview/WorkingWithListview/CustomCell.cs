@@ -4,8 +4,11 @@ using System.Diagnostics;
 
 namespace WorkingWithListview
 {
-	// for custom renderer on Android
+	/// <summary>
+	/// For custom renderer on Android (only)
+	/// </summary>
 	public class ListButton : Button { }
+
 
 	public class CustomCell : ViewCell
 	{
