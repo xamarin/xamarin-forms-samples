@@ -129,6 +129,7 @@
     <BundleResource Include="Resources\glyphish_07_map_marker.png" />
     <BundleResource Include="Resources\glyphish_103_map.png" />
     <BundleResource Include="Resources\glyphish_13_target.png" />
+    <BundleResource Include="Resources\glyphish_74_location.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

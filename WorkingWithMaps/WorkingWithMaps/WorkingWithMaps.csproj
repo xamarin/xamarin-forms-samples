@@ -36,6 +36,7 @@
     <Compile Include="MapPage.cs" />
     <Compile Include="GeocoderPage.cs" />
     <Compile Include="PinPage.cs" />
+    <Compile Include="MapAppPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Maps">

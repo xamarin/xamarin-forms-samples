@@ -167,7 +167,7 @@ Global
 		{D901F7FB-A6DD-495B-90E9-C91AB93D517E}.Release|x86.ActiveCfg = Release|iPhone
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Android\WorkingWithFonts.Android.csproj
+		StartupItem = iOS\WorkingWithFonts.iOS.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

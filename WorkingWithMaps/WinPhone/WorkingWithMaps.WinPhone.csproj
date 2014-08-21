@@ -140,15 +140,16 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <BundleResource Include="glyphish_07_map_marker.png" />
-    <BundleResource Include="glyphish_13_target.png" />
-    <BundleResource Include="glyphish_103_map.png" />
     <BundleResource Include="Toolkit.Content\ApplicationBar.Select.png" />
     <BundleResource Include="Toolkit.Content\ApplicationBar.Delete.png" />
     <BundleResource Include="Toolkit.Content\ApplicationBar.Check.png" />
     <BundleResource Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <BundleResource Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="README_FIRST.txt" />
+    <Content Include="glyphish_07_map_marker.png" />
+    <Content Include="glyphish_13_target.png" />
+    <Content Include="glyphish_103_map.png" />
+    <Content Include="glyphish_74_location.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">
