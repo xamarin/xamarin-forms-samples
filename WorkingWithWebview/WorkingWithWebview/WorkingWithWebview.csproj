@@ -36,6 +36,7 @@
     <Compile Include="WebPage.cs" />
     <Compile Include="LocalHtml.cs" />
     <Compile Include="LocalHtmlBaseUrl.cs" />
+    <Compile Include="WebAppPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
