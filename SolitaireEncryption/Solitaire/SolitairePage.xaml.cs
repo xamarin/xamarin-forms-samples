@@ -20,7 +20,8 @@ namespace Solitaire
 			var ps = new PontifexSolitaire (key.Text);
 			ciphertext.Text = ps.Encrypt (plaintext.Text).Pad5() ;
 
-			Tweet.Code = ciphertext.Text;
+			// was for contest (now closed) http://blog.xamarin.com/xamarin-acquires-petzold/
+			//Tweet.Code = ciphertext.Text;
 		}
 
 		public async void DecryptClicked (object sender, EventArgs e) {
@@ -31,7 +32,8 @@ namespace Solitaire
 			var ps = new PontifexSolitaire (key.Text);
 			ciphertext.Text = ps.Decrypt (plaintext.Text).Pad5() ;
 
-			Tweet.Code = ciphertext.Text;
+			// was for contest (now closed) http://blog.xamarin.com/xamarin-acquires-petzold/
+			//Tweet.Code = ciphertext.Text;
 		}
 
 		// input validation
