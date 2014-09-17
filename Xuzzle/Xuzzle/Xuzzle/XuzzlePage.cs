@@ -32,12 +32,6 @@ namespace Xuzzle
                 VerticalOptions = LayoutOptions.Center
             };
 
-            // Prepare for tap recognition
-            TapGestureRecognizer tapGestureRecognizer = new TapGestureRecognizer
-            {
-                TappedCallback = OnSquareTapped
-            };
-
             // Create XuzzleSquare's for all the rows and columns.
             string text = "{XAMARIN.FORMS}";
             string winText = "CONGRATULATIONS";
@@ -56,6 +50,13 @@ namespace Xuzzle
                     {
                         Row = row,
                         Col = col
+                    };
+
+                    // Add tap recognition
+                    TapGestureRecognizer tapGestureRecognizer = new TapGestureRecognizer
+                    {
+                        Command = new Command(OnSquareTapped),
+                        CommandParameter = square
                     };
                     square.GestureRecognizers.Add(tapGestureRecognizer);
 
@@ -78,7 +79,7 @@ namespace Xuzzle
             // Label to display elapsed time.
             timeLabel = new Label
             {
-                Font = Font.BoldSystemFontOfSize(NamedSize.Large),
+                Font = Font.SystemFontOfSize(NamedSize.Large, FontAttributes.Bold),
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
@@ -125,7 +126,7 @@ namespace Xuzzle
             squareSize = Math.Min(width, height) / NUM;
             absoluteLayout.WidthRequest = NUM * squareSize;
             absoluteLayout.HeightRequest = NUM * squareSize;
-            Font font = Font.BoldSystemFontOfSize(0.4 * squareSize);
+            Font font = Font.SystemFontOfSize(0.4 * squareSize, FontAttributes.Bold);
 
             foreach (View view in absoluteLayout.Children)
             {
@@ -140,13 +141,13 @@ namespace Xuzzle
             }
         }
 
-        async void OnSquareTapped(View view, object args)
+        async void OnSquareTapped(object parameter)
         {
             if (isBusy)
                 return;
 
             isBusy = true;
-            XuzzleSquare tappedSquare = (XuzzleSquare)view;
+            XuzzleSquare tappedSquare = (XuzzleSquare)parameter;
             await ShiftIntoEmpty (tappedSquare.Row, tappedSquare.Col);
             isBusy = false;
 
