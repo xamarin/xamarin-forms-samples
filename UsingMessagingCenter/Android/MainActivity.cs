@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 
 using Xamarin.Forms.Platform.Android;
+using Android.Content.PM;
 
 
 namespace UsingMessagingCenter.Android
