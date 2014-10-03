@@ -18,6 +18,7 @@ namespace ScaleAndRotate.WinPhone
         public MainPage()
         {
             InitializeComponent();
+            SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             Forms.Init();
             Content = ScaleAndRotate.App.GetMainPage().ConvertPageToUIElement(this);

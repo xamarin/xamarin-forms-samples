@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
 using Xamarin.Forms;
 
 namespace ScaleAndRotate
@@ -12,28 +10,8 @@ namespace ScaleAndRotate
             Command<Type> navigateCommand = 
                 new Command<Type>(async (Type pageType) =>
                 {
-                    if (pageType == null)
-                    {
-                        await this.DisplayAlert("ScaleAndRotate", 
-                                    "Page not yet implemented", "OK", null);
-                        return;
-                    }
-
-                    // Get all the constructors of the page type.
-                    IEnumerable<ConstructorInfo> constructors = 
-                            pageType.GetTypeInfo().DeclaredConstructors;
-
-                    foreach (ConstructorInfo constructor in constructors)
-                    {
-                        // Check if the constructor has no parameters.
-                        if (constructor.GetParameters().Length == 0)
-                        {
-                            // If so, instantiate it, and navigate to it.
-                            Page page = (Page)constructor.Invoke(null);
-                            await this.Navigation.PushAsync(page);
-                            break;
-                        }
-                    }
+                    Page page = (Page)Activator.CreateInstance(pageType);
+                    await this.Navigation.PushAsync(page);
                 });
 
             this.Title = "Scale and Rotate";
