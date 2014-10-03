@@ -21,7 +21,7 @@ namespace XamlSamples
             Button button = (Button)sender;
             await DisplayAlert("Clicked!",
                 "The button labeled '" + button.Text + "' has been clicked",
-                "OK", null);
+                "OK");
         }
     }
 }

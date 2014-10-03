@@ -5,16 +5,16 @@
              Title="Slider Bindings Page">
 
   <StackLayout>
-    <Slider x:Name="slider"
-            Maximum="360"
-            VerticalOptions="CenterAndExpand" />
-
     <Label Text="ROTATION"
            BindingContext="{x:Reference Name=slider}"
            Rotation="{Binding Path=Value}"
            Font="Bold, Large"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+    
+    <Slider x:Name="slider"
+            Maximum="360"
+            VerticalOptions="CenterAndExpand" />
 
     <Label BindingContext="{x:Reference slider}"
            Text="{Binding Value, 

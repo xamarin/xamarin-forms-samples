@@ -9,7 +9,7 @@ namespace XamlSamples
             new Thickness(5, Device.OnPlatform(20, 0, 0), 5, 0);
 
         public static readonly Font TitleFont = 
-            Font.BoldSystemFontOfSize(Device.OnPlatform(35, 40, 50));
+            Font.SystemFontOfSize(Device.OnPlatform(35, 40, 50), FontAttributes.Bold);
 
         public static readonly Color BackgroundColor =
             Device.OnPlatform(Color.White, Color.Black, Color.Black);
