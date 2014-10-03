@@ -18,6 +18,7 @@ namespace TabbedPageDemo.WinPhone
         public MainPage()
         {
             InitializeComponent();
+            SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             Forms.Init();
             Content = TabbedPageDemo.App.GetMainPage().ConvertPageToUIElement(this);
