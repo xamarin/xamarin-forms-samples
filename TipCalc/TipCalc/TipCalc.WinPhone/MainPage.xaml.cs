@@ -18,6 +18,7 @@ namespace TipCalc.WinPhone
         public MainPage()
         {
             InitializeComponent();
+            SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             Forms.Init();
             Content = TipCalc.App.GetMainPage().ConvertPageToUIElement(this);

@@ -2,6 +2,7 @@
 
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
@@ -11,7 +12,8 @@ using Xamarin.Forms.Platform.Android;
 
 namespace TipCalc.Android
 {
-    [Activity(Label = "TipCalc", MainLauncher = true)]
+    [Activity(Label = "TipCalc", MainLauncher = true, 
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : AndroidActivity
     {
         protected override void OnCreate(Bundle bundle)

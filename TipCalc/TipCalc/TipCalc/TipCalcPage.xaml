@@ -1,9 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TipCalc;assembly=TipCalc"
-             x:Class="TipCalc.TipCalcPage"
-             Padding="5, 20, 5, 0">
+             x:Class="TipCalc.TipCalcPage">
+
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+                iOS="5, 20, 5, 0"
+                Android="5, 0, 5, 0"
+                WinPhone="5, 0, 5, 0" />
+  </ContentPage.Padding>
 
   <ContentPage.Resources>
     <ResourceDictionary>
@@ -66,9 +72,9 @@
     <!-- Row 3 -->
     <Slider Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
             Minimum="0" Maximum="100"
-            Value="{Binding TipPercent, 
+            Value="{Binding TipPercent,
                             Mode=TwoWay,
-                            Converter={StaticResource roundConverter,
+                            Converter={StaticResource roundConverter},
                             ConverterParameter=0.5}" />
 
     <!-- Row 4 -->
@@ -95,7 +101,7 @@
     <ContentView BackgroundColor="#40808080"
                  Grid.Row="5" Grid.Column="1"
                  Padding="10, 10, 40, 10">
-        <Label Text="{Binding Total, 
+      <Label Text="{Binding Total, 
                               StringFormat='{0:C}'}"
                Font="Large"
                XAlign="End" />
