@@ -28,7 +28,7 @@ namespace FormsGallery
             grid.Children.Add(new Label
                 {
                     Text = "Grid",
-                    Font = Font.BoldSystemFontOfSize(50),
+                    Font = Font.SystemFontOfSize(50, FontAttributes.Bold),
                     HorizontalOptions = LayoutOptions.Center
                 }, 0, 3, 0, 1);
 
@@ -85,9 +85,6 @@ namespace FormsGallery
                     XAlign = TextAlignment.Center,
                     YAlign = TextAlignment.Center
                 }, 2, 3);
-
-            // Accomodate iPhone status bar.
-            this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);
 
             // Build the page.
             this.Content = grid;

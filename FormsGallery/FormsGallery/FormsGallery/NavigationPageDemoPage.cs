@@ -13,7 +13,7 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "NavigationPage",
-                Font = Font.BoldSystemFontOfSize(40),
+                Font = Font.SystemFontOfSize(40, FontAttributes.Bold),
                 HorizontalOptions = LayoutOptions.Center
             };
 
@@ -52,9 +52,6 @@ namespace FormsGallery
             };
             button4.Clicked += async (sender, args) =>
                 await Navigation.PushAsync(new WebViewDemoPage());
-
-            // Accomodate iPhone status bar.
-            this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);
 
             // Build the page.
             this.Content = new StackLayout

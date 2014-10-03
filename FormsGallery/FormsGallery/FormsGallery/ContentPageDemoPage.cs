@@ -10,7 +10,7 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "ContentPage",
-                Font = Font.BoldSystemFontOfSize(40),
+                Font = Font.SystemFontOfSize(40, FontAttributes.Bold),
                 HorizontalOptions = LayoutOptions.Center
             };
 
@@ -35,9 +35,6 @@ namespace FormsGallery
                        "large one at the top)",
                 Font = Font.SystemFontOfSize(NamedSize.Large)
             };
-
-            // Accomodate iPhone status bar.
-            this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);
 
             // Build the page.
             this.Content = new StackLayout

@@ -14,7 +14,7 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "AbsoluteLayout",
-                Font = Font.BoldSystemFontOfSize(40),
+                Font = Font.SystemFontOfSize(40, FontAttributes.Bold),
                 HorizontalOptions = LayoutOptions.Center
             };
 
@@ -42,9 +42,6 @@ namespace FormsGallery
             absoluteLayout.Children.Add(text2);
             AbsoluteLayout.SetLayoutFlags(text2,
                 AbsoluteLayoutFlags.PositionProportional);
-
-            // Accomodate iPhone status bar.
-            this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);
 
             // Build the page.
             this.Content = new StackLayout

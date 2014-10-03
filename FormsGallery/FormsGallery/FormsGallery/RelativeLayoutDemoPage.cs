@@ -10,7 +10,7 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "RelativeLayout",
-                Font = Font.BoldSystemFontOfSize(40),
+                Font = Font.SystemFontOfSize(40, FontAttributes.Bold),
                 XAlign = TextAlignment.Center
             };
 
@@ -140,9 +140,6 @@ namespace FormsGallery
                 {
                     return parent.Height - 40;
                 }));
-
-            // Accomodate iPhone status bar.
-            this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);
 
             // Build the page.
             Grid grid = new Grid

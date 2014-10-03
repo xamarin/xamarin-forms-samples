@@ -10,7 +10,7 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "TableView for a menu",
-                Font = Font.BoldSystemFontOfSize(30),
+                Font = Font.SystemFontOfSize(30, FontAttributes.Bold),
                 HorizontalOptions = LayoutOptions.Center
             };
 
@@ -51,9 +51,6 @@ namespace FormsGallery
                         }
                     }
                 };
-
-            // Accomodate iPhone status bar.
-            this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);
 
             // Build the page.
             this.Content = new StackLayout

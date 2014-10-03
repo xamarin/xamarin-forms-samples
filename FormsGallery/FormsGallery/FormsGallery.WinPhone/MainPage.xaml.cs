@@ -18,6 +18,7 @@ namespace FormsGallery.WinPhone
         public MainPage()
         {
             InitializeComponent();
+            SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             Forms.Init();
             Xamarin.FormsMaps.Init();

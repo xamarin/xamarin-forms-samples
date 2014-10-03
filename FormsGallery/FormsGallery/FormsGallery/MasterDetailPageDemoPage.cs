@@ -10,7 +10,7 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "MasterDetailPage",
-                Font = Font.BoldSystemFontOfSize(30),
+                Font = Font.SystemFontOfSize(30, FontAttributes.Bold),
                 HorizontalOptions = LayoutOptions.Center
             };
 
@@ -84,8 +84,6 @@ namespace FormsGallery
 
             // Initialize the ListView selection.
             listView.SelectedItem = namedColors[0];
-
-            
         }
     }
 }

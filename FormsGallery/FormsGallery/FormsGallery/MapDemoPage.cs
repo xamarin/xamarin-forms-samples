@@ -23,7 +23,7 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "Map",
-                Font = Font.BoldSystemFontOfSize(50),
+                Font = Font.SystemFontOfSize(50, FontAttributes.Bold),
                 HorizontalOptions = LayoutOptions.Center
             };
 
@@ -53,9 +53,6 @@ namespace FormsGallery
                         Position = position
                     });
             }
-
-            // Accomodate iPhone status bar.
-            this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);
 
             // Build the page.
             this.Content = new StackLayout
