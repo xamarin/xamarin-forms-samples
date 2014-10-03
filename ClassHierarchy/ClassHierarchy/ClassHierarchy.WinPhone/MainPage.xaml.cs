@@ -18,6 +18,7 @@ namespace ClassHierarchy.WinPhone
         public MainPage()
         {
             InitializeComponent();
+            SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             Forms.Init();
             Content = ClassHierarchy.App.GetMainPage().ConvertPageToUIElement(this);

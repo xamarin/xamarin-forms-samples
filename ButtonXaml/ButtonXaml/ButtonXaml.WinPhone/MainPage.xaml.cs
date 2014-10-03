@@ -18,6 +18,7 @@ namespace ButtonXaml.WinPhone
         public MainPage()
         {
             InitializeComponent();
+            SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             Forms.Init();
             Content = ButtonXaml.App.GetMainPage().ConvertPageToUIElement(this);

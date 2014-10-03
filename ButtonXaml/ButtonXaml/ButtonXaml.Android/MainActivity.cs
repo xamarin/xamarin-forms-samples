@@ -2,6 +2,7 @@
 
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
@@ -11,7 +12,8 @@ using Xamarin.Forms.Platform.Android;
 
 namespace ButtonXaml.Android
 {
-    [Activity(Label = "ButtonXaml", MainLauncher = true)]
+    [Activity(Label = "ButtonXaml", MainLauncher = true, 
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : AndroidActivity
     {
         protected override void OnCreate(Bundle bundle)

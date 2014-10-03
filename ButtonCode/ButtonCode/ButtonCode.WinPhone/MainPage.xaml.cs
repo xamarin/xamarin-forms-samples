@@ -18,6 +18,7 @@ namespace ButtonCode.WinPhone
         public MainPage()
         {
             InitializeComponent();
+            SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             Forms.Init();
             Content = ButtonCode.App.GetMainPage().ConvertPageToUIElement(this);
