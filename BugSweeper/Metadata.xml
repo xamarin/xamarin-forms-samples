@@ -4,7 +4,7 @@
 	<IsFullApplication>true</IsFullApplication>
 	<Level>Intermediate</Level>
 	<Tags>User Interface, Touch, Graphics, Xamarin.Forms</Tags>
-	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<SupportedPlatforms>Android, iOS, windows-rt</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
 	<Brief>A familiar game with a new twist.</Brief>
