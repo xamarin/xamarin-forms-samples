@@ -14,27 +14,9 @@ namespace Todo
 		{
 			Title = "Todo";
 
-			NavigationPage.SetHasNavigationBar (this, true);
-
-			listView = new ListView {
-			    RowHeight = 40
-			};
-			listView.ItemTemplate = new DataTemplate (typeof (TodoItemCell));
-
-			// These commented-out lines were used to test the ListView prior to integrating the database
-//			listView.ItemSource = new string [] { "Buy pears", "Buy oranges", "Buy mangos", "Buy apples", "Buy bananas" };
-//			listView.ItemSource = new TodoItem [] { 
-//				new TodoItem {Name = "Buy pears`"}, 
-//				new TodoItem {Name = "Buy oranges`", Done=true},
-//				new TodoItem {Name = "Buy mangos`"}, 
-//				new TodoItem {Name = "Buy apples`", Done=true},
-//				new TodoItem {Name = "Buy bananas`", Done=true}
-//			};
-
-			// HACK: workaround issue #894 for now
-			if (Device.OS == TargetPlatform.iOS)
-				listView.ItemsSource = new string [1] {""};
-
+			listView = new ListView ();
+			listView.ItemTemplate = new DataTemplate 
+					(typeof (TodoItemCell));
 			listView.ItemSelected += (sender, e) => {
 				var todoItem = (TodoItem)e.SelectedItem;
 				var todoPage = new TodoItemPage();
@@ -44,13 +26,15 @@ namespace Todo
 
 			var layout = new StackLayout();
 			if (Device.OS == TargetPlatform.WinPhone) { // WinPhone doesn't have the title showing
-				layout.Children.Add(new Label{Text="Todo", Font=Font.BoldSystemFontOfSize(NamedSize.Large)});
+				layout.Children.Add(new Label{
+					Text="Todo", 
+					Font=Font.SystemFontOfSize (NamedSize.Large)});
 			}
 			layout.Children.Add(listView);
 			layout.VerticalOptions = LayoutOptions.FillAndExpand;
 			Content = layout;
 
-
+			#region toolbar
 			ToolbarItem tbi = null;
 			if (Device.OS == TargetPlatform.iOS)
 			{
@@ -95,7 +79,7 @@ namespace Todo
 				}, 0, 0);
 				ToolbarItems.Add (tbi2);
 			}
-
+			#endregion
 		}
 
 		protected override void OnAppearing ()
