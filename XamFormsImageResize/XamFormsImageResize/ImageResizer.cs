@@ -27,9 +27,6 @@ namespace XamFormsImageResize
 			#if __ANDROID__
 			return ResizeImageAndroid ( imageData, width, height );
 			#endif 
-			#if WINDOWS_PHONE
-			//fuck windows phone
-			#endif
 
 		}
 
