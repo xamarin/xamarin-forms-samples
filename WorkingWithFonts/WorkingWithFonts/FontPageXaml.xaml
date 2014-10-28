@@ -37,5 +37,19 @@
 
 		<Label Text="Multiple FontAttributes" Font="Bold, Italic" />
 
+
+		<Label>
+			<Label.FormattedText>
+            	<FormattedString>
+	            	<FormattedString.Spans>
+						<Span Text="Red, " ForegroundColor="Red" Font="Italic,20" />
+						<Span Text=" blue, " ForegroundColor="Blue" Font="32" />
+						<Span Text=" and green! " ForegroundColor="Green" Font="12"/>
+					</FormattedString.Spans>
+				</FormattedString>
+			</Label.FormattedText>
+		</Label>
+
+
 	</StackLayout>
 </ContentPage>
