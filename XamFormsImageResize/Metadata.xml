@@ -4,7 +4,7 @@
 	<IsFullApplication>false</IsFullApplication>
 	<Level>Intermediate</Level>
 	<Tags>User Interface, Graphics</Tags>
-	<SupportedPlatforms>Android, iOS</SupportedPlatforms>
+	<SupportedPlatforms>Android, iOS, windows-rt</SupportedPlatforms>
     <LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
 </SampleMetadata>

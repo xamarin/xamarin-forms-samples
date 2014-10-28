@@ -1,14 +1,19 @@
 ﻿using System;
-using System.Drawing;
 using System.IO;
 
 #if __IOS__
+using System.Drawing;
 using MonoTouch.UIKit;
 using MonoTouch.CoreGraphics;
 #endif
 
 #if __ANDROID__
 using Android.Graphics;
+#endif
+
+#if WINDOWS_PHONE
+using Microsoft.Phone;
+using System.Windows.Media.Imaging;
 #endif
 
 namespace XamFormsImageResize
@@ -27,8 +32,10 @@ namespace XamFormsImageResize
 			#if __ANDROID__
 			return ResizeImageAndroid ( imageData, width, height );
 			#endif 
-
-		}
+            #if WINDOWS_PHONE
+			return ResizeImageWinPhone ( imageData, width, height );
+            #endif
+        }
 
 
 		#if __IOS__
@@ -88,6 +95,27 @@ namespace XamFormsImageResize
 
 		#endif
 
-	}
+        #if WINDOWS_PHONE
+
+        public static byte[] ResizeImageWinPhone (byte[] imageData, float width, float height)
+        {
+            byte[] resizedData;
+
+            using (MemoryStream streamIn = new MemoryStream (imageData))
+            {
+                WriteableBitmap bitmap = PictureDecoder.DecodeJpeg (streamIn, (int)width, (int)height);
+
+                using (MemoryStream streamOut = new MemoryStream ())
+                {
+                    bitmap.SaveJpeg(streamOut, (int)width, (int)height, 0, 100);
+                    resizedData = streamOut.ToArray();
+                }
+            }
+            return resizedData;
+        }
+        
+        #endif
+
+    }
 }
 
