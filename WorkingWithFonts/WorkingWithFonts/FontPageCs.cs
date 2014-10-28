@@ -59,11 +59,21 @@ namespace WorkingWithFonts
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 			};
 
+
+			// new Span formatting support
+			var labelFormatted = new Label ();
+			var fs = new FormattedString ();
+			fs.Spans.Add (new Span { Text="First ", ForegroundColor = Color.Red, Font = Font.SystemFontOfSize(20, FontAttributes.Italic) });
+			fs.Spans.Add (new Span { Text=" second ", ForegroundColor = Color.Blue, Font = Font.SystemFontOfSize(32) });
+			fs.Spans.Add (new Span { Text=" third.", ForegroundColor = Color.Green, Font = Font.SystemFontOfSize(12) });
+			labelFormatted.FormattedText = fs;
+
+
 			Content = new StackLayout { 
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 				Children = {
-					label, myLabel, labelBold, labelItalic, labelBoldItalic
+					label, myLabel, labelBold, labelItalic, labelBoldItalic, labelFormatted
 				}
 			};
 		}
