@@ -1,5 +1,7 @@
-UITest Demo (Xamarin.Forms)
+Using UITest (Xamarin.Forms)
 =============
+
+Sample code for the [Xamarin.Forms UITest](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/uitest-and-test-cloud/) doc.
 
 This sample is a quick demo of combining the [Xamarin Test Cloud Agent component](http://components.xamarin.com/view/calabash) with [Xamarin.Forms](http://xamarin.com/forms) to write UITests that are cross-platform (ie write one test that can run against both iOS and Android versions of your Xamarin.Forms app).
 
