@@ -36,5 +36,9 @@
 	</array>
 	<key>CFBundleDisplayName</key>
 	<string>Maps</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+		<string>We are using your location</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+		<string>Can we use your location</string>
 </dict>
 </plist>
