@@ -22,6 +22,11 @@ namespace WorkingWithMaps.WinPhone
 
             Forms.Init();
             FormsMaps.Init();
+
+            // TODO: when deploying to Windows Store
+            // string applicationId = "APP_ID_FROM_PORTAL", authToken = "AUTH_TOKEN_FROM_PORTAL";
+            // FormsMaps.Init(applicationId, authToken);
+            
             Content = WorkingWithMaps.App.GetMainPage().ConvertPageToUIElement(this);
         }
     }
