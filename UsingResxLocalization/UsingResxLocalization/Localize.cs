@@ -17,9 +17,9 @@ namespace UsingResxLocalization
 			ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo ();
 		}
 
-		public static string GetString(string key, string comment) 
+		public static string GetString(string key, string comment)
 		{
-			ResourceManager temp = new ResourceManager("UsingResxLocalization.Resx.AppResources", typeof(Localize).GetTypeInfo().Assembly);
+			ResourceManager temp = new ResourceManager ("UsingResxLocalization.Resx.AppResources", typeof(Localize).GetTypeInfo ().Assembly);
 
 			string result = temp.GetString (key, ci);
 

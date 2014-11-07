@@ -1,12 +1,19 @@
 ﻿using System;
 using Xamarin.Forms;
+using System.Reflection;
 
 namespace UsingResxLocalization
 {
 	public class App
 	{
 		public static Page GetMainPage ()
-		{	
+		{
+			System.Diagnostics.Debug.WriteLine("===============");
+			var assembly = typeof(App).GetTypeInfo().Assembly;
+			foreach (var res in assembly.GetManifestResourceNames()) 
+				System.Diagnostics.Debug.WriteLine("found resource: " + res);
+
+
 			if (Device.OS != TargetPlatform.WinPhone) {
 				DependencyService.Get<ILocalize> ().SetLocale ();
 				//Resx.AppResources.Culture = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
