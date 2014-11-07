@@ -9,5 +9,6 @@
 		<Label Text="{i18n:Translate NotesLabel}" />
 		<Entry Placeholder="{i18n:Translate NotesPlaceholder}" />
 		<Button Text="{i18n:TranslateExtension Text=AddButton}" />
+		<Image Source="flag.png" />
 	</StackLayout>
 </ContentPage>

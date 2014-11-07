@@ -104,6 +104,28 @@
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\csharp.png" />
     <BundleResource Include="Resources\xaml.png" />
+    <BundleResource Include="Resources\es.lproj\InfoPList.strings" />
+    <BundleResource Include="Resources\fr.lproj\InfoPList.strings" />
+    <BundleResource Include="Resources\pt-BR.lproj\InfoPList.strings" />
+    <BundleResource Include="Resources\es.lproj\Default-568h%402x.png" />
+    <BundleResource Include="Resources\es.lproj\Default.png" />
+    <BundleResource Include="Resources\es.lproj\Default%402x.png" />
+    <BundleResource Include="Resources\fr.lproj\Default-568h%402x.png" />
+    <BundleResource Include="Resources\fr.lproj\Default%402x.png" />
+    <BundleResource Include="Resources\pt-BR.lproj\Default-568h%402x.png" />
+    <BundleResource Include="Resources\pt-BR.lproj\Default%402x.png" />
+    <BundleResource Include="Resources\pt.lproj\Default-568h%402x.png" />
+    <BundleResource Include="Resources\pt.lproj\Default%402x.png" />
+    <BundleResource Include="Resources\pt.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\ja.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\ja.lproj\Default-568h%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\Default%402x.png" />
+    <BundleResource Include="Resources\es.lproj\flag.png" />
+    <BundleResource Include="Resources\fr.lproj\flag.png" />
+    <BundleResource Include="Resources\ja.lproj\flag.png" />
+    <BundleResource Include="Resources\pt.lproj\flag.png" />
+    <BundleResource Include="Resources\pt-BR.lproj\flag.png" />
+    <BundleResource Include="Resources\en.lproj\flag.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -117,4 +139,12 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
+  <ItemGroup>
+    <Folder Include="Resources\es.lproj\" />
+    <Folder Include="Resources\fr.lproj\" />
+    <Folder Include="Resources\pt-BR.lproj\" />
+    <Folder Include="Resources\pt.lproj\" />
+    <Folder Include="Resources\ja.lproj\" />
+    <Folder Include="Resources\en.lproj\" />
+  </ItemGroup>
 </Project>

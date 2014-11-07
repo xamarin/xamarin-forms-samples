@@ -85,7 +85,18 @@
     <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\drawable\csharp.png" />
     <AndroidResource Include="Resources\drawable\xaml.png" />
+    <AndroidResource Include="Resources\values-es\Strings.xml" />
+    <AndroidResource Include="Resources\values-fr\Strings.xml" />
+    <AndroidResource Include="Resources\values-pt-rBR\Strings.xml" />
+    <AndroidResource Include="Resources\drawable-es\flag.png" />
+    <AndroidResource Include="Resources\drawable\flag.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
+  <ItemGroup>
+    <Folder Include="Resources\values-es\" />
+    <Folder Include="Resources\values-fr\" />
+    <Folder Include="Resources\values-pt-rBR\" />
+    <Folder Include="Resources\drawable-es\" />
+  </ItemGroup>
 </Project>

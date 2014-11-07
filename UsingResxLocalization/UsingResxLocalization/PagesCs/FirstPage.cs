@@ -16,10 +16,14 @@ namespace UsingResxLocalization
 			myEntry.Placeholder = AppResources.NotesPlaceholder;
 			myButton.Text = AppResources.AddButton;
 
+
+			var flag = new Image ();
+			flag.Source = ImageSource.FromFile ("flag.png");
+
 			Content = new StackLayout {
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
-				Children = {myLabel, myEntry, myButton},
+				Children = {myLabel, myEntry, myButton, flag},
 			};
 		}
 	}

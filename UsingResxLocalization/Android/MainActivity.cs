@@ -13,7 +13,8 @@ using Xamarin.Forms.Platform.Android;
 
 namespace UsingResxLocalization.Android
 {
-	[Activity (Label = "UsingResxLocalization.Android.Android", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "@string/app_name", MainLauncher = true, 
+			ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : AndroidActivity
 	{
 		protected override void OnCreate (Bundle bundle)
