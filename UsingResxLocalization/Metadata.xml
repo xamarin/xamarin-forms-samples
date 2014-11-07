@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>8920e2d9-7227-4081-8e7c-710556b97dea</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Intermediate</Level>
+	<Tags>Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>false</Gallery>
+	<Brief>This sample demonstrates localizing Xamarin.Forms apps using RESX files to store translations for multiple languages.</Brief>
+</SampleMetadata>

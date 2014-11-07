@@ -7,6 +7,6 @@
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>false</Gallery>
-	<Brief>This sample demonstrates Xamarin Forms MessagingCenter, which  enables view models and other components to communicate with 
+	<Brief>This sample demonstrates Xamarin.Forms MessagingCenter, which  enables view models and other components to communicate with 
 	without having to know anything about each other besides a simple contract.</Brief>
 </SampleMetadata>
