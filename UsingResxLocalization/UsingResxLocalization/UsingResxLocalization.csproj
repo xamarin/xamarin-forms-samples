@@ -69,6 +69,13 @@
     <EmbeddedResource Include="PagesXaml\FirstPageXaml.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resx\AppResources.zh-Hans.resx" />
+    <EmbeddedResource Include="Resx\AppResources.de.resx" />
+    <EmbeddedResource Include="Resx\AppResources.es.resx" />
+    <EmbeddedResource Include="Resx\AppResources.fr.resx" />
+    <EmbeddedResource Include="Resx\AppResources.ja.resx" />
+    <EmbeddedResource Include="Resx\AppResources.pt-BR.resx" />
+    <EmbeddedResource Include="Resx\AppResources.zh-Hant.resx" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>

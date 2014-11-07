@@ -106,7 +106,6 @@
     <BundleResource Include="Resources\xaml.png" />
     <BundleResource Include="Resources\es.lproj\InfoPList.strings" />
     <BundleResource Include="Resources\fr.lproj\InfoPList.strings" />
-    <BundleResource Include="Resources\pt-BR.lproj\InfoPList.strings" />
     <BundleResource Include="Resources\es.lproj\Default-568h%402x.png" />
     <BundleResource Include="Resources\es.lproj\Default.png" />
     <BundleResource Include="Resources\es.lproj\Default%402x.png" />
@@ -126,6 +125,11 @@
     <BundleResource Include="Resources\pt.lproj\flag.png" />
     <BundleResource Include="Resources\pt-BR.lproj\flag.png" />
     <BundleResource Include="Resources\en.lproj\flag.png" />
+    <BundleResource Include="Resources\pt-BR.lproj\InfoPList.strings" />
+    <BundleResource Include="Resources\zh-Hant.lproj\flag.png" />
+    <BundleResource Include="Resources\zh-Hant.lproj\InfoPList.strings" />
+    <BundleResource Include="Resources\zh-Hans.lproj\flag.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\InfoPList.strings" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -146,5 +150,7 @@
     <Folder Include="Resources\pt.lproj\" />
     <Folder Include="Resources\ja.lproj\" />
     <Folder Include="Resources\en.lproj\" />
+    <Folder Include="Resources\zh-Hant.lproj\" />
+    <Folder Include="Resources\zh-Hans.lproj\" />
   </ItemGroup>
 </Project>

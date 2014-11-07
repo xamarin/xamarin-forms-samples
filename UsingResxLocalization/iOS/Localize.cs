@@ -22,6 +22,8 @@ namespace UsingResxLocalization.iOS
 			}
 			Thread.CurrentThread.CurrentCulture = ci;
 			Thread.CurrentThread.CurrentUICulture = ci;
+
+			Console.WriteLine ("SetLocale: " + ci.Name);
 		}
 
 		public System.Globalization.CultureInfo GetCurrentCultureInfo ()

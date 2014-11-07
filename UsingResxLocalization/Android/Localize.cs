@@ -16,7 +16,7 @@ namespace UsingResxLocalization.Android
 			var netLanguage = androidLocale.ToString().Replace ("_", "-");
 
 			//var netLanguage = androidLanguage.Replace ("_", "-");
-			Console.WriteLine ("ios:" + androidLocale.ToString());
+			Console.WriteLine ("android:" + androidLocale.ToString());
 			Console.WriteLine ("net:" + netLanguage);
 
 			Console.WriteLine (Thread.CurrentThread.CurrentCulture);
