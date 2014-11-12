@@ -7,10 +7,11 @@
     <Language code="en" />
     <Language code="es" />
     <Language code="fr" />
-    <Language code="de" />
     <Language code="ja" />
     <Language code="pt" />
     <Language code="pt-BR" />
+    <Language code="de" />
+    <Language code="fr-FR" />
   </Languages>
   <App xmlns="" ProductID="{d7854af0-6610-44dd-86be-d86fcf966230}" Title="Resx" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="UsingResxLocalization.WinPhone author" Description="Sample description" Publisher="Xamarin" PublisherID="{ea2cedab-00ea-4d12-93b5-2ef14911e532}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>

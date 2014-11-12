@@ -91,6 +91,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LocalizedImageRenderer.cs" />
     <Compile Include="Localize.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -125,6 +126,12 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\ja\flag.png" />
+    <Content Include="Assets\fr\flag.png" />
+    <Content Include="Assets\es\flag.png" />
+    <Content Include="Assets\en\flag.png" />
+    <Content Include="Assets\pt-BR\flag.png" />
+    <Content Include="Assets\pt\flag.png" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -140,6 +147,8 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\zh-Hans\flag.png" />
+    <Content Include="Assets\zh-Hant\flag.png" />
     <Content Include="csharp.png" />
     <Content Include="README_FIRST.txt" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
@@ -153,6 +162,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.de.resx" />
     <EmbeddedResource Include="Resources\AppResources.es.resx" />
+    <EmbeddedResource Include="Resources\AppResources.fr-FR.resx" />
     <EmbeddedResource Include="Resources\AppResources.fr.resx" />
     <EmbeddedResource Include="Resources\AppResources.ja.resx" />
     <EmbeddedResource Include="Resources\AppResources.pt-BR.resx" />
@@ -183,6 +193,7 @@
       <HintPath>..\packages\Xamarin.Forms.1.2.3.6257\lib\WP80\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
