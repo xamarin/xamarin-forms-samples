@@ -162,7 +162,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.de.resx" />
     <EmbeddedResource Include="Resources\AppResources.es.resx" />
-    <EmbeddedResource Include="Resources\AppResources.fr-FR.resx" />
     <EmbeddedResource Include="Resources\AppResources.fr.resx" />
     <EmbeddedResource Include="Resources\AppResources.ja.resx" />
     <EmbeddedResource Include="Resources\AppResources.pt-BR.resx" />
