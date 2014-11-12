@@ -25,9 +25,14 @@ namespace UsingResxLocalization.WinPhone
                 {
                     var fileName = s.File;
                     string ci = System.Threading.Thread.CurrentThread.CurrentUICulture.ToString();
-                    if (ci == "pt-BR" | ci == "zh-Hans" | ci == "zh-Hant")  {
-                        // use the complete string
+                    if (ci == "pt-BR") {
+                        // use the complete string 'as is'
+                    } else if (ci == "zh-CN") {
+                        ci = "zh-Hans"; // we could have named the image directories differently, but this keeps them consisent with RESX naming
+                    } else if (ci == "zh-TW" || ci == "zh-HK") {
+                        ci = "zh-Hant";
                     } else { 
+                        // for all others, just use the two-character language code
                         ci = System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
                     }
                     e.NewElement.Source = Path.Combine("Assets/" + ci + "/" + fileName);
