@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+ x:Class="Todo.TodoItemXaml"
+ xmlns:i18n="clr-namespace:Todo;assembly=Todo">
+
+    	<StackLayout VerticalOptions="StartAndExpand" Padding="10,10,10,0">
+ 
+	        <Label Text="{i18n:Translate NameLabel}" />
+	        <Entry Text="{Binding Path=Name}" x:Name="nameEntry" Placeholder="task name" />
+ 
+			<Label Text="{i18n:Translate NotesLabel}" />
+	        <Entry Text="{Binding Path=Notes}" x:Name="notesEntry" />
+ 
+	        <Label Text="{i18n:Translate DoneLabel}" />
+	        <Switch IsToggled="{Binding Path=Done}" x:Name="DoneSwitch" />
+ 
+	        <Button Text="{i18n:Translate SaveButton}" Clicked="OnSave" />
+			
+			<Button Text="{i18n:Translate DeleteButton}" Clicked="OnDelete" />
+ 
+	        <Button Text="{i18n:Translate CancelButton}" Clicked="OnCancel" />
+ 
+	        <Button Text="{i18n:Translate SpeakButton}" Clicked="OnSpeak" />
+ 
+        </StackLayout>
+
+</ContentPage>
