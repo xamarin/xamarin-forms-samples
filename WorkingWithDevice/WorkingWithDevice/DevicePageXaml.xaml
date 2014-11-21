@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="WorkingWithPlatformSpecifics.DevicePageXaml"
+			 Title="DevicePageXaml">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness">
+      <!-- works due to the TypeConverter from string to thickness -->
+      <OnPlatform.iOS>5, 20, 0, 5</OnPlatform.iOS>
+      <OnPlatform.Android>5, 0, 0, 5</OnPlatform.Android>
+      <OnPlatform.WinPhone>5, 0, 0, 5</OnPlatform.WinPhone>
+    </OnPlatform>
+  </ContentPage.Padding>
+
+  <StackLayout>
+  	<Label Text="Heading" Font="Large"></Label>
+
+  	<BoxView HorizontalOptions="Center">
+  		<BoxView.Color>
+  			<OnPlatform x:TypeArguments="Color" 
+				iOS="Green" 
+				Android="#738182" 
+				WinPhone="Accent" />
+		</BoxView.Color>
+		<BoxView.WidthRequest>
+			<OnPlatform x:TypeArguments="x:Double" 
+					iOS="30" 
+					Android="40" 
+					WinPhone="50" />
+		</BoxView.WidthRequest>
+  	</BoxView>
+
+  	<Button Text="Open Uri" Clicked="OpenUriClicked"/>
+
+  	<Label x:Name="timer" Text="click start below" />
+
+  	<Button Text="Start Timer" 
+  		Clicked="TimerClicked" 
+  		BackgroundColor="Gray" 
+  		HorizontalOptions="Center">
+	  	<Button.WidthRequest>
+			<OnPlatform x:TypeArguments="x:Double" 
+					iOS="200" 
+					Android="300" 
+					WinPhone="100" />
+		</Button.WidthRequest>
+  	</Button>
+
+  </StackLayout>
+
+
+</ContentPage>
