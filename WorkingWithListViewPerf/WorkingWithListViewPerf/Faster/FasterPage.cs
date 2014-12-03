@@ -1,0 +1,49 @@
+﻿using System;
+
+using Xamarin.Forms;
+using System.Diagnostics;
+using System.Collections.Generic;
+
+namespace WorkingWithListViewPerf
+{
+	/// <summary>
+	/// This page uses a custom renderer that wraps native list controls:
+	///    iOS :           UITableView
+	///    Android :       ListView   (do not confuse with Xamarin.Forms ListView)
+	///    Windows Phone : ?
+	/// 
+	/// It uses a built-in row/cell class provided by the native platform
+	/// and is therefore faster than building a custom ViewCell in Xamarin.Forms.
+	/// </summary>
+	public class FasterPage : ContentPage
+	{
+		public FasterPage ()
+		{
+			var fasterListView = new FasterListView (); // CUSTOM RENDERER using a native control
+
+			fasterListView.VerticalOptions = LayoutOptions.FillAndExpand; // REQUIRED: To share a scrollable view with other views in a StackLayout, it should have a VerticalOptions of FillAndExpand.
+
+			var tableItems = new List<string> ();
+			for (var i = 0; i < 100; i++) {
+				Debug.WriteLine (i);
+				tableItems.Add (i + " row ");
+			}
+
+			fasterListView.Items = tableItems;
+
+			// The root page of your application
+			Content = new StackLayout {
+				Padding = new Thickness (0, Device.OnPlatform(20,0,0), 0, 0),
+				Children = {
+					new Label {
+						XAlign = TextAlignment.Center,
+						Text = Device.OnPlatform("Custom renderer UITableView","Custom renderer ListView","Custom renderer todo")
+					},
+					fasterListView
+				}
+			};
+		}
+	}
+}
+
+
