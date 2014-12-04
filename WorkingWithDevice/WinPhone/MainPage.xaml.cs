@@ -22,7 +22,7 @@ namespace WorkingWithPlatformSpecifics.WinPhone
 
             global::Xamarin.Forms.Forms.Init();
 
-            LoadApplication(new App()); // new in 1.3
+            LoadApplication(new WorkingWithPlatformSpecifics.App()); // new in 1.3
         }
     }
 }
