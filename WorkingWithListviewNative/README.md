@@ -1,13 +1,19 @@
-Working with ListView Native
+Working with ListView Native Layouts
 ==============
 
-Although the Xamarin.Forms `ListView` control provides a lot of flexibility, for very complex row layouts (or very large data-sets) the performance can sometimes be affected.
+The Xamarin.Forms layout engine is very powerful, enabling developers to express their screens in a way that can be rendered across all supported platforms.
+
+Very complex layouts can take time to compute, on Xamarin.Forms or even on native platforms. This is exacerbated in a scrolling view like the `ListView` where the layouts need to be recalculated as you scroll.
+
+Many Xamarin.Forms apps won't ever encounter issues with scrolling, but if you do one optimization you can try is using a custom renderer to build native cell layouts.
 
 This example has three different screens:
 
-* Using the Xamarin.Forms built-in cell types, which are faster than a custom Xamarin.Forms layout.
-* Using a custom renderer (UITableView, Android ListView) with native platform built-in cells.
-* Using a custom renderer (UITableView, Android ListView) with custom cell layouts built for the native platform (in C# code for iOS, using XML layout for Android). *This is shown in the screenshot below*:
+* The first two demonstrate the absolute simplest case of a ListView built with Xamarin.Forms versus one demonstrating the custom render concept.
+
+* The third screen uses a custom renderer (UITableView, Android ListView) with native platform built-in cells - they're ugly (my design skills are lacking) but demonstrate how you can build your cells in the platform projects.
+
+The custom renderer native cells are shown in this screenshot:
 
 ![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/WorkingWithListviewNative/Screenshots/all-sml.png "Performance")
 
