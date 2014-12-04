@@ -3,18 +3,20 @@ using Xamarin.Forms;
 
 namespace WorkingWithPlatformSpecifics
 {
-	public class App
-	{
-		public static Page GetMainPage ()
-		{	
-			var csTab = new TabbedPage ();
+		public class App : Application // superclass new in 1.3
+		{
+			public App ()
+			{
 
-			csTab.Children.Add(new DevicePage {Title = "C#", Icon="csharp.png"});
-			csTab.Children.Add(new DevicePageXaml {Title = "Xaml", Icon="xaml.png"});
+				var csTab = new TabbedPage ();
 
-			return csTab;
+				csTab.Children.Add(new DevicePage {Title = "C#", Icon="csharp.png"});
+				csTab.Children.Add(new DevicePageXaml {Title = "Xaml", Icon="xaml.png"});
+
+				MainPage = csTab;
+
+			}
 
 		}
-	}
 }
 
