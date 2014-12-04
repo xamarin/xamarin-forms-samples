@@ -1,4 +1,4 @@
-﻿using Xamarin.Forms;
+using Xamarin.Forms;
 using MobileCRM.Models;
 using MobileCRM.Shared.CustomViews;
 using MobileCRM.Shared.ViewModels;

@@ -36,5 +36,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ViewCellFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\UserConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MasterViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
   </ItemGroup>
 </Project>

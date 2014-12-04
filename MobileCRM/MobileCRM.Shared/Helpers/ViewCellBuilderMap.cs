@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using MobileCRM.Models;
 using System.Collections.Generic;
 using System.Reflection;

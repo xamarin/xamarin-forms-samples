@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 #if __IOS__
-using MonoTouch.UIKit;
-using MonoTouch.CoreGraphics;
+using UIKit;
+using CoreGraphics;
 #endif
 
 namespace MobileCRM.Shared.Helpers

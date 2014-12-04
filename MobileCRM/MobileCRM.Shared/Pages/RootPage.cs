@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -24,7 +24,7 @@ namespace MobileCRM.Shared.Pages
 
             NavigateTo(optionsPage.Menu.ItemsSource.Cast<OptionItem>().First());
 
-            //ShowLoginDialog();    
+            ShowLoginDialog();    
         }
 
         async void ShowLoginDialog()

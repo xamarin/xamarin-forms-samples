@@ -1,11 +1,11 @@
-﻿using System;
-using MonoTouch.CoreLocation;
-using MonoTouch.Foundation;
+using System;
+using CoreLocation;
+using Foundation;
 using MobileCRM.Models;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
-using MonoTouch.AddressBook;
+using AddressBook;
 using System.Collections.Concurrent;
 using Xamarin.Forms;
 using MobileCRM.Services;
