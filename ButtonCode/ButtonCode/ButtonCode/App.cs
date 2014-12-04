@@ -3,11 +3,11 @@ using Xamarin.Forms;
 
 namespace ButtonCode
 {
-    public class App
+	public class App : Application
     {
-        public static Page GetMainPage()
+		public App ()
         {
-            return new ButtonCodePage();
+			MainPage = new ButtonCodePage();
         }
     }
 }
