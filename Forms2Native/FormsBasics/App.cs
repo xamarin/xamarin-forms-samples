@@ -3,13 +3,13 @@ using Xamarin.Forms;
 
 namespace Forms2Native
 {
-	public static class App
+	public class App : Application
 	{
-		public static Page GetMainPage ()
+		public App ()
 		{
 			var mainNav = new NavigationPage (new MyFirstPage ()); 
 
-			return mainNav;
+			MainPage = mainNav;
 		}
 	}
 }

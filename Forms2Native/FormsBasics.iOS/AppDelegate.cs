@@ -1,11 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using Forms2Native;
 using Xamarin.Forms;
 using System.IO;
+using Xamarin.Forms.Platform.iOS;
 
 namespace Forms2Native
 {
@@ -13,7 +14,7 @@ namespace Forms2Native
 	// User Interface of the application, as well as listening (and optionally responding) to
 	// application events from iOS.
 	[Register ("AppDelegate")]
-	public partial class AppDelegate : UIApplicationDelegate
+	public partial class AppDelegate : FormsApplicationDelegate
 	{
 		// class-level declarations
 		UIWindow window;
@@ -30,14 +31,9 @@ namespace Forms2Native
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 
-			// If you have defined a view, add it here:
-			// window.RootViewController  = navigationController;
-			window.RootViewController = App.GetMainPage ().CreateViewController ();
+			LoadApplication (new App ());
 
-			// make the window visible
-			window.MakeKeyAndVisible ();
-
-			return true;
+			return base.FinishedLaunching (app, options);
 		}
 	}
 }

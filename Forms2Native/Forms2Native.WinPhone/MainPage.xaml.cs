@@ -13,14 +13,15 @@ using Forms2Native;
 
 namespace Forms2Native.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+	public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
     {
         public MainPage()
         {
             InitializeComponent();
 
             Forms.Init();
-            Content = Forms2Native.App.GetMainPage().ConvertPageToUIElement(this);
+           
+			LoadApplication (Forms2Native.App ());
         }
     }
 }

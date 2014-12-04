@@ -1,7 +1,7 @@
-﻿using System;
-using System.Drawing;
+using System;
+using CoreGraphics;
 using Xamarin.Forms.Platform.iOS;
-using MonoTouch.UIKit;
+using UIKit;
 using Xamarin.Forms;
 
 
@@ -26,7 +26,7 @@ namespace Forms2Native
 
 			var viewController = new UIViewController ();
 
-			var label = new UILabel (new RectangleF(0, 40, 320, 40));
+			var label = new UILabel (new CGRect(0, 40, 320, 40));
 			label.Text = "3 " + page.Heading;
 			viewController.View.Add (label);
 

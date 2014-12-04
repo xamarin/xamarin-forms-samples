@@ -1,7 +1,7 @@
-﻿using System;
-using System.Drawing;
+using System;
+using CoreGraphics;
 using Xamarin.Forms.Platform.iOS;
-using MonoTouch.UIKit;
+using UIKit;
 using Xamarin.Forms;
 
 // This ExportRenderer command tells Xamarin.Forms to use this renderer
@@ -27,7 +27,7 @@ namespace Forms2Native
 
 			var viewController = ViewController;
 
-			var label = new UILabel (new RectangleF(0, 40, 320, 40));
+			var label = new UILabel (new CGRect(0, 40, 320, 40));
 			label.Text = "2 " + page.Heading;
 
 			view.Add (label);
