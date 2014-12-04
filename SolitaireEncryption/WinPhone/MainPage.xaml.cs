@@ -13,14 +13,15 @@ using Xamarin.Forms;
 
 namespace Solitaire.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+	public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
     {
         public MainPage()
         {
             InitializeComponent();
 
             Forms.Init();
-            Content = Solitaire.App.GetMainPage().ConvertPageToUIElement(this);
+            
+			LoadApplication(new Solitaire.App()); // new in 1.3
         }
     }
 }

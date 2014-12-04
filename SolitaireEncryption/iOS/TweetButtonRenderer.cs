@@ -3,8 +3,8 @@ using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
 using Solitaire;
 using Solitaire.iOS;
-using MonoTouch.UIKit;
-using MonoTouch.Twitter;
+using UIKit;
+using Twitter;
 
 [assembly:ExportRenderer(typeof(TweetButton), typeof(TweetButtonRenderer))]
 
@@ -26,7 +26,7 @@ namespace Solitaire.iOS
 				var tweetController = new TWTweetComposeViewController();
 				// add message, attach URL
 				tweetController.SetInitialText (tweetButton.FormattedText); 
-				tweetController.AddUrl(new MonoTouch.Foundation.NSUrl(tweetButton.AttachedUrl));
+				tweetController.AddUrl(new Foundation.NSUrl(tweetButton.AttachedUrl));
 				tweetController.ModalInPopover = true;
 
 				var parentview = button.Superview;

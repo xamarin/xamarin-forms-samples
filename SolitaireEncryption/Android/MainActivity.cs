@@ -13,8 +13,8 @@ using Xamarin.Forms.Platform.Android;
 
 namespace Solitaire
 {
-	[Activity (Label = "Pontifex.Android.Android", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : AndroidActivity
+	[Activity (Label = "Pontifex", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	public class MainActivity : FormsApplicationActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -22,7 +22,7 @@ namespace Solitaire
 
 			Xamarin.Forms.Forms.Init (this, bundle);
 
-			SetPage (App.GetMainPage ());
+			LoadApplication (new App ());
 		}
 	}
 }
