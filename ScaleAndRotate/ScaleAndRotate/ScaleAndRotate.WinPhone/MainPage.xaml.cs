@@ -13,7 +13,7 @@ using Xamarin.Forms;
 
 namespace ScaleAndRotate.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+	public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
     {
         public MainPage()
         {
@@ -21,7 +21,8 @@ namespace ScaleAndRotate.WinPhone
             SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             Forms.Init();
-            Content = ScaleAndRotate.App.GetMainPage().ConvertPageToUIElement(this);
+            
+			LoadApplication(new ScaleAndRotate.App()); // new in 1.3
         }
     }
 }
