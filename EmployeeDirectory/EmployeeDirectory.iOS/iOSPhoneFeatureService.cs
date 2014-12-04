@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using MonoTouch.Foundation;
-using MonoTouch.MessageUI;
-using MonoTouch.UIKit;
+using Foundation;
+using MessageUI;
+using UIKit;
 using Xamarin.Forms;
 using Xamarin.Social;
 using Xamarin.Social.Services;
