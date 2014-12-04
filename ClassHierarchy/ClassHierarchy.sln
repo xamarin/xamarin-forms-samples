@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
+# Visual Studio 2012
 VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassHierarchy", "ClassHierarchy\ClassHierarchy\ClassHierarchy.csproj", "{00570287-CC14-409A-B72F-E5E7BA1F4AA0}"
@@ -218,12 +218,15 @@ Global
 		{CFCC2934-EAED-4B10-9EC6-E38AB8090288}.Release|x86.Build.0 = Release|x86
 		{CFCC2934-EAED-4B10-9EC6-E38AB8090288}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1B3F7F7F-F0FA-464B-B87A-492F8AC62A78} = {A045CB65-DBD6-4D93-B8ED-D89D9531229D}
 		{35B151D0-9072-464D-9D65-B9D9D6A63DFD} = {A045CB65-DBD6-4D93-B8ED-D89D9531229D}
 		{CFCC2934-EAED-4B10-9EC6-E38AB8090288} = {A045CB65-DBD6-4D93-B8ED-D89D9531229D}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = ClassHierarchy\ClassHierarchy.iOS\ClassHierarchy.iOS.csproj
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
