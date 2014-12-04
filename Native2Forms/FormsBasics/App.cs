@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace Native2Forms
 {
-	public static class App
+	public class App : Application
 	{
 		//
 		// This page is displayed from within 'native' pages on iOS and Android

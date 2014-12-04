@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 10.0.0
@@ -65,7 +65,7 @@ Global
 		{B746C87C-7335-4830-AAE2-ACACE4D69DB5} = {205F34F1-DBEC-46B8-A6E5-7C2BAB70DD0C}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = FormsBasics.iOS\Native2Forms.iOS.csproj
+		StartupItem = FormsBasics.Android\Native2Forms.Android.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

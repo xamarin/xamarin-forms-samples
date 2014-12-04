@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using System.IO;
+using Xamarin.Forms.Platform.Android;
 
 namespace Native2Forms
 {
@@ -13,7 +14,7 @@ namespace Native2Forms
 	/// This is a native Android screen. It will open a Xamarin.Forms screen.
 	/// </summary>
 	[Activity (Label = "Native2Forms", MainLauncher = true)]
-	public class Activity1 : Activity
+	public class Activity1 : FormsApplicationActivity
 	{
 		Button button;
 		TextView label;
@@ -31,6 +32,9 @@ namespace Native2Forms
 				// this is our Xamarin.Forms screen
 				StartActivity(typeof(FormsActivity));
 			};
+
+			Xamarin.Forms.Forms.Init (this, bundle);
+			LoadApplication (new App ());
 		}
 	}
 }
