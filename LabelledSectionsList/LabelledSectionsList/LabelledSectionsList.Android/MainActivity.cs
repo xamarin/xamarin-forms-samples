@@ -12,7 +12,7 @@ using Xamarin.Forms.Platform.Android;
 namespace LabelledSections.Droid
 {
     [Activity(Label = "LabelledSections", MainLauncher = true)]
-    public class MainActivity : AndroidActivity
+    public class MainActivity : FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
@@ -20,7 +20,7 @@ namespace LabelledSections.Droid
 
             Xamarin.Forms.Forms.Init(this, bundle);
 
-			SetPage(App.GetMainPage());
+			LoadApplication (new App ());
         }
     }
 }

@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.30501.0
@@ -217,7 +217,7 @@ Global
 		{AFF1D0DC-B584-4838-90BC-F0CCD92D8717}.Release|x86.ActiveCfg = Release|iPhone
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = LabelledSections\LabelledSections\LabelledSectionsList.csproj
+		StartupItem = LabelledSectionsList\LabelledSectionsList.iOS\LabelledSectionsList.iOS.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
