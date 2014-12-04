@@ -3,7 +3,7 @@
 using Xamarin.Forms;
 using System.Collections.Generic;
 
-namespace WorkingWithListViewPerf
+namespace WorkingWithListviewPerf
 {
 	/// <summary>
 	/// This page uses built-in Xamarin.Forms controls to display a fast-scrolling list.
@@ -25,6 +25,10 @@ namespace WorkingWithListViewPerf
 			listView.ItemTemplate = new DataTemplate(typeof(TextCell));
 			listView.ItemTemplate.SetBinding(TextCell.TextProperty, ".");
 
+			listView.ItemSelected += async (sender, e) => {
+				await Navigation.PushModalAsync (new DetailPage(e.SelectedItem));
+			};
+
 			Content = new StackLayout { 
 				Padding = new Thickness (5, Device.OnPlatform(20,0,0), 5, 0),
 				Children = {
@@ -38,5 +42,3 @@ namespace WorkingWithListViewPerf
 		}
 	}
 }
-
-

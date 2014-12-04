@@ -2,12 +2,12 @@
 using Xamarin.Forms.Platform.iOS;
 using UIKit;
 using Xamarin.Forms;
-using WorkingWithListViewPerf.iOS;
-using WorkingWithListViewPerf;
+using WorkingWithListviewPerf.iOS;
+using WorkingWithListviewPerf;
 
 [assembly: ExportRenderer (typeof (FasterLayoutListView), typeof (FasterLayoutListViewRenderer))]
 
-namespace WorkingWithListViewPerf.iOS
+namespace WorkingWithListviewPerf.iOS
 {
 	public class FasterLayoutListViewRenderer : ViewRenderer<FasterLayoutListView, UITableView>
 	{
@@ -29,8 +29,8 @@ namespace WorkingWithListViewPerf.iOS
 
 			if (e.NewElement != null) {
 				// subscribe
-				var s = new FasterLayoutListViewSource ();
-				s.Items = e.NewElement.Items;
+
+				var s = new FasterLayoutListViewSource (e.NewElement);
 				Control.Source = s;
 			}
 		}
@@ -40,8 +40,8 @@ namespace WorkingWithListViewPerf.iOS
 
 			if (e.PropertyName == FasterListView.ItemsProperty.PropertyName) {
 				// update the Items list in the UITableViewSource
-				var s = new FasterLayoutListViewSource ();
-				s.Items = Element.Items;
+				var s = new FasterLayoutListViewSource (Element);
+
 				Control.Source = s;
 			}
 		}

@@ -6,7 +6,7 @@ using Android.Views;
 using System.Collections;
 using System.Linq;
 
-namespace WorkingWithListViewPerf.Droid
+namespace WorkingWithListviewPerf.Droid
 {
 	public class FasterListViewAdapter: BaseAdapter<string> {
 
@@ -19,9 +19,10 @@ namespace WorkingWithListViewPerf.Droid
 			}
 		}
 
-		public FasterListViewAdapter(Activity context)
+		public FasterListViewAdapter(Activity context, FasterListView view)
 		{
 			this.context = context;
+			tableItems = view.Items.ToList();
 		}
 	
 		public override string this[int position]

@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithListViewPerf", "WorkingWithListViewPerf\WorkingWithListViewPerf.csproj", "{23F1E141-F1D3-4089-A9BC-35DD8ABCA6EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithListviewPerf", "WorkingWithListviewPerf\WorkingWithListviewPerf.csproj", "{23F1E141-F1D3-4089-A9BC-35DD8ABCA6EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithListViewPerf.iOS", "iOS\WorkingWithListViewPerf.iOS.csproj", "{E4A1352F-0066-416E-AC25-FFB95C31401B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithListviewPerf.iOS", "iOS\WorkingWithListviewPerf.iOS.csproj", "{E4A1352F-0066-416E-AC25-FFB95C31401B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithListViewPerf.Droid", "Droid\WorkingWithListViewPerf.Droid.csproj", "{327F8A49-23F0-4E6F-98C4-55989AB14C1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithListviewPerf.Droid", "Droid\WorkingWithListviewPerf.Droid.csproj", "{327F8A49-23F0-4E6F-98C4-55989AB14C1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +69,6 @@ Global
 		{E4A1352F-0066-416E-AC25-FFB95C31401B}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Droid\WorkingWithListViewPerf.Droid.csproj
+		StartupItem = Droid\WorkingWithListviewPerf.Droid.csproj
 	EndGlobalSection
 EndGlobal

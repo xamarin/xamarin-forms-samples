@@ -1,13 +1,14 @@
 ﻿using System;
 using Xamarin.Forms;
-using WorkingWithListViewPerf;
-using WorkingWithListViewPerf.Droid;
+using WorkingWithListviewPerf;
+using WorkingWithListviewPerf.Droid;
 using Xamarin.Forms.Platform.Android;
 using System.Collections;
+using System.Linq;
 
 [assembly: ExportRenderer (typeof (FasterListView), typeof (FasterListViewRenderer))]
 
-namespace WorkingWithListViewPerf.Droid
+namespace WorkingWithListviewPerf.Droid
 {
 	public class FasterListViewRenderer : ViewRenderer<FasterListView, global::Android.Widget.ListView>
 	{
@@ -25,15 +26,19 @@ namespace WorkingWithListViewPerf.Droid
 
 			if (e.OldElement != null) {
 				// unsubscribe
+				Control.ItemClick -= clicked;
 			}
 
 			if (e.NewElement != null) {
 				// subscribe
 
-				var a =  new FasterListViewAdapter (Forms.Context as Android.App.Activity);
-				a.Items = e.NewElement.Items;
-				Control.Adapter = a;
+				Control.Adapter = new FasterListViewAdapter (Forms.Context as Android.App.Activity, e.NewElement);
+				Control.ItemClick += clicked;
 			}
+		}
+
+		void clicked (object sender, Android.Widget.AdapterView.ItemClickEventArgs e) {
+			Element.NotifyItemSelected (Element.Items.ToList()[e.Position]);
 		}
 
 		protected override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -42,10 +47,10 @@ namespace WorkingWithListViewPerf.Droid
 			if (e.PropertyName == FasterListView.ItemsProperty.PropertyName) {
 				// update the Items list in the UITableViewSource
 
-				var a =  new FasterListViewAdapter (Forms.Context as Android.App.Activity);
-				a.Items = Element.Items;
-				Control.Adapter = a;
+				Control.Adapter = new FasterListViewAdapter (Forms.Context as Android.App.Activity, Element);
 			}
 		}
+
+
 	}
 }

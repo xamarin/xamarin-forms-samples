@@ -4,7 +4,7 @@ using Xamarin.Forms;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace WorkingWithListViewPerf
+namespace WorkingWithListviewPerf
 {
 	/// <summary>
 	/// Xamarin.Forms representation for a custom-renderer that uses 
@@ -20,10 +20,16 @@ namespace WorkingWithListViewPerf
 			set { SetValue (ItemsProperty, value); } 
 		}
 
+		public event EventHandler<SelectedItemChangedEventArgs> ItemSelected;
+
+		public void NotifyItemSelected (object item) {
+
+			if (ItemSelected != null)
+				ItemSelected (this, new SelectedItemChangedEventArgs (item));
+		}
+
 		public FasterListView ()
 		{
 		}
 	}
 }
-
-

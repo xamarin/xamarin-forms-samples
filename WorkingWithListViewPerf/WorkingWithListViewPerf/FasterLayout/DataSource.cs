@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WorkingWithListViewPerf
+namespace WorkingWithListviewPerf
 {
 	public class DataSource
 	{
@@ -26,10 +26,10 @@ namespace WorkingWithListViewPerf
 
 			l.Add (new DataSource ("Asparagus","Vegetables","Vegetables"));
 			l.Add (new DataSource ("Avocados","Vegetables","Vegetables"));
-			l.Add (new DataSource ("Beets","Vegetables","Vegetables"));
+			l.Add (new DataSource ("Beetroots","Vegetables","Vegetables"));
 			l.Add (new DataSource ("Capsicum","Vegetables","Vegetables"));
 			l.Add (new DataSource ("Broccoli","Vegetables","Vegetables"));
-			l.Add (new DataSource ("Brussels sprouts","Vegetables","Vegetables"));
+			l.Add (new DataSource ("Brussel sprouts","Vegetables","Vegetables"));
 			l.Add (new DataSource ("Cabbage","Vegetables","Vegetables"));
 			l.Add (new DataSource ("Carrots","Vegetables","Vegetables"));
 			l.Add (new DataSource ("Cauliflower","Vegetables","Vegetables"));
@@ -61,17 +61,21 @@ namespace WorkingWithListViewPerf
 			l.Add (new DataSource ("Figs","Fruits","Fruits"));
 			l.Add (new DataSource ("Grapefruit","Fruits","Fruits"));
 			l.Add (new DataSource ("Grapes","Fruits","Fruits"));
+			l.Add (new DataSource ("Honeydew Melon","Fruits","Fruits"));
 			l.Add (new DataSource ("Kiwifruit","Fruits","Fruits"));
 			l.Add (new DataSource ("Lemons","Fruits","Fruits"));
 			l.Add (new DataSource ("Oranges","Fruits","Fruits"));
-			l.Add (new DataSource ("Papaya","Fruits","Fruits"));
 			l.Add (new DataSource ("Pears","Fruits","Fruits"));
 			l.Add (new DataSource ("Pineapple","Fruits","Fruits"));
 			l.Add (new DataSource ("Plums","Fruits","Fruits"));
 			l.Add (new DataSource ("Raspberries","Fruits","Fruits"));
 			l.Add (new DataSource ("Strawberries","Fruits","Fruits"));
 			l.Add (new DataSource ("Watermelon","Fruits","Fruits"));
+			l.Add (new DataSource ("Balmain Bugs","Seafood",""));
+			l.Add (new DataSource ("Calamari","Seafood",""));
 			l.Add (new DataSource ("Cod","Seafood",""));
+			l.Add (new DataSource ("Prawns","Seafood",""));
+			l.Add (new DataSource ("Lobster","Seafood",""));
 			l.Add (new DataSource ("Salmon","Seafood",""));
 			l.Add (new DataSource ("Scallops","Seafood",""));
 			l.Add (new DataSource ("Shrimp","Seafood",""));
@@ -82,16 +86,13 @@ namespace WorkingWithListViewPerf
 			l.Add (new DataSource ("Walnuts","Nuts",""));
 			l.Add (new DataSource ("Black beans","Beans & Legumes","Legumes"));
 			l.Add (new DataSource ("Dried peas","Beans & Legumes","Legumes"));
-			l.Add (new DataSource ("Garbanzo beans (chickpeas)","Beans & Legumes","Legumes"));
 			l.Add (new DataSource ("Kidney beans","Beans & Legumes","Legumes"));
 			l.Add (new DataSource ("Lentils","Beans & Legumes","Legumes"));
 			l.Add (new DataSource ("Lima beans","Beans & Legumes","Legumes"));
 			l.Add (new DataSource ("Miso","Beans & Legumes","Legumes"));
-			l.Add (new DataSource ("Navy beans","Beans & Legumes","Legumes"));
-			l.Add (new DataSource ("Pinto beans","Beans & Legumes","Legumes"));
-			l.Add (new DataSource ("Soy sauce","Beans & Legumes","Legumes"));
 			l.Add (new DataSource ("Soybeans","Beans & Legumes","Legumes"));
 			l.Add (new DataSource ("Beef","Meat",""));
+			l.Add (new DataSource ("Buffalo","Meat",""));
 			l.Add (new DataSource ("Chicken","Meat",""));
 			l.Add (new DataSource ("Lamb","Meat",""));
 			l.Add (new DataSource ("Cheese","Dairy",""));

@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using Foundation;
 using System.Linq;
 
-namespace WorkingWithListViewPerf.iOS
+namespace WorkingWithListviewPerf.iOS
 {
-	public class FasterLayoutListViewSource: UITableViewSource
+	public class FasterLayoutListViewSource : UITableViewSource
 	{
 		// declare vars
-		protected IList<DataSource> tableItems;
-		protected NSString cellIdentifier = new NSString("TableCell");
+		IList<DataSource> tableItems;
+		FasterLayoutListView listView;
+		readonly NSString cellIdentifier = new NSString("TableCell");
 
-		//public IList<string> Items {get;set;}
 		public IEnumerable<DataSource> Items {
 			//get{ }
 			set{
@@ -20,25 +20,12 @@ namespace WorkingWithListViewPerf.iOS
 			}
 		}
 
-		public FasterLayoutListViewSource() {
-
-		}
-
-		public FasterLayoutListViewSource (List<DataSource> items)
+		public FasterLayoutListViewSource (FasterLayoutListView view)
 		{
-			tableItems = items;
+			tableItems = view.Items.ToList();
+			listView = view;
 		}
-
-		#region -= data binding/display methods =-
-
-		/// <summary>
-		/// Called by the TableView to determine how many sections(groups) there are.
-		/// </summary>
-		public override nint NumberOfSections (UITableView tableView)
-		{
-			return 1;
-		}
-
+			
 		/// <summary>
 		/// Called by the TableView to determine how many cells to create for that particular section.
 		/// </summary>
@@ -47,13 +34,12 @@ namespace WorkingWithListViewPerf.iOS
 			return tableItems.Count;
 		}
 
-		#endregion
-
-		#region -= user interaction methods =-
+		#region user interaction methods
 
 		public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 		{
-			new UIAlertView("Row Selected", tableItems[indexPath.Row].Name, null, "OK", null).Show();
+			listView.NotifyItemSelected (tableItems [indexPath.Row]);
+			Console.WriteLine("Row " + indexPath.Row.ToString() + " selected");	
 		}
 
 		public override void RowDeselected (UITableView tableView, NSIndexPath indexPath)
@@ -83,7 +69,7 @@ namespace WorkingWithListViewPerf.iOS
 			} else {
 				cell.UpdateCell (tableItems[indexPath.Row].Name
 					, tableItems[indexPath.Row].Category
-					, UIImage.FromFile ("Images/" +tableItems[indexPath.Row].ImageFilename) );
+					, UIImage.FromFile ("Images/" +tableItems[indexPath.Row].ImageFilename + ".jpg") );
 			}
 
 			return cell;

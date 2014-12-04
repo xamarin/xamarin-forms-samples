@@ -4,7 +4,7 @@ using Xamarin.Forms;
 using System.Diagnostics;
 using System.Collections.Generic;
 
-namespace WorkingWithListViewPerf
+namespace WorkingWithListviewPerf
 {
 	/// <summary>
 	/// This page uses a custom renderer that wraps native list controls:
@@ -19,17 +19,18 @@ namespace WorkingWithListViewPerf
 	{
 		public FasterPage ()
 		{
-			var fasterListView = new FasterListView (); // CUSTOM RENDERER using a native control
-
-			fasterListView.VerticalOptions = LayoutOptions.FillAndExpand; // REQUIRED: To share a scrollable view with other views in a StackLayout, it should have a VerticalOptions of FillAndExpand.
-
 			var tableItems = new List<string> ();
 			for (var i = 0; i < 100; i++) {
-				Debug.WriteLine (i);
 				tableItems.Add (i + " row ");
 			}
 
+
+			var fasterListView = new FasterListView (); // CUSTOM RENDERER using a native control
+			fasterListView.VerticalOptions = LayoutOptions.FillAndExpand; // REQUIRED: To share a scrollable view with other views in a StackLayout, it should have a VerticalOptions of FillAndExpand.
 			fasterListView.Items = tableItems;
+			fasterListView.ItemSelected += async (sender, e) => {
+				await Navigation.PushModalAsync (new DetailPage(e.SelectedItem));
+			};
 
 			// The root page of your application
 			Content = new StackLayout {
@@ -39,11 +40,9 @@ namespace WorkingWithListViewPerf
 						XAlign = TextAlignment.Center,
 						Text = Device.OnPlatform("Custom renderer UITableView","Custom renderer ListView","Custom renderer todo")
 					},
-					fasterListView
+					fasterListView 
 				}
 			};
 		}
 	}
 }
-
-

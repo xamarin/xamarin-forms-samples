@@ -5,8 +5,9 @@ using System.Collections.Generic;
 using Android.Views;
 using System.Collections;
 using System.Linq;
+using Xamarin.Forms.Platform.Android;
 
-namespace WorkingWithListViewPerf.Droid
+namespace WorkingWithListviewPerf.Droid
 {
 	/// <summary>
 	/// This adapter uses a view defined in /Resources/Layout/FasterLayoutListViewCell.xml
@@ -24,9 +25,10 @@ namespace WorkingWithListViewPerf.Droid
 			}
 		}
 
-		public FasterLayoutListViewAdapter(Activity context)
+		public FasterLayoutListViewAdapter(Activity context, FasterLayoutListView view)
 		{
 			this.context = context;
+			tableItems = view.Items.ToList();
 		}
 	
 		public override DataSource this[int position]
@@ -46,10 +48,6 @@ namespace WorkingWithListViewPerf.Droid
 		{
 			get { return tableItems.Count; }
 		}
-		public override bool AreAllItemsEnabled()
-		{
-			return true;
-		}
 
 		/// <summary>
 		/// Grouped list: view could be a 'section heading' or a 'data row'
@@ -63,9 +61,14 @@ namespace WorkingWithListViewPerf.Droid
 				view = context.LayoutInflater.Inflate(Resource.Layout.FasterLayoutListViewCell, null);
 			view.FindViewById<TextView>(Resource.Id.Text1).Text = item.Name;
 			view.FindViewById<TextView>(Resource.Id.Text2).Text = item.Category;
-			view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(
-				view.Resources.GetIdentifier(item.ImageFilename, "drawable", context.PackageName)
-			);
+
+//			var i = view.Resources.GetIdentifier (item.ImageFilename, "drawable", context.PackageName);
+//			view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(i);
+
+			// HACK: this makes for choppy scrolling :-(
+			context.Resources.GetBitmapAsync (item.ImageFilename).ContinueWith((t) => {
+				view.FindViewById<ImageView> (Resource.Id.Image).SetImageBitmap (t.Result);
+			});
 
 			return view;
 		}

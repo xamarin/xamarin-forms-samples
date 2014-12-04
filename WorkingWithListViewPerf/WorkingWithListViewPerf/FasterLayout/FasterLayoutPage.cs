@@ -3,7 +3,7 @@
 using Xamarin.Forms;
 using System.Collections.Generic;
 
-namespace WorkingWithListViewPerf
+namespace WorkingWithListviewPerf
 {
 
 	/// <summary>
@@ -24,6 +24,11 @@ namespace WorkingWithListViewPerf
 			fasterLayoutListView.VerticalOptions = LayoutOptions.FillAndExpand; // REQUIRED: To share a scrollable view with other views in a StackLayout, it should have a VerticalOptions of FillAndExpand.
 
 			fasterLayoutListView.Items = DataSource.GetList ();
+
+			fasterLayoutListView.ItemSelected += async (sender, e) => {
+				//await Navigation.PushModalAsync (new DetailPage(e.SelectedItem));
+				await DisplayAlert ("clicked", "one of the rows was clicked", "ok");
+			};
 
 			// The root page of your application
 			Content = new StackLayout {

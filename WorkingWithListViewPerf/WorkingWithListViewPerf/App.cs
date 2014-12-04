@@ -4,7 +4,7 @@ using Xamarin.Forms;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace WorkingWithListViewPerf
+namespace WorkingWithListviewPerf
 {
 	public class App : Application
 	{
@@ -18,7 +18,6 @@ namespace WorkingWithListViewPerf
 			tabs.Children.Add (new FasterPage {Title = "Faster"});
 
 			tabs.Children.Add (new FasterLayoutPage {Title = "FastLayout"});
-
 
 
 			MainPage = tabs;

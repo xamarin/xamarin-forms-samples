@@ -2,7 +2,7 @@
 using UIKit;
 using Foundation;
 
-namespace WorkingWithListViewPerf.iOS
+namespace WorkingWithListviewPerf.iOS
 {
 	/// <summary>
 	/// Sample of a custom cell layout, taken from the iOS docs at

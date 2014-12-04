@@ -5,15 +5,15 @@ using Foundation;
 using System.Collections;
 using System.Linq;
 
-namespace WorkingWithListViewPerf.iOS
+namespace WorkingWithListviewPerf.iOS
 {
 	public class FasterListViewSource : UITableViewSource
 	{
 		// declare vars
-		protected IList<string> tableItems;
-		protected string cellIdentifier = "TableCell";
+		IList<string> tableItems;
+		string cellIdentifier = "TableCell";
+		FasterListView listView;
 
-		//public IList<string> Items {get;set;}
 		public IEnumerable<string> Items {
 			//get{ }
 			set{
@@ -21,23 +21,10 @@ namespace WorkingWithListViewPerf.iOS
 			}
 		}
 
-		public FasterListViewSource() {
-
-		}
-
-		public FasterListViewSource (List<string> items)
+		public FasterListViewSource (FasterListView view)
 		{
-			tableItems = items;
-		}
-
-		#region -= data binding/display methods =-
-
-		/// <summary>
-		/// Called by the TableView to determine how many sections(groups) there are.
-		/// </summary>
-		public override nint NumberOfSections (UITableView tableView)
-		{
-			return 1;
+			tableItems = view.Items.ToList ();
+			listView = view;
 		}
 
 		/// <summary>
@@ -48,24 +35,19 @@ namespace WorkingWithListViewPerf.iOS
 			return tableItems.Count;
 		}
 
-		#endregion
-
-		#region -= user interaction methods =-
+		#region user interaction methods
 
 		public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 		{
-			new UIAlertView("Row Selected", tableItems[indexPath.Row], null, "OK", null).Show();
+			listView.NotifyItemSelected (tableItems [indexPath.Row]);
+
+			Console.WriteLine("Row " + indexPath.Row.ToString() + " selected");	
 		}
 
 		public override void RowDeselected (UITableView tableView, NSIndexPath indexPath)
 		{
 			Console.WriteLine("Row " + indexPath.Row.ToString() + " deselected");	
 		}
-
-//		public override void AccessoryButtonTapped (UITableView tableView, NSIndexPath indexPath)
-//		{
-//			Console.WriteLine("Accessory for Section, " + indexPath.Section.ToString() + " and Row, " + indexPath.Row.ToString() + " tapped");
-//		}
 
 		#endregion
 

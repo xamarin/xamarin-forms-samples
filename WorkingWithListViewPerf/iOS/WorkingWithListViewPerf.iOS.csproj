@@ -103,9 +103,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WorkingWithListViewPerf\WorkingWithListViewPerf.csproj">
+    <ProjectReference Include="..\WorkingWithListviewPerf\WorkingWithListviewPerf.csproj">
       <Project>{23F1E141-F1D3-4089-A9BC-35DD8ABCA6EE}</Project>
-      <Name>WorkingWithListViewPerf</Name>
+      <Name>WorkingWithListviewPerf</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -124,14 +124,14 @@
     <BundleResource Include="Resources\Icon-Small-40.png" />
     <BundleResource Include="Resources\Icon-Small-40%402x.png" />
     <BundleResource Include="Resources\Icon-Small-40%403x.png" />
-    <BundleResource Include="Resources\Images\Flower Buds.jpg" />
-    <BundleResource Include="Resources\Images\Flower Buds%402x.jpg" />
     <BundleResource Include="Resources\Images\Fruits.jpg" />
     <BundleResource Include="Resources\Images\Fruits%402x.jpg" />
     <BundleResource Include="Resources\Images\Legumes.jpg" />
     <BundleResource Include="Resources\Images\Legumes%402x.jpg" />
     <BundleResource Include="Resources\Images\Vegetables.jpg" />
     <BundleResource Include="Resources\Images\Vegetables%402x.jpg" />
+    <BundleResource Include="Resources\Images\FlowerBuds.jpg" />
+    <BundleResource Include="Resources\Images\FlowerBuds%402x.jpg" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
