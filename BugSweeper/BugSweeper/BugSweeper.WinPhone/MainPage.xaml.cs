@@ -13,7 +13,7 @@ using Xamarin.Forms;
 
 namespace BugSweeper.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+	public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
     {
         public MainPage()
         {
@@ -21,7 +21,8 @@ namespace BugSweeper.WinPhone
             SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             Forms.Init();
-            Content = BugSweeper.App.GetMainPage().ConvertPageToUIElement(this);
+            
+			LoadApplication(new BugSweeper.App()); // new in 1.3
         }
     }
 }
