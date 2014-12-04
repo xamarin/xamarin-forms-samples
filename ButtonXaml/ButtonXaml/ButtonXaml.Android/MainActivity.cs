@@ -14,7 +14,7 @@ namespace ButtonXaml.Android
 {
     [Activity(Label = "ButtonXaml", MainLauncher = true, 
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : AndroidActivity
+	public class MainActivity : FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
@@ -22,7 +22,7 @@ namespace ButtonXaml.Android
 
             Xamarin.Forms.Forms.Init(this, bundle);
 
-            SetPage(App.GetMainPage());
+			LoadApplication (new App();
         }
     }
 }
