@@ -7,20 +7,22 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.WinPhone;
 
 
 namespace WorkingWithPlatformSpecifics.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
     {
         public MainPage()
         {
             InitializeComponent();
+            SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
-            Forms.Init();
-            Content = WorkingWithPlatformSpecifics.App.GetMainPage().ConvertPageToUIElement(this);
+            global::Xamarin.Forms.Forms.Init();
+
+            LoadApplication(new App()); // new in 1.3
         }
     }
 }
