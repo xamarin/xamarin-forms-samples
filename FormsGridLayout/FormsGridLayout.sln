@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.30501.0
@@ -217,7 +217,7 @@ Global
 		{FA0EF4B9-C269-479B-9DFD-4767E0D6FF3F}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = GridLayoutDemo\GridLayoutDemo\FormsGridLayout.csproj
+		StartupItem = FormsGridLayout\FormsGridLayout.iOS\FormsGridLayout.iOS.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

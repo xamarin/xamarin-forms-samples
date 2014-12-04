@@ -21,7 +21,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>6.1</string>
+	<string>8.1</string>
 	<key>CFBundleDisplayName</key>
 	<string>GridLayoutDemo</string>
 	<key>CFBundleIdentifier</key>
