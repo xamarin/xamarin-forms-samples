@@ -7,11 +7,11 @@ using Xamarin.Forms;
 
 namespace FormsGallery
 {
-    public class App
+	public class App : Application
     {
-        public static Page GetMainPage()
+		public App ()
         {
-            return new NavigationPage(new HomePage());
+            MainPage = new NavigationPage(new HomePage());
         }
     }
 }

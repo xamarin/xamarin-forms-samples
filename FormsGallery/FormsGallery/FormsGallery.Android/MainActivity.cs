@@ -14,7 +14,7 @@ namespace FormsGallery.Droid
 {
     [Activity(Label = "FormsGallery", MainLauncher = true,
         ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize)]
-    public class MainActivity : AndroidActivity
+    public class MainActivity : FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
@@ -23,7 +23,7 @@ namespace FormsGallery.Droid
             Xamarin.Forms.Forms.Init(this, bundle);
             Xamarin.FormsMaps.Init(this, bundle);
 
-            SetPage(App.GetMainPage());
+			LoadApplication (new App ());
         }
     }
 }

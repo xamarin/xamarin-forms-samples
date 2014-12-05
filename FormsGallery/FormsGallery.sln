@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-VisualStudioVersion = {0}
-MinimumVisualStudioVersion = {0}
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsGallery.WinPhone", "FormsGallery\FormsGallery.WinPhone\FormsGallery.WinPhone.csproj", "{3A58A53A-B861-4EEC-A288-2F625E967271}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsGallery.iOS", "FormsGallery\FormsGallery.iOS\FormsGallery.iOS.csproj", "{3E598DD3-5E94-465B-A9B6-3527DAD96BF9}"
@@ -217,7 +215,7 @@ Global
 		{3E598DD3-5E94-465B-A9B6-3527DAD96BF9}.Release|x86.ActiveCfg = Release|iPhone
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = FormsGallery\FormsGallery.Android\FormsGallery.Android.csproj
+		StartupItem = FormsGallery\FormsGallery.iOS\FormsGallery.iOS.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

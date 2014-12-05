@@ -13,7 +13,7 @@ using Xamarin.Forms;
 
 namespace FormsGallery.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+	public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
     {
         public MainPage()
         {
@@ -22,7 +22,8 @@ namespace FormsGallery.WinPhone
 
             Forms.Init();
             Xamarin.FormsMaps.Init();
-            Content = FormsGallery.App.GetMainPage().ConvertPageToUIElement(this);
+
+			LoadApplication(new FormsGallery.App()); // new in 1.3
         }
     }
 }

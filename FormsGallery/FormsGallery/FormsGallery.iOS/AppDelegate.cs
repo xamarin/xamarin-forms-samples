@@ -1,11 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
 
 namespace FormsGallery.iOS
 {
@@ -13,7 +14,7 @@ namespace FormsGallery.iOS
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.
     [Register("AppDelegate")]
-    public partial class AppDelegate : UIApplicationDelegate
+    public partial class AppDelegate : FormsApplicationDelegate
     {
         // class-level declarations
         UIWindow window;
@@ -32,11 +33,9 @@ namespace FormsGallery.iOS
 
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            window.RootViewController = App.GetMainPage().CreateViewController();
+			LoadApplication (new App ());
 
-            window.MakeKeyAndVisible();
-
-            return true;
+			return base.FinishedLaunching (app,options);
         }
     }
 }
