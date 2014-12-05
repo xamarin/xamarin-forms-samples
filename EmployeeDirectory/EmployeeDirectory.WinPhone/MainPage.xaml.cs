@@ -14,7 +14,7 @@ using PCLStorage;
 
 namespace EmployeeDirectory.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+	public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
     {
         public MainPage()
         {
@@ -23,7 +23,8 @@ namespace EmployeeDirectory.WinPhone
             CopyInfoIntoWorkingFolder("XamarinFavorites.xml");
 
             Forms.Init();
-            Content = EmployeeDirectoryUI.App.GetMainPage().ConvertPageToUIElement(this);
+
+			LoadApplication(new EmployeeDirectory.App()); // new in 1.3
         }
 
         private void CopyInfoIntoWorkingFolder(string fileName)

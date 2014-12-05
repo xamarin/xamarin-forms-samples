@@ -13,7 +13,7 @@ namespace EmployeeDirectoryUI
 		Xaml
 	}
 
-	public static class App
+	public class App : Application
 	{
 		//Change the following line to switch between XAML and C# versions
 		private static UIImplementation uiImplementation = UIImplementation.CSharp;
@@ -24,7 +24,7 @@ namespace EmployeeDirectoryUI
 
 		public static DateTime LastUseTime { get; set; }
 
-		public static Page GetMainPage ()
+		public App ()
 		{
 			var task = Task.Run(async () => { 
 				Service = await MemoryDirectoryService.FromCsv("XamarinDirectory.csv"); 
@@ -38,7 +38,7 @@ namespace EmployeeDirectoryUI
 				employeeList = new EmployeeListXaml ();
 			}
 
-			return new NavigationPage (employeeList);
+			MainPage = new NavigationPage (employeeList);
 		}
 	}
 }

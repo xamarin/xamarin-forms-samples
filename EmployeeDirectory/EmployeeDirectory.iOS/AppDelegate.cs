@@ -7,14 +7,13 @@ using Xamarin.Forms;
 using System.IO;
 using EmployeeDirectory;
 using EmployeeDirectoryUI;
+using Xamarin.Forms.Platform.iOS;
 
 namespace EmployeeDirectory.iOS
 {
 	[Register ("AppDelegate")]
-	public partial class AppDelegate : UIApplicationDelegate
+	public partial class AppDelegate : FormsApplicationDelegate
 	{
-		UIWindow window;
-
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			Forms.Init ();
@@ -22,13 +21,13 @@ namespace EmployeeDirectory.iOS
 			CopyInfoIntoWorkingFolder ("XamarinDirectory.csv");
 			CopyInfoIntoWorkingFolder ("XamarinFavorites.xml");
 
-			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			window.RootViewController = App.GetMainPage ().CreateViewController ();
-			App.PhoneFeatureService = new iOSPhoneFeatureService (window.RootViewController);
+			LoadApplication (new App());
 
-			window.MakeKeyAndVisible ();
+			var b = base.FinishedLaunching (app,options);
 
-			return true;
+			App.PhoneFeatureService = new iOSPhoneFeatureService (app.KeyWindow.RootViewController);
+
+			return b;
 		}
 
 		private void CopyInfoIntoWorkingFolder (string fileName)
@@ -37,8 +36,9 @@ namespace EmployeeDirectory.iOS
 			string libraryPath = documentsPath.Replace ("Documents", "Library");
 
 			var path = Path.Combine (libraryPath, fileName);
-			if (!File.Exists (path))
+			if (!File.Exists (path)) {
 				File.Copy (fileName, path);
+			}
 		}
 	}
 }

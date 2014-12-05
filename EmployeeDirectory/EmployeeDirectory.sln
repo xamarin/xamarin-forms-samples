@@ -274,7 +274,7 @@ Global
 		{B5231622-C031-48B5-9FAB-664B31375DCE} = {205F34F1-DBEC-46B8-A6E5-7C2BAB70DD0C}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = EmployeeDirectory.Android\EmployeeDirectory.Android.csproj
+		StartupItem = EmployeeDirectory.iOS\EmployeeDirectory.iOS.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
