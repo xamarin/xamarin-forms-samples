@@ -19,7 +19,7 @@ namespace WorkingWithListviewPerf.Droid
 			}
 		}
 
-		public FasterListViewAdapter(Activity context, FasterListView view)
+		public FasterListViewAdapter(Activity context, NativeListView view)
 		{
 			this.context = context;
 			tableItems = view.Items.ToList();

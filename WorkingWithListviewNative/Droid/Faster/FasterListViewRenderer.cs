@@ -6,17 +6,17 @@ using Xamarin.Forms.Platform.Android;
 using System.Collections;
 using System.Linq;
 
-[assembly: ExportRenderer (typeof (FasterListView), typeof (FasterListViewRenderer))]
+[assembly: ExportRenderer (typeof (NativeListView), typeof (FasterListViewRenderer))]
 
 namespace WorkingWithListviewPerf.Droid
 {
-	public class FasterListViewRenderer : ViewRenderer<FasterListView, global::Android.Widget.ListView>
+	public class FasterListViewRenderer : ViewRenderer<NativeListView, global::Android.Widget.ListView>
 	{
 		public FasterListViewRenderer ()
 		{
 		}
 
-		protected override void OnElementChanged (ElementChangedEventArgs<FasterListView> e)
+		protected override void OnElementChanged (ElementChangedEventArgs<NativeListView> e)
 		{
 			base.OnElementChanged (e);
 
@@ -44,7 +44,7 @@ namespace WorkingWithListviewPerf.Droid
 		protected override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
 		{
 			base.OnElementPropertyChanged (sender, e);
-			if (e.PropertyName == FasterListView.ItemsProperty.PropertyName) {
+			if (e.PropertyName == NativeListView.ItemsProperty.PropertyName) {
 				// update the Items list in the UITableViewSource
 
 				Control.Adapter = new FasterListViewAdapter (Forms.Context as Android.App.Activity, Element);

@@ -5,17 +5,17 @@ using Xamarin.Forms;
 using WorkingWithListviewPerf.iOS;
 using WorkingWithListviewPerf;
 
-[assembly: ExportRenderer (typeof (FasterLayoutListView), typeof (FasterLayoutListViewRenderer))]
+[assembly: ExportRenderer (typeof (NativeListView), typeof (FasterLayoutListViewRenderer))]
 
 namespace WorkingWithListviewPerf.iOS
 {
-	public class FasterLayoutListViewRenderer : ViewRenderer<FasterLayoutListView, UITableView>
+	public class FasterLayoutListViewRenderer : ViewRenderer<NativeListView, UITableView>
 	{
 		public FasterLayoutListViewRenderer ()
 		{
 		}
 
-		protected override void OnElementChanged (ElementChangedEventArgs<FasterLayoutListView> e)
+		protected override void OnElementChanged (ElementChangedEventArgs<NativeListView> e)
 		{
 			base.OnElementChanged (e);
 
@@ -38,7 +38,7 @@ namespace WorkingWithListviewPerf.iOS
 		{
 			base.OnElementPropertyChanged (sender, e);
 
-			if (e.PropertyName == FasterListView.ItemsProperty.PropertyName) {
+			if (e.PropertyName == NativeListView.ItemsProperty.PropertyName) {
 				// update the Items list in the UITableViewSource
 				var s = new FasterLayoutListViewSource (Element);
 

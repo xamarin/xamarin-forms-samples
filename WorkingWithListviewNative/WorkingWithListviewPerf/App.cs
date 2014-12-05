@@ -13,11 +13,13 @@ namespace WorkingWithListviewPerf
 			var tabs = new TabbedPage ();
 
 
-			tabs.Children.Add (new FastPage {Title = "Fast"});
+			tabs.Children.Add (new XamarinFormsPage {Title = "A"});
 
-			tabs.Children.Add (new FasterPage {Title = "Faster"});
+			tabs.Children.Add (new NativeListPage {Title = "B"});
 
-			tabs.Children.Add (new FasterLayoutPage {Title = "FastLayout"});
+			tabs.Children.Add (new XamarinFormsNativeCellPage {Title = "C"});
+
+			tabs.Children.Add (new NativeListViewPage2 {Title = "D"});
 
 
 			MainPage = tabs;

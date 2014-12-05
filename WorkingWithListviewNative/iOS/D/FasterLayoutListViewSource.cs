@@ -10,7 +10,7 @@ namespace WorkingWithListviewPerf.iOS
 	{
 		// declare vars
 		IList<DataSource> tableItems;
-		FasterLayoutListView listView;
+		NativeListView listView;
 		readonly NSString cellIdentifier = new NSString("TableCell");
 
 		public IEnumerable<DataSource> Items {
@@ -20,7 +20,7 @@ namespace WorkingWithListviewPerf.iOS
 			}
 		}
 
-		public FasterLayoutListViewSource (FasterLayoutListView view)
+		public FasterLayoutListViewSource (NativeListView view)
 		{
 			tableItems = view.Items.ToList();
 			listView = view;

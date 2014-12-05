@@ -32,13 +32,16 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App.cs" />
-    <Compile Include="Faster\FasterListView.cs" />
-    <Compile Include="Faster\FasterPage.cs" />
-    <Compile Include="Fast\FastPage.cs" />
-    <Compile Include="FasterLayout\FasterLayoutPage.cs" />
-    <Compile Include="FasterLayout\FasterLayoutListView.cs" />
-    <Compile Include="FasterLayout\DataSource.cs" />
     <Compile Include="DetailPage.cs" />
+    <Compile Include="A\XamarinFormsPage.cs" />
+    <Compile Include="B\NativeListPage.cs" />
+    <Compile Include="B\NativeListView.cs" />
+    <Compile Include="C\XamarinFormsNativeCellPage.cs" />
+    <Compile Include="C\NativeCell.cs" />
+    <Compile Include="D\NativeListViewPage2.cs" />
+    <Compile Include="D\NativeListView2.cs" />
+    <Compile Include="C\DataSource.cs" />
+    <Compile Include="D\DataSource2.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.3.0.6275-pre1\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.0.6275-pre1\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -54,8 +57,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Fast\" />
-    <Folder Include="Faster\" />
-    <Folder Include="FasterLayout\" />
+    <Folder Include="A\" />
+    <Folder Include="B\" />
+    <Folder Include="D\" />
+    <Folder Include="C\" />
   </ItemGroup>
 </Project>

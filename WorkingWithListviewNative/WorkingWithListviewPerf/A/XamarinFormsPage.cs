@@ -11,9 +11,9 @@ namespace WorkingWithListviewPerf
 	/// It uses the built-in <c>TextCell</c> class which does not require special 'layout'
 	/// and is therefore faster than building a custom ViewCell in Xamarin.Forms.
 	/// </summary>
-	public class FastPage : ContentPage
+	public class XamarinFormsPage : ContentPage
 	{
-		public FastPage ()
+		public XamarinFormsPage ()
 		{
 			var tableItems = new List<string> ();
 			for (var i = 0; i < 100; i++) {

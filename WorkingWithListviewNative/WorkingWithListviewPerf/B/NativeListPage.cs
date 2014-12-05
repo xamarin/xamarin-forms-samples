@@ -15,9 +15,9 @@ namespace WorkingWithListviewPerf
 	/// It uses a built-in row/cell class provided by the native platform
 	/// and is therefore faster than building a custom ViewCell in Xamarin.Forms.
 	/// </summary>
-	public class FasterPage : ContentPage
+	public class NativeListPage : ContentPage
 	{
-		public FasterPage ()
+		public NativeListPage ()
 		{
 			var tableItems = new List<string> ();
 			for (var i = 0; i < 100; i++) {
@@ -25,7 +25,7 @@ namespace WorkingWithListviewPerf
 			}
 
 
-			var fasterListView = new FasterListView (); // CUSTOM RENDERER using a native control
+			var fasterListView = new NativeListView (); // CUSTOM RENDERER using a native control
 			fasterListView.VerticalOptions = LayoutOptions.FillAndExpand; // REQUIRED: To share a scrollable view with other views in a StackLayout, it should have a VerticalOptions of FillAndExpand.
 			fasterListView.Items = tableItems;
 			fasterListView.ItemSelected += async (sender, e) => {

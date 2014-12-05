@@ -15,17 +15,17 @@ namespace WorkingWithListviewPerf
 	/// It uses a CUSTOM row/cell class that is defined natively which 
 	/// is still faster than a Xamarin.Forms-defined ViewCell subclass.
 	/// </summary>
-	public class FasterLayoutPage : ContentPage
+	public class NativeListViewPage2 : ContentPage
 	{
-		public FasterLayoutPage ()
+		public NativeListViewPage2 ()
 		{
-			var fasterLayoutListView = new FasterLayoutListView (); // CUSTOM RENDERER using a native control
+			var nativeListView2 = new NativeListView2 (); // CUSTOM RENDERER using a native control
 
-			fasterLayoutListView.VerticalOptions = LayoutOptions.FillAndExpand; // REQUIRED: To share a scrollable view with other views in a StackLayout, it should have a VerticalOptions of FillAndExpand.
+			nativeListView2.VerticalOptions = LayoutOptions.FillAndExpand; // REQUIRED: To share a scrollable view with other views in a StackLayout, it should have a VerticalOptions of FillAndExpand.
 
-			fasterLayoutListView.Items = DataSource.GetList ();
+			nativeListView2.Items = DataSource2.GetList ();
 
-			fasterLayoutListView.ItemSelected += async (sender, e) => {
+			nativeListView2.ItemSelected += async (sender, e) => {
 				//await Navigation.PushModalAsync (new DetailPage(e.SelectedItem));
 				await DisplayAlert ("clicked", "one of the rows was clicked", "ok");
 			};
@@ -38,7 +38,7 @@ namespace WorkingWithListviewPerf
 						XAlign = TextAlignment.Center,
 						Text = Device.OnPlatform("Custom UITableView+UICell","Custom ListView+Cell","Custom renderer todo")
 					},
-					fasterLayoutListView
+					nativeListView2
 				}
 			};
 		}

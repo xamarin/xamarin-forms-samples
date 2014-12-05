@@ -10,10 +10,10 @@ namespace WorkingWithListviewPerf
 	/// Xamarin.Forms representation for a custom-renderer that uses 
 	/// the native list control on each platform.
 	/// </summary>
-	public class FasterLayoutListView : View
+	public class NativeListView2 : View
 	{
 		public static readonly BindableProperty ItemsProperty = 
-			BindableProperty.Create ("Items", typeof(IEnumerable<DataSource>), typeof(FasterListView), new List<DataSource>());
+			BindableProperty.Create ("Items", typeof(IEnumerable<DataSource>), typeof(NativeListView), new List<DataSource>());
 
 		public IEnumerable<DataSource> Items {
 			get { return (IEnumerable<DataSource>)GetValue (ItemsProperty); }
@@ -28,7 +28,7 @@ namespace WorkingWithListviewPerf
 				ItemSelected (this, new SelectedItemChangedEventArgs (item));
 		}
 
-		public FasterLayoutListView ()
+		public NativeListView2 ()
 		{
 		}
 	}

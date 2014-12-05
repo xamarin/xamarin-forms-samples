@@ -12,7 +12,7 @@ namespace WorkingWithListviewPerf.iOS
 		// declare vars
 		IList<string> tableItems;
 		string cellIdentifier = "TableCell";
-		FasterListView listView;
+		NativeListView listView;
 
 		public IEnumerable<string> Items {
 			//get{ }
@@ -21,7 +21,7 @@ namespace WorkingWithListviewPerf.iOS
 			}
 		}
 
-		public FasterListViewSource (FasterListView view)
+		public FasterListViewSource (NativeListView view)
 		{
 			tableItems = view.Items.ToList ();
 			listView = view;
