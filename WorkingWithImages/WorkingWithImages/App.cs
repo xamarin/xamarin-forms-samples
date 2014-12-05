@@ -8,10 +8,10 @@ using Xamarin.Forms.Xaml;
 
 namespace WorkingWithImages
 {
-    public class App
-    {
-        public static Page GetMainPage()
-        {
+	public class App : Application // superclass new in 1.3
+	{
+		public App ()
+		{
 			//
 			// NOTE: uncomment the relevant page that you'd like to test
 			//
@@ -29,8 +29,8 @@ namespace WorkingWithImages
 			xamlTab.Children.Add(new LocalImagesXaml { Title = "Local", Icon="xaml.png"});
 			xamlTab.Children.Add(new DownloadImagesXaml {Title = "Downloaded", Icon="xaml.png"});
 			xamlTab.Children.Add(new EmbeddedImagesXaml {Title = "Embedded", Icon="xaml.png"});
-			return xamlTab;
 
+			MainPage = xamlTab;
 
 			//return new LoadingPlaceholder ());
 		}
