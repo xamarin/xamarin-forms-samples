@@ -9,11 +9,12 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.WinPhone;
 
 
 namespace ClassHierarchy.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class MainPage : FormsApplicationPage
     {
         public MainPage()
         {
@@ -21,7 +22,8 @@ namespace ClassHierarchy.WinPhone
             SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             Forms.Init();
-            Content = ClassHierarchy.App.GetMainPage().ConvertPageToUIElement(this);
+
+            LoadApplication(new ClassHierarchy.App());
         }
     }
 }
