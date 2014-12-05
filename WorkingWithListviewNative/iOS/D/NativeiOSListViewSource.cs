@@ -6,21 +6,21 @@ using System.Linq;
 
 namespace WorkingWithListviewPerf.iOS
 {
-	public class FasterLayoutListViewSource : UITableViewSource
+	public class NativeiOSListViewSource : UITableViewSource
 	{
 		// declare vars
-		IList<DataSource> tableItems;
-		NativeListView listView;
+		IList<DataSource2> tableItems;
+		NativeListView2 listView;
 		readonly NSString cellIdentifier = new NSString("TableCell");
 
-		public IEnumerable<DataSource> Items {
+		public IEnumerable<DataSource2> Items {
 			//get{ }
 			set{
 				tableItems = value.ToList();
 			}
 		}
 
-		public FasterLayoutListViewSource (NativeListView view)
+		public NativeiOSListViewSource (NativeListView2 view)
 		{
 			tableItems = view.Items.ToList();
 			listView = view;
@@ -55,11 +55,11 @@ namespace WorkingWithListviewPerf.iOS
 		public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
 		{
 			// request a recycled cell to save memory
-			FasterLayoutListViewCell cell = tableView.DequeueReusableCell (cellIdentifier) as FasterLayoutListViewCell;
+			NativeiOSListViewCell cell = tableView.DequeueReusableCell (cellIdentifier) as NativeiOSListViewCell;
 
 			// if there are no cells to reuse, create a new one
 			if (cell == null) {
-				cell = new FasterLayoutListViewCell (cellIdentifier);
+				cell = new NativeiOSListViewCell (cellIdentifier);
 			}
 
 			if (String.IsNullOrWhiteSpace (tableItems [indexPath.Row].ImageFilename)) {

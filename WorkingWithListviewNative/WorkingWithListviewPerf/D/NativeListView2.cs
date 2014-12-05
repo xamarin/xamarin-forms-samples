@@ -13,10 +13,10 @@ namespace WorkingWithListviewPerf
 	public class NativeListView2 : View
 	{
 		public static readonly BindableProperty ItemsProperty = 
-			BindableProperty.Create ("Items", typeof(IEnumerable<DataSource>), typeof(NativeListView), new List<DataSource>());
+			BindableProperty.Create ("Items", typeof(IEnumerable<DataSource2>), typeof(NativeListView2), new List<DataSource2>());
 
-		public IEnumerable<DataSource> Items {
-			get { return (IEnumerable<DataSource>)GetValue (ItemsProperty); }
+		public IEnumerable<DataSource2> Items {
+			get { return (IEnumerable<DataSource2>)GetValue (ItemsProperty); }
 			set { SetValue (ItemsProperty, value); } 
 		}
 

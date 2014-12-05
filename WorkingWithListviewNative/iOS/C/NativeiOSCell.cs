@@ -17,7 +17,7 @@ namespace WorkingWithListviewPerf.iOS
 		{
 			SelectionStyle = UITableViewCellSelectionStyle.Gray;
 
-			ContentView.BackgroundColor = UIColor.FromRGB (218, 255, 127);
+			ContentView.BackgroundColor = UIColor.FromRGB (255,255,224);
 
 			imageView = new UIImageView();
 

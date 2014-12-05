@@ -146,11 +146,11 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="B\FasterListViewRenderer.cs" />
     <Compile Include="B\FasterListViewSource.cs" />
-    <Compile Include="D\FasterLayoutListViewRenderer.cs" />
-    <Compile Include="D\FasterLayoutListViewSource.cs" />
-    <Compile Include="D\FasterLayoutListViewCell.cs" />
     <Compile Include="C\NativeiOSCell.cs" />
     <Compile Include="C\NativeiOSCellRenderer.cs" />
+    <Compile Include="D\NativeiOSListViewSource.cs" />
+    <Compile Include="D\NativeiOSListViewRenderer.cs" />
+    <Compile Include="D\NativeiOSListViewCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="ITunesArtwork" />

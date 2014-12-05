@@ -23,8 +23,7 @@ namespace WorkingWithListviewPerf.iOS
 			var x = (NativeCell)item;
 			Console.WriteLine (x);
 
-			// HACK: base.GetCell is throwing NRE... not sure why
-			NativeiOSCell c = null; //(NativeiOSCell)base.GetCell (item, reusableCell, tv);
+			NativeiOSCell c = reusableCell as NativeiOSCell; 
 
 			if (c == null) {
 				c = new NativeiOSCell (rid);

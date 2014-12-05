@@ -50,7 +50,5 @@ namespace WorkingWithListviewPerf.Droid
 				Control.Adapter = new FasterListViewAdapter (Forms.Context as Android.App.Activity, Element);
 			}
 		}
-
-
 	}
 }

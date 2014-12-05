@@ -6,23 +6,22 @@ using Xamarin.Forms.Platform.Android;
 using System.Collections;
 using System.Linq;
 
-[assembly: ExportRenderer (typeof (NativeListView), typeof (FasterLayoutListViewRenderer))]
+[assembly: ExportRenderer (typeof (NativeListView2), typeof (NativeAndroidListViewRenderer))]
 
 namespace WorkingWithListviewPerf.Droid
 {
-	public class FasterLayoutListViewRenderer : ViewRenderer<NativeListView, global::Android.Widget.ListView>
+	public class NativeAndroidListViewRenderer : ViewRenderer<NativeListView2, global::Android.Widget.ListView>
 	{
-		public FasterLayoutListViewRenderer ()
+		public NativeAndroidListViewRenderer ()
 		{
 		}
 
-		protected override void OnElementChanged (ElementChangedEventArgs<NativeListView> e)
+		protected override void OnElementChanged (ElementChangedEventArgs<NativeListView2> e)
 		{
 			base.OnElementChanged (e);
 
 			if (Control == null) {
 				SetNativeControl (new global::Android.Widget.ListView (Forms.Context));
-				Control.SetBackgroundResource(global::Android.Resource.Color.HoloBlueLight);
 			}
 
 			if (e.OldElement != null) {
@@ -32,8 +31,7 @@ namespace WorkingWithListviewPerf.Droid
 
 			if (e.NewElement != null) {
 				// subscribe
-
-				Control.Adapter = new FasterLayoutListViewAdapter (Forms.Context as Android.App.Activity, e.NewElement);
+				Control.Adapter = new NativeAndroidListViewAdapter (Forms.Context as Android.App.Activity, e.NewElement);
 				Control.ItemClick += clicked;
 			}
 		}
@@ -48,7 +46,7 @@ namespace WorkingWithListviewPerf.Droid
 			if (e.PropertyName == NativeListView.ItemsProperty.PropertyName) {
 				// update the Items list in the UITableViewSource
 
-				Control.Adapter = new FasterLayoutListViewAdapter (Forms.Context as Android.App.Activity, Element);
+				Control.Adapter = new NativeAndroidListViewAdapter (Forms.Context as Android.App.Activity, Element);
 			}
 		}
 	}

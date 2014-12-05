@@ -8,12 +8,12 @@ namespace WorkingWithListviewPerf.iOS
 	/// Sample of a custom cell layout, taken from the iOS docs at
 	/// http://developer.xamarin.com/guides/ios/user_interface/tables/part_3_-_customizing_a_table's_appearance/
 	/// </summary>
-	public class FasterLayoutListViewCell : UITableViewCell  {
+	public class NativeiOSListViewCell : UITableViewCell  {
 
 		UILabel headingLabel, subheadingLabel;
 		UIImageView imageView;
 
-		public FasterLayoutListViewCell (NSString cellId) : base (UITableViewCellStyle.Default, cellId)
+		public NativeiOSListViewCell (NSString cellId) : base (UITableViewCellStyle.Default, cellId)
 		{
 			SelectionStyle = UITableViewCellSelectionStyle.Gray;
 

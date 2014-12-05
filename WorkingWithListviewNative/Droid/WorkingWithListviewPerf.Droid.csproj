@@ -42,9 +42,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="Xamarin.Android.Support.v4">
-      <HintPath>..\packages\Xamarin.Android.Support.v4.19.1.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Forms.Platform.Android">
       <HintPath>..\packages\Xamarin.Forms.1.3.0.6275-pre1\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
     </Reference>
@@ -57,15 +54,22 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.1.3.0.6275-pre1\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.v13">
+      <HintPath>..\packages\Xamarin.Android.Support.v13.20.0.0.4\lib\MonoAndroid32\Xamarin.Android.Support.v13.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.20.0.0.4\lib\MonoAndroid32\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Faster\FasterListViewAdapter.cs" />
-    <Compile Include="Faster\FasterListViewRenderer.cs" />
-    <Compile Include="FasterLayout\FasterLayoutListViewAdapter.cs" />
-    <Compile Include="FasterLayout\FasterLayoutListViewRenderer.cs" />
+    <Compile Include="B\FasterListViewAdapter.cs" />
+    <Compile Include="B\FasterListViewRenderer.cs" />
+    <Compile Include="C\NativeAndroidCellRenderer.cs" />
+    <Compile Include="D\NativeAndroidListViewAdapter.cs" />
+    <Compile Include="D\NativeAndroidListViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -76,21 +80,24 @@
   <ItemGroup>
     <Folder Include="Resources\layout\" />
     <Folder Include="Resources\values\" />
-    <Folder Include="Faster\" />
-    <Folder Include="FasterLayout\" />
+    <Folder Include="B\" />
+    <Folder Include="D\" />
+    <Folder Include="C\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
-    <AndroidResource Include="Resources\layout\FasterLayoutListViewCell.axml" />
     <AndroidResource Include="Resources\drawable\CustomSelector.xml" />
     <AndroidResource Include="Resources\drawable\FlowerBuds.jpg" />
     <AndroidResource Include="Resources\drawable\Fruits.jpg" />
     <AndroidResource Include="Resources\drawable\Legumes.jpg" />
     <AndroidResource Include="Resources\drawable\Vegetables.jpg" />
     <AndroidResource Include="Resources\values\Colors.xml" />
+    <AndroidResource Include="Resources\layout\NativeAndroidListViewCell.axml" />
+    <AndroidResource Include="Resources\layout\NativeAndroidCell.axml" />
+    <AndroidResource Include="Resources\drawable\CustomSelector2.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.3.0.6275-pre1\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.0.6275-pre1\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

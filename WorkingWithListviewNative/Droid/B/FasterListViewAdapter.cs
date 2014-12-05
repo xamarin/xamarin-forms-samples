@@ -28,7 +28,7 @@ namespace WorkingWithListviewPerf.Droid
 		public override string this[int position]
 		{
 			get
-			{ // this'll break if called with a 'header' position
+			{ 
 				return tableItems[position];
 			}
 		}
@@ -42,10 +42,7 @@ namespace WorkingWithListviewPerf.Droid
 		{
 			get { return tableItems.Count; }
 		}
-
-		/// <summary>
-		/// Grouped list: view could be a 'section heading' or a 'data row'
-		/// </summary>
+	
 		public override View GetView(int position, View convertView, ViewGroup parent)
 		{
 			// Get our object for this position
