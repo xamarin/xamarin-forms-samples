@@ -3,10 +3,10 @@ using Xamarin.Forms;
 
 namespace WorkingWithGestures
 {
-	public class App
+	public class App : Application // superclass new in 1.3
 	{
-		public static Page GetMainPage ()
-		{	
+		public App ()
+		{
 			var tabs = new TabbedPage ();
 
 			// demonstrates an Image tap (and changing the image)
@@ -18,7 +18,7 @@ namespace WorkingWithGestures
 			// demonstrates using Xaml, Command and databinding
 			tabs.Children.Add (new TapInsideFrameXaml {Title = "In Xaml", Icon = "xaml.png" });
 
-			return tabs;
+			MainPage = tabs;
 		}
 	}
 }

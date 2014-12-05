@@ -167,7 +167,7 @@ Global
 		{CD67CA09-0F35-4CA1-9CCE-4CD1C1381A2E}.Release|x86.ActiveCfg = Release|iPhone
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = iOS\WorkingWithGestures.iOS.csproj
+		StartupItem = Android\WorkingWithGestures.Android.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
