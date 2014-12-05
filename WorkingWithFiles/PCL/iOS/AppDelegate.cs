@@ -1,29 +1,26 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
+using WorkingWithFiles;
 
 using Xamarin.Forms;
 
 namespace WorkingWithFiles.iOS
 {
 	[Register ("AppDelegate")]
-	public partial class AppDelegate : UIApplicationDelegate
+	public partial class AppDelegate : 
+	global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate // superclass new in 1.3
 	{
-		UIWindow window;
-
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
-			Forms.Init ();
+			global::Xamarin.Forms.Forms.Init ();
 
-			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			
-			window.RootViewController = App.GetMainPage ().CreateViewController ();
-			window.MakeKeyAndVisible ();
-			
-			return true;
+			LoadApplication (new App ());  // method is new in 1.3
+
+			return base.FinishedLaunching (app, options);
 		}
 	}
 }

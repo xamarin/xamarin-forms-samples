@@ -169,7 +169,7 @@ Global
 		{B28C2900-36EC-4C94-B59C-472D5AC5A08D}.Release|x86.ActiveCfg = Release|iPhone
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Android\WorkingWithFiles.Android.csproj
+		StartupItem = iOS\WorkingWithFiles.iOS.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
