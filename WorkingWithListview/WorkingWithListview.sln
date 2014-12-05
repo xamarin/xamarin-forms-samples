@@ -223,7 +223,7 @@ Global
 		{DEEA7150-2898-43FB-BA6D-6DAA5A5665C2}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = iOS\WorkingWithListview.iOS.csproj
+		StartupItem = Android\WorkingWithListview.Android.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
