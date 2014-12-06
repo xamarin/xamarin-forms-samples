@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.IO;
 
 #if __IOS__
 using System.Drawing;
-using MonoTouch.UIKit;
-using MonoTouch.CoreGraphics;
+using UIKit;
+using CoreGraphics;
 #endif
 
 #if __ANDROID__
@@ -54,22 +54,22 @@ namespace XamFormsImageResize
 				// draw the image
 				context.DrawImage (imageRect, originalImage.CGImage);
 
-				MonoTouch.UIKit.UIImage resizedImage = MonoTouch.UIKit.UIImage.FromImage (context.ToImage ());
+				UIKit.UIImage resizedImage = UIKit.UIImage.FromImage (context.ToImage ());
 
 				// save the image as a jpeg
 				return resizedImage.AsJPEG ().ToArray ();
 			}
 		}
 
-		public static MonoTouch.UIKit.UIImage ImageFromByteArray(byte[] data)
+		public static UIKit.UIImage ImageFromByteArray(byte[] data)
 		{
 			if (data == null) {
 				return null;
 			}
 
-			MonoTouch.UIKit.UIImage image;
+			UIKit.UIImage image;
 			try {
-				image = new MonoTouch.UIKit.UIImage(MonoTouch.Foundation.NSData.FromArray(data));
+				image = new UIKit.UIImage(Foundation.NSData.FromArray(data));
 			} catch (Exception e) {
 				Console.WriteLine ("Image load failed: " + e.Message);
 				return null;
