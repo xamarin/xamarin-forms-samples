@@ -10,9 +10,9 @@ namespace WorkingWithPopups
 			var tabs = new TabbedPage ();
 			tabs.Children.Add(new AlertPage { Title = "Alerts", Icon="csharp.png"});
 			tabs.Children.Add(new ActionSheetPage {Title = "ActionSheets", Icon="csharp.png"});
-			return tabs;
+			MainPage = tabs;
 
-			return new ActionSheetPage();
+			//return new ActionSheetPage();
 		}
 	}
 }
