@@ -1,6 +1,6 @@
-﻿using Xamarin.Forms;
+using Xamarin.Forms;
 using WorkingWithWebview.iOS;
-using MonoTouch.Foundation;
+using Foundation;
 
 [assembly: Dependency (typeof (BaseUrl_iOS))]
 

@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using WorkingWithWebview;
 using WorkingWithWebview.iOS;
 

@@ -3,10 +3,10 @@ using Xamarin.Forms;
 
 namespace WorkingWithWebview
 {
-	public class App
+	public class App : Application // superclass new in 1.3
 	{
-		public static Page GetMainPage ()
-		{	
+		public App ()
+		{
 			var tabs = new TabbedPage ();
 
 			tabs.Children.Add (new LocalHtml {Title = "Local" });
@@ -14,7 +14,7 @@ namespace WorkingWithWebview
 			tabs.Children.Add (new WebPage { Title = "Web Page"});
 			tabs.Children.Add (new WebAppPage {Title ="External"});
 
-			return tabs;
+			MainPage = tabs;
 		}
 	}
 }
