@@ -3,10 +3,10 @@ using Xamarin.Forms;
 
 namespace WorkingWithPopups
 {
-	public class App
+	public class App : Application // superclass new in 1.3
 	{
-		public static Page GetMainPage ()
-		{	
+		public App ()
+		{
 			var tabs = new TabbedPage ();
 			tabs.Children.Add(new AlertPage { Title = "Alerts", Icon="csharp.png"});
 			tabs.Children.Add(new ActionSheetPage {Title = "ActionSheets", Icon="csharp.png"});

@@ -11,10 +11,10 @@ support them by buying the full set / Retina versions
 
 namespace WorkingWithMaps
 {
-	public class App
+	public class App : Application // superclass new in 1.3
 	{
-		public static Page GetMainPage ()
-		{	
+		public App ()
+		{
 
 			var tabs = new TabbedPage ();
 
@@ -30,7 +30,7 @@ namespace WorkingWithMaps
 			// opens the platform's native Map app
 			tabs.Children.Add (new MapAppPage {Title = "Map App", Icon = "glyphish_103_map.png"});
 
-			return tabs;
+			MainPage = tabs;
 		}
 	}
 }
