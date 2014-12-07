@@ -5,13 +5,12 @@ using System.Text;
 
 using Xamarin.Forms;
 
-namespace XamlSamples
+public class App : Application // superclass new in 1.3
 {
-    public class App
-    {
-        public static Page GetMainPage()
-        {
-            return new NavigationPage(new HomePage());
-        }
+	public App ()
+	{
+
+     	MainPage = new NavigationPage(new HomePage());
+        
     }
 }
