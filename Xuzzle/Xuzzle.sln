@@ -224,7 +224,7 @@ Global
 		{FBDBF946-5BC9-49E2-9EAE-E54E69004587} = {0448BEA8-0A2D-4E87-AC92-06EEEE1E778A}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Xuzzle\Xuzzle.iOS\Xuzzle.iOS.csproj
+		StartupItem = Xuzzle\Xuzzle.Android\Xuzzle.Android.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
