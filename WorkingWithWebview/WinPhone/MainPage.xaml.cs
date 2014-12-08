@@ -16,18 +16,20 @@ using System.IO;
 
 namespace WorkingWithWebview.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage 
     {
         public MainPage()
         {
             InitializeComponent();
+            SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
-            Forms.Init();
+            global::Xamarin.Forms.Forms.Init();
 
             SaveFilesToIsoStore();
 
-            Content = WorkingWithWebview.App.GetMainPage().ConvertPageToUIElement(this);
+            LoadApplication(new WorkingWithWebview.App()); // new in 1.3
         }
+
 
         // http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff431811%28v=vs.105%29.aspx
         private void SaveFilesToIsoStore()
@@ -44,7 +46,7 @@ namespace WorkingWithWebview.WinPhone
             {
                 foreach (string f in files)
                 {
-                    StreamResourceInfo sr = Application.GetResourceStream(new Uri(f, UriKind.Relative));
+                    StreamResourceInfo sr = System.Windows.Application.GetResourceStream(new Uri(f, UriKind.Relative));
                     using (BinaryReader br = new BinaryReader(sr.Stream))
                     {
                         byte[] data = br.ReadBytes((int)sr.Stream.Length);
