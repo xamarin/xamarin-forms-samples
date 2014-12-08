@@ -12,21 +12,15 @@ using Xamarin.Forms;
 
 namespace XamFormsImageResize.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
     {
-        // Constructor
         public MainPage()
         {
             InitializeComponent();
             SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
-            Forms.Init();
-            Content = new HomePage().ConvertPageToUIElement(this);
-
-
-
-            
-
+            global::Xamarin.Forms.Forms.Init();
+            LoadApplication(new XamFormsImageResize.App()); // new in 1.3
         }
     }
 }
