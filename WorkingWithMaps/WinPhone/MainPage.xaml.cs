@@ -14,20 +14,15 @@ using Xamarin;
 
 namespace WorkingWithMaps.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
+        InitializeComponent();
+        SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
-            Forms.Init();
-            FormsMaps.Init();
-
-            // TODO: when deploying to Windows Store
-            // string applicationId = "APP_ID_FROM_PORTAL", authToken = "AUTH_TOKEN_FROM_PORTAL";
-            // FormsMaps.Init(applicationId, authToken);
-            
-            Content = WorkingWithMaps.App.GetMainPage().ConvertPageToUIElement(this);
-        }
+        global::Xamarin.Forms.Forms.Init();
+        LoadApplication(new WorkingWithMaps.App()); // new in 1.3
     }
+ }
 }
