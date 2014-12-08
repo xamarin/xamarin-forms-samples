@@ -13,14 +13,15 @@ using Xamarin.Forms;
 
 namespace WorkingWithListview.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
     {
         public MainPage()
         {
             InitializeComponent();
+            SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
-            Forms.Init();
-            Content = WorkingWithListview.App.GetMainPage().ConvertPageToUIElement(this);
+            global::Xamarin.Forms.Forms.Init();
+            LoadApplication(new WorkingWithListview.App()); // new in 1.3
         }
     }
 }
