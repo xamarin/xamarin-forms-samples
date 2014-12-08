@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Todo;
 using Xamarin.Forms;
 using Todo.iOS;

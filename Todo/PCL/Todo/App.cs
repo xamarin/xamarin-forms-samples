@@ -3,15 +3,15 @@ using Xamarin.Forms;
 
 namespace Todo
 {
-	public static class App
+	public class App : Application
 	{
 		static TodoItemDatabase database;
 
-		public static Page GetMainPage ()
+		public App ()
 		{
 			var mainNav = new NavigationPage (new TodoListPage ());
 
-			return mainNav;
+			MainPage = mainNav;
 		}
 
 		public static TodoItemDatabase Database {
