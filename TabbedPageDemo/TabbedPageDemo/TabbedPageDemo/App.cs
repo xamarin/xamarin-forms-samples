@@ -7,11 +7,11 @@ using Xamarin.Forms;
 
 namespace TabbedPageDemo
 {
-    public class App
-    {
-        public static Page GetMainPage()
-        {
-            return new TabbedPageDemoPage();
+	public class App : Application // superclass new in 1.3
+	{
+		public App ()
+		{
+            HomePage = new TabbedPageDemoPage();
         }
     }
 }
