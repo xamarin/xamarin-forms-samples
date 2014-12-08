@@ -13,15 +13,16 @@ using Xamarin.Forms;
 
 namespace Xuzzle.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
     {
         public MainPage()
         {
             InitializeComponent();
-            this.SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
+            SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
-            Forms.Init();
-            Content = Xuzzle.App.GetMainPage().ConvertPageToUIElement(this);
+            global::Xamarin.Forms.Forms.Init();
+            LoadApplication(new Xuzzle.App()); // new in 1.3
         }
     }
+
 }
