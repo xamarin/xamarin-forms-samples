@@ -42,6 +42,8 @@ namespace WorkingWithListviewPerf.iOS
 			listView.NotifyItemSelected (tableItems [indexPath.Row]);
 
 			Console.WriteLine("Row " + indexPath.Row.ToString() + " selected");	
+
+			tableView.DeselectRow (indexPath, true);
 		}
 
 		public override void RowDeselected (UITableView tableView, NSIndexPath indexPath)

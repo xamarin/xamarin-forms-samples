@@ -26,6 +26,10 @@ namespace WorkingWithListviewPerf
 			listView.ItemTemplate.SetBinding(NativeCell.ImageFilenameProperty, "ImageFilename");
 
 			listView.ItemSelected += async (sender, e) => {
+				if (e.SelectedItem == null)
+					return;
+				listView.SelectedItem= null; // deselect row
+
 				await Navigation.PushModalAsync (new DetailPage(e.SelectedItem));
 			};
 
