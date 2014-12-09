@@ -217,7 +217,7 @@ Global
 		{EF4FEE81-1404-4464-A6BC-7373ED009D5A}.Release|x86.ActiveCfg = Release|iPhone
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = iOS\UsingResxLocalization.iOS.csproj
+		StartupItem = Android\UsingResxLocalization.Android.csproj
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = None

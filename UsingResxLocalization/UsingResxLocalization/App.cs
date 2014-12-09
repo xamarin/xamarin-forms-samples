@@ -4,9 +4,9 @@ using System.Reflection;
 
 namespace UsingResxLocalization
 {
-	public class App
+	public class App : Application
 	{
-		public static Page GetMainPage ()
+		public App ()
 		{
 			System.Diagnostics.Debug.WriteLine("===============");
 			var assembly = typeof(App).GetTypeInfo().Assembly;
@@ -25,7 +25,7 @@ namespace UsingResxLocalization
 
 			tabs.Children.Add (new FirstPageXaml {Title = "Xaml", Icon="xaml.png"});
 
-			return tabs;
+			MainPage = tabs;
 		}
 	}
 }
