@@ -13,17 +13,20 @@ using Android.Content.PM;
 
 namespace UsingMessagingCenter.Android
 {
-	[Activity (Label = "UsingMessagingCenter.Android.Android", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : AndroidActivity
+	[Activity (Label = "UsingMessagingCenter.Android.Android", Icon = "@drawable/icon", MainLauncher = true, 
+		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	public class MainActivity : 
+	global::Xamarin.Forms.Platform.Android.FormsApplicationActivity // superclass new in 1.3
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
-			Xamarin.Forms.Forms.Init (this, bundle);
+			global::Xamarin.Forms.Forms.Init (this, bundle);
 
-			SetPage (App.GetMainPage ());
+			LoadApplication (new App ()); // method is new in 1.3
 		}
 	}
+
 }
 
