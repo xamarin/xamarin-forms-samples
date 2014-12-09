@@ -3,11 +3,11 @@ using Xamarin.Forms;
 
 namespace UsingDependencyService
 {
-	public class App
+	public class App : Application // superclass new in 1.3
 	{
-		public static Page GetMainPage ()
-		{	
-			return new MainPage();
+		public App ()
+		{
+			MainPage = new MainPage();
 		}
 	}
 }
