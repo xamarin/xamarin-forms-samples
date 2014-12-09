@@ -217,7 +217,7 @@ Global
 		{E9CB8FE6-7B7F-4837-BB78-6F9198E66690}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = TabbedPageDemo\TabbedPageDemo.iOS\TabbedPageDemo.iOS.csproj
+		StartupItem = TabbedPageDemo\TabbedPageDemo.Android\TabbedPageDemo.Android.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
