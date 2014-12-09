@@ -11,7 +11,7 @@ namespace TabbedPageDemo
 	{
 		public App ()
 		{
-            HomePage = new TabbedPageDemoPage();
+            MainPage = new TabbedPageDemoPage();
         }
     }
 }
