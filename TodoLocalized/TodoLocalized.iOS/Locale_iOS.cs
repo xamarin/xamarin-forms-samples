@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 using Xamarin.Forms;
-using MonoTouch.Foundation;
+using Foundation;
 using System.Threading;
 
 [assembly:Dependency(typeof(TodoLocalized.Locale_iOS))]

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using TodoLocalized;
 using Xamarin.Forms;
 using System.IO;

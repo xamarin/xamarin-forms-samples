@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using TodoLocalized;
 using Xamarin.Forms;
 using System.IO;
@@ -10,24 +10,15 @@ using System.Threading;
 
 namespace TodoLocalized
 {
-	// The UIApplicationDelegate for the application. This class is responsible for launching the
-	// User Interface of the application, as well as listening (and optionally responding) to
-	// application events from iOS.
 	[Register ("AppDelegate")]
-	public partial class AppDelegate : UIApplicationDelegate
+	public partial class AppDelegate : 
+	global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate // superclass new in 1.3
 	{
-		// class-level declarations
-		UIWindow window;
-		//
-		// This method is invoked when the application has loaded and is ready to run. In this
-		// method you should instantiate the window, load the UI into it and then make the window
-		// visible.
-		//
-		// You have 17 seconds to return from this method, or iOS will terminate your application.
-		//
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
-			Forms.Init ();
+			global::Xamarin.Forms.Forms.Init ();
+
+			LoadApplication (new App ());  // method is new in 1.3
 
 			#region Localization debug info
 			foreach (var s in NSLocale.PreferredLanguages) {
@@ -51,17 +42,8 @@ namespace TodoLocalized
 			Console.WriteLine ("uiculture:" + Thread.CurrentThread.CurrentUICulture);
 			#endregion
 
-			// create a new window instance based on the screen size
-			window = new UIWindow (UIScreen.MainScreen.Bounds);
-
-			// If you have defined a view, add it here:
-			// window.RootViewController  = navigationController;
-			window.RootViewController = App.GetMainPage ().CreateViewController ();
-
-			// make the window visible
-			window.MakeKeyAndVisible ();
-
-			return true;
+			return base.FinishedLaunching (app, options);
 		}
 	}
 }
+
