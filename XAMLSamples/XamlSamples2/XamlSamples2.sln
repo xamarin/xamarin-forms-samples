@@ -86,4 +86,7 @@ Global
 		{B635559C-3F14-46D6-AE08-98FFDB192BAB}.Release|x86.ActiveCfg = Release|Any CPU
 		{B635559C-3F14-46D6-AE08-98FFDB192BAB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = ..\xamlsamples\xamlsamples.ios\XamlSamples.iOS.csproj
+	EndGlobalSection
 EndGlobal
