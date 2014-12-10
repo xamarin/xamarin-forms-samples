@@ -3,12 +3,12 @@ using Xamarin.Forms;
 
 namespace CustomRenderer
 {
-	public class App
+	public class App : Application
 	{
-		public static Page GetMainPage ()
+		public App ()
 		{	
 //			return new MainPage ();
-			return new MainPageXaml (); // uncomment this to test the Xaml version
+			MainPage = new MainPageXaml (); // uncomment this to test the Xaml version
 		}
 	}
 }
