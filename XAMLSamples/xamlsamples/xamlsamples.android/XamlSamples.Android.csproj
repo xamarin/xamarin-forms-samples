@@ -18,7 +18,8 @@
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
-    <JavaMaximumHeapSize />
+    <JavaMaximumHeapSize>
+    </JavaMaximumHeapSize>
     <JavaOptions />
     <NuGetPackageImportStamp>bb7b8b1f</NuGetPackageImportStamp>
   </PropertyGroup>
@@ -89,9 +90,9 @@
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XamlSamples\XamlSamples.csproj">
-      <Name>XamlSamples</Name>
+    <ProjectReference Include="..\xamlsamples\XamlSamples.csproj">
       <Project>{B635559C-3F14-46D6-AE08-98FFDB192BAB}</Project>
+      <Name>XamlSamples</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
