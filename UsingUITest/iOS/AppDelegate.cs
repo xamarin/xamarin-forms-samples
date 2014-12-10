@@ -1,29 +1,26 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 
 using Xamarin.Forms;
-using MonoTouch.ObjCRuntime;
+using ObjCRuntime;
 
 namespace UsingUITest
 {
 	[Register ("AppDelegate")]
-	public partial class AppDelegate : UIApplicationDelegate
+	public partial class AppDelegate : 
+	global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate // superclass new in 1.3
 	{
-		UIWindow window;
-
-		static readonly IntPtr setAccessibilityIdentifier_Handle = Selector.GetHandle("setAccessibilityIdentifier:");
-
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
-			Forms.Init ();
+			global::Xamarin.Forms.Forms.Init ();
 
+			//IntPtr setAccessibilityIdentifier_Handle = Selector.GetHandle("setAccessibilityIdentifier:");
 
-			// http://forums.xamarin.com/discussion/21148/calabash-and-xamarin-forms-what-am-i-missing
-			Forms.ViewInitialized += (object sender, ViewInitializedEventArgs e) => {
+			global::Xamarin.Forms.Forms.ViewInitialized += (object sender, ViewInitializedEventArgs e) => {
 
 				// http://developer.xamarin.com/recipes/testcloud/set-accessibilityidentifier-ios/
 				if (null != e.View.StyleId) {
@@ -32,11 +29,7 @@ namespace UsingUITest
 				}
 			};
 
-
-			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			
-			window.RootViewController = App.GetMainPage ().CreateViewController ();
-			window.MakeKeyAndVisible ();
+			LoadApplication (new App ());  // method is new in 1.3
 
 
 			#if DEBUG
@@ -44,8 +37,7 @@ namespace UsingUITest
 			Xamarin.Calabash.Start();
 			#endif
 
-
-			return true;
+			return base.FinishedLaunching (app, options);
 		}
 	}
 }

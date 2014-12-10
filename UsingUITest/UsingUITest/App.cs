@@ -7,11 +7,11 @@ namespace UsingUITest
 	/// Demo of setting control identifiers to use with Calabash for testing
 	/// http://forums.xamarin.com/discussion/21148/calabash-and-xamarin-forms-what-am-i-missing
 	/// </summary>
-	public class App
+	public class App : Application
 	{
-		public static Page GetMainPage ()
+		public App ()
 		{	
-			return new MyPage ();
+			MainPage = new MyPage ();
 		}
 	}
 }
