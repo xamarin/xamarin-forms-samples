@@ -17,9 +17,6 @@ namespace UsingUITest
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init ();
-
-			//IntPtr setAccessibilityIdentifier_Handle = Selector.GetHandle("setAccessibilityIdentifier:");
-
 			global::Xamarin.Forms.Forms.ViewInitialized += (object sender, ViewInitializedEventArgs e) => {
 
 				// http://developer.xamarin.com/recipes/testcloud/set-accessibilityidentifier-ios/
