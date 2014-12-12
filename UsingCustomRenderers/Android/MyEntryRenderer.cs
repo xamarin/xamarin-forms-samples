@@ -13,13 +13,8 @@ namespace CustomRenderer.Android
 		{
 			base.OnElementChanged (e);
 
-			if (e.OldElement == null) {
-				// perform initial setup
-				// lets get a reference to the native control
-				var nativeEditText = (global::Android.Widget.EditText)Control;
-				// do whatever you want to the EditText here!
-
-				nativeEditText.SetBackgroundColor (global::Android.Graphics.Color.DarkGray);
+			if (Control != null) {
+				Control.SetBackgroundColor (global::Android.Graphics.Color.DarkGray);
 			}
 		}
 	}
