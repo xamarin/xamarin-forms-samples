@@ -28,18 +28,26 @@ namespace WorkingWithListviewPerf.Droid
 
 			if (view == null) {// no view to re-use, create new
 				view = (context as Activity).LayoutInflater.Inflate (Resource.Layout.NativeAndroidCell, null);
+			} else { // re-use, clear image
+				// doesn't seem to help
+				//view.FindViewById<ImageView> (Resource.Id.Image).Drawable.Dispose ();
 			}
 
 			view.FindViewById<TextView>(Resource.Id.Text1).Text = x.Name;
 			view.FindViewById<TextView>(Resource.Id.Text2).Text = x.Category;
 
-//			var i = view.Resources.GetIdentifier (item.ImageFilename, "drawable", context.PackageName);
-//			view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(i);
-
 			// HACK: this makes for choppy scrolling I think :-(
-			context.Resources.GetBitmapAsync (x.ImageFilename).ContinueWith((t) => {
-				view.FindViewById<ImageView> (Resource.Id.Image).SetImageBitmap (t.Result);
-			});
+			if (!String.IsNullOrWhiteSpace (x.ImageFilename)) {
+				context.Resources.GetBitmapAsync (x.ImageFilename).ContinueWith ((t) => {
+					var bitmap = t.Result;
+					if (bitmap != null) {
+						view.FindViewById<ImageView> (Resource.Id.Image).SetImageBitmap (bitmap);
+						bitmap.Dispose ();
+					}
+				});
+			} else {
+				view.FindViewById<ImageView> (Resource.Id.Image).SetImageBitmap (null);
+			}
 
 			return view;
 		}

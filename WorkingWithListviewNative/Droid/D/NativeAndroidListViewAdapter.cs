@@ -53,18 +53,27 @@ namespace WorkingWithListviewPerf.Droid
 			var item = tableItems[position];
 
 			var view = convertView;
-			if (view == null) // no view to re-use, create new
-				view = context.LayoutInflater.Inflate(Resource.Layout.NativeAndroidListViewCell, null);
+			if (view == null) {// no view to re-use, create new
+				view = context.LayoutInflater.Inflate (Resource.Layout.NativeAndroidListViewCell, null);
+			} else { // re-use, clear image
+				// doesn't seem to help
+				//view.FindViewById<ImageView> (Resource.Id.Image).Drawable.Dispose ();
+			}
 			view.FindViewById<TextView>(Resource.Id.Text1).Text = item.Name;
 			view.FindViewById<TextView>(Resource.Id.Text2).Text = item.Category;
 
-//			var i = view.Resources.GetIdentifier (item.ImageFilename, "drawable", context.PackageName);
-//			view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(i);
-
 			// HACK: this makes for choppy scrolling I think :-(
-			context.Resources.GetBitmapAsync (item.ImageFilename).ContinueWith((t) => {
-				view.FindViewById<ImageView> (Resource.Id.Image).SetImageBitmap (t.Result);
-			});
+			if (!String.IsNullOrWhiteSpace (item.ImageFilename)) {
+				context.Resources.GetBitmapAsync (item.ImageFilename).ContinueWith ((t) => {
+					var bitmap = t.Result;
+					if (bitmap != null) {
+						view.FindViewById<ImageView> (Resource.Id.Image).SetImageBitmap (bitmap);
+						bitmap.Dispose ();
+					}
+				});
+			} else {
+				view.FindViewById<ImageView> (Resource.Id.Image).SetImageBitmap (null);
+			}
 
 			return view;
 		}

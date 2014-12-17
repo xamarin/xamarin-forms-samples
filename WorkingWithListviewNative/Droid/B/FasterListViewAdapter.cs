@@ -48,7 +48,10 @@ namespace WorkingWithListviewPerf.Droid
 			// Get our object for this position
 			var item = this.tableItems[position];
 
-			var view = context.LayoutInflater.Inflate(global::Android.Resource.Layout.SimpleListItem1, null);
+			var view = convertView;
+			if (view == null) { // no view to re-use, create new
+				view = context.LayoutInflater.Inflate(global::Android.Resource.Layout.SimpleListItem1, null);
+			}
 
 			view.FindViewById<TextView> (global::Android.Resource.Id.Text1).Text = item;
 
