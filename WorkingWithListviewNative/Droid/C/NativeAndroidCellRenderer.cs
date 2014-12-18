@@ -5,6 +5,7 @@ using Android.Widget;
 using Android.App;
 using Android.Views;
 using WorkingWithListviewPerf;
+using Android.Graphics.Drawables;
 
 [assembly: ExportRenderer (typeof (NativeCell), typeof (WorkingWithListviewPerf.Droid.NativeAndroidCellRenderer))]
 
@@ -35,6 +36,18 @@ namespace WorkingWithListviewPerf.Droid
 
 			view.FindViewById<TextView>(Resource.Id.Text1).Text = x.Name;
 			view.FindViewById<TextView>(Resource.Id.Text2).Text = x.Category;
+
+
+			if (view.FindViewById<ImageView> (Resource.Id.Image).Drawable != null) {
+				using (var image = view.FindViewById<ImageView> (Resource.Id.Image).Drawable as BitmapDrawable) {
+					if (image != null) {
+						if (image.Bitmap != null) {
+							//image.Bitmap.Recycle ();
+							image.Bitmap.Dispose ();
+						}
+					}
+				}
+			}
 
 			// HACK: this makes for choppy scrolling I think :-(
 			if (!String.IsNullOrWhiteSpace (x.ImageFilename)) {
