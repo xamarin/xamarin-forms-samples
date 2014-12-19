@@ -103,9 +103,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WorkingWithListviewPerf\WorkingWithListviewPerf.csproj">
+    <ProjectReference Include="..\WorkingWithListviewPerf\WorkingWithListviewNative.csproj">
       <Project>{23F1E141-F1D3-4089-A9BC-35DD8ABCA6EE}</Project>
-      <Name>WorkingWithListviewPerf</Name>
+      <Name>WorkingWithListviewNative</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
