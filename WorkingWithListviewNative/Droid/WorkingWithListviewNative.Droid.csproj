@@ -6,7 +6,7 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{327F8A49-23F0-4E6F-98C4-55989AB14C1F}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>WorkingWithListviewPerf.Droid</RootNamespace>
+    <RootNamespace>WorkingWithListviewNative.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -62,11 +62,11 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="B\FasterListViewAdapter.cs" />
-    <Compile Include="B\FasterListViewRenderer.cs" />
     <Compile Include="C\NativeAndroidCellRenderer.cs" />
     <Compile Include="D\NativeAndroidListViewAdapter.cs" />
     <Compile Include="D\NativeAndroidListViewRenderer.cs" />
+    <Compile Include="B\NativeListViewRenderer.cs" />
+    <Compile Include="B\NativeListViewAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -95,11 +95,14 @@
     <AndroidResource Include="Resources\layout\NativeAndroidListViewCell.axml" />
     <AndroidResource Include="Resources\layout\NativeAndroidCell.axml" />
     <AndroidResource Include="Resources\drawable\CustomSelector2.xml" />
+    <AndroidResource Include="Resources\drawable\forms_forms.png" />
+    <AndroidResource Include="Resources\drawable\forms_native.png" />
+    <AndroidResource Include="Resources\drawable\native_native.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.3.0.6284-pre3\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.0.6284-pre3\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <ItemGroup>
-    <ProjectReference Include="..\WorkingWithListviewPerf\WorkingWithListviewNative.csproj">
+    <ProjectReference Include="..\WorkingWithListviewNative\WorkingWithListviewNative.csproj">
       <Project>{23F1E141-F1D3-4089-A9BC-35DD8ABCA6EE}</Project>
       <Name>WorkingWithListviewNative</Name>
     </ProjectReference>

@@ -4,7 +4,7 @@ using Xamarin.Forms;
 using System.Diagnostics;
 using System.Collections.Generic;
 
-namespace WorkingWithListviewPerf
+namespace WorkingWithListviewNative
 {
 	/// <summary>
 	/// This page uses a custom renderer that wraps native list controls:

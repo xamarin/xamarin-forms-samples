@@ -1,18 +1,18 @@
 ﻿using System;
 using Xamarin.Forms;
-using WorkingWithListviewPerf;
-using WorkingWithListviewPerf.Droid;
+using WorkingWithListviewNative;
+using WorkingWithListviewNative.Droid;
 using Xamarin.Forms.Platform.Android;
 using System.Collections;
 using System.Linq;
 
-[assembly: ExportRenderer (typeof (NativeListView), typeof (FasterListViewRenderer))]
+[assembly: ExportRenderer (typeof (NativeListView), typeof (NativeListViewRenderer))]
 
-namespace WorkingWithListviewPerf.Droid
+namespace WorkingWithListviewNative.Droid
 {
-	public class FasterListViewRenderer : ViewRenderer<NativeListView, global::Android.Widget.ListView>
+	public class NativeListViewRenderer : ViewRenderer<NativeListView, global::Android.Widget.ListView>
 	{
-		public FasterListViewRenderer ()
+		public NativeListViewRenderer ()
 		{
 		}
 
@@ -32,7 +32,7 @@ namespace WorkingWithListviewPerf.Droid
 			if (e.NewElement != null) {
 				// subscribe
 
-				Control.Adapter = new FasterListViewAdapter (Forms.Context as Android.App.Activity, e.NewElement);
+				Control.Adapter = new NativeListViewAdapter (Forms.Context as Android.App.Activity, e.NewElement);
 				Control.ItemClick += clicked;
 			}
 		}
@@ -47,7 +47,7 @@ namespace WorkingWithListviewPerf.Droid
 			if (e.PropertyName == NativeListView.ItemsProperty.PropertyName) {
 				// update the Items list in the UITableViewSource
 
-				Control.Adapter = new FasterListViewAdapter (Forms.Context as Android.App.Activity, Element);
+				Control.Adapter = new NativeListViewAdapter (Forms.Context as Android.App.Activity, Element);
 			}
 		}
 	}

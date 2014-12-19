@@ -9,7 +9,7 @@ using Xamarin.Forms.Platform.Android;
 using System.Threading.Tasks;
 using Android.Graphics.Drawables;
 
-namespace WorkingWithListviewPerf.Droid
+namespace WorkingWithListviewNative.Droid
 {
 	/// <summary>
 	/// This adapter uses a view defined in /Resources/Layout/NativeAndroidListViewCell.axml

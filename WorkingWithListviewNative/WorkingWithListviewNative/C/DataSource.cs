@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WorkingWithListviewPerf
+namespace WorkingWithListviewNative
 {
 	public class DataSource
 	{

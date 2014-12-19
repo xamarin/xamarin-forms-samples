@@ -3,7 +3,7 @@
 using Xamarin.Forms;
 using System.Collections.Generic;
 
-namespace WorkingWithListviewPerf
+namespace WorkingWithListviewNative
 {
 
 	/// <summary>

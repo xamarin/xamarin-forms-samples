@@ -2,12 +2,12 @@
 using Xamarin.Forms.Platform.iOS;
 using UIKit;
 using Xamarin.Forms;
-using WorkingWithListviewPerf.iOS;
-using WorkingWithListviewPerf;
+using WorkingWithListviewNative.iOS;
+using WorkingWithListviewNative;
 
 [assembly: ExportRenderer (typeof (NativeListView2), typeof (NativeiOSListViewRenderer))]
 
-namespace WorkingWithListviewPerf.iOS
+namespace WorkingWithListviewNative.iOS
 {
 	public class NativeiOSListViewRenderer : ViewRenderer<NativeListView2, UITableView>
 	{

@@ -1,14 +1,15 @@
 ﻿using System;
 using Xamarin.Forms.Platform.iOS;
-using WorkingWithListviewPerf;
+using WorkingWithListviewNative;
 using UIKit;
 using Xamarin.Forms;
 using Foundation;
+using WorkingWithListviewNative.iOS;
 
-[assembly: ExportRenderer (typeof (NativeCell), typeof (WorkingWithListviewPerf.iOS.NativeiOSCellRenderer))]
+[assembly: ExportRenderer (typeof (NativeCell), typeof (NativeiOSCellRenderer))]
 
 
-namespace WorkingWithListviewPerf.iOS
+namespace WorkingWithListviewNative.iOS
 {
 	public class NativeiOSCellRenderer : ViewCellRenderer
 	{

@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace WorkingWithListviewPerf.iOS
+namespace WorkingWithListviewNative.iOS
 {
 	public class Application
 	{

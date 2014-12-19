@@ -4,13 +4,14 @@ using Xamarin.Forms;
 using Android.Widget;
 using Android.App;
 using Android.Views;
-using WorkingWithListviewPerf;
+using WorkingWithListviewNative;
 using Android.Graphics.Drawables;
 using System.Threading.Tasks;
+using WorkingWithListviewNative.Droid;
 
-[assembly: ExportRenderer (typeof (NativeCell), typeof (WorkingWithListviewPerf.Droid.NativeAndroidCellRenderer))]
+[assembly: ExportRenderer (typeof (NativeCell), typeof (NativeAndroidCellRenderer))]
 
-namespace WorkingWithListviewPerf.Droid
+namespace WorkingWithListviewNative.Droid
 {
 	/// <summary>
 	/// This renderer uses a view defined in /Resources/Layout/NativeAndroidCell.axml

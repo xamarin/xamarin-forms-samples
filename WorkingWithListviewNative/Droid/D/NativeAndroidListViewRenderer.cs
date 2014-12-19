@@ -1,14 +1,14 @@
 ﻿using System;
 using Xamarin.Forms;
-using WorkingWithListviewPerf;
-using WorkingWithListviewPerf.Droid;
+using WorkingWithListviewNative;
+using WorkingWithListviewNative.Droid;
 using Xamarin.Forms.Platform.Android;
 using System.Collections;
 using System.Linq;
 
 [assembly: ExportRenderer (typeof (NativeListView2), typeof (NativeAndroidListViewRenderer))]
 
-namespace WorkingWithListviewPerf.Droid
+namespace WorkingWithListviewNative.Droid
 {
 	public class NativeAndroidListViewRenderer : ViewRenderer<NativeListView2, global::Android.Widget.ListView>
 	{

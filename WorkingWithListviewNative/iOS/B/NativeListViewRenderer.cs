@@ -2,16 +2,16 @@
 using Xamarin.Forms.Platform.iOS;
 using UIKit;
 using Xamarin.Forms;
-using WorkingWithListviewPerf.iOS;
-using WorkingWithListviewPerf;
+using WorkingWithListviewNative.iOS;
+using WorkingWithListviewNative;
 
-[assembly: ExportRenderer (typeof (NativeListView), typeof (FasterListViewRenderer))]
+[assembly: ExportRenderer (typeof (NativeListView), typeof (NativeListViewRenderer))]
 
-namespace WorkingWithListviewPerf.iOS
+namespace WorkingWithListviewNative.iOS
 {
-	public class FasterListViewRenderer : ViewRenderer<NativeListView, UITableView>
+	public class NativeListViewRenderer : ViewRenderer<NativeListView, UITableView>
 	{
-		public FasterListViewRenderer ()
+		public NativeListViewRenderer ()
 		{
 		}
 
@@ -30,7 +30,7 @@ namespace WorkingWithListviewPerf.iOS
 			if (e.NewElement != null) {
 				// subscribe
 
-				var s = new FasterListViewSource (e.NewElement);
+				var s = new NativeListViewSource (e.NewElement);
 				Control.Source = s;
 			}
 		}
@@ -40,7 +40,7 @@ namespace WorkingWithListviewPerf.iOS
 
 			if (e.PropertyName == NativeListView.ItemsProperty.PropertyName) {
 				// update the Items list in the UITableViewSource
-				var s = new FasterListViewSource (Element);
+				var s = new NativeListViewSource (Element);
 				Control.Source = s;
 			}
 		}

@@ -6,9 +6,9 @@ using Android.Views;
 using System.Collections;
 using System.Linq;
 
-namespace WorkingWithListviewPerf.Droid
+namespace WorkingWithListviewNative.Droid
 {
-	public class FasterListViewAdapter: BaseAdapter<string> {
+	public class NativeListViewAdapter: BaseAdapter<string> {
 
 		readonly Activity context;
 		IList<string> tableItems = new List<string>();
@@ -19,7 +19,7 @@ namespace WorkingWithListviewPerf.Droid
 			}
 		}
 
-		public FasterListViewAdapter(Activity context, NativeListView view)
+		public NativeListViewAdapter(Activity context, NativeListView view)
 		{
 			this.context = context;
 			tableItems = view.Items.ToList();

@@ -6,7 +6,7 @@
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{E4A1352F-0066-416E-AC25-FFB95C31401B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>WorkingWithListviewPerf.iOS</RootNamespace>
+    <RootNamespace>WorkingWithListviewNative.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>WorkingWithListViewPerfiOS</AssemblyName>
   </PropertyGroup>
@@ -103,7 +103,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WorkingWithListviewPerf\WorkingWithListviewNative.csproj">
+    <ProjectReference Include="..\WorkingWithListviewNative\WorkingWithListviewNative.csproj">
       <Project>{23F1E141-F1D3-4089-A9BC-35DD8ABCA6EE}</Project>
       <Name>WorkingWithListviewNative</Name>
     </ProjectReference>
@@ -132,6 +132,9 @@
     <BundleResource Include="Resources\Images\Vegetables%402x.jpg" />
     <BundleResource Include="Resources\Images\FlowerBuds.jpg" />
     <BundleResource Include="Resources\Images\FlowerBuds%402x.jpg" />
+    <BundleResource Include="Resources\forms_forms.png" />
+    <BundleResource Include="Resources\forms_native.png" />
+    <BundleResource Include="Resources\native_native.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -144,13 +147,13 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="B\FasterListViewRenderer.cs" />
-    <Compile Include="B\FasterListViewSource.cs" />
     <Compile Include="C\NativeiOSCell.cs" />
     <Compile Include="C\NativeiOSCellRenderer.cs" />
     <Compile Include="D\NativeiOSListViewSource.cs" />
     <Compile Include="D\NativeiOSListViewRenderer.cs" />
     <Compile Include="D\NativeiOSListViewCell.cs" />
+    <Compile Include="B\NativeListViewRenderer.cs" />
+    <Compile Include="B\NativeListViewSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="ITunesArtwork" />

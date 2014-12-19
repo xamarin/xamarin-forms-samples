@@ -2,7 +2,7 @@
 
 using Xamarin.Forms;
 
-namespace WorkingWithListviewPerf
+namespace WorkingWithListviewNative
 {
 	public class DetailPage : ContentPage
 	{

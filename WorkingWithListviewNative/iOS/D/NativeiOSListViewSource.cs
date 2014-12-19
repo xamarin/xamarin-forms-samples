@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Foundation;
 using System.Linq;
 
-namespace WorkingWithListviewPerf.iOS
+namespace WorkingWithListviewNative.iOS
 {
 	public class NativeiOSListViewSource : UITableViewSource
 	{

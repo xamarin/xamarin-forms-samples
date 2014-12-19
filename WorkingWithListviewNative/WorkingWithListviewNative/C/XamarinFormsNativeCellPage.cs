@@ -3,7 +3,7 @@
 using Xamarin.Forms;
 using System.Collections.Generic;
 
-namespace WorkingWithListviewPerf
+namespace WorkingWithListviewNative
 {
 	/// <summary>
 	/// This page uses built-in Xamarin.Forms controls to display a fast-scrolling list.
@@ -15,8 +15,6 @@ namespace WorkingWithListviewPerf
 	{
 		public XamarinFormsNativeCellPage ()
 		{
-
-
 			var listView = new ListView ();
 			listView.ItemsSource = DataSource.GetList ();
 			listView.ItemTemplate = new DataTemplate(typeof(NativeCell));

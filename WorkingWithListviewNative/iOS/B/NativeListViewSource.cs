@@ -5,9 +5,9 @@ using Foundation;
 using System.Collections;
 using System.Linq;
 
-namespace WorkingWithListviewPerf.iOS
+namespace WorkingWithListviewNative.iOS
 {
-	public class FasterListViewSource : UITableViewSource
+	public class NativeListViewSource : UITableViewSource
 	{
 		// declare vars
 		IList<string> tableItems;
@@ -21,7 +21,7 @@ namespace WorkingWithListviewPerf.iOS
 			}
 		}
 
-		public FasterListViewSource (NativeListView view)
+		public NativeListViewSource (NativeListView view)
 		{
 			tableItems = view.Items.ToList ();
 			listView = view;

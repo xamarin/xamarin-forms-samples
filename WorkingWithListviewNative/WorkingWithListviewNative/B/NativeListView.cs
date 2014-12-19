@@ -4,7 +4,7 @@ using Xamarin.Forms;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace WorkingWithListviewPerf
+namespace WorkingWithListviewNative
 {
 	/// <summary>
 	/// Xamarin.Forms representation for a custom-renderer that uses 
