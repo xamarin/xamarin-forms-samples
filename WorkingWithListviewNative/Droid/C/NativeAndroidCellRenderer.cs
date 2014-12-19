@@ -6,6 +6,7 @@ using Android.App;
 using Android.Views;
 using WorkingWithListviewPerf;
 using Android.Graphics.Drawables;
+using System.Threading.Tasks;
 
 [assembly: ExportRenderer (typeof (NativeCell), typeof (WorkingWithListviewPerf.Droid.NativeAndroidCellRenderer))]
 
@@ -37,7 +38,8 @@ namespace WorkingWithListviewPerf.Droid
 			view.FindViewById<TextView>(Resource.Id.Text1).Text = x.Name;
 			view.FindViewById<TextView>(Resource.Id.Text2).Text = x.Category;
 
-
+			// grab the old image and dispose of it
+			// TODO: optimize if the image is the *same* and we want to just keep it
 			if (view.FindViewById<ImageView> (Resource.Id.Image).Drawable != null) {
 				using (var image = view.FindViewById<ImageView> (Resource.Id.Image).Drawable as BitmapDrawable) {
 					if (image != null) {
@@ -49,7 +51,7 @@ namespace WorkingWithListviewPerf.Droid
 				}
 			}
 
-			// HACK: this makes for choppy scrolling I think :-(
+			// If a new image is required, display it
 			if (!String.IsNullOrWhiteSpace (x.ImageFilename)) {
 				context.Resources.GetBitmapAsync (x.ImageFilename).ContinueWith ((t) => {
 					var bitmap = t.Result;
@@ -57,8 +59,10 @@ namespace WorkingWithListviewPerf.Droid
 						view.FindViewById<ImageView> (Resource.Id.Image).SetImageBitmap (bitmap);
 						bitmap.Dispose ();
 					}
-				});
+				}, TaskScheduler.FromCurrentSynchronizationContext() );
+
 			} else {
+				// clear the image
 				view.FindViewById<ImageView> (Resource.Id.Image).SetImageBitmap (null);
 			}
 

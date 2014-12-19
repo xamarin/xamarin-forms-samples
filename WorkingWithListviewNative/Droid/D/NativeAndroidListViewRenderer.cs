@@ -36,6 +36,11 @@ namespace WorkingWithListviewPerf.Droid
 			}
 		}
 
+//		public override void Layout (int l, int t, int r, int b)
+//		{
+//			base.Layout (l, t, r, b);
+//		}
+
 		void clicked (object sender, Android.Widget.AdapterView.ItemClickEventArgs e) {
 			Element.NotifyItemSelected (Element.Items.ToList()[e.Position]);
 		}
