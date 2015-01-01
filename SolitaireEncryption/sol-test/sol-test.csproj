@@ -32,6 +32,7 @@
     <Reference Include="nunit.framework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeckTest.cs" />
     <Compile Include="EncryptionTests.cs" />
     <Compile Include="DisplayTests.cs" />
     <Compile Include="DecryptionTests.cs" />
