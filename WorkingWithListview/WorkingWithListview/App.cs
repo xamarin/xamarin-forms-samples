@@ -3,10 +3,16 @@ using Xamarin.Forms;
 
 namespace WorkingWithListview
 {
+	/// <summary>
+	/// Different ways to customize the ListView control in Xamarin.Forms 1.3
+	/// </summary>
 	public class App : Application // superclass new in 1.3
 	{
 		public App ()
 		{
+			//
+			// the code (and xaml) for each page is contained in a separate folder in this project
+			//
 
 			// USE C#
 

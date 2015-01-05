@@ -32,40 +32,40 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BasicListXaml.xaml.cs">
+    <Compile Include="Basic\BasicListPage.cs" />
+    <Compile Include="Basic\BasicListXaml.xaml.cs">
       <DependentUpon>BasicListXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BasicListPage.cs" />
-    <Compile Include="CustomCellPage.cs" />
-    <Compile Include="CustomCell.cs" />
-    <Compile Include="UnevenRowsPage.cs" />
-    <Compile Include="UnevenRowsCell.cs" />
-    <Compile Include="CustomCellXaml.xaml.cs">
+    <Compile Include="Context\ContextActionsCell.cs" />
+    <Compile Include="Context\ContextActionsPage.cs" />
+    <Compile Include="Context\ContextActionsXaml.xaml.cs">
+      <DependentUpon>ContextActionsXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\CustomCell.cs" />
+    <Compile Include="Custom\CustomCellPage.cs" />
+    <Compile Include="Custom\CustomCellXaml.xaml.cs">
       <DependentUpon>CustomCellXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UnevenRowsXaml.xaml.cs">
+    <Compile Include="Uneven\UnevenRowsCell.cs" />
+    <Compile Include="Uneven\UnevenRowsPage.cs" />
+    <Compile Include="Uneven\UnevenRowsXaml.xaml.cs">
       <DependentUpon>UnevenRowsXaml.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ContextActionsPage.cs" />
-    <Compile Include="ContextActionsCell.cs" />
-    <Compile Include="ContextActionsXaml.xaml.cs">
-      <DependentUpon>ContextActionsXaml.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.3.1.6294-pre1\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.1.6294-pre1\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <ItemGroup>
-    <EmbeddedResource Include="BasicListXaml.xaml">
+    <EmbeddedResource Include="Basic\BasicListXaml.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomCellXaml.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UnevenRowsXaml.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ContextActionsXaml.xaml">
+    <EmbeddedResource Include="Context\ContextActionsXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\CustomCellXaml.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uneven\UnevenRowsXaml.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -78,5 +78,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Basic\" />
+    <Folder Include="Context\" />
+    <Folder Include="Custom\" />
+    <Folder Include="Uneven\" />
   </ItemGroup>
 </Project>
