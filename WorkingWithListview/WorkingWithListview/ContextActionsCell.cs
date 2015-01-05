@@ -1,0 +1,60 @@
+﻿using System;
+
+using Xamarin.Forms;
+using System.Diagnostics;
+
+namespace WorkingWithListview
+{
+	/// <summary>
+	/// Demonstrates the new ContextActions property introduced in Xamarin.Forms 1.3
+	/// </summary>
+	public class ContextActionsCell : ViewCell
+	{
+		public ContextActionsCell ()
+		{
+			var label1 = new Label { Text = "Label 1", Font = Font.SystemFontOfSize(NamedSize.Small), FontAttributes = FontAttributes.Bold };
+			label1.SetBinding(Label.TextProperty, new Binding("."));
+			var hint = Device.OnPlatform ("Tip: swipe left for context action", "Tip: long press for context action", "Tip: long press for context action");
+			var label2 = new Label { Text = hint, Font = Font.SystemFontOfSize(NamedSize.Micro) };
+
+			//
+			// define context actions
+			//
+			var moreAction = new MenuItem { Text = "More" };
+			moreAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
+			moreAction.Clicked += async (sender, e) => {
+				var mi = ((MenuItem)sender);
+				Debug.WriteLine("More Context Action clicked: " + mi.CommandParameter);
+			};
+
+			var deleteAction = new MenuItem { Text = "Delete", IsDestructive = true }; // red background
+			deleteAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
+			deleteAction.Clicked += async (sender, e) => {
+				var mi = ((MenuItem)sender);
+				Debug.WriteLine("Delete Context Action clicked: " + mi.CommandParameter);
+			};
+
+			//
+			// add context actions to the cell
+			//
+			ContextActions.Add (moreAction);
+			ContextActions.Add (deleteAction);
+
+
+
+			View = new StackLayout {
+				Orientation = StackOrientation.Horizontal,
+				HorizontalOptions = LayoutOptions.StartAndExpand,
+				Padding = new Thickness (15, 5, 5, 15),
+				Children = {
+					new StackLayout {
+						Orientation = StackOrientation.Vertical,
+						Children = { label1, label2 }
+					}
+				}
+			};
+		}
+	}
+}
+
+

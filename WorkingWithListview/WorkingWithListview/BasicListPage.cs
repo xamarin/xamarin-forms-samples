@@ -17,7 +17,8 @@ namespace WorkingWithListview
 			listView.ItemsSource = new [] { "a", "b", "c" };
 
 			// Using ItemTapped
-			listView.ItemTapped += (sender, e) => {
+			listView.ItemTapped += async (sender, e) => {
+				await DisplayAlert("Tapped", e.Item + " row was tapped", "OK");
 				Debug.WriteLine("Tapped: " + e.Item);
 				((ListView)sender).SelectedItem = null; // de-select the row
 			};

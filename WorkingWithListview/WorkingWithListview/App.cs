@@ -16,6 +16,8 @@ namespace WorkingWithListview
 
 			tabs.Children.Add (new UnevenRowsPage {Title="Uneven", Icon = "csharp.png" });
 
+			tabs.Children.Add (new ContextActionsPage {Title="Context", Icon = "csharp.png" });
+
 			tabs.Children.Add (new CustomCellPage {Title="Button", Icon = "csharp.png" });
 
 			MainPage = tabs;
