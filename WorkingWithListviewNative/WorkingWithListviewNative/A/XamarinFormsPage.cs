@@ -37,7 +37,7 @@ namespace WorkingWithListviewNative
 				Children = {
 					new Label {
 						XAlign = TextAlignment.Center,
-						Text = "Xamarin.Forms built-in ListView" 
+						Text = "Xamarin.Forms built-in ListView"
 					},
 					listView
 				}

@@ -27,7 +27,6 @@ namespace WorkingWithListviewNative
 			// custom renderer for the list, using a native cell that has been custom-defined in native code
 			tabs.Children.Add (new NativeListViewPage2 {Title = "D", Icon = "native_native.png"});
 
-
 			MainPage = tabs;
 		}
 

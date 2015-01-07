@@ -68,7 +68,4 @@ Global
 		{E4A1352F-0066-416E-AC25-FFB95C31401B}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{E4A1352F-0066-416E-AC25-FFB95C31401B}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Droid\WorkingWithListviewNative.Droid.csproj
-	EndGlobalSection
 EndGlobal
