@@ -8,48 +8,42 @@
 			HorizontalOptions="CenterAndExpand">
 
 		<Label Text="Hello Forms with XAML">
-		    <Label.Font>
-		        <OnPlatform x:TypeArguments="Font">
-		            <OnPlatform.iOS>MarkerFelt-Thin,Medium</OnPlatform.iOS>
-		            <OnPlatform.Android>Large</OnPlatform.Android>
-		            <OnPlatform.WinPhone>Bold,Medium</OnPlatform.WinPhone>
+		    <Label.FontFamily>
+		        <OnPlatform x:TypeArguments="x:String">
+		            <OnPlatform.iOS>MarkerFelt-Thin</OnPlatform.iOS>
+		            <OnPlatform.Android></OnPlatform.Android>
+		            <OnPlatform.WinPhone></OnPlatform.WinPhone>
 		        </OnPlatform>
-		    </Label.Font>
+		    </Label.FontFamily>
 		</Label>
 
 		<StackLayout Orientation="Horizontal">
-			<Label Text="Italics" Font="Italic" />
-			<Label Text="Bold" Font="Bold" />
+			<Label Text="Italics" FontAttributes="Italic" />
+			<Label Text="Bold" FontAttributes="Bold" />
 		</StackLayout>
 
-		<Label Text="Biggest NamedSize" Font="Large" />
+		<Label Text="Biggest NamedSize" FontSize="Large" />
 
-		<!-- Font string should be formatted as 
-			"[name],[attributes],[size]" 
-		there may be multiple attributes -->
-
-		<Label Text="Use size 72" Font="Italic,72" />
+		<Label Text="Use size 72" FontSize="72" FontAttributes="Italic" />
 
 		<Label Text="Specify Bold Attribute and Micro Size">
-		    <Label.Font>Bold,Micro</Label.Font>
+		    <Label.FontAttributes>Bold</Label.FontAttributes>
+		    <Label.FontSize>Micro</Label.FontSize>
 		</Label>
 
-
-		<Label Text="Multiple FontAttributes" Font="Bold, Italic" />
-
+		<Label Text="Multiple FontAttributes" FontAttributes="Bold, Italic" />
 
 		<Label>
 			<Label.FormattedText>
             	<FormattedString>
 	            	<FormattedString.Spans>
-						<Span Text="Red, " ForegroundColor="Red" Font="Italic,20" />
-						<Span Text=" blue, " ForegroundColor="Blue" Font="32" />
-						<Span Text=" and green! " ForegroundColor="Green" Font="12"/>
+						<Span Text="Red, " ForegroundColor="Red" FontAttributes="Italic" FontSize="20" />
+						<Span Text=" blue, " ForegroundColor="Blue" FontSize="32" />
+						<Span Text=" and green! " ForegroundColor="Green" FontSize="12"/>
 					</FormattedString.Spans>
 				</FormattedString>
 			</Label.FormattedText>
 		</Label>
-
 
 	</StackLayout>
 </ContentPage>
