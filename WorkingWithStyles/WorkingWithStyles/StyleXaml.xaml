@@ -20,7 +20,7 @@
 		<Label Text="This uses BodyStyle in XAML" Style="{DynamicResource BodyStyle}"/>
 		<Label Text="This uses CaptionStyle in XAML" Style="{DynamicResource CaptionStyle}"/>
 
-		<Button Text="Style Me XAML" />
+		<Button Text="Style Me XAML" Style="{StaticResource ButtonStyle}" />
 
 		<!-- defined above in the Page's ResourceDictionary -->
 		<Label Text="This uses a custom style dynamically inherited from SubtitleStyle in XAML" 
