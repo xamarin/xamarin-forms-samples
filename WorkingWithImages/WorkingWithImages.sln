@@ -219,9 +219,6 @@ Global
 		{E3BA1FC1-A02E-44B5-9982-3B78CAECFABE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E3BA1FC1-A02E-44B5-9982-3B78CAECFABE}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = WorkingWithImages.Android\WorkingWithImages.Android.csproj
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
