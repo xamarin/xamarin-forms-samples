@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>9e91bc1f-9b0d-484d-82fb-0b281dcb7da6</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Beginner</Level>
+	<Tags>User Interface, Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>false</Gallery>
+	<Brief>These samples demonstrate how to create custom renderers for ListViews using Xamarin.Forms.</Brief>
+</SampleMetadata>
