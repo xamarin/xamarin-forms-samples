@@ -9,6 +9,7 @@ namespace WorkingWithStyles
 		{	
 			// The Application ResourceDictionary is available in Xamarin.Forms 1.3 and later
 			Application.Current.Resources = new ResourceDictionary ();
+
 			var appStyle = new Style (typeof(Label)) {
 				BaseResourceKey = Device.Styles.SubtitleStyleKey,
 				Setters = {
@@ -17,7 +18,12 @@ namespace WorkingWithStyles
 			};
 			Application.Current.Resources.Add ("AppStyle", appStyle);
 
-
+			var boxStyle = new Style (typeof(BoxView)) {
+				Setters = {
+					new Setter { Property = BoxView.ColorProperty, Value = Color.Aqua }
+				}
+			};
+			Application.Current.Resources.Add (boxStyle); // implicit style for ALL boxviews
 
 			var tabs = new TabbedPage ();
 			tabs.Children.Add (new StylePage {Title = "C#", Icon = "csharp.png"});

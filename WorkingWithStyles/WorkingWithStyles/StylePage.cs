@@ -51,6 +51,8 @@ namespace WorkingWithStyles
 						Text = "This uses a custom style inherited dynamically from the Application ResourceDictionary",
 						Style = Application.Current.Resources["AppStyle"] as Style
 					},
+					// uses implicit style that applies to all BoxViews 
+					new BoxView ()
 				}
 			};
 		}

@@ -12,6 +12,9 @@
 				<Setter Property="BorderRadius" Value="0"/>
 				<Setter Property="HeightRequest" Value="42"/>
 			</Style>
+			<Style TargetType="BoxView">
+				<Setter Property="Color" Value="Blue"/>
+			</Style>
 		</ResourceDictionary>
 	</ContentPage.Resources>
 	<StackLayout Padding="0,20,0,0">
@@ -30,7 +33,9 @@
 		<Label Text="This uses a custom style inherited dynamically from the Application ResourceDictionary" 
 				Style="{StaticResource AppStyle}"/>
 
-
+		<!-- uses implicit style that applies to all BoxViews, 
+			 the one in the Page above overrides the App-level one -->
+		<BoxView />
 
 	</StackLayout>
 </ContentPage>
