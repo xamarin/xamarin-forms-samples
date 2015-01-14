@@ -25,6 +25,7 @@ namespace WorkingWithBehaviors
 
 			// Xaml examples
 			var xamlTab = new TabbedPage ();
+			xamlTab.Children.Add(new NumericValidationXaml { Title = "Numeric", Icon="xaml.png"});
 			xamlTab.Children.Add(new EmailValidationBehaviorXaml { Title = "Email", Icon="xaml.png"});
 
 			MainPage = xamlTab;
