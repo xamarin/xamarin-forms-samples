@@ -8,11 +8,12 @@ using Android.OS;
 using System.IO;
 using EmployeeDirectory;
 using EmployeeDirectoryUI;
+using Android.Content.PM;
 
 namespace EmployeeDirectory.Android
 {
 	[Activity (Label = "EmployeeDirectory", MainLauncher = true,
-		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation))]
+		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class Activity1 : Xamarin.Forms.Platform.Android.FormsApplicationActivity
 	{
 		protected override void OnCreate (Bundle bundle)
