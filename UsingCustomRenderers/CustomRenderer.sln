@@ -212,9 +212,6 @@ Global
 		{E5EEAD23-AE29-4405-B806-4FA61A47FE12}.Release|Mixed Platforms.Deploy.0 = Release|iPhone
 		{E5EEAD23-AE29-4405-B806-4FA61A47FE12}.Release|x86.ActiveCfg = Release|iPhone
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Android\CustomRenderer.Android.csproj
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

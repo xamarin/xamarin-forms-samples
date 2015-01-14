@@ -15,11 +15,9 @@ namespace CustomRenderer.iOS
 			base.OnElementChanged (e);
 
 			if (e.OldElement == null) {
-				// lets get a reference to the native control
-				var nativeTextField = (UITextField)Control;
 				// do whatever you want to the UITextField here!
-				nativeTextField.BackgroundColor = UIColor.Gray;
-				nativeTextField.BorderStyle = UITextBorderStyle.Line;
+				Control.BackgroundColor = UIColor.Gray;
+				Control.BorderStyle = UITextBorderStyle.Line;
 			}
 		}
 	}
