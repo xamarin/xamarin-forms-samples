@@ -22,7 +22,7 @@ namespace WorkingWithTriggers
 			csTab.Children.Add(new RequiredFieldTriggerPage { Title = "Req'd", Icon="csharp.png"});
 //			csTab.Children.Add(new NumericValidationTriggerPage { Title = "Valid", Icon="csharp.png"});
 
-			MainPage = csTab;
+//			MainPage = csTab;
 
 
 			// Xaml examples
@@ -32,7 +32,7 @@ namespace WorkingWithTriggers
 			xamlTab.Children.Add(new NumericValidationTriggerXaml { Title = "Valid", Icon="xaml.png"});
 			xamlTab.Children.Add(new OnClickEventTriggerXaml { Title = "Event", Icon="xaml.png"});
 
-//			MainPage = xamlTab;
+			MainPage = xamlTab;
 		}
     }
 }
