@@ -33,7 +33,7 @@ namespace WorkingWithListview
 			tabsXaml.Children.Add (new ContextActionsXaml {Title="ContextX", Icon = "xaml.png" });
 			tabsXaml.Children.Add (new CustomCellXaml {Title="ButtonX", Icon = "xaml.png" });
 
-			//MainPage = tabsXaml;
+			MainPage = tabsXaml;
 
 		}
 	}
