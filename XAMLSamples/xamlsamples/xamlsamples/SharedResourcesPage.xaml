@@ -13,7 +13,7 @@
                      Alignment="Center"
                      Expands="True" />
 
-      <x:Int32 x:Key="borderWidth">3</x:Int32>
+      <x:Double x:Key="borderWidth">3</x:Double>
 
       <x:Double x:Key="rotationAngle">-15</x:Double>
 
