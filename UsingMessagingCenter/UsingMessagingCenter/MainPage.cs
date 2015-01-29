@@ -24,12 +24,12 @@ namespace UsingMessagingCenter
 				MessagingCenter.Unsubscribe<MainPage, string> (this, "Hi");
 				DisplayAlert("Unsubscribed", 
 					"This page has stopped listening, so no more alerts; however the ViewModel is still receiving messages.",
-					"OK", null);
+					"OK");
 			};
 
 			// Subscribe to a message (which the ViewModel has also subscribed to) to pop up an Alert
 			MessagingCenter.Subscribe<MainPage, string> (this, "Hi", (sender, arg) => {
-				DisplayAlert("Message Received", "arg=" + arg, "OK", null);
+				DisplayAlert("Message Received", "arg=" + arg, "OK");
 			});
 
 			var listView = new ListView ();
