@@ -32,8 +32,10 @@ namespace WorkingWithStyles
 			var tabs = new TabbedPage ();
 			tabs.Children.Add (new StylePage {Title = "C#", Icon = "csharp.png"});
 			tabs.Children.Add (new StyleXaml {Title = "Xaml", Icon = "xaml.png"});
+			tabs.Children.Add (new DynamicResourceXaml {Title = "Dynamic", Icon = "xaml.png"});
 
-			tabs.Children.Add (new OldResourceDictionary {Title = "Old", Icon = "xaml.png"});
+			//tabs.Children.Add (new OldResourceDictionary {Title = "Old", Icon = "xaml.png"});
+
 			MainPage = tabs;
 		}
 	}

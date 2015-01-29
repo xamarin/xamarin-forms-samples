@@ -7,4 +7,4 @@ This sample relates to the [Working with Styles in Xamarin.Forms](http://develop
 Author
 ------
 
-Craig Dunn
+Charles Petzold, Craig Dunn

@@ -36,11 +36,11 @@
       <DependentUpon>StyleXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="StylePage.cs" />
-    <Compile Include="OldResourceDictionary.xaml.cs">
-      <DependentUpon>OldResourceDictionary.xaml</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicResourceXaml.xaml.cs">
+      <DependentUpon>DynamicResourceXaml.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
@@ -50,10 +50,10 @@
     <EmbeddedResource Include="StyleXaml.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="OldResourceDictionary.xaml">
+    <EmbeddedResource Include="App.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="App.xaml">
+    <EmbeddedResource Include="DynamicResourceXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
