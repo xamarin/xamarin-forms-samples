@@ -222,9 +222,6 @@ Global
 		{E07BC199-BB10-4819-AD64-B30994F36691}.Release|Mixed Platforms.Deploy.0 = Release|iPhone
 		{E07BC199-BB10-4819-AD64-B30994F36691}.Release|x86.ActiveCfg = Release|iPhone
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Android\UsingDependencyService.Android.csproj
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
