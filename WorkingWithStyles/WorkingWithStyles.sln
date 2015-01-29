@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithStyles", "WorkingWithStyles\WorkingWithStyles.csproj", "{BA297923-2A0E-4042-AE3E-A57A271B379E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithStyles.iOS", "iOS\WorkingWithStyles.iOS.csproj", "{CBBE5BC2-6575-48A9-9F5C-BFD418AFBF98}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithStyles.Android", "Android\WorkingWithStyles.Android.csproj", "{955FCA44-D2AB-49B8-897A-271D70288C05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithStyles", "WorkingWithStyles\WorkingWithStyles.csproj", "{BA297923-2A0E-4042-AE3E-A57A271B379E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,8 +67,5 @@ Global
 		{CBBE5BC2-6575-48A9-9F5C-BFD418AFBF98}.Release|iPhone.Build.0 = Release|iPhone
 		{CBBE5BC2-6575-48A9-9F5C-BFD418AFBF98}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{CBBE5BC2-6575-48A9-9F5C-BFD418AFBF98}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Android\WorkingWithStyles.Android.csproj
 	EndGlobalSection
 EndGlobal

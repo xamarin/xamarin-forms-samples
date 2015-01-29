@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+
 using Xamarin.Forms;
 
 namespace WorkingWithStyles
 {
-	public class App : Application
+	public partial class App : Application
 	{
 		public App ()
-		{	
+		{
+			InitializeComponent ();
+
 			// The Application ResourceDictionary is available in Xamarin.Forms 1.3 and later
 			Application.Current.Resources = new ResourceDictionary ();
 
@@ -28,6 +32,8 @@ namespace WorkingWithStyles
 			var tabs = new TabbedPage ();
 			tabs.Children.Add (new StylePage {Title = "C#", Icon = "csharp.png"});
 			tabs.Children.Add (new StyleXaml {Title = "Xaml", Icon = "xaml.png"});
+
+			tabs.Children.Add (new OldResourceDictionary {Title = "Old", Icon = "xaml.png"});
 			MainPage = tabs;
 		}
 	}
