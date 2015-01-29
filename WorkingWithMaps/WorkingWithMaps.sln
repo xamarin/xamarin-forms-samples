@@ -222,9 +222,6 @@ Global
 		{E71C3604-F980-496D-A3EE-D2E757746E91}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E71C3604-F980-496D-A3EE-D2E757746E91}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Android\WorkingWithMaps.Android.csproj
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
