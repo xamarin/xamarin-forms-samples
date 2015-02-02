@@ -7,7 +7,7 @@
 
     <!--Application Resources-->
     <Application.Resources>
-        <local:LocalizedStrings xmlns:local="clr-namespace:WorkingWithBehaviors" x:Key="LocalizedStrings"/>
+        <local:LocalizedStrings xmlns:local="clr-namespace:WorkingWithImages.WinPhone" x:Key="LocalizedStrings"/>
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>

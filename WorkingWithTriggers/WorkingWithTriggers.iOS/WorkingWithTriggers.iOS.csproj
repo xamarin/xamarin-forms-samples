@@ -10,7 +10,7 @@
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <NuGetPackageImportStamp>2a67ba64</NuGetPackageImportStamp>
     <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
-    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <AssemblyName>WorkingWithTriggersiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,7 +29,7 @@
     <MtouchI18n>
     </MtouchI18n>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <AssemblyName>WorkingWithTriggers.iOS</AssemblyName>
+    <AssemblyName>WorkingWithTriggersiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -39,7 +39,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
-    <AssemblyName>WorkingWithTriggers.iOS</AssemblyName>
+    <AssemblyName>WorkingWithTriggersiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>

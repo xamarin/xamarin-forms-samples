@@ -13,7 +13,7 @@ using Xamarin.Forms;
 
 namespace WorkingWithTriggers
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
     {
         public MainPage()
         {

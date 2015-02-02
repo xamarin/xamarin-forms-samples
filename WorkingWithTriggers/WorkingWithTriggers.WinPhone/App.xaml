@@ -1,13 +1,13 @@
 ﻿<Application
-    x:Class="WorkingWithImages.WinPhone.App"
+    x:Class="WorkingWithTriggers.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
 
     <!--Application Resources-->
     <Application.Resources>
-        <local:LocalizedStrings xmlns:local="clr-namespace:WorkingWithImages.WinPhone" x:Key="LocalizedStrings"/>
+        <local:LocalizedStrings xmlns:local="clr-namespace:WorkingWithTriggers" x:Key="LocalizedStrings"/>
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>
