@@ -6,11 +6,10 @@ using System.Windows.Markup;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using WorkingWithBehaviors.WinPhone.Resources;
 
 namespace WorkingWithBehaviors
 {
-    public partial class App : Application
+    public partial class App : Xamarin.Forms.Platform.WinPhone.FormsApplicationPage 
     {
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.

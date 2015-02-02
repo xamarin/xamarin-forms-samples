@@ -1,6 +1,4 @@
-﻿using WorkingWithBehaviors.WinPhone.Resources;
-
-namespace WorkingWithBehaviors
+﻿namespace WorkingWithBehaviors
 {
     /// <summary>
     /// Provides access to string resources.

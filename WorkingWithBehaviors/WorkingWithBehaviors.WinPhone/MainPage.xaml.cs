@@ -13,14 +13,14 @@ using Xamarin.Forms;
 
 namespace WorkingWithBehaviors
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class MainPage : Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
     {
         public MainPage()
         {
             InitializeComponent();
 
             Forms.Init();
-            Content = WorkingWithBehaviors.App.GetMainPage().ConvertPageToUIElement(this);
+            Content = (new WorkingWithBehaviors.App()).ConvertPageToUIElement(this);
         }
     }
 }
