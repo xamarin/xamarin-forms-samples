@@ -21,7 +21,7 @@ namespace Forms2Native.WinPhone
 
             Forms.Init();
            
-			LoadApplication (Forms2Native.App ());
+			LoadApplication (new Forms2Native.App ());
         }
     }
 }
