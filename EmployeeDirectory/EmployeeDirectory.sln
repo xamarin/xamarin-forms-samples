@@ -273,9 +273,6 @@ Global
 		{B746C87C-7335-4830-AAE2-ACACE4D69DB5} = {205F34F1-DBEC-46B8-A6E5-7C2BAB70DD0C}
 		{B5231622-C031-48B5-9FAB-664B31375DCE} = {205F34F1-DBEC-46B8-A6E5-7C2BAB70DD0C}
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = EmployeeDirectory.iOS\EmployeeDirectory.iOS.csproj
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
