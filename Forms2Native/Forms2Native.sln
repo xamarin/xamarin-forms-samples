@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms2Native", "FormsBasics
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{205F34F1-DBEC-46B8-A6E5-7C2BAB70DD0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsBasics.iOS", "FormsBasics.iOS\FormsBasics.iOS.csproj", "{1902913C-BB6F-4CCB-9B90-1D0CAEECAF12}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms2Native.iOS", "FormsBasics.iOS\Forms2Native.iOS.csproj", "{1902913C-BB6F-4CCB-9B90-1D0CAEECAF12}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms2Native.WinPhone", "Forms2Native.WinPhone\Forms2Native.WinPhone.csproj", "{A67BC0C4-C547-4D2B-9EFD-1A00EB637D14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsBasics.Android", "FormsBasics.Android\FormsBasics.Android.csproj", "{B746C87C-7335-4830-AAE2-ACACE4D69DB5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms2Native.Android", "FormsBasics.Android\Forms2Native.Android.csproj", "{B746C87C-7335-4830-AAE2-ACACE4D69DB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
