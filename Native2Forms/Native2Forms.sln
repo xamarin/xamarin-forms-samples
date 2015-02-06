@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Native2Forms.Android", "Nat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Native2Forms.iOS", "Native2Forms.iOS\Native2Forms.iOS.csproj", "{1902913C-BB6F-4CCB-9B90-1D0CAEECAF12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Native2Forms.Android", "Native2Forms.Android\Native2Forms.Android.csproj", "{B746C87C-7335-4830-AAE2-ACACE4D69DB5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -137,7 +135,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B746C87C-7335-4830-AAE2-ACACE4D69DB5} = {B3EC374C-0872-4270-96A7-A68A570DA0A8}
 		{1902913C-BB6F-4CCB-9B90-1D0CAEECAF12} = {B3EC374C-0872-4270-96A7-A68A570DA0A8}
-		{B746C87C-7335-4830-AAE2-ACACE4D69DB5} = {B3EC374C-0872-4270-96A7-A68A570DA0A8}
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
