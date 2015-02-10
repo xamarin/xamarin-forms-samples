@@ -24,7 +24,7 @@ namespace WorkingWithMaps.Android
 			base.OnCreate (bundle);
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
-			global::Xamarin.FormsMaps.Init ();
+			global::Xamarin.FormsMaps.Init (this, bundle);
 
 			LoadApplication (new App ()); // method is new in 1.3
 		}
