@@ -16,7 +16,8 @@ namespace Native2Forms
 			return formsPage;
 		}
 
-		public App(){
+		public App ()
+		{
 			MainPage = new NavigationPage (new MySecondPage ());
 		}
 	}
