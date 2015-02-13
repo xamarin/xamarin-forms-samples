@@ -85,7 +85,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\FormsBasics\Native2Forms.csproj">
+    <ProjectReference Include="..\Native2Forms\Native2Forms.csproj">
       <Project>{5F610EA1-9E35-4870-AE9B-5E18B4B4D5B8}</Project>
       <Name>Native2Forms</Name>
     </ProjectReference>
