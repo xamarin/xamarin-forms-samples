@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using System.Diagnostics;
 
 namespace Todo
 {
@@ -21,6 +22,10 @@ namespace Todo
 				var todoItem = (TodoItem)e.SelectedItem;
 				var todoPage = new TodoItemPage();
 				todoPage.BindingContext = todoItem;
+
+				((App)App.Current).ResumeAtTodoId = todoItem.ID;
+				Debug.WriteLine("setting ResumeAtTodoId = " + todoItem.ID);
+
 				Navigation.PushAsync(todoPage);
 			};
 
@@ -28,7 +33,7 @@ namespace Todo
 			if (Device.OS == TargetPlatform.WinPhone) { // WinPhone doesn't have the title showing
 				layout.Children.Add(new Label{
 					Text="Todo", 
-					Font=Font.SystemFontOfSize (NamedSize.Large)});
+					FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label))});
 			}
 			layout.Children.Add(listView);
 			layout.VerticalOptions = LayoutOptions.FillAndExpand;
@@ -85,6 +90,8 @@ namespace Todo
 		protected override void OnAppearing ()
 		{
 			base.OnAppearing ();
+			// reset the 'resume' id, since we just want to re-start here
+			((App)App.Current).ResumeAtTodoId = -1;
 			listView.ItemsSource = App.Database.GetItems ();
 		}
 	}
