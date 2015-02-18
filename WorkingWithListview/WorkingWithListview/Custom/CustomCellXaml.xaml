@@ -10,8 +10,8 @@
 		      <ViewCell>
 		      	<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">	
 		      		<StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
-			        	<Label Text="{Binding .}" YAlign="Center" Font="Medium" />
-			        	<Label Text="Label 2" YAlign="Center" Font="Small" />
+			        	<Label Text="{Binding .}" YAlign="Center" FontSize="Medium" />
+			        	<Label Text="Label 2" YAlign="Center" FontSize="Small" />
 			        </StackLayout>
 					<Button Text="X" 
 						BackgroundColor="Gray"

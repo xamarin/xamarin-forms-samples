@@ -20,28 +20,28 @@ namespace WorkingWithListview
 		}
 
 
-		const int avgCharsInRow = 35;
-		const int defaultHeight = 44;
-		const int extraLineHeight = 20;
-		protected override void OnBindingContextChanged ()
-		{
-			base.OnBindingContextChanged ();
-
-			if (Device.OS == TargetPlatform.iOS) {
-				var text = (string)BindingContext;
-
-				var len = text.Length;
-
-				if (len < (avgCharsInRow * 2)) {
-					// fits in one cell
-					Height = defaultHeight;
-				} else {
-					len = len - (avgCharsInRow * 2);
-					var extraRows = len / 35;
-					Height = defaultHeight + extraRows * extraLineHeight;
-				}
-			}
-		}
+//		const int avgCharsInRow = 35;
+//		const int defaultHeight = 44;
+//		const int extraLineHeight = 20;
+//		protected override void OnBindingContextChanged ()
+//		{
+//			base.OnBindingContextChanged ();
+//
+//			if (Device.OS == TargetPlatform.iOS) {
+//				var text = (string)BindingContext;
+//
+//				var len = text.Length;
+//
+//				if (len < (avgCharsInRow * 2)) {
+//					// fits in one cell
+//					Height = defaultHeight;
+//				} else {
+//					len = len - (avgCharsInRow * 2);
+//					var extraRows = len / 35;
+//					Height = defaultHeight + extraRows * extraLineHeight;
+//				}
+//			}
+//		}
 	}
 }
 
