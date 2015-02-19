@@ -8,6 +8,7 @@
 		<Label Text="Entry requires length>0 before button is enabled" FontSize="Small" />
 
         <Entry x:Name="entry"
+        	   Text=""
                Placeholder="enter name" /><!-- referenced below in DataTrigger-->
 
         <Button x:Name="button" Text="Save"

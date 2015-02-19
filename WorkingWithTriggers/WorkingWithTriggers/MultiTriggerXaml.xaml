@@ -4,16 +4,20 @@
 			 x:Class="WorkingWithTriggers.MultiTriggerXaml"
 			 Title="Multi Trigger"
 			 Padding="0,20,0,0">
-	
 	<StackLayout>
 
 	<Label>MultiTrigger Login Example</Label>
 
+	<!-- the Entry x:Name are referenced below in the MultiTrigger -->
+	<!-- tip: make sure to set the Text="" (or some other default) -->
+
 	<Entry x:Name="username"
-       Placeholder="user name" />
+		Text=""
+		Placeholder="user name" />
 
     <Entry x:Name="password" IsPassword="true"
-       Placeholder="password" />
+		Text=""
+		Placeholder="password" />
 
 		<Button x:Name="button" Text="Save"
 		        FontSize="Large"
@@ -33,7 +37,6 @@
 		        </MultiTrigger>
 		    </Button.Triggers>
 		</Button>
-
 
 	</StackLayout>
 </ContentPage>

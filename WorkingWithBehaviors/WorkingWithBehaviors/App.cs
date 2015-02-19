@@ -17,7 +17,7 @@ namespace WorkingWithBehaviors
 			//
 
 			// C# examples
-			var csTab = new TabbedPage ();
+			//var csTab = new TabbedPage ();
 			//csTab.Children.Add(new SimpleTriggerPage {Title = "Simple", Icon="csharp.png"});
 
 //			MainPage = csTab;
