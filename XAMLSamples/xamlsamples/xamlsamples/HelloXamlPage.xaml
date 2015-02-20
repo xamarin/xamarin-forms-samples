@@ -10,7 +10,8 @@
          XAlign="Center"
          Rotation="-15"
          IsVisible="true"
-         Font="Bold, Large"
+         FontSize="Large"
+         FontAttributes="Bold"
          TextColor="Aqua" />
 
 </ContentPage>

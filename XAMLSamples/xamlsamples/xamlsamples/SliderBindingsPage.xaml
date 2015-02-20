@@ -8,7 +8,8 @@
     <Label Text="ROTATION"
            BindingContext="{x:Reference Name=slider}"
            Rotation="{Binding Path=Value}"
-           Font="Bold, Large"
+           FontAttributes="Bold"
+           FontSize="Large"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
     
@@ -19,7 +20,7 @@
     <Label BindingContext="{x:Reference slider}"
            Text="{Binding Value, 
                           StringFormat='The angle is {0:F0} degrees'}"
-           Font="Large"
+           FontSize="Large"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
   </StackLayout>
