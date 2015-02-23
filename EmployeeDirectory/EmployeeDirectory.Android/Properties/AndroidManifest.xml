@@ -3,5 +3,6 @@
 	<uses-sdk android:minSdkVersion="15" />
 	<application android:label="EmployeeDirectoryXaml" android:icon="@drawable/icon">
 	</application>
+	<uses-library android:name="com.google.android.maps" />
 	<uses-permission android:name="android.permission.CALL_PHONE" />
 </manifest>
