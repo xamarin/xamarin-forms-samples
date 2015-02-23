@@ -39,6 +39,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FormsViewGroup">
@@ -90,7 +91,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\FormsBasics\Forms2Native.csproj">
+    <ProjectReference Include="..\Forms2Native\Forms2Native.csproj">
       <Project>{5F610EA1-9E35-4870-AE9B-5E18B4B4D5B8}</Project>
       <Name>Forms2Native</Name>
     </ProjectReference>
