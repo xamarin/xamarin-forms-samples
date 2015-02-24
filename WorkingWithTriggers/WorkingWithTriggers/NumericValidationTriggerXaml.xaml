@@ -3,10 +3,8 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 xmlns:local="clr-namespace:WorkingWithTriggers;assembly=WorkingWithTriggers"
 			 x:Class="WorkingWithTriggers.NumericValidationTriggerXaml"
-			 Padding="5,20,5,0">
+			 Padding="0, 20, 0, 0">
 	    <StackLayout>
-
-	    <Label Text="Text becomes red if the entry is not a valid double" FontSize="Small" />
 
         <Entry Placeholder="Enter a System.Double">
             <Entry.Triggers>
@@ -15,5 +13,6 @@
                 </EventTrigger>
             </Entry.Triggers>
         </Entry>
+
     </StackLayout>
 </ContentPage>

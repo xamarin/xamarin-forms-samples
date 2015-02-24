@@ -6,7 +6,7 @@
 			 Padding="20">
 	<StackLayout>
  
- 		<Label Text="Button becomes active when input is valid (eg a@b.co)" FontSize="Small" />
+ 		<Label Text="Red when the number isn't valid" FontSize="Small" />
 
         <Entry Placeholder="Enter a System.Double">
             <Entry.Behaviors>

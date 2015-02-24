@@ -86,9 +86,6 @@ Global
 		{BF423211-6E75-4059-B306-A518D9B34BE0}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{BF423211-6E75-4059-B306-A518D9B34BE0}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Android\UsingMessagingCenter.Android.csproj
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

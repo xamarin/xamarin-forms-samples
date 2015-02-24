@@ -1,6 +1,6 @@
-﻿using WorkingWithTriggers.WinPhone.Resources;
+﻿
 
-namespace WorkingWithTriggers
+namespace WorkingWithTriggers.WinPhone
 {
     /// <summary>
     /// Provides access to string resources.

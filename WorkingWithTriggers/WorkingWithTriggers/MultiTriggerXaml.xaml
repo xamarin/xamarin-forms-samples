@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="WorkingWithTriggers.MultiTriggerXaml"
+			 Title="Multi Trigger"
+			 Padding="0,20,0,0">
+	<StackLayout>
+
+	<Label FontSize="Large">MultiTrigger Login Example</Label>
+
+	<Label>You must provide either an email or phone number:</Label>
+
+	<!-- the Entry x:Name are referenced below in the MultiTrigger -->
+	<!-- tip: make sure to set the Text="" (or some other default) -->
+
+	<Entry x:Name="email"
+		Text=""
+		Placeholder="email" />
+
+    <Entry x:Name="phone"
+		Text=""
+		Placeholder="phone" />
+
+		<Button x:Name="button" Text="Save"
+		        FontSize="Large"
+		        HorizontalOptions="Center">
+		    <Button.Triggers>
+				<MultiTrigger TargetType="Button"> 
+					<MultiTrigger.Conditions>
+						<BindingCondition Binding="{Binding Source={x:Reference email},
+		                                       Path=Text.Length}"
+		                                   Value="0" />
+						<BindingCondition Binding="{Binding Source={x:Reference phone},
+		                                       Path=Text.Length}"
+		                                   Value="0" />
+					</MultiTrigger.Conditions>
+						
+		            <Setter Property="IsEnabled" Value="False" />
+		        </MultiTrigger>
+		    </Button.Triggers>
+		</Button>
+
+	</StackLayout>
+</ContentPage>

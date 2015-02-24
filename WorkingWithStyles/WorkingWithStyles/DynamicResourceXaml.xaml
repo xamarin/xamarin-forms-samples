@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="WorkingWithStyles.DynamicResourceXaml">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<x:String x:Key="currentDateTime">not really a datetime</x:String>
+
+			<!-- implicit style -->
+			<Style TargetType="Label">
+				<Setter Property="HorizontalOptions" Value="Center" />
+				<Setter Property="VerticalOptions" 	 Value="CenterAndExpand" />
+				<Setter Property="FontSize" 		 Value="Large" />
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+
+	<StackLayout>
+		<Label Text="{StaticResource currentDateTime}" />
+
+		<Label Text="{DynamicResource currentDateTime}" />
+	</StackLayout>
+</ContentPage>

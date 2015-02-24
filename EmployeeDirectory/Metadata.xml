@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>41eca887-68bd-4f13-a5c4-ca5e213c0840</ID>
+	<IsFullApplication>true</IsFullApplication>
+	<Level>Beginning</Level>
+	<Tags>User Interface, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>This is a Xamarin.Forms port of the pre-built sample app Employee Directory. It includes the UI code in both XAML and C#.</Brief>
+</SampleMetadata>

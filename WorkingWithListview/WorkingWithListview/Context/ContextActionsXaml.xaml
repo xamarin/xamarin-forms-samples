@@ -9,9 +9,9 @@
 		    <DataTemplate>
 		      <ViewCell>
 		      <ViewCell.ContextActions>
-		      		<MenuItem Clicked="OnMore"     
+		      		<MenuItem Clicked="OnMore" CommandParameter="{Binding .}"  
 			           Text="More" />
-			       	<MenuItem Clicked="OnDelete"     
+			       	<MenuItem Clicked="OnDelete" CommandParameter="{Binding .}"  
 			           Text="Delete" IsDestructive="True" />
 			   </ViewCell.ContextActions> 
 		      	<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">	

@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace WorkingWithTriggers
 {
-	public partial class SimpleTriggerXaml : ContentPage
+	public partial class DataTriggerXaml : ContentPage
 	{
-		public SimpleTriggerXaml ()
+		public DataTriggerXaml ()
 		{
 			InitializeComponent ();
 		}

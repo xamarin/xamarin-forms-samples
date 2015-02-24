@@ -10,7 +10,7 @@
 
     <Label x:Name="valueLabel"
            Text="A simple Label"
-           Font="Large"
+           FontSize="Large"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
 

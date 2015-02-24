@@ -22,6 +22,8 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
         SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
         global::Xamarin.Forms.Forms.Init();
+		global::Xamarin.FormsMaps.Init ();
+
         LoadApplication(new WorkingWithMaps.App()); // new in 1.3
     }
  }
