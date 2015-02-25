@@ -28,8 +28,7 @@ namespace WorkingWithTriggers
 			var xamlTab = new TabbedPage ();
 			xamlTab.Children.Add(new PropertyTriggerXaml { Title = "Property", Icon="xaml.png"});
 			xamlTab.Children.Add(new DataTriggerXaml { Title = "Data", Icon="xaml.png"});
-			xamlTab.Children.Add(new NumericValidationTriggerXaml { Title = "Event", Icon="xaml.png"});
-//			xamlTab.Children.Add(new OnClickEventTriggerXaml { Title = "Event2", Icon="xaml.png"});
+			xamlTab.Children.Add(new EventTriggerXaml { Title = "Event", Icon="xaml.png"});
 			xamlTab.Children.Add(new MultiTriggerXaml { Title = "Multi", Icon="xaml.png"});
 			xamlTab.Children.Add(new EnterExitActionXaml { Title = "EnterExit", Icon="xaml.png"});
 

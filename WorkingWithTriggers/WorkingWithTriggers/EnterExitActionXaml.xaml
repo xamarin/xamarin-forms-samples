@@ -29,9 +29,9 @@
 
     	<Label Text="EnterAction and ExitAction" FontSize="Large" />
 
-    	<Label Text="ScaleAction is triggered by IsFocused" FontSize="Small" />
+    	<Label Text="FadeTriggerAction is triggered by IsFocused" FontSize="Small" />
 
-        <Entry Placeholder="enter job title" Text="Monkey Wranglers">
+        <Entry Placeholder="enter job title" Text="">
         	<Entry.Triggers>
 				<Trigger TargetType="Entry"
                          Property="Entry.IsFocused" Value="True">
@@ -48,7 +48,7 @@
 
         <Entry Placeholder="enter company" Text="Xamarin" />
 
-        <Entry Placeholder="enter industry" Text="Mobile" />
+        <Entry Placeholder="enter industry" Text="" />
 
     </StackLayout>
 </ContentPage>

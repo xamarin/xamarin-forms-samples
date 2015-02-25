@@ -15,15 +15,15 @@ namespace WorkingWithTriggers
 
 		protected override void Invoke (VisualElement visual)
 		{
-				visual.Animate("", new Animation( (d)=>{
-					var val = StartsFrom==1 ? d : 1-d;
-					visual.BackgroundColor = Color.FromRgb(1, val, 1);
-					Debug.WriteLine(d);
+			visual.Animate("", new Animation( (d)=>{
+				var val = StartsFrom==1 ? d : 1-d;
+				// so i was aiming for a different color, but then i liked the pink :)
+				visual.BackgroundColor = Color.FromRgb(1, val, 1);
+				Debug.WriteLine(d);
 
-				}),
-				length:1000, // milliseconds
-				easing: Easing.Linear);
-
+			}),
+			length:1000, // milliseconds
+			easing: Easing.Linear);
 		}
 	}
 }

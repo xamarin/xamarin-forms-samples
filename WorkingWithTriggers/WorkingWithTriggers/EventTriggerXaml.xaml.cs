@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace WorkingWithTriggers
 {
-	public partial class NumericValidationTriggerXaml : ContentPage
+	public partial class EventTriggerXaml : ContentPage
 	{
-		public NumericValidationTriggerXaml ()
+		public EventTriggerXaml ()
 		{
 			InitializeComponent ();
 		}
