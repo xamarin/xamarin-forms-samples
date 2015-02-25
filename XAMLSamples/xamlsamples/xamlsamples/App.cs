@@ -13,9 +13,7 @@ namespace XamlSamples
     {
         public App()
         {
-
             MainPage = new NavigationPage(new XamlSamples.HomePage());
-
         }
     }
 }

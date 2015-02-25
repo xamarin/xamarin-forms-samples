@@ -39,11 +39,6 @@
     <Compile Include="NumericValidationTriggerXaml.xaml.cs">
       <DependentUpon>NumericValidationTriggerXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="OnClickEventTriggerXaml.xaml.cs">
-      <DependentUpon>OnClickEventTriggerXaml.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TriggerActions\VisualElementPopTriggerAction.cs" />
-    <Compile Include="TriggerActions\NumericValidationTriggerAction.cs" />
     <Compile Include="csharp-examples\NumericValidationTriggerPage.cs" />
     <Compile Include="csharp-examples\RequiredFieldTriggerPage.cs" />
     <Compile Include="csharp-examples\SimpleTriggerPage.cs" />
@@ -56,6 +51,11 @@
     <Compile Include="MultiTriggerXamlTriggerXaml.xaml.cs">
       <DependentUpon>MultiTriggerXaml.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EnterExitActionXaml.xaml.cs">
+      <DependentUpon>EnterExitActionXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TriggerActions\NumericValidationTriggerAction.cs" />
+    <Compile Include="TriggerActions\FadeTriggerAction.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.3.1.6294-pre1\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.1.6294-pre1\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -71,9 +71,6 @@
     <EmbeddedResource Include="NumericValidationTriggerXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="OnClickEventTriggerXaml.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="PropertyTriggerXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -81,6 +78,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="MultiTriggerXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterExitActionXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

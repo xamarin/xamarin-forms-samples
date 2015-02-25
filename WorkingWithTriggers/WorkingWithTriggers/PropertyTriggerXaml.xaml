@@ -2,16 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 x:Class="WorkingWithTriggers.PropertyTriggerXaml"
-			 Padding="20, 50, 120, 0">
+			 Padding="20, 50, 20, 0">
 	
 	<ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Entry">
-                <Setter Property="AnchorX" Value="0" />
 <!--                <Style.Triggers>
                     <Trigger TargetType="Entry"
                              Property="IsFocused" Value="True">
-                        <Setter Property="Scale" Value="1.5" />
+                        <Setter Property="BackgroundColor" Value="Yellow" />
                     </Trigger>
                 </Style.Triggers>-->
             </Style>
@@ -20,16 +19,20 @@
 
     <StackLayout Spacing="20">
 
-    	<Label Text="Scale property change triggered by IsFocused" FontSize="Small" />
+    	<Label Text="Property Trigger" FontSize="Large" />
+
+    	<Label Text="BackgroundColor property change triggered by IsFocused" FontSize="Small" />
 
         <Entry Placeholder="enter name">
         	<Entry.Triggers>
         		<Trigger TargetType="Entry"
                          Property="IsFocused" Value="True">
-                    <Setter Property="Scale" Value="1.5" />
+                    <Setter Property="BackgroundColor" Value="Yellow" />
                 </Trigger>
         	</Entry.Triggers>
         </Entry>
+
+        <Label Text="uncomment the Trigger in the Style to affect these inputs" FontSize="Small" FontAttributes="Italic" />
 
         <Entry Placeholder="enter address" />
 

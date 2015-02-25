@@ -2,14 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 x:Class="WorkingWithTriggers.DataTriggerXaml"
-			 Padding="0, 20, 0, 0">
+			 Padding="20, 50, 20, 0">
 	<StackLayout Spacing="20">
+
+		<Label FontSize="Large">DataTrigger Example</Label>
 
 		<Label Text="Entry requires length>0 before button is enabled" FontSize="Small" />
 
         <Entry x:Name="entry"
         	   Text=""
-               Placeholder="enter name" /><!-- referenced below in DataTrigger-->
+               Placeholder="required field" /><!-- referenced below in DataTrigger-->
 
         <Button x:Name="button" Text="Save"
                 FontSize="Large"

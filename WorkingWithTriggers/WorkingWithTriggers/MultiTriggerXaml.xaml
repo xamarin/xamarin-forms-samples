@@ -3,10 +3,10 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 x:Class="WorkingWithTriggers.MultiTriggerXaml"
 			 Title="Multi Trigger"
-			 Padding="0,20,0,0">
+			 Padding="20, 50, 20, 0">
 	<StackLayout>
 
-	<Label FontSize="Large">MultiTrigger Login Example</Label>
+	<Label FontSize="Large">MultiTrigger Example</Label>
 
 	<Label>You must provide either an email or phone number:</Label>
 
