@@ -12,6 +12,8 @@ namespace LabelledSections
     {
         public LabelledSectionPage()
         {
+			Padding = new Thickness (0, 20, 0, 0);
+
             var list = new ListView
             {
                 ItemTemplate = new DataTemplate(typeof(TextCell))
