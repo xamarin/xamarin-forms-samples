@@ -4,7 +4,7 @@
 			 x:Class="LabelledSections.LabelledSectionXaml"
 			 Padding="0,20,0,0">
 
-<!-- 	<ListView x:Name="itemListView"
+ 	<ListView x:Name="itemListView"
               IsGroupingEnabled="true" 
               ItemTapped="OnItemTapped"
       		  GroupDisplayBinding="{Binding Title}">
@@ -14,12 +14,12 @@
           </TextCell> 
         </DataTemplate>
       </ListView.ItemTemplate>
-    </ListView>-->
+    </ListView>
 
 
     <!-- this works on iOS 7.1 BUT the GroupHeaderTemplate 
     doesn't show on iOS 8.2 -->
-    <ListView x:Name="itemListView"
+<!--    <ListView x:Name="itemListView"
               IsGroupingEnabled="true" 
               ItemTapped="OnItemTapped"
       		  >
@@ -36,6 +36,6 @@
           </TextCell> 
         </DataTemplate>
       </ListView.ItemTemplate>
-    </ListView>
+    </ListView>-->
 
 </ContentPage>
