@@ -29,7 +29,6 @@
     <MtouchI18n>
     </MtouchI18n>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <AssemblyName>WorkingWithBehaviorsiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -39,7 +38,10 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
-    <AssemblyName>WorkingWithBehaviors</AssemblyName>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>i386</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,7 +55,6 @@
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchArch>ARMv7</MtouchArch>
-    <AssemblyName>FormsTemplateiOS</AssemblyName>
     <IpaPackageName>
     </IpaPackageName>
   </PropertyGroup>
@@ -66,7 +67,6 @@
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <AssemblyName>FormsTemplateiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -78,7 +78,6 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
     <BuildIpa>True</BuildIpa>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <AssemblyName>FormsTemplateiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <DebugType>none</DebugType>
@@ -89,7 +88,6 @@
     <ConsolePause>False</ConsolePause>
     <CodesignKey>iPhone Distribution</CodesignKey>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <AssemblyName>FormsTemplateiOS</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
