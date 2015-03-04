@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:formsGallery="clr-namespace:FormsGallery;assembly=FormsGallery"
+			 x:Class="FormsGallery.TableViewMenuDemoPage"
+			 x:Name="LayoutRoot">
+	<StackLayout>
+		<Label x:Name="Header" Text="TableView for a menu" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
+		<TableView Intent="Menu">
+			<TableRoot>
+				<TableSection Title="Views for Presentation">
+					<TextCell Text="Label" Command="{Binding NavigateCommand, Source={x:Reference LayoutRoot}}" CommandParameter="{x:Type formsGallery:LabelDemoPage}" />
+					<TextCell Text="Image" Command="{Binding NavigateCommand, Source={x:Reference LayoutRoot}}" CommandParameter="{x:Type formsGallery:ImageDemoPage}" />
+					<TextCell Text="BoxView" Command="{Binding NavigateCommand, Source={x:Reference LayoutRoot}}" CommandParameter="{x:Type formsGallery:BoxViewDemoPage}" />
+					<TextCell Text="WebView" Command="{Binding NavigateCommand, Source={x:Reference LayoutRoot}}" CommandParameter="{x:Type formsGallery:WebViewDemoPage}" />
+				</TableSection>
+			</TableRoot>
+		</TableView>
+	</StackLayout>
+</ContentPage>

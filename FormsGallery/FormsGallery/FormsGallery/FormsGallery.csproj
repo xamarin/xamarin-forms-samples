@@ -58,7 +58,49 @@
     <Compile Include="ContentViewDemoPage.xaml.cs">
       <DependentUpon>ContentViewDemoPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Converters\LuminosityConverter.cs" />
+    <Compile Include="MasterDetailPageDemoPage.xaml.cs">
+      <DependentUpon>MasterDetailPageDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NamedColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NamedColorPage.xaml.cs">
+      <DependentUpon>NamedColorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NamedColorPageWithHeader.xaml.cs">
+      <DependentUpon>NamedColorPageWithHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationPageDemoPage.xaml.cs">
+      <DependentUpon>NavigationPageDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PickerDemoPage.xaml.cs">
+      <DependentUpon>PickerDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressBarDemoPage.xaml.cs">
+      <DependentUpon>ProgressBarDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScrollViewDemoPage.xaml.cs">
+      <DependentUpon>ScrollViewDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchBarDemoPage.xaml.cs">
+      <DependentUpon>SearchBarDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SliderDemoPage.xaml.cs">
+      <DependentUpon>SliderDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StackLayoutDemoPage.xaml.cs">
+      <DependentUpon>StackLayoutDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StepperDemoPage.xaml.cs">
+      <DependentUpon>StepperDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Support\ApplyRegionBehavior.cs" />
+    <Compile Include="Support\DataTemplateConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Support\Defaults.cs" />
+    <Compile Include="Support\InverseBoolean.cs" />
+    <Compile Include="Support\IsPlatformConverter.cs" />
     <Compile Include="DatePickerDemoPage.xaml.cs">
       <DependentUpon>DatePickerDemoPage.xaml</DependentUpon>
     </Compile>
@@ -92,28 +134,41 @@
     <Compile Include="ListViewDemoPage.xaml.cs">
       <DependentUpon>ListViewDemoPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MapDemoPage.cs" />
-    <Compile Include="MasterDetailPageDemoPage.cs" />
-    <Compile Include="NamedColor.cs" />
-    <Compile Include="NamedColorPage.cs" />
-    <Compile Include="NavigationPageDemoPage.cs" />
-    <Compile Include="PickerDemoPage.cs" />
-    <Compile Include="ProgressBarDemoPage.cs" />
+    <Compile Include="MapDemoPage.xaml.cs">
+      <DependentUpon>MapDemoPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelativeLayoutDemoPage.cs" />
-    <Compile Include="ScrollViewDemoPage.cs" />
-    <Compile Include="SearchBarDemoPage.cs" />
-    <Compile Include="SliderDemoPage.cs" />
-    <Compile Include="StackLayoutDemoPage.cs" />
-    <Compile Include="StepperDemoPage.cs" />
-    <Compile Include="SwitchCellDemoPage.cs" />
-    <Compile Include="SwitchDemoPage.cs" />
-    <Compile Include="TabbedPageDemoPage.cs" />
-    <Compile Include="TableViewFormDemoPage.cs" />
-    <Compile Include="TableViewMenuDemoPage.cs" />
-    <Compile Include="TextCellDemoPage.cs" />
-    <Compile Include="TimePickerDemoPage.cs" />
-    <Compile Include="WebViewDemoPage.cs" />
+    <Compile Include="Support\LuminosityConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Support\NamedColorBuilder.cs" />
+    <Compile Include="Support\Person.cs" />
+    <Compile Include="Support\ReturnBehavior.cs" />
+    <Compile Include="SwitchCellDemoPage.xaml.cs">
+      <DependentUpon>SwitchCellDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SwitchDemoPage.xaml.cs">
+      <DependentUpon>SwitchDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TabbedPageDemoPage.xaml.cs">
+      <DependentUpon>TabbedPageDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewFormDemoPage.xaml.cs">
+      <DependentUpon>TableViewFormDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewMenuDemoPage.xaml.cs">
+      <DependentUpon>TableViewMenuDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TextCellDemoPage.xaml.cs">
+      <DependentUpon>TextCellDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TimePickerDemoPage.xaml.cs">
+      <DependentUpon>TimePickerDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WebViewDemoPage.xaml.cs">
+      <DependentUpon>WebViewDemoPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -240,6 +295,126 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ListViewDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MapDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MasterDetailPageDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NamedColorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NamedColorPageWithHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NavigationPageDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PickerDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProgressBarDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ScrollViewDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SearchBarDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SliderDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="StackLayoutDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="StepperDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SwitchCellDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SwitchDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TabbedPageDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TableViewFormDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TableViewMenuDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TextCellDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TimePickerDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WebViewDemoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

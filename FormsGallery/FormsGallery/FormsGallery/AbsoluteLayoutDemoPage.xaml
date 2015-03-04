@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 xmlns:converters="clr-namespace:FormsGallery.Converters;assembly=FormsGallery"
+			 xmlns:support="clr-namespace:FormsGallery.Support;assembly=FormsGallery"
 			 x:Class="FormsGallery.AbsoluteLayoutDemoPage">
 	<StackLayout>
 		<Label x:Name="Header" Text="AbsoluteLayout" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center" />
 
-		<AbsoluteLayout x:Name="Layout" BackgroundColor="{Binding Source={x:Static Color.Blue}, Converter={x:Static converters:LuminosityConverter.Instance}}" VerticalOptions="FillAndExpand">
+		<AbsoluteLayout x:Name="AbsoluteLayout" BackgroundColor="{Binding Source={x:Static Color.Blue}, Converter={x:Static support:LuminosityConverter.Instance}}" VerticalOptions="FillAndExpand">
 			<Label x:Name="Text1" Text="AbsoluteLayout" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="Black" />
 			<Label x:Name="Text2" Text="AbsoluteLayout" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="Black" />
 		</AbsoluteLayout>
