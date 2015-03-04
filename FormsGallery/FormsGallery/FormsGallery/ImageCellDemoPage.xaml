@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="FormsGallery.ImageCellDemoPage"
+			 x:Name="LayoutRoot">
+	<StackLayout>
+		<Label x:Name="Header" Text="ImageCell" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center" />
+		<TableView Intent="Form">
+			<TableRoot>
+				<TableSection>
+					<ImageCell Text="This is an ImageCell" Detail="This is some detail text" ImageSource="{Binding ImageSource, Source={x:Reference LayoutRoot}}" />
+				</TableSection>
+			</TableRoot>
+		</TableView>
+	</StackLayout>
+</ContentPage>

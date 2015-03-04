@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:formsGallery="clr-namespace:FormsGallery;assembly=FormsGallery"
+			 xmlns:converters="clr-namespace:FormsGallery.Converters;assembly=FormsGallery"
+			 x:Class="FormsGallery.CarouselPageDemoPage" Title="CarouselPage">
+	<CarouselPage.ItemsSource>
+		<x:Array Type="formsGallery:NamedColor">
+			<converters:NamedColor Name="Red" Color="Red" />
+			<converters:NamedColor Name="Yellow" Color="Yellow" />
+			<converters:NamedColor Name="Green" Color="Green" />
+			<converters:NamedColor Name="Aqua" Color="Aqua" />
+			<converters:NamedColor Name="Blue" Color="Blue" />
+			<converters:NamedColor Name="Purple" Color="Purple" />
+		</x:Array>
+	</CarouselPage.ItemsSource>
+	<CarouselPage.ItemTemplate>
+		<DataTemplate>
+			<formsGallery:NamedColorPage />
+		</DataTemplate>
+	</CarouselPage.ItemTemplate>
+</CarouselPage>
