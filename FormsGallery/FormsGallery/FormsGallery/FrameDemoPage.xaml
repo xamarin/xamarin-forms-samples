@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.FrameDemoPage">
+	<StackLayout>
+		<Label x:Name="Header" Text="Frame" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center" />
+		<Frame OutlineColor="Accent" HasShadow="True" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+			<Label Text="I've been framed!" />
+		</Frame>
+	</StackLayout>
+</ContentPage>

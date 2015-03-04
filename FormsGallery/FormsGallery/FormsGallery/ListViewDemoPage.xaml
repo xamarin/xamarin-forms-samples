@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			xmlns:system="clr-namespace:System;assembly=System.Runtime"
+			xmlns:formsGallery="clr-namespace:FormsGallery;assembly=FormsGallery"
+			x:Class="FormsGallery.ListViewDemoPage"
+			xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			mc:Ignorable="d" 
+			>
+		<StackLayout>
+		<Label x:Name="Header" Text="Entry" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center" />
+			<ListView>
+				<ListView.ItemsSource>
+					<x:Array Type="formsGallery:Person">
+						<formsGallery:Person Name="Abigail"	Birthday="1/15/1975" FavoriteColor="Aqua" />
+						<formsGallery:Person Name="Bob"	Birthday="2/20/1976" FavoriteColor="Black" />
+						<formsGallery:Person Name="Cathy" Birthday="3/10/1977" FavoriteColor="Blue" />
+						<formsGallery:Person Name="David" Birthday="4/25/1978" FavoriteColor="Fuschia" />
+						<formsGallery:Person Name="Eugenie"	Birthday="5/5/1979"  FavoriteColor="Gray" />
+						<formsGallery:Person Name="Freddie"	Birthday="6/30/1980" FavoriteColor="Green" />
+						<formsGallery:Person Name="Greta" Birthday="7/15/1981" FavoriteColor="Lime" />
+						<formsGallery:Person Name="Harold" Birthday="8/10/1982" FavoriteColor="Maroon" />
+						<formsGallery:Person Name="Irene" Birthday="9/25/1983" FavoriteColor="Navy" />
+						<formsGallery:Person Name="Jonathan" Birthday="10/10/1984" FavoriteColor="Olive" />
+						<formsGallery:Person Name="Kathy" Birthday="11/20/1985" FavoriteColor="Purple" />
+						<formsGallery:Person Name="Larry" Birthday="12/5/1986" FavoriteColor="Red" />
+						<formsGallery:Person Name="Monica" Birthday="1/5/1975"  FavoriteColor="Silver" />
+						<formsGallery:Person Name="Nick" Birthday="2/10/1976" FavoriteColor="Teal" />
+						<formsGallery:Person Name="Olive" Birthday="3/20/1977" FavoriteColor="White" />
+						<formsGallery:Person Name="Pendleton" Birthday="4/10/1978" FavoriteColor="Yellow" />
+						<formsGallery:Person Name="Queenie"	Birthday="5/15/1979" FavoriteColor="Aqua" />
+						<formsGallery:Person Name="Rob"	Birthday="6/30/1980" FavoriteColor="Blue" />
+						<formsGallery:Person Name="Sally" Birthday="7/5/1981"  FavoriteColor="Fuschia" />
+						<formsGallery:Person Name="Timothy"	Birthday="8/30/1982" FavoriteColor="Green" />
+						<formsGallery:Person Name="Uma"	Birthday="9/10/1983" FavoriteColor="Lime" />
+						<formsGallery:Person Name="Victor" Birthday="10/20/1984" FavoriteColor="Maroon" />
+						<formsGallery:Person Name="Wendy" Birthday="11/5/1985" FavoriteColor="Navy" />
+						<formsGallery:Person Name="Xavier" Birthday="12/30/1986" FavoriteColor="Olive" />
+						<formsGallery:Person Name="Yvonne" Birthday="1/10/1987" FavoriteColor="Purple" />
+						<formsGallery:Person Name="Zachary"	Birthday="2/5/1988" FavoriteColor="Red" />
+					</x:Array>
+				</ListView.ItemsSource>
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell d:DataContext="{d:DesignInstance d:Type=formsGallery:Person}">
+							<StackLayout Padding="0 5" Orientation="Horizontal">
+								<BoxView Color="{Binding FavoriteColor}" />
+								<StackLayout VerticalOptions="Center" Spacing="0">
+									<Label Text="{Binding Name}" />
+									<Label Text="{Binding Birthday, StringFormat='{}Born {0:d}'}" />
+								</StackLayout>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+	</StackLayout>
+</ContentPage>

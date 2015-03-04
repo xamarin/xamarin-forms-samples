@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="FormsGallery.ImageDemoPage"
+			 x:Name="LayoutRoot">
+	<StackLayout>
+		<Label x:Name="Header" Text="Image" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center" />
+		<Image VerticalOptions="CenterAndExpand" Source="{Binding ImageSource, Source={x:Reference LayoutRoot}}" />
+	</StackLayout>
+</ContentPage>
