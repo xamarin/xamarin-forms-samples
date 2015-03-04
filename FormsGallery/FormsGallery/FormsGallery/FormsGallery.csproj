@@ -40,8 +40,8 @@
     <Compile Include="ActivityIndicatorDemoPage.xaml.cs">
       <DependentUpon>ActivityIndicatorDemoPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Application.xaml.cs">
-      <DependentUpon>Application.xaml</DependentUpon>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="BoxViewDemoPage.xaml.cs">
       <DependentUpon>BoxViewDemoPage.xaml</DependentUpon>
@@ -131,7 +131,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Application.xaml">
+    <EmbeddedResource Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
