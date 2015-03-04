@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 xmlns:converters="clr-namespace:FormsGallery.Converters;assembly=FormsGallery"
+			 xmlns:support="clr-namespace:FormsGallery.Support;assembly=FormsGallery"
 			 x:Class="FormsGallery.ButtonDemoPage">
 	<Label x:Name="Header" Text="Button" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center" />
-	<Button Text="Click Me!" FontSize="Large" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="Button_OnClicked" Font="{x:Static converters:Defaults.LargeFont}" />
-	<Label x:Name="Label" Text="0 button clicks" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Font="{x:Static converters:Defaults.LargeFont}" />
+	<Button Text="Click Me!" FontSize="Large" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="Button_OnClicked" FontSize="Large" />
+	<Label x:Name="Label" Text="0 button clicks" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="Large" />
 </ContentPage>

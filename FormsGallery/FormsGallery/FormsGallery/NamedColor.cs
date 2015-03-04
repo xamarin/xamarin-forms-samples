@@ -4,7 +4,7 @@ using Xamarin.Forms;
 namespace FormsGallery
 {
     // Used in TabbedPageDemoPage & CarouselPageDemoPage.
-    class NamedColor
+	public class NamedColor
     {
         public NamedColor(string name, Color color)
         {

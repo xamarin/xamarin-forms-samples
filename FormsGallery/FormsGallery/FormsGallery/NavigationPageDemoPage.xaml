@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:support="clr-namespace:FormsGallery.Support;assembly=FormsGallery"
+	xmlns:formsGallery="clr-namespace:FormsGallery;assembly=FormsGallery"
+	x:Class="FormsGallery.NavigationPageDemoPage"
+	x:Name="LayoutRoot">
+	<StackLayout>
+		<Label x:Name="Header" Text="NavigationPage" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center" />
+		<StackLayout HorizontalOptions="Center">
+			<Button Text=" Go to Label Demo Page " BorderWidth="1" FontSize="Large" Command="{Binding NavigateCommand, Source={x:Reference LayoutRoot}}" CommandParameter="{x:Type formsGallery:LabelDemoPage}" />
+			<Button Text=" Go to Image Demo Page " BorderWidth="1" FontSize="Large" Command="{Binding NavigateCommand, Source={x:Reference LayoutRoot}}" CommandParameter="{x:Type formsGallery:ImageDemoPage}" />
+			<Button Text=" Go to BoxView Demo Page " BorderWidth="1" FontSize="Large" Command="{Binding NavigateCommand, Source={x:Reference LayoutRoot}}" CommandParameter="{x:Type formsGallery:BoxViewDemoPage}" />
+			<Button Text=" Go to WebView Demo Page " BorderWidth="1" FontSize="Large" Command="{Binding NavigateCommand, Source={x:Reference LayoutRoot}}" CommandParameter="{x:Type formsGallery:WebViewDemoPage}" />
+		</StackLayout>
+	</StackLayout>
+</ContentPage>

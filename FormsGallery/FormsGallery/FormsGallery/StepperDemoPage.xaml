@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:support="clr-namespace:FormsGallery.Support;assembly=FormsGallery"
+			 x:Class="FormsGallery.StepperDemoPage">
+	<StackLayout>
+		<Label x:Name="Header" Text="Stepper" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center" />
+		<Stepper x:Name="Stepper" Minimum="0" Maximum="10" Increment=".1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+		<Label FontSize="Large" Text="{Binding Value, Source={x:Reference Stepper}, StringFormat='{}Stepper value is {0:F1}'}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+	</StackLayout>
+</ContentPage>

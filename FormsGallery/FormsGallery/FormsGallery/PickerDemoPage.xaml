@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:formsGallery="clr-namespace:FormsGallery;assembly=FormsGallery"
+	xmlns:support="clr-namespace:FormsGallery.Support;assembly=FormsGallery"
+	x:Class="FormsGallery.PickerDemoPage"
+	x:Name="LayoutRoot">
+	<formsGallery:PickerDemoPage.Colors>
+		<x:Array Type="{x:Type formsGallery:NamedColor}">
+			<support:NamedColorBuilder Name="Aqua" Color="Aqua" />
+			<support:NamedColorBuilder Name="Black" Color="Black" />
+			<support:NamedColorBuilder Name="Blue" Color="Blue" />
+			<support:NamedColorBuilder Name="Fuchsia" Color="Fuchsia" />
+			<support:NamedColorBuilder Name="Gray" Color="Gray" />
+			<support:NamedColorBuilder Name="Green" Color="Green" />
+			<support:NamedColorBuilder Name="Lime" Color="Lime" />
+			<support:NamedColorBuilder Name="Maroon" Color="Maroon" />
+			<support:NamedColorBuilder Name="Navy" Color="Navy" />
+			<support:NamedColorBuilder Name="Olive" Color="Olive" />
+			<support:NamedColorBuilder Name="Purple" Color="Purple" />
+			<support:NamedColorBuilder Name="Red" Color="Red" />
+			<support:NamedColorBuilder Name="Silver" Color="Silver" />
+			<support:NamedColorBuilder Name="Teal" Color="Teal" />
+			<support:NamedColorBuilder Name="White" Color="White" />
+			<support:NamedColorBuilder Name="Yellow" Color="Yellow" />
+		</x:Array>
+	</formsGallery:PickerDemoPage.Colors>
+	<StackLayout>
+		<Label x:Name="Header" Text="Picker" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center" />
+		<Picker x:Name="Picker" Title="Color" support:PickerCompensations.Items="{Binding}" SelectedIndexChanged="Picker_OnSelectedIndexChanged" />
+		<BoxView x:Name="Selected" WidthRequest="150" HeightRequest="150" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Color="{Binding SelectedColor, Source={x:Reference LayoutRoot}}" />
+	</StackLayout>
+</ContentPage>

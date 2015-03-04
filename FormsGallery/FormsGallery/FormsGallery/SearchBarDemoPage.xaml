@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="FormsGallery.SearchBarDemoPage"
+			 x:Name="LayoutRoot"
+			 >
+	<StackLayout>
+		<Label x:Name="Header" Text="SearchBar" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center" />
+		<SearchBar x:Name="SearchBar" Placeholder="Xamarin.Forms Property" SearchButtonPressed="SearchBar_OnSearchButtonPressed" />
+		<ScrollView VerticalOptions="FillAndExpand">
+			<Label Text="{Binding Results, Source={x:Reference LayoutRoot}}" />
+		</ScrollView>
+	</StackLayout>
+</ContentPage>
