@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:support="clr-namespace:FormsGallery.Support;assembly=FormsGallery"
+			 x:Class="FormsGallery.RelativeLayoutDemoPage">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<Label x:Name="Header" Text="RelativeLayout" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center" />
+		<RelativeLayout>
+			<Label x:Name="Reference" Text="Not visible" Opacity="0" Font="Large" RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.5}" />
+			<Label x:Name="Center" Text="Center" FontSize="Large" RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}" RelativeLayout.YConstraint="{support:RelativeToViewVertical ElementName=Reference, Factor=-.5}" />
+			<Label x:Name="Above" Text="Above" FontSize="Large" RelativeLayout.XConstraint="{support:RelativeToViewHorizontal ElementName=Center}" RelativeLayout.YConstraint="{support:RelativeToViewVertical ElementName=Center, Factor=-1}" />
+			<Label x:Name="Below" Text="Below" FontSize="Large" RelativeLayout.XConstraint="{support:RelativeToViewHorizontal ElementName=Center}" RelativeLayout.YConstraint="{support:RelativeToViewVertical ElementName=Center}" />
+			<Label Text="Further Above" FontSize="Large" RelativeLayout.XConstraint="{support:RelativeToViewHorizontal ElementName=Above}" RelativeLayout.YConstraint="{support:RelativeToViewVertical ElementName=Above, Factor=-1}" />
+			<Label Text="Further Below" FontSize="Large" RelativeLayout.XConstraint="{support:RelativeToViewHorizontal ElementName=Below}" RelativeLayout.YConstraint="{support:RelativeToViewVertical ElementName=Below}" />
+			
+			<BoxView Color="Red" RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}" RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}" />
+			<BoxView Color="Green" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=-40}" RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}" />
+			<BoxView Color="Blue" RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=-40}" />
+			<BoxView Color="Yellow" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=-40}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=-40}" />
+		</RelativeLayout>
+	</Grid>
+</ContentPage>

@@ -79,6 +79,10 @@
     <Compile Include="ProgressBarDemoPage.xaml.cs">
       <DependentUpon>ProgressBarDemoPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RelativeLayoutDemoPage.xaml.cs">
+      <DependentUpon>RelativeLayoutDemoPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ScrollViewDemoPage.xaml.cs">
       <DependentUpon>ScrollViewDemoPage.xaml</DependentUpon>
     </Compile>
@@ -138,12 +142,12 @@
       <DependentUpon>MapDemoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RelativeLayoutDemoPage.cs" />
     <Compile Include="Support\LuminosityConverter.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Support\NamedColorBuilder.cs" />
     <Compile Include="Support\Person.cs" />
+    <Compile Include="Support\RelativeToView.cs" />
     <Compile Include="Support\ReturnBehavior.cs" />
     <Compile Include="SwitchCellDemoPage.xaml.cs">
       <DependentUpon>SwitchCellDemoPage.xaml</DependentUpon>
@@ -343,6 +347,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="RelativeLayoutDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Include="ScrollViewDemoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
