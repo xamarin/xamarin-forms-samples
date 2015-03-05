@@ -6,7 +6,7 @@
 	<StackLayout>
 		<Label x:Name="Header" Text="AbsoluteLayout" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center" />
 
-		<AbsoluteLayout x:Name="AbsoluteLayout" BackgroundColor="{Binding Source={x:Static Color.Blue}, Converter={x:Static support:LuminosityConverter.Instance}}" VerticalOptions="FillAndExpand">
+		<AbsoluteLayout x:Name="AbsoluteLayout" BackgroundColor="{Binding Source={x:Static Color.Blue}, Converter={x:Static support:LuminosityConverter.Instance}, ConverterParameter=.9}" VerticalOptions="FillAndExpand">
 			<Label x:Name="Text1" Text="AbsoluteLayout" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="Black" />
 			<Label x:Name="Text2" Text="AbsoluteLayout" AbsoluteLayout.LayoutFlags="PositionProportional" TextColor="Black" />
 		</AbsoluteLayout>
