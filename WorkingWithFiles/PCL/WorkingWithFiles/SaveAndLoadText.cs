@@ -15,9 +15,7 @@ namespace WorkingWithFiles
 
 		public SaveAndLoadText ()
 		{
-			var input = new Editor { Text = "" };
-			if (Device.OS == TargetPlatform.iOS)
-				input.HeightRequest = 40;
+			var input = new Entry { Text = "" };
 			var output = new Label { Text = "" };
 			saveButton = new Button {Text = "Save"};
 
