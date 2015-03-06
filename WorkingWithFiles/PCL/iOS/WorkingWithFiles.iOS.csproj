@@ -126,7 +126,6 @@
     <Compile Include="SaveAndLoad_iOS.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\WorkingWithFiles\WorkingWithFiles.csproj">
       <Project>{098EA6F2-9F14-40EC-A5C4-48BD8A09B096}</Project>
