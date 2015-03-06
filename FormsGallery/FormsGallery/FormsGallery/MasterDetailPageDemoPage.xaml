@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 xmlns:support="clr-namespace:FormsGallery.Support;assembly=FormsGallery"
-			 xmlns:formsGallery="clr-namespace:FormsGallery;assembly=FormsGallery"
-			 x:Class="FormsGallery.MasterDetailPageDemoPage" IsPresentedChanged="MasterDetailPageDemoPage_OnIsPresentedChanged">
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:support="clr-namespace:FormsGallery.Support;assembly=FormsGallery"
+	xmlns:formsGallery="clr-namespace:FormsGallery;assembly=FormsGallery"
+	x:Class="FormsGallery.MasterDetailPageDemoPage"
+	IsPresented="{Binding SelectedDetails, Source={x:Reference Controller}, Converter={x:Static support:NullToBooleanConverter.Instance}, ConverterParameter=True}"
+>
 	<MasterDetailPage.Master>
 		<ContentPage Title="Color List">
 			<ContentPage.BindingContext>
@@ -28,14 +30,14 @@
 			</ContentPage.BindingContext>
 			<StackLayout>
 				<Label x:Name="Header" Text="MasterDetailPage" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
-				<ListView x:Name="Items" ItemsSource="{Binding}" support:ListViewCompensations.Assign="{Binding ItemsSource, Mode=OneWay, Source={x:Reference Items}, Converter={x:Static support:FirstItemConverter.Instance}}" ItemSelected="ListView_OnItemSelected" />
+				<ListView x:Name="Items" ItemsSource="{Binding}" SelectedItem="{Binding SelectedDetails, Mode=TwoWay, Source={x:Reference Controller}}" />
 			</StackLayout>
 		</ContentPage>
 	</MasterDetailPage.Master>
 	<MasterDetailPage.Detail>
-		<formsGallery:NamedColorPageWithHeader BindingContext="{Binding SelectedItem, Mode=OneWay, Source={x:Reference Items}}" />
+		<formsGallery:NamedColorPageWithHeader BindingContext="{Binding SelectedDetails, Source={x:Reference Controller}}" />
 	</MasterDetailPage.Detail>
 	<MasterDetailPage.Behaviors>
-		<support:ReturnBehavior IsEnabled="{Binding Source={x:Static TargetPlatform.iOS}, Converter={x:Static support:IsPlatformConverter.Instance}, ConverterParameter=True}" />
+		<support:MasterDetailsControllerBehavior x:Name="Controller" SelectedDetails="{Binding ItemsSource, Mode=OneWay, Source={x:Reference Items}, Converter={x:Static support:FirstItemConverter.Instance}}" IsEnabled="{Binding Source={x:Static TargetPlatform.iOS}, Converter={x:Static support:IsPlatformConverter.Instance}, ConverterParameter=True}" />
 	</MasterDetailPage.Behaviors>
 </MasterDetailPage>

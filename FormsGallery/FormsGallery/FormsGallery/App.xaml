@@ -9,7 +9,7 @@
 	<Application.Resources>
 		<ResourceDictionary>
 			<DataTemplate x:Key="NamedColorTemplate">
-				<StackLayout VerticalOptions="FillAndExpand">
+				<StackLayout>
 					<StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
 						<Label FontSize="Large" XAlign="End" Text="{Binding Color.R, StringFormat='{}R = {0:F2}'}" />
 						<Label FontSize="Large" XAlign="End" Text="{Binding Color.G, StringFormat='{}G = {0:F2}'}" />

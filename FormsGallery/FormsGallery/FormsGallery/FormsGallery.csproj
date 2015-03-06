@@ -14,7 +14,7 @@
     <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <NuGetPackageImportStamp>189b0e43</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>57104c9e</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -145,7 +145,6 @@
       <DependentUpon>MapDemoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Support\ListViewCompensations.cs" />
     <Compile Include="Support\LuminosityConverter.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -158,7 +157,7 @@
     <Compile Include="Support\RelativeToView.cs" />
     <Compile Include="Support\RelativeToViewHorizontal.cs" />
     <Compile Include="Support\RelativeToViewVertical.cs" />
-    <Compile Include="Support\ReturnBehavior.cs" />
+    <Compile Include="Support\MasterDetailsControllerBehavior.cs" />
     <Compile Include="Support\ThicknessExtension.cs" />
     <Compile Include="SwitchCellDemoPage.xaml.cs">
       <DependentUpon>SwitchCellDemoPage.xaml</DependentUpon>
