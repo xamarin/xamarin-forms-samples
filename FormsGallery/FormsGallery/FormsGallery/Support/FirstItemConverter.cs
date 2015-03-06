@@ -1,21 +1,22 @@
 using System;
+using System.Collections;
 using System.Globalization;
+using System.Linq;
 using Xamarin.Forms;
 
 namespace FormsGallery.Support
 {
-	public class IsPlatformConverter : IValueConverter
+	public class FirstItemConverter : IValueConverter
 	{
-		public static IsPlatformConverter Instance
+		public static FirstItemConverter Instance
 		{
 			get { return InstanceField; }
-		}	static readonly IsPlatformConverter InstanceField = new IsPlatformConverter();
+		}	static readonly FirstItemConverter InstanceField = new FirstItemConverter();
 
 		public object Convert( object value, Type targetType, object parameter, CultureInfo culture )
 		{
-			var platform = (TargetPlatform)value;
-			var equal = Device.OS == platform;
-			var result = parameter != null && System.Convert.ToBoolean( parameter ) ? !equal : equal;
+			var enumerable = value as IEnumerable;
+			var result = enumerable != null ? enumerable.Cast<object>().FirstOrDefault() : null;
 			return result;
 		}
 

@@ -1,4 +1,5 @@
 ﻿
+using System;
 using Xamarin.Forms;
 
 namespace FormsGallery
@@ -12,11 +13,19 @@ namespace FormsGallery
 
 		void ListView_OnItemSelected( object sender, SelectedItemChangedEventArgs e )
 		{
-			// Set the BindingContext of the detail page.
-			Detail.BindingContext = e.SelectedItem;
-
 			// Show the detail page.
-			IsPresented = false;
+			if ( e.SelectedItem != null )
+			{
+				IsPresented = false;
+			}
+		}
+
+		void MasterDetailPageDemoPage_OnIsPresentedChanged( object sender, EventArgs e )
+		{
+			if ( IsPresented )
+			{
+				Items.SelectedItem = null;
+			}
 		}
 	}
 }

@@ -10,14 +10,14 @@ namespace FormsGallery
 
 		public HomePage()
 		{
-			InitializeComponent();
-
 			navigateCommand = 
 				new Command<Type>(async pageType =>
 				{
 					Page page = (Page)Activator.CreateInstance(pageType);
 					await this.Navigation.PushAsync(page);
 				});
+
+			InitializeComponent();
 		}
 
 		public ICommand NavigateCommand

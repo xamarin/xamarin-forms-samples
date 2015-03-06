@@ -1,21 +1,29 @@
 ﻿using System;
+using System.Globalization;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace FormsGallery
 {
 	public partial class ButtonDemoPage
 	{
+		readonly ICommand command;
+
 		public ButtonDemoPage()
 		{
+			command = new Command( () => Clicks++ );
 			InitializeComponent();
 		}
 
-		int ClickTotal { get; set; }
-
-		void Button_OnClicked( object sender, EventArgs e )
+		public int Clicks
 		{
-			ClickTotal += 1;
-            Label.Text = String.Format("{0} button click{1}",
-                                       ClickTotal, ClickTotal == 1 ? string.Empty : "s");
+			get { return (int)GetValue( ClicksProperty ); }
+			set { SetValue( ClicksProperty, value ); }
+		}	public static readonly BindableProperty ClicksProperty = BindableProperty.Create( "Clicks", typeof(int), typeof (ButtonDemoPage), default(int) );
+
+		public ICommand Command
+		{
+			get { return command; }
 		}
 	}
 }

@@ -4,18 +4,17 @@ using Xamarin.Forms;
 
 namespace FormsGallery.Support
 {
-	public class IsPlatformConverter : IValueConverter
+	public class PluralNumberConverter : IValueConverter
 	{
-		public static IsPlatformConverter Instance
+		public static PluralNumberConverter Instance
 		{
 			get { return InstanceField; }
-		}	static readonly IsPlatformConverter InstanceField = new IsPlatformConverter();
+		}	static readonly PluralNumberConverter InstanceField = new PluralNumberConverter();
 
 		public object Convert( object value, Type targetType, object parameter, CultureInfo culture )
 		{
-			var platform = (TargetPlatform)value;
-			var equal = Device.OS == platform;
-			var result = parameter != null && System.Convert.ToBoolean( parameter ) ? !equal : equal;
+			var number = (int)value;
+			var result = string.Format( parameter as string ?? parameter.ToString(), number, number == 1 ? string.Empty : "s" );
 			return result;
 		}
 
