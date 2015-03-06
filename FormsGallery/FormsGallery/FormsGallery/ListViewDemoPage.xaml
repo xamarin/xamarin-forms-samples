@@ -3,11 +3,8 @@
 			xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			xmlns:formsGallery="clr-namespace:FormsGallery;assembly=FormsGallery"
 			x:Class="FormsGallery.ListViewDemoPage"
-			xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-		    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-		    xmlns:support="clr-namespace:FormsGallery.Support;assembly=FormsGallery"
-		    mc:Ignorable="d" 
-			>
+			xmlns:support="clr-namespace:FormsGallery.Support;assembly=FormsGallery"
+		    >
 		<StackLayout>
 		<Label x:Name="Header" Text="ListView" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center" />
 			<ListView>
@@ -43,8 +40,8 @@
 				</ListView.ItemsSource>
 				<ListView.ItemTemplate>
 					<DataTemplate>
-						<ViewCell d:DataContext="{d:DesignInstance d:Type=support:Person}">
-							<StackLayout Padding="0 5" Orientation="Horizontal">
+						<ViewCell>
+							<StackLayout Padding="{support:Thickness Data='0 5'}" Orientation="Horizontal">
 								<BoxView Color="{Binding FavoriteColor}" />
 								<StackLayout VerticalOptions="Center" Spacing="0">
 									<Label Text="{Binding Name}" />

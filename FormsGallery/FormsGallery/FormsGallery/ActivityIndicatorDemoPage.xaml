@@ -4,7 +4,7 @@
 			 xmlns:support="clr-namespace:FormsGallery.Support;assembly=FormsGallery"
 			 x:Class="FormsGallery.ActivityIndicatorDemoPage">
 	<StackLayout>
-		<Label x:Name="Header" Text="AbsoluteLayout" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center" />
+		<Label x:Name="Header" Text="ActivityIndicator" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center" />
 		<ActivityIndicator IsRunning="True" VerticalOptions="CenterAndExpand" Color="{x:Static support:Defaults.Color}" />
 	</StackLayout>
 </ContentPage>

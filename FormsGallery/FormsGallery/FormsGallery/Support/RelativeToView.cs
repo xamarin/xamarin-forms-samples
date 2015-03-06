@@ -38,30 +38,4 @@ namespace FormsGallery.Support
 
 		protected abstract double DetermineStart( VisualElement view );
 	}
-
-	public class RelativeToViewHorizontal : RelativeToView
-	{
-		protected override double DetermineExtent( VisualElement view )
-		{
-			return view.Width;
-		}
-
-		protected override double DetermineStart( VisualElement view )
-		{
-			return view.X;
-		}
-	}
-
-	public class RelativeToViewVertical : RelativeToView
-	{
-		protected override double DetermineExtent( VisualElement view )
-		{
-			return view.Height;
-		}
-
-		protected override double DetermineStart( VisualElement view )
-		{
-			return view.Y;
-		}
-	}
 }

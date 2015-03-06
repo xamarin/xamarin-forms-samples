@@ -7,14 +7,14 @@
 			 x:Class="FormsGallery.MapDemoPage">
 	<StackLayout>
 		<Label x:Name="Header" Text="Map" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center" />
-		<StackLayout>
+		<StackLayout VerticalOptions="FillAndExpand">
 			<Label x:Name="AndroidOnlyLabel" IsVisible="{Binding Converter={x:Static support:IsPlatformConverter.Instance}, Source={x:Static TargetPlatform.Android}}" Text="Android applications require API key to use the Google Map service." VerticalOptions="CenterAndExpand" FontSize="Large" />
 			<maps:Map IsVisible="{Binding IsVisible, Source={x:Reference AndroidOnlyLabel}, Converter={x:Static support:InverseBoolean.Instance}}">
 				<maps:Map.Behaviors>
-					<support:ApplyRegionBehavior Position="37.79762, -122.40181" />
+					<support:ApplyRegionBehavior Position="{support:Position Data='37.79762, -122.40181'}" />
 				</maps:Map.Behaviors>
 				<maps:Map.Pins>
-					<maps:Pin Label="Xamarin" Position="37.79762, -122.40181" />
+					<maps:Pin Label="Xamarin" Position="{support:Position Data='37.79762, -122.40181'}" />
 				</maps:Map.Pins>
 			</maps:Map>
 		</StackLayout>

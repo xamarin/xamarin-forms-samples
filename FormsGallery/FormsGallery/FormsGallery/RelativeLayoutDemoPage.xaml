@@ -9,7 +9,7 @@
 			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
 		<Label x:Name="Header" Text="RelativeLayout" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center" />
-		<RelativeLayout>
+		<RelativeLayout Grid.Row="1">
 			<Label x:Name="Reference" Text="Not visible" Opacity="0" Font="Large" RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.5}" />
 			<Label x:Name="Center" Text="Center" FontSize="Large" RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}" RelativeLayout.YConstraint="{support:RelativeToViewVertical ElementName=Reference, Factor=-.5}" />
 			<Label x:Name="Above" Text="Above" FontSize="Large" RelativeLayout.XConstraint="{support:RelativeToViewHorizontal ElementName=Center}" RelativeLayout.YConstraint="{support:RelativeToViewVertical ElementName=Center, Factor=-1}" />

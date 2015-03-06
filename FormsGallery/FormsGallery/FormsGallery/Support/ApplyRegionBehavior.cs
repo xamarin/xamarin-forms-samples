@@ -12,6 +12,7 @@ namespace FormsGallery.Support
 			base.OnAttachedTo( bindable );
 
 			Map = bindable;
+			Refresh();
 		}
 
 		static void OnChanged( BindableObject bindable, object oldvalue, object newvalue )
@@ -25,7 +26,7 @@ namespace FormsGallery.Support
 
 		void Refresh()
 		{
-			if ( Map != null )
+			if ( Map != null && Map.IsVisible )
 			{
 				Map.MoveToRegion( new MapSpan( Position, Latitude, Longitude ) );
 			}
@@ -35,19 +36,19 @@ namespace FormsGallery.Support
 		{
 			get { return (double)GetValue( LongitudeProperty ); }
 			set { SetValue( LongitudeProperty, value ); }
-		}	public static readonly BindableProperty LongitudeProperty = BindableProperty.Create( "Longitude", typeof(double), typeof (ApplyRegionBehavior), .1d, propertyChanged: OnChanged );
+		}	public static readonly BindableProperty LongitudeProperty = BindableProperty.Create( "Longitude", typeof(double), typeof (ApplyRegionBehavior), .01d );
 
 		public double Latitude
 		{
 			get { return (double)GetValue( LatitudeProperty ); }
 			set { SetValue( LatitudeProperty, value ); }
-		}	public static readonly BindableProperty LatitudeProperty = BindableProperty.Create( "Latitude", typeof(double), typeof (ApplyRegionBehavior), .1d );
+		}	public static readonly BindableProperty LatitudeProperty = BindableProperty.Create( "Latitude", typeof(double), typeof (ApplyRegionBehavior), .01d );
 
 		public Position Position
 		{
 			get { return (Position)GetValue( PositionProperty ); }
 			set { SetValue( PositionProperty, value ); }
-		}	public static readonly BindableProperty PositionProperty = BindableProperty.Create( "Position", typeof(Position), typeof (ApplyRegionBehavior), new Position( 41.890202, 12.492049 ) );
+		}	public static readonly BindableProperty PositionProperty = BindableProperty.Create( "Position", typeof(Position), typeof (ApplyRegionBehavior), new Position( 37.79762, -122.40181 ), propertyChanged: OnChanged );
 
 	}
 }
