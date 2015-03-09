@@ -81,7 +81,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\xamlsamples\XamlSamples.csproj">
+    <ProjectReference Include="..\XamlSamples\XamlSamples.csproj">
       <Project>{B635559C-3F14-46D6-AE08-98FFDB192BAB}</Project>
       <Name>XamlSamples</Name>
     </ProjectReference>
