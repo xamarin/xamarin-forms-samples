@@ -1,8 +1,6 @@
 Working with ListView Native Layouts
 ==============
 
-**WARNING: this sample built with the beta [unified api](http://developer.xamarin.com/guides/cross-platform/macios/unified/)**
-
 The Xamarin.Forms layout engine is very powerful, enabling developers to express their screens in a way that can be rendered across all supported platforms.
 
 Very complex layouts can take time to compute, on Xamarin.Forms or even on native platforms. This is exacerbated in a scrolling view like the `ListView` where the layouts need to be recalculated as you scroll.
