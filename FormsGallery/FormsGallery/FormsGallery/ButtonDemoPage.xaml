@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:support="clr-namespace:FormsGallery.Support;assembly=FormsGallery"
+	x:Class="FormsGallery.ButtonDemoPage"
+	x:Name="LayoutRoot"
+	>
+	<StackLayout BindingContext="{x:Reference LayoutRoot}">
+		<Label x:Name="Header" Text="Button" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center" />
+		
+		<Button Text="Click Me!" FontSize="Large" BorderWidth="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Command="{Binding Command}" />
+		<Label x:Name="Label" Text="{Binding Clicks, Converter={x:Static support:PluralNumberConverter.Instance}, ConverterParameter='{0} button click{1}'}" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+	</StackLayout>
+</ContentPage>

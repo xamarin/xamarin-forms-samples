@@ -15,7 +15,10 @@ namespace FormsGallery
     //  Expects BindingContext to be of type NamedColor!
     class NamedColorPage : ContentPage
     {
-        public NamedColorPage(bool includeBigLabel)
+	    public NamedColorPage() : this( true )
+	    {}
+
+	    public NamedColorPage(bool includeBigLabel)
         {
             // This binding is necessary to label the tabs in 
             //      the TabbedPage.

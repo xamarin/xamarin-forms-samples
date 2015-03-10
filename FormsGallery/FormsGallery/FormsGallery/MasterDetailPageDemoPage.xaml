@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:support="clr-namespace:FormsGallery.Support;assembly=FormsGallery"
+	xmlns:formsGallery="clr-namespace:FormsGallery;assembly=FormsGallery"
+	x:Class="FormsGallery.MasterDetailPageDemoPage"
+	IsPresented="{Binding SelectedDetails, Source={x:Reference Controller}, Converter={x:Static support:NullToBooleanConverter.Instance}, ConverterParameter=True}"
+>
+	<MasterDetailPage.Master>
+		<ContentPage Title="Color List">
+			<ContentPage.BindingContext>
+				<x:Array Type="{x:Type formsGallery:NamedColor}">
+					<support:NamedColorBuilder x:Name="First" Name="Aqua" Color="Aqua" />
+					<support:NamedColorBuilder Name="Black" Color="Black" />
+					<support:NamedColorBuilder Name="Blue" Color="Blue" />
+					<support:NamedColorBuilder Name="Fuchsia" Color="Fuchsia" />
+					<support:NamedColorBuilder Name="Gray" Color="Gray" />
+					<support:NamedColorBuilder Name="Green" Color="Green" />
+					<support:NamedColorBuilder Name="Lime" Color="Lime" />
+					<support:NamedColorBuilder Name="Maroon" Color="Maroon" />
+					<support:NamedColorBuilder Name="Navy" Color="Navy" />
+					<support:NamedColorBuilder Name="Olive" Color="Olive" />
+					<support:NamedColorBuilder Name="Purple" Color="Purple" />
+					<support:NamedColorBuilder Name="Red" Color="Red" />
+					<support:NamedColorBuilder Name="Silver" Color="Silver" />
+					<support:NamedColorBuilder Name="Teal" Color="Teal" />
+					<support:NamedColorBuilder Name="White" Color="White" />
+					<support:NamedColorBuilder Name="Yellow" Color="Yellow" />
+				</x:Array>
+			</ContentPage.BindingContext>
+			<StackLayout>
+				<Label x:Name="Header" Text="MasterDetailPage" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
+				<ListView x:Name="Items" ItemsSource="{Binding}" SelectedItem="{Binding SelectedDetails, Mode=TwoWay, Source={x:Reference Controller}}" />
+			</StackLayout>
+		</ContentPage>
+	</MasterDetailPage.Master>
+	<MasterDetailPage.Detail>
+		<formsGallery:NamedColorPageWithHeader BindingContext="{Binding SelectedDetails, Source={x:Reference Controller}}" />
+	</MasterDetailPage.Detail>
+	<MasterDetailPage.Behaviors>
+		<support:MasterDetailsControllerBehavior x:Name="Controller" SelectedDetails="{Binding ItemsSource, Mode=OneWay, Source={x:Reference Items}, Converter={x:Static support:FirstItemConverter.Instance}}" IsEnabled="{Binding Source={x:Static TargetPlatform.iOS}, Converter={x:Static support:IsPlatformConverter.Instance}, ConverterParameter=True}" />
+	</MasterDetailPage.Behaviors>
+</MasterDetailPage>

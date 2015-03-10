@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:support="clr-namespace:FormsGallery.Support;assembly=FormsGallery"
+			 x:Class="FormsGallery.TableViewFormDemoPage">
+	<StackLayout>
+		<Label x:Name="Header" Text="TableView for a form" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
+		<TableView Intent="Form">
+			<TableRoot Title="TableView Title">
+				<TableSection Title="Table Section">
+					<TextCell Text="Text Cell" Detail="With Detail Text" />
+					<ImageCell ImageSource="{x:Static support:Defaults.Image}" Text="Image Cell" Detail="With Detail Text" />
+					<SwitchCell Text="Switch Cell" />
+					<EntryCell Label="Entry Cell" Placeholder="Type text here" />
+					<ViewCell>
+						<Label Text="A View Cell can be anything you want!" />
+					</ViewCell>
+				</TableSection>
+			</TableRoot>
+		</TableView>
+	</StackLayout>
+</ContentPage>

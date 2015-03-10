@@ -23,7 +23,8 @@ namespace FormsGallery.WinPhone
             Forms.Init();
             Xamarin.FormsMaps.Init();
 
-			LoadApplication(new FormsGallery.App()); // new in 1.3
+	        var app = new FormsGallery.App();
+	        LoadApplication(app); // new in 1.3
         }
     }
 }
