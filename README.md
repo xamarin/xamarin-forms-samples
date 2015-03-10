@@ -32,27 +32,38 @@ a commit, to ensure that all samples are good to go.
                                                                                                                   
                                              
 Samples Submission Guidelines
------------------------------
+=============================
 
 ## Galleries
 
-We love samples! Application samples show off our platform and provide a great way for people to learn our stuff. And we even promote them as a first-class feature of the docs site. You can find our sample galleries here:
+We love samples! Application samples show off our platform and provide a great way for people to learn our stuff. And we even promote them as a first-class feature of the docs site. You can find our two sample galleries here:
 
-* [iOS Samples](http://docs.xamarin.com/samples/ios)
+* [Xamarin Forms Samples](http://developer.xamarin.com/samples/xamarin-forms/all/)
 
-* [Android Samples](http://docs.xamarin.com/samples/android)
+* [iOS Samples](http://developer.xamarin.com/samples/ios/all/)
+
+* [Mac Samples](http://developer.xamarin.com/samples/mac/all/)
+
+* [Android Samples](http://developer.xamarin.com/samples/android/all/)
 
 ## Sample GitHub Repositories
 
-These sample galleries are populated by samples in our sample GitHub repos:
+These sample galleries are populated by samples in our six sample GitHub repos:
+
+* [https://github.com/xamarin/xamarin-forms-samples](https://github.com/xamarin/xamarin-forms-samples)
 
 * [https://github.com/xamarin/mobile-samples](https://github.com/xamarin/mobile-samples)
 
 * [https://github.com/xamarin/monotouch-samples](https://github.com/xamarin/monotouch-samples)
 
+* [https://github.com/xamarin/mac-samples](https://github.com/xamarin/mac-samples)
+
 * [https://github.com/xamarin/monodroid-samples](https://github.com/xamarin/monodroid-samples)
 
-The[ mobile-samples](https://github.com/xamarin/mobile-samples) repository is for samples that are cross-platform.
+* [https://github.com/xamarin/mac-ios-samples](https://github.com/xamarin/mac-ios-samples)
+
+The [mobile-samples](https://github.com/xamarin/mobile-samples) repository is for samples that are cross-platform.
+The [mac-ios-samples](https://github.com/xamarin/mac-ios-samples) repository is for samples that are Mac/iOS only.
 
 ## Sample Requirements
 
@@ -66,31 +77,32 @@ However, because the sample galleries are powered by the github sample repos, ea
 
 * **Metadata** - Finally, it needs a Metadata.xml file ([https://github.com/xamarin/mobile-samples/blob/master/Tasky/Metadata.xml](https://github.com/xamarin/mobile-samples/blob/master/Tasky/Metadata.xml)) that has some information:
 
-    * **ID**: a GUID for the sample. you can generate this in MD under Tools menu : Insert GUID. we need this to key between articles and their associated samples
+    * **ID** - A GUID for the sample. You can generate this in MD under Tools menu : Insert GUID. we need this to key between articles and their associated samples
 
-    * **IsFullApplication** boolean flag (true or false): whether or not this is a full application such as the MWC App, Tasky, etc., or it's just a feature sample, such as, how to use 'x' feature. the basic test here is, if you would submit this to the app store because it's useful, then it's a full app, otherwise it's just a feature sample.
+    * **IsFullApplication** - Boolean flag (true or false): whether or not this is a full application such as the MWC App, Tasky, etc., or it's just a feature sample, such as, how to use 'x' feature. the basic test here is, if you would submit this to the app store because it's useful, then it's a full app, otherwise it's just a feature sample.
+
+    * **Brief** - Short description or what your sample does. This allows us to display a nice and clean vignette on the sample page.
 
     * **Level** - Beginning, Intermediate, or Advanced: this is the intended audience level for the sample. only the getting started samples are Beginning, as they are intended for people who are _just_ starting with the platform. most samples are Intermediate, and a few, that dive deep into difficult APIs, should be Advanced.
 
     * **Minimum License Requirement** - Starter, Indie, Business, or Enterprise: denotes the license that a user has to have in order to build/run the sample.
 
     * **Tags**: a list of relevant tags for the app. These are:
-    	* **User Interface**
-		* **Data**
-		* **Games**
-		* **Graphics** (CoreDrawing, Animation, OpenGL...)
-		* **Media** (Video, Sound, recording, photos)
-		* **Platform Features** (Photo Library, Contacts, Calendars, etc.)
-		* **Device Features** (NFC, Accelerometer, Compass, Magnemometer, Bluetooth, RFID)
-		* **Cloud** (Web Services, Networking, etc.)
-		* **Backgrounding**
-		* **Maps & Location**
-		* **Binding + Interop** (Projections)
-		* **Notifications**
-		* **Touch**
-		* **Getting Started**
-		* **Async**
-
+    * **Data**
+    * **Games**
+    * **Graphics** (CoreDrawing, Animation, OpenGL...)
+    * **Media** (Video, Sound, recording, photos)
+    * **Platform Features** (Photo Library, Contacts, Calendars, etc.)
+    * **Device Features** (NFC, Accelerometer, Compass, Magnemometer, Bluetooth, RFID)
+    * **Cloud** (Web Services, Networking, etc.)
+    * **Backgrounding**
+    * **Maps + Location**
+    * **Binding + Interop** (Projections)
+    * **Notifications**
+    * **Touch**
+    * **Getting Started**
+    * **Async**
+    * **FSharp**
 
     * **SupportedPlatforms**: this is only for cross plat samples. It's a comma-separated list, and the valid values are iOS, Android, and Windows.
 
@@ -113,5 +125,4 @@ This strict approach is put in place to ensure that the samples we present to ou
 Should you wish to invoke validation of samples manually, simply run "validate.windows" or "validate.posix" (again, Windows vs OS X/Linux, respectively). These must be run from a Bash shell (i.e. a terminal on OS X/Linux or the Git Bash terminal on Windows).
 
 If you have any questions, don't hesitate to ask!
-
 

@@ -36,10 +36,6 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="EmailValidationBehaviorXaml.xaml.cs">
-      <DependentUpon>EmailValidationBehaviorXaml.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Behaviors\EmailValidationBehavior.cs" />
     <Compile Include="Behaviors\NumericValidationBehavior.cs" />
     <Compile Include="NumericValidationXaml.xaml.cs">
       <DependentUpon>NumericValidationXaml.xaml</DependentUpon>

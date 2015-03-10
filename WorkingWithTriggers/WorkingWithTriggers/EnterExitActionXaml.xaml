@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="WorkingWithTriggers.EnterExitActionXaml"
+			 xmlns:local="clr-namespace:WorkingWithTriggers;assembly=WorkingWithTriggers"
+			 Title="EnterExit"
+			 Padding="20, 50, 20, 0">
+	<ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Entry">
+                <Style.Triggers>
+                    <Trigger TargetType="Entry"
+                             Property="Entry.IsFocused" Value="True">
+                        <Trigger.EnterActions>
+                            <local:FadeTriggerAction StartsFrom="0" />
+                        </Trigger.EnterActions>
+
+                        <Trigger.ExitActions>
+                            <local:FadeTriggerAction StartsFrom="1" />
+                        </Trigger.ExitActions>
+
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Spacing="20">
+
+    	<Label Text="EnterAction and ExitAction" FontSize="Large" />
+
+    	<Label Text="FadeTriggerAction is triggered by IsFocused" FontSize="Small" />
+
+        <Entry Placeholder="enter job title" Text="">
+        	<Entry.Triggers>
+				<Trigger TargetType="Entry"
+                         Property="Entry.IsFocused" Value="True">
+                    <Trigger.EnterActions>
+                        <local:FadeTriggerAction StartsFrom="0" />
+                    </Trigger.EnterActions>
+
+                    <Trigger.ExitActions>
+                        <local:FadeTriggerAction StartsFrom="1" />
+                    </Trigger.ExitActions>
+                </Trigger>
+        	</Entry.Triggers>
+        </Entry>
+
+        <Entry Placeholder="enter company" Text="Xamarin" />
+
+        <Entry Placeholder="enter industry" Text="" />
+
+    </StackLayout>
+</ContentPage>

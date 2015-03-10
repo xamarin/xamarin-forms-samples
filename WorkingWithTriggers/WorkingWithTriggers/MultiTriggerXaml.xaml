@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="WorkingWithTriggers.MultiTriggerXaml"
+			 xmlns:local="clr-namespace:WorkingWithTriggers;assembly=WorkingWithTriggers"
+			 Title="Multi Trigger"
+			 Padding="20, 50, 20, 0">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+        	<local:MultiTriggerConverter x:Key="dataHasBeenEntered" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+	<StackLayout>
+
+	<Label FontSize="Large">MultiTrigger Example</Label>
+
+	<Label>You must provide either an email or phone number (or both):</Label>
+
+	<!-- the Entry x:Name are referenced below in the MultiTrigger -->
+	<!-- tip: make sure to set the Text="" (or some other default) -->
+
+	<Entry x:Name="email"
+		Text=""
+		Placeholder="email" />
+
+    <Entry x:Name="phone"
+		Text=""
+		Placeholder="phone" />
+
+		<Button x:Name="button" Text="Save"
+		        FontSize="Large"
+		        HorizontalOptions="Center">
+		    <Button.Triggers>
+				<MultiTrigger TargetType="Button"> 
+					<MultiTrigger.Conditions>
+						<BindingCondition Binding="{Binding Source={x:Reference email},
+		                                       Path=Text.Length}"
+		                                   Value="0" />
+						<BindingCondition Binding="{Binding Source={x:Reference phone},
+		                                       Path=Text.Length}"
+		                                   Value="0" />
+					</MultiTrigger.Conditions>
+						
+		            <Setter Property="IsEnabled" Value="False" />
+		        </MultiTrigger>
+		    </Button.Triggers>
+		</Button>
+
+
+		<BoxView HeightRequest="3" HorizontalOptions="CenterAndExpand"  WidthRequest="250" Color="Gray" />
+
+
+	<Label FontSize="Large">Multi "Login" Example</Label>
+
+	<Label>You must provide BOTH username and password:</Label>
+
+	<!-- we need a Converter to make the logic work - it's in the Page's ResourceDictionary -->
+	<!-- the Entry x:Name are referenced below in the MultiTrigger -->
+	<!-- tip: make sure to set the Text="" (or some other default) -->
+
+	<Entry x:Name="user"
+		Text=""
+		Placeholder="user name" />
+
+    <Entry x:Name="pwd"
+		Text=""
+		Placeholder="password" />
+
+		<Button x:Name="loginButton" Text="Login"
+		        FontSize="Large"
+		        HorizontalOptions="Center"
+		        IsEnabled="false">
+		    
+		    <Button.Triggers>
+				<MultiTrigger TargetType="Button"> 
+					<MultiTrigger.Conditions>
+						<BindingCondition Binding="{Binding Source={x:Reference user},
+		                                       Path=Text.Length,
+		                                       Converter={StaticResource dataHasBeenEntered}}"
+		                                   Value="true" />
+						<BindingCondition Binding="{Binding Source={x:Reference pwd},
+		                                       Path=Text.Length,
+		                                       Converter={StaticResource dataHasBeenEntered}}"
+		                                   Value="true" />
+					</MultiTrigger.Conditions>
+						
+		            <Setter Property="IsEnabled" Value="True" />
+		        </MultiTrigger>
+		    </Button.Triggers>
+		</Button>
+
+		<Label FontSize="Small">Uses a converter on BindingConditions</Label>
+
+	</StackLayout>
+</ContentPage>

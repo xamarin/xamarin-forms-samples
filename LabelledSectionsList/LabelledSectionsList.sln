@@ -115,7 +115,9 @@ Global
 		{5C7B1628-7ABC-4A86-9F1F-517AC1EE0E86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C7B1628-7ABC-4A86-9F1F-517AC1EE0E86}.Debug|ARM.ActiveCfg = Debug|Any CPU
 		{5C7B1628-7ABC-4A86-9F1F-517AC1EE0E86}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{5C7B1628-7ABC-4A86-9F1F-517AC1EE0E86}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{5C7B1628-7ABC-4A86-9F1F-517AC1EE0E86}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{5C7B1628-7ABC-4A86-9F1F-517AC1EE0E86}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{5C7B1628-7ABC-4A86-9F1F-517AC1EE0E86}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{5C7B1628-7ABC-4A86-9F1F-517AC1EE0E86}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{5C7B1628-7ABC-4A86-9F1F-517AC1EE0E86}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -215,9 +217,6 @@ Global
 		{AFF1D0DC-B584-4838-90BC-F0CCD92D8717}.Release|Mixed Platforms.Build.0 = Release|iPhone
 		{AFF1D0DC-B584-4838-90BC-F0CCD92D8717}.Release|Mixed Platforms.Deploy.0 = Release|iPhone
 		{AFF1D0DC-B584-4838-90BC-F0CCD92D8717}.Release|x86.ActiveCfg = Release|iPhone
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = LabelledSectionsList\LabelledSectionsList.iOS\LabelledSectionsList.iOS.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

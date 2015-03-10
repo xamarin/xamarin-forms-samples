@@ -7,7 +7,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
-namespace WorkingWithBehaviors
+namespace WorkingWithBehaviors.WinPhone
 {
     public partial class App : Xamarin.Forms.Platform.WinPhone.FormsApplicationPage 
     {

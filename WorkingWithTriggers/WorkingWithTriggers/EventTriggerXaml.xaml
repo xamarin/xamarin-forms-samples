@@ -2,9 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 xmlns:local="clr-namespace:WorkingWithTriggers;assembly=WorkingWithTriggers"
-			 x:Class="WorkingWithTriggers.NumericValidationTriggerXaml"
-			 Padding="0, 20, 0, 0">
+			 x:Class="WorkingWithTriggers.EventTriggerXaml"
+			 Padding="20, 50, 20, 0">
 	    <StackLayout>
+
+	    <Label FontSize="Large">EventTrigger Example</Label>
+
+		<Label>Text must be a valid double or it will turn red.</Label>
 
         <Entry Placeholder="Enter a System.Double">
             <Entry.Triggers>

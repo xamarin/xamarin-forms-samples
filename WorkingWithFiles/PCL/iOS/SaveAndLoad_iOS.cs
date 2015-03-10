@@ -7,7 +7,7 @@ using WorkingWithFiles;
 using Foundation;
 using System.Linq;
 
-[assembly: Dependency (typeof (SaveAndLoad_iOS))]
+[assembly: Dependency (typeof(SaveAndLoad_iOS))]
 
 namespace WorkingWithFiles.iOS
 {

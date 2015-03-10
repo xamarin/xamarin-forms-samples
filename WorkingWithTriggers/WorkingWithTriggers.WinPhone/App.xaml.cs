@@ -7,7 +7,8 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
-namespace WorkingWithTriggers
+
+namespace WorkingWithTriggers.WinPhone
 {
     public partial class App : Application
     {

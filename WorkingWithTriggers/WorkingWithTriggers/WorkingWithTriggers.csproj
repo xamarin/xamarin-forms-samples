@@ -36,23 +36,27 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="NumericValidationTriggerXaml.xaml.cs">
-      <DependentUpon>NumericValidationTriggerXaml.xaml</DependentUpon>
+    <Compile Include="csharp-examples\NumericValidationTriggerPage.cs" />
+    <Compile Include="csharp-examples\RequiredFieldTriggerPage.cs" />
+    <Compile Include="csharp-examples\SimpleTriggerPage.cs" />
+    <Compile Include="PropertyTriggerXaml.xaml.cs">
+      <DependentUpon>PropertyTriggerXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SimpleTriggerPage.cs" />
-    <Compile Include="SimpleTriggerXaml.xaml.cs">
-      <DependentUpon>SimpleTriggerXaml.xaml</DependentUpon>
+    <Compile Include="DataTriggerXaml.xaml.cs">
+      <DependentUpon>DataTriggerXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NumericValidationTriggerPage.cs" />
-    <Compile Include="RequiredFieldDataTriggerXaml.xaml.cs">
-      <DependentUpon>RequiredFieldDataTriggerXaml.xaml</DependentUpon>
+    <Compile Include="MultiTriggerXamlTriggerXaml.xaml.cs">
+      <DependentUpon>MultiTriggerXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="OnClickEventTriggerXaml.xaml.cs">
-      <DependentUpon>OnClickEventTriggerXaml.xaml</DependentUpon>
+    <Compile Include="EnterExitActionXaml.xaml.cs">
+      <DependentUpon>EnterExitActionXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TriggerActions\VisualElementPopTriggerAction.cs" />
     <Compile Include="TriggerActions\NumericValidationTriggerAction.cs" />
-    <Compile Include="RequiredFieldTriggerPage.cs" />
+    <Compile Include="TriggerActions\FadeTriggerAction.cs" />
+    <Compile Include="EventTriggerXaml.xaml.cs">
+      <DependentUpon>EventTriggerXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MultiTriggerConverter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -63,21 +67,25 @@
   </Target>
   -->
   <ItemGroup>
-    <EmbeddedResource Include="NumericValidationTriggerXaml.xaml">
+    <EmbeddedResource Include="PropertyTriggerXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="RequiredFieldDataTriggerXaml.xaml">
+    <EmbeddedResource Include="DataTriggerXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="OnClickEventTriggerXaml.xaml">
+    <EmbeddedResource Include="MultiTriggerXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="SimpleTriggerXaml.xaml">
+    <EmbeddedResource Include="EnterExitActionXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventTriggerXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="TriggerActions\" />
+    <Folder Include="csharp-examples\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

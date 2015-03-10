@@ -4,15 +4,12 @@
 			 x:Class="WorkingWithListview.UnevenRowsXaml"
 			 Padding="0, 20, 0, 0">
 
-	<!--
-		DOESN'T WORK ON iOS YET
-	-->
-    <ListView x:Name="listView" ItemSelected="OnItemSelected">
+    <ListView x:Name="listView" ItemSelected="OnItemSelected" HasUnevenRows="true">
 	  <ListView.ItemTemplate>
 	    <DataTemplate>
 	      <ViewCell>
-	      	<StackLayout HorizontalOptions="StartAndExpand" Orientation="Vertical">	
-	      		<Label Text="{Binding .}" YAlign="Center" Font="Small" />
+	      	<StackLayout Padding="15, 5, 5, 5" HorizontalOptions="StartAndExpand" Orientation="Vertical">	
+	      		<Label Text="{Binding .}" YAlign="Center" FontSize="Small" />
 	         </StackLayout>
 	      </ViewCell>
 	    </DataTemplate>

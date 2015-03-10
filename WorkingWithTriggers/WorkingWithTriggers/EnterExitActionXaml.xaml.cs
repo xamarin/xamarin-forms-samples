@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace WorkingWithTriggers
 {
-	public partial class RequiredFieldDataTriggerXaml : ContentPage
+	public partial class EnterExitActionXaml : ContentPage
 	{
-		public RequiredFieldDataTriggerXaml ()
+		public EnterExitActionXaml ()
 		{
 			InitializeComponent ();
 		}
