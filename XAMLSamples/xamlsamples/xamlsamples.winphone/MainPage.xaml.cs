@@ -8,12 +8,9 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
-using Xamarin.Forms;
-
-
 namespace XamlSamples.WinPhone
 {
-    public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
+    public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
     {
         public MainPage()
         {
@@ -21,7 +18,7 @@ namespace XamlSamples.WinPhone
             SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new XamlSamples.App()); // new in 1.3
+            LoadApplication(new XamlSamples.App());
         }
     }
 }
