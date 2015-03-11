@@ -24,10 +24,10 @@ namespace EmployeeDirectoryUI.CSharp
 
 			var logo = new Image { Source = FileImageSource.FromFile ("logo.png") };
 
-			var usernameEntry = new Entry { Placeholder = "Username" };
+			var usernameEntry = new Entry { Placeholder = "Username", StyleId = "UserId" };
 			usernameEntry.SetBinding (Entry.TextProperty, "Username");
 
-			var passwordEntry = new Entry { IsPassword = true, Placeholder = "Password" };
+			var passwordEntry = new Entry { IsPassword = true, Placeholder = "Password", StyleId = "PassId" };
 			passwordEntry.SetBinding (Entry.TextProperty, "Password");
 
 			var loginButton = new Button { Text = "Login" };
