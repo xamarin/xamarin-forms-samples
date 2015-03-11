@@ -65,6 +65,15 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.1.4.0.6341\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Auth.Android">
+      <HintPath>..\Components\xamarin.social-1.1.7\lib\android\Xamarin.Auth.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>..\Components\xamarin.social-1.1.7\lib\android\Xamarin.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Social.Android">
+      <HintPath>..\Components\xamarin.social-1.1.7\lib\android\Xamarin.Social.Android.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
