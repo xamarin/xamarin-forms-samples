@@ -50,9 +50,6 @@
   </Target>
   -->
   <ItemGroup>
-    <EmbeddedResource Include="EmailValidationBehaviorXaml.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="NumericValidationXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
