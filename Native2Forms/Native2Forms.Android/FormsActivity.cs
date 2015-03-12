@@ -20,15 +20,14 @@ namespace Native2Forms
 	/// * use SetPage()
 	/// </summary>
 	[Activity (Label = "FormsActivity")]			
-	public class FormsActivity : Xamarin.Forms.Platform.Android.AndroidActivity
+	public class FormsActivity : Xamarin.Forms.Platform.Android.FormsApplicationActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
 			Xamarin.Forms.Forms.Init (this, bundle);
-
-			SetPage (App.GetSecondPage ());
+			LoadApplication (new App ());
 		}
 	}
 }

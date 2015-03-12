@@ -23,7 +23,7 @@ namespace EmployeeDirectoryUI.CSharp
 			favoriteLabel = new Label ();
 
 			favoriteSwitch = new Switch ();
-			favoriteSwitch.SetBinding (Switch.IsToggledProperty, "Path=Person.IsFavorite");
+			favoriteSwitch.SetBinding (Switch.IsToggledProperty, "Person.IsFavorite");
 
 			personName = new Label {
 				XAlign = TextAlignment.Center,

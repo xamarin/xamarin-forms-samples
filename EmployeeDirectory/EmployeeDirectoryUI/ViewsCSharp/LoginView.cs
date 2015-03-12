@@ -82,13 +82,13 @@ namespace EmployeeDirectoryUI.CSharp
 
 				Navigation.PopModalAsync ();
 			} else {
-				DisplayAlert ("Error", loginViewModel.ValidationErrors, "OK", null);
+				DisplayAlert ("Error", loginViewModel.ValidationErrors, "OK");
 			}
 		}
 
 		private void OnHelpClicked (object sender, EventArgs e)
 		{
-			DisplayAlert ("Help", "Enter any username and password", "OK", null);
+			DisplayAlert ("Help", "Enter any username and password", "OK");
 		}
 	}
 }

@@ -24,7 +24,7 @@ namespace EmployeeDirectory.WinPhone
 
             Forms.Init();
 
-			LoadApplication(new EmployeeDirectory.App()); // new in 1.3
+            LoadApplication(new EmployeeDirectoryUI.App()); // new in 1.3
         }
 
         private void CopyInfoIntoWorkingFolder(string fileName)

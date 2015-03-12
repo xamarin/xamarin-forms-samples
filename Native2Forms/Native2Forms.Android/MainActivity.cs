@@ -7,6 +7,7 @@ using Android.Widget;
 using Android.OS;
 using System.IO;
 using Xamarin.Forms.Platform.Android;
+using Native2Forms.Android;
 
 namespace Native2Forms
 {
