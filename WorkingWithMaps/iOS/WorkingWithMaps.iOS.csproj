@@ -97,10 +97,10 @@
       <HintPath>..\packages\Xamarin.Forms.1.4.1.6342-pre1\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Maps">
-      <HintPath>..\packages\Xamarin.Forms.Maps.1.4.0.6341\lib\Xamarin.iOS10\Xamarin.Forms.Maps.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.Maps.1.4.1.6342-pre1\lib\Xamarin.iOS10\Xamarin.Forms.Maps.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Maps.iOS">
-      <HintPath>..\packages\Xamarin.Forms.Maps.1.4.0.6341\lib\Xamarin.iOS10\Xamarin.Forms.Maps.iOS.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.Maps.1.4.1.6342-pre1\lib\Xamarin.iOS10\Xamarin.Forms.Maps.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform.iOS">
       <HintPath>..\packages\Xamarin.Forms.1.4.1.6342-pre1\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
