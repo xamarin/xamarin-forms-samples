@@ -204,6 +204,7 @@ Global
 		{E9CB8FE6-7B7F-4837-BB78-6F9198E66690}.Debug|ARM.ActiveCfg = Debug|Any CPU
 		{E9CB8FE6-7B7F-4837-BB78-6F9198E66690}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{E9CB8FE6-7B7F-4837-BB78-6F9198E66690}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{E9CB8FE6-7B7F-4837-BB78-6F9198E66690}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{E9CB8FE6-7B7F-4837-BB78-6F9198E66690}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{E9CB8FE6-7B7F-4837-BB78-6F9198E66690}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{E9CB8FE6-7B7F-4837-BB78-6F9198E66690}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -215,9 +216,6 @@ Global
 		{E9CB8FE6-7B7F-4837-BB78-6F9198E66690}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{E9CB8FE6-7B7F-4837-BB78-6F9198E66690}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E9CB8FE6-7B7F-4837-BB78-6F9198E66690}.Release|x86.ActiveCfg = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = TabbedPageDemo\TabbedPageDemo.Android\TabbedPageDemo.Android.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

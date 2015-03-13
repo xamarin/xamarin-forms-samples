@@ -82,6 +82,7 @@
     <AndroidResource Include="Resources\Drawable\Icon_72x72.png" />
     <AndroidResource Include="Resources\Drawable\Icon_96x96.png" />
     <AndroidResource Include="Resources\Drawable\Icon_144x144.png" />
+    <AndroidResource Include="Resources\Drawable\monkeyicon.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />

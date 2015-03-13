@@ -12,7 +12,7 @@
 
   <TabbedPage.ItemTemplate>
     <DataTemplate>
-      <ContentPage Title="{Binding Name}">
+      <ContentPage Title="{Binding Name}" Icon="monkeyicon">
         <StackLayout Padding="5, 25">
 
           <!-- Name -->
