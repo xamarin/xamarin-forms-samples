@@ -13,14 +13,15 @@ using Xamarin.Forms;
 
 namespace WorkingWithColors.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+	public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
     {
         public MainPage()
         {
             InitializeComponent();
+			SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
-            Forms.Init();
-            Content = WorkingWithColors.App.GetMainPage().ConvertPageToUIElement(this);
+			global::Xamarin.Forms.Forms.Init();
+			LoadApplication (new WorkingWithColors.App ());
         }
     }
 }
