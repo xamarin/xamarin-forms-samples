@@ -12,29 +12,25 @@ namespace Forms2Native
 	/// </summary>
 	public class MyFirstPage : ContentPage
 	{
-		Button button1, button2;
+		Button button1;
+		Button button2;
+
 		public MyFirstPage ()
 		{
 			Title = "My First Xamarin.Forms";
 
 			var label = new Label {
 				Text = "Hello native rendering...",
-				Font = Font.SystemFontOfSize (20),
+				FontAttributes = FontAttributes.None,
+				FontSize = 20
 			};
 
-			var button1 = new Button { Text = "Click to see a native page" };
+			button1 = new Button { Text = "Click to see a native page" };
+			button1.Clicked += (s, e) => Navigation.PushAsync (new MySecondPage ());
 
-			button1.Clicked += (s, e) => Navigation.PushAsync(new MySecondPage());
+			button2 = new Button { Text = GetNativeTitle() };
+			button2.Clicked += (s, e) => Navigation.PushAsync (new MyThirdPage ());
 
-			if (Device.OS == TargetPlatform.iOS) {
-				button2 = new Button { Text = "Click to see a native UIViewController" };
-			} else if (Device.OS == TargetPlatform.Android) {
-				button2 = new Button { Text = "Click to see an Intent work" };
-			} else {
-                button2 = new Button { Text = "Click to see a Windows Phone Page" };
-            }
-			button2.Clicked += (s, e) => Navigation.PushAsync(new MyThirdPage());
-			
 			Content = new StackLayout {
 				Spacing = 10,
 				VerticalOptions = LayoutOptions.Center,
@@ -44,6 +40,19 @@ namespace Forms2Native
 				}
 			};
 		}
+
+		string GetNativeTitle()
+		{
+			switch (Device.OS) {
+				case TargetPlatform.iOS:
+					return "Click to see a native UIViewController";
+
+				case TargetPlatform.Android:
+					return "Click to see an Intent work";
+
+				default:
+					return "Click to see a Windows Phone Page";
+			}
+		}
 	}
 }
-	
