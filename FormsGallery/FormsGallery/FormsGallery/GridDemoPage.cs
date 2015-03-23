@@ -28,7 +28,8 @@ namespace FormsGallery
             grid.Children.Add(new Label
                 {
                     Text = "Grid",
-                    Font = Font.SystemFontOfSize(50, FontAttributes.Bold),
+					FontSize = 50,
+					FontAttributes = FontAttributes.Bold,
                     HorizontalOptions = LayoutOptions.Center
                 }, 0, 3, 0, 1);
 

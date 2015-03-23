@@ -15,7 +15,8 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "SearchBar",
-                Font = Font.SystemFontOfSize(50, FontAttributes.Bold),
+				FontSize = 50,
+				FontAttributes = FontAttributes.Bold,
                 HorizontalOptions = LayoutOptions.Center
             };
 
