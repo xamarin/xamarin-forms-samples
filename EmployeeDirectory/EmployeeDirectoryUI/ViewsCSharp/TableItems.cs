@@ -26,14 +26,16 @@ namespace EmployeeDirectoryUI.CSharp
 
 			var nameLabel = new Label { 
 				YAlign = TextAlignment.Center,
-				Font = Font.SystemFontOfSize (NamedSize.Medium)
+				FontAttributes = FontAttributes.None,
+				FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
 			};
 
 			nameLabel.SetBinding (Label.TextProperty, "Name");
 
 			var titleLabel = new Label { 
 				YAlign = TextAlignment.Center,
-				Font = Font.SystemFontOfSize (NamedSize.Micro)
+				FontAttributes = FontAttributes.None,
+				FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
 			};
 
 			titleLabel.SetBinding (Label.TextProperty, "Title");
