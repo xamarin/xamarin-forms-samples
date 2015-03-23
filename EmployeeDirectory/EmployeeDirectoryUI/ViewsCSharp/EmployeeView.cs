@@ -27,7 +27,8 @@ namespace EmployeeDirectoryUI.CSharp
 
 			personName = new Label {
 				XAlign = TextAlignment.Center,
-				Font = Font.SystemFontOfSize(NamedSize.Large, FontAttributes.Bold),
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+				FontAttributes = FontAttributes.Bold,
 				IsVisible = Device.OS == TargetPlatform.WinPhone
 			};
 

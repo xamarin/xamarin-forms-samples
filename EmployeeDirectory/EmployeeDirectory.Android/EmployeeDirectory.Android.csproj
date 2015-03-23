@@ -56,9 +56,6 @@
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>..\packages\Xamarin.Android.Support.v4.21.0.3.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Auth.Android">
-      <HintPath>..\Components\xamarin.social-1.1.7\lib\android\Xamarin.Auth.Android.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Forms.Core">
       <HintPath>..\packages\Xamarin.Forms.1.4.1.6342-pre1\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
@@ -67,12 +64,6 @@
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.1.4.1.6342-pre1\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Mobile">
-      <HintPath>..\Components\xamarin.social-1.1.7\lib\android\Xamarin.Mobile.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Social.Android">
-      <HintPath>..\Components\xamarin.social-1.1.7\lib\android\Xamarin.Social.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -60,7 +60,8 @@ namespace EmployeeDirectoryUI.CSharp
 		{
 			var propertyNameLabel = new Label { 
 				YAlign = TextAlignment.Center,
-				Font = Font.BoldSystemFontOfSize (NamedSize.Medium)
+				FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+				FontAttributes = FontAttributes.None,
 			};
 
 			propertyNameLabel.SetBinding (Label.TextProperty, "Name");
