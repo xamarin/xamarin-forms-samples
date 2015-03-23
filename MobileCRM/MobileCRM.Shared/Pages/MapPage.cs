@@ -105,17 +105,16 @@ namespace MobileCRM.Shared.Pages
         public Map MakeMap()
         {
 
-            var pins = ViewModel.LoadPins();
+            List<Pin> pins = ViewModel.LoadPins();
 
             // TODO: Uncomment once Xamarin.Forms supports this, hopefully w/ version 1.1.
             //var dict = pins.Zip(ViewModel.Models, (p, m)=>new KeyValuePair<Pin,T>(p, m)).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
             //PinMap = dict;
 
-            // TODO: Compute a proper bounding box.
-            var map = new Map(MapSpan.FromCenterAndRadius(pins[0].Position, Distance.FromMiles(0.3)))
-            {
-                IsShowingUser = true
-            };
+			Map map = pins.Count == 0
+				? new Map ()
+				: new Map (MapSpan.FromCenterAndRadius (pins [0].Position, Distance.FromMiles (0.3)));
+			map.IsShowingUser = true;
 
             foreach (var p in pins)
             {
