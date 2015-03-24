@@ -51,6 +51,10 @@
     <Compile Include="Uneven\UnevenRowsXaml.xaml.cs">
       <DependentUpon>UnevenRowsXaml.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HeaderFooter\HeaderFooterXaml.xaml.cs">
+      <DependentUpon>HeaderFooterXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HeaderFooter\HeaderFooterPage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -66,6 +70,9 @@
     <EmbeddedResource Include="Uneven\UnevenRowsXaml.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="HeaderFooter\HeaderFooterXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -75,6 +82,7 @@
     <Folder Include="Context\" />
     <Folder Include="Custom\" />
     <Folder Include="Uneven\" />
+    <Folder Include="HeaderFooter\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

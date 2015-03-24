@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="WorkingWithListview.HeaderFooterXaml"
+			 Padding="0,20,0,0">
+<!--
+<ListView x:Name="listView"
+	Header="Textonly header"
+	Footer="Textonly footer">
+-->
+
+<ListView x:Name="listView">
+   <ListView.Header>
+   	<StackLayout Padding="10,5,0,5" BackgroundColor="#cccccc" Orientation="Horizontal">
+		<Label Text="Header" />
+		<Label Text="Subhead" FontSize="Small"/>
+		<Label Text="!!" />
+  	</StackLayout>
+  </ListView.Header>
+  <ListView.Footer>	
+  		<Label Text="Footer" />
+  </ListView.Footer>
+  <ListView.ItemTemplate>
+    <DataTemplate>
+      <TextCell Text="{Binding Name}" Detail="{Binding Description}"></TextCell>
+    </DataTemplate>
+  </ListView.ItemTemplate>
+</ListView>
+
+</ContentPage>
