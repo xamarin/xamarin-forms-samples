@@ -232,7 +232,7 @@ namespace SQLite
 		/// Used to list some code that we want the MonoTouch linker
 		/// to see, but that we never want to actually execute.
 		/// </summary>
-		static bool _preserveDuringLinkMagic;
+		static bool _preserveDuringLinkMagic = false;
 		#endif
 
 		#if !USE_SQLITEPCL_RAW

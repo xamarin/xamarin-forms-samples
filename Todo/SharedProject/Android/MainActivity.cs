@@ -13,7 +13,7 @@ using Xamarin.Forms.Platform.Android;
 namespace Todo.Android
 {
 	[Activity (Label = "Todo.Android.Android", MainLauncher = true)]
-	public class MainActivity : AndroidActivity
+	public class MainActivity : FormsApplicationActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -21,7 +21,7 @@ namespace Todo.Android
 
 			Xamarin.Forms.Forms.Init (this, bundle);
 
-			SetPage (App.GetMainPage ());
+			LoadApplication (new App ());
 		}
 	}
 }
