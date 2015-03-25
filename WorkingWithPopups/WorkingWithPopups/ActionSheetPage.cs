@@ -8,7 +8,10 @@ namespace WorkingWithPopups
 	{
 		public ActionSheetPage ()
 		{
-			var label = new Label {Text="DisplayActionSheet", Font=Font.SystemFontOfSize(NamedSize.Large) };
+			var label = new Label {
+				Text = "DisplayActionSheet",
+				FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label))
+			};
 
 			var actionButton1 = new Button { Text = "ActionSheet Simple" };
 			actionButton1.Clicked += async (sender, e) => {
