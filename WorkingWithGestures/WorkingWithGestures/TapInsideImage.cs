@@ -29,7 +29,7 @@ namespace WorkingWithGestures
 			label = new Label
 			{
 				Text = "tap the photo!",
-				Font = Font.SystemFontOfSize(NamedSize.Large),
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
 				HorizontalOptions = LayoutOptions.Center,
 				VerticalOptions = LayoutOptions.CenterAndExpand
 			};
