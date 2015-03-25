@@ -13,7 +13,7 @@ namespace ScaleAndRotate
             Label label = new Label
             {
                 Text = "ROTATIONY",
-                Font = Font.SystemFontOfSize(50),
+				FontSize = 50,
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
