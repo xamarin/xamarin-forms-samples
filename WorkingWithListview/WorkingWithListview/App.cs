@@ -23,7 +23,7 @@ namespace WorkingWithListview
 			tabsCs.Children.Add (new CustomCellPage {Title="Button", Icon = "csharp.png" });
 			tabsCs.Children.Add (new HeaderFooterPage {Title="HeadFoot", Icon = "csharp.png" });
 
-			MainPage = tabsCs;
+			//MainPage = tabsCs;
 
 
 			// USE XAML - uncomment above or below MainPage line below to use the XAML or C# versions
@@ -35,7 +35,7 @@ namespace WorkingWithListview
 			tabsXaml.Children.Add (new CustomCellXaml {Title="ButtonX", Icon = "xaml.png" });
 			tabsXaml.Children.Add (new HeaderFooterXaml {Title="HeadFootX", Icon = "xaml.png" });
 
-			//MainPage = tabsXaml;
+			MainPage = tabsXaml;
 
 		}
 	}
