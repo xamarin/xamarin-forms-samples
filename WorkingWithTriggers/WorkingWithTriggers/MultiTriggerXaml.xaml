@@ -20,15 +20,15 @@
 	<!-- the Entry x:Name are referenced below in the MultiTrigger -->
 	<!-- tip: make sure to set the Text="" (or some other default) -->
 
-	<Entry x:Name="email"
+	<Entry
 		Text=""
 		Placeholder="email" />
 
-    <Entry x:Name="phone"
+    <Entry
 		Text=""
 		Placeholder="phone" />
 
-		<Button x:Name="button" Text="Save"
+		<Button Text="Save"
 		        FontSize="Large"
 		        HorizontalOptions="Center">
 		    <Button.Triggers>
@@ -59,15 +59,13 @@
 	<!-- the Entry x:Name are referenced below in the MultiTrigger -->
 	<!-- tip: make sure to set the Text="" (or some other default) -->
 
-	<Entry x:Name="user"
-		Text=""
+	<Entry Text=""
 		Placeholder="user name" />
 
-    <Entry x:Name="pwd"
-		Text=""
+    <Entry Text=""
 		Placeholder="password" />
 
-		<Button x:Name="loginButton" Text="Login"
+		<Button Text="Login"
 		        FontSize="Large"
 		        HorizontalOptions="Center"
 		        IsEnabled="false">
