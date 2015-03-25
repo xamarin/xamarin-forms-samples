@@ -14,10 +14,17 @@ namespace WorkingWithListview
 	{
 		public CustomCell ()
 		{
-			var label1 = new Label { Text = "Label 1", Font = Font.SystemFontOfSize(NamedSize.Small, FontAttributes.Bold) };
+			var label1 = new Label {
+				Text = "Label 1",
+				FontSize = Device.GetNamedSize (NamedSize.Small, typeof(Label)),
+				FontAttributes = FontAttributes.Bold
+			};
 			label1.SetBinding(Label.TextProperty, new Binding("."));
 
-			var label2 = new Label { Text = "Label 2", Font = Font.SystemFontOfSize(NamedSize.Small) };
+			var label2 = new Label {
+				Text = "Label 2",
+				FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label))
+			};
 
 			var button = new ListButton { 
 				Text = "X",
