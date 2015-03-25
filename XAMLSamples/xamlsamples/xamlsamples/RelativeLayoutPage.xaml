@@ -48,7 +48,7 @@
                                         Constant=-40}" />
     
     <!-- Centered and 1/3 width and height of parent -->
-    <BoxView x:Name="oneThird" 
+    <BoxView
              Color="Red"
              RelativeLayout.XConstraint=
                  "{ConstraintExpression Type=RelativeToParent,
