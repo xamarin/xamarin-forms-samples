@@ -13,7 +13,8 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "Button",
-                Font = Font.SystemFontOfSize(50, FontAttributes.Bold),
+				FontSize = 50,
+				FontAttributes = FontAttributes.Bold,
                 HorizontalOptions = LayoutOptions.Center
             };
 
@@ -30,7 +31,7 @@ namespace FormsGallery
             label = new Label
             {
                 Text = "0 button clicks",
-                Font = Font.SystemFontOfSize(NamedSize.Large),
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };

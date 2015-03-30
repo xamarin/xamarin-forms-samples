@@ -23,7 +23,10 @@ namespace LabelledSections
 						}
                 },
 
-                GroupDisplayBinding = new Binding("Title"),
+				GroupDisplayBinding = new Binding("LongTitle"),
+				GroupShortNameBinding = new Binding("Title"),
+				Header = "HEADER",
+				Footer = "FOOTER",
                 IsGroupingEnabled = true,
                 ItemsSource = SetupList(),
             };

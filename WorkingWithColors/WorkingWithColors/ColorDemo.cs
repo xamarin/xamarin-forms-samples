@@ -25,7 +25,11 @@ namespace WorkingWithColors
 			Content = new StackLayout {
 				Padding = new Thickness (0, 20, 0, 0),
 				Children = {
-					new Label {Text = "Color Demo", Font = Font.BoldSystemFontOfSize(NamedSize.Medium)},
+					new Label {
+						Text = "Color Demo",
+						FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+						FontAttributes = FontAttributes.Bold
+					},
 					red, orange, yellow, green, blue, indigo, violet,
 					space,
 					transparent, @default, accent

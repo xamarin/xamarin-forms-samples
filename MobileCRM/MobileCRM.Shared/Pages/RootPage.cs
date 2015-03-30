@@ -47,11 +47,11 @@ namespace MobileCRM.Shared.Pages
 #if WINDOWS_PHONE
             Detail = new ContentPage();//work around to clear current page.
 #endif
-            Detail = new NavigationPage(displayPage)
-            {
-              Tint = Helpers.Color.Blue.ToFormsColor(),
-            };
-
+			var color = Helpers.Color.Blue.ToFormsColor ();
+			Detail = new NavigationPage (displayPage) {
+				BarBackgroundColor = color,
+				BarTextColor = color
+			};
 
             IsPresented = false;
         }
@@ -76,7 +76,7 @@ namespace MobileCRM.Shared.Pages
                 cell.SetBinding(TextCell.DetailProperty, new Binding("EstimatedAmount", stringFormat: "{0:C}"));
                 return page;
             }
-            throw new NotImplementedException("Unknown menu option: " + option.Title);
+			throw new NotImplementedException (string.Format ("Unknown menu option: {0}", option.Title));
         }
     }
 }

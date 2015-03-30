@@ -27,12 +27,14 @@ namespace WorkingWithFiles
 
 
 			Content = new StackLayout {
-				Padding = new Thickness (0,20,0,0),
+				Padding = new Thickness (0, 20, 0, 0),
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				Children = {
 					new Label { Text = "Embedded Resource XML File (PCL)", 
-						Font = Font.BoldSystemFontOfSize(NamedSize.Medium) }
-					, listView}
+						FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
+						FontAttributes = FontAttributes.Bold
+					}, listView
+				}
 			};
 
 			// NOTE: use for debugging, not in released app code!

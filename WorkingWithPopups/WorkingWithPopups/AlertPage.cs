@@ -8,7 +8,10 @@ namespace WorkingWithPopups
 	{
 		public AlertPage ()
 		{
-			var label = new Label {Text="DisplayAlert", Font=Font.SystemFontOfSize(NamedSize.Large) };
+			var label = new Label {
+				Text="DisplayAlert",
+				FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label))
+			};
 
 			var alertButton1 = new Button { Text = "Alert Simple" };
 			alertButton1.Clicked += async (sender, e) => {

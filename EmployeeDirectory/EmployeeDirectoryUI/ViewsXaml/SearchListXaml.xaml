@@ -7,7 +7,7 @@
     <ContentPage.Content>
 	    <StackLayout>
 
-		    <Entry x:Name="SearchEntry" Placeholder="search for" 
+		    <Entry Placeholder="search for"
 				    Text="{Binding Path=SearchText}" 
 				    TextChanged="OnValueChanged" />
 

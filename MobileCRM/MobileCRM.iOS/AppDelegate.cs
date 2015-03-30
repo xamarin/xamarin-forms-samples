@@ -14,12 +14,8 @@ namespace MobileCRM.iOS
     [Register ("AppDelegate")]
     public partial class AppDelegate : FormsApplicationDelegate
     {
-        UIWindow window;
-
         public override bool FinishedLaunching (UIApplication app, NSDictionary options)
         {
-            window = new UIWindow (UIScreen.MainScreen.Bounds);
-            
             MobileCRMApp.Init(typeof(MobileCRMApp).Assembly);
             Forms.Init();
             FormsMaps.Init();

@@ -12,7 +12,8 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "Stepper",
-                Font = Font.SystemFontOfSize(50, FontAttributes.Bold),
+				FontSize = 50,
+				FontAttributes = FontAttributes.Bold,
                 HorizontalOptions = LayoutOptions.Center
             };
 
@@ -29,7 +30,7 @@ namespace FormsGallery
             label = new Label
             {
                 Text = "Stepper value is 0",
-                Font = Font.SystemFontOfSize(NamedSize.Large),
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };

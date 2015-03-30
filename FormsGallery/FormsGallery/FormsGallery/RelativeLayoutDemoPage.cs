@@ -10,7 +10,8 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "RelativeLayout",
-                Font = Font.SystemFontOfSize(40, FontAttributes.Bold),
+				FontSize = 40,
+				FontAttributes = FontAttributes.Bold,
                 XAlign = TextAlignment.Center
             };
 
@@ -22,7 +23,7 @@ namespace FormsGallery
             {
                 Text = "Not visible",
                 Opacity = 0,
-                Font = Font.SystemFontOfSize(NamedSize.Large)
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
             relativeLayout.Children.Add(referenceLabel,
                 Constraint.Constant(0),
@@ -35,7 +36,7 @@ namespace FormsGallery
             Label centerLabel = new Label
             {
                 Text = "Center",
-                Font = Font.SystemFontOfSize(NamedSize.Large)
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
             relativeLayout.Children.Add(centerLabel, 
                 Constraint.Constant(0),
@@ -48,7 +49,7 @@ namespace FormsGallery
             Label aboveLabel = new Label
             {
                 Text = "Above",
-                Font = Font.SystemFontOfSize(NamedSize.Large)
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
             relativeLayout.Children.Add(aboveLabel,
                 Constraint.RelativeToView(centerLabel, (parent, sibling) =>
@@ -64,7 +65,7 @@ namespace FormsGallery
             Label belowLabel = new Label
             {
                 Text = "Below",
-                Font = Font.SystemFontOfSize(NamedSize.Large)
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
             relativeLayout.Children.Add(belowLabel,
                 Constraint.RelativeToView(centerLabel, (parent, sibling) =>
@@ -80,7 +81,7 @@ namespace FormsGallery
             Label furtherAboveLabel = new Label
             {
                 Text = "Further Above",
-                Font = Font.SystemFontOfSize(NamedSize.Large)
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
             relativeLayout.Children.Add(furtherAboveLabel,
                 Constraint.RelativeToView(aboveLabel, (parent, sibling) =>
@@ -96,7 +97,7 @@ namespace FormsGallery
             Label furtherBelowLabel = new Label 
             {
                 Text = "Further Below",
-                Font = Font.SystemFontOfSize(NamedSize.Large)
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
             relativeLayout.Children.Add(furtherBelowLabel,
                 Constraint.RelativeToView(belowLabel, (parent, sibling) =>

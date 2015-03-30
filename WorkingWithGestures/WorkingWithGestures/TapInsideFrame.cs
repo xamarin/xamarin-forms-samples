@@ -20,7 +20,7 @@ namespace WorkingWithGestures
 				Content = new Label
 				{
 					Text = "Tap Inside Frame",
-					Font = Font.SystemFontOfSize(NamedSize.Large)
+					FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label))
 				}
 			};
 
@@ -35,7 +35,7 @@ namespace WorkingWithGestures
 		 	label = new Label
 			{
 				Text = " ",
-				Font = Font.SystemFontOfSize(NamedSize.Large),
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
 				HorizontalOptions = LayoutOptions.Center,
 				VerticalOptions = LayoutOptions.CenterAndExpand
 			};

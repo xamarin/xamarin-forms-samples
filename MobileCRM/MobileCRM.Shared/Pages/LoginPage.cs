@@ -19,7 +19,7 @@ namespace MobileCRM.Shared.Pages
             var label = new Label
             {
                 Text = "Connect with Your Data",
-                Font = Font.BoldSystemFontOfSize(NamedSize.Large),
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
                 TextColor = Color.White,
                 VerticalOptions = LayoutOptions.CenterAndExpand,
                 XAlign = TextAlignment.Center, // Center the text in the blue box.

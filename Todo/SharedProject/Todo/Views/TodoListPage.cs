@@ -31,10 +31,6 @@ namespace Todo
 //				new TodoItem {Name = "Buy bananas`", Done=true}
 //			};
 
-			// HACK: workaround issue #894 for now
-			if (Device.OS == TargetPlatform.iOS)
-				listView.ItemsSource = new string [1] {""};
-
 			listView.ItemSelected += (sender, e) => {
 				var todoItem = (TodoItem)e.SelectedItem;
 				var todoPage = new TodoItemPage();
@@ -44,7 +40,11 @@ namespace Todo
 
 			var layout = new StackLayout();
 			if (Device.OS == TargetPlatform.WinPhone) { // WinPhone doesn't have the title showing
-				layout.Children.Add(new Label{Text="Todo", Font=Font.BoldSystemFontOfSize(NamedSize.Large)});
+				layout.Children.Add (new Label {
+					Text = "Todo",
+					FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+					FontAttributes = FontAttributes.Bold
+				});
 			}
 			layout.Children.Add(listView);
 			layout.VerticalOptions = LayoutOptions.FillAndExpand;

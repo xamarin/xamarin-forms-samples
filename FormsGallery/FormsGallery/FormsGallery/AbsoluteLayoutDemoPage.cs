@@ -14,7 +14,8 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "AbsoluteLayout",
-                Font = Font.SystemFontOfSize(40, FontAttributes.Bold),
+				FontSize = 40,
+				FontAttributes = FontAttributes.Bold,
                 HorizontalOptions = LayoutOptions.Center
             };
 

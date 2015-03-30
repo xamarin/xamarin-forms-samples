@@ -18,7 +18,6 @@ namespace Native2Forms
 	public class Activity1 : FormsApplicationActivity
 	{
 		Button button;
-		TextView label;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -26,7 +25,6 @@ namespace Native2Forms
 
 			SetContentView(Resource.Layout.Main);
 
-			label = FindViewById<TextView> (Resource.Id.label);
 			button = FindViewById<Button> (Resource.Id.button);
 
 			button.Click += (sender, e) => {

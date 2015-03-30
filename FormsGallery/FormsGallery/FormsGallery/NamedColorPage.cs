@@ -33,11 +33,10 @@ namespace FormsGallery
             // Function to create six Labels.
             Func<string, string, Label> CreateLabel = (string source, string fmt) =>
             {
-                Label label = new Label
-                    {
-                        Font = Font.SystemFontOfSize(NamedSize.Large),
-                        XAlign = TextAlignment.End
-                    };
+                Label label = new Label {
+					FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+					XAlign = TextAlignment.End
+				};
                 label.SetBinding(Label.TextProperty,
                     new Binding(source, BindingMode.OneWay, null, null, fmt));
 
@@ -80,7 +79,7 @@ namespace FormsGallery
             {
                 Label bigLabel = new Label
                 {
-                    Font = Font.SystemFontOfSize(50),
+					FontSize = 50,
                     HorizontalOptions = LayoutOptions.Center
                 };
                 bigLabel.SetBinding(Label.TextProperty, "Name");

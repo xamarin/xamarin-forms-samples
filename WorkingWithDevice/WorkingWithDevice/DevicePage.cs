@@ -15,7 +15,7 @@ namespace WorkingWithPlatformSpecifics
 
 			var heading = new Label { 
 				Text = "Heading", 
-				Font = Font.SystemFontOfSize (NamedSize.Large)
+				FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label))
 			};
 
 			switch (Device.Idiom)

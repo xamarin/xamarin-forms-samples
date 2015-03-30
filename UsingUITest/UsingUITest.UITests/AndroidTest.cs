@@ -19,7 +19,7 @@ namespace UsingUITest.UITests
 		public string PathToAPK { get; set; }
 		 
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void TestFixtureSetup()
 		{
 			string currentFile = new Uri(Assembly.GetExecutingAssembly().CodeBase).LocalPath;

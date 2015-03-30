@@ -45,15 +45,19 @@ namespace WorkingWithFiles
 			};
 
 			Content = new StackLayout {
-				Padding = new Thickness (0,20,0,0),
+				Padding = new Thickness (0, 20, 0, 0),
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				Children = {
-					new Label { Text = "Save and Load Text (PCL)", Font = Font.BoldSystemFontOfSize(NamedSize.Medium)},
+					new Label {
+						Text = "Save and Load Text (PCL)",
+						FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
+						FontAttributes = FontAttributes.Bold
+					},
 					new Label { Text = "Type below and press Save, then Load" },
 					input,
 					buttonLayout,
 					output
-				} 
+				}
 			};
 		}
 	}

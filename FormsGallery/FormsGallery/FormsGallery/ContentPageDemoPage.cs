@@ -10,14 +10,15 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "ContentPage",
-                Font = Font.SystemFontOfSize(40, FontAttributes.Bold),
+				FontSize = 40,
+				FontAttributes = FontAttributes.Bold,
                 HorizontalOptions = LayoutOptions.Center
             };
 
             Label label1 = new Label
             {
                 Text = "ContentPage is the simplest type of page.",
-                Font = Font.SystemFontOfSize(NamedSize.Large)
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
 
             Label label2 = new Label
@@ -25,7 +26,7 @@ namespace FormsGallery
                 Text = "The content of a ContentPage is generally a " +
                        "layout of some sort that can then be a parent " +
                        "to multiple children.",
-                Font = Font.SystemFontOfSize(NamedSize.Large)
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
 
             Label label3 = new Label
@@ -33,7 +34,7 @@ namespace FormsGallery
                 Text = "This ContentPage contains a StackLayout, which " +
                        "in turn contains four Label views (including the " +
                        "large one at the top)",
-                Font = Font.SystemFontOfSize(NamedSize.Large)
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
 
             // Build the page.

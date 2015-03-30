@@ -16,8 +16,6 @@ namespace Forms2Native
 	[Register ("AppDelegate")]
 	public partial class AppDelegate : FormsApplicationDelegate
 	{
-		// class-level declarations
-		UIWindow window;
 		//
 		// This method is invoked when the application has loaded and is ready to run. In this
 		// method you should instantiate the window, load the UI into it and then make the window
@@ -28,11 +26,7 @@ namespace Forms2Native
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			Forms.Init ();
-			// create a new window instance based on the screen size
-			window = new UIWindow (UIScreen.MainScreen.Bounds);
-
 			LoadApplication (new App ());
-
 			return base.FinishedLaunching (app, options);
 		}
 	}

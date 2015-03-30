@@ -12,24 +12,24 @@ namespace WorkingWithListview
 	{
 		public ContextActionsCell ()
 		{
-			var label1 = new Label { Text = "Label 1", Font = Font.SystemFontOfSize(NamedSize.Small), FontAttributes = FontAttributes.Bold };
+			var label1 = new Label { Text = "Label 1", FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label)), FontAttributes = FontAttributes.Bold };
 			label1.SetBinding(Label.TextProperty, new Binding("."));
 			var hint = Device.OnPlatform ("Tip: swipe left for context action", "Tip: long press for context action", "Tip: long press for context action");
-			var label2 = new Label { Text = hint, Font = Font.SystemFontOfSize(NamedSize.Micro) };
+			var label2 = new Label { Text = hint, FontSize=Device.GetNamedSize(NamedSize.Micro, typeof(Label)) };
 
 			//
 			// define context actions
 			//
 			var moreAction = new MenuItem { Text = "More" };
 			moreAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
-			moreAction.Clicked += async (sender, e) => {
+			moreAction.Clicked += (sender, e) => {
 				var mi = ((MenuItem)sender);
 				Debug.WriteLine("More Context Action clicked: " + mi.CommandParameter);
 			};
 
 			var deleteAction = new MenuItem { Text = "Delete", IsDestructive = true }; // red background
 			deleteAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
-			deleteAction.Clicked += async (sender, e) => {
+			deleteAction.Clicked += (sender, e) => {
 				var mi = ((MenuItem)sender);
 				Debug.WriteLine("Delete Context Action clicked: " + mi.CommandParameter);
 			};

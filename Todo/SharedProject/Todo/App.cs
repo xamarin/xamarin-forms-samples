@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace Todo
 {
-	public class App
+	public class App : Application
 	{
 		public static Page GetMainPage ()
 		{

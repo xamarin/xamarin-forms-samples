@@ -15,9 +15,6 @@ namespace Forms2Native
 	/// </summary>
 	public class MySecondPageRenderer : PageRenderer
 	{
-		UILabel label;
-		String heading;
-
 		protected override void OnElementChanged (VisualElementChangedEventArgs e)
 		{
 			base.OnElementChanged (e);
@@ -25,10 +22,9 @@ namespace Forms2Native
 			var page = e.NewElement as MySecondPage;
 			var view = NativeView;
 
-			var viewController = ViewController;
-
-			var label = new UILabel (new CGRect(0, 40, 320, 40));
-			label.Text = "2 " + page.Heading;
+			var label = new UILabel (new CGRect (0, 40, 320, 40)) {
+				Text = string.Format ("2 {0}", page.Heading)
+			};
 
 			view.Add (label);
 		}

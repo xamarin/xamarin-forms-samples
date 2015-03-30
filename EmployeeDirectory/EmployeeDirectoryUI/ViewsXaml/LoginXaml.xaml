@@ -13,8 +13,8 @@
 			        	<Entry StyleId="UserId" Text="{Binding Path=Username}" Placeholder="Username" />
 			        	<Entry StyleId="PasswordId" Text="{Binding Path=Password}" Placeholder="Password" IsPassword="true" />
 			        	<Grid HorizontalOptions="Center">
-			        		<Button x:Name="loginButtoniOS" Text="Login" Grid.Row="0" Grid.Column="0"/>
-			        		<Button x:Name="helpButtoniOS" Text="Help" Grid.Row="0" Grid.Column="1" />
+			        		<Button Text="Login" Grid.Row="0" Grid.Column="0"/>
+			        		<Button Text="Help" Grid.Row="0" Grid.Column="1" />
 			        	</Grid>
 		        	</StackLayout>
 				</OnPlatform.iOS>
@@ -23,11 +23,11 @@
 		        	<StackLayout VerticalOptions="Center" Padding="30">
 		        		<Grid HorizontalOptions="Center">
 			        		<Image Source="logo" Grid.Row="0" Grid.Column="0" />
-			        		<Button x:Name="helpButtonAndroid" Text="Help" Grid.Row="0" Grid.Column="1" />
+			        		<Button Text="Help" Grid.Row="0" Grid.Column="1" />
 			        	</Grid>
 			        	<Entry StyleId="UserId" Text="{Binding Path=Username}" Placeholder="Username" />
 			        	<Entry StyleId="PasswordId" Text="{Binding Path=Password}" Placeholder="Password" IsPassword="true" />
-			        	<Button x:Name="loginButtonAndroid" Text="Login" />
+			        	<Button Text="Login" />
 		        	</StackLayout>
 				</OnPlatform.Android>
 
@@ -35,11 +35,11 @@
 					  <StackLayout VerticalOptions="Center" Padding="30">
                 <Grid HorizontalOptions="Center">
 			        		<Image Source="logo.png" Grid.Row="0" Grid.Column="0" />
-			        		<Button x:Name="helpButtonWinPhone" Text="Help" Grid.Row="0" Grid.Column="1" />
+			        		<Button Text="Help" Grid.Row="0" Grid.Column="1" />
 			        	</Grid>
 			        	<Entry StyleId="UserId" Text="{Binding Path=Username}" Placeholder="Username" />
 			        	<Entry StyleId="PassId" Text="{Binding Path=Password}" Placeholder="Password" IsPassword="true" />
-			        	<Button x:Name="loginButtonWinPhone" Text="Login" />
+			        	<Button Text="Login" />
 		       </StackLayout>
 				</OnPlatform.WinPhone>
 			</OnPlatform>
