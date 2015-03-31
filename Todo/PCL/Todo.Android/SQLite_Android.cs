@@ -1,12 +1,12 @@
 ﻿using System;
 using Todo;
 using Xamarin.Forms;
-using Todo.iOS;
+using Todo.Droid;
 using System.IO;
 
 [assembly: Dependency (typeof (SQLite_Android))]
 
-namespace Todo.iOS
+namespace Todo.Droid
 {
 	public class SQLite_Android : ISQLite
 	{
