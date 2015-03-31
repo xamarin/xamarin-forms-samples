@@ -22,8 +22,8 @@ namespace Todo
 			listView.ItemTemplate = new DataTemplate (typeof (TodoItemCell));
 
 			// These commented-out lines were used to test the ListView prior to integrating the database
-//			listView.ItemSource = new string [] { "Buy pears", "Buy oranges", "Buy mangos", "Buy apples", "Buy bananas" };
-//			listView.ItemSource = new TodoItem [] { 
+//			listView.ItemsSource = new string [] { "Buy pears", "Buy oranges", "Buy mangos", "Buy apples", "Buy bananas" };
+//			listView.ItemsSource = new TodoItem [] { 
 //				new TodoItem {Name = "Buy pears`"}, 
 //				new TodoItem {Name = "Buy oranges`", Done=true},
 //				new TodoItem {Name = "Buy mangos`"}, 
