@@ -33,8 +33,6 @@ namespace MobileCRM.Shared.Pages
         {
             get { return BindingContext as MapViewModel<T>; }
         }
-        // TODO: Uncomment once Xamarin.Forms supports this, hopefully w/ version 1.1.
-        //IDictionary<Pin,T> PinMap;
 
         public MapPage(MapViewModel<T> viewModel)
         {
@@ -107,28 +105,13 @@ namespace MobileCRM.Shared.Pages
 
             List<Pin> pins = ViewModel.LoadPins();
 
-            // TODO: Uncomment once Xamarin.Forms supports this, hopefully w/ version 1.1.
-            //var dict = pins.Zip(ViewModel.Models, (p, m)=>new KeyValuePair<Pin,T>(p, m)).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-            //PinMap = dict;
-
 			Map map = pins.Count == 0
 				? new Map ()
 				: new Map (MapSpan.FromCenterAndRadius (pins [0].Position, Distance.FromMiles (0.3)));
 			map.IsShowingUser = true;
 
             foreach (var p in pins)
-            {
-                map.Pins.Add(p);
-            }
-
-            // TODO: Uncomment once Xamarin.Forms supports this, hopefully w/ version 1.1.
-//            map.PinSelected += (sender, args)=>
-//            {
-//                var pin = args.SelectedItem as Pin;
-//                var details = PinMap[pin];
-//                var page = new DetailPage<T>(details);
-//                Navigation.PushAsync(page);
-//            };
+				map.Pins.Add(p);
 
             return map;
         }
