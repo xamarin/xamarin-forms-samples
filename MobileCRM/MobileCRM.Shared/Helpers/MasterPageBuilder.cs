@@ -1,6 +1,7 @@
 ﻿using System;
 using MobileCRM.Shared.Pages;
 using MobileCRM.Models;
+using Xamarin.Forms;
 
 namespace MobileCRM
 {
