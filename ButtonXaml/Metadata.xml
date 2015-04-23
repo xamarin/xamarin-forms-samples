@@ -7,5 +7,5 @@
 	<SupportedPlatforms>Android, iOS, windows-rt</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
-	<Brief>This program demonstrates how to create a Button in XAML and process events from it in the code-behind file.</Brief>
+	<Brief>Demonstrates how to create a Button in XAML and process its events in a code-behind file.</Brief>
 </SampleMetadata>
