@@ -15,7 +15,7 @@ namespace Todo.Droid
 		}
 
 		#region ISQLite implementation
-		public SQLite.Net.SQLiteConnection GetConnection ()
+		public SQLite.SQLiteConnection GetConnection ()
 		{
 			var sqliteFilename = "TodoSQLite.db3";
 			string documentsPath = System.Environment.GetFolderPath (System.Environment.SpecialFolder.Personal); // Documents folder
@@ -33,8 +33,7 @@ namespace Todo.Droid
 				ReadWriteStream(s, writeStream);
 			}
 
-			var plat = new SQLite.Net.Platform.XamarinAndroid.SQLitePlatformAndroid();
-			var conn = new SQLite.Net.SQLiteConnection(plat, path);
+			var conn = new SQLite.SQLiteConnection(path);
 
 			// Return the database connection 
 			return conn;
