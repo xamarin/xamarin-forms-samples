@@ -1,7 +1,7 @@
-﻿using Android.Speech.Tts;
-using Xamarin.Forms;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Android.Speech.Tts;
 using Java.Lang;
+using Xamarin.Forms;
 using Todo;
 
 [assembly: Dependency (typeof (TextToSpeech_Android))]
@@ -12,6 +12,7 @@ namespace Todo
 	{
 		TextToSpeech speaker;
 		string toSpeak;
+
 		public TextToSpeech_Android ()
 		{
 		}
@@ -20,15 +21,14 @@ namespace Todo
 		{
 			var c = Forms.Context; 
 			toSpeak = text;
-			if (speaker == null)
+
+			if (speaker == null) {
 				speaker = new TextToSpeech (c, this);
-			else
-			{
+			} else {
 				var p = new Dictionary<string,string> ();
 				speaker.Speak (toSpeak, QueueMode.Flush, p);
 			}
         }
-
 
 		#region IOnInitListener implementation
 		public void OnInit (OperationResult status)
@@ -37,9 +37,9 @@ namespace Todo
 				System.Diagnostics.Debug.WriteLine ("spoke");
 				var p = new Dictionary<string,string> ();
 				speaker.Speak (toSpeak, QueueMode.Flush, p);
-			}
-			else
+			} else {
 				System.Diagnostics.Debug.WriteLine ("was quiet");
+			}
 		}
 		#endregion
 	}

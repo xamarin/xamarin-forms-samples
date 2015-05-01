@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using SQLite;
-using System.IO;
 
 namespace Todo
 {
