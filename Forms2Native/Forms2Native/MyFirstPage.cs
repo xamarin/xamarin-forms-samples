@@ -29,7 +29,7 @@ namespace Forms2Native
 			button1.Clicked += (s, e) => Navigation.PushAsync (new MySecondPage ());
 
 			button2 = new Button { Text = GetNativeTitle() };
-			button2.Clicked += (s, e) => Navigation.PushAsync (new MyThirdPage ());
+			button2.Clicked += (s, e) => MessagingCenter.Send(this, App.NativeNavigationMessage, new NativeNavigationArgs(new MyThirdPage()));
 
 			Content = new StackLayout {
 				Spacing = 10,

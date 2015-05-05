@@ -67,7 +67,6 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MySecondPageRenderer.cs" />
-    <Compile Include="MyThirdPageRenderer.cs" />
     <Compile Include="MyThirdActivity.cs" />
   </ItemGroup>
   <ItemGroup>

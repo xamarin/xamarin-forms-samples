@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Foundation;
 using UIKit;
 using Forms2Native;
 using Xamarin.Forms;
-using System.IO;
 using Xamarin.Forms.Platform.iOS;
 
 namespace Forms2Native
@@ -27,7 +23,18 @@ namespace Forms2Native
 		{
 			Forms.Init ();
 			LoadApplication (new App ());
+
+			MessagingCenter.Subscribe<MyFirstPage, NativeNavigationArgs>(
+				this,
+				App.NativeNavigationMessage,
+				HandleNativeNavigationMessage);
+			
 			return base.FinishedLaunching (app, options);
+		}
+
+		private void HandleNativeNavigationMessage(MyFirstPage sender, NativeNavigationArgs args)
+		{
+			sender.Navigation.PushAsync(args.Page);
 		}
 	}
 }
