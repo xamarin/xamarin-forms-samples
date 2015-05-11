@@ -28,6 +28,8 @@ namespace EmployeeDirectory.Android
 		{
 			global::PCLStorage.Resource.String.ApplicationName = global::EmployeeDirectory.Android.Resource.String.ApplicationName;
 			global::PCLStorage.Resource.String.Hello = global::EmployeeDirectory.Android.Resource.String.Hello;
+			global::Xamarin.Forms.Platform.Resource.String.ApplicationName = global::EmployeeDirectory.Android.Resource.String.ApplicationName;
+			global::Xamarin.Forms.Platform.Resource.String.Hello = global::EmployeeDirectory.Android.Resource.String.Hello;
 		}
 		
 		public partial class Attribute

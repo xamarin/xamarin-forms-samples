@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeDirectoryUI
 {
-	public enum UIImplementation
-	{
+	public enum UIImplementation {
 		CSharp = 0,
 		Xaml
 	}
@@ -27,8 +26,9 @@ namespace EmployeeDirectoryUI
 		public App ()
 		{
 			var task = Task.Run(async () => { 
-				Service = await MemoryDirectoryService.FromCsv("XamarinDirectory.csv"); 
+				Service = await MemoryDirectoryService.FromCsv ("XamarinDirectory.csv");
 			});
+
 			task.Wait();
 
 			var employeeList = new ContentPage ();
