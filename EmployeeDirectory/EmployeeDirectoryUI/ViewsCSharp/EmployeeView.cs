@@ -23,7 +23,6 @@ namespace EmployeeDirectoryUI.CSharp
 			favoriteLabel = new Label ();
 
 			favoriteSwitch = new Switch ();
-			favoriteSwitch.SetBinding (Switch.IsToggledProperty, "Person.IsFavorite");
 
 			personName = new Label {
 				XAlign = TextAlignment.Center,
@@ -70,6 +69,7 @@ namespace EmployeeDirectoryUI.CSharp
 			Title = personInfo.Person.Name;
 			personName.Text = personInfo.Person.Name;
 			favoriteLabel.Text = personInfo.IsFavorite ? "Added to favorites" : "Not in favorites";
+			favoriteSwitch.IsToggled = personInfo.IsFavorite;
 			DownloadImage ();
 		}
 

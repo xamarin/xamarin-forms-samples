@@ -32,11 +32,11 @@ namespace EmployeeDirectoryUI
 			task.Wait();
 
 			var employeeList = new ContentPage ();
-			if (uiImplementation == UIImplementation.CSharp) {
+
+			if (uiImplementation == UIImplementation.CSharp)
 				employeeList = new EmployeeListView ();
-			} else if (uiImplementation == UIImplementation.Xaml) {
+			else if (uiImplementation == UIImplementation.Xaml)
 				employeeList = new EmployeeListXaml ();
-			}
 
 			MainPage = new NavigationPage (employeeList);
 		}
