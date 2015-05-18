@@ -21,7 +21,7 @@ namespace Todo.WinPhone
 			var sqliteFilename = "TodoSQLite.db3";
             string path = Path.Combine(ApplicationData.Current.LocalFolder.Path, sqliteFilename);
 
-            var conn = new SQLite.SQLiteConnection(plat, path);
+            var conn = new SQLite.SQLiteConnection(path);
 
 			// Return the database connection 
 			return conn;
