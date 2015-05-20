@@ -1,13 +1,13 @@
 ﻿using System;
 using Xamarin.Forms;
-using WorkingWithFiles.Android;
+using WorkingWithFiles.Droid;
 using System.IO;
 using System.Threading.Tasks;
 using WorkingWithFiles;
 
 [assembly: Dependency (typeof (SaveAndLoad_Android))]
 
-namespace WorkingWithFiles.Android
+namespace WorkingWithFiles.Droid
 {
 	public class SaveAndLoad_Android : ISaveAndLoad
 	{
