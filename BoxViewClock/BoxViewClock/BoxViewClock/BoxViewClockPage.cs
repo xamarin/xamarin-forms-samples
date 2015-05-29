@@ -10,40 +10,24 @@ namespace BoxViewClock
 {
     class BoxViewClockPage : ContentPage
     {
-        // Structure for storing information about the three hands.
-        struct HandParams
-        {
-            public HandParams(double width, double height, double offset) : this()
-            {
-                Width = width;
-                Height = height;
-                Offset = offset;
-            }
-
-            public double Width { get; }   // fraction of radius
-            public double Height { get; }  // ditto
-            public double Offset { get; }  // relative to center pivot
-        }
-
-        static readonly HandParams secondParams = new HandParams(0.02, 1.1, 0.85);
-        static readonly HandParams minuteParams = new HandParams(0.05, 0.8, 0.9);
-        static readonly HandParams hourParams = new HandParams(0.125, 0.65, 0.9);
-
         private static ClockedBoxView NewClockedBoxView(int index) =>
                          new ClockedBoxView(index){ Color = Color.Accent };
 
-        private static BoxView NewBoxView() => new BoxView { Color = Color.Accent };
+        private static HandedBoxView NewHandedBoxView(double width, double height, double offset) =>
+                           new HandedBoxView(width, height, offset) { Color = Color.Accent };
 
         ClockedBoxView[] tickMarks = Repeat(NewClockedBoxView, 60).ToArray();
-        BoxView secondHand = NewBoxView(),
-                minuteHand = NewBoxView(),
-                hourHand = NewBoxView();
+
+        HandedBoxView secondHand = NewHandedBoxView(0.02, 1.1, .85),
+                      minuteHand = NewHandedBoxView(0.05, 0.8, .9),
+                      hourHand = NewHandedBoxView(0.125, 0.65, .9);
+
+        HandedBoxView[] Hands => new HandedBoxView[] { hourHand, minuteHand, secondHand };
 
         public BoxViewClockPage()
         {
-            var hands = new BoxView[] { hourHand, minuteHand, secondHand };
             AbsoluteLayout absoluteLayout = new AbsoluteLayout();
-            absoluteLayout.Children.AddRange(tickMarks).AddRange(hands);
+            absoluteLayout.Children.AddRange(tickMarks).AddRange(Hands);
             Content = absoluteLayout;
 
             // Attach a couple event handlers.
@@ -53,36 +37,18 @@ namespace BoxViewClock
 
         void OnPageSizeChanged(object sender, EventArgs args)
         {
-            var radius = tickMarks.First().Radius;
-            var center = tickMarks.First().Center;
 
             foreach (var tickMark in tickMarks)
             {
-                AbsoluteLayout.SetLayoutBounds(tickMark, tickMark.GetRectangle());
+                AbsoluteLayout.SetLayoutBounds(tickMark, tickMark.GetRectangle(this));
                 tickMark.AnchorX = 0.51;        // Anchor settings necessary for Android
                 tickMark.AnchorY = 0.51;
                 tickMark.UpdateRotation();
             }
-
-            // Function for positioning and sizing hands.
-            Action<BoxView, HandParams> Layout = (boxView, handParams) =>
+            foreach(var hand in Hands)
             {
-                double width = handParams.Width * radius;
-                double height = handParams.Height * radius;
-                double offset = handParams.Offset;
-
-                AbsoluteLayout.SetLayoutBounds(boxView,
-                    new Rectangle(center.X - 0.5 * width,
-                                  center.Y - offset * height,
-                                  width, height));
-
-                boxView.AnchorX = 0.51;
-                boxView.AnchorY = handParams.Offset;
-            };
-
-            Layout(secondHand, secondParams);
-            Layout(minuteHand, minuteParams);
-            Layout(hourHand, hourParams);
+                hand.UpdateLayout(this);
+            }
         }
 
         bool OnTimerTick()

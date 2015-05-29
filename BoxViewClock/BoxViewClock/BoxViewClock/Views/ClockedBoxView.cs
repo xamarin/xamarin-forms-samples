@@ -12,12 +12,11 @@ namespace BoxViewClock.Views
         {
             Index = index;
         }
-
-        public Point Center => new Point ( Width / 2, Height / 2 );
-        public double Radius => Math.Min(Width, Height) * 0.45;
-        double Size() => Radius / (Index % 5 == 0 ? 15 : 30);
-
         public double Radians => Index * 2 * Math.PI / NumberOfSeconds;
+
+        Point Center(Page page) => new Point (page.Width / 2, page.Height / 2 );
+        double Radius(Page page) => Math.Min(page.Width, page.Height) * 0.45;
+        double Size(Page page) => Radius(page) / (Index % 5 == 0 ? 15 : 30);
 
         public ClockedBoxView UpdateRotation()
         {
@@ -25,12 +24,13 @@ namespace BoxViewClock.Views
             return this;
         }
 
-
-        public Rectangle GetRectangle()
+        public Rectangle GetRectangle(Page page)
         {
-            double size = Size();
-            double x = Center.X + Radius * Math.Sin(Radians) - size / 2;
-            double y = Center.Y - Radius * Math.Cos(Radians) - size / 2;
+            Point center = Center(page);
+            double size = Size(page);
+            double radius = Radius(page);
+            double x = center.X + radius * Math.Sin(Radians) - size / 2;
+            double y = center.Y - radius * Math.Cos(Radians) - size / 2;
             return new Rectangle(x, y, size, size);
         }
 
