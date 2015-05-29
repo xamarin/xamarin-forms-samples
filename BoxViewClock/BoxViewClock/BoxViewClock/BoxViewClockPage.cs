@@ -1,5 +1,10 @@
-﻿using System;
+using System;
 using Xamarin.Forms;
+using System.Linq;
+using System.Collections.Generic;
+using static BoxViewClock.Helpers.IEnumerableHelpers;
+using static System.Math;
+using BoxViewClock.Views;
 
 namespace BoxViewClock
 {
@@ -15,49 +20,30 @@ namespace BoxViewClock
                 Offset = offset;
             }
 
-            public double Width { private set; get; }   // fraction of radius
-            public double Height { private set; get; }  // ditto
-            public double Offset { private set; get; }  // relative to center pivot
+            public double Width { get; }   // fraction of radius
+            public double Height { get; }  // ditto
+            public double Offset { get; }  // relative to center pivot
         }
 
         static readonly HandParams secondParams = new HandParams(0.02, 1.1, 0.85);
         static readonly HandParams minuteParams = new HandParams(0.05, 0.8, 0.9);
         static readonly HandParams hourParams = new HandParams(0.125, 0.65, 0.9);
 
-        BoxView[] tickMarks = new BoxView[60];
-        BoxView secondHand, minuteHand, hourHand;
+        private static ClockedBoxView NewClockedBoxView(int index) =>
+                         new ClockedBoxView(index){ Color = Color.Accent };
+
+        private static BoxView NewBoxView() => new BoxView { Color = Color.Accent };
+
+        ClockedBoxView[] tickMarks = Repeat(NewClockedBoxView, 60).ToArray();
+        BoxView secondHand = NewBoxView(),
+                minuteHand = NewBoxView(),
+                hourHand = NewBoxView();
 
         public BoxViewClockPage()
         {
+            var hands = new BoxView[] { hourHand, minuteHand, secondHand };
             AbsoluteLayout absoluteLayout = new AbsoluteLayout();
-
-            // Create the tick marks (to be sized and positioned later)
-            for (int i = 0; i < tickMarks.Length; i++)
-            {
-                tickMarks[i] = new BoxView
-                {
-                    Color = Color.Accent
-                };
-                absoluteLayout.Children.Add(tickMarks[i]);
-            }
-
-            // Create the three hands.
-            absoluteLayout.Children.Add(hourHand = 
-                new BoxView
-                {
-                    Color = Color.Accent
-                });
-            absoluteLayout.Children.Add(minuteHand = 
-                new BoxView
-                {
-                    Color = Color.Accent
-                });
-            absoluteLayout.Children.Add(secondHand = 
-                new BoxView
-                {
-                    Color = Color.Accent
-                });
-
+            absoluteLayout.Children.AddRange(tickMarks).AddRange(hands);
             Content = absoluteLayout;
 
             // Attach a couple event handlers.
@@ -67,21 +53,15 @@ namespace BoxViewClock
 
         void OnPageSizeChanged(object sender, EventArgs args)
         {
-            // Size and position the 12 tick marks.
-            Point center = new Point(this.Width / 2, this.Height / 2);
-            double radius = 0.45 * Math.Min(this.Width, this.Height);
+            var radius = tickMarks.First().Radius;
+            var center = tickMarks.First().Center;
 
-            for (int i = 0; i < tickMarks.Length; i++)
+            foreach (var tickMark in tickMarks)
             {
-                double size = radius / (i % 5 == 0 ? 15 : 30);
-                double radians = i * 2 * Math.PI / tickMarks.Length;
-                double x = center.X + radius * Math.Sin(radians) - size / 2;
-                double y = center.Y - radius * Math.Cos(radians) - size / 2;
-                AbsoluteLayout.SetLayoutBounds(tickMarks[i], new Rectangle(x, y, size, size));
-
-                tickMarks[i].AnchorX = 0.51;        // Anchor settings necessary for Android
-                tickMarks[i].AnchorY = 0.51;
-                tickMarks[i].Rotation = 180 * radians / Math.PI;
+                AbsoluteLayout.SetLayoutBounds(tickMark, tickMark.GetRectangle());
+                tickMark.AnchorX = 0.51;        // Anchor settings necessary for Android
+                tickMark.AnchorY = 0.51;
+                tickMark.UpdateRotation();
             }
 
             // Function for positioning and sizing hands.
