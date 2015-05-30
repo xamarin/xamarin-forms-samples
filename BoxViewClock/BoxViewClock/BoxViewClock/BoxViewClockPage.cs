@@ -13,23 +13,20 @@ namespace BoxViewClock
         private static ClockedBoxView NewClockedBoxView(int index) =>
                          new ClockedBoxView(index){ Color = Color.Accent };
 
-        private static HandedBoxView NewHandedBoxView(double width, double height, double offset) =>
-                           new HandedBoxView(width, height, offset) { Color = Color.Accent };
+        ClockedBoxView[] TickMarks = Repeat(NewClockedBoxView, 60).ToArray();
 
-        ClockedBoxView[] tickMarks = Repeat(NewClockedBoxView, 60).ToArray();
-
-        HandedBoxView secondHand = NewHandedBoxView(0.02, 1.1, .85),
-                      minuteHand = NewHandedBoxView(0.05, 0.8, .9),
-                      hourHand = NewHandedBoxView(0.125, 0.65, .9);
+        HandedBoxView secondHand = HandedBoxView.GetHourHand(Color.Accent),
+                      minuteHand = HandedBoxView.GetMinuteHand(Color.Accent),
+                      hourHand = HandedBoxView.GetHourHand(Color.Accent);
 
         HandedBoxView[] Hands => new HandedBoxView[] { hourHand, minuteHand, secondHand };
+        IList<IUpdateLayoutable> AllBoxViews => TickMarks.Cast<IUpdateLayoutable>().Concat(Hands).ToList();
 
         public BoxViewClockPage()
         {
             AbsoluteLayout absoluteLayout = new AbsoluteLayout();
-            absoluteLayout.Children.AddRange(tickMarks).AddRange(Hands);
+            absoluteLayout.Children.AddRange(AllBoxViews.Cast<BoxView>());
             Content = absoluteLayout;
-
             // Attach a couple event handlers.
             Device.StartTimer(TimeSpan.FromMilliseconds(16), OnTimerTick);
             SizeChanged += OnPageSizeChanged;
@@ -37,17 +34,9 @@ namespace BoxViewClock
 
         void OnPageSizeChanged(object sender, EventArgs args)
         {
-
-            foreach (var tickMark in tickMarks)
+            foreach (var tickMark in AllBoxViews)
             {
-                AbsoluteLayout.SetLayoutBounds(tickMark, tickMark.GetRectangle(this));
-                tickMark.AnchorX = 0.51;        // Anchor settings necessary for Android
-                tickMark.AnchorY = 0.51;
-                tickMark.UpdateRotation();
-            }
-            foreach(var hand in Hands)
-            {
-                hand.UpdateLayout(this);
+                tickMark.UpdateLayout(this);
             }
         }
 
@@ -55,20 +44,9 @@ namespace BoxViewClock
         {
             // Set rotation angles for hour and minute hands.
             DateTime dateTime = DateTime.Now;
-            hourHand.Rotation = 30 * (dateTime.Hour % 12) + 0.5 * dateTime.Minute;
-            minuteHand.Rotation = 6 * dateTime.Minute + 0.1 * dateTime.Second;
-
-            // Do an animation for the second hand.
-            double t = dateTime.Millisecond / 1000.0;
-            if (t < 0.5)
-            {
-                t = 0.5 * Easing.SpringIn.Ease(t / 0.5);
-            }
-            else
-            {
-                t = 0.5 * (1 + Easing.SpringOut.Ease((t - 0.5) / 0.5));
-            }
-            secondHand.Rotation = 6 * (dateTime.Second + t);
+            hourHand.UpdateRotation(dateTime);
+            minuteHand.UpdateRotation(dateTime);
+            secondHand.UpdateRotation(dateTime);
             return true;
         }
     }

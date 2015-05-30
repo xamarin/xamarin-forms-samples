@@ -3,36 +3,43 @@ using Xamarin.Forms;
 
 namespace BoxViewClock.Views
 {
-    public class HandedBoxView : BoxView
+    public class HandedBoxView : BoxView, IUpdateLayoutable, IUpdateRotationable
     {
-        private struct HandParams
+        private enum HandType
         {
-            public HandParams(double width, double height, double offset) : this()
-            {
-                Width = width;
-                Height = height;
-                Offset = offset;
-            }
-
-            public double Width { get; }   // fraction of radius
-            public double Height { get; }  // ditto
-            public double Offset { get; }  // relative to center pivot
+            Second = 1,
+            Minute = 2,
+            Hour = 3
         }
 
-        private HandParams Params { get; }
+        private double HandWidth { get; }   // fraction of radius
+        private double HandHeight { get; }  // ditto
+        private double Offset { get; }  // relative to center pivot
+        private HandType MyHandType { get; }
 
-        public HandedBoxView(double width, double height, double offset):base()
+        public static HandedBoxView GetHourHand(Color color) => new HandedBoxView(0.125, 0.65, .9, HandType.Hour) { Color = color};
+        public static HandedBoxView GetMinuteHand(Color color) => new HandedBoxView(0.05, 0.8, .9, HandType.Minute) {Color = color};
+        public static HandedBoxView GetSecondHand(Color color) => new HandedBoxView(0.02, 1.1, .85, HandType.Second) {Color = color};
+
+        private HandedBoxView(
+            double handWidth,
+            double handHeight,
+            double offset,
+            HandType handType):base()
         {
-            Params = new HandParams(width, height, offset);
+            HandWidth = handWidth;
+            HandHeight = handHeight;
+            Offset = offset;
+            MyHandType = handType;
         }
 
         public Rectangle GetRectangle (Page page)
         {
             Point center = page.Center();
             double radius = page.Radius();
-            double width = Params.Width * radius;
-            double height = Params.Height * radius;
-            double offset = Params.Offset;
+            double width = HandWidth * radius;
+            double height = HandHeight * radius;
+            double offset = Offset;
             return new Rectangle(
                 center.X - 0.5 * width,
                 center.Y - offset * height,
@@ -45,8 +52,37 @@ namespace BoxViewClock.Views
         {
             AbsoluteLayout.SetLayoutBounds(this, GetRectangle(page));
             AnchorX = 0.51;
-            AnchorY = Params.Offset;
+            AnchorY = Offset;
         }
+
+        private double GetRotation (DateTime dateTime)
+        {
+            switch (MyHandType)
+            {
+                case HandType.Hour: return 30 * (dateTime.Hour % 12) + 0.5 * dateTime.Minute;
+                case HandType.Minute: return 6 * dateTime.Minute + 0.1 * dateTime.Second;
+                case HandType.Second:
+                    // Do an animation for the second hand.
+                    double t = dateTime.Millisecond / 1000.0;
+                    if (t < 0.5)
+                    {
+                        t = 0.5 * Easing.SpringIn.Ease(t / 0.5);
+                    }
+                    else
+                    {
+                        t = 0.5 * (1 + Easing.SpringOut.Ease((t - 0.5) / 0.5));
+                    }
+                    return 6 * (dateTime.Second + t);
+                default:
+                    throw new Exception("Hands has invalid type");
+            }
+        }
+
+        public void UpdateRotation(DateTime time)
+        {
+            Rotation = GetRotation(time);
+        }
+
     }
 
 }

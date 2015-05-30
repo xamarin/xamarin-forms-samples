@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace BoxViewClock.Views
 {
-    public class ClockedBoxView : BoxView
+    public class ClockedBoxView : BoxView, IUpdateLayoutable
     {
         private const int NumberOfSeconds = 60;
         public int Index{ get;}
@@ -13,12 +13,9 @@ namespace BoxViewClock.Views
             Index = index;
         }
         public double Radians => Index * 2 * Math.PI / NumberOfSeconds;
+        double Size(Page page) => page.Radius() / (Index % 5 == 0 ? 15 : 30);
 
-        Point Center(Page page) => new Point (page.Width / 2, page.Height / 2 );
-        double Radius(Page page) => Math.Min(page.Width, page.Height) * 0.45;
-        double Size(Page page) => Radius(page) / (Index % 5 == 0 ? 15 : 30);
-
-        public ClockedBoxView UpdateRotation()
+        private ClockedBoxView UpdateRotation()
         {
             Rotation = 180 * Radians / Math.PI;
             return this;
@@ -26,12 +23,20 @@ namespace BoxViewClock.Views
 
         public Rectangle GetRectangle(Page page)
         {
-            Point center = Center(page);
+            Point center = page.Center();
             double size = Size(page);
-            double radius = Radius(page);
+            double radius = page.Radius();
             double x = center.X + radius * Math.Sin(Radians) - size / 2;
             double y = center.Y - radius * Math.Cos(Radians) - size / 2;
             return new Rectangle(x, y, size, size);
+        }
+
+        public void UpdateLayout(Page page)
+        {
+            AbsoluteLayout.SetLayoutBounds(this, GetRectangle(page));
+            AnchorX = 0.51;        // Anchor settings necessary for Android
+            AnchorY = 0.51;
+            UpdateRotation();
         }
 
     }
