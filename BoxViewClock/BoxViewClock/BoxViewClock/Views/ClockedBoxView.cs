@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace BoxViewClock.Views
 {
-    public class ClockedBoxView : BoxView, IUpdateLayoutable
+    public class ClockedBoxView : BaseClockedView
     {
         private const int NumberOfSeconds = 60;
         public int Index{ get;}
@@ -31,7 +31,7 @@ namespace BoxViewClock.Views
             return new Rectangle(x, y, size, size);
         }
 
-        public void UpdateLayout(Page page)
+        public override void UpdateLayout(Page page)
         {
             AbsoluteLayout.SetLayoutBounds(this, GetRectangle(page));
             AnchorX = 0.51;        // Anchor settings necessary for Android

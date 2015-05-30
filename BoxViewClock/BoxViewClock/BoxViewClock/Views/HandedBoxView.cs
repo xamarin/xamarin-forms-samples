@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace BoxViewClock.Views
 {
-    public class HandedBoxView : BoxView, IUpdateLayoutable, IUpdateRotationable
+    public class HandedBoxView : BaseClockedView
     {
         private enum HandType
         {
@@ -12,14 +12,14 @@ namespace BoxViewClock.Views
             Hour = 3
         }
 
+        public static HandedBoxView GetHourHand(Color color) => new HandedBoxView(0.125, 0.65, .9, HandType.Hour) { Color = color};
+        public static HandedBoxView GetMinuteHand(Color color) => new HandedBoxView(0.05, 0.8, .9, HandType.Minute) {Color = color};
+        public static HandedBoxView GetSecondHand(Color color) => new HandedBoxView(0.02, 1.1, .85, HandType.Second) {Color = color};
+
         private double HandWidth { get; }   // fraction of radius
         private double HandHeight { get; }  // ditto
         private double Offset { get; }  // relative to center pivot
         private HandType MyHandType { get; }
-
-        public static HandedBoxView GetHourHand(Color color) => new HandedBoxView(0.125, 0.65, .9, HandType.Hour) { Color = color};
-        public static HandedBoxView GetMinuteHand(Color color) => new HandedBoxView(0.05, 0.8, .9, HandType.Minute) {Color = color};
-        public static HandedBoxView GetSecondHand(Color color) => new HandedBoxView(0.02, 1.1, .85, HandType.Second) {Color = color};
 
         private HandedBoxView(
             double handWidth,
@@ -48,7 +48,7 @@ namespace BoxViewClock.Views
             );
         }
 
-        public void UpdateLayout(Page page)
+        public override void UpdateLayout(Page page)
         {
             AbsoluteLayout.SetLayoutBounds(this, GetRectangle(page));
             AnchorX = 0.51;
@@ -82,7 +82,6 @@ namespace BoxViewClock.Views
         {
             Rotation = GetRotation(time);
         }
-
     }
 
 }

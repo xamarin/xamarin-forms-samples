@@ -3,7 +3,6 @@ using Xamarin.Forms;
 using System.Linq;
 using System.Collections.Generic;
 using static BoxViewClock.Helpers.IEnumerableHelpers;
-using static System.Math;
 using BoxViewClock.Views;
 
 namespace BoxViewClock
@@ -15,17 +14,17 @@ namespace BoxViewClock
 
         ClockedBoxView[] TickMarks = Repeat(NewClockedBoxView, 60).ToArray();
 
-        HandedBoxView secondHand = HandedBoxView.GetHourHand(Color.Accent),
+        HandedBoxView secondHand = HandedBoxView.GetSecondHand(Color.Accent),
                       minuteHand = HandedBoxView.GetMinuteHand(Color.Accent),
                       hourHand = HandedBoxView.GetHourHand(Color.Accent);
 
         HandedBoxView[] Hands => new HandedBoxView[] { hourHand, minuteHand, secondHand };
-        IList<IUpdateLayoutable> AllBoxViews => TickMarks.Cast<IUpdateLayoutable>().Concat(Hands).ToList();
+        IList<BaseClockedView> AllBoxViews => TickMarks.Cast<BaseClockedView>().Concat(Hands).ToList();
 
         public BoxViewClockPage()
         {
             AbsoluteLayout absoluteLayout = new AbsoluteLayout();
-            absoluteLayout.Children.AddRange(AllBoxViews.Cast<BoxView>());
+            absoluteLayout.Children.AddRange(AllBoxViews);
             Content = absoluteLayout;
             // Attach a couple event handlers.
             Device.StartTimer(TimeSpan.FromMilliseconds(16), OnTimerTick);
@@ -42,11 +41,10 @@ namespace BoxViewClock
 
         bool OnTimerTick()
         {
-            // Set rotation angles for hour and minute hands.
-            DateTime dateTime = DateTime.Now;
-            hourHand.UpdateRotation(dateTime);
-            minuteHand.UpdateRotation(dateTime);
-            secondHand.UpdateRotation(dateTime);
+            foreach(var hand in Hands)
+            {
+                hand.UpdateRotation(DateTime.Now);
+            }
             return true;
         }
     }
