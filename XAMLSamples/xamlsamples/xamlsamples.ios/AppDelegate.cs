@@ -17,7 +17,7 @@ namespace XamlSamples.iOS
 		{
 			global::Xamarin.Forms.Forms.Init ();
 
-			LoadApplication (new App ());  // method is new in 1.3
+			LoadApplication (new XamlSamples.App ());  // method is new in 1.3
 
 			return base.FinishedLaunching (app, options);
 		}
