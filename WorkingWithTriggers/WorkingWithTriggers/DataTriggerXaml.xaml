@@ -9,7 +9,7 @@
 
 		<Label Text="Entry requires length>0 before button is enabled" FontSize="Small" />
 
-        <Entry
+        <Entry x:Name="entry"
         	   Text=""
                Placeholder="required field" /><!-- referenced below in DataTrigger-->
 

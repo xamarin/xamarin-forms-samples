@@ -20,11 +20,11 @@
 	<!-- the Entry x:Name are referenced below in the MultiTrigger -->
 	<!-- tip: make sure to set the Text="" (or some other default) -->
 
-	<Entry
+	<Entry x:Name="email"
 		Text=""
 		Placeholder="email" />
 
-    <Entry
+    <Entry x:Name="phone"
 		Text=""
 		Placeholder="phone" />
 
@@ -59,10 +59,12 @@
 	<!-- the Entry x:Name are referenced below in the MultiTrigger -->
 	<!-- tip: make sure to set the Text="" (or some other default) -->
 
-	<Entry Text=""
+	<Entry x:Name="user"
+		Text=""
 		Placeholder="user name" />
 
-    <Entry Text=""
+    <Entry x:Name="pwd"
+    	Text=""
 		Placeholder="password" />
 
 		<Button Text="Login"
