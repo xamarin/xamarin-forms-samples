@@ -13,9 +13,9 @@
 
 	<StackLayout>
 
-	<Label FontSize="Large">MultiTrigger Example</Label>
+	<Label FontSize="Large" Text="MultiTrigger Example" />
 
-	<Label>You must provide either an email or phone number (or both):</Label>
+	<Label Text="You must provide either an email or phone number (or both):" />
 
 	<!-- the Entry x:Name are referenced below in the MultiTrigger -->
 	<!-- tip: make sure to set the Text="" (or some other default) -->
@@ -51,9 +51,9 @@
 		<BoxView HeightRequest="3" HorizontalOptions="CenterAndExpand"  WidthRequest="250" Color="Gray" />
 
 
-	<Label FontSize="Large">Multi "Login" Example</Label>
+	<Label FontSize="Large" Text="Multi 'Login' Example" />
 
-	<Label>You must provide BOTH username and password:</Label>
+	<Label Text="You must provide BOTH username and password:" />
 
 	<!-- we need a Converter to make the logic work - it's in the Page's ResourceDictionary -->
 	<!-- the Entry x:Name are referenced below in the MultiTrigger -->
@@ -88,7 +88,7 @@
 		    </Button.Triggers>
 		</Button>
 
-		<Label FontSize="Small">Uses a converter on BindingConditions</Label>
+		<Label FontSize="Small" Text="Uses a converter on BindingConditions" />
 
 	</StackLayout>
 </ContentPage>
