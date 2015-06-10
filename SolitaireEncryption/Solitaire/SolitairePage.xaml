@@ -22,7 +22,7 @@
 		<Entry x:Name="ciphertext" Placeholder="result appears here" />
 
 		<!-- was for contest (now closed) http://blog.xamarin.com/xamarin-acquires-petzold/ -->
-		<local:TweetButton Text="Tweet with blog link" IsVisible="false" />
+		<local:TweetButton x:Name="Tweet" Text="Tweet with blog link" IsVisible="false" />
 
 	</StackLayout>
 </ContentPage>

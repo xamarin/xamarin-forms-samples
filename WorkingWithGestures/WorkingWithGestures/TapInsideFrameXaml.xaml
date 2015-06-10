@@ -42,7 +42,8 @@
 
     </Frame>
 
-    <Label Text="{Binding NumberOfTapsTapped}"
+    <Label x:Name="label"
+           Text="{Binding NumberOfTapsTapped}"
            Font="Large"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand"

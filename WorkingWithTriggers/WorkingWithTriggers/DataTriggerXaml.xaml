@@ -13,7 +13,7 @@
         	   Text=""
                Placeholder="required field" /><!-- referenced below in DataTrigger-->
 
-        <Button Text="Save"
+        <Button x:Name="button" Text="Save"
                 FontSize="Large"
                 HorizontalOptions="Center">
             <Button.Triggers>

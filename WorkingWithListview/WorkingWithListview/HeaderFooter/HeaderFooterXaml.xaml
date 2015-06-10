@@ -5,7 +5,7 @@
 			 Padding="0,20,0,0">
 
 <!-- Using binding to the page's datacontext -->
-<ListView
+<ListView x:Name="listView" 
 	ItemsSource="{Binding Monkeys}" 
 	Header="{Binding Intro}"
 	Footer="{Binding Summary}">

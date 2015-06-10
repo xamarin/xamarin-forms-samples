@@ -28,7 +28,7 @@
 		Text=""
 		Placeholder="phone" />
 
-		<Button Text="Save"
+		<Button x:Name="button" Text="Save"
 		        FontSize="Large"
 		        HorizontalOptions="Center">
 		    <Button.Triggers>
@@ -65,7 +65,7 @@
     <Entry Text=""
 		Placeholder="password" />
 
-		<Button Text="Login"
+		<Button x:Name="loginButton" Text="Login"
 		        FontSize="Large"
 		        HorizontalOptions="Center"
 		        IsEnabled="false">

@@ -18,7 +18,7 @@
 				</StackLayout>
 			</StackLayout>
 
-			<ListView ItemsSource="{Binding PropertyGroups}" IsGroupingEnabled="true" ItemSelected="OnItemSelected" >
+			<ListView x:Name="listView" ItemsSource="{Binding PropertyGroups}" IsGroupingEnabled="true" ItemSelected="OnItemSelected" >
 			 <ListView.GroupHeaderTemplate>
 			    <DataTemplate>
 			      <ViewCell>
