@@ -13,7 +13,8 @@
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
     
-    <Slider Maximum="360"
+    <Slider x:Name="slider"
+            Maximum="360"
             VerticalOptions="CenterAndExpand" />
 
     <Label BindingContext="{x:Reference slider}"
