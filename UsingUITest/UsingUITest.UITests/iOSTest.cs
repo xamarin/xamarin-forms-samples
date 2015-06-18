@@ -17,13 +17,13 @@ namespace UsingUITest.UITests
 	{
 		public string PathToIPA { get; set; }
 
-		[OneTimeSetUp]
+		[TestFixtureSetUp]
 		public void TestFixtureSetup()
 		{
 			string currentFile = new Uri(Assembly.GetExecutingAssembly().CodeBase).LocalPath;
 			FileInfo fi = new FileInfo(currentFile);
 			string dir = fi.Directory.Parent.Parent.Parent.FullName;
-			PathToIPA = Path.Combine(dir, "iOS", "bin", "iPhoneSimulator", "Debug", "UITestDemoiOS.app");
+			PathToIPA = Path.Combine(dir, "iOS", "bin", "iPhoneSimulator", "Debug", "UsingUITestiOS.app");
 		}
 
 		[SetUp]
