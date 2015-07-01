@@ -7,12 +7,31 @@ using MobileCRM.Services;
 
 namespace MobileCRM.Services
 {
-    public class UserRepository : InMemoryRepository<User>, IRepository<User> 
+    public class UserRepository : InMemoryRepository<User>, IRepository<User>
     {
-        public UserRepository ()
+        public UserRepository()
         {
-            Add(new User(new Contact { FirstName = "Javier", LastName = "Vasquez" }) { Username = "jvasquez" });
-            Add(new User(new Contact { FirstName = "Davon", LastName = "Smith" }) { Username = "dsmith" });
+            Add(
+                new User(
+                    new Contact
+                    { 
+                        FirstName = "Javier", 
+                        LastName = "Vasquez"
+                    })
+                { 
+                    Username = "jvasquez"
+                });
+            
+            Add(
+                new User(
+                    new Contact
+                    { 
+                        FirstName = "Davon", 
+                        LastName = "Smith"
+                    })
+                { 
+                    Username = "dsmith" 
+                });
         }
     }
 }

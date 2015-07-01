@@ -6,15 +6,45 @@ using MobileCRM.Models;
 
 namespace MobileCRM.Services
 {
-
-    public class OpportunityRepository : InMemoryRepository<Opportunity> 
+    public class OpportunityRepository : InMemoryRepository<Opportunity>
     {
         public OpportunityRepository()
         {
-            var contact = new Contact { FirstName = "Henry", LastName = "Hunan", Address = new Address { Street = "518 Sansome St", City = "San Francisco", State = "CA", PostalCode = "94111", Latitude = 37.7980160, Longitude = -122.4019871 } };
-            var id = new User(new Contact { FirstName = "Javier", LastName = "Vasquez" }) { Username = "jvasquez" };
-            Add(new Opportunity(contact) { Company = "Capricorn Media", Industry = "Entertainment", EstimatedAmount = 15000.00M, Owner = id });
+            var contact = 
+                new Contact
+                { 
+                    FirstName = "Henry", 
+                    LastName = "Hunan", 
+                    Address = new Address
+                    { 
+                        Street = "518 Sansome St", 
+                        City = "San Francisco", 
+                        State = "CA", 
+                        PostalCode = "94111", 
+                        Latitude = 37.7980160, 
+                        Longitude = -122.4019871
+                    } 
+                };
+
+            var id = 
+                new User(
+                    new Contact
+                    { 
+                        FirstName = "Javier", 
+                        LastName = "Vasquez"
+                    })
+                { 
+                    Username = "jvasquez" 
+                };
+
+            Add(
+                new Opportunity(contact)
+                { 
+                    Company = "Capricorn Media", 
+                    Industry = "Entertainment", 
+                    EstimatedAmount = 15000.00M, 
+                    Owner = id
+                });
         }
     }
-    
 }

@@ -22,12 +22,17 @@ namespace MobileCRM.Shared.Pages
                 .GetProperties(BindingFlags.Instance | BindingFlags.Public)
                 .Where(pi =>{
                     var value = pi.GetValue(viewModel.SelectedModel);
-                    if (value == null) return false;
-                    if (value is string || value is Address) return !string.IsNullOrWhiteSpace(value.ToString());
-                    if (value is IEnumerable)
-                        return ((IEnumerable)value).Cast<object>().Any ();
+                    if (value == null) 
+                        return false;
+                    if (pi.Name == "FullName") // omits the FullName property
+                        return false;
+                    if (value is string || value is Address) 
+                        return !string.IsNullOrWhiteSpace(value.ToString());
+                    var enumerable = value as IEnumerable;
+                    if (enumerable != null)
+                        return enumerable.Cast<object>().Any ();
                     return true;
-                });                
+                });         
 
             // Create a TableView to properly visualize our record.
             var detailTable = CreateTableForProperties(items, viewModel.SelectedModel);

@@ -9,6 +9,7 @@ namespace MobileCRM.Models
 	{
         string FirstName { get; set; }
         string LastName { get; set; }
+        string FullName { get; }
 
         string Company { get; set; }
         string Title { get; set; }
