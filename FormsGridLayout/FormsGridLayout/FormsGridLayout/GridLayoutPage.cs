@@ -29,7 +29,7 @@ namespace GridLayoutDemo
             grid.Children.Add(new Label { Text = "in a" }, 0, 1); // Left, Second element
             grid.Children.Add(new Label { Text = "grid!" }, 1, 1); // Right, Second element
 
-            var gridButton = new Button { Text = "So is this Button! Click me." };
+			var gridButton = new Button { Text = "So is this Button!\nClick me." };
             gridButton.Clicked += delegate
             {
                 gridButton.Text = string.Format("Thanks! {0} clicks.", count++);

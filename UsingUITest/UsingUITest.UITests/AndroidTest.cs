@@ -19,13 +19,13 @@ namespace UsingUITest.UITests
 		public string PathToAPK { get; set; }
 		 
 
-		[OneTimeSetUp]
+		[TestFixtureSetUp]
 		public void TestFixtureSetup()
 		{
 			string currentFile = new Uri(Assembly.GetExecutingAssembly().CodeBase).LocalPath;
 			FileInfo fi = new FileInfo(currentFile);
 			string dir = fi.Directory.Parent.Parent.Parent.FullName;
-			PathToAPK = Path.Combine(dir, "Android", "bin", "Debug", "UITestDemo.Android.apk");
+			PathToAPK = Path.Combine(dir, "Android", "bin", "Debug", "UsingUITest.Android.apk");
 		}
 
 		[SetUp]

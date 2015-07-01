@@ -11,10 +11,10 @@ using Xamarin.Forms.Platform.Android;
 using Android.Content.PM;
 
 
-namespace WorkingWithFiles.Android
+namespace WorkingWithFiles.Droid
 {
 
-		[Activity (Label = "WorkingWithFiles.Android.Android", Icon = "@drawable/icon", MainLauncher = true, 
+		[Activity (Label = "WorkingWithFiles.Droid", Icon = "@drawable/icon", MainLauncher = true, 
 			ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 		public class MainActivity : 
 		global::Xamarin.Forms.Platform.Android.FormsApplicationActivity // superclass new in 1.3

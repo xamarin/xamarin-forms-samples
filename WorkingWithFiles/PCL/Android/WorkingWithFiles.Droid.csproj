@@ -6,7 +6,7 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{6BBCFDC3-4C32-4951-BAF1-5C75ED317B71}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>WorkingWithFiles.Android</RootNamespace>
+    <RootNamespace>WorkingWithFiles.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <AndroidResgenClass>Resource</AndroidResgenClass>
