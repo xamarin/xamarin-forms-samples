@@ -28,11 +28,11 @@ namespace MobileCRM.Shared.Pages
 
             layout.Children.Add(label);
 
-            var username = new Entry { Placeholder = "Username" };
+            var username = new Entry { Placeholder = "Username", BackgroundColor = Color.White };
             username.SetBinding(Entry.TextProperty, LoginViewModel.UsernamePropertyName);
             layout.Children.Add(username);
 
-            var password = new Entry { Placeholder = "Password", IsPassword = true };
+            var password = new Entry { Placeholder = "Password", BackgroundColor = Color.White, IsPassword = true };
             password.SetBinding(Entry.TextProperty, LoginViewModel.PasswordPropertyName);
             layout.Children.Add(password);
 
