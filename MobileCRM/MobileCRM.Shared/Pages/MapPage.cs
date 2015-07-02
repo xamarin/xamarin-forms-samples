@@ -76,15 +76,6 @@ namespace MobileCRM.Shared.Pages
 
             stack.Children.Add(searchAddress);
 
-            ToolbarItems.Add(new ToolbarItem("Filter", "filter.png", async () =>
-                    {
-                        var page = new ContentPage();
-                        var result = await page.DisplayAlert("Title", "Message", "Accept", "Cancel");
-                        Debug.WriteLine("success: {0}", result);
-                    }));
-
-
-
 #elif WINDOWS_PHONE
            ToolbarItems.Add(new ToolbarItem("filter", "filter.png", async () =>
             {
@@ -126,7 +117,7 @@ namespace MobileCRM.Shared.Pages
 
                 if (pins.Count == 1)
                 {
-                    map = new Map(MapSpan.FromCenterAndRadius(centerPin.Position, Distance.FromMiles(0.3)));
+                    map = new Map(MapSpan.FromCenterAndRadius(centerPin.Position, Distance.FromKilometers(0.25)));
                 }
                 else
                 {
@@ -134,7 +125,7 @@ namespace MobileCRM.Shared.Pages
 
                     double radiusFromCenter = GetGreatestDistanceBetweenCenterPinAndOtherPinsInKilometers(centerPin, otherPins);
 
-                    map = new Map(MapSpan.FromCenterAndRadius(centerPin.Position, Distance.FromKilometers(radiusFromCenter + 0.3)));
+                    map = new Map(MapSpan.FromCenterAndRadius(centerPin.Position, Distance.FromKilometers(radiusFromCenter + 0.25)));
                 }
             }
 
