@@ -25,4 +25,7 @@
 	    <value>Agregar nuevo elemento</value>
 	    <comment>this string appears on a button to add a new item to the list</comment>
 	</data>
+	<data name="PickerName" xml:space="preserve">
+	    <value>Elegir un número</value>
+	</data>
 </root>
