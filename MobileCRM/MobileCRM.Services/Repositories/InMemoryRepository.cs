@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using MobileCRM.Services;
 using MobileCRM.Models;
+using System.Collections;
 
 namespace MobileCRM.Services
 {
@@ -74,6 +75,17 @@ namespace MobileCRM.Services
 				Items.Add(item);
 				return item;
 			});
+        }
+
+        public Task<List<T>> AddRange(List<T> range)
+        {
+            return Task.Factory.StartNew(() => {
+                foreach (var item in range)
+                {
+                    Items.Add(item);
+                }
+                return range;
+            });
         }
 
         #endregion

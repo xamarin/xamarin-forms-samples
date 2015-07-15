@@ -13,19 +13,21 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 
+	<!-- PORTUGAL -->
+
 	<data name="NotesLabel" xml:space="preserve">
-	    <value>Notas:</value>
+	    <value>Notas</value>
 	    <comment>label for input field</comment>
 	</data>
 	<data name="NotesPlaceholder" xml:space="preserve">
-	    <value>por ejemplo . comprar leche</value>
+	    <value>Por exemplo . comprar leite</value>
 	    <comment>example input for notes field</comment>
 	</data>
 	<data name="AddButton" xml:space="preserve">
-	    <value>Agregar nuevo elemento</value>
+	    <value>Adicionar novo item</value>
 	    <comment>this string appears on a button to add a new item to the list</comment>
 	</data>
 	<data name="PickerName" xml:space="preserve">
-	    <value>Elegir un número</value>
+	    <value>Escolher um número</value>
 	</data>
 </root>

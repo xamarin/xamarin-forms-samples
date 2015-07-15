@@ -62,8 +62,9 @@
     <EmbeddedResource Include="Resx\AppResources.es.resx" />
     <EmbeddedResource Include="Resx\AppResources.fr.resx" />
     <EmbeddedResource Include="Resx\AppResources.ja.resx" />
-    <EmbeddedResource Include="Resx\AppResources.pt-BR.resx" />
     <EmbeddedResource Include="Resx\AppResources.zh-Hant.resx" />
+    <EmbeddedResource Include="Resx\AppResources.pt-BR.resx" />
+    <EmbeddedResource Include="Resx\AppResources.pt.resx" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>

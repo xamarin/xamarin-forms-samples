@@ -27,6 +27,7 @@
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
     <ConsolePause>false</ConsolePause>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -93,6 +94,10 @@
     <AndroidResource Include="Resources\drawable-zh-rCN\flag.png" />
     <AndroidResource Include="Resources\values-zh-rCN\Strings.xml" />
     <AndroidResource Include="Resources\values-zh-rTW\Strings.xml" />
+    <AndroidResource Include="Resources\values-pt\Strings.xml" />
+    <AndroidResource Include="Resources\drawable-pt\flag.png" />
+    <AndroidResource Include="Resources\drawable-pt-rBR\flag.png" />
+    <AndroidResource Include="Resources\drawable-ja\flag.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -104,6 +109,10 @@
     <Folder Include="Resources\values-zh-rTW\" />
     <Folder Include="Resources\drawable-zh-rCN\" />
     <Folder Include="Resources\drawable-zh-rTW\" />
+    <Folder Include="Resources\values-pt\" />
+    <Folder Include="Resources\drawable-pt\" />
+    <Folder Include="Resources\drawable-pt-rBR\" />
+    <Folder Include="Resources\drawable-ja\" />
   </ItemGroup>
   <Import Project="..\packages\Xamarin.Forms.1.4.3.6374\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.4.3.6374\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

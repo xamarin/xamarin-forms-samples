@@ -8,6 +8,7 @@ using MobileCRM.Models;
 using MobileCRM.Shared.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+
 /*
 
 Xamarin.Forms uses the native MAP control on each platform.
@@ -25,6 +26,9 @@ If you see either of these errors in the console output when running on Android,
 Refer to the notes in the MainActivity.cs file in the Android project for how to add an API Key.
 
 */
+using MobileCRM.Shared.Helpers;
+
+
 namespace MobileCRM.Shared.Pages
 {
     public class MapPage<T> : ContentPage where T: class, IContact, new()
@@ -45,7 +49,7 @@ namespace MobileCRM.Shared.Pages
             var stack = new StackLayout { Spacing = 0 };
 
 #if __ANDROID__ || __IOS__
-            var searchAddress = new SearchBar { Placeholder = "Search Address", BackgroundColor = Color.White };
+            var searchAddress = new SearchBar { Placeholder = "Search Address", BackgroundColor = Xamarin.Forms.Color.White };
 
             searchAddress.SearchButtonPressed += async (e, a) =>
             {
@@ -59,25 +63,16 @@ namespace MobileCRM.Shared.Pages
 
                 var position = positions.First();
                 map.MoveToRegion(MapSpan.FromCenterAndRadius(position,
-                    Distance.FromMiles(0.1)));
+                        Distance.FromMiles(0.1)));
                 map.Pins.Add(new Pin
-                {
-                    Label = addressQuery,
-                    Position = position,
-                    Address = addressQuery
-                });
+                    {
+                        Label = addressQuery,
+                        Position = position,
+                        Address = addressQuery
+                    });
             };
 
             stack.Children.Add(searchAddress);
-
-            ToolbarItems.Add(new ToolbarItem("Filter", "filter.png", async () =>
-            {
-                var page = new ContentPage();
-                var result = await page.DisplayAlert("Title", "Message", "Accept", "Cancel");
-                Debug.WriteLine("success: {0}", result);
-            }));
-
-
 
 #elif WINDOWS_PHONE
            ToolbarItems.Add(new ToolbarItem("filter", "filter.png", async () =>
@@ -102,18 +97,71 @@ namespace MobileCRM.Shared.Pages
 
         public Map MakeMap()
         {
-
             List<Pin> pins = ViewModel.LoadPins();
 
-			Map map = pins.Count == 0
-				? new Map ()
-				: new Map (MapSpan.FromCenterAndRadius (pins [0].Position, Distance.FromMiles (0.3)));
-			map.IsShowingUser = true;
+            // TODO: Uncomment once Xamarin.Forms supports this, hopefully w/ version 1.1.
+            //var dict = pins.Zip(ViewModel.Models, (p, m)=>new KeyValuePair<Pin,T>(p, m)).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+            //PinMap = dict;
 
-            foreach (var p in pins)
-				map.Pins.Add(p);
+            Map map;
+
+            if (pins.Count < 1)
+            {
+                map = new Map();
+            }
+            else
+            {
+                Pin centerPin = pins[0];
+
+                if (pins.Count == 1)
+                {
+                    map = new Map(MapSpan.FromCenterAndRadius(centerPin.Position, Distance.FromKilometers(0.25)));
+                }
+                else
+                {
+                    IEnumerable<Pin> otherPins = pins.Where(p => p != pins[0]);
+
+                    double radiusFromCenter = GetGreatestDistanceBetweenCenterPinAndOtherPinsInKilometers(centerPin, otherPins);
+
+                    map = new Map(MapSpan.FromCenterAndRadius(centerPin.Position, Distance.FromKilometers(radiusFromCenter + 0.25)));
+                }
+            }
+
+            map.IsShowingUser = true;
+
+            pins.ForEach(map.Pins.Add);
+
+            // TODO: Uncomment once Xamarin.Forms supports this, hopefully w/ version 1.1.
+//            map.PinSelected += (sender, args)=>
+//            {
+//                var pin = args.SelectedItem as Pin;
+//                var details = PinMap[pin];
+//                var page = new DetailPage<T>(details);
+//                Navigation.PushAsync(page);
+//            };
 
             return map;
+        }
+
+        private double GetGreatestDistanceBetweenCenterPinAndOtherPinsInKilometers(Pin centerPin, IEnumerable<Pin> otherPins)
+        {
+            double greatestDistanceInKm = 0;
+
+            LatLon centerLatLon = new LatLon(centerPin.Position.Latitude, centerPin.Position.Longitude);
+
+            otherPins.ToList().ForEach(p =>
+                {
+                    LatLon otherLatLon = new LatLon(p.Position.Latitude, p.Position.Longitude);
+
+                    double distance = Haversine.GetDistanceKM(centerLatLon, otherLatLon);
+
+                    if (distance > greatestDistanceInKm)
+                    {
+                        greatestDistanceInKm = distance;
+                    }
+                });
+
+            return greatestDistanceInKm;
         }
     }
 }
