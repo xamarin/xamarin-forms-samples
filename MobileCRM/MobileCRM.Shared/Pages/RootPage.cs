@@ -15,6 +15,7 @@ namespace MobileCRM.Shared.Pages
 
         public RootPage ()
         {
+            
             var optionsPage = new MenuPage { Icon = "settings.png", Title = "menu" };
             
             optionsPage.Menu.ItemSelected += (sender, e) => NavigateTo(e.SelectedItem as OptionItem);
@@ -48,8 +49,8 @@ namespace MobileCRM.Shared.Pages
 #endif
 			var color = Helpers.Color.Blue.ToFormsColor ();
 			Detail = new NavigationPage (displayPage) {
-                BarBackgroundColor = color,
-                BarTextColor = Color.White
+				BarBackgroundColor = color,
+				BarTextColor = color
 			};
 
             IsPresented = false;
