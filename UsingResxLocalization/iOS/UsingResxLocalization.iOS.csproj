@@ -113,25 +113,25 @@
     <BundleResource Include="Resources\es.lproj\Default%402x.png" />
     <BundleResource Include="Resources\fr.lproj\Default-568h%402x.png" />
     <BundleResource Include="Resources\fr.lproj\Default%402x.png" />
-    <BundleResource Include="Resources\pt-BR.lproj\Default-568h%402x.png" />
-    <BundleResource Include="Resources\pt-BR.lproj\Default%402x.png" />
-    <BundleResource Include="Resources\pt.lproj\Default-568h%402x.png" />
-    <BundleResource Include="Resources\pt.lproj\Default%402x.png" />
-    <BundleResource Include="Resources\pt.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\ja.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\ja.lproj\Default-568h%402x.png" />
     <BundleResource Include="Resources\ja.lproj\Default%402x.png" />
     <BundleResource Include="Resources\es.lproj\flag.png" />
     <BundleResource Include="Resources\fr.lproj\flag.png" />
     <BundleResource Include="Resources\ja.lproj\flag.png" />
-    <BundleResource Include="Resources\pt.lproj\flag.png" />
-    <BundleResource Include="Resources\pt-BR.lproj\flag.png" />
     <BundleResource Include="Resources\en.lproj\flag.png" />
-    <BundleResource Include="Resources\pt-BR.lproj\InfoPList.strings" />
     <BundleResource Include="Resources\zh-Hant.lproj\flag.png" />
     <BundleResource Include="Resources\zh-Hant.lproj\InfoPList.strings" />
     <BundleResource Include="Resources\zh-Hans.lproj\flag.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\InfoPList.strings" />
+    <BundleResource Include="Resources\pt-PT.lproj\Default-568h%402x.png" />
+    <BundleResource Include="Resources\pt-PT.lproj\Default%402x.png" />
+    <BundleResource Include="Resources\pt-PT.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\pt-PT.lproj\flag.png" />
+    <BundleResource Include="Resources\pt.lproj\Default-568h%402x.png" />
+    <BundleResource Include="Resources\pt.lproj\Default%402x.png" />
+    <BundleResource Include="Resources\pt.lproj\flag.png" />
+    <BundleResource Include="Resources\pt.lproj\InfoPList.strings" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -146,12 +146,12 @@
   <ItemGroup>
     <Folder Include="Resources\es.lproj\" />
     <Folder Include="Resources\fr.lproj\" />
-    <Folder Include="Resources\pt-BR.lproj\" />
-    <Folder Include="Resources\pt.lproj\" />
     <Folder Include="Resources\ja.lproj\" />
     <Folder Include="Resources\en.lproj\" />
     <Folder Include="Resources\zh-Hant.lproj\" />
     <Folder Include="Resources\zh-Hans.lproj\" />
+    <Folder Include="Resources\pt-PT.lproj\" />
+    <Folder Include="Resources\pt.lproj\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.4.1.6349\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.4.1.6349\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
