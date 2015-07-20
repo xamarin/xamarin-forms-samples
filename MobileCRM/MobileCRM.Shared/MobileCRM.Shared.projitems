@@ -37,6 +37,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\UserConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MasterViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\MasterPageBuilder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Haversine.cs" />
   </ItemGroup>
 </Project>

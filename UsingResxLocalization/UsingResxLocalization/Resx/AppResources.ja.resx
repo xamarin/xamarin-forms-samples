@@ -25,4 +25,7 @@
 	    <value>新しい項目を追加</value>
 	    <comment>this string appears on a button to add a new item to the list</comment>
 	</data>
+	<data name="PickerName" xml:space="preserve">
+	    <value>番号を選択します</value>
+	</data>
 </root>

@@ -39,7 +39,6 @@ namespace MobileCRM.Shared.Pages
             ToolbarItems.Add(new ToolbarItem("Done", null, async ()=>{
                 var confirmed = await DisplayAlert("Unsaved Changes", "Save changes?", "Save", "Discard");
                 if (confirmed) {
-                    // TODO: Tell the view model, aka BindingContext, to save.
                     viewModel.SaveSelectedModel.Execute(null);
                     await Navigation.PopAsync();
                 } else {

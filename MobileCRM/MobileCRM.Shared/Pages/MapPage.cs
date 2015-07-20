@@ -37,8 +37,6 @@ namespace MobileCRM.Shared.Pages
         {
             get { return BindingContext as MapViewModel<T>; }
         }
-        // TODO: Uncomment once Xamarin.Forms supports this, hopefully w/ version 1.1.
-        //IDictionary<Pin,T> PinMap;
 
         public MapPage(MapViewModel<T> viewModel)
         {

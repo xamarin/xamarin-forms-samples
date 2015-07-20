@@ -10,9 +10,7 @@ namespace Todo
 
 		public App ()
 		{
-			var mainNav = new NavigationPage (new TodoListPage ());
-
-			MainPage = mainNav;
+			MainPage = new NavigationPage (new TodoListPage ());
 		}
 
 		public static TodoItemDatabase Database {

@@ -12,7 +12,9 @@
 //		public App ()
 //		{	
 //			// The Application ResourceDictionary is available in Xamarin.Forms 1.3 and later
-//			Application.Current.Resources = new ResourceDictionary ();
+//			    if (Application.Current.Resources == null) {
+//					Application.Current.Resources = new ResourceDictionary();
+//				}
 //
 //			var appStyle = new Style (typeof(Label)) {
 //				BaseResourceKey = Device.Styles.SubtitleStyleKey,

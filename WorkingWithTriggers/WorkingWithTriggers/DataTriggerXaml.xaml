@@ -5,11 +5,11 @@
 			 Padding="20, 50, 20, 0">
 	<StackLayout Spacing="20">
 
-		<Label FontSize="Large">DataTrigger Example</Label>
+		<Label FontSize="Large" Text="DataTrigger Example" />
 
 		<Label Text="Entry requires length>0 before button is enabled" FontSize="Small" />
 
-        <Entry
+        <Entry x:Name="entry"
         	   Text=""
                Placeholder="required field" /><!-- referenced below in DataTrigger-->
 

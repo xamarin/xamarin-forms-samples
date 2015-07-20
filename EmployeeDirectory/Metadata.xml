@@ -7,5 +7,5 @@
 	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
-	<Brief>This is a Xamarin.Forms port of the pre-built sample app Employee Directory. It includes the UI code in both XAML and C#.</Brief>
+	<Brief>This is a Xamarin.Forms port of the pre-built sample app Employee Directory.</Brief>
 </SampleMetadata>

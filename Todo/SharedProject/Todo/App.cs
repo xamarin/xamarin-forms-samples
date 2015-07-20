@@ -5,21 +5,17 @@ namespace Todo
 {
 	public class App : Application
 	{
-
 		static TodoItemDatabase database;
-
-		public App ()
-		{
-			database = new TodoItemDatabase ();
-			var mainNav = new NavigationPage (new TodoListPage ());
-			MainPage = mainNav;
-		}
-
 		public static TodoItemDatabase Database {
 			get {
+				database = database ?? new TodoItemDatabase ();
 				return database;
 			}
 		}
+
+		public App()
+		{
+			MainPage = new NavigationPage (new TodoListPage ());
+		}
 	}
 }
-
