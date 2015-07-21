@@ -1,2 +1,4 @@
-﻿html,body{margin:0;padding:10}
-body,p,h1{font-family:Chalkduster;}
+﻿html,body{margin:0;padding:10px}
+body, p, h1 {
+    font-family: 'Comic Sans MS';
+}

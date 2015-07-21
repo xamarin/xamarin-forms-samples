@@ -24,7 +24,7 @@ namespace WorkingWithWebview
 <body>
 <h1>Xamarin.Forms</h1>
 <p>The CSS and image are loaded from local files!</p>
-<img src='Images/XamarinLogo.png'/>
+<img src='XamarinLogo.png'/>
 <p><a href=""local.html"">next page</a></p>
 </body>
 </html>";
