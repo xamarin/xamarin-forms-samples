@@ -6,9 +6,9 @@ using System.Windows.Markup;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using webView.WinPhone.Resources;
+using webViewDemo.WinPhone.Resources;
 
-namespace webView.WinPhone
+namespace webViewDemo.WinPhone
 {
     public partial class App : Application
     {

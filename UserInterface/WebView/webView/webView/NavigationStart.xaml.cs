@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace webView
+namespace webViewDemo
 {
 	public partial class NavigationStart : ContentPage
 	{

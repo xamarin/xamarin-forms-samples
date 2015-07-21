@@ -5,7 +5,7 @@ using System.Text;
 
 using Xamarin.Forms;
 
-namespace webView
+namespace webViewDemo
 {
     public class App : Application
     {

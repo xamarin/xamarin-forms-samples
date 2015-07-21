@@ -8,7 +8,7 @@
     <ProjectGuid>{0E616C9E-EFF6-4A92-8B0B-6C59B95931F0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>webView</RootNamespace>
+    <RootNamespace>webViewDemo</RootNamespace>
     <AssemblyName>webView</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>

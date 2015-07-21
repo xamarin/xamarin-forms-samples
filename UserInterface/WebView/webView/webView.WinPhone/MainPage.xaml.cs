@@ -8,7 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
-namespace webView.WinPhone
+namespace webViewDemo.WinPhone
 {
     public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
     {
@@ -18,7 +18,7 @@ namespace webView.WinPhone
             SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new webView.App());
+            LoadApplication(new webViewDemo.App());
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿using webView.WinPhone.Resources;
+﻿using webViewDemo.WinPhone.Resources;
 
-namespace webView.WinPhone
+namespace webViewDemo.WinPhone
 {
     /// <summary>
     /// Provides access to string resources.
