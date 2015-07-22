@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="WebViewSample.LinkToInAppXaml"
+Title="In-App Browser Demo"
+Padding="10">
+	<ContentPage.Content>
+		<StackLayout>
+			<Label Text="This demonstrates how you would open a link without leaving your app, while giving users a good experience." />
+			<Button Text="Navigate to Xamarin" Clicked="navButtonClicked" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
