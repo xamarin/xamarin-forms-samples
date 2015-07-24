@@ -93,7 +93,8 @@ namespace HoustonForms
 
             var content = new ContentPage
             {
-                Content = stackIds
+                Content = stackIds,
+				Padding = new Thickness(0,20,0,0) // really just for iOS
             };
                         
             btnCrashApp.IsEnabled = btnDivByZero.IsEnabled = btnFileException.IsEnabled = btnNullRef.IsEnabled = btnPartialInfo.IsEnabled = btnStartMultiTracker.IsEnabled = btnStartTimer.IsEnabled = false;
