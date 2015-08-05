@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="TableViewSamples.FormIntentXaml"
+Title="Form Intent">
+	<ContentPage.Content>
+		<TableView Intent="Form">
+			<TableRoot>
+				<TableSection Title="First Section">
+					<TextCell Text="TextCell" Detail="TextCell Detail" />
+					<EntryCell Label="Entry Label" Text="EntryCell Text" />
+					<SwitchCell Text="SwitchCell Text" />
+					<ImageCell Text="ImageCell Text" Detail="ImageCell Detail" ImageSource="XamarinLogo.png" />
+				</TableSection>
+				<TableSection Title="Second Section">
+					<TextCell Text="TextCell" Detail="TextCell Detail" />
+					<EntryCell Label="Entry Label" Text="EntryCell Text" />
+					<SwitchCell Text="SwitchCell Text" />
+					<ImageCell Text="ImageCell Text" Detail="ImageCell Detail" ImageSource="XamarinLogo.png" />
+				</TableSection>
+			</TableRoot>
+		</TableView>
+	</ContentPage.Content>
+</ContentPage>
