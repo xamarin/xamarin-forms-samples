@@ -113,7 +113,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\default.css" />
-    <BundleResource Include="Resources\Images\XamarinLogo.png" />
+    <BundleResource Include="Resources\XamarinLogo.png" />
     <BundleResource Include="Resources\local.html" />
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\Default%402x.png" />
