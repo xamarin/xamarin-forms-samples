@@ -146,6 +146,7 @@
     <BundleResource Include="Toolkit.Content\ApplicationBar.Check.png" />
     <BundleResource Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <BundleResource Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="XamarinLogo.png" />
     <Content Include="README_FIRST.txt" />
     <Content Include="local.html" />
     <Content Include="default.css" />

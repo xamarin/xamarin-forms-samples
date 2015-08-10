@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="twoWayBinding.Home" 
+Title="MonkeySee Home" 
+BackgroundColor="White"
+xmlns:local="clr-namespace:twoWayBinding;assembly=twoWayBinding">
+	<ContentPage.Content>
+		<ListView x:Name="listView" SeparatorVisibility="None" ItemsSource="{x:Static local:HomeViewModel.lights}" ItemSelected="listSelection">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout Orientation="Horizontal" Padding="2,15">
+							<Image HorizontalOptions="Start" Source="bulb.png"  />
+							<Label Text="{Binding name}" TextColor="{Binding color}" HorizontalOptions="CenterAndExpand" FontSize="18" FontFamily="" />
+							<Label Text="On" TextColor="Blue" HorizontalOptions="End" IsVisible="{Binding isOn}" />
+							<Label Text="Off" TextColor="Gray" HorizontalOptions="End" IsVisible="{Binding isNotOn}" />
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage.Content>
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Switch" Clicked="OnEditTap" />
+		<ToolbarItem Text="Name" Clicked="OnNameTap" />
+	</ContentPage.ToolbarItems>
+</ContentPage>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="source-language">
+    <value>en</value>
+  </resheader>
+  <data name="AddButton" xml:space="preserve">
+    <value>追加</value>
+    <comment>machine translation</comment>
+  </data>
+  <data name="ApplicationHeading" xml:space="preserve">
+    <value>LionTodo</value>
+  </data>
+  <data name="ApplicationTitle" xml:space="preserve">
+    <value>LionTodo</value>
+  </data>
+  <data name="DeleteButton" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="DoneLabel" xml:space="preserve">
+    <value>完了</value>
+  </data>
+  <data name="NameLabel" xml:space="preserve">
+    <value>名前順</value>
+  </data>
+  <data name="NotesLabel" xml:space="preserve">
+    <value>備考</value>
+  </data>
+  <data name="SaveButton" xml:space="preserve">
+    <value>上書き保存</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="SpeakButton" xml:space="preserve">
+    <value>読み上げ​​</value>
+  </data>
+  <data name="SpeakTaskCount" xml:space="preserve">
+    <value>{0} タスクがあります。</value>
+  </data>
+</root>
