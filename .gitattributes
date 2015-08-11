@@ -10,6 +10,7 @@
 
 # Declare files that will always have CRLF line endings on checkout.
 *.sln text eol=crlf
+packages.config text eol=crlf
 
 # Declare files that will always have LF line endings on checkout.
 *.sh text eol=lf
