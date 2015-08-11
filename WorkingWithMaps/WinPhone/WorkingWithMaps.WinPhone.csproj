@@ -170,10 +170,10 @@
       <HintPath>..\packages\Xamarin.Forms.1.4.4.6392\lib\WP80\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Maps">
-      <HintPath>..\packages\Xamarin.Forms.Maps.1.4.4.6379-pre3\lib\WP80\Xamarin.Forms.Maps.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.Maps.1.4.4.6392\lib\WP80\Xamarin.Forms.Maps.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Maps.WP8">
-      <HintPath>..\packages\Xamarin.Forms.Maps.1.4.4.6379-pre3\lib\WP80\Xamarin.Forms.Maps.WP8.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.Maps.1.4.4.6392\lib\WP80\Xamarin.Forms.Maps.WP8.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform">
       <HintPath>..\packages\Xamarin.Forms.1.4.4.6392\lib\WP80\Xamarin.Forms.Platform.dll</HintPath>
