@@ -24,28 +24,28 @@ namespace WorkingWithFiles.iOS
 
 		public async Task SaveTextAsync (string filename, string text)
 		{
-			string path = BuildPathForDocumentsDir (filename);
+			string path = CreatePathToFile (filename);
 			using (StreamWriter sw = File.CreateText(path))
-			{
 				await sw.WriteAsync(text);
-			}
 		}
 
 		public async Task<string> LoadTextAsync (string filename)
 		{
-			string path = BuildPathForDocumentsDir (filename);
+			string path = CreatePathToFile (filename);
 			using (StreamReader sr = File.OpenText(path))
-			{
 				return await sr.ReadToEndAsync();
-			}
+		}
+
+		public bool FileExists (string filename)
+		{
+			return File.Exists (CreatePathToFile (filename));
 		}
 
 		#endregion
 
-		static string BuildPathForDocumentsDir(string fileName)
+		static string CreatePathToFile(string fileName)
 		{
 			return Path.Combine (DocumentsPath, fileName);
 		}
 	}
 }
-
