@@ -216,9 +216,6 @@ Global
 		{FA0EF4B9-C269-479B-9DFD-4767E0D6FF3F}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
 		{FA0EF4B9-C269-479B-9DFD-4767E0D6FF3F}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = FormsGridLayout\FormsGridLayout.iOS\FormsGridLayout.iOS.csproj
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
