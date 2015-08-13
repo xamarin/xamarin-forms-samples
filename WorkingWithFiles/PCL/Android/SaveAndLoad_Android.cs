@@ -15,29 +15,29 @@ namespace WorkingWithFiles.Droid
 
 		public async Task SaveTextAsync (string filename, string text)
 		{
-			var docsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-			var path = Path.Combine(docsPath, filename);
-
-			using (StreamWriter sw = File.CreateText(path))
-			{
+			var path = CreatePathToFile (filename);
+			using (StreamWriter sw = File.CreateText (path))
 				await sw.WriteAsync(text);
-			}
 		}
 
 		public async Task<string> LoadTextAsync (string filename)
 		{
-			string text;
-			var docsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-			var path = Path.Combine(docsPath, filename);
-
+			var path = CreatePathToFile (filename);
 			using (StreamReader sr = File.OpenText(path))
-			{
-				text = await sr.ReadToEndAsync();
-			}
-			return text;
+				return await sr.ReadToEndAsync();
+		}
+
+		public bool FileExists (string filename)
+		{
+			return File.Exists (CreatePathToFile (filename));
 		}
 
 		#endregion
+
+		string CreatePathToFile (string filename)
+		{
+			var docsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+			return Path.Combine(docsPath, filename);
+		}
 	}
 }
-
