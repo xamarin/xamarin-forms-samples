@@ -9,7 +9,7 @@ using Microsoft.Phone.Shell;
 
 namespace WorkingWithBehaviors.WinPhone
 {
-    public partial class App : Xamarin.Forms.Platform.WinPhone.FormsApplicationPage 
+    public partial class App : Application
     {
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
