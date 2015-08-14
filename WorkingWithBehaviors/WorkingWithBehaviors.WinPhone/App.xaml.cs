@@ -7,6 +7,8 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
+using WorkingWithBehaviors.WinPhone.Resources;
+
 namespace WorkingWithBehaviors.WinPhone
 {
     public partial class App : Application
