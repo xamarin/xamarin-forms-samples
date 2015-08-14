@@ -1,4 +1,4 @@
-﻿
+﻿using WorkingWithBehaviors.WinPhone.Resources;
 
 namespace WorkingWithBehaviors.WinPhone
 {
