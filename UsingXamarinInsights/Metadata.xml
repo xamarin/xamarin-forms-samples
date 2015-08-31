@@ -3,9 +3,9 @@
 	<ID>292c7d1e-8c61-42db-a2ac-0acdf011a7f5</ID>
 	<IsFullApplication>false</IsFullApplication>
 	<Level>Beginner</Level>
-	<Tags>Cloud,Platform Features,Xamarin.Forms</Tags>
+	<Tags>Platform Features,Xamarin.Forms</Tags>
 	<SupportedPlatforms>Android, iOS</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
-	<Gallery>false</Gallery>
+	<Gallery>true</Gallery>
 	<Brief>Xamarin Insights helps you report bugs and track users in your apps.</Brief>
 </SampleMetadata>
