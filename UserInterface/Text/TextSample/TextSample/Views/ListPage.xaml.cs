@@ -17,6 +17,10 @@ namespace TextSample
 			pages.Add (new EntryPageCode ());
 			pages.Add (new LabelPage ());
 			pages.Add (new LabelPageCode ());
+			pages.Add (new LoginPageXaml ());
+			pages.Add (new LoginPageCode ());
+			pages.Add (new OrderPageXaml ());
+			pages.Add (new OrderPageCode ());
 			ListOfPages.ItemsSource = pages;
 
 		}
