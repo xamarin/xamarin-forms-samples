@@ -22,6 +22,12 @@ namespace LayoutSamples
 			source.Add (new playlist{ Name = "Dance Workout" });
 			source.Add (new playlist{ Name = "Code 4 Dayz" });
 			ListOfAlbums.ItemsSource = source;
+			ListOfAlbums.ItemSelected += ListOfAlbums_ItemSelected;
+		}
+
+		void ListOfAlbums_ItemSelected (object sender, SelectedItemChangedEventArgs e)
+		{
+			((ListView)sender).SelectedItem = null;
 		}
 	}
 }
