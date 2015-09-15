@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="TodoASMX.TodoItemPage"
+			 Title="Todo">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="StartAndExpand">
+			<Label Text="Name" />
+			<Entry x:Name="nameEntry" Text="{Binding Path=Name}" Placeholder="task name" />
+			<Label Text="Notes" />
+			<Entry x:Name="notesEntry" Text="{Binding Path=Notes}" />
+			<Label Text="Done" />
+			<Switch x:Name="doneSwitch" IsToggled="{Binding Path=Done}" />
+			<Button Text="Save" Clicked="OnSaveActivated" />
+			<Button Text="Delete" Clicked="OnDeleteActivated" />
+			<Button Text="Cancel" Clicked="OnCancelActivated" />
+			<Button Text="Speak" Clicked="OnSpeakActivated" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
