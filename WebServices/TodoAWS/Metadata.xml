@@ -2,7 +2,7 @@
 <SampleMetadata>
 	<ID>37FB8AE5-DB23-4EAE-8426-A740D7A2482C</ID>
 	<IsFullApplication>true</IsFullApplication>
-	<Brief>T.</Brief>
+	<Brief>This sample demonstrates a Todo list application where the data is stored and accessed from a SimpleDB service in Amazon Web Services.</Brief>
 	<Level>Advanced</Level>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Tags>Web Services, Xamarin.Forms</Tags>
