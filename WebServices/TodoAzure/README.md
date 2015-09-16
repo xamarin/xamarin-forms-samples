@@ -19,7 +19,7 @@ Setting up an Azure Mobile Service
 
 In order to run this sample application an Azure Mobile Service must first be created. When creating an Azure Mobile Service instance please ensure that the service uses a JavaScript back-end, as shown in the following screenshot:
 
-![](//developer.xamarin.com/guides/cross-platform/xamarin-forms/web-services/consuming/azure/Images/backend.png)
+![](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/web-services/consuming/azure/Images/backend.png)
 
 Creating an Azure Mobile Service can be accomplished with the following steps:
 
