@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoREST.iOS", "iOS\TodoRES
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoREST.Droid", "Droid\TodoREST.Droid.csproj", "{E648100F-B4E1-4AB7-AAA8-55B66DFFD821}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoREST.WinPhone", "TodoREST.WinPhone81\TodoREST.WinPhone81.csproj", "{7325168D-6C60-463F-8824-7D69D2DF1465}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoREST.WinPhone81", "TodoREST.WinPhone81\TodoREST.WinPhone81.csproj", "{7325168D-6C60-463F-8824-7D69D2DF1465}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
