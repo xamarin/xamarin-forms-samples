@@ -6,8 +6,8 @@ Title="MonkeyMoney - XAML" BackgroundColor="Green">
 	<ContentPage.Content>
 		<StackLayout Padding="0,10,0,0">
 			<StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Padding="10,0">
-				<Button HeightRequest="50" WidthRequest="50" Text="?" TextColor="White" HorizontalOptions="StartAndExpand" BackgroundColor="Lime" BorderRadius="25" />
-				<Button HeightRequest="50" WidthRequest="50" Text="2" TextColor = "White" HorizontalOptions="EndAndExpand" BackgroundColor="Lime" BorderRadius="25" FontAttributes="Bold" />
+				<Button HeightRequest="50" WidthRequest="50" Text="?" FontSize="20" TextColor="White" HorizontalOptions="StartAndExpand" BackgroundColor="Lime" BorderRadius="25" />
+				<Button HeightRequest="50" WidthRequest="50" Text="2" FontSize="20" TextColor = "White" HorizontalOptions="EndAndExpand" BackgroundColor="Lime" BorderRadius="25" FontAttributes="Bold" />
 			</StackLayout>
 			<StackLayout VerticalOptions="Fill">
 				<StackLayout HorizontalOptions="Center">

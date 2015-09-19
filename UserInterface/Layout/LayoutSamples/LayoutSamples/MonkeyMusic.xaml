@@ -10,10 +10,10 @@ Title="Monkey Music - XAML">
 					<DataTemplate>
 						<ViewCell>
 							<StackLayout>
-								<AbsoluteLayout Padding="15">
-									<Image AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0, 100, 100" Rotation="30" BackgroundColor="#3498db" />
-									<Image AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0, 100, 100" Rotation="60" BackgroundColor="#b455b6" />
-									<Image AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0, 100, 100" BackgroundColor="#77d065" />
+								<AbsoluteLayout Padding="25">
+									<Image AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="0.5, 0, 100, 100" Rotation="30" BackgroundColor="#3498db" />
+									<Image AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="0.5, 0, 100, 100" Rotation="60" BackgroundColor="#b455b6" />
+									<Image AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="0.5, 0, 100, 100" BackgroundColor="#77d065" />
 								</AbsoluteLayout>
 								<Label Text="{Binding Name}" HorizontalOptions="CenterAndExpand"  />
 							</StackLayout>
