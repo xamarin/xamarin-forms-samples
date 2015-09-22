@@ -21,6 +21,8 @@ namespace TextSample
 			pages.Add (new LoginPageCode ());
 			pages.Add (new OrderPageXaml ());
 			pages.Add (new OrderPageCode ());
+			pages.Add (new BuiltInStylesXaml ());
+			pages.Add (new CustomStylesXaml ());
 			ListOfPages.ItemsSource = pages;
 
 		}

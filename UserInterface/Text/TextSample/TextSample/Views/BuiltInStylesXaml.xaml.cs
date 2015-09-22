@@ -5,12 +5,12 @@ using Xamarin.Forms;
 
 namespace TextSample
 {
-	public partial class EditorPage : ContentPage
+	public partial class BuiltInStylesXaml : ContentPage
 	{
-		public EditorPage ()
+		public BuiltInStylesXaml ()
 		{
 			InitializeComponent ();
-  		}
+		}
 	}
 }
 
