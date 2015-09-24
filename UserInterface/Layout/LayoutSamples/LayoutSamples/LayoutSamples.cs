@@ -10,16 +10,9 @@ namespace LayoutSamples
 		{
 			// The root page of your application
 			MainPage = new NavigationPage {BarBackgroundColor=Color.Green, BarTextColor = Color.White};
-			MainPage.Navigation.PushAsync (new MonkeyMoneyXaml ());
-			MainPage.Navigation.PushAsync (new MonkeyMusic ());
-			MainPage.Navigation.PushAsync (new AbsoluteLayoutDemoXaml ());
-			MainPage.Navigation.PushAsync (new RelativeLayoutDemo ());
-			MainPage.Navigation.PushAsync (new RelativeLayoutExploration ());
-			MainPage.Navigation.PushAsync (new AbsoluteLayoutExplorationCode ());
-			MainPage.Navigation.PushAsync (new AbsoluteLayoutExploration ());
-			MainPage.Navigation.PushAsync (new GridExploration ());
-			MainPage.Navigation.PushAsync (new StackLayoutDemo ());
-			MainPage.Navigation.PushAsync (new LabelGridXaml ());
+
+			MainPage.Navigation.PushAsync (new ListPage ());
+			//MainPage.Navigation.PushAsync (new AbsoluteLayoutDemoCode ());
 		}
 
 		protected override void OnStart ()
