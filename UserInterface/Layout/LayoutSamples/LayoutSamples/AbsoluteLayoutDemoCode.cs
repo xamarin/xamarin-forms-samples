@@ -17,7 +17,7 @@ namespace LayoutSamples
 		StackLayout layout;
 		public AbsoluteLayoutDemoCode ()
 		{
-			Title = "AbsoluteLayout Demo - Code";
+			Title = "AbsoluteLayout Demo - C#";
 			absLayout = new AbsoluteLayout {
 				Padding = new Thickness (0),
 				VerticalOptions = LayoutOptions.Fill,
@@ -41,7 +41,7 @@ namespace LayoutSamples
 			layout.Children.Add (coords);
 			layout.Children.Add (flagsBounds);
 			btnPos = new Button {
-				Text = "Change Position",
+				Text = "Position",
 				HorizontalOptions = LayoutOptions.FillAndExpand,
 				BackgroundColor = Color.Green,
 				TextColor = Color.White,
@@ -49,7 +49,7 @@ namespace LayoutSamples
 				FontSize = 20
 			};
 			btnSize = new Button {
-				Text = "Change Size",
+				Text = "Size",
 				HorizontalOptions = LayoutOptions.FillAndExpand,
 				BackgroundColor = Color.Green,
 				TextColor = Color.White,

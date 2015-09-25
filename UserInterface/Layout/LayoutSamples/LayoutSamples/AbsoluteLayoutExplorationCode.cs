@@ -8,7 +8,7 @@ namespace LayoutSamples
 	{
 		public AbsoluteLayoutExplorationCode ()
 		{
-			Title = "Absolute Layout Exploration - Code";
+			Title = "Absolute Layout Exploration - C#";
 			var layout = new AbsoluteLayout();
 
 			var centerLabel = new Label {Text = "I'm centered on iPhone 4 but no other device.", LineBreakMode = LineBreakMode.WordWrap, FontSize = 20};

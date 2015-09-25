@@ -31,61 +31,6 @@ namespace LayoutSamples
 			UpdatePosition();
 		}
 
-		public void HandleSize(object sender, EventArgs e)
-		{
-			UpdateSize();
-		}
-
-		async void UpdateSize()
-		{
-			/*ToggleEnabled(false);
-
-			float w = 0.0f;
-			float h = 0.0f;
-
-			await box.LayoutTo (new Rectangle (0f, 0f, w, h));
-			//AbsoluteLayout.SetLayoutBounds(box, new Rectangle(0f, 0f, w, h));
-			await anchorVert.LayoutTo(new Rectangle(new Point(.5,0f), new Size(50,100)));
-			//AbsoluteLayout.SetLayoutBounds(anchorVert, new Rectangle(.5, 0f, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
-
-			while(w <= 1.0)
-			{
-				if(Math.Round(w, 2) == 0f)
-				{
-					status.Text = "Anchor point is far left";
-					await Task.Delay(3000);
-				}
-
-				if(Math.Round(w, 2) == 0.5f)
-				{
-					status.Text = "Anchor point is in the center";
-					await Task.Delay(3000);
-				}
-
-				if(Math.Round(w, 2) == 1f)
-				{
-					await Task.Delay(3000);
-					break;
-				}
-
-				w += .01f;
-				h += .01f;
-
-				box.LayoutTo (new Rectangle (0f, 0f, w, h));
-				//AbsoluteLayout.SetLayoutBounds(box, new Rectangle(0f, 0f, w, h));
-				anchorVert.LayoutTo(new Rectangle(new Point(.5,0f), new Size(50,100)));
-				//AbsoluteLayout.SetLayoutBounds(anchorVert, new Rectangle(.5, 0f, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
-				flagsBounds.Text = string.Format("Flags=\"All\" Bounds=\"0, 0, {0}, {1}\"", Math.Round(w, 2), Math.Round(h, 2));
-
-				UpdateLabel();
-				status.Text = " ";
-
-				await Task.Delay(50);
-			}
-
-			ToggleEnabled(true);*/
-		}
-
 		double max = 10;
 
 		async void UpdatePosition()
@@ -120,6 +65,10 @@ namespace LayoutSamples
 					}),
 					Constraint.Constant(50), Constraint.Constant(50));
 				await Task.Delay(50);
+			}
+			if (x >= 1) {
+				y = 0;
+				x = 0;
 			}
 		}
 

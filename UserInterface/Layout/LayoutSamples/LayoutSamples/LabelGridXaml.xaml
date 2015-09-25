@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 x:Class="LayoutSamples.LabelGridXaml"
-Title = "Label Grid Demo ">
+Title = "Label Grid Demo - XAML">
 	<ContentPage.Content>
 		<Grid>
 		  <Grid.RowDefinitions>

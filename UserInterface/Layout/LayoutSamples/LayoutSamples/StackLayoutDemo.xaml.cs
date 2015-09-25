@@ -25,12 +25,15 @@ namespace LayoutSamples
 			switch (currentState) {
 			case 0:
 				layout.Spacing = 0;
+				StackChangeButton.Text = "Spacing: 0";
 				break;
 			case 1:
 				layout.Spacing = 1;
+				StackChangeButton.Text = "Spacing: 1";
 				break;
 			case 2:
 				layout.Spacing = 10;
+				StackChangeButton.Text = "Spacing: 10";
 				break;
 			}
 
