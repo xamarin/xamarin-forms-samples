@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BDF56BC6-79B7-418A-83D7-E7C2B55E96CC}</ProjectGuid>
+    <ProjectGuid>{59FD9A84-36A6-4BF1-A55A-AABDAC6DD8B3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>UsingUITest.UITests</RootNamespace>
     <AssemblyName>UsingUITest.UITests</AssemblyName>
@@ -29,20 +29,33 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.UITest">
       <HintPath>..\packages\Xamarin.UITest.1.1.1\lib\Xamarin.UITest.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="iOSTest.cs" />
-    <Compile Include="AndroidTest.cs" />
-    <Compile Include="CrossPlatformTests.cs" />
+    <Compile Include="Tests.cs" />
+    <Compile Include="AppInitializer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iOS\UsingUITest.iOS.csproj">
+      <Project>{5B64324F-7592-4B7F-87EE-85583DA46A61}</Project>
+      <Name>UsingUITest.iOS</Name>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Droid\UsingUITest.Droid.csproj">
+      <Project>{C688C9C0-863D-4CA5-814C-52A04C88678A}</Project>
+      <Name>UsingUITest.Droid</Name>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
 </Project>
