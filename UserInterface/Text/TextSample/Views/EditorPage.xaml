@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="TextSample.EditorPage"
+Title="Editor Demo - XAML">
+	<ContentPage.Content>
+		<StackLayout Padding="5,10">
+			<Label Text="This page demonstrates the Editor View. The Editor is used for collecting text that is expected to take more than one line." />
+			<Editor Text="Xamarin Blue" BackgroundColor="#2c3e50" HeightRequest="100" />
+			<Editor Text="Default starting text" />
+			<Editor IsEnabled="false" Text="This is a disabled editor" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

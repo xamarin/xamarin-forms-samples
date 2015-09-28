@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="TextSample.OrderPageXaml"
+Title="Order Page - XAML" >
+	<ContentPage.Content>
+		<ScrollView>
+			<Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="15">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="50" />
+					<RowDefinition Height="50" />
+					<RowDefinition Height="50" />
+					<RowDefinition Height="50" />
+					<RowDefinition Height="50" />
+					<RowDefinition Height="50" />
+					<RowDefinition Height="50" />
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="90" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+				<Label Text="Purchaser Name:" Grid.Column="0" Grid.Row="0" />
+				<Entry Placeholder="Full Name on Card" Grid.Column="1" Grid.Row="0" />
+				<Label Text="Billing Address:" Grid.Column="0" Grid.Row="1" />
+				<Editor Grid.Column="1" Grid.Row="1" />
+				<Label Text="Tip:" FontAttributes="Bold" Grid.Column="0" Grid.Row="2"  />
+				<Entry Keyboard="Numeric" Grid.Row="2" Grid.Column="1" />
+				<Label Text="Phone Number:" Grid.Column="0" Grid.Row="3" />
+				<Entry Keyboard="Telephone" Grid.Row="3" Grid.Column="1" />
+				<Label Text="Comments:" Grid.Column="0" Grid.Row="4" />
+				<Editor Grid.Column="1" Grid.Row = "4" />
+				<Label Grid.Column="1" Grid.Row="5">
+					<Label.FormattedText>
+						<FormattedString>
+							<FormattedString.Spans>
+								<Span Text="Wait! " ForegroundColor="Red" />
+								<Span Text="Please double check that everything is right." />
+							</FormattedString.Spans>
+						</FormattedString>
+					</Label.FormattedText>
+				</Label>
+				<Button Text="Save" TextColor="White" Grid.Row="6" Grid.Column="1" BackgroundColor="Gray" />
+			</Grid>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

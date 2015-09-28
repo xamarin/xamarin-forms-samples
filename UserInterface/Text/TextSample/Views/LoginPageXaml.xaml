@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="TextSample.LoginPageXaml"
+Title="Login Page - XAML" >
+	<ContentPage.Content>
+		<StackLayout Padding="10,0">
+			<Label FontSize="Large" HorizontalOptions="Center" Text="Traditional Login Form" />
+			<Frame>
+				<Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="50" />
+						<RowDefinition Height="50" />
+						<RowDefinition Height="50" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="80" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<Label Text="Username" FontSize="Small" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" />
+					<Label Text="Password" FontSize="Small" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" />
+					<Entry Grid.Row="0" Grid.Column="1" />
+					<Entry Grid.Row="1" Grid.Column="1" IsPassword="true" />
+					<Button Text="Log In" TextColor="White" Grid.Row="2" Grid.Column="1" BackgroundColor="Gray" />
+				</Grid>
+			</Frame>
+			<Label FontSize="Large" HorizontalOptions="Center" Text="Modern Login Form" />
+			<Frame>
+				<StackLayout>
+					<Entry Placeholder="Username" HorizontalOptions="Fill" />
+					<Entry Placeholder="Password" IsPassword="true" HorizontalOptions="Fill" />
+					<Button Text="Log In" TextColor="White"  BackgroundColor="Gray" HorizontalOptions="Fill" />
+				</StackLayout>
+			</Frame>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
