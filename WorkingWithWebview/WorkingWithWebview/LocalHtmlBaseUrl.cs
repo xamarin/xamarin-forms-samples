@@ -29,10 +29,8 @@ namespace WorkingWithWebview
 </body>
 </html>";
 
-			if (Device.OS != TargetPlatform.iOS) {
-				// the BaseUrlWebViewRenderer does this for iOS, until bug is fixed
-				htmlSource.BaseUrl = DependencyService.Get<IBaseUrl> ().Get ();
-			}
+			htmlSource.BaseUrl = DependencyService.Get<IBaseUrl> ().Get ();
+
 
 			browser.Source = htmlSource;
 

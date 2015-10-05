@@ -25,12 +25,12 @@ namespace WorkingWithFonts
 		public FontPageCs ()
 		{
 			var label = new Label {
-				Text = "Hello, Forms!",
+				Text = "Hello, Xamarin.Forms!",
 				FontFamily = Device.OnPlatform (
 					"SF Hollywood Hills",
 					null,
-					null
-				), // set only for iOS
+					@"\Assets\Fonts\SF Hollywood Hills.ttf#SF Hollywood Hills"
+				), // set for iOS & Windows Phone (Android done in custom renderer)
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 
@@ -42,10 +42,14 @@ namespace WorkingWithFonts
 			);
 
 			var myLabel = new MyLabel {
-				Text = "MyLabel for Android!",
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 			};
+            myLabel.Text = Device.OnPlatform(
+                "MyLabel for iOS!",
+                "MyLabel for Android!",
+                "MyLabel for Windows Phone!"
+            );
 			myLabel.FontSize = Device.OnPlatform (
 				Device.GetNamedSize (NamedSize.Small, myLabel),
 				Device.GetNamedSize (NamedSize.Medium, myLabel), // will get overridden in custom Renderer
