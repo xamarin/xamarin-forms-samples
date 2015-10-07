@@ -6,8 +6,6 @@ namespace WorkingWithListview
 {	
 	public partial class UnevenRowsXaml : ContentPage
 	{	
-		// DOESN'T WORK ON iOS YET
-
 		public UnevenRowsXaml ()
 		{
 			InitializeComponent ();
