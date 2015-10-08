@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 x:Class="LayoutSamples.AbsoluteLayoutDemoXaml"
-Title="AbsoluteLayout Demo - XAML">
+Title="AbsoluteLayout Demo - XAML" BackgroundColor="White">
 	<ContentPage.Content>
 		<AbsoluteLayout x:Name="absLayout" >
 			<AbsoluteLayout x:Name="box" BackgroundColor="Blue" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,.25,.5">

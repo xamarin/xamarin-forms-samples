@@ -11,7 +11,7 @@ namespace LayoutSamples
 		public AbsoluteLayoutDemoXaml()
 		{
 			InitializeComponent();
-			status.Text = "the anchor point of a child is interpollated based on its position\n\n" +
+			status.Text = "the anchor point of a child is interpolated based on its position\n\n" +
 				"the white vertical line represents the X anchor point";
 		}
 

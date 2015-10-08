@@ -33,7 +33,7 @@ namespace LayoutSamples
 			absLayout.Children.Add (box, new Rectangle (0, 0, .25, .5), AbsoluteLayoutFlags.All);
 			this.layout = new StackLayout { Spacing = 10, Padding = new Thickness (20) };
 			status = new Label { FontSize = 20, XAlign = TextAlignment.Center, TextColor = Color.Black };
-			status.Text = "the anchor point of a child is interpollated based on its position\n\n" +
+			status.Text = "the anchor point of a child is interpolated based on its position\n\n" +
 				"the white vertical line represents the X anchor point";
 			this.coords = new Label { FontSize = 20, XAlign = TextAlignment.Center, TextColor = Color.Black };
 			flagsBounds = new Label { FontSize = 20, XAlign = TextAlignment.Center, TextColor = Color.Black };

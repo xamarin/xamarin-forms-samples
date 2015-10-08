@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="TheBusinessTumble.StackLayoutPage" 
+BackgroundColor="Maroon" 
+Title="StackLayouts">
+	<ContentPage.Content>
+		<StackLayout Spacing="0" Padding="0" BackgroundColor="Maroon">
+			<BoxView HorizontalOptions="FillAndExpand" HeightRequest="100" VerticalOptions="Start" Color="Gray" />
+			<Button HeightRequest="60" WidthRequest="60" BorderRadius="30" BackgroundColor="Red" HorizontalOptions="Center" VerticalOptions="Start" />
+			<StackLayout HeightRequest="100" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20" BackgroundColor="Maroon">
+				<Label Text="User Name" FontSize="28" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" />
+				<Label Text="Bio + Hashtags" FontSize="18" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" HeightRequest="50" BackgroundColor="White" Padding="5">
+				<StackLayout Spacing="0" BackgroundColor="White" Orientation="Horizontal" HorizontalOptions="Start">
+					<Button BackgroundColor="#523222" WidthRequest="40" HeightRequest="40" BorderRadius="20" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+					<Label TextColor="Black" Text="Accent Color" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+				</StackLayout>
+				<StackLayout Spacing="0" BackgroundColor="White" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+					<Button BackgroundColor="#f46f22" WidthRequest="40" HeightRequest="40" BorderRadius="20" HorizontalOptions="Start" VerticalOptions="Center" />
+					<Label TextColor="Black" Text="Primary Color" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+				</StackLayout>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

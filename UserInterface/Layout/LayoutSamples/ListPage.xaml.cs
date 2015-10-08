@@ -28,6 +28,8 @@ namespace LayoutSamples
 			listOfPages.Add (new StackLayoutDemoCode ());
 			listOfPages.Add (new LabelGridXaml ());
 			listOfPages.Add (new LabelGridCode ());
+			listOfPages.Add (new ScrollingDemoXAML ());
+			listOfPages.Add (new ScrollingDemoCode ());
 
 			listPages.ItemsSource = listOfPages;
 			listPages.ItemSelected += ListPages_ItemSelected;
