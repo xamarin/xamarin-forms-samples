@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1">
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_marginTop="-95dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/toggleFlashButton"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/NoFlashButton" />
+    <Button
+        android:id="@+id/switchCameraButton"
+        android:layout_width="35dp"
+        android:layout_height="26dp"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/ToggleCameraButton" />
+    <Button
+        android:id="@+id/takePhotoButton"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center|bottom"
+        android:background="@drawable/TakePhotoButton" />
+</FrameLayout>
