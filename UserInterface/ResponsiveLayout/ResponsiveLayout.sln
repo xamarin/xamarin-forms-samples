@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBusinessTumble", "TheBusinessTumble\TheBusinessTumble.csproj", "{467976A1-2377-497A-A975-34F4B1295415}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsiveLayout", "TheBusinessTumble\ResponsiveLayout.csproj", "{467976A1-2377-497A-A975-34F4B1295415}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBusinessTumble.iOS", "iOS\TheBusinessTumble.iOS.csproj", "{947DCD2D-6083-42FD-A30B-114FF437B3D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOS", "iOS\iOS.csproj", "{947DCD2D-6083-42FD-A30B-114FF437B3D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBusinessTumble.Droid", "Droid\TheBusinessTumble.Droid.csproj", "{5D892129-D547-4BE6-BCBD-D0527BE4CA71}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBusinessTumble.UITests", "UITests\TheBusinessTumble.UITests.csproj", "{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Droid", "Droid\Droid.csproj", "{5D892129-D547-4BE6-BCBD-D0527BE4CA71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinPhone", "WinPhone\WinPhone.csproj", "{D9669267-CC1F-418D-B33D-3411D7741664}"
 EndProject
@@ -29,26 +27,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Release|ARM.ActiveCfg = Release|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Release|iPhone.Build.0 = Release|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{352F81F2-C8AA-4525-8D2F-AA2F46C327FA}.Release|x86.ActiveCfg = Release|Any CPU
 		{467976A1-2377-497A-A975-34F4B1295415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{467976A1-2377-497A-A975-34F4B1295415}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{467976A1-2377-497A-A975-34F4B1295415}.Debug|ARM.ActiveCfg = Debug|Any CPU

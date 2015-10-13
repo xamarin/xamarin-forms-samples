@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="ResponsiveLayout.GridPageXaml"
+Title="Grid - XAML">
+	<ContentPage.Content>
+		<Grid x:Name="outerGrid">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="60" />
+			</Grid.RowDefinitions>
+			<Grid x:Name="innerGrid" Grid.Row="0" Padding="10">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*" />
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+				<Image Source="deer.jpg" Grid.Row="0" Grid.Column="0" HeightRequest="300" WidthRequest="300" />
+				<Grid x:Name="controlsGrid" Grid.Row="0" Grid.Column="1" >
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<Label Text="Name:" Grid.Row="0" Grid.Column="0" />
+					<Label Text="Date:" Grid.Row="1" Grid.Column="0" />
+					<Label Text="Tags:" Grid.Row="2" Grid.Column="0" />
+					<Entry Grid.Row="0" Grid.Column="1" />
+					<Entry Grid.Row="1" Grid.Column="1" />
+					<Entry Grid.Row="2" Grid.Column="1" />
+				</Grid>
+			</Grid>
+			<Grid x:Name="buttonsGrid" Grid.Row="1">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+				<Button Text="Previous" Grid.Column="0" />
+				<Button Text="Save" Grid.Column="1" />
+				<Button Text="Next" Grid.Column="2" />	
+			</Grid>
+			
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>
