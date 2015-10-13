@@ -10,26 +10,29 @@ namespace LayoutSamples
 		public ListPage ()
 		{
 			InitializeComponent ();
-			List<Page> listOfPages = new List<Page> ();
-			listOfPages.Add(new MonkeyMoneyXaml ());
-			listOfPages.Add (new MonkeyMoneyCode ());
-			listOfPages.Add (new MonkeyMusic ());
-			listOfPages.Add (new MonkeyMusicCode ());
-			listOfPages.Add (new AbsoluteLayoutDemoXaml ());
-			listOfPages.Add (new AbsoluteLayoutDemoCode ());
-			listOfPages.Add (new RelativeLayoutDemo ());
-			listOfPages.Add (new RelativeLayoutDemoCode ());
-			listOfPages.Add (new RelativeLayoutExploration ());
-			listOfPages.Add (new RelativeLayoutExplorationCode ());
-			listOfPages.Add (new AbsoluteLayoutExplorationCode ());
-			listOfPages.Add (new AbsoluteLayoutExploration ());
-			listOfPages.Add (new GridExploration ());
-			listOfPages.Add (new StackLayoutDemo ());
-			listOfPages.Add (new StackLayoutDemoCode ());
-			listOfPages.Add (new LabelGridXaml ());
-			listOfPages.Add (new LabelGridCode ());
-			listOfPages.Add (new ScrollingDemoXAML ());
-			listOfPages.Add (new ScrollingDemoCode ());
+			List<Page> listOfPages = new List<Page> () {
+				new CalculatorGridXAML (),
+				new CalculatorGridCode (),
+				new MonkeyMoneyXaml (),
+				new MonkeyMoneyCode (),
+				new MonkeyMusic (),
+				new MonkeyMusicCode (),
+				new AbsoluteLayoutDemoXaml (),
+				new AbsoluteLayoutDemoCode (),
+				new RelativeLayoutDemo (),
+				new RelativeLayoutDemoCode (),
+				new RelativeLayoutExploration (),
+				new RelativeLayoutExplorationCode (),
+				new AbsoluteLayoutExploration (),
+				new AbsoluteLayoutExplorationCode (),
+				new GridExploration (),
+				new StackLayoutDemo (),
+				new StackLayoutDemoCode (),
+				new LabelGridXaml (),
+				new LabelGridCode (),
+				new ScrollingDemoXAML (),
+				new ScrollingDemoCode ()
+			};
 
 			listPages.ItemsSource = listOfPages;
 			listPages.ItemSelected += ListPages_ItemSelected;
