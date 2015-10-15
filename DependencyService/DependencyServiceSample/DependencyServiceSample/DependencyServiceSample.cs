@@ -22,10 +22,10 @@ namespace DependencyServiceSample
 			speak.Clicked += (sender, e) => {
 				DependencyService.Get<ITextToSpeech>().Speak("Hello from Xamarin Forms");
 			};
-			stack.Children.Add(speak);
+			//stack.Children.Add(speak);
 
 			var button = new Button {
-				Text = "Click for batter info",
+				Text = "Click for battery info",
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 			};
@@ -47,7 +47,7 @@ namespace DependencyServiceSample
 					break;
 				case PowerSource.Other:
 				default:
-					button.Text = "Other - ";
+					button.Text = "Unknown - ";
 					break;
 				}
 				switch (bat.Status){
