@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="CustomRenderer.DetailPage">
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="20, 40, 20, 20" Android="20, 20, 20, 20" WinPhone="20, 20, 20, 20" />
+	</ContentPage.Padding>
+	<ContentPage.Content>
+		<StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+			<Label Text="Xamarin.Forms Detail Page" />
+			<Label x:Name="detailLabel" />
+			<Button x:Name="dismissButton" Clicked="OnButtonClicked" Text="Dismiss" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
