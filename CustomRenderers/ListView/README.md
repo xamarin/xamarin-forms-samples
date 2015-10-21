@@ -1,5 +1,5 @@
-Xamarin.Forms ListView Custom Renderer
-======================================
+ListView Custom Renderer
+========================
 
 This sample demonstrates a custom renderer that encapsulates platform-specific list controls and native cell layouts. 
 

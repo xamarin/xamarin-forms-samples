@@ -1,5 +1,5 @@
-Xamarin.Forms ContentPage Custom Renderer
-=========================================
+ContentPage Custom Renderer
+===========================
 
 This sample demonstrates a custom renderer for a `ContentPage`, enabling developers to override the default native rendering with their own platform-specific customization.
 
