@@ -43,7 +43,7 @@
       <HintPath>..\packages\Xamarin.Forms.1.5.1.6471\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
     </Reference>
     <Reference Include="Parse.Android">
-      <HintPath>..\packages\parse.1.6.0\lib\MonoAndroid\Parse.Android.dll</HintPath>
+      <HintPath>..\packages\parse.1.6.1\lib\MonoAndroid\Parse.Android.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />

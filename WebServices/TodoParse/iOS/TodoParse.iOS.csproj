@@ -66,7 +66,7 @@
       <HintPath>..\packages\Xamarin.TestCloud.Agent.0.16.2\lib\Xamarin.iOS10\Calabash.dll</HintPath>
     </Reference>
     <Reference Include="Parse.iOS">
-      <HintPath>..\packages\parse.1.6.0\lib\Xamarin.iOS10\Parse.iOS.dll</HintPath>
+      <HintPath>..\packages\parse.1.6.1\lib\Xamarin.iOS10\Parse.iOS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
