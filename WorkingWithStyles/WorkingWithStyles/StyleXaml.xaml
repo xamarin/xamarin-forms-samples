@@ -13,7 +13,7 @@
 				<Setter Property="HeightRequest" Value="42"/>
 			</Style>
 			<Style TargetType="BoxView">
-				<Setter Property="Color" Value="Blue"/>
+				<Setter Property="Color" Value="Aqua"/>
 			</Style>
 		</ResourceDictionary>
 	</ContentPage.Resources>
@@ -30,11 +30,13 @@
 				Style="{StaticResource CustomStyle}"/>
 		
 		<!-- defined in the Application's global ResourceDictionary -->
-		<Label Text="This uses a custom style inherited dynamically from the Application ResourceDictionary" 
+		<Label Text="This uses a custom style inherited dynamically from the Application ResourceDictionary in XAML" 
 				Style="{StaticResource AppStyle}"/>
 
 		<!-- uses implicit style that applies to all BoxViews, 
 			 the one in the Page above overrides the App-level one -->
+			 <Label Text="This uses an implicit style from the Application ResourceDictionary in XAML" />
+
 		<BoxView />
 
 	</StackLayout>
