@@ -36,6 +36,19 @@ namespace WorkingWithFiles.WinPhone
 			return text;
 		}
 
-		#endregion
+        public bool FileExists(string filename)
+        {
+            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+            try
+            {
+                localFolder.GetFileAsync(filename).AsTask().Wait ();
+                return true;
+            }
+            catch {
+                return false;
+            }
+        }
+
+        #endregion
     }
 }
