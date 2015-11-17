@@ -11,11 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloXamarinFormsWorldXaml.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloXamarinFormsWorldXaml", "HelloXamarinFormsWorldXaml\HelloXamarinFormsWorldXaml\HelloXamarinFormsWorldXaml.csproj", "{CBA618B9-671A-4297-A22F-B60F02DB3BCA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3CC27EF1-D3A5-4D67-B11C-E2D26445AC70}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\packages.config = .nuget\packages.config
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -220,8 +215,6 @@ Global
 		{EFA55D02-19B5-4DB8-80A0-4F76A48931D0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{EFA55D02-19B5-4DB8-80A0-4F76A48931D0}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
 		{EFA55D02-19B5-4DB8-80A0-4F76A48931D0}.Release|x86.ActiveCfg = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
