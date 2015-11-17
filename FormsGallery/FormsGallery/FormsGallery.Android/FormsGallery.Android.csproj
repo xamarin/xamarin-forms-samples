@@ -71,10 +71,10 @@
       <HintPath>..\..\packages\Xamarin.Forms.2.0.0.6480\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Maps">
-      <HintPath>..\..\packages\Xamarin.Forms.Maps.1.5.2.6477-pre2\lib\MonoAndroid10\Xamarin.Forms.Maps.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.0.0.6480\lib\MonoAndroid10\Xamarin.Forms.Maps.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Maps.Android">
-      <HintPath>..\..\packages\Xamarin.Forms.Maps.1.5.2.6477-pre2\lib\MonoAndroid10\Xamarin.Forms.Maps.Android.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.0.0.6480\lib\MonoAndroid10\Xamarin.Forms.Maps.Android.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform">
       <HintPath>..\..\packages\Xamarin.Forms.2.0.0.6480\lib\MonoAndroid10\Xamarin.Forms.Platform.dll</HintPath>
