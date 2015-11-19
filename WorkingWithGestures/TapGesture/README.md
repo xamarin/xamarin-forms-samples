@@ -9,7 +9,7 @@ These samples relate to the [Working with Gestures in Xamarin.Forms](http://deve
 	tapGestureRecognizer.Tapped += OnTapGestureRecognizerTapped;
 	frame.GestureRecognizers.Add(tapGestureRecognizer);
 
-![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/WorkingWithGestures/Screenshots/Gestures-sml.png "Gestures")
+![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/WorkingWithGestures/TapGesture/Screenshots/Gestures-sml.png "Gestures")
 
 
 Authors
