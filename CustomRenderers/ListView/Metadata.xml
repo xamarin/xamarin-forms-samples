@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>c6d93868-2680-4294-aba4-ec9435c04155</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Advanced</Level>
+	<Tags>User Interface, Custom Renderers, Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>This sample demonstrates a custom renderer that encapsulates platform-specific list controls and native cell layouts.</Brief>
+</SampleMetadata>
