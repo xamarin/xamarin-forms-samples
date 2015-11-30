@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>2c8c10ad-a63a-4397-9f7c-a6fef186914d</ID>
+	<IsFullApplication>true</IsFullApplication>
+	<Level>Intermediate</Level>
+	<Tags>User Interface</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+    <LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+    <Brief>This application demonstrates how various layouts can be used to create user interfaces that work well in multiple orientations. </Brief>
+</SampleMetadata>
