@@ -5,6 +5,12 @@ x:Class="LayoutSamples.ListPage"
 Title = "Layout Demos and Examples">
 	<ContentPage.Content>
 		<ListView x:Name="listPages">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<TextCell Text="{Binding Title}" />
+				</DataTemplate>
+			</ListView.ItemTemplate>
+
 
 		</ListView>
 	</ContentPage.Content>
