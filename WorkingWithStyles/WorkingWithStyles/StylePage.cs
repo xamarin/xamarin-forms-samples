@@ -51,6 +51,10 @@ namespace WorkingWithStyles
 						Text = "This uses a custom style inherited dynamically from the Application ResourceDictionary",
 						Style = Application.Current.Resources["AppStyle"] as Style
 					},
+					// global style defined in the Application subclass
+					new Label {
+						Text = "This uses an implicit style from the Application ResourceDictionary",
+					},
 					// uses implicit style that applies to all BoxViews 
 					new BoxView ()
 				}
