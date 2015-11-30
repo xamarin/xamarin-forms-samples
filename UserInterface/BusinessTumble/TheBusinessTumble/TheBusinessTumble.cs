@@ -13,7 +13,7 @@ namespace TheBusinessTumble
 			nav.BarTextColor = Color.White;
 
 
-			var listpage = new ContentPage ();
+			var listpage = new ContentPage();
 			listpage.Content = new ListView { ItemsSource = new List<ContentPage> {
 					new StackLayoutPage(),
 					new AbsoluteLayoutPage(),

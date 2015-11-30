@@ -11,6 +11,10 @@ namespace TheBusinessTumble
 		{
 			InitializeComponent ();
 		}
+
+		public override string ToString(){
+			return this.Title;
+		}
 	}
 }
 
