@@ -10,8 +10,6 @@ Title = "Layout Demos and Examples">
 					<TextCell Text="{Binding Title}" />
 				</DataTemplate>
 			</ListView.ItemTemplate>
-
-
 		</ListView>
 	</ContentPage.Content>
 </ContentPage>
