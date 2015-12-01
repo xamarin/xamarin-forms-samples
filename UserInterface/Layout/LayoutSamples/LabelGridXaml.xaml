@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="LayoutSamples.LabelGridXaml"
+Title = "Label Grid Demo - XAML">
+	<ContentPage.Content>
+		<Grid>
+		  <Grid.RowDefinitions>
+		  	<RowDefinition Height="*" />
+		    <RowDefinition Height="*" />
+		  </Grid.RowDefinitions>
+		  <Grid.ColumnDefinitions>
+		    <ColumnDefinition Width="*" />
+		    <ColumnDefinition Width="*" />
+		  </Grid.ColumnDefinitions>
+		  <Label Text="Top Left" Grid.Row="0" Grid.Column="0" FontSize="20" />
+		  <Label Text="Top Right" Grid.Row="0" Grid.Column="1" FontSize="20" />
+		  <Label Text="Bottom Left" Grid.Row="1" Grid.Column="0" FontSize="20" />
+		  <Label Text="Bottom Right" Grid.Row="1" Grid.Column="1" FontSize="20" />
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="ResponsiveLayout.StackLayoutPageXaml"
+Title="StackLayout - XAML">
+	<ContentPage.Content>
+		<StackLayout Spacing="10" Padding="5" Orientation="Vertical" x:Name="outerStack"> <!-- can change orientation to make responsive -->
+			<ScrollView>
+				<StackLayout Spacing="5" HorizontalOptions="FillAndExpand" WidthRequest="1000"> <!-- used for controls, etc. -->
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Name: " FontSize="20" WidthRequest="75" HorizontalOptions="Start" VerticalOptions="Center" />
+						<Entry Text="deer.jpg" HorizontalOptions="FillAndExpand" />
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Date: " FontSize="20" WidthRequest="75" HorizontalOptions="Start" VerticalOptions="Center" />
+						<Entry Text="07/05/2015" HorizontalOptions="FillAndExpand" />
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Tags: "  FontSize="20" WidthRequest="75"  HorizontalOptions="Start" VerticalOptions="Center" />
+						<Entry Text="deer, tiger" HorizontalOptions="FillAndExpand" />
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Button Text="Save" HorizontalOptions="FillAndExpand" />
+					</StackLayout>
+				</StackLayout>
+			</ScrollView>
+			<Image  Source="deer.jpg" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="LayoutSamples.MonkeyMoneyXaml"
+Title="MonkeyMoney - XAML" BackgroundColor="Green">
+	<ContentPage.Content>
+		<StackLayout Padding="0,10,0,0">
+			<StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Padding="10,0">
+				<Button HeightRequest="50" WidthRequest="50" Text="?" FontSize="20" TextColor="White" HorizontalOptions="StartAndExpand" BackgroundColor="Lime" BorderRadius="25" />
+				<Button HeightRequest="50" WidthRequest="50" Text="2" FontSize="20" TextColor = "White" HorizontalOptions="EndAndExpand" BackgroundColor="Lime" BorderRadius="25" FontAttributes="Bold" />
+			</StackLayout>
+			<StackLayout VerticalOptions="Fill">
+				<StackLayout HorizontalOptions="Center">
+					<Label FontSize="100" Text="$0" TextColor="White" />
+				</StackLayout>
+			</StackLayout>
+			<Grid VerticalOptions="FillAndExpand">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*" />
+					<RowDefinition Height="*" />
+					<RowDefinition Height="*" />
+					<RowDefinition Height="*" />
+				</Grid.RowDefinitions>
+
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+				<Button Text="1" Grid.Row="0" Grid.Column="0" TextColor="White" FontSize="Large" BackgroundColor="Green" />
+				<Button Text="2" Grid.Row="0" Grid.Column="1" TextColor="White" FontSize="Large" BackgroundColor="Green" />
+				<Button Text="3" Grid.Row="0" Grid.Column="2" TextColor="White" FontSize="Large" BackgroundColor="Green" />
+				<Button Text="4" Grid.Row="1" Grid.Column="0" TextColor="White" FontSize="Large" BackgroundColor="Green" />
+				<Button Text="5" Grid.Row="1" Grid.Column="1" TextColor="White" FontSize="Large" BackgroundColor="Green" />
+				<Button Text="6" Grid.Row="1" Grid.Column="2" TextColor="White" FontSize="Large" BackgroundColor="Green" />
+				<Button Text="7" Grid.Row="2" Grid.Column="0" TextColor="White" FontSize="Large" BackgroundColor="Green" />
+				<Button Text="8" Grid.Row="2" Grid.Column="1" TextColor="White" FontSize="Large" BackgroundColor="Green" />
+				<Button Text="9" Grid.Row="2" Grid.Column="2" TextColor="White" FontSize="Large" BackgroundColor="Green" />
+				<Button Text="0" Grid.Row="3" Grid.Column="1" TextColor="White" FontSize="Large" BackgroundColor="Green" />
+				<Button Text="&lt;-" Grid.Row="3" Grid.Column="2" TextColor="White" FontSize="Large" BackgroundColor="Green" />
+			</Grid>
+			<AbsoluteLayout VerticalOptions="End" BackgroundColor="Green">
+				<Button BackgroundColor="White" TextColor="Lime" Text="REQUEST" BorderRadius="0" FontSize="Large" AbsoluteLayout.LayoutBounds="0,1,.5,1" AbsoluteLayout.LayoutFlags="All" />
+				<Button BackgroundColor="White" TextColor="Lime" Text="PAY" BorderRadius="0" FontSize="Large" AbsoluteLayout.LayoutBounds="1,1,.49,1" AbsoluteLayout.LayoutFlags="All" />
+			</AbsoluteLayout>
+
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
