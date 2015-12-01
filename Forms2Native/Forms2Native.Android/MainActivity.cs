@@ -1,11 +1,7 @@
-﻿using System;
-using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using Android.App;
 using Android.OS;
-using System.IO;
+
+using Xamarin.Forms;
 
 namespace Forms2Native
 {
@@ -19,11 +15,19 @@ namespace Forms2Native
 		{
 			base.OnCreate (bundle);
 
-			Xamarin.Forms.Forms.Init (this, bundle);
+			Forms.Init (this, bundle);
 
 			LoadApplication (new App ());
+
+			MessagingCenter.Subscribe<MyFirstPage, NativeNavigationArgs>(
+				this,
+				App.NativeNavigationMessage,
+				HandleNativeNavigationMessage);
+		}
+
+		private void HandleNativeNavigationMessage(MyFirstPage sender, NativeNavigationArgs args)
+		{
+			StartActivity(typeof(MyThirdActivity));
 		}
 	}
 }
-
-

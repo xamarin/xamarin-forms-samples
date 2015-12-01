@@ -13,15 +13,25 @@ using Forms2Native;
 
 namespace Forms2Native.WinPhone
 {
-	public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
+    public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
     {
-        public MainPage()
+        public MainPage ()
         {
-            InitializeComponent();
+            InitializeComponent ();
 
-            Forms.Init();
-           
-			LoadApplication (new Forms2Native.App ());
+            Forms.Init ();
+
+            LoadApplication (new Forms2Native.App ());
+
+            MessagingCenter.Subscribe<MyFirstPage, NativeNavigationArgs> (
+	            this,
+	            App.NativeNavigationMessage,
+	            HandleNativeNavigationMessage);
+        }
+
+        private void HandleNativeNavigationMessage (MyFirstPage sender, NativeNavigationArgs args)
+        {
+            sender.Navigation.PushAsync (args.Page);
         }
     }
 }
