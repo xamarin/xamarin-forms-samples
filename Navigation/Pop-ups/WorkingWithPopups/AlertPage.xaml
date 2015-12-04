@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="WorkingWithPopups.AlertPage">
+	<ContentPage.Content>
+		<StackLayout Padding="0,20,0,0">
+			<Label Text="DisplayAlert" FontSize="Large" HorizontalOptions="Center" />
+			<Button Text="Alert Simple" Clicked="OnAlertSimpleClicked" />
+			<Button Text="Alert Yes/No" Clicked="OnAlertYesNoClicked" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

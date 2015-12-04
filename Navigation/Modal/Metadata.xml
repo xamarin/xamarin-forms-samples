@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>4b3541ca-2da8-405e-b729-58c7fd166ea9</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Brief>This sample demonstrates how to navigate to modal pages.</Brief>
+	<Level>Beginner</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>Navigation, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>
