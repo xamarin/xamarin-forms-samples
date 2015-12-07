@@ -7,5 +7,5 @@
 	<SupportedPlatforms>iOS, Android</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
-	<Brief>This sample demonstrates a custom renderer for the `Map` control, enabling developers to override the default native rendering with their own platform-specific customization.</Brief>
+	<Brief>This sample demonstrates a custom renderer for the Map control, enabling developers to override the default native rendering with their own platform-specific customization.</Brief>
 </SampleMetadata>
