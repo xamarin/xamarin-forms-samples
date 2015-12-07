@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>ae3ca4ad-f0a0-4bbe-923a-e6881d629e83</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Advanced</Level>
+	<Tags>User Interface, Custom Renderers, Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+    <Brief>This sample demonstrates a custom renderer for a HybridWebView custom control, that demonstrates how to enhance the platform-specific web controls to allow C# code to be invoked from JavaScript.</Brief>
+</SampleMetadata>
