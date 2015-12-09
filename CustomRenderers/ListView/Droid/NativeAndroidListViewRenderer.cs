@@ -25,6 +25,15 @@ namespace CustomRenderer.Droid
 			}
 		}
 
+		protected override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
+		{
+			base.OnElementPropertyChanged (sender, e);
+
+			if (e.PropertyName == NativeListView.ItemsProperty.PropertyName) {
+				Control.Adapter = new NativeAndroidListViewAdapter (Forms.Context as Android.App.Activity, Element as NativeListView);
+			}
+		}
+
 		void OnItemClick (object sender, Android.Widget.AdapterView.ItemClickEventArgs e)
 		{			
 			((NativeListView)Element).NotifyItemSelected (((NativeListView)Element).Items.ToList () [e.Position - 1]);

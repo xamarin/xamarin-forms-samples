@@ -20,6 +20,15 @@ namespace CustomRenderer.iOS
 				Control.Source = new NativeiOSListViewSource (e.NewElement as NativeListView);
 			}
 		}
+
+		protected override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
+		{
+			base.OnElementPropertyChanged (sender, e);
+
+			if (e.PropertyName == NativeListView.ItemsProperty.PropertyName) {
+				Control.Source = new NativeiOSListViewSource (Element as NativeListView);
+			}
+		}
 	}
 }
 
