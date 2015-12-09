@@ -33,6 +33,16 @@ namespace CustomRenderer.WinPhone81
             }  
         }
 
+        protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            base.OnElementPropertyChanged(sender, e);
+
+            if (e.PropertyName == NativeListView.ItemsProperty.PropertyName)
+            {
+                listView.ItemsSource = ((NativeListView)Element).Items;
+            }
+        }
+
         void OnSelectedItemChanged(object sender, SelectionChangedEventArgs e)
         {
             ((NativeListView)Element).NotifyItemSelected(listView.SelectedItem);
