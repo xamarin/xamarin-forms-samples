@@ -104,6 +104,7 @@
     <AndroidResource Include="Resources\raw\TodoSQLite.db3" />
     <AndroidResource Include="Resources\drawable\plus.png" />
     <AndroidResource Include="Resources\drawable\check2x.png" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

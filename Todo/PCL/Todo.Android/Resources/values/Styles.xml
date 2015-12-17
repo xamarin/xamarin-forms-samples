@@ -1,0 +1,6 @@
+﻿<resources>
+	<style name="Theme.Todo" parent="android:Theme.Holo.Light">
+		<!-- Your customizations go here -->
+
+	</style>
+</resources>
