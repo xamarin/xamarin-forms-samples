@@ -11,18 +11,18 @@ namespace MasterDetailPageNavigation
 		{
 			InitializeComponent ();
 
-			var masterPageItems = new List<MasterPageItems> ();
-			masterPageItems.Add (new MasterPageItems {
+			var masterPageItems = new List<MasterPageItem> ();
+			masterPageItems.Add (new MasterPageItem {
 				Title = "Contacts",
 				IconSource = "contacts.png",
 				TargetType = typeof(ContactsPage)
 			});
-			masterPageItems.Add (new MasterPageItems {
+			masterPageItems.Add (new MasterPageItem {
 				Title = "TodoList",
 				IconSource = "todo.png",
 				TargetType = typeof(TodoListPage)
 			});
-			masterPageItems.Add (new MasterPageItems {
+			masterPageItems.Add (new MasterPageItem {
 				Title = "Reminders",
 				IconSource = "reminders.png",
 				TargetType = typeof(ReminderPage)

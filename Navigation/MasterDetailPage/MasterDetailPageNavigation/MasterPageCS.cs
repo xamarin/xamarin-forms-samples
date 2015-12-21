@@ -11,18 +11,18 @@ namespace MasterDetailPageNavigation
 
 		public MasterPageCS ()
 		{
-			var masterPageItems = new List<MasterPageItems> ();
-			masterPageItems.Add (new MasterPageItems {
+			var masterPageItems = new List<MasterPageItem> ();
+			masterPageItems.Add (new MasterPageItem {
 				Title = "Contacts",
 				IconSource = "contacts.png",
 				TargetType = typeof(ContactsPageCS)
 			});
-			masterPageItems.Add (new MasterPageItems {
+			masterPageItems.Add (new MasterPageItem {
 				Title = "TodoList",
 				IconSource = "todo.png",
 				TargetType = typeof(TodoListPageCS)
 			});
-			masterPageItems.Add (new MasterPageItems {
+			masterPageItems.Add (new MasterPageItem {
 				Title = "Reminders",
 				IconSource = "reminders.png",
 				TargetType = typeof(ReminderPageCS)
