@@ -2,7 +2,7 @@
 
 namespace MasterDetailPageNavigation
 {
-	public class MasterPageItems
+	public class MasterPageItem
 	{
 		public string Title { get; set; }
 
