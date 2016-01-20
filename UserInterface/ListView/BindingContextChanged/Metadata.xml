@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>ef97fa34-d079-4e6b-9c3d-2950f7331b4a</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Intermediate</Level>
+	<Tags>User Interface</Tags>
+	<SupportedPlatforms>Android, iOS, Windows Phone 8.1</SupportedPlatforms>
+    <LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+    <Brief>This sample demonstrates binding context changes in a ListView custom cell in Xamarin.Forms.</Brief>
+</SampleMetadata>
