@@ -9,29 +9,32 @@ namespace TodoParse
 		{
 			InitializeComponent ();
 		}
-			
+
 		protected async override void OnAppearing ()
 		{
 			base.OnAppearing ();
 			listView.ItemsSource = await App.TodoManager.GetTasksAsync ();
 		}
 
-		void OnAddItemActivated(object sender, EventArgs e) {
+		void OnAddItemClicked (object sender, EventArgs e)
+		{
 			var todoPage = new TodoItemPage ();
-			todoPage.BindingContext = new TodoItem();
+			todoPage.BindingContext = new TodoItem ();
 			Navigation.PushAsync (todoPage);
 		}
 
-		async void OnLogoutActivated(object sender, EventArgs e) {
+		async void OnLogoutClicked (object sender, EventArgs e)
+		{
 			await App.TodoManager.LogoutAsync ();
 			Navigation.InsertPageBefore (new LoginPage (), this);
 			Navigation.PopAsync ();
 		}
 
-		void OnItemSelected (object sender, SelectedItemChangedEventArgs e) {
-			var todoPage = new TodoItemPage();
+		void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
+		{
+			var todoPage = new TodoItemPage ();
 			todoPage.BindingContext = e.SelectedItem as TodoItem;
-			Navigation.PushAsync(todoPage);
+			Navigation.PushAsync (todoPage);
 		}
 	}
 }

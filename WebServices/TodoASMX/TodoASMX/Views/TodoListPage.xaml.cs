@@ -29,7 +29,7 @@ namespace TodoASMX
 			listView.ItemsSource = await App.TodoManager.GetTodoItemsAsync ();
 		}
 
-		void OnAddItemActivated (object sender, EventArgs e)
+		void OnAddItemClicked (object sender, EventArgs e)
 		{
 			var todoItem = new TodoItem () {
 				ID = Guid.NewGuid ().ToString ()

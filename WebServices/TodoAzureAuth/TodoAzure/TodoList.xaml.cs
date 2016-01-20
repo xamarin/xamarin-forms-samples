@@ -17,7 +17,7 @@ namespace AzureTodo
 			manager = new TodoItemManager ();
 		}
 
-		async void OnLogoutActivated (object sender, EventArgs e)
+		async void OnLogoutClicked (object sender, EventArgs e)
 		{
 			DependencyService.Get<IMobileClient> ().Logout ();
 			Navigation.InsertPageBefore (new Login (), this);

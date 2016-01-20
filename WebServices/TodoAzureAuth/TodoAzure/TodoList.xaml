@@ -1,41 +1,33 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
-				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-				x:Class="AzureTodo.TodoList"
-				Title="Azure Todo">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AzureTodo.TodoList" Title="Azure Todo">
 	<ContentPage.ToolbarItems>
-		<ToolbarItem Name="Logout" Activated="OnLogoutActivated" />
+		<ToolbarItem Text="Logout" Clicked="OnLogoutClicked" />
 	</ContentPage.ToolbarItems>
 	<Grid RowSpacing="0">
-	    <Grid.RowDefinitions>
-	    	<RowDefinition Height="100" />
+		<Grid.RowDefinitions>
+			<RowDefinition Height="100" />
 			<RowDefinition Height="*" />
-	    </Grid.RowDefinitions>
-
+		</Grid.RowDefinitions>
 		<StackLayout Grid.Row="0" BackgroundColor="#5ABAFF" Padding="10,30,10,5">
 			<Label TextColor="#555555" Text="Azure App Service" />
 			<StackLayout Orientation="Horizontal">
-				<Entry x:Name="newItemName"	Placeholder="Enter new Todo item here" />
+				<Entry x:Name="newItemName" Placeholder="Enter new Todo item here" />
 				<Button Text="+" HeightRequest="30" HorizontalOptions="EndAndExpand" Clicked="OnAdd" />
 			</StackLayout>
 		</StackLayout>
-
-		<ListView x:Name="todoList"
-				ItemSelected="OnSelected"
-				IsPullToRefreshEnabled="true" Refreshing="OnRefresh"
-				Grid.Row="1">
-		  <ListView.ItemTemplate>
-		    <DataTemplate>
-		      <ViewCell>
-		         <ViewCell.ContextActions>
-		            <MenuItem Clicked="OnComplete" Text="Complete" IsDestructive="True" CommandParameter="{Binding .}"/>
-		         </ViewCell.ContextActions>
-		            <StackLayout Padding="15,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
-		                <Label Text="{Binding Name}"  />
-		            </StackLayout>
-		      </ViewCell>
-		    </DataTemplate>
-		  </ListView.ItemTemplate>
+		<ListView x:Name="todoList" ItemSelected="OnSelected" IsPullToRefreshEnabled="true" Refreshing="OnRefresh" Grid.Row="1">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<ViewCell.ContextActions>
+							<MenuItem Clicked="OnComplete" Text="Complete" IsDestructive="True" CommandParameter="{Binding .}" />
+						</ViewCell.ContextActions>
+						<StackLayout Padding="15,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
+							<Label Text="{Binding Name}" />
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
 		</ListView>
-    </Grid>
+	</Grid>
 </ContentPage>

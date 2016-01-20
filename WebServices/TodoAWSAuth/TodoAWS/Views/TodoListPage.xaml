@@ -1,15 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-			 x:Class="TodoAWSSimpleDB.TodoListPage"
-			 Title="Todo">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TodoAWSSimpleDB.TodoListPage" Title="Todo">
 	<ContentPage.ToolbarItems>
-	 		<ToolbarItem Name="+" Activated="OnAddItemActivated">
-	 			<ToolbarItem.Icon>
-	 				<OnPlatform x:TypeArguments="FileImageSource" Android="plus" />
-	 			</ToolbarItem.Icon>
-	 		</ToolbarItem>
-	 		<ToolbarItem Name="Logout" Activated="OnLogoutActivated" />
+		<ToolbarItem Text="+" Clicked="OnAddItemClicked">
+			<ToolbarItem.Icon>
+				<OnPlatform x:TypeArguments="FileImageSource" Android="plus" />
+			</ToolbarItem.Icon>
+		</ToolbarItem>
+		<ToolbarItem Text="Logout" Clicked="OnLogoutClicked" />
 	</ContentPage.ToolbarItems>
 	<ContentPage.Content>
 		<ListView x:Name="listView" ItemSelected="OnItemSelected">

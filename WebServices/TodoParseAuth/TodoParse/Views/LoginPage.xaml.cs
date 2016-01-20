@@ -11,12 +11,12 @@ namespace TodoParse
 			InitializeComponent ();
 		}
 
-		async void OnSignUpActivated(object sender, EventArgs e)
+		async void OnSignUpClicked (object sender, EventArgs e)
 		{
 			await Navigation.PushAsync (new SignUpPage ());
 		}
 
-		async void OnLoginActivated(object sender, EventArgs e)
+		async void OnLoginClicked (object sender, EventArgs e)
 		{
 			var user = new User () {
 				Username = usernameEntry.Text,
@@ -28,10 +28,9 @@ namespace TodoParse
 			if (result) {
 				Navigation.InsertPageBefore (new TodoListPage (), this);
 				await Navigation.PopAsync ();
-            }
-            else {
-                messageLabel.Text = "Login failed";
-            }
+			} else {
+				messageLabel.Text = "Login failed";
+			}
 		}
 	}
 }

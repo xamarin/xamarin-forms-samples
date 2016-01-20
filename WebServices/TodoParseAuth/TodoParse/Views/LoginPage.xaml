@@ -1,10 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-			 x:Class="TodoParse.LoginPage"
-			 Title="Login">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TodoParse.LoginPage" Title="Login">
 	<ContentPage.ToolbarItems>
-		<ToolbarItem Name="Sign Up" Activated="OnSignUpActivated"/>
+		<ToolbarItem Text="Sign Up" Clicked="OnSignUpClicked" />
 	</ContentPage.ToolbarItems>
 	<ContentPage.Content>
 		<StackLayout VerticalOptions="StartAndExpand">
@@ -12,7 +9,7 @@
 			<Entry x:Name="usernameEntry" Placeholder="username" />
 			<Label Text="Password" />
 			<Entry x:Name="passwordEntry" IsPassword="true" />
-			<Button Text="Login" Clicked="OnLoginActivated" />
+			<Button Text="Login" Clicked="OnLoginClicked" />
 			<Label x:Name="messageLabel" />
 		</StackLayout>
 	</ContentPage.Content>

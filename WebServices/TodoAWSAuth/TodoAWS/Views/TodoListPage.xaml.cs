@@ -17,14 +17,14 @@ namespace TodoAWSSimpleDB
 			listView.ItemsSource = await App.TodoManager.GetTasksAsync ();
 		}
 
-		async void OnLogoutActivated (object sender, EventArgs e)
+		async void OnLogoutClicked (object sender, EventArgs e)
 		{
 			DependencyService.Get<IAuthentication> ().Logout ();
 			Navigation.InsertPageBefore (new LoginPage (), Navigation.NavigationStack.First ());
 			await Navigation.PopToRootAsync ();
 		}
 
-		void OnAddItemActivated (object sender, EventArgs e)
+		void OnAddItemClicked (object sender, EventArgs e)
 		{
 			var todoItem = new TodoItem () {
 				ID = Guid.NewGuid ().ToString (),
