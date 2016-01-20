@@ -23,7 +23,7 @@ namespace CustomRenderer
 			Padding = new Thickness (0, Device.OnPlatform (20, 0, 0), 0, 0);
 			Content = new StackLayout { 
 				Children = {
-					new Label { Text = "Xamarin.Forms native cell", XAlign = TextAlignment.Center },
+					new Label { Text = "Xamarin.Forms native cell", HorizontalTextAlignment = TextAlignment.Center },
 					listView
 				}
 			};

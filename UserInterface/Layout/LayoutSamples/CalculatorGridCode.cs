@@ -51,8 +51,8 @@ namespace LayoutSamples
 
 			var label = new Label {
 				Text = "0",
-				XAlign = TextAlignment.End,
-				YAlign = TextAlignment.End,
+				HorizontalTextAlignment = TextAlignment.End,
+				VerticalTextAlignment = TextAlignment.End,
 				TextColor = Color.White,
 				FontSize = 60
 			};

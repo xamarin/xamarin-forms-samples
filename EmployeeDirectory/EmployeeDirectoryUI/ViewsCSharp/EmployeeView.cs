@@ -25,8 +25,8 @@ namespace EmployeeDirectoryUI.CSharp
 			favoriteSwitch = new Switch ();
 
 			personName = new Label {
-				XAlign = TextAlignment.Center,
-				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+				HorizontalTextAlignment = TextAlignment.Center,
+				FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label)),
 				FontAttributes = FontAttributes.Bold,
 				IsVisible = Device.OS == TargetPlatform.WinPhone
 			};

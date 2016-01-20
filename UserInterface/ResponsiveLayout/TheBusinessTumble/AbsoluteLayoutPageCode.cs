@@ -29,7 +29,11 @@ namespace ResponsiveLayout
 			scroll.Content = innerLayout;
 			innerLayout.Children.Add (new Image { Source = "deer.jpg" }, new Rectangle (.5, 0, 300, 300), AbsoluteLayoutFlags.PositionProportional);
 			innerLayout.Children.Add (new BoxView { Color = Color.FromHex ("#CC1A7019") }, new Rectangle (.5, 300, .7, 50), AbsoluteLayoutFlags.XProportional | AbsoluteLayoutFlags.WidthProportional);
-			innerLayout.Children.Add (new Label { Text = "deer.jpg", XAlign = TextAlignment.Center, TextColor = Color.White }, new Rectangle (.5, 310, 1, 50), AbsoluteLayoutFlags.XProportional | AbsoluteLayoutFlags.WidthProportional);
+			innerLayout.Children.Add (new Label {
+				Text = "deer.jpg",
+				HorizontalTextAlignment = TextAlignment.Center,
+				TextColor = Color.White
+			}, new Rectangle (.5, 310, 1, 50), AbsoluteLayoutFlags.XProportional | AbsoluteLayoutFlags.WidthProportional);
 			Content = outerLayout;
 		}
 	}

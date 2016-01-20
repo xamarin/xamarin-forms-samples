@@ -1,66 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:constants="clr-namespace:XamarinFormsSample;assembly=XamarinFormsXamlSample"
-             x:Class="XamarinFormsXamlSample.Views.EmployeeDetailPage"
-             Padding="20">
-
-  <StackLayout>
-    <Image Source="{Binding ImageUri}"
-           HeightRequest="200" />
-
-    <Grid>
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="Auto" />
-        <ColumnDefinition Width="*" />
-      </Grid.ColumnDefinitions>
-
-      <Label Text="First Name:"
-             Font="{x:Static constants:Fonts.SmallTitle}"
-             Grid.Row="0" Grid.Column="0" />
-
-      <Entry Text="{Binding FirstName}"
-             Grid.Row="0" Grid.Column="1"
-             HorizontalOptions="FillAndExpand" />
-
-      <Label Text="Last Name:"
-             Font="{x:Static constants:Fonts.SmallTitle}"
-             Grid.Row="1" Grid.Column="0" />
-
-      <Entry Text="{Binding LastName}"
-             Grid.Row="1" Grid.Column="1"
-             HorizontalOptions="FillAndExpand" />
-
-      <Label Text="Twitter:"
-             XAlign="End"
-             Font="{x:Static constants:Fonts.SmallTitle}"
-             Grid.Row="2" Grid.Column="0" />
-
-      <Entry Text="{Binding Twitter}"
-             Grid.Row="2" Grid.Column="1"
-             HorizontalOptions="FillAndExpand" />
-    </Grid>
-
-    <Grid>
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="1*" />
-        <ColumnDefinition Width="2*" />
-      </Grid.ColumnDefinitions>
-      
-      <Button Text="Delete"
-              Grid.Column="0"
-              BorderRadius="5"
-              TextColor="White"
-              BackgroundColor="{x:Static constants:Colours.NegativeBackground}"
-              Clicked="OnDeleteButtonClick" />
-      
-      <Button Text="Save"
-              Grid.Column="1"
-              BorderRadius="5"
-              TextColor="White"
-              BackgroundColor="{x:Static constants:Colours.BackgroundGrey}"
-              Clicked="OnSaveButtonClick" />
-    
-    </Grid>
-  </StackLayout>
- </ContentPage>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:constants="clr-namespace:XamarinFormsSample;assembly=XamarinFormsXamlSample" x:Class="XamarinFormsXamlSample.Views.EmployeeDetailPage" Padding="20">
+	<StackLayout>
+		<Image Source="{Binding ImageUri}" HeightRequest="200" />
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Label Text="First Name:" Font="{x:Static constants:Fonts.SmallTitle}" Grid.Row="0" Grid.Column="0" />
+			<Entry Text="{Binding FirstName}" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" />
+			<Label Text="Last Name:" Font="{x:Static constants:Fonts.SmallTitle}" Grid.Row="1" Grid.Column="0" />
+			<Entry Text="{Binding LastName}" Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" />
+			<Label Text="Twitter:" HorizontalTextAlignment="End" Font="{x:Static constants:Fonts.SmallTitle}" Grid.Row="2" Grid.Column="0" />
+			<Entry Text="{Binding Twitter}" Grid.Row="2" Grid.Column="1" HorizontalOptions="FillAndExpand" />
+		</Grid>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="1*" />
+				<ColumnDefinition Width="2*" />
+			</Grid.ColumnDefinitions>
+			<Button Text="Delete" Grid.Column="0" BorderRadius="5" TextColor="White" BackgroundColor="{x:Static constants:Colours.NegativeBackground}" Clicked="OnDeleteButtonClick" />
+			<Button Text="Save" Grid.Column="1" BorderRadius="5" TextColor="White" BackgroundColor="{x:Static constants:Colours.BackgroundGrey}" Clicked="OnSaveButtonClick" />
+		</Grid>
+	</StackLayout>
+</ContentPage>

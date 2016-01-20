@@ -1,143 +1,77 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:BugSweeper;assembly=BugSweeper"
-					   x:Class="BugSweeper.BugSweeperPage"
-             Title="BugSweeper">
-  
-  <ContentPage.Padding>
-    <OnPlatform x:TypeArguments="Thickness"
-                iOS="0, 20, 0, 0"
-                Android="0, 0, 0, 0"
-                WinPhone="0, 0, 0, 0" />
-  </ContentPage.Padding>
-
-  <ContentView SizeChanged="OnMainContentViewSizeChanged">
-    <Grid x:Name="mainGrid">
-      <Grid.RowDefinitions>
-        <RowDefinition Height="7*" />
-        <RowDefinition Height="4*" />
-      </Grid.RowDefinitions>
-
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="0" />
-        <ColumnDefinition Width="*" />
-      </Grid.ColumnDefinitions>
-
-      <StackLayout x:Name="textStack"
-                   Grid.Row="0"
-                   Grid.Column="1"
-                   Spacing="0">
-
-        <StackLayout HorizontalOptions="Center"
-                     Spacing="0">
-          <Label Text="BugSweeper"
-                 Font="Bold, Large"
-                 TextColor="Accent" />
-
-          <BoxView Color="Accent"
-                   HeightRequest="3" />
-        </StackLayout>
-
-        <Label Text="Tap to flag/unflag a potential bug."
-               VerticalOptions="CenterAndExpand"
-               XAlign="Center" />
-
-        <Label Text="Double-tap if you're sure it's not a bug.&#x000A;The first double-tap is always safe!"
-               VerticalOptions="CenterAndExpand"
-               XAlign="Center" />
-
-        <StackLayout Orientation="Horizontal"
-                     Spacing="0"
-                     VerticalOptions="CenterAndExpand"
-                     HorizontalOptions="Center">
-
-          <Label BindingContext="{x:Reference board}"
-                 Text="{Binding FlaggedTileCount, StringFormat='Flagged {0} '}" />
-
-
-          <Label BindingContext="{x:Reference board}"
-                 Text="{Binding BugCount, StringFormat=' out of {0} bugs.'}" />
-        </StackLayout>
-
-
-        <!-- Make this a binding??? -->
-
-        <Label x:Name="timeLabel"
-               Text="0:00"
-               VerticalOptions="CenterAndExpand"
-               XAlign="Center" />
-
-      </StackLayout>
-
-      <ContentView Grid.Row="1"
-                   Grid.Column="1"
-                   SizeChanged="OnBoardContentViewSizeChanged">
-
-        <!-- Single-cell Grid for Board and overlays. -->
-        <Grid>
-          <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-          </Grid.RowDefinitions>
-
-          <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-          </Grid.ColumnDefinitions>
-
-          <local:Board x:Name="board" />
-
-          <StackLayout x:Name="congratulationsText"
-                       Orientation="Horizontal"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       Spacing="0">
-            <Label Text="C" TextColor="Red" />
-            <Label Text="O" TextColor="Red" />
-            <Label Text="N" TextColor="Red" />
-            <Label Text="G" TextColor="Red" />
-            <Label Text="R" TextColor="Red" />
-            <Label Text="A" TextColor="Red" />
-            <Label Text="T" TextColor="Red" />
-            <Label Text="U" TextColor="Red" />
-            <Label Text="L" TextColor="Red" />
-            <Label Text="A" TextColor="Red" />
-            <Label Text="T" TextColor="Red" />
-            <Label Text="I" TextColor="Red" />
-            <Label Text="O" TextColor="Red" />
-            <Label Text="N" TextColor="Red" />
-            <Label Text="S" TextColor="Red" />
-            <Label Text="!" TextColor="Red" />
-          </StackLayout>
-
-          <StackLayout x:Name="consolationText"
-                       Orientation="Horizontal"
-                       Spacing="0"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center">
-            <Label Text="T" TextColor="Red" />
-            <Label Text="O" TextColor="Red" />
-            <Label Text="O" TextColor="Red" />
-            <Label Text=" " TextColor="Red" />
-            <Label Text="B" TextColor="Red" />
-            <Label Text="A" TextColor="Red" />
-            <Label Text="D" TextColor="Red" />
-            <Label Text="!" TextColor="Red" />
-          </StackLayout>
-
-          <Button x:Name="playAgainButton"
-                  Text="Play Another Game"
-                  HorizontalOptions="Center"
-                  VerticalOptions="Center"
-                  Clicked="OnplayAgainButtonClicked">
-            <Button.BackgroundColor>
-              <OnPlatform x:TypeArguments="Color"
-                          iOS="#C0FFFFFF"
-                          Android="Default"
-                          WinPhone="#C0808080" />
-            </Button.BackgroundColor>
-          </Button>
-        </Grid>
-      </ContentView>
-    </Grid>
-  </ContentView>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:BugSweeper;assembly=BugSweeper" x:Class="BugSweeper.BugSweeperPage" Title="BugSweeper">
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0, 0, 0, 0" WinPhone="0, 0, 0, 0" />
+	</ContentPage.Padding>
+	<ContentView SizeChanged="OnMainContentViewSizeChanged">
+		<Grid x:Name="mainGrid">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="7*" />
+				<RowDefinition Height="4*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<StackLayout x:Name="textStack" Grid.Row="0" Grid.Column="1" Spacing="0">
+				<StackLayout HorizontalOptions="Center" Spacing="0">
+					<Label Text="BugSweeper" Font="Bold, Large" TextColor="Accent" />
+					<BoxView Color="Accent" HeightRequest="3" />
+				</StackLayout>
+				<Label Text="Tap to flag/unflag a potential bug." VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+				<Label Text="Double-tap if you're sure it's not a bug.&#xA;The first double-tap is always safe!" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+				<StackLayout Orientation="Horizontal" Spacing="0" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+					<Label BindingContext="{x:Reference board}" Text="{Binding FlaggedTileCount, StringFormat='Flagged {0} '}" />
+					<Label BindingContext="{x:Reference board}" Text="{Binding BugCount, StringFormat=' out of {0} bugs.'}" />
+				</StackLayout>
+				<!-- Make this a binding??? -->
+				<Label x:Name="timeLabel" Text="0:00" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+			</StackLayout>
+			<ContentView Grid.Row="1" Grid.Column="1" SizeChanged="OnBoardContentViewSizeChanged">
+				<!-- Single-cell Grid for Board and overlays. -->
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<local:Board x:Name="board" />
+					<StackLayout x:Name="congratulationsText" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="0">
+						<Label Text="C" TextColor="Red" />
+						<Label Text="O" TextColor="Red" />
+						<Label Text="N" TextColor="Red" />
+						<Label Text="G" TextColor="Red" />
+						<Label Text="R" TextColor="Red" />
+						<Label Text="A" TextColor="Red" />
+						<Label Text="T" TextColor="Red" />
+						<Label Text="U" TextColor="Red" />
+						<Label Text="L" TextColor="Red" />
+						<Label Text="A" TextColor="Red" />
+						<Label Text="T" TextColor="Red" />
+						<Label Text="I" TextColor="Red" />
+						<Label Text="O" TextColor="Red" />
+						<Label Text="N" TextColor="Red" />
+						<Label Text="S" TextColor="Red" />
+						<Label Text="!" TextColor="Red" />
+					</StackLayout>
+					<StackLayout x:Name="consolationText" Orientation="Horizontal" Spacing="0" HorizontalOptions="Center" VerticalOptions="Center">
+						<Label Text="T" TextColor="Red" />
+						<Label Text="O" TextColor="Red" />
+						<Label Text="O" TextColor="Red" />
+						<Label Text=" " TextColor="Red" />
+						<Label Text="B" TextColor="Red" />
+						<Label Text="A" TextColor="Red" />
+						<Label Text="D" TextColor="Red" />
+						<Label Text="!" TextColor="Red" />
+					</StackLayout>
+					<Button x:Name="playAgainButton" Text="Play Another Game" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnplayAgainButtonClicked">
+						<Button.BackgroundColor>
+							<OnPlatform x:TypeArguments="Color" iOS="#C0FFFFFF" Android="Default" WinPhone="#C0808080" />
+						</Button.BackgroundColor>
+					</Button>
+				</Grid>
+			</ContentView>
+		</Grid>
+	</ContentView>
 </ContentPage>

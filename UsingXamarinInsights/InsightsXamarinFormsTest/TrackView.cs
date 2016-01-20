@@ -18,12 +18,22 @@ namespace InsightsXamarinFormsTest
 				Padding = 16
 			};
 
-			var headingLayout = new StackLayout{ 
+			var headingLayout = new StackLayout { 
 				Orientation = StackOrientation.Horizontal, 
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 				Children = {
-					new Label {Text = "Xamarin", XAlign=TextAlignment.End, FontSize = 30, TextColor = Color.FromHex("#34495E")},
-					new Label {Text = "Insights", XAlign=TextAlignment.Start, FontSize = 30, TextColor = Color.FromHex("#3498DB")}
+					new Label {
+						Text = "Xamarin",
+						HorizontalTextAlignment = TextAlignment.End,
+						FontSize = 30,
+						TextColor = Color.FromHex ("#34495E")
+					},
+					new Label {
+						Text = "Insights",
+						HorizontalTextAlignment = TextAlignment.Start,
+						FontSize = 30,
+						TextColor = Color.FromHex ("#3498DB")
+					}
 				}
 			};
 			layout.Children.Add (headingLayout);
@@ -31,7 +41,7 @@ namespace InsightsXamarinFormsTest
 			var instructionsLabel = new Label () {
 				Text = "touch a button",
 				HorizontalOptions = LayoutOptions.FillAndExpand,
-				XAlign = TextAlignment.Center
+				HorizontalTextAlignment = TextAlignment.Center
 			};
 			layout.Children.Add (instructionsLabel);
 
@@ -82,13 +92,13 @@ namespace InsightsXamarinFormsTest
 				view.Scale = 0;
 			}
 
-			Content = new ScrollView() {
+			Content = new ScrollView () {
 				VerticalOptions = LayoutOptions.FillAndExpand,
 				Content = layout
 			};
 
 			// Receive and display a message in an alert
-			MessagingCenter.Subscribe<TrackViewModel, string>(this, "Alert", (vm, message) => DisplayAlert("Alert", message, "OK"));
+			MessagingCenter.Subscribe<TrackViewModel, string> (this, "Alert", (vm, message) => DisplayAlert ("Alert", message, "OK"));
 		}
 
 		protected override async void OnAppearing ()

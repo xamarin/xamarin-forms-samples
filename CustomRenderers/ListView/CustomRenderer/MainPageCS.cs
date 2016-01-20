@@ -20,7 +20,7 @@ namespace CustomRenderer
 					new RowDefinition { Height = new GridLength (1, GridUnitType.Star) }
 				},
 				Children = {
-					new Label { Text = App.Description, XAlign = TextAlignment.Center },
+					new Label { Text = App.Description, HorizontalTextAlignment = TextAlignment.Center },
 					nativeListView
 				}	
 			};
