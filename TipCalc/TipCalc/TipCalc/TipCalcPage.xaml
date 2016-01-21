@@ -24,7 +24,7 @@
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
 		<!-- Row 0 -->
-		<Label Text="Food &amp; Drink:" Grid.Row="0" Grid.Column="0" Font="Large" HorizontalTextAlignment="End" YAlign="Center" />
+		<Label Text="Food &amp; Drink:" Grid.Row="0" Grid.Column="0" Font="Large" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
 		<Entry Grid.Row="0" Grid.Column="1" Keyboard="Numeric" Placeholder="Subtotal" Text="{Binding SubTotal, &#xA;                           Converter={StaticResource stringConverter}}" />
 		<!-- Row 1 -->
 		<Label Text="Total after Tax:" Grid.Row="1" Grid.Column="0" Font="Large" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />

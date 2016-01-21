@@ -8,7 +8,7 @@ namespace TodoLocalized
 		public TodoItemCell ()
 		{
 			var label = new Label {
-				YAlign = TextAlignment.Center
+				VerticalTextAlignment = TextAlignment.Center
 			};
 
 			label.SetBinding (Label.TextProperty, "Name");

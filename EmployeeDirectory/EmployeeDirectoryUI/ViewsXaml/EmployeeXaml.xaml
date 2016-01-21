@@ -15,7 +15,7 @@
 					<DataTemplate>
 						<ViewCell>
 							<StackLayout VerticalOptions="StartAndExpand" Orientation="Vertical">
-								<Label Text="{Binding Title}" YAlign="Center" />
+								<Label Text="{Binding Title}" VerticalTextAlignment="Center" />
 							</StackLayout>
 						</ViewCell>
 					</DataTemplate>
@@ -24,8 +24,8 @@
 					<DataTemplate>
 						<ViewCell>
 							<StackLayout Padding="20,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
-								<Label Text="{Binding Name}" YAlign="Center" Font="Bold,Medium" />
-								<Label Text="{Binding Value}" YAlign="Center" />
+								<Label Text="{Binding Name}" VerticalTextAlignment="Center" Font="Bold,Medium" />
+								<Label Text="{Binding Value}" VerticalTextAlignment="Center" />
 							</StackLayout>
 						</ViewCell>
 					</DataTemplate>

@@ -14,7 +14,7 @@
 				<DataTemplate>
 					<ViewCell>
 						<StackLayout Padding="20,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
-							<Label Text="{Binding Name}" YAlign="Center" />
+							<Label Text="{Binding Name}" VerticalTextAlignment="Center" />
 							<Image Source="check.png" IsVisible="{Binding Done}" />
 						</StackLayout>
 					</ViewCell>

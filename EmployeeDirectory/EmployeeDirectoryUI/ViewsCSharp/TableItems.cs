@@ -8,7 +8,7 @@ namespace EmployeeDirectoryUI.CSharp
 	{
 		public GroupHeaderTemplate ()
 		{
-			var label = new Label { YAlign = TextAlignment.Center };
+			var label = new Label { VerticalTextAlignment = TextAlignment.Center };
 			label.SetBinding (Label.TextProperty, "Title");
 			View = new StackLayout {
 				Padding = new Thickness (5, 0, 0, 0),
@@ -25,17 +25,17 @@ namespace EmployeeDirectoryUI.CSharp
 			photo.SetBinding (Image.SourceProperty, "Photo");
 
 			var nameLabel = new Label { 
-				YAlign = TextAlignment.Center,
+				VerticalTextAlignment = TextAlignment.Center,
 				FontAttributes = FontAttributes.None,
-				FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+				FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
 			};
 
 			nameLabel.SetBinding (Label.TextProperty, "Name");
 
 			var titleLabel = new Label { 
-				YAlign = TextAlignment.Center,
+				VerticalTextAlignment = TextAlignment.Center,
 				FontAttributes = FontAttributes.None,
-				FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
+				FontSize = Device.GetNamedSize (NamedSize.Micro, typeof(Label)),
 			};
 
 			titleLabel.SetBinding (Label.TextProperty, "Title");
@@ -59,14 +59,14 @@ namespace EmployeeDirectoryUI.CSharp
 		public DetailsItemTemplate ()
 		{
 			var propertyNameLabel = new Label { 
-				YAlign = TextAlignment.Center,
-				FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+				VerticalTextAlignment = TextAlignment.Center,
+				FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
 				FontAttributes = FontAttributes.None,
 			};
 
 			propertyNameLabel.SetBinding (Label.TextProperty, "Name");
 
-			var propertyValueLabel = new Label { YAlign = TextAlignment.Center };
+			var propertyValueLabel = new Label { VerticalTextAlignment = TextAlignment.Center };
 			propertyValueLabel.SetBinding (Label.TextProperty, "Value");
 
 			View = new StackLayout {

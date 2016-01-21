@@ -38,7 +38,7 @@
 				<ColumnDefinition Width="*" />
 				<ColumnDefinition Width="*" />
 			</Grid.ColumnDefinitions>
-			<Label Text="0" Grid.Row="0" HorizontalTextAlignment="End" YAlign="End" TextColor="White" FontSize="60" Grid.ColumnSpan="4" />
+			<Label Text="0" Grid.Row="0" HorizontalTextAlignment="End" VerticalTextAlignment="End" TextColor="White" FontSize="60" Grid.ColumnSpan="4" />
 			<Button Text="C" Grid.Row="1" Grid.Column="0" Style="{StaticResource darkerButton}" />
 			<Button Text="+/-" Grid.Row="1" Grid.Column="1" Style="{StaticResource darkerButton}" />
 			<Button Text="%" Grid.Row="1" Grid.Column="2" Style="{StaticResource darkerButton}" />
