@@ -8,7 +8,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using TodoLocalized.WinPhone.Resources;
 
-namespace TodoLocalized
+namespace TodoLocalized.WinPhone
 {
     public partial class App : Application
     {

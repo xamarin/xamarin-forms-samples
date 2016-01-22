@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(TodoLocalized.WinPhone.Locale_WinPhone))]
+[assembly: Dependency(typeof(TodoLocalized.Locale_WinPhone))]
 
 namespace TodoLocalized
 {
