@@ -9,13 +9,14 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.WinPhone;
 using System.IO;
 using Windows.Storage;
 
 
 namespace Todo.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class MainPage : FormsApplicationPage
     {
         public MainPage()
         {
@@ -23,7 +24,7 @@ namespace Todo.WinPhone
 
             Forms.Init();
 
-            Content = Todo.App.GetMainPage().ConvertPageToUIElement(this);
+            LoadApplication (new Todo.App());
         }
     }
 }
