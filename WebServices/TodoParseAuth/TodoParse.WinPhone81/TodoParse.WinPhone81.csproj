@@ -119,10 +119,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Parse">
-      <HintPath>..\packages\parse.1.6.1\lib\wpa81\Parse.dll</HintPath>
+      <HintPath>..\packages\Parse.1.7.0\lib\wpa81\Parse.dll</HintPath>
     </Reference>
     <Reference Include="Parse.WinRT">
-      <HintPath>..\packages\parse.1.6.1\lib\wpa81\Parse.WinRT.dll</HintPath>
+      <HintPath>..\packages\Parse.1.7.0\lib\wpa81\Parse.WinRT.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core">
       <HintPath>..\packages\Xamarin.Forms.2.0.1.6495\lib\wpa81\Xamarin.Forms.Core.dll</HintPath>
