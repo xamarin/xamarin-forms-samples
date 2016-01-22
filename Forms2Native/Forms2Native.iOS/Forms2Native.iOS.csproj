@@ -25,7 +25,7 @@
     <MtouchDebug>true</MtouchDebug>
     <MtouchI18n>
     </MtouchI18n>
-    <MtouchArch>ARMv7</MtouchArch>
+    <MtouchArch>i386, x86_64</MtouchArch>
     <AssemblyName>Forms2Native</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
@@ -54,7 +54,8 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <IpaPackageName>
     </IpaPackageName>
-    <AssemblyName>QuickTodoiOS</AssemblyName>
+    <AssemblyName>Forms2Native</AssemblyName>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>5a5ecf24-d2e3-47a4-bf6b-761d05083514</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Intermediate</Level>
+	<Tags>Xamarin.Forms, Games</Tags>
+	<SupportedPlatforms>Android, iOS</SupportedPlatforms>
+    <LicenseRequirement>Indie</LicenseRequirement>
+    <Brief>A simple project showing how to combine Xamarin.Forms with CocosSharp.</Brief>
+	<Gallery>true</Gallery>
+</SampleMetadata>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>896e9e0e-0597-4ce9-ac5a-9c0f38bb2d1c</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Brief>This sample demonstrates using the PanGestureRecognizer class to implement dragging.</Brief>
+	<Level>Intermediate</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>User Interface, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>
