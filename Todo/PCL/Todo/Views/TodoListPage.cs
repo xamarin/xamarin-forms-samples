@@ -30,7 +30,7 @@ namespace Todo
 			};
 
 			var layout = new StackLayout();
-			if (Device.OS == TargetPlatform.WinPhone) { // WinPhone doesn't have the title showing
+			if (Device.OS == TargetPlatform.WinPhone || Device.OS == TargetPlatform.Windows) { // WinPhone doesn't have the title showing
 				layout.Children.Add(new Label{
 					Text="Todo", 
 					FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label))});
@@ -59,7 +59,7 @@ namespace Todo
 					Navigation.PushAsync(todoPage);
 				}, 0, 0);
 			}
-			if (Device.OS == TargetPlatform.WinPhone)
+			if (Device.OS == TargetPlatform.WinPhone || Device.OS == TargetPlatform.Windows)
 			{
 				tbi = new ToolbarItem("Add", "add.png", () =>
 					{
