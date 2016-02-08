@@ -4,7 +4,11 @@ namespace BindingContextChanged
 {
 	public class CustomCell : ViewCell
 	{
-		public static readonly BindableProperty TitleProperty = BindableProperty.Create<CustomCell, string> (p => p.Title, "Test");
+		public static readonly BindableProperty TitleProperty = 
+			BindableProperty.Create (propertyName:"Title", 
+				returnType:typeof(string), 
+				declaringType:typeof(CustomCell), 
+				defaultValue:"Test");
 
 		public string Title {
 			get { return(string)GetValue (TitleProperty); }
