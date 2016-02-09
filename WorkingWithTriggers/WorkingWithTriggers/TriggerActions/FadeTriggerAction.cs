@@ -15,6 +15,7 @@ namespace WorkingWithTriggers
 
 		protected override void Invoke (VisualElement visual)
 		{
+			
 			visual.Animate("0", new Animation( (d)=>{
 				var val = StartsFrom==1 ? d : 1-d;
 				// so i was aiming for a different color, but then i liked the pink :)
