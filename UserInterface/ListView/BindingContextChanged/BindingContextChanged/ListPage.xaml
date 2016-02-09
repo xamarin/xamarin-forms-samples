@@ -5,9 +5,10 @@
 		<ListView x:Name="listView">
 			<ListView.ItemTemplate>
 				<DataTemplate>
-					<local:CustomCell Title="{Binding}" />
+					<local:CustomCell Name="{Binding Name}" Age="{Binding Age}" Location="{Binding Location}" />
 				</DataTemplate>
 			</ListView.ItemTemplate>
 		</ListView>
+		<Button Text="Change Binding Context" Clicked="OnButtonClicked" />
 	</StackLayout>
 </ContentPage>
