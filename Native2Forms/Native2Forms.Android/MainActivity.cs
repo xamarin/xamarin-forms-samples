@@ -23,9 +23,9 @@ namespace Native2Forms
 		{
 			base.OnCreate (bundle);
 
-			SetContentView(Resource.Layout.Main);
+			SetContentView(Native2Forms.Android.Resource.Layout.Main);
 
-			button = FindViewById<Button> (Resource.Id.button);
+			button = FindViewById<Button> (Native2Forms.Android.Resource.Id.button);
 
 			button.Click += (sender, e) => {
 				// this is our Xamarin.Forms screen
