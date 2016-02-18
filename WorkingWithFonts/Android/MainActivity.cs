@@ -14,7 +14,7 @@ using Android.Content.PM;
 
 namespace WorkingWithFonts.Android
 {
-	[Activity (Label = "WorkingWithFonts.Android.Android", Icon = "@drawable/icon", MainLauncher = true, 
+	[Activity (Label = "Fonts", Icon = "@drawable/icon", MainLauncher = true, 
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : 
 	global::Xamarin.Forms.Platform.Android.FormsApplicationActivity // superclass new in 1.3
@@ -25,10 +25,9 @@ namespace WorkingWithFonts.Android
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
 
+			// test load font
 			var label = new TextView (this);
-
-
-			Typeface font = Typeface.CreateFromAsset (Assets, "SF Hollywood Hills.ttf");
+			Typeface font = Typeface.CreateFromAsset (Assets, "Lobster-Regular.ttf");
 			label.Typeface = font;
 
 			LoadApplication (new App ()); // method is new in 1.3

@@ -114,9 +114,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Fonts\SF Hollywood Hills.ttf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <BundleResource Include="Toolkit.Content\ApplicationBar.Select.png" />
     <BundleResource Include="Toolkit.Content\ApplicationBar.Delete.png" />
     <BundleResource Include="Toolkit.Content\ApplicationBar.Check.png" />
@@ -128,6 +125,8 @@
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Assets\Fonts\Lobster-Regular.ttf" />
+    <None Include="Assets\Fonts\OFL.txt" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\AlignmentGrid.png" />

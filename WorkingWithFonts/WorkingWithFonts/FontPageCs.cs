@@ -6,8 +6,9 @@
 // custom fonts in iOS
 // http://blog.xamarin.com/custom-fonts-in-ios/
 
-// font download
-// http://www.dafont.com/hollywood-hills.font
+// open-source font download
+// https://www.google.com/fonts
+
 using Xamarin.Forms;
 
 namespace WorkingWithFonts
@@ -27,10 +28,10 @@ namespace WorkingWithFonts
 			var label = new Label {
 				Text = "Hello, Xamarin.Forms!",
 				FontFamily = Device.OnPlatform (
-					"SF Hollywood Hills",
-					null,
-					@"\Assets\Fonts\SF Hollywood Hills.ttf#SF Hollywood Hills"
-				), // set for iOS & Windows Phone (Android done in custom renderer)
+					"Lobster-Regular",	 // iOS
+					null,				 // see Android custom renderer
+					@"\Assets\Fonts\Lobster-Regular.ttf#Lobster-Regular" // WinPhone
+				), 
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 
