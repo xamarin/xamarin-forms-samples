@@ -7,7 +7,7 @@ namespace CustomRenderer
 	{
 		Action<string> action;
 
-		public static readonly BindableProperty UriProperty = BindableProperty.Create<HybridWebView, string> (p => p.Uri, default(string));
+		public static readonly BindableProperty UriProperty = BindableProperty.Create ("Uri", typeof(string), typeof(HybridWebView), default(string));
 
 		public string Uri {
 			get { return (string)GetValue (UriProperty); }
