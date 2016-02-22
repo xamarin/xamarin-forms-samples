@@ -21,16 +21,15 @@ namespace WorkingWithImages
 			csTab.Children.Add(new LocalImages {Title = "Local", Icon="csharp.png"});
 			csTab.Children.Add(new DownloadImages {Title = "Download", Icon="csharp.png"});
 			csTab.Children.Add(new EmbeddedImages {Title = "Embedded", Icon="csharp.png"});
-//			return csTab;
+            //MainPage =  csTab;
 
 
-			// Xaml examples
-			var xamlTab = new TabbedPage ();
+            // Xaml examples
+            var xamlTab = new TabbedPage ();
 			xamlTab.Children.Add(new LocalImagesXaml { Title = "Local", Icon="xaml.png"});
 			xamlTab.Children.Add(new DownloadImagesXaml {Title = "Downloaded", Icon="xaml.png"});
 			xamlTab.Children.Add(new EmbeddedImagesXaml {Title = "Embedded", Icon="xaml.png"});
-
-			MainPage = xamlTab;
+            MainPage = xamlTab;
 
 			//return new LoadingPlaceholder ());
 		}
