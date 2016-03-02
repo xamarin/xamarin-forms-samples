@@ -46,7 +46,7 @@ namespace BindingContextChanged
 		protected override void OnBindingContextChanged ()
 		{
 			base.OnBindingContextChanged ();
-
+		
 			if (BindingContext != null) {
 				nameLabel.Text = Name;
 				ageLabel.Text = Age.ToString ();
