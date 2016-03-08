@@ -1,4 +1,4 @@
-DataTemplates
+Data Template
 =============
 
 This sample demonstrates creating a `DataTemplate` to specify the appearance of data being displayed by a `ListView`.

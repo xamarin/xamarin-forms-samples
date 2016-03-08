@@ -1,5 +1,5 @@
-DataTemplateSelector
-====================
+Data Template Selector
+======================
 
 This sample demonstrates using a `DataTemplateSelector` to select a `DataTemplate` at runtime per item in a `ListView`.
 
