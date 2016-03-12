@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace groupingSampleListView.iOS
+namespace GroupingSampleListView
 {
 	public class Application
 	{

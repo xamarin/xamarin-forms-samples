@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="groupingSampleListView.GroupedListXaml">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GroupingSampleListView.GroupedListXaml">
 	<ContentPage.Content>
-		<ListView x:Name ="lstView" IsGroupingEnabled="true" GroupDisplayBinding="{Binding longName}" GroupShortNameBinding="{Binding shortName}">
+		<ListView x:Name ="lstView" IsGroupingEnabled="true" GroupDisplayBinding="{Binding LongName}" GroupShortNameBinding="{Binding ShortName}">
 			<ListView.ItemTemplate>
-				<DataTemplate><TextCell Text="{Binding name}" Detail = "{Binding comment}" /></DataTemplate>
+				<DataTemplate><TextCell Text="{Binding Name}" Detail = "{Binding Comment}" /></DataTemplate>
 			</ListView.ItemTemplate>
 		</ListView>
 	</ContentPage.Content>

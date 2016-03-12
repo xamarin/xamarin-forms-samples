@@ -6,7 +6,7 @@
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{C135D6A2-2EF8-4535-9BF2-26725ACF4D59}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>groupingSampleListView.iOS</RootNamespace>
+    <RootNamespace>GroupingSampleListView.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>groupingSampleListView.iOS</AssemblyName>
   </PropertyGroup>

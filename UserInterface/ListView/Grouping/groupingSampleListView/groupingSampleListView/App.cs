@@ -2,15 +2,16 @@
 
 using Xamarin.Forms;
 
-namespace groupingSampleListView
+namespace GroupingSampleListView
 {
 	public class App : Application
 	{
 		public App ()
 		{
-			MainPage = new NavigationPage();
-			MainPage.Navigation.PushAsync (new GroupedListXaml ());
-			MainPage.Navigation.PushAsync (new GroupedListCode ());
+			MainPage = new NavigationPage(new GroupedListXaml ());
+
+			// uncomment to view the C# version
+			//MainPage = new NavigationPage(new GroupedListCode ());
 		}
 
 		protected override void OnStart ()

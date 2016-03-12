@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace groupingSampleListView
+namespace GroupingSampleListView
 {
-	public class veggieModel
+	public class VeggieModel
 	{
-		public string name { get; set; }
-		public string comment { get; set; }
-		public bool isReallyAVeggia { get; set; }
-		public string image { get; set; }
-		public veggieModel ()
+		public string Name { get; set; }
+		public string Comment { get; set; }
+		public bool IsReallyAVeggie { get; set; }
+		public string Image { get; set; }
+		public VeggieModel ()
 		{
 		}
 	}
 
-	public class groupedVeggieModel : ObservableCollection<veggieModel>
+	public class GroupedVeggieModel : ObservableCollection<VeggieModel>
 	{
-		public string longName { get; set; }
-		public string shortName { get; set; }
+		public string LongName { get; set; }
+		public string ShortName { get; set; }
 	}
 }
 

@@ -30,13 +30,13 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="groupingSampleListView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\GroupedListXaml.xaml.cs">
       <DependentUpon>GroupedListXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\GroupedListCode.cs" />
     <Compile Include="ViewModel\veggieModel.cs" />
+    <Compile Include="App.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
