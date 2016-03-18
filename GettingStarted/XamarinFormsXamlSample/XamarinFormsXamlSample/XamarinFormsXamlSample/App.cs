@@ -25,15 +25,13 @@ namespace XamarinFormsXamlSample
             {
                 if (_employees == null)
                 {
-                    string prefix = Device.OnPlatform("", "", "Images/");
-
                     List<Employee> list = new List<Employee>
                                           {
-                                              new Employee { FirstName = "Cecil", LastName = "Kinross", ImageUri = prefix + "CecilKinross.png" },
-                                              new Employee { FirstName = "William", LastName = "Hall", ImageUri = prefix + "WilliamHall.png" },
-                                              new Employee { FirstName = "Robert", LastName = "Spall", ImageUri = prefix + "RobertSpall.png" },
-                                              new Employee { FirstName = "Ernest", LastName = "Smith", ImageUri = prefix + "ErnestSmith.png" },
-                                              new Employee { FirstName = "Paul", LastName = "Triquet", ImageUri = prefix + "PaulTriquet.png" }
+                                              new Employee { FirstName = "Cecil", LastName = "Kinross", ImageUri = "CecilKinross.png" },
+                                              new Employee { FirstName = "William", LastName = "Hall", ImageUri = "WilliamHall.png" },
+                                              new Employee { FirstName = "Robert", LastName = "Spall", ImageUri = "RobertSpall.png" },
+                                              new Employee { FirstName = "Ernest", LastName = "Smith", ImageUri = "ErnestSmith.png" },
+                                              new Employee { FirstName = "Paul", LastName = "Triquet", ImageUri = "PaulTriquet.png" }
                                           };
 
                     int counter = 1;

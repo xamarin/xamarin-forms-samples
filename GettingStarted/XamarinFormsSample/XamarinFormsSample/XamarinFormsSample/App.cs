@@ -29,11 +29,11 @@ namespace XamarinFormsSample
                 }
                 List<Employee> list = new List<Employee>
                                       {
-                                          new Employee { FirstName = "Cecil", LastName = "Kinross", ImageUri = "CecilKinross" },
-                                          new Employee { FirstName = "William", LastName = "Hall", ImageUri = "WilliamHall" },
-                                          new Employee { FirstName = "Robert", LastName = "Spall", ImageUri = "RobertSpall" },
-                                          new Employee { FirstName = "Ernest", LastName = "Smith", ImageUri = "ErnestSmith" },
-                                          new Employee { FirstName = "Paul", LastName = "Triquet", ImageUri = "PaulTriquet" }
+                                          new Employee { FirstName = "Cecil", LastName = "Kinross", ImageUri = "CecilKinross.png" },
+                                          new Employee { FirstName = "William", LastName = "Hall", ImageUri = "WilliamHall.png" },
+                                          new Employee { FirstName = "Robert", LastName = "Spall", ImageUri = "RobertSpall.png" },
+                                          new Employee { FirstName = "Ernest", LastName = "Smith", ImageUri = "ErnestSmith.png" },
+                                          new Employee { FirstName = "Paul", LastName = "Triquet", ImageUri = "PaulTriquet.png" }
                                       };
 
                 int counter = 1;
