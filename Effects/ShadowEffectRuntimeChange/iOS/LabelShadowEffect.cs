@@ -25,7 +25,6 @@ namespace EffectsDemo.iOS
 
 		protected override void OnDetached ()
 		{
-			Control.Layer.ShadowOpacity = 0;
 		}
 
 		protected override void OnElementPropertyChanged (PropertyChangedEventArgs args)
