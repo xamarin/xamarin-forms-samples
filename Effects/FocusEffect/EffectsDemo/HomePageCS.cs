@@ -12,7 +12,7 @@ namespace EffectsDemo
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 				WidthRequest = Device.OnPlatform<double> (220, 220, 250)
 			};
-			entry.Effects.Add (Effect.Resolve ("MyCompany.FocusEffect"));
+			entry.Effects.Add (Effect.Resolve ("Xamarin.FocusEffect"));
 
 			Content = new StackLayout { 
 				Padding = new Thickness (0, 20, 0, 0),

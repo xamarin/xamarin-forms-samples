@@ -7,7 +7,6 @@ namespace EffectsDemo
 		public HomePage ()
 		{
 			InitializeComponent ();
-			entry.Effects.Add (Effect.Resolve ("MyCompany.FocusEffect"));
 		}
 	}
 }

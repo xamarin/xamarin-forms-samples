@@ -5,7 +5,7 @@ using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly:ResolutionGroupName ("MyCompany")]
+[assembly:ResolutionGroupName ("Xamarin")]
 [assembly:ExportEffect (typeof(FocusEffect), "FocusEffect")]
 namespace EffectsDemo.iOS
 {

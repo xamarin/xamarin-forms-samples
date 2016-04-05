@@ -6,7 +6,7 @@ using Windows.UI.Xaml.Media;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.WinRT;
 
-[assembly: ResolutionGroupName("MyCompany")]
+[assembly: ResolutionGroupName("Xamarin")]
 [assembly: ExportEffect(typeof(FocusEffect), "FocusEffect")]
 namespace EffectsDemo.WinPhone81
 {

@@ -3,7 +3,7 @@ using EffectsDemo.Droid;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly:ResolutionGroupName ("MyCompany")]
+[assembly:ResolutionGroupName ("Xamarin")]
 [assembly:ExportEffect (typeof(FocusEffect), "FocusEffect")]
 namespace EffectsDemo.Droid
 {
