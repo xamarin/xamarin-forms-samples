@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-[assembly:XamlCompilation (XamlCompilationOptions.Compile)]
+//[assembly:XamlCompilation (XamlCompilationOptions.Compile)]
 namespace EffectsDemo
 {
 	public class App : Application
@@ -27,3 +27,4 @@ namespace EffectsDemo
 		}
 	}
 }
+

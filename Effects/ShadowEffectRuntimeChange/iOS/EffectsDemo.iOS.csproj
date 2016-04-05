@@ -9,7 +9,7 @@
     <RootNamespace>EffectsDemo.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>EffectsDemoiOS</AssemblyName>
-    <NuGetPackageImportStamp>4f102d65</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>ee7109d6</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
