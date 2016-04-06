@@ -7,5 +7,5 @@
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
-	<Brief>Xamarin.Forms behaviors are created in a class that derives from the Behavior, or Behavior<T> class. This sample demonstrates how to create and consume a Xamarin.Forms behavior.</Brief>
+	<Brief>Xamarin.Forms behaviors are created in a class that derives from the Behavior, or Behavior&lt;T&gt; class. This sample demonstrates how to create and consume a Xamarin.Forms behavior.</Brief>
 </SampleMetadata>
