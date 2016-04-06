@@ -2,7 +2,7 @@
 <SampleMetadata>
 	<ID>660eddb8-5e14-41ce-8036-c06cc84f7cd0</ID>
 	<IsFullApplication>false</IsFullApplication>
-    <Brief>This sample demonstrates consuming an effect without using code-behind, and passing parameters to an effect.</Brief>
+    <Brief>This sample demonstrates using CLR properties to pass parameters to an effect.</Brief>
 	<Level>Intermediate</Level>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Tags>Effects, Xamarin.Forms</Tags>
