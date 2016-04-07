@@ -44,6 +44,15 @@ namespace UsingResxLocalization.iOS
 					else
 						pref = "pt-PT"; // Portugal
 				}
+
+                // This is the issue only for Simplified Chinese in iOS
+                // https://bugzilla.xamarin.com/show_bug.cgi?id=40141
+                if (prefLanguageOnly == "zh")
+                {
+                    if (pref == "zh-Hans-CN")
+                        pref = "zh-Hans";
+                }
+
 				netLanguage = pref.Replace ("_", "-");
 				Console.WriteLine ("preferred language:" + netLanguage);
 			}
