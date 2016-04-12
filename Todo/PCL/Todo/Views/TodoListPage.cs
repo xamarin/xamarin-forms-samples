@@ -20,7 +20,7 @@ namespace Todo
 					(typeof (TodoItemCell));
 			listView.ItemSelected += (sender, e) => {
 				var todoItem = (TodoItem)e.SelectedItem;
-				var todoPage = new TodoItemPage();
+				var todoPage = new TodoItemPageX();
 				todoPage.BindingContext = todoItem;
 
 				((App)App.Current).ResumeAtTodoId = todoItem.ID;
@@ -46,7 +46,7 @@ namespace Todo
 				tbi = new ToolbarItem("+", null, () =>
 					{
 						var todoItem = new TodoItem();
-						var todoPage = new TodoItemPage();
+						var todoPage = new TodoItemPageX();
 						todoPage.BindingContext = todoItem;
 						Navigation.PushAsync(todoPage);
 					}, 0, 0);
@@ -54,7 +54,7 @@ namespace Todo
 			if (Device.OS == TargetPlatform.Android) { // BUG: Android doesn't support the icon being null
 				tbi = new ToolbarItem ("+", "plus", () => {
 					var todoItem = new TodoItem();
-					var todoPage = new TodoItemPage();
+					var todoPage = new TodoItemPageX();
 					todoPage.BindingContext = todoItem;
 					Navigation.PushAsync(todoPage);
 				}, 0, 0);
@@ -64,7 +64,7 @@ namespace Todo
 				tbi = new ToolbarItem("Add", "add.png", () =>
 					{
 						var todoItem = new TodoItem();
-						var todoPage = new TodoItemPage();
+						var todoPage = new TodoItemPageX();
 						todoPage.BindingContext = todoItem;
 						Navigation.PushAsync(todoPage);
 					}, 0, 0);

@@ -47,7 +47,7 @@ namespace Todo
 					ResumeAtTodoId = int.Parse (rati);
 
 					if (ResumeAtTodoId >= 0) {
-						var todoPage = new TodoItemPage ();
+						var todoPage = new TodoItemPageX ();
 						todoPage.BindingContext = Database.GetItem (ResumeAtTodoId);
 
 						MainPage.Navigation.PushAsync (
