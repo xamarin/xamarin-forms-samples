@@ -14,7 +14,7 @@ namespace Todo
 			label.SetBinding (Label.TextProperty, "Name");
 
 			var tick = new Image {
-				Source = FileImageSource.FromFile ("check"),
+				Source = FileImageSource.FromFile ("check.png"),
 				HorizontalOptions = LayoutOptions.End
 			};
 			tick.SetBinding (Image.IsVisibleProperty, "Done");
