@@ -23,12 +23,6 @@ namespace Selector
 
 			SetupDataTemplates ();
 
-			Resources = new ResourceDictionary ();
-			Resources.Add ("validPersonTemplate", validTemplate);
-			Resources.Add ("invalidPersonTemplate", invalidTemplate);
-
-			var listView = new ListView { ItemsSource = people, ItemTemplate = new PersonDataTemplateSelector () };
-
 			Content = new StackLayout { 
 				Padding = new Thickness (0, 20, 0, 0),
 				Children = {
@@ -37,7 +31,13 @@ namespace Selector
 						FontAttributes = FontAttributes.Bold,
 						HorizontalOptions = LayoutOptions.Center
 					},
-					listView
+					new ListView {
+						ItemsSource = people,
+						ItemTemplate = new PersonDataTemplateSelector {
+							ValidTemplate = validTemplate,
+							InvalidTemplate = invalidTemplate
+						}
+					} 
 				}
 			};
 		}
