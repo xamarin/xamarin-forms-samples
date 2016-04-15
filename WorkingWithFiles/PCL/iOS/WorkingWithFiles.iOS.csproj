@@ -117,6 +117,7 @@
     <BundleResource Include="Resources\saveload.png" />
     <BundleResource Include="Resources\txt.png" />
     <BundleResource Include="Resources\xml.png" />
+    <BundleResource Include="Resources\json.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
