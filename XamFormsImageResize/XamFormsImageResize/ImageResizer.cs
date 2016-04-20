@@ -47,7 +47,7 @@ namespace XamFormsImageResize
 			//create a 24bit RGB image
 			using (CGBitmapContext context = new CGBitmapContext (IntPtr.Zero,
 				                                 (int)width, (int)height, 8,
-				                                 (int)(4 * (int)width), CGColorSpace.CreateDeviceRGB (),
+				                                 4 * (int)width, CGColorSpace.CreateDeviceRGB (),
 				                                 CGImageAlphaInfo.PremultipliedFirst)) {
 
 				RectangleF imageRect = new RectangleF (0, 0, width, height);
