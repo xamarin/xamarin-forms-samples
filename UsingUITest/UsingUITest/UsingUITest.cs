@@ -13,7 +13,7 @@ namespace UsingUITest
 		{
 			var b = new Button {
 				Text = "Click me",
-				StyleId = "MyButton"		// referenced in UITests
+				AutomationId = "MyButton"		// referenced in UITests
 			};
 			b.Clicked += (sender, e) => {
 				l.Text = "Was clicked";
@@ -21,11 +21,11 @@ namespace UsingUITest
 
 			l = new Label { 
 				Text = "Hello, Xamarin.Forms!",
-				StyleId = "MyLabel"			// referenced in UITests
+				AutomationId = "MyLabel"			// referenced in UITests
 			};
 
 			Content = new StackLayout {
-				Padding = new Thickness(0, 20, 0, 0),
+				Padding = new Thickness (0, 20, 0, 0),
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 				Children = {
