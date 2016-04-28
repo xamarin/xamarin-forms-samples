@@ -11,15 +11,14 @@ namespace WorkingWithMaps
 		public MapPage ()
 		{
 			map = new Map { 
-				IsShowingUser = true,
+				//IsShowingUser = true,
 				HeightRequest = 100,
 				WidthRequest = 960,
 				VerticalOptions = LayoutOptions.FillAndExpand
 			};
 
 			// You can use MapSpan.FromCenterAndRadius 
-//			map.MoveToRegion (MapSpan.FromCenterAndRadius (
-//				new Position (37, -122), Distance.FromMiles (0.3)));
+			//map.MoveToRegion (MapSpan.FromCenterAndRadius (new Position (37, -122), Distance.FromMiles (0.3)));
 			// or create a new MapSpan object directly
 			map.MoveToRegion (new MapSpan (new Position (0,0), 360, 360) );
 
@@ -79,8 +78,7 @@ namespace WorkingWithMaps
 				break;
 			}
 		}
-
-
+        
 
 		/// <summary>
 		/// In response to this forum question http://forums.xamarin.com/discussion/22493/maps-visibleregion-bounds

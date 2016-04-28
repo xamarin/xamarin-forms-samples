@@ -4,7 +4,7 @@
 	<IsFullApplication>false</IsFullApplication>
 	<Level>Advanced</Level>
 	<Tags>User Interface, Custom Renderers, Xamarin.Forms</Tags>
-	<SupportedPlatforms>iOS, Android</SupportedPlatforms>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
 	<Brief>This sample demonstrates a custom renderer for the Map control, enabling developers to override the default native rendering with their own platform-specific customization.</Brief>
