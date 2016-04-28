@@ -19,7 +19,7 @@ namespace FormsGallery
             {
                 Source = new UrlWebViewSource
                 {
-                    Url = "http://blog.xamarin.com/",
+                    Url = "https://blog.xamarin.com/",
                 },
                 VerticalOptions = LayoutOptions.FillAndExpand
             };
