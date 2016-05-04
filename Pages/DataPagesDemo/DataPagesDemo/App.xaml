@@ -1,0 +1,8 @@
+﻿<Application xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:mytheme="clr-namespace:Xamarin.Forms.Themes;assembly=Xamarin.Forms.Theme.Light"
+  x:Class="DataPagesDemo.App">
+    <Application.Resources>
+        <ResourceDictionary MergedWith="mytheme:LightThemeResources" />
+    </Application.Resources>
+</Application>
