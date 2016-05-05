@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="ThemesDemo.BasicPage"
+			 Padding="0,20,0,0">
+
+	<StackLayout>
+		<Label Text="Control Appearance" />
+		<StackLayout Padding="40">
+		    <Label Text="Regular label" />
+		    <Entry Placeholder="type here" />
+		    <Button Text="OK" />
+		    <BoxView Color="Yellow" />
+		    <Switch />
+		</StackLayout>
+
+		<Label Text="BoxView StyleClass" />
+		<StackLayout Padding="40">
+		    <BoxView StyleClass="HorizontalRule" />
+		    <BoxView StyleClass="Circle" />
+		    <BoxView StyleClass="Rounded" />
+		</StackLayout>
+</StackLayout>
+</ContentPage>
