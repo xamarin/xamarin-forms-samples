@@ -12,7 +12,7 @@ namespace WorkingWithFiles
 		public LoadResourceXml ()
 		{
 			#region How to load an XML file embedded resource
-			var assembly = typeof(LoadResourceText).GetTypeInfo().Assembly;
+			var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
 			Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLXmlResource.xml");
 
 			List<Monkey> monkeys;
