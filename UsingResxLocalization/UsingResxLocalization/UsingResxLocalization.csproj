@@ -55,7 +55,7 @@
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="PagesXaml\FirstPageXaml.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Resx\AppResources.zh-Hans.resx" />
     <EmbeddedResource Include="Resx\AppResources.de.resx" />
