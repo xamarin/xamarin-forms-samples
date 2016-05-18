@@ -109,8 +109,8 @@
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\csharp.png" />
     <BundleResource Include="Resources\xaml.png" />
-    <BundleResource Include="Resources\es.lproj\Info-Plist.strings" />
-    <BundleResource Include="Resources\fr.lproj\Info-Plist.strings" />
+    <BundleResource Include="Resources\es.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\fr.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\es.lproj\Default-568h%402x.png" />
     <BundleResource Include="Resources\es.lproj\Default.png" />
     <BundleResource Include="Resources\es.lproj\Default%402x.png" />
@@ -124,17 +124,17 @@
     <BundleResource Include="Resources\ja.lproj\flag.png" />
     <BundleResource Include="Resources\en.lproj\flag.png" />
     <BundleResource Include="Resources\zh-Hant.lproj\flag.png" />
-    <BundleResource Include="Resources\zh-Hant.lproj\Info-Plist.strings" />
+    <BundleResource Include="Resources\zh-Hant.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\zh-Hans.lproj\flag.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\Info-Plist.strings" />
     <BundleResource Include="Resources\pt-PT.lproj\Default-568h%402x.png" />
     <BundleResource Include="Resources\pt-PT.lproj\Default%402x.png" />
-    <BundleResource Include="Resources\pt-PT.lproj\Info-Plist.strings" />
+    <BundleResource Include="Resources\pt-PT.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\pt-PT.lproj\flag.png" />
     <BundleResource Include="Resources\pt.lproj\Default-568h%402x.png" />
     <BundleResource Include="Resources\pt.lproj\Default%402x.png" />
     <BundleResource Include="Resources\pt.lproj\flag.png" />
-    <BundleResource Include="Resources\pt.lproj\Info-Plist.strings" />
+    <BundleResource Include="Resources\pt.lproj\InfoPlist.strings" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
