@@ -37,7 +37,7 @@ namespace UsingUITest
 
 	/// <summary>
 	/// Demo of setting control identifiers to use with Calabash for testing
-	/// http://forums.xamarin.com/discussion/21148/calabash-and-xamarin-forms-what-am-i-missing
+	/// https://developer.xamarin.com/guides/xamarin-forms/deployment,_testing,_and_metrics/uitest-and-test-cloud/
 	/// </summary>
 	public class App : Application
 	{
