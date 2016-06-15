@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using MobileCRM.Services;
 using MobileCRM.Models;
+using System.Collections;
 
 namespace MobileCRM.Services
 {
@@ -21,49 +22,70 @@ namespace MobileCRM.Services
 
         #region IRepository implementation
 
-        public async Task<IEnumerable<T>> All ()
+        public Task<IEnumerable<T>> All ()
         {
-            return Items;
+			return Task.FromResult<IEnumerable<T>> (Items);
         }
 
-        public async Task<IEnumerable<T>> FindAsync (Func<T, bool> predicate)
+        public Task<IEnumerable<T>> FindAsync (Func<T, bool> predicate)
         {
-            return Items.Where(predicate);
+			return Task.FromResult<IEnumerable<T>> (Items.Where (predicate));
         }
 
-        public async Task<T> Get (Func<T, bool> predicate)
+        public Task<T> Get (Func<T, bool> predicate)
         {
-            return Items.SingleOrDefault(predicate);
+			return Task.FromResult<T> (Items.SingleOrDefault (predicate));
         }
 
-        public async Task<T> Update (T item)
+        public Task<T> Update (T item)
         {
-            var index = Items.IndexOf(item);
-            if (index < 0)
-                throw new InvalidOperationException("Cannot update an item not already in the collection");
-            Items[index] = item;
-            return item;
+			return Task.Factory.StartNew (() => {
+				var index = Items.IndexOf(item);
+				if (index < 0)
+					throw new InvalidOperationException("Cannot update an item not already in the collection");
+				Items[index] = item;
+
+				return item;
+			});
         }
 
-        public async Task<T> Upsert (T item)
+        public Task<T> Upsert (T item)
         {
-            var index = Items.IndexOf(item);
-            if (index < 0)
-                Add(item);
-            else
-                Items[index] = item;
-            return item;
+			return Task.Factory.StartNew (() => {
+				var index = Items.IndexOf(item);
+				if (index < 0)
+					Add(item);
+				else
+					Items[index] = item;
+
+				return item;
+			});
         }
 
-        public async Task Delete (T item)
+        public Task Delete (T item)
         {
-            Items.Remove(item);
+			return Task.Factory.StartNew (() => {
+				Items.Remove(item);
+			});
         }
 
-        public async Task<T> Add (T item)
+        public Task<T> Add (T item)
         {
-            Items.Add(item);
-            return item;
+			return Task.Factory.StartNew (() => {
+				Items.Add(item);
+				return item;
+			});
+        }
+
+        public Task<List<T>> AddRange(List<T> range)
+        {
+            return Task.Factory.StartNew(() => {
+                foreach (var item in range)
+                {
+                    Items.Add(item);
+                }
+                return range;
+            });
         }
 
         #endregion
@@ -77,7 +99,5 @@ namespace MobileCRM.Services
 
         #endregion
 
-
     }
 }
-

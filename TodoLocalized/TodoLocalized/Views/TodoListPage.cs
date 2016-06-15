@@ -34,7 +34,10 @@ namespace TodoLocalized
 
 			var layout = new StackLayout();
 			if (Device.OS == TargetPlatform.WinPhone) { // WinPhone doesn't have the title showing
-				layout.Children.Add(new Label{Text="Todo", Font=Font.SystemFontOfSize(NamedSize.Large, FontAttributes.Bold)});
+				layout.Children.Add (new Label {
+					Text = "Todo",
+					FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label))
+				});
 			}
 			layout.Children.Add(listView);
 			layout.VerticalOptions = LayoutOptions.FillAndExpand;

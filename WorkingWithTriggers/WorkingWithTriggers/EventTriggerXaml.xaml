@@ -6,9 +6,9 @@
 			 Padding="20, 50, 20, 0">
 	    <StackLayout>
 
-	    <Label FontSize="Large">EventTrigger Example</Label>
+	    <Label FontSize="Large" Text="EventTrigger Example" />
 
-		<Label>Text must be a valid double or it will turn red.</Label>
+		<Label Text="Text must be a valid double or it will turn red." />
 
         <Entry Placeholder="Enter a System.Double">
             <Entry.Triggers>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="LayoutSamples.MonkeyMusic"
+Title="Monkey Music - XAML">
+	<ContentPage.Content>
+		<AbsoluteLayout>
+			<ListView SeparatorVisibility="None" x:Name="ListOfAlbums" RowHeight="175" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, .95">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Padding="15">
+								<AbsoluteLayout Padding="25">
+									<Image AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0, 100, 100" Rotation="30" BackgroundColor="#3498db" />
+									<Image AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0, 100, 100" Rotation="60" BackgroundColor="#b455b6" />
+									<Image AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0, 100, 100" BackgroundColor="#77d065" />
+								</AbsoluteLayout>
+								<Label Text="{Binding Name}" HorizontalOptions="CenterAndExpand"  />
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<BoxView Color="#2c3e50" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0, 1, 500, 40" />
+			<Button BackgroundColor="#3498db" TextColor="White" Text="&lt;" BorderRadius = "15" HeightRequest="30" WidthRequest="30" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.25, 1, 30, 30" />
+			<Button FontSize="25" FontAttributes="Bold" BackgroundColor="#3498db" TextColor="White" Text="||" BorderRadius = "25" HeightRequest="50" WidthRequest="50" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 1, 50, 50" />
+			<Button BackgroundColor="#3498db" TextColor="White" Text="&gt;" BorderRadius = "15" HeightRequest="30" WidthRequest="30" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.75, 1, 30, 30" />
+		</AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>

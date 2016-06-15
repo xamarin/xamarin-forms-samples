@@ -7,4 +7,5 @@
 	<SupportedPlatforms>Android, iOS, windows-rt</SupportedPlatforms>
     <LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
+	<Brief>Demonstrates how to cross-platform load, resize, and display an image on the screen.</Brief>
 </SampleMetadata>

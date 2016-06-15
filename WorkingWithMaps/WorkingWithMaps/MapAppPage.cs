@@ -26,8 +26,8 @@ namespace WorkingWithMaps
 					// opens the Maps app directly
 					Device.OpenUri(new Uri("geo:0,0?q=394+Pacific+Ave+San+Francisco+CA"));
 
-				} else if (Device.OS == TargetPlatform.WinPhone) {
-					DisplayAlert("To Do", "Not yet implemented", "OK");
+				} else if (Device.OS == TargetPlatform.Windows) {
+                    Device.OpenUri(new Uri("bingmaps:?where=394 Pacific Ave San Francisco CA"));
 				}
 			};
 
@@ -44,11 +44,10 @@ namespace WorkingWithMaps
 					// opens the 'task chooser' so the user can pick Maps, Chrome or other mapping app
 					Device.OpenUri(new Uri("http://maps.google.com/?daddr=San+Francisco,+CA&saddr=Mountain+View"));
 
-				} else if (Device.OS == TargetPlatform.WinPhone) {
-					DisplayAlert("To Do", "Not yet implemented", "OK");
-				}
+				} else if (Device.OS == TargetPlatform.Windows) {
+                    Device.OpenUri(new Uri("bingmaps:?rtp=adr.394 Pacific Ave San Francisco CA~adr.One Microsoft Way Redmond WA 98052"));
+                }
 			};
-
 			Content = new StackLayout{
 				Padding = new Thickness (5, 20, 5, 0),
 				HorizontalOptions = LayoutOptions.Fill,

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>b766e368-6714-4551-baf3-d4ea241109e2</ID>
+	<IsFullApplication>true</IsFullApplication>
+	<Level>Intermediate</Level>
+	<Tags>User Interface</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+    <LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+    <Brief>This sample demonstrates a variety of layouts, including Grid, AbsoluteLayout, RelativeLayout, and StackLayout.</Brief>
+</SampleMetadata>

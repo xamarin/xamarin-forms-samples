@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="twoWayBinding.EntryPage"
+Title="Naming Panel"
+xmlns:local="clr-namespace:twoWayBinding;assembly=twoWayBinding">
+	<ContentPage.Content>
+			<ListView x:Name="listView" SeparatorVisibility="None" ItemsSource="{x:Static local:HomeViewModel.lights}">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<EntryCell Label="{Binding comment}" Text="{Binding name}" />
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+	</ContentPage.Content>
+</ContentPage>

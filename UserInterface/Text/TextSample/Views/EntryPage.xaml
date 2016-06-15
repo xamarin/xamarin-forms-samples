@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="TextSample.EntryPage"
+Title="Entry Demo - XAML">
+	<ContentPage.Content>
+		<StackLayout Padding="5,10">
+			<Label Text="This page demonstrates the Entry View. The Entry is used for collecting text that is expected to take one line." />
+			<Label Text="Unlike the Editor, the Entry view supports more advanced formatting and customization." />
+			<ScrollView VerticalOptions="StartAndExpand">
+				<StackLayout>
+					<Entry Text="Xamarin Green" TextColor="#77d065"  />
+					<Entry Placeholder="Username"  BackgroundColor="#2c3e50" />
+					<Entry Placeholder="Password" IsPassword="true"  />
+					<Entry Text="Default presentation"  />
+					<Entry Placeholder="Placeholder text" />
+					<Entry IsEnabled="false" Text="This is a disabled entry" />
+					<Entry TextColor="#77d065" Text="This is an entry with a textcolor specified" />
+				</StackLayout>
+			</ScrollView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

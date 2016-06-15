@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ResponsiveLayout.AbsoluteLayoutPageXaml" Title="AbsoluteLayout - XAML" BackgroundImage="deer.jpg">
+	<ContentPage.Content>
+		<AbsoluteLayout>
+			<ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="PositionProportional,SizeProportional">
+				<AbsoluteLayout>
+					<Image Source="deer.jpg" AbsoluteLayout.LayoutBounds=".5,0,300,300" AbsoluteLayout.LayoutFlags="PositionProportional" />
+					<BoxView Color="#CC1A7019" AbsoluteLayout.LayoutBounds=".5,300,.7,50" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
+					<Label Text="deer.jpg" AbsoluteLayout.LayoutBounds=".5,310,1, 50" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" HorizontalTextAlignment="Center" TextColor="White" />
+				</AbsoluteLayout>
+			</ScrollView>
+			<Button Text="Previous" AbsoluteLayout.LayoutBounds="0,1,.5,60" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="White" TextColor="Green" BorderRadius="0" />
+			<Button Text="Next" AbsoluteLayout.LayoutBounds="1,1,.5,60" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="White" TextColor="Green" BorderRadius="0" />
+		</AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>

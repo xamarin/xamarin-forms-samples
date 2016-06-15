@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="LayoutSamples.GridExploration" Title="Grid Exploration">
+	<ContentPage.Content>
+		<StackLayout>
+			<StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Label Text="first row height: " />
+					<Slider Minimum=".1" Maximum=".5" x:Name="sliderHeight" />
+
+				</StackLayout>
+
+			</StackLayout>
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="5*" x:Name="firstRow" />
+					<RowDefinition Height="3*" />
+					<RowDefinition Height="*" />
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="100" />
+				</Grid.ColumnDefinitions>
+				<StackLayout x:Name="s1" BackgroundColor="Aqua" Grid.Row="0" Grid.Column="0" BindingContext="{x:Reference Name=s1}"  >
+					<Label  Text="{Binding Path=Width}" />
+					<Label Text=" x " />
+					<Label  Text="{Binding Path=Height}" />
+				</StackLayout>
+				<StackLayout x:Name="s2" BackgroundColor="Black" Grid.Row="0" Grid.Column="1" BindingContext="{x:Reference Name=s2}">
+					<Label  Text="{Binding Path=Width}" />
+					<Label Text=" x " />
+					<Label  Text="{Binding Path=Height}" />
+				</StackLayout>
+				<StackLayout x:Name="s3" BackgroundColor="Gray" Grid.Row="1" Grid.Column="0" BindingContext="{x:Reference Name=s3}">
+					<Label  Text="{Binding Path=Width}" />
+					<Label Text=" x " />
+					<Label  Text="{Binding Path=Height}" />
+				</StackLayout>
+				<StackLayout x:Name="s4" BackgroundColor="Green" Grid.Row="1" Grid.Column="1" BindingContext="{x:Reference Name=s4}">
+					<Label  Text="{Binding Path=Width}" />
+					<Label Text=" x " />
+					<Label  Text="{Binding Path=Height}" />
+				</StackLayout>
+				<StackLayout x:Name="s5" BackgroundColor="Yellow" Grid.Row="2" Grid.Column="0" BindingContext="{x:Reference Name=s5}">
+					<Label  Text="{Binding Path=Width}" />
+					<Label Text=" x " />
+					<Label  Text="{Binding Path=Height}" />
+				</StackLayout>
+				<StackLayout x:Name="s6" BackgroundColor="Purple" Grid.Row="2" Grid.Column="1" BindingContext="{x:Reference Name=s6}">
+					<Label  Text="{Binding Path=Width}" />
+					<Label Text=" x " />
+					<Label  Text="{Binding Path=Height}" />
+				</StackLayout>
+			</Grid>
+		</StackLayout>
+
+	</ContentPage.Content>
+</ContentPage>

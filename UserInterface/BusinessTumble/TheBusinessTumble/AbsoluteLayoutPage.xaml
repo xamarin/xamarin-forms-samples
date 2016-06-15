@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TheBusinessTumble.AbsoluteLayoutPage" Title="AbsoluteLayout">
+	<ContentPage.Content>
+		<ScrollView>
+			<AbsoluteLayout BackgroundColor="Maroon">
+				<BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="0,0,1,100" AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional" />
+				<Button BackgroundColor="Maroon" BorderRadius="35" AbsoluteLayout.LayoutBounds=".5,55,70,70" AbsoluteLayout.LayoutFlags="XProportional" />
+				<Button BackgroundColor="Red" BorderRadius="30" AbsoluteLayout.LayoutBounds=".5,60,60,60" AbsoluteLayout.LayoutFlags="XProportional" />
+				<Label Text="User Name" FontAttributes="Bold" FontSize="26" TextColor="Black" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds=".5,140,1,40" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
+				<Entry Text="Bio + Hashtags" TextColor="White" BackgroundColor="Maroon" AbsoluteLayout.LayoutBounds=".5,180,1,40" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
+				<AbsoluteLayout BackgroundColor="White" AbsoluteLayout.LayoutBounds="0, 220, 1, 50" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional">
+					<AbsoluteLayout AbsoluteLayout.LayoutBounds="0,0,.5,1" AbsoluteLayout.LayoutFlags="WidthProportional,HeightProportional">
+						<BoxView BackgroundColor="Black" AbsoluteLayout.LayoutBounds="5,.5,40,40" AbsoluteLayout.LayoutFlags="YProportional" />
+						<Label FontSize="14" Text="Accent Color" TextColor="Black" AbsoluteLayout.LayoutBounds="50,.55,1,25" AbsoluteLayout.LayoutFlags="YProportional,WidthProportional" />
+					</AbsoluteLayout>
+					<AbsoluteLayout AbsoluteLayout.LayoutBounds="1,0,.5,1" AbsoluteLayout.LayoutFlags="WidthProportional,HeightProportional,XProportional">
+						<BoxView BackgroundColor="Maroon" AbsoluteLayout.LayoutBounds="5,.5,40,40" AbsoluteLayout.LayoutFlags="YProportional" />
+						<Label FontSize="14" Text="Primary Color" TextColor="Black" AbsoluteLayout.LayoutBounds="50,.55,1,25" AbsoluteLayout.LayoutFlags="YProportional,WidthProportional" />
+					</AbsoluteLayout>
+				</AbsoluteLayout>
+				<AbsoluteLayout AbsoluteLayout.LayoutBounds="0,270,1,50" AbsoluteLayout.LayoutFlags="WidthProportional" Padding="5,0,0,0">
+					<Label FontSize="14" Text="Age:" TextColor="White" AbsoluteLayout.LayoutBounds="0,25,.25,50" AbsoluteLayout.LayoutFlags="WidthProportional" />
+					<Entry Text="35" TextColor="White" BackgroundColor="Maroon" AbsoluteLayout.LayoutBounds="1,10,.75,50" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
+				</AbsoluteLayout>
+				<AbsoluteLayout AbsoluteLayout.LayoutBounds="0,320,1,50" AbsoluteLayout.LayoutFlags="WidthProportional" Padding="5,0,0,0">
+					<Label FontSize="14" Text="Interests:" TextColor="White" AbsoluteLayout.LayoutBounds="0,25,.25,50" AbsoluteLayout.LayoutFlags="WidthProportional" />
+					<Entry Text="Xamarin.Forms" TextColor="White" BackgroundColor="Maroon" AbsoluteLayout.LayoutBounds="1,10,.75,50" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
+				</AbsoluteLayout>
+				<AbsoluteLayout AbsoluteLayout.LayoutBounds="0,370,1,50" AbsoluteLayout.LayoutFlags="WidthProportional" Padding="5,0,0,0">
+					<Label FontSize="14" Text="Ask me about:" TextColor="White" AbsoluteLayout.LayoutBounds="0,25,.25,50" AbsoluteLayout.LayoutFlags="WidthProportional" />
+					<Entry Text="Xamarin, C#, .NET, Mono" TextColor="White" BackgroundColor="Maroon" AbsoluteLayout.LayoutBounds="1,10,.75,50" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
+				</AbsoluteLayout>
+			</AbsoluteLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

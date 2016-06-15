@@ -2,6 +2,7 @@
 using TodoLocalized;
 using Xamarin.Forms;
 using System.IO;
+using SQLite;
 
 [assembly: Dependency (typeof (SQLite_Android))]
 
@@ -14,7 +15,7 @@ namespace TodoLocalized
 		}
 
 		#region ISQLite implementation
-		public SQLite.Net.SQLiteConnection GetConnection ()
+		public SQLiteConnection GetConnection ()
 		{
 			var sqliteFilename = "TodoSQLite.db3";
 			string documentsPath = System.Environment.GetFolderPath (System.Environment.SpecialFolder.Personal); // Documents folder
@@ -32,8 +33,7 @@ namespace TodoLocalized
 				ReadWriteStream(s, writeStream);
 			}
 
-			var plat = new SQLite.Net.Platform.XamarinAndroid.SQLitePlatformAndroid();
-			var conn = new SQLite.Net.SQLiteConnection(plat, path);
+			var conn = new SQLiteConnection(path);
 
 			// Return the database connection 
 			return conn;

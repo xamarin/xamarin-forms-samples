@@ -32,11 +32,11 @@ namespace WorkingWithListviewNative
 
 			// The root page of your application
 			Content = new StackLayout {
-				Padding = new Thickness (0, Device.OnPlatform(20,0,0), 0, 0),
+				Padding = new Thickness (0, Device.OnPlatform (20, 0, 0), 0, 0),
 				Children = {
 					new Label {
-						XAlign = TextAlignment.Center,
-						Text = Device.OnPlatform("Custom UITableView+UICell","Custom ListView+Cell","Custom renderer todo")
+						HorizontalTextAlignment = TextAlignment.Center,
+						Text = Device.OnPlatform ("Custom UITableView+UICell", "Custom ListView+Cell", "Custom renderer todo")
 					},
 					nativeListView2
 				}

@@ -28,17 +28,20 @@ namespace WorkingWithImages
 //				CacheValidity = new TimeSpan(5,0,0,0)
 //			};
 
-            Content = new StackLayout
-            {
-                Children = {
-                    new Label {Text = "ImageSource.FromUri", Font=Font.BoldSystemFontOfSize(NamedSize.Medium)},
-                    webImage, 
-                    new Label {Text = "example-app.png gets downloaded from xamarin.com"}
-                },
-                Padding = new Thickness(0, 20, 0, 0),
-                VerticalOptions = LayoutOptions.StartAndExpand,
-                HorizontalOptions = LayoutOptions.CenterAndExpand
-            };
+			Content = new StackLayout {
+				Children = {
+					new Label {
+						Text = "ImageSource.FromUri",
+						FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
+						FontAttributes = FontAttributes.Bold
+					},
+					webImage, 
+					new Label { Text = "example-app.png gets downloaded from xamarin.com" }
+				},
+				Padding = new Thickness (0, 20, 0, 0),
+				VerticalOptions = LayoutOptions.StartAndExpand,
+				HorizontalOptions = LayoutOptions.CenterAndExpand
+			};
         }
     }
 }

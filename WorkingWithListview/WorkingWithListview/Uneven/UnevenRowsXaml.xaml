@@ -1,18 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-			 x:Class="WorkingWithListview.UnevenRowsXaml"
-			 Padding="0, 20, 0, 0">
-
-    <ListView x:Name="listView" ItemSelected="OnItemSelected" HasUnevenRows="true">
-	  <ListView.ItemTemplate>
-	    <DataTemplate>
-	      <ViewCell>
-	      	<StackLayout Padding="15, 5, 5, 5" HorizontalOptions="StartAndExpand" Orientation="Vertical">	
-	      		<Label Text="{Binding .}" YAlign="Center" FontSize="Small" />
-	         </StackLayout>
-	      </ViewCell>
-	    </DataTemplate>
-	  </ListView.ItemTemplate>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="WorkingWithListview.UnevenRowsXaml" Padding="0, 20, 0, 0">
+	<ListView x:Name="listView" ItemSelected="OnItemSelected" HasUnevenRows="true">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<StackLayout Padding="15, 5, 5, 5" HorizontalOptions="StartAndExpand" Orientation="Vertical">
+						<Label Text="{Binding .}" VerticalTextAlignment="Center" FontSize="Small" />
+					</StackLayout>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
 	</ListView>
 </ContentPage>

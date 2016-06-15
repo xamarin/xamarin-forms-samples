@@ -38,10 +38,11 @@ namespace MobileCRM.Shared.Pages
                 }
             };
 
-            Device.OnPlatform (
-                iOS: () => ((Xamarin.Forms.Label)label.Content).Font = Font.SystemFontOfSize (NamedSize.Micro),
-                Android: () => ((Xamarin.Forms.Label)label.Content).Font = Font.SystemFontOfSize (NamedSize.Medium)
-            );
+			Label lbl = (Xamarin.Forms.Label)label.Content;
+			Device.OnPlatform (
+				iOS: () => lbl.FontSize = Device.GetNamedSize (NamedSize.Micro, lbl),
+				Android: () => lbl.FontSize = Device.GetNamedSize (NamedSize.Medium, lbl)
+			);
 
             layout.Children.Add(label);
 
@@ -53,7 +54,6 @@ namespace MobileCRM.Shared.Pages
 
             var cell = new DataTemplate(typeof(DarkTextCell));
             cell.SetBinding(TextCell.TextProperty, "Title");
-            cell.SetBinding(TextCell.DetailProperty, "Count");
             cell.SetBinding(ImageCell.ImageSourceProperty, "IconSource");
             cell.SetValue(VisualElement.BackgroundColorProperty, Color.Transparent);
 

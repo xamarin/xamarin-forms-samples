@@ -10,7 +10,8 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "Label",
-                Font = Font.SystemFontOfSize(50, FontAttributes.Bold),
+				FontSize = 50,
+				FontAttributes = FontAttributes.Bold,
                 HorizontalOptions = LayoutOptions.Center
             };
 
@@ -23,7 +24,7 @@ namespace FormsGallery
                     "that can be shared across Android, iOS, and " +
                     "Windows Phone.",
 
-                Font = Font.SystemFontOfSize(NamedSize.Large),
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
 

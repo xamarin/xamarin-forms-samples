@@ -8,7 +8,10 @@ namespace WorkingWithListview
 	{
 		public UnevenRowsCell ()
 		{
-			var label1 = new Label { Text = "Label 1", Font = Font.SystemFontOfSize(NamedSize.Small) };
+			var label1 = new Label {
+				Text = "Label 1",
+				FontSize = Device.GetNamedSize (NamedSize.Small, typeof(Label))
+			};
 			label1.SetBinding(Label.TextProperty, new Binding("."));
 
 			View = new StackLayout {

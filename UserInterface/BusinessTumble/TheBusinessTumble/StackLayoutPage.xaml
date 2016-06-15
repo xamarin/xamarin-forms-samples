@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="TheBusinessTumble.StackLayoutPage" 
+BackgroundColor="Maroon" 
+Title="StackLayout">
+	<ContentPage.Content>
+    <ScrollView>
+      <StackLayout Spacing="0" Padding="0" BackgroundColor="Maroon">
+        <BoxView HorizontalOptions="FillAndExpand" HeightRequest="100" VerticalOptions="Start" Color="Gray" />
+        <Button BorderRadius="30" HeightRequest="60" WidthRequest="60" BackgroundColor="Red" HorizontalOptions="Center" VerticalOptions="Start" />
+        <StackLayout HeightRequest="100" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20" BackgroundColor="Maroon">
+          <Label Text="User Name" FontSize="28" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" />
+          <Entry Text="Bio + Hashtags" TextColor="White" BackgroundColor="Maroon" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HeightRequest="50" BackgroundColor="White" Padding="5">
+          <StackLayout Spacing="0" BackgroundColor="White" Orientation="Horizontal" HorizontalOptions="Start">
+            <BoxView BackgroundColor="Black" WidthRequest="40" HeightRequest="40"  HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+            <Label FontSize="14" TextColor="Black" Text="Accent Color" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+          </StackLayout>
+          <StackLayout Spacing="0" BackgroundColor="White" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+            <BoxView BackgroundColor="Maroon" WidthRequest="40" HeightRequest="40" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Label FontSize="14" TextColor="Black" Text="Primary Color" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+          </StackLayout>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Label FontSize="14" Text="Age:" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
+          <Entry HorizontalOptions="FillAndExpand" Text="35" TextColor="White" BackgroundColor="Maroon" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Label FontSize="14" Text="Interests:" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
+          <Entry HorizontalOptions="FillAndExpand" Text="Xamarin.Forms" TextColor="White" BackgroundColor="Maroon" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Label FontSize="14" Text="Ask me about:" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
+          <Entry HorizontalOptions="FillAndExpand" Text="Xamarin, C#, .NET, Mono..." TextColor="White" BackgroundColor="Maroon" />
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+	</ContentPage.Content>
+</ContentPage>

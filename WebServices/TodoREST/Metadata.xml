@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>d589dcd1-0924-4133-977e-7f85dd2e491b</ID>
+	<IsFullApplication>true</IsFullApplication>
+	<Brief>This sample demonstrates a Todo list application where the data is stored and accessed from a RESTful web service.</Brief>
+	<Level>Advanced</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>Web Services, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>

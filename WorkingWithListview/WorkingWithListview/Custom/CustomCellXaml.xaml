@@ -1,26 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-			 x:Class="WorkingWithListview.CustomCellXaml"
-			 Padding="0, 20, 0, 0"
-			 Title="Custom Cell">
-	 <ListView x:Name="listView" ItemSelected="OnItemSelected">
-		  <ListView.ItemTemplate>
-		    <DataTemplate>
-		      <ViewCell>
-		      	<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">	
-		      		<StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
-			        	<Label Text="{Binding .}" YAlign="Center" FontSize="Medium" />
-			        	<Label Text="Label 2" YAlign="Center" FontSize="Small" />
-			        </StackLayout>
-					<Button Text="X" 
-						BackgroundColor="Gray"
-						HorizontalOptions="EndAndExpand"
-						CommandParameter="{Binding .}" 
-						Clicked="OnCellClicked" />
-		         </StackLayout>
-		      </ViewCell>
-		    </DataTemplate>
-		  </ListView.ItemTemplate>
-		</ListView>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="WorkingWithListview.CustomCellXaml" Padding="0, 20, 0, 0" Title="Custom Cell">
+	<ListView x:Name="listView" ItemSelected="OnItemSelected">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+						<StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
+							<Label Text="{Binding .}" VerticalTextAlignment="Center" FontSize="Medium" />
+							<Label Text="Label 2" VerticalTextAlignment="Center" FontSize="Small" />
+						</StackLayout>
+						<Button Text="X" BackgroundColor="Gray" HorizontalOptions="EndAndExpand" CommandParameter="{Binding .}" Clicked="OnCellClicked" />
+					</StackLayout>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
 </ContentPage>

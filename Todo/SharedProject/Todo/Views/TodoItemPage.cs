@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using System.Diagnostics;
 
 namespace Todo
 {
@@ -31,33 +31,33 @@ namespace Todo
 			var saveButton = new Button { Text = "Save" };
 			saveButton.Clicked += (sender, e) => {
 				var todoItem = (TodoItem)BindingContext;
-				App.Database.SaveItem(todoItem);
-				this.Navigation.PopAsync();
+				App.Database.SaveItem (todoItem);
+				Navigation.PopAsync ();
 			};
 
 			var deleteButton = new Button { Text = "Delete" };
 			deleteButton.Clicked += (sender, e) => {
 				var todoItem = (TodoItem)BindingContext;
-				App.Database.DeleteItem(todoItem.ID);
-                this.Navigation.PopAsync();
+				App.Database.DeleteItem (todoItem.ID);
+				Navigation.PopAsync ();
 			};
 							
 			var cancelButton = new Button { Text = "Cancel" };
 			cancelButton.Clicked += (sender, e) => {
 				var todoItem = (TodoItem)BindingContext;
-                this.Navigation.PopAsync();
+				Navigation.PopAsync ();
 			};
 
 
 			var speakButton = new Button { Text = "Speak" };
 			speakButton.Clicked += (sender, e) => {
 				var todoItem = (TodoItem)BindingContext;
-				DependencyService.Get<ITextToSpeech>().Speak(todoItem.Name + " " + todoItem.Notes);
+				DependencyService.Get<ITextToSpeech> ().Speak (todoItem.Name + " " + todoItem.Notes);
 			};
 
 			Content = new StackLayout {
 				VerticalOptions = LayoutOptions.StartAndExpand,
-				Padding = new Thickness(20),
+				Padding = new Thickness (20),
 				Children = {
 					nameLabel, nameEntry, 
 					notesLabel, notesEntry,

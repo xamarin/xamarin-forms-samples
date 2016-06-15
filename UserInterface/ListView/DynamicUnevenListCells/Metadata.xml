@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>754d8c4e-a9c4-4545-b369-5fd99114f3b7</ID>
+	<IsFullApplication>false</IsFullApplication>
+    <Brief>This sample demonstrates using the Cell.ForceUpdateSize method to programmatically resize a ListView row at runtime.</Brief>
+	<Level>Intermediate</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>User Interface, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>
+

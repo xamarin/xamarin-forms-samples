@@ -17,25 +17,25 @@ namespace WorkingWithListviewNative
 		{
 			var listView = new ListView ();
 			listView.ItemsSource = DataSource.GetList ();
-			listView.ItemTemplate = new DataTemplate(typeof(NativeCell));
+			listView.ItemTemplate = new DataTemplate (typeof(NativeCell));
 
-			listView.ItemTemplate.SetBinding(NativeCell.NameProperty, "Name");
-			listView.ItemTemplate.SetBinding(NativeCell.CategoryProperty, "Category");
-			listView.ItemTemplate.SetBinding(NativeCell.ImageFilenameProperty, "ImageFilename");
+			listView.ItemTemplate.SetBinding (NativeCell.NameProperty, "Name");
+			listView.ItemTemplate.SetBinding (NativeCell.CategoryProperty, "Category");
+			listView.ItemTemplate.SetBinding (NativeCell.ImageFilenameProperty, "ImageFilename");
 
 			listView.ItemSelected += async (sender, e) => {
 				if (e.SelectedItem == null)
 					return;
-				listView.SelectedItem= null; // deselect row
+				listView.SelectedItem = null; // deselect row
 
-				await Navigation.PushModalAsync (new DetailPage(e.SelectedItem));
+				await Navigation.PushModalAsync (new DetailPage (e.SelectedItem));
 			};
 
 			Content = new StackLayout { 
-				Padding = new Thickness (0, Device.OnPlatform(20,0,0), 0, 0),
+				Padding = new Thickness (0, Device.OnPlatform (20, 0, 0), 0, 0),
 				Children = {
 					new Label {
-						XAlign = TextAlignment.Center,
+						HorizontalTextAlignment = TextAlignment.Center,
 						Text = "Xamarin.Forms native Cell" 
 					},
 					listView

@@ -1,6 +1,6 @@
 ﻿using TodoLocalized.WinPhone.Resources;
 
-namespace TodoLocalized
+namespace TodoLocalized.WinPhone
 {
     /// <summary>
     /// Provides access to string resources.

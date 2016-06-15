@@ -10,9 +10,15 @@ namespace Todo
 
 		public App ()
 		{
-			var mainNav = new NavigationPage (new TodoListPage ());
+			Resources = new ResourceDictionary ();
+			Resources.Add ("primaryGreen", Color.FromHex("91CA47"));
+			Resources.Add ("primaryDarkGreen", Color.FromHex ("6FA22E"));
 
-			MainPage = mainNav;
+			var nav = new NavigationPage (new TodoItemListX ());
+			nav.BarBackgroundColor = (Color)App.Current.Resources["primaryGreen"];
+			nav.BarTextColor = Color.White;
+
+			MainPage = nav;
 		}
 
 		public static TodoItemDatabase Database {
@@ -41,7 +47,7 @@ namespace Todo
 					ResumeAtTodoId = int.Parse (rati);
 
 					if (ResumeAtTodoId >= 0) {
-						var todoPage = new TodoItemPage ();
+						var todoPage = new TodoItemPageX ();
 						todoPage.BindingContext = Database.GetItem (ResumeAtTodoId);
 
 						MainPage.Navigation.PushAsync (

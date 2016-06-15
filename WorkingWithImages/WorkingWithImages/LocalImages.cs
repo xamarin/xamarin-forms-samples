@@ -8,24 +8,28 @@ using Xamarin.Forms;
 
 namespace WorkingWithImages
 {
-    public class LocalImages : ContentPage
-    {
-        public LocalImages() {
-
-            var beachImage = new Image { WidthRequest=300, HeightRequest=300 };
-            beachImage.Source = ImageSource.FromFile("waterfront.jpg");
+	public class LocalImages : ContentPage
+	{
+		public LocalImages ()
+		{
+			var beachImage = new Image { WidthRequest = 300, HeightRequest = 300 };
+			beachImage.Source = ImageSource.FromFile ("waterfront.jpg");
 			beachImage.Aspect = Aspect.AspectFit;
 
-            Content = new StackLayout{
-                Children = {
-                    new Label {Text = "ImageSource.FromFile", Font=Font.BoldSystemFontOfSize(NamedSize.Medium)},
-                    beachImage, 
-					new Label {Text = "waterfront.jpg has been added each application project: iOS, Android and Windows Phone. On iOS and Android multiple resolutions are supplied and resolved at runtime."}
-                },
-                Padding = new Thickness(0, 20, 0, 0),
-                VerticalOptions = LayoutOptions.StartAndExpand,
-                HorizontalOptions = LayoutOptions.CenterAndExpand
-            };
-        }
-    }
+			Content = new StackLayout {
+				Children = {
+					new Label {
+						Text = "ImageSource.FromFile",
+						FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
+						FontAttributes = FontAttributes.Bold
+					},
+					beachImage, 
+					new Label { Text = "waterfront.jpg has been added each application project: iOS, Android and Windows Phone. On iOS and Android multiple resolutions are supplied and resolved at runtime." }
+				},
+				Padding = new Thickness (0, 20, 0, 0),
+				VerticalOptions = LayoutOptions.StartAndExpand,
+				HorizontalOptions = LayoutOptions.CenterAndExpand
+			};
+		}
+	}
 }

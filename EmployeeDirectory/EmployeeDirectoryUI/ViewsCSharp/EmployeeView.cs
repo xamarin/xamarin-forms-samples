@@ -23,11 +23,11 @@ namespace EmployeeDirectoryUI.CSharp
 			favoriteLabel = new Label ();
 
 			favoriteSwitch = new Switch ();
-			favoriteSwitch.SetBinding (Switch.IsToggledProperty, "Path=Person.IsFavorite");
 
 			personName = new Label {
-				XAlign = TextAlignment.Center,
-				Font = Font.BoldSystemFontOfSize(NamedSize.Large),
+				HorizontalTextAlignment = TextAlignment.Center,
+				FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label)),
+				FontAttributes = FontAttributes.Bold,
 				IsVisible = Device.OS == TargetPlatform.WinPhone
 			};
 
@@ -69,6 +69,7 @@ namespace EmployeeDirectoryUI.CSharp
 			Title = personInfo.Person.Name;
 			personName.Text = personInfo.Person.Name;
 			favoriteLabel.Text = personInfo.IsFavorite ? "Added to favorites" : "Not in favorites";
+			favoriteSwitch.IsToggled = personInfo.IsFavorite;
 			DownloadImage ();
 		}
 

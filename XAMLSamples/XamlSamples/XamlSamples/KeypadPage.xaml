@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamlSamples;assembly=XamlSamples"
+             x:Class="XamlSamples.KeypadPage"
+             Title="Keypad Page">
+  
+    <Grid HorizontalOptions="Center"
+          VerticalOptions="Center">
+      <Grid.BindingContext>
+        <local:KeypadViewModel />
+      </Grid.BindingContext>
+
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <!-- Internal Grid for top row of items -->
+      <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Frame Grid.Column="0"
+               OutlineColor="Accent">
+          <Label Text="{Binding DisplayText}" />
+        </Frame>
+
+        <Button Text="&#x21E6;"
+                Command="{Binding DeleteCharCommand}"
+                Grid.Column="1"
+                BorderWidth="0" />
+      </Grid>
+
+      <Button Text="1"
+              Command="{Binding AddCharCommand}"
+              CommandParameter="1"
+              Grid.Row="1" Grid.Column="0" />
+
+      <Button Text="2"
+              Command="{Binding AddCharCommand}"
+              CommandParameter="2"
+              Grid.Row="1" Grid.Column="1" />
+
+      <Button Text="3"
+              Command="{Binding AddCharCommand}"
+              CommandParameter="3"
+              Grid.Row="1" Grid.Column="2" />
+
+      <Button Text="4"
+              Command="{Binding AddCharCommand}"
+              CommandParameter="4"
+              Grid.Row="2" Grid.Column="0" />
+
+      <Button Text="5"
+              Command="{Binding AddCharCommand}"
+              CommandParameter="5"
+              Grid.Row="2" Grid.Column="1" />
+
+      <Button Text="6"
+              Command="{Binding AddCharCommand}"
+              CommandParameter="6"
+              Grid.Row="2" Grid.Column="2" />
+
+      <Button Text="7"
+              Command="{Binding AddCharCommand}"
+              CommandParameter="7"
+              Grid.Row="3" Grid.Column="0" />
+
+      <Button Text="8"
+              Command="{Binding AddCharCommand}"
+              CommandParameter="8"
+              Grid.Row="3" Grid.Column="1" />
+
+      <Button Text="9"
+              Command="{Binding AddCharCommand}"
+              CommandParameter="9"
+              Grid.Row="3" Grid.Column="2" />
+
+      <Button Text="*"
+              Command="{Binding AddCharCommand}"
+              CommandParameter="*"
+              Grid.Row="4" Grid.Column="0" />
+
+      <Button Text="0"
+              Command="{Binding AddCharCommand}"
+              CommandParameter="0"
+              Grid.Row="4" Grid.Column="1" />
+
+      <Button Text="#"
+              Command="{Binding AddCharCommand}"
+              CommandParameter="#"
+              Grid.Row="4" Grid.Column="2" />
+    </Grid>
+</ContentPage>

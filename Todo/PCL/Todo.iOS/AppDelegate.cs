@@ -1,24 +1,26 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
-using Foundation;
+
 using UIKit;
-using Todo;
+using Foundation;
+
 using Xamarin.Forms;
-using System.IO;
+using Xamarin.Forms.Platform.iOS;
 
 namespace Todo
 {
 	[Register ("AppDelegate")]
-	public partial class AppDelegate : 
-	global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate // superclass new in 1.3
+	public partial class AppDelegate : FormsApplicationDelegate
 	{
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
-			global::Xamarin.Forms.Forms.Init ();
+			// affects all UISwitch controls in the app
+			UISwitch.Appearance.OnTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47);
 
-			LoadApplication (new App ());  // method is new in 1.3
-
+			Forms.Init ();
+			LoadApplication (new App ());
 			return base.FinishedLaunching (app, options);
 		}
 	}

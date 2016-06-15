@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>660eddb8-5e14-41ce-8036-c06cc84f7cd0</ID>
+	<IsFullApplication>false</IsFullApplication>
+    <Brief>This sample demonstrates using CLR properties to pass parameters to an effect.</Brief>
+	<Level>Intermediate</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>Effects, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>
+

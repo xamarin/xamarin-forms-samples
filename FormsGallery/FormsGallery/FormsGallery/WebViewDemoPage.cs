@@ -10,7 +10,8 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "WebView",
-                Font = Font.SystemFontOfSize(50, FontAttributes.Bold),
+				FontSize = 50,
+				FontAttributes = FontAttributes.Bold,
                 HorizontalOptions = LayoutOptions.Center
             };
 
@@ -18,7 +19,7 @@ namespace FormsGallery
             {
                 Source = new UrlWebViewSource
                 {
-                    Url = "http://blog.xamarin.com/",
+                    Url = "https://blog.xamarin.com/",
                 },
                 VerticalOptions = LayoutOptions.FillAndExpand
             };

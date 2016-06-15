@@ -1,5 +1,5 @@
-﻿using System;
-using MonoTouch.AVFoundation;
+using System;
+using AVFoundation;
 using Xamarin.Forms;
 using Todo;
 
@@ -24,7 +24,7 @@ namespace Todo
 			var speechSynthesizer = new AVSpeechSynthesizer ();
 
 			var speechUtterance = new AVSpeechUtterance (text) {
-				Rate = AVSpeechUtterance.MaximumSpeechRate/4,
+				Rate = AVSpeechUtterance.MaximumSpeechRate / 4f,
 				Voice = AVSpeechSynthesisVoice.FromLanguage ("en-US"),
 				Volume = volume,
 				PitchMultiplier = pitch

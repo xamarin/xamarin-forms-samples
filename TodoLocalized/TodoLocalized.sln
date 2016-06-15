@@ -221,7 +221,6 @@ Global
 		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29} = {205F34F1-DBEC-46B8-A6E5-7C2BAB70DD0C}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = TodoLocalized.Android\TodoLocalized.Android.csproj
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = PrefixedHierarchical

@@ -12,7 +12,9 @@ namespace LabelledSections
     {
         public string Title { get; private set; }
 
-        public ListItemCollection(string title)
+		public string LongTitle { get { return "The letter " + Title; } }
+
+		public ListItemCollection(string title)
         {
             Title = title;
         }

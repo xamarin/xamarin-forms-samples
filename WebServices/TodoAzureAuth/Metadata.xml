@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>C487C640-573B-4FD9-B665-52EFF5D6457B</ID>
+	<IsFullApplication>true</IsFullApplication>
+	<Brief>This sample demonstrates a Todo list application where the data is stored, accessed, and authenticated from an Azure Mobile App instance.</Brief>
+	<Level>Advanced</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>Web Services, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>

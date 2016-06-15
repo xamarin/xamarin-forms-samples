@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="LayoutSamples.RelativeLayoutDemo"
+Title="RelativeLayout Demo - XAML">
+	<ContentPage.Content>
+		<AbsoluteLayout BackgroundColor="White">
+			<RelativeLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"  x:Name="layout" >
+				<BoxView x:Name="box" Color="Blue" HeightRequest="50" WidthRequest="50" 
+					RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor = .1}"
+	             	RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor = .1}" />
+	            <Label x:Name="centerLabel" FontSize="20" Text="RelativeLayout Demo" RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor = .5}"
+	             	RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor =.1}" />
+	            
+			</RelativeLayout>
+			<AbsoluteLayout AbsoluteLayout.LayoutBounds="0,1,1,50" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Green">
+				<Button BackgroundColor="White" FontSize="20" TextColor="Lime" Text="Move" BorderRadius="0"  AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All" x:Name="moveButton" />
+			</AbsoluteLayout>
+		</AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>

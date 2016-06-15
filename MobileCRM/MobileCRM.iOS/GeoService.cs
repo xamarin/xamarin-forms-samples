@@ -18,25 +18,20 @@ namespace MobileCRM.Services
 {
     public class GeoService : IGeoService
     {
-        //List<Address> results;
-        ManualResetEvent reset = new ManualResetEvent(false);
-
         #region IGeoService implementation
 
-        public IEnumerable<Address> ValidateAddress (string address)
+		public IEnumerable<Address> ValidateAddress (string address)
         {
             var coder = new CLGeocoder();
             var results = new List<Address>();
-            var task = Task.Factory.StartNew(async ()=>
-                {
-                    var r = await coder.GeocodeAddressAsync(address).ConfigureAwait(false);
-                    Console.WriteLine("it ran!" + r.Length);
-                    results.AddRange(OnCompletion(r));
-                    reset.Set();
-                });
-            reset.WaitOne(TimeSpan.FromSeconds(10));
-//            var task = await coder.GeocodeAddressAsync(address);
-//            results = OnCompletion(task);
+
+			var task = Task.Factory.StartNew (() => {
+				CLPlacemark[] r = coder.GeocodeAddressAsync (address).Result;
+				Console.WriteLine (string.Format ("it ran! {0}", r.Length));
+				results.AddRange (OnCompletion (r));
+			});
+
+			task.Wait (TimeSpan.FromSeconds (10));
             return results;
         }
 

@@ -100,7 +100,7 @@ namespace EmployeeDirectory.ViewModels
 				TaskScheduler.FromCurrentSynchronizationContext ());
 		}
 
-		private async Task OnSearchCompleted (string searchText, SearchProperty searchProperty, Task<IList<Person>> searchTask)
+		void OnSearchCompleted (string searchText, SearchProperty searchProperty, Task<IList<Person>> searchTask)
 		{
 			if (searchTask.IsFaulted) {
 				var ev = Error;

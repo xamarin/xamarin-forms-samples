@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamlSamples.GridDemoPage" Title="Grid Demo Page">
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+	</ContentPage.Padding>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="100" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto" />
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="100" />
+		</Grid.ColumnDefinitions>
+		<Label Text="Autosized cell" Grid.Row="0" Grid.Column="0" TextColor="White" BackgroundColor="Blue" />
+		<BoxView Color="Silver" HeightRequest="0" Grid.Row="0" Grid.Column="1" />
+		<BoxView Color="Teal" Grid.Row="1" Grid.Column="0" />
+		<Label Text="Leftover space" Grid.Row="1" Grid.Column="1" TextColor="Purple" BackgroundColor="Aqua" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+		<Label Text="Span two rows (or more if you want)" Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" TextColor="Yellow" BackgroundColor="Blue" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+		<Label Text="Span two columns" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" TextColor="Blue" BackgroundColor="Yellow" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+		<Label Text="Fixed 100x100" Grid.Row="2" Grid.Column="2" TextColor="Aqua" BackgroundColor="Red" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+	</Grid>
+</ContentPage>

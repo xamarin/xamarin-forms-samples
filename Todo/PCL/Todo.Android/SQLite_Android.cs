@@ -1,12 +1,12 @@
 ﻿using System;
 using Todo;
 using Xamarin.Forms;
-using Todo.iOS;
+using Todo.Droid;
 using System.IO;
 
 [assembly: Dependency (typeof (SQLite_Android))]
 
-namespace Todo.iOS
+namespace Todo.Droid
 {
 	public class SQLite_Android : ISQLite
 	{
@@ -15,7 +15,7 @@ namespace Todo.iOS
 		}
 
 		#region ISQLite implementation
-		public SQLite.Net.SQLiteConnection GetConnection ()
+		public SQLite.SQLiteConnection GetConnection ()
 		{
 			var sqliteFilename = "TodoSQLite.db3";
 			string documentsPath = System.Environment.GetFolderPath (System.Environment.SpecialFolder.Personal); // Documents folder
@@ -33,8 +33,7 @@ namespace Todo.iOS
 				ReadWriteStream(s, writeStream);
 			}
 
-			var plat = new SQLite.Net.Platform.XamarinAndroid.SQLitePlatformAndroid();
-			var conn = new SQLite.Net.SQLiteConnection(plat, path);
+			var conn = new SQLite.SQLiteConnection(path);
 
 			// Return the database connection 
 			return conn;

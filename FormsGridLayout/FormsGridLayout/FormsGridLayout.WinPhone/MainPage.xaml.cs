@@ -21,7 +21,7 @@ namespace GridLayoutDemo.WinPhone
 
             Forms.Init();
             
-			oadApplication(new GridLayoutDemo.App()); // new in 1.3
+			LoadApplication(new GridLayoutDemo.App()); // new in 1.3
         }
     }
 }

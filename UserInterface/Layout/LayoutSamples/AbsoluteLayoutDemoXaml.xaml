@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LayoutSamples.AbsoluteLayoutDemoXaml" Title="AbsoluteLayout Demo - XAML" BackgroundColor="White">
+	<ContentPage.Content>
+		<AbsoluteLayout x:Name="absLayout">
+			<AbsoluteLayout x:Name="box" BackgroundColor="Blue" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,.25,.5">
+				<BoxView x:Name="anchorVert" BackgroundColor="White" WidthRequest="4" VerticalOptions="FillAndExpand" AbsoluteLayout.LayoutFlags="XProportional" />
+			</AbsoluteLayout>
+			<StackLayout Spacing="10" Padding="20" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds=".5,.5">
+				<Label x:Name="status" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black" />
+				<Label x:Name="coords" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black" />
+				<Label x:Name="flagsBounds" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black" />
+			</StackLayout>
+			<Button x:Name="btnPos" Text="Position" BackgroundColor="Green" BorderRadius="0" Clicked="HandlePosition" TextColor="White" FontSize="20" AbsoluteLayout.LayoutBounds="1,0, 120,40" AbsoluteLayout.LayoutFlags="PositionProportional" />
+			<Button x:Name="btnSize" Text="Size" BackgroundColor="Green" BorderRadius="0" Clicked="HandleSize" TextColor="White" FontSize="20" AbsoluteLayout.LayoutBounds="0,1, 200,40" AbsoluteLayout.LayoutFlags="PositionProportional" />
+		</AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>

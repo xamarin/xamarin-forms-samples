@@ -55,6 +55,20 @@ namespace MobileCRM.Models
             }
         }
 
+        [Display("Full Name")]
+        public string FullName
+        {
+            get {
+                if (string.IsNullOrWhiteSpace(FirstName) && string.IsNullOrWhiteSpace(LastName))
+                    return string.Empty;
+                if (string.IsNullOrWhiteSpace(FirstName))
+                    return LastName;
+                if (string.IsNullOrWhiteSpace(LastName))
+                    return FirstName;
+                return string.Format("{0} {1}", FirstName, LastName);
+            }
+        }
+
         public string Company {
             get {
                 return InnerContact.Company ;
@@ -246,6 +260,18 @@ namespace MobileCRM.Models
         public string LastName {
             get;
             set;
+        }
+        public string FullName
+        {
+            get {
+                if (string.IsNullOrWhiteSpace(FirstName) && string.IsNullOrWhiteSpace(LastName))
+                    return string.Empty;
+                if (string.IsNullOrWhiteSpace(FirstName))
+                    return LastName;
+                if (string.IsNullOrWhiteSpace(LastName))
+                    return FirstName;
+                return string.Format("{0} {1}", FirstName, LastName);
+            }
         }
         public string Company {
             get;

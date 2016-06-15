@@ -12,7 +12,9 @@
 //		public App ()
 //		{	
 //			// The Application ResourceDictionary is available in Xamarin.Forms 1.3 and later
-//			Application.Current.Resources = new ResourceDictionary ();
+//			    if (Application.Current.Resources == null) {
+//					Application.Current.Resources = new ResourceDictionary();
+//				}
 //
 //			var appStyle = new Style (typeof(Label)) {
 //				BaseResourceKey = Device.Styles.SubtitleStyleKey,
@@ -33,7 +35,7 @@
 //			tabs.Children.Add (new StylePage {Title = "C#", Icon = "csharp.png"});
 //			tabs.Children.Add (new StyleXaml {Title = "Xaml", Icon = "xaml.png"});
 //
-//			tabs.Children.Add (new OldResourceDictionary {Title = "Old", Icon = "xaml.png"});
+//			tabs.Children.Add (new DynamicResourceXaml {Title = "Old", Icon = "xaml.png"});
 //			MainPage = tabs;
 //		}
 //	}

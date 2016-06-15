@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Todo.TodoItemListX"
+             Title="Todo">
+  <ListView x:Name="listView" ItemSelected="listItemSelected">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <ViewCell.View>
+            <StackLayout Padding="20,0,20,0" 
+                         Orientation="Horizontal"
+                         HorizontalOptions="FillAndExpand">
+              
+                <Label Text="{Binding Name}" 
+                       VerticalTextAlignment="Center" 
+                       HorizontalOptions="StartAndExpand" />
+                <Image Source="check.png" 
+                       HorizontalOptions="End"
+                       IsVisible="{Binding Done}"/>
+             
+            </StackLayout>
+          </ViewCell.View>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>

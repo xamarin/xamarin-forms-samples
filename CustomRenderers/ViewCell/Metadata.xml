@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>83816c6d-9e5b-4e21-a631-c5fc4312ee9d</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Advanced</Level>
+	<Tags>User Interface, Custom Renderers, Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>This sample demonstrates a custom renderer for a ViewCell that's hosted inside a Xamarin.Forms ListView control, enabling developers to override the default native rendering with their own platform-specific customization.</Brief>
+</SampleMetadata>

@@ -4,17 +4,20 @@
 			 x:Class="LabelledSections.LabelledSectionXaml"
 			 Padding="0,20,0,0">
 
- 	<ListView x:Name="itemListView"
-              IsGroupingEnabled="true" 
-              ItemTapped="OnItemTapped"
-      		  GroupDisplayBinding="{Binding Title}">
-      <ListView.ItemTemplate>
-        <DataTemplate> 
-          <TextCell Text="{Binding Name}" Detail="{Binding Description}"> 
-          </TextCell> 
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
+<ListView x:Name="itemListView"
+          IsGroupingEnabled="true" 
+          ItemTapped="OnItemTapped"
+  		  GroupDisplayBinding="{Binding LongTitle}"
+  		  GroupShortNameBinding="{Binding Title}"
+  		  Header="HEADER"
+  		  Footer="FOOTER">
+  <ListView.ItemTemplate>
+    <DataTemplate> 
+      <TextCell Text="{Binding Name}" Detail="{Binding Description}"> 
+      </TextCell> 
+    </DataTemplate>
+  </ListView.ItemTemplate>
+</ListView>
 
 
     <!-- this works on iOS 7.1 BUT the GroupHeaderTemplate 

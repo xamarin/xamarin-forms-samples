@@ -9,13 +9,14 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.WinPhone;
 using System.IO;
 using Windows.Storage;
 
 
-namespace TodoLocalized
+namespace TodoLocalized.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class MainPage : FormsApplicationPage
     {
         public MainPage()
         {
@@ -23,7 +24,7 @@ namespace TodoLocalized
 
             Forms.Init();
 
-            Content = TodoLocalized.App.GetMainPage().ConvertPageToUIElement(this);
+            LoadApplication(new TodoLocalized.App());
 
             // Make appbar transparent or hidden... MUST be placed *after* setting the Content, otherwise ApplicationBar appears to be 'null'
             // http://forums.xamarin.com/discussion/comment/84173/#Comment_84173

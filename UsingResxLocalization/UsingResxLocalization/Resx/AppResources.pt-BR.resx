@@ -13,6 +13,8 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 
+	<!-- BRAZILIAN PORTUGUESE -->
+
 	<data name="NotesLabel" xml:space="preserve">
 	    <value>notas:</value>
 	    <comment>label for input field</comment>
@@ -24,5 +26,8 @@
 	<data name="AddButton" xml:space="preserve">
 	    <value>adicionar novo item</value>
 	    <comment>this string appears on a button to add a new item to the list</comment>
+	</data>
+	<data name="PickerName" xml:space="preserve">
+	    <value>escolher um número</value>
 	</data>
 </root>

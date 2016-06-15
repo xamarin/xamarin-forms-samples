@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="WorkingWithListview.HeaderFooterXaml"
+			 Padding="0,20,0,0">
+
+<!-- Using binding to the page's datacontext -->
+<ListView x:Name="listView" 
+	ItemsSource="{Binding Monkeys}" 
+	Header="{Binding Intro}"
+	Footer="{Binding Summary}">
+	<ListView.HeaderTemplate >
+      <DataTemplate>
+        <StackLayout Orientation="Horizontal" 
+        	Padding="10,5,5,10"
+        	BackgroundColor="Yellow">
+          <Label Text="~~"/>
+          <Label Text="{Binding .}"/>
+          <Label Text="~~"/>
+        </StackLayout>
+      </DataTemplate>
+    </ListView.HeaderTemplate>
+	<ListView.ItemTemplate>
+		<DataTemplate>
+			<TextCell Text="{Binding Name}" Detail="{Binding Description}"></TextCell>
+		</DataTemplate>
+	</ListView.ItemTemplate>
+</ListView>
+
+<!-- You don't have to use data-binding, you can set the Header property like this -->
+<!--
+<ListView x:Name="listView"
+	Header="Textonly header"
+	Footer="Textonly footer">
+	...
+-->
+
+<!-- Alternatively, you can use a XAML template set on ListView.Header BUT no binding is supported -->
+<!--
+<ListView x:Name="listView">
+	<ListView.Header>
+		<StackLayout Orientation="Horizontal" BackgroundColor="Yellow">
+          <Label Text="~~"/>
+          <Label Text="Monkey Header"/>
+          <Label Text="~~"/>
+        </StackLayout>
+    </ListView.Header>
+    ...
+-->
+
+</ContentPage>

@@ -7,6 +7,5 @@
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
-	<Brief>A complete sample application showing how to localized Xamarin.Forms using RESX. 
-	We used Microsoft's Multilingual Application Toolkit to generate the machine translations, but this is not neccessary to build and run the sample.</Brief>
+	<Brief>Demonstrates how to localize Xamarin.Forms using RESX.</Brief>
 </SampleMetadata>

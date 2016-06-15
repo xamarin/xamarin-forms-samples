@@ -5,7 +5,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <Style TargetType="Label">
-                <Setter Property="TextColor" Value="Green" />
+                <Setter Property="TextColor" Value="Blue" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>eae39f82-388c-4f58-b3e4-9e3601aaf054</ID>
+	<IsFullApplication>false</IsFullApplication>
+    <Brief>This sample demonstrates using attached properties to pass parameters to an effect, and changing a parameter at runtime.</Brief>
+	<Level>Intermediate</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>Effects, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>
+

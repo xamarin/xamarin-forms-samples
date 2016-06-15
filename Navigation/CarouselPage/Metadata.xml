@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>a9cffd1d-a907-42c2-b328-ce2126cff47c</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Brief>This sample demonstrates how to use a CarouselPage to navigate through a collection of pages. The CarouselPage is constructed by populating it with a collection of child Page objects.</Brief>
+	<Level>Beginner</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>Navigation, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>

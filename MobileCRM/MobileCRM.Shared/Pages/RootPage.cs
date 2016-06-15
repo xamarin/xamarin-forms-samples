@@ -47,37 +47,29 @@ namespace MobileCRM.Shared.Pages
 #if WINDOWS_PHONE
             Detail = new ContentPage();//work around to clear current page.
 #endif
-            Detail = new NavigationPage(displayPage)
-            {
-              Tint = Helpers.Color.Blue.ToFormsColor(),
-            };
-
+			var color = Helpers.Color.Blue.ToFormsColor ();
+			Detail = new NavigationPage (displayPage) {
+				BarBackgroundColor = color,
+				BarTextColor = color
+			};
 
             IsPresented = false;
         }
 
-        Page PageForOption (OptionItem option)
-        {
-            // TODO: Refactor this to the Builder pattern (see ICellFactory).
-            if (option.Title == "Contacts")
-                return new MasterPage<Contact>(option);
-            if (option.Title == "Leads")
-                return new MasterPage<Lead>(option);
-            if (option.Title == "Accounts") {
-                var page = new MasterPage<Account>(option);
-                var cell = page.List.Cell;
-                cell.SetBinding(TextCell.TextProperty, "Company");
-                return page;
-            }
-            if (option.Title == "Opportunities") {
-                var page = new MasterPage<Opportunity>(option);
-                var cell = page.List.Cell;
-                cell.SetBinding(TextCell.TextProperty, "Company");
-                cell.SetBinding(TextCell.DetailProperty, new Binding("EstimatedAmount", stringFormat: "{0:C}"));
-                return page;
-            }
-            throw new NotImplementedException("Unknown menu option: " + option.Title);
-        }
+		Page PageForOption (OptionItem option)
+		{
+			var builder = new MasterPageBuilder ();
+			if (option.Title == "Contacts")
+				return builder.BuildContacts (option);
+			if (option.Title == "Leads")
+				return builder.BuildLeads (option);
+			if (option.Title == "Accounts")
+				return builder.BuildAccounts (option);
+			if (option.Title == "Opportunities")
+				return builder.BuildOpportunities (option);
+
+			throw new NotImplementedException (string.Format ("Unknown menu option: {0}", option.Title));
+		}
     }
 }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TodoLocalized;
 using TodoLocalized.WinPhone;
 using Windows.Phone.Speech.Synthesis;
 using Xamarin.Forms;

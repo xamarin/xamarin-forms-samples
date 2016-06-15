@@ -11,13 +11,14 @@ namespace WorkingWithFiles
 	/// </summary>
 	public class SaveAndLoadText : ContentPage
 	{
+		const string fileName = "temp.txt";
 		Button loadButton, saveButton;
 
 		public SaveAndLoadText ()
 		{
-			var input = new Editor { Text = "" };
-			if (Device.OS == TargetPlatform.iOS)
-				input.HeightRequest = 40;
+			var fileService = DependencyService.Get<ISaveAndLoad> ();
+
+			var input = new Entry { Text = "" };
 			var output = new Label { Text = "" };
 			saveButton = new Button {Text = "Save"};
 
@@ -25,8 +26,8 @@ namespace WorkingWithFiles
 				loadButton.IsEnabled = saveButton.IsEnabled = false;
 				// uses the Interface defined in this project, and the implementations that must
 				// be written in the iOS, Android and WinPhone app projects to do the actual file manipulation
-				await DependencyService.Get<ISaveAndLoad>().SaveTextAsync("temp.txt", input.Text);
 
+				await fileService.SaveTextAsync (fileName, input.Text);
 				loadButton.IsEnabled = saveButton.IsEnabled = true;
 			};
 
@@ -36,9 +37,10 @@ namespace WorkingWithFiles
 
 				// uses the Interface defined in this project, and the implementations that must
 				// be written in the iOS, Android and WinPhone app projects to do the actual file manipulation
-				output.Text = await DependencyService.Get<ISaveAndLoad>().LoadTextAsync("temp.txt");
+				output.Text = await fileService.LoadTextAsync(fileName);
 				loadButton.IsEnabled = saveButton.IsEnabled = true;
 			};
+			loadButton.IsEnabled = fileService.FileExists (fileName);
 
 			var buttonLayout = new StackLayout {
 				Orientation = StackOrientation.Horizontal,
@@ -47,15 +49,19 @@ namespace WorkingWithFiles
 			};
 
 			Content = new StackLayout {
-				Padding = new Thickness (0,20,0,0),
+				Padding = new Thickness (0, 20, 0, 0),
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				Children = {
-					new Label { Text = "Save and Load Text (PCL)", Font = Font.BoldSystemFontOfSize(NamedSize.Medium)},
+					new Label {
+						Text = "Save and Load Text (PCL)",
+						FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
+						FontAttributes = FontAttributes.Bold
+					},
 					new Label { Text = "Type below and press Save, then Load" },
 					input,
 					buttonLayout,
 					output
-				} 
+				}
 			};
 		}
 	}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>701e0d0d-8f72-43be-b90b-3d7b2a1ca35e</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Brief>This sample demonstrates using the PinchGestureRecognizer class to implement interactive zoom functionality.</Brief>
+	<Level>Intermediate</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>User Interface, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>

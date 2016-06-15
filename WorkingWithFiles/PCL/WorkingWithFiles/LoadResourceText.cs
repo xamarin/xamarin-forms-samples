@@ -24,12 +24,14 @@ namespace WorkingWithFiles
 			editor.Text = text;
 
 			Content = new StackLayout {
-				Padding = new Thickness (0,20,0,0),
+				Padding = new Thickness (0, 20, 0, 0),
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				Children = {
 					new Label { Text = "Embedded Resource Text File (PCL)", 
-						Font = Font.BoldSystemFontOfSize(NamedSize.Medium) }
-					, editor}
+						FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
+						FontAttributes = FontAttributes.Bold
+					}, editor
+				}
 			};
 
 			// NOTE: use for debugging, not in released app code!
