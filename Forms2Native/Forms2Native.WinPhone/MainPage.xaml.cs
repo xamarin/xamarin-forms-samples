@@ -25,7 +25,7 @@ namespace Forms2Native.WinPhone
 
             MessagingCenter.Subscribe<MyFirstPage, NativeNavigationArgs> (
 	            this,
-	            App.NativeNavigationMessage,
+	            Forms2Native.App.NativeNavigationMessage,
 	            HandleNativeNavigationMessage);
         }
 
