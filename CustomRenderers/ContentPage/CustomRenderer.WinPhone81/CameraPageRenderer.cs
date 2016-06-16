@@ -26,7 +26,8 @@ namespace CustomRenderer.WinPhone81
 		AppBarButton takePhotoButton;
 		Application app;
 
-		protected override void OnElementChanged (VisualElementChangedEventArgs e)
+
+		protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Page> e)
 		{
 			base.OnElementChanged (e);
 
