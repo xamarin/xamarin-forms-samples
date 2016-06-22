@@ -1,8 +1,10 @@
 ﻿using System;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace EffectsDemo
 {
+	[Preserve(AllMembers = true)]
 	public partial class HomePage : ContentPage
 	{
 		bool isLabelTeal = false;
