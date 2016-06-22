@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using CoreGraphics;
 using EffectsDemo.iOS;
+using Foundation;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
@@ -9,6 +10,7 @@ using Xamarin.Forms.Platform.iOS;
 [assembly:ExportEffect (typeof(LabelShadowEffect), "LabelShadowEffect")]
 namespace EffectsDemo.iOS
 {
+	[Preserve(AllMembers = true)]
 	public class LabelShadowEffect : PlatformEffect
 	{
 		protected override void OnAttached ()
