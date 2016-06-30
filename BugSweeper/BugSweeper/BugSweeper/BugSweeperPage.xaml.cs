@@ -1,6 +1,4 @@
-﻿#define FIX_ANDROID_ANCHORS         // Android AnchorX and AnchorY must be set to 0.5 
-                                    // but can't be set exactly to 0.5
-#define FIX_WINPHONE_BUTTON         // IsEnabled = false doesn't disable button
+﻿#define FIX_WINPHONE_BUTTON         // IsEnabled = false doesn't disable button
 
 #pragma warning disable 4014        // for non-await'ed async call
 
@@ -11,7 +9,7 @@ using Xamarin.Forms;
 
 namespace BugSweeper
 {
-    public partial class BugSweeperPage
+    public partial class BugSweeperPage : ContentPage
     {
         const string timeFormat = @"%m\:ss";
 
@@ -113,35 +111,18 @@ namespace BugSweeper
             congratulationsText.Scale = 0;
             congratulationsText.IsVisible = true;
 
-#if FIX_ANDROID_ANCHORS
-
-            if (Device.OS == TargetPlatform.Android)
-            {
-                congratulationsText.AnchorX = 0.49;
-                congratulationsText.AnchorY = 0.49;
-            }
-
-#endif
+            // Because IsVisible has been false, the text might not have a size yet, 
+            //  in which case Measure will return a size.
+            double congratulationsTextWidth = congratulationsText.Measure(Double.PositiveInfinity, Double.PositiveInfinity).Request.Width;
 
             congratulationsText.Rotation = 0;
             congratulationsText.RotateTo(3 * 360, 1000, Easing.CubicOut);
 
-            double maxScale = 0.9 * board.Width / congratulationsText.Width;
+            double maxScale = 0.9 * board.Width / congratulationsTextWidth;
             await congratulationsText.ScaleTo(maxScale, 1000);
 
             foreach (View view in congratulationsText.Children)
             {
-
-#if FIX_ANDROID_ANCHORS
-
-            if (Device.OS == TargetPlatform.Android)
-            {
-                view.AnchorX = 0.49;
-                view.AnchorY = 0.49;
-            }
-
-#endif
-
                 view.Rotation = 0;
                 view.RotateTo(180);
                 await view.ScaleTo(3, 100);
@@ -157,16 +138,10 @@ namespace BugSweeper
             consolationText.Scale = 0;
             consolationText.IsVisible = true;
 
-#if FIX_ANDROID_ANCHORS
+            // (See above for rationale)
+            double consolationTextWidth = consolationText.Measure(Double.PositiveInfinity, Double.PositiveInfinity).Request.Width;
 
-            if (Device.OS == TargetPlatform.Android)
-            {
-                consolationText.AnchorX = 0.49;
-                consolationText.AnchorY = 0.49;
-            }
-
-#endif
-            double maxScale = 0.9 * board.Width / consolationText.Width;
+            double maxScale = 0.9 * board.Width / consolationTextWidth;
             await consolationText.ScaleTo(maxScale, 1000);
             await Task.Delay(1000);
             await DisplayPlayAgainButton();
@@ -178,17 +153,10 @@ namespace BugSweeper
             playAgainButton.IsVisible = true;
             playAgainButton.IsEnabled = true;
 
-#if FIX_ANDROID_ANCHORS
+            // (See above for rationale)
+            double playAgainButtonWidth = playAgainButton.Measure(Double.PositiveInfinity, Double.PositiveInfinity).Request.Width;
 
-            if (Device.OS == TargetPlatform.Android)
-            {
-                playAgainButton.AnchorX = 0.49;
-                playAgainButton.AnchorY = 0.49;
-            }
-
-#endif
-
-            double maxScale = board.Width / playAgainButton.Width;
+            double maxScale = board.Width / playAgainButtonWidth;
             await playAgainButton.ScaleTo(maxScale, 1000, Easing.SpringOut);
         }
 

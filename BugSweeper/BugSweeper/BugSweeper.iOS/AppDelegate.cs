@@ -26,8 +26,8 @@ namespace BugSweeper.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             Forms.Init();
-			LoadApplication (new App ());
-			return base.FinishedLaunching(app,options);
+            LoadApplication (new App ());
+            return base.FinishedLaunching(app,options);
         }
     }
 }
