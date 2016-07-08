@@ -13,14 +13,16 @@ namespace UsingUITest.iOS
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init ();
-			global::Xamarin.Forms.Forms.ViewInitialized += (sender, e) => {
 
-				// http://developer.xamarin.com/recipes/testcloud/set-accessibilityidentifier-ios/
-				if (null != e.View.AutomationId) {
-					e.NativeView.AccessibilityIdentifier = e.View.AutomationId;
-					Console.WriteLine ("Set AccessibilityIdentifier: " + e.View.AutomationId);
-				}
-			};
+			// NOTE: this is no longer required - Xamarin.Forms 2.2 now AUTOMATICALLY
+			// assigns the "AutomationId" to the "ContentDescription"
+			//global::Xamarin.Forms.Forms.ViewInitialized += (sender, e) => {
+			//	// http://developer.xamarin.com/recipes/testcloud/set-accessibilityidentifier-ios/
+			//	if (null != e.View.AutomationId) {
+			//		e.NativeView.AccessibilityIdentifier = e.View.AutomationId;
+			//		Console.WriteLine ("Set AccessibilityIdentifier: " + e.View.AutomationId);
+			//	}
+			//};
 
 			LoadApplication (new App ());
 

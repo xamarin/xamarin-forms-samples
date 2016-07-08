@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>00dd7f42-6f34-406f-9572-fc797cc03199</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Brief>This sample demonstrates creating and consuming a ResourceDictionary at the application, page, and control level.</Brief>
+	<Level>Beginner</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>Xamarin.Forms, XAML</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>

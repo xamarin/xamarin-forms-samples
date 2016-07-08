@@ -18,12 +18,14 @@ namespace UsingUITest.Droid
 			base.OnCreate (bundle);
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
-			// http://forums.xamarin.com/discussion/21148/calabash-and-xamarin-forms-what-am-i-missing
-			global::Xamarin.Forms.Forms.ViewInitialized += (object sender, Xamarin.Forms.ViewInitializedEventArgs e) => {
-				if (!string.IsNullOrWhiteSpace (e.View.AutomationId)) {
-					e.NativeView.ContentDescription = e.View.AutomationId;
-				}
-			};
+
+			// NOTE: this is no longer required - Xamarin.Forms 2.2 now AUTOMATICALLY
+			// assigns the "AutomationId" to the "ContentDescription"
+			//global::Xamarin.Forms.Forms.ViewInitialized += (object sender, Xamarin.Forms.ViewInitializedEventArgs e) => {
+			//	if (!string.IsNullOrWhiteSpace (e.View.AutomationId)) {
+			//		e.NativeView.ContentDescription = e.View.AutomationId;
+			//	}
+			//};
 
 			LoadApplication (new App ());
 		}

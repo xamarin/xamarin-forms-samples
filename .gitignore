@@ -133,6 +133,9 @@ publish/
 
 # NuGet Packages Directory
 packages/
+*.nuget.targets
+project.lock.json
+
 ## TODO: If the tool you use requires repositories.config uncomment the next line
 #!packages/repositories.config
 
@@ -160,6 +163,7 @@ ClientBin/
 *.publishsettings
 node_modules/
 .DS_Store
+*.bak
 
 # RIA/Silverlight projects
 Generated_Code/
@@ -182,4 +186,4 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
-project.lock.json
+

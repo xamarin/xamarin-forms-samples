@@ -1,0 +1,10 @@
+﻿<Application xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 xmlns:light="clr-namespace:Xamarin.Forms.Themes;assembly=Xamarin.Forms.Theme.Light"
+			 xmlns:dark="clr-namespace:Xamarin.Forms.Themes;assembly=Xamarin.Forms.Theme.Dark"
+			 x:Class="ThemesDemo.App">
+    <Application.Resources>
+        <ResourceDictionary MergedWith="light:LightThemeResources" />
+<!--        <ResourceDictionary MergedWith="dark:DarkThemeResources" />-->
+    </Application.Resources>
+</Application>
