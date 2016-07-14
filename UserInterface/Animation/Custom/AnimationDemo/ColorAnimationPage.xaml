@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AnimationDemo.ColorAnimationPage" Title="Color Animations" Icon="xaml.png">
+	<StackLayout Margin="10,20,10,20">
+		<BoxView x:Name="boxView" Color="Blue" HeightRequest="100" HorizontalOptions="FillAndExpand" />
+		<Button Text="Animate BoxView" Clicked="OnAnimateBoxViewButtonClicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+		<Label x:Name="label" Text="Lorem ipsum dolor sit amet" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+		<Button Text="Animate Label" Clicked="OnAnimateLabelButtonClicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+		<Button Text="Animate Page Background" Clicked="OnAnimatePageBackgroundButtonClicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+		<Button x:Name="cancelButton" Text="Cancel Animation" Clicked="OnCancelAnimationButtonClicked" IsEnabled="false" />
+	</StackLayout>
+</ContentPage>

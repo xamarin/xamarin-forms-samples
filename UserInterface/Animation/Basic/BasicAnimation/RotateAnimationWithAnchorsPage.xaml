@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BasicAnimation.RotateAnimationWithAnchorsPage" Title="Rotate Animation with Anchors">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.8*" />
+			<RowDefinition Height="0.2*" />
+		</Grid.RowDefinitions>
+		<AbsoluteLayout x:Name="absoluteLayout">
+			<Image x:Name="image" Source="monkey.png" SizeChanged="OnImageSizeChanged" />
+		</AbsoluteLayout>
+		<StackLayout Grid.Row="1">
+			<Button x:Name="startButton" Text="Start Animation" Clicked="OnStartAnimationButtonClicked" VerticalOptions="EndAndExpand" />
+			<Button x:Name="cancelButton" Text="Cancel Animation" Clicked="OnCancelAnimationButtonClicked" IsEnabled="false" />
+		</StackLayout>
+	</Grid>
+</ContentPage>
