@@ -134,7 +134,8 @@ publish/
 # NuGet Packages Directory
 packages/
 *.nuget.targets
-project.lock.json
+*.lock.json
+*.nuget.props
 
 ## TODO: If the tool you use requires repositories.config uncomment the next line
 #!packages/repositories.config
