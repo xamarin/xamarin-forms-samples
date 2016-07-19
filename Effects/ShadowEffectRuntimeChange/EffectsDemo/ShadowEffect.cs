@@ -83,7 +83,7 @@ namespace EffectsDemo
 
 		class LabelShadowEffect : RoutingEffect
 		{
-			public LabelShadowEffect () : base ("Xamarin.LabelShadowEffect")
+			public LabelShadowEffect () : base ("MyCompany.LabelShadowEffect")
 			{
 			}
 		}

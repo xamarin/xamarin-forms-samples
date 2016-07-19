@@ -12,7 +12,7 @@ namespace EffectsDemo
 
 		public float DistanceY { get; set; }
 
-		public ShadowEffect () : base ("Xamarin.LabelShadowEffect")
+		public ShadowEffect () : base ("MyCompany.LabelShadowEffect")
 		{			
 		}
 	}

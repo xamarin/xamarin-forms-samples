@@ -5,7 +5,7 @@ using EffectsDemo.Droid;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly:ResolutionGroupName ("Xamarin")]
+[assembly:ResolutionGroupName ("MyCompany")]
 [assembly:ExportEffect (typeof(LabelShadowEffect), "LabelShadowEffect")]
 namespace EffectsDemo.Droid
 {

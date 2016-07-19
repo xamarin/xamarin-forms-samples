@@ -4,7 +4,7 @@ namespace EffectsDemo
 {
 	public class FocusEffect : RoutingEffect
 	{
-		public FocusEffect () : base ("Xamarin.FocusEffect")
+		public FocusEffect () : base ("MyCompany.FocusEffect")
 		{
 		}
 	}
