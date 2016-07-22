@@ -4,7 +4,7 @@
 	<IsFullApplication>false</IsFullApplication>
 	<Level>Intermediate</Level>
 	<Tags>Xamarin.Forms, Games</Tags>
-	<SupportedPlatforms>Android, iOS</SupportedPlatforms>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
     <LicenseRequirement>Indie</LicenseRequirement>
     <Brief>A simple project showing how to combine Xamarin.Forms with CocosSharp.</Brief>
 	<Gallery>true</Gallery>

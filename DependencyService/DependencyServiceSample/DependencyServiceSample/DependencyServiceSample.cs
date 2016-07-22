@@ -22,7 +22,7 @@ namespace DependencyServiceSample
 			speak.Clicked += (sender, e) => {
 				DependencyService.Get<ITextToSpeech>().Speak("Hello from Xamarin Forms");
 			};
-			//stack.Children.Add(speak);
+			stack.Children.Add(speak);
 
 			var button = new Button {
 				Text = "Click for battery info",

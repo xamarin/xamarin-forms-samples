@@ -4,7 +4,7 @@
 	<IsFullApplication>true</IsFullApplication>
 	<Level>Intermediate</Level>
 	<Tags>Data, Xamarin.Forms</Tags>
-	<SupportedPlatforms>Android, iOS, windows-rt</SupportedPlatforms>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
 	<Brief>Based on the existing iOS and Android sample, but completely rewritten for Xamarin.Forms.</Brief>

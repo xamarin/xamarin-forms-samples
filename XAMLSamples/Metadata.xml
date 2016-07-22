@@ -4,7 +4,7 @@
 	<IsFullApplication>false</IsFullApplication>
 	<Level>Intermediate</Level>
 	<Tags>Graphics, Xamarin.Forms</Tags>
-	<SupportedPlatforms>Android, iOS, windows-rt</SupportedPlatforms>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
 	<Brief>A collection of samples that demonstrate how to utilize XAML with Xamarin.Forms.</Brief>

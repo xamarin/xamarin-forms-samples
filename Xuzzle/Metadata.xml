@@ -4,7 +4,7 @@
 	<IsFullApplication>true</IsFullApplication>
 	<Level>Intermediate</Level>
 	<Tags>User Interface, Touch, Graphics, Xamarin.Forms</Tags>
-	<SupportedPlatforms>Android, iOS, windows-rt</SupportedPlatforms>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
 	<Brief>This sample implements the classic 14-15 puzzle using Xamarin.Forms.</Brief>
