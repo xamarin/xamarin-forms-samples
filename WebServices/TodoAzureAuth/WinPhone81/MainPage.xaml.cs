@@ -53,7 +53,7 @@ namespace WinPhone81
 				success = true;
 			} catch (Exception ex) {
 				var dialog = new MessageDialog (ex.Message, "Authentication Failed");
-				dialog.ShowAsync ();
+				await dialog.ShowAsync ();
 			}
 			return success;
 		}
@@ -72,7 +72,7 @@ namespace WinPhone81
 				success = true;
 			} catch (Exception ex) {
 				var dialog = new MessageDialog (ex.Message, "Logout failed");
-				dialog.ShowAsync ();
+				await dialog.ShowAsync ();
 			}
 			return success;
 		}

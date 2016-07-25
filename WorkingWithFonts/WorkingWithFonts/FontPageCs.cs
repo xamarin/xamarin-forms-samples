@@ -49,7 +49,7 @@ namespace WorkingWithFonts
             myLabel.Text = Device.OnPlatform(
                 "MyLabel for iOS!",
                 "MyLabel for Android!",
-                "MyLabel for Windows Phone!"
+                "MyLabel for Windows!"
             );
 			myLabel.FontSize = Device.OnPlatform (
 				Device.GetNamedSize (NamedSize.Small, myLabel),
