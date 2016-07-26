@@ -4,7 +4,7 @@
 	<IsFullApplication>true</IsFullApplication>
 	<Level>Intermediate</Level>
 	<Tags>User Interface</Tags>
-	<SupportedPlatforms>Android, iOS, Windows Phone 8.0, Windows Phone 8.1</SupportedPlatforms>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
     <LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
     <Brief>The ListView Basics sample demonstrates populating a ListView with an array of strings, not specifying which ViewCell to use.</Brief>

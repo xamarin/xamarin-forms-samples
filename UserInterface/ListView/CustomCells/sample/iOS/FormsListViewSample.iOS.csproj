@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>FormsListViewSample.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>FormsListViewSample.iOS</AssemblyName>
+    <AssemblyName>FormsListViewSampleiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>

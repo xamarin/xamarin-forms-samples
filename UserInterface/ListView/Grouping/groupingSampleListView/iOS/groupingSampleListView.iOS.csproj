@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>GroupingSampleListView.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>groupingSampleListView.iOS</AssemblyName>
+    <AssemblyName>groupingSampleListViewiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>

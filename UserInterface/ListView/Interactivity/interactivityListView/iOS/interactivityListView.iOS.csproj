@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>interactivityListView.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>interactivityListView.iOS</AssemblyName>
+    <AssemblyName>interactivityListViewiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>

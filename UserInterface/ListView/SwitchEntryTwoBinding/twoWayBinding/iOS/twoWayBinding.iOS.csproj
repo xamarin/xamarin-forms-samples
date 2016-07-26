@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>twoWayBinding.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>twoWayBinding.iOS</AssemblyName>
+    <AssemblyName>twoWayBindingiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>

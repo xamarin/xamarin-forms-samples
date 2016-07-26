@@ -11,7 +11,7 @@ Title="ListView Xaml Sample"
 						<AbsoluteLayout VerticalOptions="Fill" BackgroundColor="Olive">
 							<Label Text = "{Binding Name}" FontSize="24" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 40"/>
 							<Label Text = "{Binding Type}" AbsoluteLayout.LayoutBounds="50, 35, 200, 25"/>
-							<Image Source="{Binding Image}"  AbsoluteLayout.LayoutBounds="250.25, 0.25, 50, 50 "/>
+							<Image Source="{Binding Image}" AbsoluteLayout.LayoutBounds="250.25, 0.25, 50, 50 "/>
 						</AbsoluteLayout>	
 					</ViewCell>
 				</DataTemplate>

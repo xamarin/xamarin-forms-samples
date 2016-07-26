@@ -4,7 +4,7 @@
 	<IsFullApplication>false</IsFullApplication>
 	<Level>Intermediate</Level>
 	<Tags>User Interface</Tags>
-	<SupportedPlatforms>Android, iOS, Windows Phone 8.1</SupportedPlatforms>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
     <LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
     <Brief>This sample demonstrates binding context changes in a ListView custom cell in Xamarin.Forms.</Brief>

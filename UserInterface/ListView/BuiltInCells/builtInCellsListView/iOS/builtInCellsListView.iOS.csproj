@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>builtInCellsListView.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>builtInCellsListView.iOS</AssemblyName>
+    <AssemblyName>builtInCellsListViewiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>

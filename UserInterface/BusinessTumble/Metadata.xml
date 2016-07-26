@@ -4,7 +4,7 @@
 	<IsFullApplication>true</IsFullApplication>
 	<Level>Intermediate</Level>
 	<Tags>User Interface</Tags>
-	<SupportedPlatforms>Android, iOS, Windows Phone</SupportedPlatforms>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
     <LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
     <Brief>This sample, inspired by a corporate social media profile app, demonstrates how to build similar layouts across StackLayout, RelativeLayout, and AbsoluteLayout.</Brief>

@@ -1,12 +1,9 @@
-﻿using System;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace TextSample
 {
 	public class App : Application
 	{
-		Page nav = new NavigationPage();
 		public App ()
 		{
 			// The root page of your application

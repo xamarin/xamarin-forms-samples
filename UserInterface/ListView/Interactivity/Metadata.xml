@@ -4,7 +4,7 @@
 	<IsFullApplication>true</IsFullApplication>
 	<Level>Intermediate</Level>
 	<Tags>User Interface</Tags>
-	<SupportedPlatforms>Android, iOS</SupportedPlatforms>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
     <LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
     <Brief>This sample demonstrates how to use ListView's interactivity features, including context actions, pull-to-refresh and row selection.</Brief>
