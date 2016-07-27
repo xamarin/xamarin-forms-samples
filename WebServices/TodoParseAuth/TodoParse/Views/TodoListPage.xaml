@@ -3,7 +3,7 @@
 	<ContentPage.ToolbarItems>
 		<ToolbarItem Text="+" Clicked="OnAddItemClicked">
 			<ToolbarItem.Icon>
-				<OnPlatform x:TypeArguments="FileImageSource" Android="plus" />
+				<OnPlatform x:TypeArguments="FileImageSource" Android="plus" WinPhone="plus.png" />
 			</ToolbarItem.Icon>
 		</ToolbarItem>
 		<ToolbarItem Text="Logout" Clicked="OnLogoutClicked" />

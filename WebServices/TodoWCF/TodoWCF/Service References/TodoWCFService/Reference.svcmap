@@ -20,14 +20,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://todowcfservice.azurewebsites.net/TodoService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://developer.xamarin.com:8081/TodoService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TodoService.xsd" MetadataType="Schema" ID="e774fb99-1485-4510-b0e8-57026820e4b1" SourceId="1" SourceUrl="http://todowcfservice.azurewebsites.net/TodoService.svc?xsd=xsd1" />
-    <MetadataFile FileName="TodoService1.xsd" MetadataType="Schema" ID="9442c7a1-0120-4dff-aac0-4f2102b587e6" SourceId="1" SourceUrl="http://todowcfservice.azurewebsites.net/TodoService.svc?xsd=xsd0" />
-    <MetadataFile FileName="TodoService2.xsd" MetadataType="Schema" ID="1e3c6c15-4d04-4204-8ce9-6eca0d0583e7" SourceId="1" SourceUrl="http://todowcfservice.azurewebsites.net/TodoService.svc?xsd=xsd2" />
-    <MetadataFile FileName="TodoService.wsdl" MetadataType="Wsdl" ID="2069eb95-ca2b-420f-981a-d67dbe1d4836" SourceId="1" SourceUrl="http://todowcfservice.azurewebsites.net/TodoService.svc?wsdl" />
-    <MetadataFile FileName="TodoService.disco" MetadataType="Disco" ID="a722c4a4-7cb6-4c34-a64a-f24a832fc282" SourceId="1" SourceUrl="http://todowcfservice.azurewebsites.net/TodoService.svc?disco" />
+    <MetadataFile FileName="TodoService3.xsd" MetadataType="Schema" ID="821ac5f5-400c-4b5c-a3b8-f7b22bbcd043" SourceId="1" SourceUrl="http://developer.xamarin.com:8081/TodoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TodoWCFService.wsdl" MetadataType="Wsdl" ID="cc7a63d8-fe06-4f59-80d5-2d7daa5de96f" SourceId="1" SourceUrl="http://developer.xamarin.com:8081/TodoService.svc?wsdl" />
+    <MetadataFile FileName="TodoService1.disco" MetadataType="Disco" ID="81d8fbdd-38f1-4832-814f-abf6b611a30d" SourceId="1" SourceUrl="http://developer.xamarin.com:8081/TodoService.svc?disco" />
+    <MetadataFile FileName="TodoService31.xsd" MetadataType="Schema" ID="5f52df77-95a7-47eb-96f9-85cacb6093f3" SourceId="1" SourceUrl="http://developer.xamarin.com:8081/TodoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TodoService32.xsd" MetadataType="Schema" ID="1d7d51c9-9e72-4139-9219-6eb5691b0564" SourceId="1" SourceUrl="http://developer.xamarin.com:8081/TodoService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

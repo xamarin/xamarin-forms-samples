@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>WorkingWithNavigation.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>WorkingWithNavigation.iOS</AssemblyName>
+    <AssemblyName>WorkingWithNavigationiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>

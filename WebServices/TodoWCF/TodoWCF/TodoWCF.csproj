@@ -69,22 +69,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\ServiceReferences.Designer.ClientConfig" />
-    <None Include="Service References\TodoWCFService\TodoService.wsdl" />
-    <None Include="Service References\TodoWCFService\TodoService.xsd">
+    <None Include="Service References\TodoWCFService\TodoService3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\TodoWCFService\TodoService1.xsd">
+    <None Include="Service References\TodoWCFService\TodoService31.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\TodoWCFService\TodoService2.xsd">
+    <None Include="Service References\TodoWCFService\TodoService32.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\TodoWCFService\TodoWCF.TodoWCFService.TodoItem.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Service References\TodoWCFService\TodoWCFService.wsdl" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Service References\TodoWCFService\TodoService1.disco" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\TodoListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -98,9 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\TodoWCFService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\TodoWCFService\TodoService.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\TodoWCFService\configuration91.svcinfo" />
