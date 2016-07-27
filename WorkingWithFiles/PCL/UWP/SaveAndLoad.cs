@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Windows.Storage;
-using WinStore;
-using WorkingWithFiles;
+using WorkingWithFiles.UWP;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(SaveAndLoad_WinApp))]
-
-namespace WinStore
+[assembly: Dependency(typeof(SaveAndLoad))]
+namespace WorkingWithFiles.UWP
 {
     // https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh758325.aspx
 
-    public class SaveAndLoad_WinApp : ISaveAndLoad
+    public class SaveAndLoad : ISaveAndLoad
     {
         #region ISaveAndLoad implementation
 
@@ -30,6 +28,21 @@ namespace WinStore
             return text;
         }
 
+        public bool FileExists(string filename)
+        {
+            var localFolder = ApplicationData.Current.LocalFolder;
+            try
+            {
+                localFolder.GetFileAsync(filename).AsTask().Wait();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         #endregion
     }
 }
+

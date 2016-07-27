@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
-using WorkingWithFiles;
 using Windows.Storage;
 using WinPhone81;
+using WorkingWithFiles;
+using Xamarin.Forms;
 
 [assembly: Dependency(typeof(SaveAndLoad_WinApp))]
 
@@ -33,6 +30,22 @@ namespace WinPhone81
             string text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
             return text;
         }
+
+        public bool FileExists(string filename)
+        {
+            var localFolder = ApplicationData.Current.LocalFolder;
+            try
+            {
+                localFolder.GetFileAsync(filename).AsTask().Wait();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
 
         #endregion
     }
