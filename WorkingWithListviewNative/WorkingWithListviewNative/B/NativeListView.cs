@@ -1,16 +1,14 @@
 ﻿using System;
-
-using Xamarin.Forms;
-using System.Collections;
 using System.Collections.Generic;
+using Xamarin.Forms;
 
 namespace WorkingWithListviewNative
 {
-	/// <summary>
-	/// Xamarin.Forms representation for a custom-renderer that uses 
-	/// the native list control on each platform.
-	/// </summary>
-	public class NativeListView : View
+    /// <summary>
+    /// Xamarin.Forms representation for a custom-renderer that uses 
+    /// the native list control on each platform.
+    /// </summary>
+    public class NativeListView : ListView
 	{
 		public static readonly BindableProperty ItemsProperty = 
 			BindableProperty.Create ("Items", typeof(IEnumerable<string>), typeof(NativeListView), new List<string>());

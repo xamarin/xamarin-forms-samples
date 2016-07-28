@@ -1,7 +1,4 @@
-﻿using System;
-
-using Xamarin.Forms;
-using System.Collections.Generic;
+﻿using Xamarin.Forms;
 
 namespace WorkingWithListviewNative
 {
@@ -10,7 +7,7 @@ namespace WorkingWithListviewNative
 	/// This page uses a custom renderer that wraps native list controls:
 	///    iOS :           UITableView
 	///    Android :       ListView   (do not confuse with Xamarin.Forms ListView)
-	///    Windows Phone : ?
+	///    Windows Phone : ListView
 	/// 
 	/// It uses a CUSTOM row/cell class that is defined natively which 
 	/// is still faster than a Xamarin.Forms-defined ViewCell subclass.
@@ -36,7 +33,7 @@ namespace WorkingWithListviewNative
 				Children = {
 					new Label {
 						HorizontalTextAlignment = TextAlignment.Center,
-						Text = Device.OnPlatform ("Custom UITableView+UICell", "Custom ListView+Cell", "Custom renderer todo")
+						Text = Device.OnPlatform ("Custom UITableView+UICell", "Custom ListView+Cell", "Custom renderer ListView+DataTemplate")
 					},
 					nativeListView2
 				}

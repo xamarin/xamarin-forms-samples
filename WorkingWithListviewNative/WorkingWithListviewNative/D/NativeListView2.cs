@@ -10,7 +10,7 @@ namespace WorkingWithListviewNative
 	/// Xamarin.Forms representation for a custom-renderer that uses 
 	/// the native list control on each platform.
 	/// </summary>
-	public class NativeListView2 : View
+	public class NativeListView2 : ListView
 	{
 		public static readonly BindableProperty ItemsProperty = 
 			BindableProperty.Create ("Items", typeof(IEnumerable<DataSource2>), typeof(NativeListView2), new List<DataSource2>());

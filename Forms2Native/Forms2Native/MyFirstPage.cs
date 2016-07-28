@@ -51,7 +51,7 @@ namespace Forms2Native
 					return "Click to see an Intent work";
 
 				default:
-					return "Click to see a Windows Phone Page";
+					return "Click to see a Windows page";
 			}
 		}
 	}
