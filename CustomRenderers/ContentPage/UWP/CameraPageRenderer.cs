@@ -23,6 +23,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Xamarin.Forms.Platform.UWP;
+using Windows.Foundation;
 
 [assembly: ExportRenderer(typeof(CameraPage), typeof(CameraPageRenderer))]
 namespace CustomRenderer.UWP
@@ -77,6 +78,12 @@ namespace CustomRenderer.UWP
             {
                 Debug.WriteLine(@"      ERROR: ", ex.Message);
             }
+        }
+
+        protected override Size ArrangeOverride(Size finalSize)
+        {
+            page.Arrange(new Windows.Foundation.Rect(0, 0, finalSize.Width, finalSize.Height));
+            return finalSize;
         }
 
         void SetupUserInterface()

@@ -4,7 +4,7 @@
 	<IsFullApplication>false</IsFullApplication>
 	<Level>Intermediate</Level>
 	<Tags>User Interface, Graphics, Xamarin.Forms</Tags>
-	<SupportedPlatforms>Android, iOS, windows-rt</SupportedPlatforms>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
     <LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
 	<Brief>Demonstrates how to cross-platform load, resize, and display an image on the screen.</Brief>
