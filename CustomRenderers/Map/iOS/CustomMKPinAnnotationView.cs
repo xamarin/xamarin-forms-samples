@@ -2,7 +2,7 @@
 
 namespace CustomRenderer.iOS
 {
-	public class CustomMKPinAnnotationView : MKPinAnnotationView
+	public class CustomMKPinAnnotationView : MKAnnotationView
 	{
 		public string Id { get; set; }
 
