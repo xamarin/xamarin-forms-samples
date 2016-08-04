@@ -15,7 +15,6 @@ namespace ValidationCallback
 				catch{
 					DisplayAlert("Alert", "Angle must be between 0-360", "OK");
 				}
-
 			}
 		}
 
