@@ -130,20 +130,7 @@
     <AndroidResource Include="Resources\drawable-ja\flag.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="Resources\values-es\" />
-    <Folder Include="Resources\values-fr\" />
-    <Folder Include="Resources\values-pt-rBR\" />
-    <Folder Include="Resources\drawable-es\" />
-    <Folder Include="Resources\values-zh-rCN\" />
-    <Folder Include="Resources\values-zh-rTW\" />
-    <Folder Include="Resources\drawable-zh-rCN\" />
-    <Folder Include="Resources\drawable-zh-rTW\" />
-    <Folder Include="Resources\values-pt\" />
-    <Folder Include="Resources\drawable-pt\" />
-    <Folder Include="Resources\drawable-pt-rBR\" />
-    <Folder Include="Resources\drawable-ja\" />
-  </ItemGroup>
+  <ItemGroup />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>

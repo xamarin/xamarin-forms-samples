@@ -71,8 +71,6 @@ namespace TodoLocalized
 				DependencyService.Get<ITextToSpeech>().Speak(tospeak);
 			}, 0, 0);
 			ToolbarItems.Add (tbiSpeak);
-
-
 		}
 
 		protected override void OnAppearing ()

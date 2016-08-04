@@ -9,8 +9,10 @@
     <RootNamespace>TodoLocalized</RootNamespace>
     <AssemblyName>TodoLocalized</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
-    <NuGetPackageImportStamp>51dadb18</NuGetPackageImportStamp>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -37,15 +39,10 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App.cs" />
-    <Compile Include="Resx\AppResources.it.Designer.cs">
+    <Compile Include="Resx\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AppResources.it.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Resx\AppResources.ko-KR.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AppResources.ko.resx</DependentUpon>
+      <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Views\TodoListPage.cs" />
     <Compile Include="Views\TodoItemPage.cs" />
@@ -56,92 +53,77 @@
     <Compile Include="ISQLite.cs" />
     <Compile Include="L10n.cs" />
     <Compile Include="ILocale.cs" />
-    <Compile Include="Resx\AppResources.Designer.cs">
-      <DependentUpon>AppResources.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="ViewsXaml\TranslateExtension.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" />
-  <ItemGroup>
-    <XliffResource Include="MultilingualResources\TodoResx.de.xlf" />
-    <XliffResource Include="MultilingualResources\TodoResx.es.xlf">
-      <SubType>Designer</SubType>
-    </XliffResource>
-    <XliffResource Include="MultilingualResources\TodoResx.fr.xlf" />
-    <XliffResource Include="MultilingualResources\TodoResx.it.xlf" />
-    <XliffResource Include="MultilingualResources\TodoResx.ja.xlf">
-      <SubType>Designer</SubType>
-    </XliffResource>
-    <XliffResource Include="MultilingualResources\TodoResx.ko.xlf">
-      <SubType>Designer</SubType>
-    </XliffResource>
-    <XliffResource Include="MultilingualResources\TodoResx.pt-BR.xlf" />
-    <XliffResource Include="MultilingualResources\TodoResx.ru.xlf">
-      <SubType>Designer</SubType>
-    </XliffResource>
-    <XliffResource Include="MultilingualResources\TodoResx.zh-Hans.xlf" />
-    <XliffResource Include="MultilingualResources\TodoResx.zh-Hant.xlf" />
-  </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Resx\AppResources.de.resx" />
     <EmbeddedResource Include="Resx\AppResources.es.resx" />
     <EmbeddedResource Include="Resx\AppResources.fr.resx" />
-    <EmbeddedResource Include="Resx\AppResources.it.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>AppResources.it.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Resx\AppResources.it.resx" />
     <EmbeddedResource Include="Resx\AppResources.pt-BR.resx" />
+    <EmbeddedResource Include="Resx\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resx\AppResources.ru.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resx\AppResources.zh-Hans.resx" />
     <EmbeddedResource Include="Resx\AppResources.zh-Hant.resx" />
-    <EmbeddedResource Include="Resx\AppResources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Resx\AppResources.ko.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>AppResources.ko-KR.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resx\AppResources.ja.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>AppResources.ja-JP.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Resx\AppResources.ja.resx" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="SQLitePCL.raw">
-      <HintPath>..\packages\SQLitePCL.raw.0.8.6\lib\portable-net45+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCL.raw.dll</HintPath>
+    <Reference Include="SQLite-net, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\sqlite-net-pcl.1.1.2\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="SQLite-net">
-      <HintPath>..\packages\sqlite-net-pcl.1.1.1\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+    <Reference Include="SQLitePCL.batteries, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCL.bundle_green.0.9.2\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCL.batteries.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\packages\Xamarin.Forms.2.3.1.113-pre3\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    <Reference Include="SQLitePCL.raw, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCL.raw.0.9.2\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCL.raw.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Platform">
-      <HintPath>..\packages\Xamarin.Forms.2.3.1.113-pre3\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.1.114\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\packages\Xamarin.Forms.2.3.1.113-pre3\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.1.114\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.1.114\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="MultilingualResources\TodoResx.de.xlf" />
+    <None Include="MultilingualResources\TodoResx.es.xlf" />
+    <None Include="MultilingualResources\TodoResx.fr.xlf" />
+    <None Include="MultilingualResources\TodoResx.it.xlf" />
+    <None Include="MultilingualResources\TodoResx.ja.xlf" />
+    <None Include="MultilingualResources\TodoResx.ko.xlf" />
+    <None Include="MultilingualResources\TodoResx.pt-BR.xlf" />
+    <None Include="MultilingualResources\TodoResx.ru.xlf" />
+    <None Include="MultilingualResources\TodoResx.zh-Hans.xlf" />
+    <None Include="MultilingualResources\TodoResx.zh-Hant.xlf" />
     <None Include="packages.config" />
     <None Include="ViewsXaml\README.txt" />
   </ItemGroup>
   <ItemGroup />
+  <Import Project="..\packages\Xamarin.Forms.2.3.1.114\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.1.114\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Xamarin.Forms.2.3.1.113-pre3\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.2.3.1.113-pre3\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.2.3.1.114\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.2.3.1.114\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
   </Target>
-  <Import Project="..\packages\Xamarin.Forms.2.3.1.113-pre3\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.1.113-pre3\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
 </Project>

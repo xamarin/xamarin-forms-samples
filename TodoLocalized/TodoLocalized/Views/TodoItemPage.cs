@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using TodoLocalized.Resx;
 using Xamarin.Forms;
-using System.Diagnostics;
-using TodoLocalized.Resx;
 
 namespace TodoLocalized
 {
-	public class TodoItemPage : ContentPage
+    public class TodoItemPage : ContentPage
 	{
 		public TodoItemPage ()
 		{
@@ -72,7 +66,6 @@ namespace TodoLocalized
 			// currently not saved to database
 			//var dueDateLabel = new Label { Text = "Due" };
 			//var dueDatePicker = new DatePicker ();
-
 
 			Content = new StackLayout {
 				VerticalOptions = LayoutOptions.StartAndExpand,

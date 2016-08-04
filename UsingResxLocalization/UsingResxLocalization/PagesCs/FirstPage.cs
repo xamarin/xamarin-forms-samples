@@ -1,6 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
-using System.Collections.Generic;
+using UsingResxLocalization.Resx;
 
 namespace UsingResxLocalization
 {
@@ -19,25 +19,24 @@ namespace UsingResxLocalization
 			myPicker.Items.Add ("3");
 			myPicker.Items.Add ("4");
 
-
 			// apply translated resources
 			myLabel.Text = AppResources.NotesLabel;
 			myEntry.Placeholder = AppResources.NotesPlaceholder;
 			myPicker.Title = AppResources.PickerName;
 			myButton.Text = AppResources.AddButton;
 
-			var flag = new Image ();
-			flag.Source = ImageSource.FromFile ("flag.png"); // automatically resolved on iOS & Android
+            var flag = new Image();
+            flag.Source = ImageSource.FromFile(ImagePathHelper.FilePath("flag.png"));
 
-			// button shows an alert, also translated
-			myButton.Clicked += async (sender, e) => {
+            // button shows an alert, also translated
+            myButton.Clicked += async (sender, e) => {
 				var message = AppResources.AddMessageN;
 				if (myPicker.SelectedIndex <= 0) {
 					message = AppResources.AddMessage0;
 				} else if  (myPicker.SelectedIndex == 1) {
 					message = AppResources.AddMessage1;
 				} else {
-					message = String.Format(message, myPicker.Items[myPicker.SelectedIndex]);
+                    message = String.Format(message, myPicker.Items[myPicker.SelectedIndex]);
 				}
 				await DisplayAlert (message, message, AppResources.CancelButton);
 			};

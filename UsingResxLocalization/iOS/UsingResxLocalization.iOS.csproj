@@ -146,16 +146,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Localize.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\es.lproj\" />
-    <Folder Include="Resources\fr.lproj\" />
-    <Folder Include="Resources\ja.lproj\" />
-    <Folder Include="Resources\en.lproj\" />
-    <Folder Include="Resources\zh-Hant.lproj\" />
-    <Folder Include="Resources\zh-Hans.lproj\" />
-    <Folder Include="Resources\pt-PT.lproj\" />
-    <Folder Include="Resources\pt.lproj\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

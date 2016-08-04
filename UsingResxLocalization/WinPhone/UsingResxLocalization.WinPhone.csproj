@@ -176,6 +176,7 @@
   <ItemGroup>
     <ProjectReference Include="..\UsingResxLocalization\UsingResxLocalization.csproj">
       <Name>UsingResxLocalization</Name>
+      <Project>{CB3C76BB-1F98-4A9A-971B-E766962DF77C}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

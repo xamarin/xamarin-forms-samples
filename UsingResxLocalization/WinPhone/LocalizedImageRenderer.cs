@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using UsingResxLocalization;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.WinPhone;
 

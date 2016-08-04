@@ -127,6 +127,9 @@
   <data name="ApplicationTitle" xml:space="preserve">
     <value>LionTodo</value>
   </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="DeleteButton" xml:space="preserve">
     <value>Delete</value>
   </data>
@@ -141,9 +144,6 @@
   </data>
   <data name="SaveButton" xml:space="preserve">
     <value>Save</value>
-  </data>
-  <data name="CancelButton" xml:space="preserve">
-    <value>Cancel</value>
   </data>
   <data name="SpeakButton" xml:space="preserve">
     <value>Speak</value>

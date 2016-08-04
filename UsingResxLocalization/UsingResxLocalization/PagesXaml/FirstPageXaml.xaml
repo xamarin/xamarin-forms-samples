@@ -2,13 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 		x:Class="UsingResxLocalization.FirstPageXaml"
-		xmlns:i18n="clr-namespace:UsingResxLocalization;assembly=UsingResxLocalization">
+		xmlns:i18n="clr-namespace:UsingResxLocalization;assembly=UsingResxLocalization"
+    xmlns:local="clr-namespace:UsingResxLocalization;assembly=UsingResxLocalization">
 	<StackLayout 
 		HorizontalOptions="CenterAndExpand" 
 		VerticalOptions="CenterAndExpand">
 		<Label Text="{i18n:Translate NotesLabel}" />
 		<Entry Placeholder="{i18n:Translate NotesPlaceholder}" />
 		<Button Text="{i18n:TranslateExtension Text=AddButton}" />
-		<Image Source="flag.png" />
+    <Image>
+      <Image.Source>
+        <OnPlatform x:TypeArguments="ImageSource" iOS="flag.png" Android="flag.png" WinPhone="Assets/Images/flag.png" />
+      </Image.Source>
+    </Image>
 	</StackLayout>
 </ContentPage>

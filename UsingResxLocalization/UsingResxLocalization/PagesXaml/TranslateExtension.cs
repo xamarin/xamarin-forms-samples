@@ -1,21 +1,24 @@
 ﻿using System;
-using Xamarin.Forms.Xaml;
-using Xamarin.Forms;
-using System.Resources;
 using System.Globalization;
 using System.Reflection;
+using System.Resources;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace UsingResxLocalization
 {
-	// You exclude the 'Extension' suffix when using in Xaml markup
-	[ContentProperty ("Text")]
+    // You exclude the 'Extension' suffix when using in Xaml markup
+    [ContentProperty ("Text")]
 	public class TranslateExtension : IMarkupExtension
 	{
-		readonly CultureInfo ci;
+        readonly CultureInfo ci = null;
 		const string ResourceId = "UsingResxLocalization.Resx.AppResources";
 
 		public TranslateExtension() {
-			ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo ();
+            if (Device.OS == TargetPlatform.iOS || Device.OS == TargetPlatform.Android)
+            {
+                ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+            }
 		}
 
 		public string Text { get; set; }
@@ -25,22 +28,20 @@ namespace UsingResxLocalization
 			if (Text == null)
 				return "";
 
-			ResourceManager temp = new ResourceManager(ResourceId
-								, typeof(TranslateExtension).GetTypeInfo().Assembly);
+			ResourceManager temp = new ResourceManager(ResourceId, typeof(TranslateExtension).GetTypeInfo().Assembly);
 
 			var translation = temp.GetString (Text, ci);
-
-			if (translation == null) {
-				#if DEBUG
-				throw new ArgumentException (
-					String.Format ("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
-					"Text");
-				#else
+            if (translation == null)
+            {
+#if DEBUG
+                throw new ArgumentException(
+                    String.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
+                    "Text");
+#else
 				translation = Text; // HACK: returns the key, which GETS DISPLAYED TO THE USER
-				#endif
-			}
-			return translation;
+#endif
+            }
+            return translation;
 		}
 	}
 }
-
