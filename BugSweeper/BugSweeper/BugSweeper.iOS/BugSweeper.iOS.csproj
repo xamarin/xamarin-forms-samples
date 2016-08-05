@@ -92,7 +92,8 @@
       <Project>{853D3300-5056-4005-9E71-E5D933889581}</Project>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
