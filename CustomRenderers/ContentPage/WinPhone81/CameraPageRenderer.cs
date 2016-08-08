@@ -51,6 +51,12 @@ namespace CustomRenderer.WinPhone81
 			}
 		}
 
+        protected override Windows.Foundation.Size ArrangeOverride(Windows.Foundation.Size finalSize)
+        {
+            page.Arrange(new Windows.Foundation.Rect(0, 0, finalSize.Width, finalSize.Height));
+            return finalSize;
+        }
+
 		void SetupUserInterface ()
 		{
 			takePhotoButton = new AppBarButton {
