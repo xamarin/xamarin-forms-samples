@@ -33,7 +33,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="ImagePathHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ILocalize.cs" />
     <Compile Include="PagesXaml\TranslateExtension.cs" />

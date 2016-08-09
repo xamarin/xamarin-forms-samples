@@ -6,18 +6,18 @@ namespace UsingResxLocalization
 {
 	public class FirstPage : ContentPage
 	{
-		public FirstPage ()
+		public FirstPage()
 		{
 			// create UI controls
-			var myLabel = new Label ();
-			var myEntry = new Entry ();
-			var myButton = new Button ();
-			var myPicker = new Picker ();
-			myPicker.Items.Add ("0");
-			myPicker.Items.Add ("1");
-			myPicker.Items.Add ("2");
-			myPicker.Items.Add ("3");
-			myPicker.Items.Add ("4");
+			var myLabel = new Label();
+			var myEntry = new Entry();
+			var myButton = new Button();
+			var myPicker = new Picker();
+			myPicker.Items.Add("0");
+			myPicker.Items.Add("1");
+			myPicker.Items.Add("2");
+			myPicker.Items.Add("3");
+			myPicker.Items.Add("4");
 
 			// apply translated resources
 			myLabel.Text = AppResources.NotesLabel;
@@ -25,31 +25,37 @@ namespace UsingResxLocalization
 			myPicker.Title = AppResources.PickerName;
 			myButton.Text = AppResources.AddButton;
 
-            var flag = new Image();
-            flag.Source = ImageSource.FromFile(ImagePathHelper.FilePath("flag.png"));
+			var flag = new Image();
+			flag.Source = ImageSource.FromFile(Device.OnPlatform("flag.png", "flag.png", "Assets/Images/flag.png"));
 
-            // button shows an alert, also translated
-            myButton.Clicked += async (sender, e) => {
+			// button shows an alert, also translated
+			myButton.Clicked += async (sender, e) =>
+			{
 				var message = AppResources.AddMessageN;
-				if (myPicker.SelectedIndex <= 0) {
+				if (myPicker.SelectedIndex <= 0)
+				{
 					message = AppResources.AddMessage0;
-				} else if  (myPicker.SelectedIndex == 1) {
-					message = AppResources.AddMessage1;
-				} else {
-                    message = String.Format(message, myPicker.Items[myPicker.SelectedIndex]);
 				}
-				await DisplayAlert (message, message, AppResources.CancelButton);
+				else if (myPicker.SelectedIndex == 1)
+				{
+					message = AppResources.AddMessage1;
+				}
+				else {
+					message = String.Format(message, myPicker.Items[myPicker.SelectedIndex]);
+				}
+				await DisplayAlert(message, message, AppResources.CancelButton);
 			};
 
 			// add to screen
-			Content = new StackLayout {
+			Content = new StackLayout
+			{
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 				Children = {
-					myLabel, 
-					myEntry, 
-					myPicker, 
-					myButton, 
+					myLabel,
+					myEntry,
+					myPicker,
+					myButton,
 					flag},
 			};
 		}
