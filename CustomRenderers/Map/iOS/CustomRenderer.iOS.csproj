@@ -123,7 +123,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="CustomMapRenderer.cs" />
-    <Compile Include="CustomMKPinAnnotationView.cs" />
+    <Compile Include="CustomMKAnnotationView.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="ITunesArtwork" />
