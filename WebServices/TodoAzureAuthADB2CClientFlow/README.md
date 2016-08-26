@@ -1,7 +1,7 @@
-TodoAzureAuthServerFlow
-=======================
+TodoAzureAuthADB2CClientFlow
+============================
 
-This sample demonstrates how to use Azure Active Directory B2C to provide a server-side authentication and authorization flow to an Azure Mobile Apps instance with Xamarin.Forms.
+This sample demonstrates how to use Azure Active Directory B2C to provide a client-side authentication and authorization flow to an Azure Mobile Apps instance with Xamarin.Forms.
 
 For more information about this sample see [Integrating Azure Active Directory B2C with Azure Mobile Apps](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/web-services/authentication/azure-ad-b2c-mobile-app/).
 
