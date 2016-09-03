@@ -85,6 +85,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.zh-Hant.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resx\AppResources.de-CH.Designer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -127,6 +128,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.pt.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resx\AppResources.de-CH.resx" />
+    <EmbeddedResource Include="Resx\AppResources.id.resx" />
+    <EmbeddedResource Include="Resx\AppResources.ms.resx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
