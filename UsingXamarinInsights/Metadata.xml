@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <SampleMetadata>
 	<ID>292c7d1e-8c61-42db-a2ac-0acdf011a7f5</ID>
 	<IsFullApplication>false</IsFullApplication>
-	<Level>Beginner</Level>
+	<Level>Beginning</Level>
 	<Tags>Platform Features,Insights,Xamarin.Forms</Tags>
 	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
