@@ -9,9 +9,9 @@ namespace UsingResxLocalization.WinPhone
 {
     public class Localize : UsingResxLocalization.ILocalize
     {
-        public void SetLocale()
+        public void SetLocale(CultureInfo ci)
         {
-            //
+            // not required - the resources framework should already have set the culture correctly
         }
 
         public System.Globalization.CultureInfo GetCurrentCultureInfo()
