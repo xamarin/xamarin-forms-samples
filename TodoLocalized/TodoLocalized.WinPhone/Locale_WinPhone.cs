@@ -11,31 +11,16 @@ namespace TodoLocalized
         /// <remarks>
         /// Not sure if we can cache this info rather than querying every time
         /// </remarks>
-        public string GetCurrent()
-        {
-            var lang = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
-            var culture = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
-            return lang;
-        }
+        public System.Globalization.CultureInfo GetCurrent()
+		{
+			return System.Threading.Thread.CurrentThread.CurrentUICulture;
+		}
 
 
-        public void SetLocale()
+        public void SetLocale(System.Globalization.CultureInfo ci)
         {
-           
-            //System.Globalization.CultureInfo ci;
-            //try
-            //{
-            //    ci = new System.Globalization.CultureInfo(netLocale);
-            //}
-            //catch
-            //{
-            //    ci = new System.Globalization.CultureInfo(GetCurrent());
-            //}
             Console.WriteLine("culture: "+Thread.CurrentThread.CurrentCulture);
-            Console.WriteLine("ui:      " + Thread.CurrentThread.CurrentUICulture);
-            //Thread.CurrentThread.CurrentCulture = ci;
-            //Thread.CurrentThread.CurrentUICulture = ci;
-            
+            Console.WriteLine("ui:      " + Thread.CurrentThread.CurrentUICulture);            
         }
     }
 }

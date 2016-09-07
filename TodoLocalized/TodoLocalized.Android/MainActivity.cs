@@ -11,10 +11,10 @@ using Android.Content.PM;
 
 namespace TodoLocalized
 {
-	[Activity (Label = "TodoLocalized", Icon = "@drawable/icon", MainLauncher = true, 
+	[Activity (Label = "@string/app_name", Icon = "@drawable/icon", MainLauncher = true, 
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : 
-	global::Xamarin.Forms.Platform.Android.FormsApplicationActivity // superclass new in 1.3
+	global::Xamarin.Forms.Platform.Android.FormsApplicationActivity 
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -22,11 +22,7 @@ namespace TodoLocalized
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
 
-			LoadApplication (new App ()); // method is new in 1.3
+			LoadApplication (new App ());
 		}
 	}
-
-
 }
-
-
