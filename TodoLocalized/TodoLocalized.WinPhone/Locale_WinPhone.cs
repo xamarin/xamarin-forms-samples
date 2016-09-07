@@ -11,7 +11,7 @@ namespace TodoLocalized
         /// <remarks>
         /// Not sure if we can cache this info rather than querying every time
         /// </remarks>
-        public System.Globalization.CultureInfo GetCurrent()
+        public System.Globalization.CultureInfo GetCurrentCultureInfo()
 		{
 			return System.Threading.Thread.CurrentThread.CurrentUICulture;
 		}

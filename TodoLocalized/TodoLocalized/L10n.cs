@@ -27,7 +27,7 @@ namespace TodoLocalized
 			
 		public static string Localize(string key, string comment)
         {
-            var netLanguage = Locale ();
+            //var netLanguage = Locale ();
 
             // Platform-specific
             ResourceManager temp = new ResourceManager(ResourceId, typeof(L10n).GetTypeInfo().Assembly);

@@ -6,7 +6,7 @@ namespace TodoLocalized.WinPhone81
 {
     public class Localize : ILocale
     {
-        public System.Globalization.CultureInfo GetCurrent()
+        public System.Globalization.CultureInfo GetCurrentCultureInfo()
         {
 			return new System.Globalization.CultureInfo(
 				Windows.System.UserProfile.GlobalizationPreferences.Languages[0].ToString());
