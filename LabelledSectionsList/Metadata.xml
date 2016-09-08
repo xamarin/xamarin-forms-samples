@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <SampleMetadata>
 	<ID>abc1bfab-df9b-45a8-bed8-918c9c1f7392</ID>
 	<IsFullApplication>false</IsFullApplication>
-	<Level>Beginning</Level>
+	<Level>Beginner</Level>
 	<Tags>User Interface</Tags>
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>

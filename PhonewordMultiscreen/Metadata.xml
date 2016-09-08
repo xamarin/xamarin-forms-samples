@@ -3,7 +3,7 @@
 	<ID>75665cbf-64a8-447f-b57d-8ba42eb8f424</ID>
 	<IsFullApplication>true</IsFullApplication>
 	<Brief>This sample demonstrates adding simple page navigation to the Phoneword app using Xamarin.Forms.</Brief>
-	<Level>Beginning</Level>
+	<Level>Beginner</Level>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Tags>User Interface, Getting Started, Xamarin.Forms</Tags>
 	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>

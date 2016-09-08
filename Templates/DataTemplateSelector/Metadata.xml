@@ -4,7 +4,7 @@
 	<IsFullApplication>false</IsFullApplication>
     <Brief>This sample demonstrates using a DataTemplateSelector to select a DataTemplate at runtime per item in a ListView.
 </Brief>
-	<Level>Beginning</Level>
+	<Level>Beginner</Level>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Tags>Templates, Xamarin.Forms</Tags>
 	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>

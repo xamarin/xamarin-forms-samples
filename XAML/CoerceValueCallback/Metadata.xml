@@ -2,7 +2,7 @@
 <SampleMetadata>
 	<ID>1b44e008-ccb6-4e7c-a841-5b10558019b2</ID>
 	<IsFullApplication>false</IsFullApplication>
-	<Level>Beginning</Level>
+	<Level>Beginner</Level>
 	<Tags>Xamarin.Forms, XAML</Tags>
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>

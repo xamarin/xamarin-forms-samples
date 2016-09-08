@@ -3,7 +3,7 @@
 	<ID>2aeed12a-88b7-416e-a18d-776a2276721f</ID>
 	<IsFullApplication>false</IsFullApplication>
     <Brief>This sample demonstrates creating an effect for the Entry control, that changes the background color of the control when it gains focus.</Brief>
-	<Level>Beginning</Level>
+	<Level>Beginner</Level>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Tags>Effects, Xamarin.Forms</Tags>
 	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>

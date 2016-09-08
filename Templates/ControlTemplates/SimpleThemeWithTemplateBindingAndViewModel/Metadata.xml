@@ -3,7 +3,7 @@
 	<ID>80caf6c8-dba4-4605-984c-ab25384d5114</ID>
 	<IsFullApplication>false</IsFullApplication>
     <Brief>This sample demonstrates using a ControlTemplate with a TemplateBinding, that in turn binds to a ViewModel, to theme a ContentPage and change the theme at runtime.</Brief>
-	<Level>Beginning</Level>
+	<Level>Beginner</Level>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Tags>Templates, Xamarin.Forms</Tags>
 	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>

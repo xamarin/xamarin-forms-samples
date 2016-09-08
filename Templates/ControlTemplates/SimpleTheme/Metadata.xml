@@ -3,7 +3,7 @@
 	<ID>af264435-95cf-4047-9daf-20f1a08a9902</ID>
 	<IsFullApplication>false</IsFullApplication>
     <Brief>This sample demonstrates using a ControlTemplate to theme a ContentPage and change the theme at runtime.</Brief>
-	<Level>Beginning</Level>
+	<Level>Beginner</Level>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Tags>Templates, Xamarin.Forms</Tags>
 	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>

@@ -3,7 +3,7 @@
 	<ID>395d18e9-d969-4777-8dcd-e7d8357b4414</ID>
 	<IsFullApplication>true</IsFullApplication>
 	<Brief>This sample demonstrates sharing C# code across platforms using Xamarin.Forms.</Brief>
-	<Level>Beginning</Level>
+	<Level>Beginner</Level>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Tags>User Interface, Getting Started, Xamarin.Forms</Tags>
 	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
