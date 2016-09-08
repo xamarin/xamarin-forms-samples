@@ -83,7 +83,7 @@ However, because the sample galleries are powered by the github sample repos, ea
 
     * **Brief** - Short description or what your sample does. This allows us to display a nice and clean vignette on the sample page.
 
-    * **Level** - Beginning, Intermediate, or Advanced: this is the intended audience level for the sample. only the getting started samples are Beginning, as they are intended for people who are _just_ starting with the platform. most samples are Intermediate, and a few, that dive deep into difficult APIs, should be Advanced.
+    * **Level** - Beginner, Intermediate, or Advanced: this is the intended audience level for the sample. only the getting started samples are Beginner, as they are intended for people who are _just_ starting with the platform. most samples are Intermediate, and a few, that dive deep into difficult APIs, should be Advanced.
 
     * **Minimum License Requirement** - Starter, Indie, Business, or Enterprise: denotes the license that a user has to have in order to build/run the sample.
 
