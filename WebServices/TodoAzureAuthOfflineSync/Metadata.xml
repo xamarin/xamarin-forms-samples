@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>8b764668-97a6-4e24-b3c6-d7a0347bd269</ID>
+	<IsFullApplication>true</IsFullApplication>
+	<Brief>This sample demonstrates synchronizing offline data in a Xamarin.Forms application to an Azure Mobile Apps instance.</Brief>
+	<Level>Advanced</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>Web Services, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <SampleMetadata>
 	<ID>537a3375-a422-49e8-82a6-ad0d081828d4</ID>
 	<IsFullApplication>false</IsFullApplication>
@@ -9,4 +9,3 @@
 	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
 	<Gallery>true</Gallery>
 </SampleMetadata>
-

@@ -45,8 +45,13 @@
 		<string>ru</string>
 		<string>zh-Hans</string>
 		<string>zh-Hant</string>
+		<string>gsw-CH</string>
+		<string>de-CH</string>
+		<string>de</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleName</key>
+	<string>ResxEnglish</string>
 </dict>
 </plist>

@@ -135,6 +135,16 @@
     <BundleResource Include="Resources\pt.lproj\Default%402x.png" />
     <BundleResource Include="Resources\pt.lproj\flag.png" />
     <BundleResource Include="Resources\pt.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\gsw-CH.lproj\flag.png" />
+    <BundleResource Include="Resources\gsw-CH.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\de-CH.lproj\flag.png" />
+    <BundleResource Include="Resources\de-CH.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\de.lproj\flag.png" />
+    <BundleResource Include="Resources\de.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\id.lproj\flag.png" />
+    <BundleResource Include="Resources\id.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\ms.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\ms.lproj\flag.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -147,6 +157,13 @@
     <Compile Include="Localize.cs" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\gsw-CH.lproj\" />
+    <Folder Include="Resources\de-CH.lproj\" />
+    <Folder Include="Resources\de.lproj\" />
+    <Folder Include="Resources\id.lproj\" />
+    <Folder Include="Resources\ms.lproj\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

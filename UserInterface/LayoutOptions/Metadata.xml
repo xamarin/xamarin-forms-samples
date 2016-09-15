@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleMetadata>
+	<ID>353ba20a-89df-46ec-a896-3f941a68d222</ID>
+	<IsFullApplication>false</IsFullApplication>
+    <Brief>Every Xamarin.Forms view has HorizontalOptions and VerticalOptions properties, of type LayoutOptions. This sample demonstrates the effect that each LayoutOptions value has on the alignment and expansion of a view.</Brief>
+	<Level>Beginner</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>User Interface, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>

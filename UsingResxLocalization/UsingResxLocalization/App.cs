@@ -9,15 +9,19 @@ namespace UsingResxLocalization
 	{
 		public App ()
 		{
-			System.Diagnostics.Debug.WriteLine("===============");
+			System.Diagnostics.Debug.WriteLine("====== resource debug info =========");
 			var assembly = typeof(App).GetTypeInfo().Assembly;
 			foreach (var res in assembly.GetManifestResourceNames()) 
 				System.Diagnostics.Debug.WriteLine("found resource: " + res);
+			System.Diagnostics.Debug.WriteLine("====================================");
 
+			// This lookup NOT required for Windows platforms - the Culture will be automatically set
             if (Device.OS == TargetPlatform.iOS || Device.OS == TargetPlatform.Android)
             {
-				DependencyService.Get<ILocalize> ().SetLocale ();
-                //Resx.AppResources.Culture = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+				// determine the correct, supported .NET culture
+				var ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+				Resx.AppResources.Culture = ci; // set the RESX for resource localization
+				DependencyService.Get<ILocalize>().SetLocale(ci); // set the Thread for locale-aware methods
 			}
 
 			var tabs = new TabbedPage ();

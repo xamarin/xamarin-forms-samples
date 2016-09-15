@@ -128,9 +128,27 @@
     <AndroidResource Include="Resources\drawable-pt\flag.png" />
     <AndroidResource Include="Resources\drawable-pt-rBR\flag.png" />
     <AndroidResource Include="Resources\drawable-ja\flag.png" />
+    <AndroidResource Include="Resources\drawable-de\flag.png" />
+    <AndroidResource Include="Resources\drawable-ms\flag.png" />
+    <AndroidResource Include="Resources\values-de\Strings.xml" />
+    <AndroidResource Include="Resources\values-ms\Strings.xml" />
+    <AndroidResource Include="Resources\drawable-in\flag.png" />
+    <AndroidResource Include="Resources\values-in\Strings.xml" />
+    <AndroidResource Include="Resources\drawable-gsw-rCH\flag.png" />
+    <AndroidResource Include="Resources\values-gsw-rCH\Strings.xml" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\drawable-ms\" />
+    <Folder Include="Resources\drawable-de\" />
+    <Folder Include="Resources\values-ms\" />
+    <Folder Include="Resources\values-de\" />
+    <Folder Include="Resources\drawable-in\" />
+    <Folder Include="Resources\values-in\" />
+    <Folder Include="Resources\drawable-gsw-rCH\" />
+    <Folder Include="Resources\values-gsw-rCH\" />
+  </ItemGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>

@@ -13,7 +13,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace UsingResxLocalization.Android
 {
-	[Activity (Label = "UsingResxLocalization.Android", Icon = "@drawable/icon", MainLauncher = true, 
+	[Activity (Label = "@string/app_name", Icon = "@drawable/icon", MainLauncher = true, 
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : 
 	global::Xamarin.Forms.Platform.Android.FormsApplicationActivity // superclass new in 1.3

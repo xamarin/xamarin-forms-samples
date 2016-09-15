@@ -20,19 +20,19 @@
     <comment>machine translation</comment>
   </data>
   <data name="ApplicationHeading" xml:space="preserve">
-    <value>LionTodo</value>
+    <value>TodoEspañol</value>
   </data>
   <data name="ApplicationTitle" xml:space="preserve">
-    <value>LionTodo</value>
+    <value>TodoEspañol</value>
   </data>
   <data name="DeleteButton" xml:space="preserve">
-    <value>Delete</value>
+    <value>Borrar</value>
   </data>
   <data name="DoneLabel" xml:space="preserve">
     <value>Listo</value>
   </data>
   <data name="NameLabel" xml:space="preserve">
-    <value>Name</value>
+    <value>Nombre</value>
   </data>
   <data name="NotesLabel" xml:space="preserve">
     <value>Notas</value>
@@ -41,7 +41,7 @@
     <value>Datos guardados</value>
   </data>
   <data name="CancelButton" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Cancelar</value>
   </data>
   <data name="SpeakButton" xml:space="preserve">
     <value>Hablar</value>
