@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using Android;
+using Android.App;
 using Android.OS;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
@@ -7,6 +8,11 @@ using MobileCRM.Shared.Pages;
 using MobileCRM;
 using Android.Graphics.Drawables;
 using Android.Content.PM;
+using Android.Gms.Common;
+using Android.Support.V4.App;
+using Android.Support.V4.Content;
+using Android.Widget;
+
 /*
 
 Welcome to the Xamarin.Forms MobileCRM sample app for Android.
@@ -31,15 +37,70 @@ namespace MobileCRMAndroid
     [Activity (Label = "MobileCRM", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
+        const int RequestAccessFineLocation = 1;
+        Bundle pendingBundle;
+
         protected override void OnCreate (Bundle bundle)
         {
             base.OnCreate (bundle);
 
-            MobileCRMApp.Init(typeof(MobileCRMApp).Assembly);
-            Forms.Init(this, bundle);
-            FormsMaps.Init(this, bundle);
+            // keep the bundle for future usage
+            pendingBundle = bundle;
 
-			LoadApplication (new App ());
+            // check for permissions in Runtime
+            var permissionCheck = ContextCompat.CheckSelfPermission(this, Manifest.Permission.AccessFineLocation);
+            if (!permissionCheck.Equals(Permission.Granted))
+            {
+                // there is no granted permission to ACCESS_FINE_LOCATION. Requesting it in runtime
+                ActivityCompat.RequestPermissions(this, new string[] {Manifest.Permission.AccessFineLocation}, RequestAccessFineLocation);
+            }
+            else
+            {
+                InitApp();
+            }
+        }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
+        {
+            if (requestCode == RequestAccessFineLocation)
+            {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.Length > 0 && grantResults[0] == Permission.Granted)
+                {
+                    // permission was granted
+                    // Start app
+                    InitApp();
+                }
+                else
+                {
+                    // permission denied
+                    // close app
+                    Finish();
+                }
+            }
+        }
+
+        private void InitApp()
+        {
+            if (IsGooglePlayServicesInstalled())
+            {
+                MobileCRMApp.Init(typeof(MobileCRMApp).Assembly);
+                Forms.Init(this, pendingBundle);
+                FormsMaps.Init(this, pendingBundle);
+
+                LoadApplication(new App());
+            }
+            else
+            {
+                Toast.MakeText(this, "Google Play Service is not installed", ToastLength.Long).Show();
+            }
+        }
+
+        private bool IsGooglePlayServicesInstalled()
+        {
+            var googleApiAvailability = GoogleApiAvailability.Instance;
+            var status = googleApiAvailability.IsGooglePlayServicesAvailable(this);
+            return status == ConnectionResult.Success;
         }
     }
 }
