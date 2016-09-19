@@ -8,7 +8,14 @@ namespace ValidationCallback
 
 		public double Angle {
 			get { return (double)GetValue (AngleProperty); }
-			set { SetValue (AngleProperty, value); }
+			set { 
+				try{
+					SetValue(AngleProperty, value);
+				}
+				catch{
+					DisplayAlert("Alert", "Angle must be between 0-360", "OK");
+				}
+			}
 		}
 
 		public HomePage ()
