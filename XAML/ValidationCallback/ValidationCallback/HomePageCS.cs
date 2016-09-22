@@ -4,26 +4,23 @@ namespace ValidationCallback
 {
 	public class HomePageCS : ContentPage
 	{
-		public static readonly BindableProperty AngleProperty = BindableProperty.Create("Angle", typeof(double), typeof(HomePage), 0.0, validateValue: IsValidValue);
+		public static readonly BindableProperty AngleProperty = BindableProperty.Create ("Angle", typeof(double), typeof(HomePage), 0.0, validateValue: IsValidValue);
 
-		public double Angle
-		{
-			get { return (double)GetValue(AngleProperty); }
-			set
-			{
-				try
-				{
+		public double Angle {
+			get {
+				return (double)GetValue(AngleProperty);
+			}
+			set {
+				try {
 					SetValue(AngleProperty, value);
-				}
-				catch
-				{
-					DisplayAlert("Alert", "Angle must be between 0-360", "OK");
+				} catch {
+					DisplayAlert ("Alert", "Angle must be between 0-360", "OK");
 				}
 			}
 
 		}
 
-		public HomePageCS()
+		public HomePageCS ()
 		{
 			BindingContext = this;
 
@@ -56,10 +53,10 @@ namespace ValidationCallback
 			};
 		}
 
-		static bool IsValidValue(BindableObject view, object value)
+		static bool IsValidValue (BindableObject view, object value)
 		{
 			double result;
-			bool isDouble = double.TryParse(value.ToString(), out result);
+			bool isDouble = double.TryParse (value.ToString (), out result);
 			return (result >= 0 && result <= 360);
 		}
 	}
