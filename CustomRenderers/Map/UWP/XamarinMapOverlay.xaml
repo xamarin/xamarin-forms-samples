@@ -8,9 +8,14 @@
     mc:Ignorable="d"
     d:DesignHeight="100"
     d:DesignWidth="300">
-    <StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="80" />
+        </Grid.RowDefinitions>
         <Image Source="xamarin.png" Width="100" />
-        <StackPanel Orientation="Horizontal" Background="White" Opacity="0.5" Padding="20,0,20,0">
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Background="White" Opacity="0.5" Padding="20,0,20,0">
             <Image Source="monkey.png" Width="24"  />
             <StackPanel Margin="20,10,20,0">
                 <TextBlock x:Name="Label" FontWeight="Bold" />
@@ -24,5 +29,5 @@
                 </Button.Template>
             </Button>
         </StackPanel>
-    </StackPanel>
+    </Grid>
 </UserControl>
