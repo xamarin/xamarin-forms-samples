@@ -1,10 +1,12 @@
 ﻿using System;
 using Xamarin.Forms.Xaml;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace WorkingWithImages
 {
 	// You exclude the 'Extension' suffix when using in Xaml markup
+	[Preserve(AllMembers = true)]
 	[ContentProperty ("Source")]
 	public class ImageResourceExtension : IMarkupExtension
 	{

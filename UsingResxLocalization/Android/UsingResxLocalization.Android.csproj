@@ -119,7 +119,6 @@
     <AndroidResource Include="Resources\values-fr\Strings.xml" />
     <AndroidResource Include="Resources\values-pt-rBR\Strings.xml" />
     <AndroidResource Include="Resources\drawable-es\flag.png" />
-    <AndroidResource Include="Resources\drawable\flag.png" />
     <AndroidResource Include="Resources\drawable-zh-rTW\flag.png" />
     <AndroidResource Include="Resources\drawable-zh-rCN\flag.png" />
     <AndroidResource Include="Resources\values-zh-rCN\Strings.xml" />
@@ -136,6 +135,7 @@
     <AndroidResource Include="Resources\values-in\Strings.xml" />
     <AndroidResource Include="Resources\drawable-gsw-rCH\flag.png" />
     <AndroidResource Include="Resources\values-gsw-rCH\Strings.xml" />
+    <AndroidResource Include="Resources\drawable\flag.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup />
