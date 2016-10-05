@@ -23,77 +23,65 @@ namespace WorkingWithFonts
 	/// </summary>
 	public class FontPageCs : ContentPage
 	{
-		public FontPageCs ()
+		public FontPageCs()
 		{
-			var label = new Label {
+			var label = new Label
+			{
 				Text = "Hello, Xamarin.Forms!",
-				FontFamily = Device.OnPlatform (
-					"Lobster-Regular",	 // iOS
-					null,				 // see Android custom renderer
+				FontFamily = Device.OnPlatform(
+					"Lobster-Regular", // iOS
+					"Lobster-Regular.ttf#Lobster-Regular", // Android
 					@"\Assets\Fonts\Lobster-Regular.ttf#Lobster-Regular" // WinPhone
-				), 
+				),
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 
 			};
-			label.FontSize = Device.OnPlatform (
-				24, 
-				Device.GetNamedSize (NamedSize.Medium, label), 
-				Device.GetNamedSize (NamedSize.Large, label)
+			label.FontSize = Device.OnPlatform(
+				24,
+				Device.GetNamedSize(NamedSize.Medium, label),
+				Device.GetNamedSize(NamedSize.Large, label)
 			);
 
-			var myLabel = new MyLabel {
-				VerticalOptions = LayoutOptions.CenterAndExpand,
-				HorizontalOptions = LayoutOptions.CenterAndExpand,
-			};
-            myLabel.Text = Device.OnPlatform(
-                "MyLabel for iOS!",
-                "MyLabel for Android!",
-                "MyLabel for Windows!"
-            );
-			myLabel.FontSize = Device.OnPlatform (
-				Device.GetNamedSize (NamedSize.Small, myLabel),
-				Device.GetNamedSize (NamedSize.Medium, myLabel), // will get overridden in custom Renderer
-				Device.GetNamedSize (NamedSize.Large, myLabel)
-			);
-
-			var labelBold = new Label {
+			var labelBold = new Label
+			{
 				Text = "Bold",
-				FontSize = 14, 
+				FontSize = 14,
 				FontAttributes = FontAttributes.Bold,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 			};
-			var labelItalic = new Label {
+			var labelItalic = new Label
+			{
 				Text = "Italic",
-				FontSize = 14, 
+				FontSize = 14,
 				FontAttributes = FontAttributes.Italic,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 			};
-			var labelBoldItalic = new Label {
+			var labelBoldItalic = new Label
+			{
 				Text = "BoldItalic",
-				FontSize = 14, 
+				FontSize = 14,
 				FontAttributes = FontAttributes.Bold | FontAttributes.Italic,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 			};
 
-
 			// Span formatting support
-			var labelFormatted = new Label ();
-			var fs = new FormattedString ();
-			fs.Spans.Add (new Span { Text="Red, ", ForegroundColor = Color.Red, FontSize = 20, FontAttributes = FontAttributes.Italic });
-			fs.Spans.Add (new Span { Text=" blue, ", ForegroundColor = Color.Blue, FontSize = 32 });
-			fs.Spans.Add (new Span { Text=" and green!", ForegroundColor = Color.Green, FontSize = 12 });
+			var labelFormatted = new Label();
+			var fs = new FormattedString();
+			fs.Spans.Add(new Span { Text = "Red, ", ForegroundColor = Color.Red, FontSize = 20, FontAttributes = FontAttributes.Italic });
+			fs.Spans.Add(new Span { Text = " blue, ", ForegroundColor = Color.Blue, FontSize = 32 });
+			fs.Spans.Add(new Span { Text = " and green!", ForegroundColor = Color.Green, FontSize = 12 });
 			labelFormatted.FormattedText = fs;
 
-
-			Content = new StackLayout { 
+			Content = new StackLayout
+			{
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 				Children = {
-					label, myLabel, labelBold, labelItalic, labelBoldItalic, labelFormatted
+					label, labelBold, labelItalic, labelBoldItalic, labelFormatted
 				}
 			};
 		}
