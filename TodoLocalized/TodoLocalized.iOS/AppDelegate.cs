@@ -42,6 +42,11 @@ namespace TodoLocalized
 			Console.WriteLine ("uiculture:" + Thread.CurrentThread.CurrentUICulture);
 			#endregion
 
+			if (UIApplication.SharedApplication.UserInterfaceLayoutDirection == UIUserInterfaceLayoutDirection.RightToLeft) 
+			{
+				Console.WriteLine("Right-To-Left");
+			}
+
 			return base.FinishedLaunching (app, options);
 		}
 	}

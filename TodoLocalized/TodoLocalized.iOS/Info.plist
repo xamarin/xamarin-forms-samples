@@ -37,5 +37,20 @@
 	<string>TodoLocalized</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>CFBundleName</key>
+	<string>TodoLocalized</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>de</string>
+		<string>ar</string>
+		<string>es</string>
+		<string>ja</string>
+		<string>fr</string>
+		<string>it</string>
+		<string>ko</string>
+		<string>ru</string>
+		<string>pt-BR</string>
+		<string>he</string>
+	</array>
 </dict>
 </plist>

@@ -30,6 +30,16 @@ namespace TodoLocalized
 				this.Navigation.PopAsync();
 			};
 
+
+			// HACK: Enable RIGHT-TO-LEFT
+			RtlEffect.SetShouldObeyRtl(nameLabel, true);
+			RtlEffect.SetShouldObeyRtl(nameEntry, true);
+			RtlEffect.SetShouldObeyRtl(notesLabel, true);
+			RtlEffect.SetShouldObeyRtl(notesEntry, true);
+			RtlEffect.SetShouldObeyRtl(doneLabel, true);
+
+
+
 			var deleteButton = new Button (); // no Text! localized later
 			deleteButton.Clicked += (sender, e) => {
 				var todoItem = (TodoItem)BindingContext;

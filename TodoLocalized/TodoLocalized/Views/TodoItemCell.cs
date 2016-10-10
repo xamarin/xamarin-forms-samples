@@ -23,6 +23,9 @@ namespace TodoLocalized
 				HorizontalOptions = LayoutOptions.StartAndExpand,
 				Children = { label, tick }
 			};
+
+			// HACK: Enable RIGHT-TO-LEFT
+			RtlEffect.SetShouldObeyRtl(layout, true);
 			View = layout;
 		}
 	}
