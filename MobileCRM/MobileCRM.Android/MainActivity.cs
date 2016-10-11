@@ -1,16 +1,14 @@
 ﻿using Android;
 using Android.App;
 using Android.OS;
-using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
 using Xamarin;
-using MobileCRM.Shared.Pages;
 using MobileCRM;
-using Android.Graphics.Drawables;
 using Android.Content.PM;
 using Android.Gms.Common;
 using Android.Support.V4.App;
 using Android.Support.V4.Content;
+using Android.Views;
 using Android.Widget;
 
 /*
@@ -34,60 +32,64 @@ at the bottom of the window to edit the XML directly.
 */
 namespace MobileCRMAndroid
 {
-    [Activity (Label = "MobileCRM", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "MobileCRM", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         const int RequestAccessFineLocation = 1;
-        Bundle pendingBundle;
+        bool wasInitialized = false;
 
-        protected override void OnCreate (Bundle bundle)
+        protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate (bundle);
+            base.OnCreate(bundle);
 
-            // keep the bundle for future usage
-            pendingBundle = bundle;
+            // init Forms components
+            MobileCRMApp.Init(typeof(MobileCRMApp).Assembly);
+            Forms.Init(this, bundle);
+            FormsMaps.Init(this, bundle);
 
             // check for permissions in Runtime
             var permissionCheck = ContextCompat.CheckSelfPermission(this, Manifest.Permission.AccessFineLocation);
             if (!permissionCheck.Equals(Permission.Granted))
             {
                 // there is no granted permission to ACCESS_FINE_LOCATION. Requesting it in runtime
-                ActivityCompat.RequestPermissions(this, new string[] {Manifest.Permission.AccessFineLocation}, RequestAccessFineLocation);
+                ActivityCompat.RequestPermissions(this, new string[] { Manifest.Permission.AccessFineLocation }, RequestAccessFineLocation);
             }
             else
             {
+                // the permission was granted in the past
                 InitApp();
             }
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
         {
-            if (requestCode == RequestAccessFineLocation)
+            if (requestCode != RequestAccessFineLocation) return;
+
+            // If request is cancelled, the result arrays are empty.
+            if (grantResults.Length > 0 && grantResults[0] == Permission.Granted)
             {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.Length > 0 && grantResults[0] == Permission.Granted)
-                {
-                    // permission was granted
-                    // Start app
-                    InitApp();
-                }
-                else
-                {
-                    // permission denied
-                    // close app
-                    Finish();
-                }
+                // permission was granted
+                // Start app
+                wasInitialized = true;
+                InitApp();
             }
+            else
+            {
+                // permission denied
+                // close app
+                Finish();
+            }
+        }
+
+        public override bool OnPrepareOptionsMenu(IMenu menu)
+        {
+            return wasInitialized && base.OnPrepareOptionsMenu(menu);
         }
 
         private void InitApp()
         {
             if (IsGooglePlayServicesInstalled())
             {
-                MobileCRMApp.Init(typeof(MobileCRMApp).Assembly);
-                Forms.Init(this, pendingBundle);
-                FormsMaps.Init(this, pendingBundle);
-
                 LoadApplication(new App());
             }
             else
