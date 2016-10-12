@@ -6,14 +6,11 @@ namespace WorkingWithWebview
 
 	public interface IBaseUrl { string Get(); }
 
-	// required temporarily for iOS, due to BaseUrl bug
-	public class BaseUrlWebView : WebView { }
-
 	public class LocalHtmlBaseUrl : ContentPage
 	{
 		public LocalHtmlBaseUrl ()
 		{
-			var browser = new BaseUrlWebView (); // temporarily use this so we can custom-render in iOS
+			var browser = new WebView ();
 
 			var htmlSource = new HtmlWebViewSource ();
 
