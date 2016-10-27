@@ -67,7 +67,7 @@ The [mac-ios-samples](https://github.com/xamarin/mac-ios-samples) repository is 
 
 ## Sample Requirements
 
-We welcome sample submissions. Please ping Nat or Miguel for repo commit access.
+We welcome sample submissions.
 
 However, because the sample galleries are powered by the github sample repos, each sample needs to have the following things:
 

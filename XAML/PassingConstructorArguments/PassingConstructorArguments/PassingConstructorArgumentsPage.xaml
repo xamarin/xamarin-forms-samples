@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:PassingConstructorArguments" x:Class="PassingConstructorArguments.PassingConstructorArgumentsPage">
+	<StackLayout Margin="20">
+		<Label Text="Passing Constructor Arguments in XAML" FontAttributes="Bold" HorizontalOptions="Center" />
+		<BoxView HeightRequest="150" WidthRequest="150" HorizontalOptions="Center">
+			<BoxView.Color>
+				<Color>
+					<x:Arguments>
+						<x:Double>0.9</x:Double>
+					</x:Arguments>
+				</Color>
+			</BoxView.Color>
+		</BoxView>
+		<BoxView HeightRequest="150" WidthRequest="150" HorizontalOptions="Center">
+			<BoxView.Color>
+				<Color>
+					<x:Arguments>
+						<x:Double>0.25</x:Double>
+						<x:Double>0.5</x:Double>
+						<x:Double>0.75</x:Double>
+					</x:Arguments>
+				</Color>
+			</BoxView.Color>
+		</BoxView>
+		<BoxView HeightRequest="150" WidthRequest="150" HorizontalOptions="Center">
+			<BoxView.Color>
+				<Color>
+					<x:Arguments>
+						<x:Double>0.8</x:Double>
+						<x:Double>0.5</x:Double>
+						<x:Double>0.2</x:Double>
+						<x:Double>0.5</x:Double>
+					</x:Arguments>
+				</Color>
+			</BoxView.Color>
+		</BoxView>
+	</StackLayout>
+</ContentPage>
