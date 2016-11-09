@@ -5,7 +5,7 @@
     "Microsoft.ApplicationInsights.WindowsApps": "1.0.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "sqlite-net-pcl": "1.1.2",
-    "Xamarin.Forms": "2.3.3.152-pre2"
+    "Xamarin.Forms": "2.3.3.166-pre4"
   },
   "frameworks": {
     "uap10.0": {}
