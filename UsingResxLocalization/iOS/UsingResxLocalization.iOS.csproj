@@ -122,7 +122,6 @@
     <BundleResource Include="Resources\es.lproj\flag.png" />
     <BundleResource Include="Resources\fr.lproj\flag.png" />
     <BundleResource Include="Resources\ja.lproj\flag.png" />
-    <BundleResource Include="Resources\en.lproj\flag.png" />
     <BundleResource Include="Resources\zh-Hant.lproj\flag.png" />
     <BundleResource Include="Resources\zh-Hant.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\zh-Hans.lproj\flag.png" />
@@ -145,6 +144,7 @@
     <BundleResource Include="Resources\id.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\ms.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\ms.lproj\flag.png" />
+    <BundleResource Include="Resources\en.lproj\flag.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -163,6 +163,7 @@
     <Folder Include="Resources\de.lproj\" />
     <Folder Include="Resources\id.lproj\" />
     <Folder Include="Resources\ms.lproj\" />
+    <Folder Include="Resources\en.lproj\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsListViewSample", "FormsListViewSample\FormsListViewSample.csproj", "{52EBF4AB-FD33-4C45-9033-4E672B06EBA9}"
 EndProject
@@ -101,9 +101,9 @@ Global
 		{C5D8195D-C91F-4CC7-8720-149278E71C80}.Release|x86.ActiveCfg = Release|Any CPU
 		{C5D8195D-C91F-4CC7-8720-149278E71C80}.Release|x86.Build.0 = Release|Any CPU
 		{C5D8195D-C91F-4CC7-8720-149278E71C80}.Release|x86.Deploy.0 = Release|Any CPU
-		{EBB96A3A-B53C-43CA-B69E-523DBE2F0CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EBB96A3A-B53C-43CA-B69E-523DBE2F0CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EBB96A3A-B53C-43CA-B69E-523DBE2F0CBF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EBB96A3A-B53C-43CA-B69E-523DBE2F0CBF}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{EBB96A3A-B53C-43CA-B69E-523DBE2F0CBF}.Debug|Any CPU.Build.0 = Debug|x86
+		{EBB96A3A-B53C-43CA-B69E-523DBE2F0CBF}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{EBB96A3A-B53C-43CA-B69E-523DBE2F0CBF}.Debug|ARM.ActiveCfg = Debug|ARM
 		{EBB96A3A-B53C-43CA-B69E-523DBE2F0CBF}.Debug|ARM.Build.0 = Debug|ARM
 		{EBB96A3A-B53C-43CA-B69E-523DBE2F0CBF}.Debug|ARM.Deploy.0 = Debug|ARM

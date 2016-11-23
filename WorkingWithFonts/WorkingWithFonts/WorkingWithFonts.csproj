@@ -34,7 +34,6 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MyLabel.cs" />
     <Compile Include="FontPageXaml.xaml.cs">
       <DependentUpon>FontPageXaml.xaml</DependentUpon>
     </Compile>

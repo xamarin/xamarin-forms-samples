@@ -7,8 +7,17 @@ namespace ValidationCallback
 		public static readonly BindableProperty AngleProperty = BindableProperty.Create ("Angle", typeof(double), typeof(HomePage), 0.0, validateValue: IsValidValue);
 
 		public double Angle {
-			get { return (double)GetValue (AngleProperty); }
-			set { SetValue (AngleProperty, value); }
+			get {
+				return (double)GetValue(AngleProperty);
+			}
+			set {
+				try {
+					SetValue(AngleProperty, value);
+				} catch {
+					DisplayAlert ("Alert", "Angle must be between 0-360", "OK");
+				}
+			}
+
 		}
 
 		public HomePageCS ()
@@ -16,14 +25,15 @@ namespace ValidationCallback
 			BindingContext = this;
 
 			var angleEntry = new Entry { WidthRequest = 50 };
-			angleEntry.SetBinding (Entry.TextProperty, "Angle");
+			angleEntry.SetBinding(Entry.TextProperty, "Angle");
 
 			var image = new Image { VerticalOptions = LayoutOptions.CenterAndExpand };
-			image.Source = ImageSource.FromFile ("waterfront.jpg");
-			image.SetBinding (VisualElement.RotationProperty, "Angle");
+			image.Source = ImageSource.FromFile("waterfront.jpg");
+			image.SetBinding(VisualElement.RotationProperty, "Angle");
 
-			Content = new StackLayout { 
-				Padding = new Thickness (0, 20, 0, 0),
+			Content = new StackLayout
+			{
+				Padding = new Thickness(0, 20, 0, 0),
 				Children = {
 					new Label {
 						Text = "Bindable Property Validation Callback Demo",
