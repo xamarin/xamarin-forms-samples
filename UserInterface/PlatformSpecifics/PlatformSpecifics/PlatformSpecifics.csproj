@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26EAF3A9-8DD2-46E8-89E1-D9346939BF9E}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UseMSBuildEngine>true</UseMSBuildEngine>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PlatformSpecifics</RootNamespace>
+    <AssemblyName>PlatformSpecifics</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml" />
+    <EmbeddedResource Include="PlatformSpecificsPage.xaml" />
+    <EmbeddedResource Include="Android\XAML\AndroidSoftInputModeAdjustPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iOS\XAML\iOSBlurEffectPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iOS\XAML\iOSTranslucentNavigationBarPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iOS\XAML\iOSNavigationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlatformSpecificsPage.xaml.cs">
+      <DependentUpon>PlatformSpecificsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UWP\CS\WindowsMasterDetailPageCS.cs" />
+    <Compile Include="UWP\CS\WindowsNavigationPageCS.cs" />
+    <Compile Include="UWP\CS\WindowsPlatformSpecificsHelpers.cs" />
+    <Compile Include="UWP\CS\WindowsTabbedPageCS.cs" />
+    <Compile Include="UWP\NavigationItem.cs" />
+    <Compile Include="Android\XAML\AndroidSoftInputModeAdjustPage.xaml.cs">
+      <DependentUpon>AndroidSoftInputModeAdjustPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Android\CS\AndroidSoftInputModeAdjustPageCS.cs" />
+    <Compile Include="PlatformSpecificsPageCS.cs" />
+    <Compile Include="iOS\XAML\iOSBlurEffectPage.xaml.cs">
+      <DependentUpon>iOSBlurEffectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="iOS\XAML\iOSTranslucentNavigationBarPage.xaml.cs">
+      <DependentUpon>iOSTranslucentNavigationBarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="iOS\CS\iOSBlurEffectPageCS.cs" />
+    <Compile Include="iOS\CS\iOSTranslucentNavigationBarPageCS.cs" />
+    <Compile Include="UWP\XAML\AddRemoveToolbarItemsContentView.xaml.cs">
+      <DependentUpon>AddRemoveToolbarItemsContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UWP\XAML\CollapseStyleChangerContentView.xaml.cs">
+      <DependentUpon>CollapseStyleChangerContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UWP\XAML\CollapseWidthAdjusterContentView.xaml.cs">
+      <DependentUpon>CollapseWidthAdjusterContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UWP\XAML\MasterDetailPage\ContentPageDetailPage.xaml.cs">
+      <DependentUpon>ContentPageDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UWP\XAML\MasterDetailPage\ContentPageMasterPage.xaml.cs">
+      <DependentUpon>ContentPageMasterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UWP\XAML\NavigationPage\ContentPageOneInNavigationPage.xaml.cs">
+      <DependentUpon>ContentPageOneInNavigationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UWP\XAML\TabbedPage\ContentPageOneInTabbedPage.xaml.cs">
+      <DependentUpon>ContentPageOneInTabbedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UWP\XAML\ContentPageTwo.xaml.cs">
+      <DependentUpon>ContentPageTwo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UWP\XAML\ToolbarPlacementChangerContentView.xaml.cs">
+      <DependentUpon>ToolbarPlacementChangerContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UWP\XAML\MasterDetailPage\WindowsMasterDetailPage.xaml.cs">
+      <DependentUpon>WindowsMasterDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UWP\XAML\NavigationPage\WindowsNavigationPage.xaml.cs">
+      <DependentUpon>WindowsNavigationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UWP\XAML\TabbedPage\WindowsTabbedPage.xaml.cs">
+      <DependentUpon>WindowsTabbedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="iOS\XAML\iOSNavigationPage.xaml.cs">
+      <DependentUpon>iOSNavigationPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UWP\XAML\NavigationPage\WindowsNavigationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UWP\XAML\TabbedPage\WindowsTabbedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UWP\XAML\MasterDetailPage\WindowsMasterDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UWP\XAML\TabbedPage\ContentPageOneInTabbedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UWP\XAML\ContentPageTwo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UWP\XAML\AddRemoveToolbarItemsContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UWP\XAML\ToolbarPlacementChangerContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UWP\XAML\NavigationPage\ContentPageOneInNavigationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UWP\XAML\MasterDetailPage\ContentPageDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UWP\XAML\MasterDetailPage\ContentPageMasterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UWP\XAML\CollapseStyleChangerContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UWP\XAML\CollapseWidthAdjusterContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.3.168\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.3.168\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.3.168\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.3.168\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.168\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.2.3.3.168\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.2.3.3.168\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+  </Target>
+</Project>

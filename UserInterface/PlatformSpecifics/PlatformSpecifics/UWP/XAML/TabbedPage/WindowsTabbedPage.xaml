@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:PlatformSpecifics"
+            xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core"
+            x:Class="PlatformSpecifics.WindowsTabbedPage"
+            windows:Page.ToolbarPlacement="Bottom">
+  <TabbedPage.ToolbarItems>
+    <ToolbarItem Name="Primary 1" Icon="reminders.png" Order="Primary" Clicked="OnToolbarItemClicked" />
+    <ToolbarItem Name="Primary 2" Icon="reminders.png" Order="Primary" Clicked="OnToolbarItemClicked" />
+    <ToolbarItem Name="Secondary 1" Icon="reminders.png" Order="Secondary" Clicked="OnToolbarItemClicked" />
+    <ToolbarItem Name="Secondary 2" Icon="reminders.png" Order="Secondary" Clicked="OnToolbarItemClicked" />
+  </TabbedPage.ToolbarItems>
+  <local:ContentPageOneInTabbedPage />
+  <local:ContentPageTwo />
+</TabbedPage>
