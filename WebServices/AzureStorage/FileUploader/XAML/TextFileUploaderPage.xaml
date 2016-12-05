@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FileUploader.TextFileUploaderPage" Title="Upload Text" Icon="xaml.png">
+	<StackLayout Margin="20">
+		<Label Text="Text Upload and Download" FontAttributes="Bold" HorizontalOptions="Center" />
+		<Label Text="Enter text:" />
+		<Editor x:Name="uploadEditor" HeightRequest="100" />
+		<Button x:Name="uploadButton" Text="Upload" Clicked="OnUploadButtonClicked" />
+		<ActivityIndicator x:Name="activityIndicator" />
+		<Button x:Name="downloadButton" Text="Download" Clicked="OnDownloadButtonClicked" IsEnabled="false" />
+		<Editor x:Name="downloadEditor" HeightRequest="100" IsEnabled="false" />
+	</StackLayout>
+</ContentPage>
