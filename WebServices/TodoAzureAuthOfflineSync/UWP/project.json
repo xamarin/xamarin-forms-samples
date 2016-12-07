@@ -4,7 +4,7 @@
     "Microsoft.Azure.Mobile.Client.SQLiteStore": "2.1.1",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "Newtonsoft.Json": "9.0.1",
-    "Xamarin.Forms": "2.3.3.168"
+    "Xamarin.Forms": "2.3.3.175"
   },
   "frameworks": {
     "uap10.0": {}
