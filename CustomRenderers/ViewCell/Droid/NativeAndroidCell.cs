@@ -8,7 +8,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace CustomRenderer.Droid
 {
-	public class NativeAndroidCell : LinearLayout, INativeElementView
+	internal class NativeAndroidCell : LinearLayout, INativeElementView
 	{
 		public TextView HeadingTextView { get; set; }
 		public TextView SubheadingTextView { get; set; }
