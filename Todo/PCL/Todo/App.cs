@@ -1,6 +1,10 @@
 ﻿using System;
 using Xamarin.Forms;
 using System.Diagnostics;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
+
 
 namespace Todo
 {
@@ -10,6 +14,8 @@ namespace Todo
 
 		public App ()
 		{
+			MobileCenter.Start(typeof(Analytics), typeof(Crashes));
+
 			Resources = new ResourceDictionary ();
 			Resources.Add ("primaryGreen", Color.FromHex("91CA47"));
 			Resources.Add ("primaryDarkGreen", Color.FromHex ("6FA22E"));
