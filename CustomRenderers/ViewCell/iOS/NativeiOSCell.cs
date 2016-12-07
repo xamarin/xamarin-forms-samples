@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace CustomRenderer.iOS
 {
-	public class NativeiOSCell : UITableViewCell, INativeElementView
+	internal class NativeiOSCell : UITableViewCell, INativeElementView
 	{
 		public UILabel HeadingLabel { get; set; }
 		public UILabel SubheadingLabel { get; set; }
