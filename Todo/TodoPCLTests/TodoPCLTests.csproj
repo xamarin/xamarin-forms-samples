@@ -38,6 +38,8 @@
     <Compile Include="Tests\Repl.cs" />
     <Compile Include="Pages\ListPage.cs" />
     <Compile Include="Pages\ItemPage.cs" />
+    <Compile Include="Tests\BeforeEachTest.cs" />
+    <Compile Include="Pages\BasePage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
