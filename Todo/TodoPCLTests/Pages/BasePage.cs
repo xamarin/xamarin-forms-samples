@@ -1,12 +1,18 @@
-﻿using System;
-
+﻿using Xamarin.UITest;
 
 namespace TodoPCLTests
 {
-	public class BasePage
+	public abstract class BasePage
 	{
-		public BasePage()
+		protected readonly IApp app;
+		protected readonly bool OnAndroid, OniOS;
+
+		public BasePage(IApp app, Platform platform)
 		{
+			this.app = app;
+
+			OnAndroid = platform == Platform.Android;
+			OniOS = platform == Platform.iOS;
 		}
 	}
 }

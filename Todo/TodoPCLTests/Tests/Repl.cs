@@ -7,28 +7,20 @@ using Xamarin.UITest.Queries;
 
 namespace TodoPCLTests
 {
-	[TestFixture(Platform.Android)]
-	[TestFixture(Platform.iOS)]
-	public class Tests
+	public class ReplTests : BaseTest
 	{
 		IApp app;
 		Platform platform;
 
-		public Tests(Platform platform)
+		//Constructor inheriting from BaseTest class
+		public ReplTests(Platform platform) : base(platform)
 		{
-			this.platform = platform;
 		}
 
-		[SetUp]
-		public void BeforeEachTest()
+		//override BeforeEastTest method from BaseTest class
+		public override void BeforeEachTest()
 		{
-			app = AppInitializer.StartApp(platform);
-		}
-
-		[Test]
-		public void AppLaunches()
-		{
-			app.Screenshot("First screen.");
+			base.BeforeEachTest();
 		}
 
 		[Test]
