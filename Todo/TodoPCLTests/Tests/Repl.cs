@@ -9,19 +9,18 @@ namespace TodoPCLTests
 {
 	public class ReplTests : BaseTest
 	{
-		IApp app;
-		Platform platform;
-
 		//Constructor inheriting from BaseTest class
 		public ReplTests(Platform platform) : base(platform)
 		{
 		}
 
+
 		//override BeforeEastTest method from BaseTest class
-		public override void BeforeEachTest()
-		{
-			base.BeforeEachTest();
-		}
+		//public override void BeforeEachTest()
+		//{
+		//	base.BeforeEachTest();
+		//}
+
 
 		[Test]
 		public void Repl()

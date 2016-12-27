@@ -7,7 +7,7 @@ namespace TodoPCLTests
 		protected readonly IApp app;
 		protected readonly bool OnAndroid, OniOS;
 
-		public BasePage(IApp app, Platform platform)
+		protected BasePage(IApp app, Platform platform)
 		{
 			this.app = app;
 

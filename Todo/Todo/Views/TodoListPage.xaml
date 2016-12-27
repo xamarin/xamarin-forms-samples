@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Todo.TodoListPage" Title="Todo">
 	<ContentPage.ToolbarItems>
-		<ToolbarItem Text="+" Clicked="OnItemAdded">
+		<ToolbarItem Text="+" AutomationId="Add" Clicked="OnItemAdded">
 			<ToolbarItem.Icon>
 				<OnPlatform x:TypeArguments="FileImageSource" Android="plus.png" />
 			</ToolbarItem.Icon>

@@ -1,13 +1,20 @@
 ﻿using System;
 using Xamarin.UITest;
+using Xamarin.UITest.Queries;
+using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
 
 namespace TodoPCLTests
 {
-	public class ListPage
+	public class ListPage : BasePage
 	{
-		public ListPage()
+		//Initialize variables for elements on page
+		//protected readonly Query AddButton;
+
+		//Constructor
+		public ListPage(IApp app, Platform platform) : base(app, platform)
 		{
+			//AddButton = x => x.Marked(app.Tap("Add"))
 		}
 	}
 }

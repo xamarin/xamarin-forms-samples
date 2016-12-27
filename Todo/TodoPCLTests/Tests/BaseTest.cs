@@ -8,14 +8,13 @@ namespace TodoPCLTests
 	[TestFixture(Platform.iOS)]
 	public abstract class BaseTest
 	{
-		IApp app;
-		Platform platform;
+		protected IApp app;
+		protected Platform platform;
 
 		protected ItemPage ItemPage;
 		protected ListPage ListPage;
 
-
-		//Constructor for this class. Assigning platform variable to objectc# this
+		//Constructor for this class. Assigning platform variable to object c# this
 		protected BaseTest(Platform platform)
 		{
 			this.platform = platform;
