@@ -9,12 +9,17 @@ namespace TodoPCLTests
 	public class ListPage : BasePage
 	{
 		//Initialize variables for elements on page
-		//protected readonly Query AddButton;
+		protected readonly Query AddButton;
 
 		//Constructor
 		public ListPage(IApp app, Platform platform) : base(app, platform)
 		{
-			//AddButton = x => x.Marked(app.Tap("Add"))
+			AddButton = x => x.Marked("Add");
+		}
+
+		public void TapAddButton()
+		{
+			app.Tap(AddButton);
 		}
 	}
 }

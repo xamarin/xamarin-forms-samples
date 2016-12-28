@@ -40,6 +40,7 @@
     <Compile Include="Pages\ItemPage.cs" />
     <Compile Include="Tests\BaseTest.cs" />
     <Compile Include="Pages\BasePage.cs" />
+    <Compile Include="Tests\TodoTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -2,7 +2,8 @@
 using Xamarin.UITest;
 
 //Add query
-//using System.Func<Xamarin.UITest.Queries>
+//using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
+
 
 namespace TodoPCLTests
 {
@@ -10,12 +11,16 @@ namespace TodoPCLTests
 	{
 		//List variables associated w/ ui elements
 
-		//Add page instantiation
+
+		//ItemPage constructor
 		public ItemPage(IApp app, Platform platform) : base(app, platform)
 		{
 			//initialize variables and assigning query
+
+
 		}
 
 		//Add methods associated with pages
+
 	}
 }
