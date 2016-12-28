@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Todo.TodoItemPage" Title="{Binding Name}">
 	<StackLayout Margin="20" VerticalOptions="StartAndExpand">
 		<Label Text="Name" />
-		<Entry Text="{Binding Name}" />
+		<Entry Text="{Binding Name}" AutomationId="NameField"/>
 		<Label Text="Notes" />
-		<Entry Text="{Binding Notes}" />
+		<Entry Text="{Binding Notes}" AutomationId="NotesField"/>
 		<Label Text="Done" />
-		<Switch IsToggled="{Binding Done}" />
+		<Switch IsToggled="{Binding Done}" AutomationId="Switch"/>
 		<Button Text="Save" Clicked="OnSaveClicked" />
 		<Button Text="Delete" Clicked="OnDeleteClicked" />
 		<Button Text="Cancel" Clicked="OnCancelClicked" />
