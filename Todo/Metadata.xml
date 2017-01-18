@@ -7,5 +7,5 @@
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
-	<Brief>This sample demonstrates a Todo list application where the data is stored and accessed in a local SQLite database.</Brief>
+	<Brief>Demonstrates using either PCL or Shared Project templates.</Brief>
 </SampleMetadata>

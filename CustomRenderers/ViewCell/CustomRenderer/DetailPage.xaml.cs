@@ -5,23 +5,20 @@ namespace CustomRenderer
 {
 	public partial class DetailPage : ContentPage
 	{
-		public DetailPage(object detail)
+		public DetailPage (object detail)
 		{
-			InitializeComponent();
+			InitializeComponent ();
 
-			if (detail is string)
-			{
+			if (detail is string) {
 				detailLabel.Text = detail as string;
-			}
-			else if (detail is DataSource)
-			{
+			} else if (detail is DataSource) {
 				detailLabel.Text = (detail as DataSource).Name;
 			}
 		}
 
-		async void OnButtonClicked(object sender, EventArgs e)
+		void OnButtonClicked (object sender, EventArgs e)
 		{
-			await Navigation.PopModalAsync();
+			Navigation.PopModalAsync ();
 		}
 	}
 }
