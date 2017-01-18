@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PlatformSpecifics.AndroidSoftInputModeAdjustPage" Title="Soft Input Mode Adjust">
+	<!-- Application.WindowSoftInputModeAdjust is initially set in App.xaml -->
+	<StackLayout Margin="20">
+		<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+			<Button Text="Pan" Clicked="OnPanButtonClicked" />
+			<Button Text="Resize" Clicked="OnResizeButtonClicked" />
+		</StackLayout>
+		<Entry Placeholder="Enter text here" VerticalOptions="EndAndExpand" />
+	</StackLayout>
+</ContentPage>

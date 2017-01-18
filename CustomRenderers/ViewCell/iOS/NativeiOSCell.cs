@@ -1,57 +1,65 @@
-﻿using Foundation;
+﻿using CoreGraphics;
 using UIKit;
+using Xamarin.Forms;
 
 namespace CustomRenderer.iOS
 {
-	/// <summary>
-	/// Sample of a custom cell layout, taken from the iOS docs at:
-	/// http://developer.xamarin.com/guides/ios/user_interface/tables/part_3_-_customizing_a_table's_appearance/
-	/// </summary>
-	public class NativeiOSCell : UITableViewCell
+	internal class NativeiOSCell : UITableViewCell, INativeElementView
 	{
-		UILabel headingLabel, subheadingLabel;
-		UIImageView imageView;
+		public UILabel HeadingLabel { get; set; }
+		public UILabel SubheadingLabel { get; set; }
+		public UIImageView CellImageView { get; set; }
 
-		public NativeiOSCell (NSString cellId) : base (UITableViewCellStyle.Default, cellId)
+		public NativeCell NativeCell { get; private set; }
+		public Element Element => NativeCell;
+
+		public NativeiOSCell(string cellId, NativeCell cell) : base(UITableViewCellStyle.Default, cellId)
 		{
+			NativeCell = cell;
+
 			SelectionStyle = UITableViewCellSelectionStyle.Gray;
+			ContentView.BackgroundColor = UIColor.FromRGB(255, 255, 224);
+			CellImageView = new UIImageView();
 
-			ContentView.BackgroundColor = UIColor.FromRGB (255, 255, 224);
-
-			imageView = new UIImageView ();
-
-			headingLabel = new UILabel () {
-				Font = UIFont.FromName ("Cochin-BoldItalic", 22f),
-				TextColor = UIColor.FromRGB (127, 51, 0),
+			HeadingLabel = new UILabel()
+			{
+				Font = UIFont.FromName("Cochin-BoldItalic", 22f),
+				TextColor = UIColor.FromRGB(127, 51, 0),
 				BackgroundColor = UIColor.Clear
 			};
 
-			subheadingLabel = new UILabel () {
-				Font = UIFont.FromName ("AmericanTypewriter", 12f),
-				TextColor = UIColor.FromRGB (38, 127, 0),
+			SubheadingLabel = new UILabel()
+			{
+				Font = UIFont.FromName("AmericanTypewriter", 12f),
+				TextColor = UIColor.FromRGB(38, 127, 0),
 				TextAlignment = UITextAlignment.Center,
 				BackgroundColor = UIColor.Clear
 			};
 
-			ContentView.Add (headingLabel);
-			ContentView.Add (subheadingLabel);
-			ContentView.Add (imageView);
+			ContentView.Add(HeadingLabel);
+			ContentView.Add(SubheadingLabel);
+			ContentView.Add(CellImageView);
 		}
 
-		public void UpdateCell (string caption, string subtitle, UIImage image)
+		public void UpdateCell(NativeCell cell)
 		{
-			headingLabel.Text = caption;
-			subheadingLabel.Text = subtitle;
-			imageView.Image = image;
+			HeadingLabel.Text = cell.Name;
+			SubheadingLabel.Text = cell.Category;
+			CellImageView.Image = GetImage(cell.ImageFilename);
 		}
 
-		public override void LayoutSubviews ()
+		public UIImage GetImage(string filename)
 		{
-			base.LayoutSubviews ();
+			return (!string.IsNullOrWhiteSpace(filename)) ? UIImage.FromFile("Images/" + filename + ".jpg") : null;
+		}
 
-			headingLabel.Frame = new CoreGraphics.CGRect (5, 4, ContentView.Bounds.Width - 63, 25);
-			subheadingLabel.Frame = new CoreGraphics.CGRect (100, 18, 100, 20);
-			imageView.Frame = new CoreGraphics.CGRect (ContentView.Bounds.Width - 63, 5, 33, 33);
+		public override void LayoutSubviews()
+		{
+			base.LayoutSubviews();
+
+			HeadingLabel.Frame = new CGRect(5, 4, ContentView.Bounds.Width - 63, 25);
+			SubheadingLabel.Frame = new CGRect(100, 18, 100, 20);
+			CellImageView.Frame = new CGRect(ContentView.Bounds.Width - 63, 5, 33, 33);
 		}
 	}
 }

@@ -20,7 +20,7 @@ namespace CustomRenderer.Droid
 		List<CustomPin> customPins;
 		bool isDrawn;
 
-		protected override void OnElementChanged (Xamarin.Forms.Platform.Android.ElementChangedEventArgs<View> e)
+		protected override void OnElementChanged (Xamarin.Forms.Platform.Android.ElementChangedEventArgs<Map> e)
 		{
 			base.OnElementChanged (e);
 

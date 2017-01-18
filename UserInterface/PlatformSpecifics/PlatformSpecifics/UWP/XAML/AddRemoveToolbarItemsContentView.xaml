@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PlatformSpecifics.AddRemoveToolbarItemsContentView">
+  <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+    <Button Text="Add Primary" BackgroundColor="Gray" Clicked="OnAddPrimaryButtonClicked" />
+    <Button Text="Add Secondary" BackgroundColor="Gray" Clicked="OnAddSecondaryButtonClicked" />
+    <Button Text="Remove" BackgroundColor="Gray" Clicked="OnRemoveButtonClicked" />
+  </StackLayout>
+</ContentView>

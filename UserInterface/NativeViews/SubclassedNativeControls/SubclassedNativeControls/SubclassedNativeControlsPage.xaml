@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:iosLocal="clr-namespace:SubclassedNativeControls.iOS;assembly=SubclassedNativeControls.iOS;targetPlatform=iOS" xmlns:androidLocal="clr-namespace:SubclassedNativeControls.Droid;assembly=SubclassedNativeControls.Droid;targetPlatform=Android" xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android" xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows" x:Class="SubclassedNativeControls.SubclassedNativeControlsPage">
+	<StackLayout Margin="20">
+		<Label Text="Subclassed Native Views Demo" FontAttributes="Bold" HorizontalOptions="Center" />
+		<StackLayout Orientation="Horizontal">
+			<Label Text="You have chosen:" />
+			<Label Text="{Binding SelectedFruit}" />
+		</StackLayout>
+		<iosLocal:MyUIPickerView ItemsSource="{Binding Fruits}" SelectedItem="{Binding SelectedFruit, Mode=TwoWay, UpdateSourceEventName=SelectedItemChanged}" />
+		<androidLocal:MySpinner x:Arguments="{x:Static formsAndroid:Forms.Context}" ItemsSource="{Binding Fruits}" SelectedObject="{Binding SelectedFruit, Mode=TwoWay, UpdateSourceEventName=ItemSelected}" />
+		<winControls:ComboBox ItemsSource="{Binding Fruits}" SelectedItem="{Binding SelectedFruit, Mode=TwoWay, UpdateSourceEventName=SelectionChanged}" />
+	</StackLayout>
+</ContentPage>

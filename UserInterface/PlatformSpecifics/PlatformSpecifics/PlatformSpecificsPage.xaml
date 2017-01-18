@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PlatformSpecifics.PlatformSpecificsPage" Title="Platform Specifics Demo">
+	<StackLayout Margin="20">
+		<Button Text="Blur Effect (iOS only)" Clicked="OnBlurEffectButtonClicked" />
+		<Button Text="Translucent Navigation Bar (iOS only)" Clicked="OnTranslucentNavigationBarButtonClicked" />
+		<Button Text="Soft Input Mode Adjust (Android only)" Clicked="OnSoftInputModeAdjustButtonClicked" />
+		<Button Text="Tabbed Page Toolbar Location Adjust (Windows only)" Clicked="OnTabbedPageButtonClicked" />
+		<Button Text="Navigation Page Toolbar Location Adjust (Windows only)" Clicked="OnNavigationPageButtonClicked" />
+		<Button Text="Master Detail Page Toolbar Location Adjust (Windows only)" Clicked="OnMasterDetailPageButtonClicked" />
+	</StackLayout>
+</ContentPage>
