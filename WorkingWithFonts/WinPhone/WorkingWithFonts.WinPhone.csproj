@@ -13,7 +13,8 @@
     <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
     <SilverlightApplication>true</SilverlightApplication>
-    <SupportedCultures></SupportedCultures>
+    <SupportedCultures>
+    </SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
     <XapFilename>PhoneApp1_$(Configuration)_$(Platform).xap</XapFilename>
@@ -124,7 +125,7 @@
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Assets\Fonts\Lobster-Regular.ttf" />
+    <Content Include="Assets\Fonts\Lobster-Regular.ttf" />
     <None Include="Assets\Fonts\OFL.txt" />
   </ItemGroup>
   <ItemGroup>
