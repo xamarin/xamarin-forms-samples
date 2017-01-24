@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="FingerPaintInfo.cs" />
     <Compile Include="FingerPaintPage.xaml.cs">
       <DependentUpon>FingerPaintPage.xaml</DependentUpon>
     </Compile>

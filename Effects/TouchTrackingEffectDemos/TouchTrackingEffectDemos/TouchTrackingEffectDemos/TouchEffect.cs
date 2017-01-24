@@ -10,6 +10,8 @@ namespace TouchTracking
         {
         }
 
+        public bool Capture { set; get; }
+
         public void OnTouchAction(Element element, TouchActionEventArgs args)
         {
             TouchAction?.Invoke(element, args);

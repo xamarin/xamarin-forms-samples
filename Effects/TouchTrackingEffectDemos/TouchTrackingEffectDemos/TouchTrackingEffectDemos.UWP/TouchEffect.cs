@@ -13,24 +13,36 @@ namespace TouchTracking.UWP
 {
     public class TouchEffect : PlatformEffect
     {
-        Action<Element, TouchActionEventArgs> onTouchAction;
         FrameworkElement frameworkElement;
+        Action<Element, TouchActionEventArgs> onTouchAction;
+        bool capture;
 
         protected override void OnAttached()
         {
+            // Get the Windows FrameworkElement corresponding to the Element that the effect is attached to
+            frameworkElement = Control == null ? Container : Control;
+
             // Get access to the TouchEffect class in the PCL
             TouchTracking.TouchEffect effect = (TouchTracking.TouchEffect)Element.Effects.FirstOrDefault(e => e is TouchTracking.TouchEffect);
-            frameworkElement = Control == null ? Container : Control;
 
             if (effect != null && frameworkElement != null)
             {
+                // Save the method to call on touch events
                 onTouchAction = effect.OnTouchAction;
 
+                // Save setting of Capture property
+                capture = effect.Capture;
+
+                // Set event handlers on FrameworkElement
                 frameworkElement.PointerEntered += OnPointerEntered;
                 frameworkElement.PointerPressed += OnPointerPressed;
                 frameworkElement.PointerMoved += OnPointerMoved;
                 frameworkElement.PointerReleased += OnPointerReleased;
                 frameworkElement.PointerExited += OnPointerExited;
+
+                // TODO
+
+            //    frameworkElement.PointerCanceled
             }
         }
 
@@ -38,11 +50,16 @@ namespace TouchTracking.UWP
         {
             if (onTouchAction != null)
             {
+                // Release event handlers on FrameworkElement
                 frameworkElement.PointerEntered -= OnPointerEntered;
                 frameworkElement.PointerPressed -= OnPointerPressed;
                 frameworkElement.PointerMoved -= OnPointerMoved;
                 frameworkElement.PointerReleased -= OnPointerReleased;
                 frameworkElement.PointerExited -= OnPointerEntered;
+
+                // TODO
+
+     //           frameworkElement.PointerCanceled
             }
         }
 
@@ -54,6 +71,11 @@ namespace TouchTracking.UWP
         void OnPointerPressed(object sender, PointerRoutedEventArgs args)
         {
             CommonHandler(sender, TouchActionType.Pressed, args);
+
+            if (capture)
+            {
+                (sender as FrameworkElement).CapturePointer(args.Pointer);
+            }
         }
 
         void OnPointerMoved(object sender, PointerRoutedEventArgs args)
@@ -73,16 +95,13 @@ namespace TouchTracking.UWP
 
         void CommonHandler(object sender, TouchActionType touchActionType, PointerRoutedEventArgs args)
         {
+            PointerPoint pointerPoint = args.GetCurrentPoint(sender as UIElement);
+            Windows.Foundation.Point windowsPoint = pointerPoint.Position;  
+
             onTouchAction(Element, new TouchActionEventArgs(args.Pointer.PointerId,
                                                             touchActionType,
-                                                            PointerPointToPoint(args.GetCurrentPoint(sender as UIElement)),
+                                                            new Point(windowsPoint.X, windowsPoint.Y),
                                                             args.Pointer.IsInContact));
-        }
-
-        Point PointerPointToPoint(PointerPoint pointerPoint)
-        {
-            Windows.Foundation.Point winPoint = pointerPoint.Position;
-            return new Point(winPoint.X, winPoint.Y);
         }
     }
 }
