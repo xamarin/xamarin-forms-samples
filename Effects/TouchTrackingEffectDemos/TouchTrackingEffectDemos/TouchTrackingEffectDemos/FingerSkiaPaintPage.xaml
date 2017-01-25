@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:tt="clr-namespace:TouchTracking"
+             x:Class="TouchTrackingEffectDemos.FingerSkiaPaintPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Picker Title="Color"
+                Grid.Row="0"
+                Grid.Column="0"
+                SelectedIndexChanged="OnColorPickerSelectedIndexChanged">
+            <Picker.Items>
+                <x:String>Red</x:String>
+                <x:String>Green</x:String>
+                <x:String>Blue</x:String>
+                <x:String>Aqua</x:String>
+                <x:String>Fuchsia</x:String>
+                <x:String>Yellow</x:String>
+                <x:String>Black</x:String>
+                <x:String>Gray</x:String>
+                <x:String>White</x:String>
+            </Picker.Items>
+
+            <Picker.SelectedIndex>
+                0
+            </Picker.SelectedIndex>
+        </Picker>
+
+        <Picker Title="Thickness"
+                Grid.Row="0"
+                Grid.Column="1"
+                SelectedIndexChanged="OnThicknessPickerSelectedIndexChanged">
+            <Picker.Items>
+                <x:String>Thin</x:String>
+                <x:String>Thinish</x:String>
+                <x:String>Medium</x:String>
+                <x:String>Thickish</x:String>
+                <x:String>Thick</x:String>
+            </Picker.Items>
+
+            <Picker.SelectedIndex>
+                0
+            </Picker.SelectedIndex>
+        </Picker>
+
+        <Button Text="Clear"
+                Grid.Row="0"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Clicked="OnClearButtonClicked" />
+
+        <skia:SKCanvasView x:Name="canvasView"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="3"
+                           BackgroundColor="White">
+            <AbsoluteLayout.Effects>
+                <tt:TouchEffect Capture="True"
+                                TouchAction="OnTouchEffectTouchAction" />
+            </AbsoluteLayout.Effects>
+        </skia:SKCanvasView>
+    </Grid>    
+    
+    
+    
+
+</ContentPage>

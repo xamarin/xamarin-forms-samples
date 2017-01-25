@@ -12,6 +12,11 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:FingerPaintPage}" />
 
+                <TextCell Text="Finger Skia Paint"
+                          Detail="Draw on the screen with your fingers"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:FingerSkiaPaintPage}" />
+
             </TableSection>            
         </TableRoot>
     </TableView>
