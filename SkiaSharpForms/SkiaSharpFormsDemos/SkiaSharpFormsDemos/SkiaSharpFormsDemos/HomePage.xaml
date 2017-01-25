@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SkiaSharpFormsDemos"
+             x:Class="SkiaSharpFormsDemos.HomePage"
+             Title="SkiaSharp Forms Demos"
+             Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="SkiaSharp Basics">
+                <TextCell Text="Simple Circle"
+                          Detail="Outline and fill a circle with SkiaSharp"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SimpleCirclePage}" />
+
+                <TextCell Text="Tap Toggle Fill"
+                          Detail="Tap the screen to toggle the circle fill"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:TapToggleFillPage}" />
+
+                <TextCell Text="Ellipse Fill"
+                          Detail="Fill the surface with an ellipse"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:EllipseFillPage}" />
+
+                <TextCell Text="Surface Size"
+                          Detail="Display the surface size three different ways"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SurfaceSizePage}" />
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

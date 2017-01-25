@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Xamarin.Forms;
+
+using SkiaSharp;
+using SkiaSharp.Views.Forms;
+
+namespace SkiaSharpFormsDemos
+{
+    public partial class EllipseFillPage : ContentPage
+    {
+        public EllipseFillPage()
+        {
+            InitializeComponent();
+        }
+
+        void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
+        {
+            SKImageInfo info = args.Info;
+            SKSurface surface = args.Surface;
+            SKCanvas canvas = surface.Canvas;
+
+            canvas.Clear();
+
+
+            System.Diagnostics.Debug.WriteLine(info.Rect);
+
+
+
+
+            float strokeWidth = 50;
+            float xRadius = (info.Width - strokeWidth) / 2;
+            float yRadius = (info.Height - strokeWidth) / 2;
+
+            SKPaint paint = new SKPaint
+            {
+                Style = SKPaintStyle.Stroke,
+                Color = SKColors.Blue,
+                StrokeWidth = 50
+            };
+            canvas.DrawOval(info.Width / 2, info.Height / 2, xRadius, yRadius, paint);
+        }
+    }
+}
