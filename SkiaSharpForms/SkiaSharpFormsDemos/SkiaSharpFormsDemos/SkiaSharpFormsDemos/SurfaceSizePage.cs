@@ -32,7 +32,7 @@ namespace SkiaSharpFormsDemos
             SKPaint paint = new SKPaint
             {
                 Color = SKColors.Black,
-                TextSize = 50
+                TextSize = 40
             };
 
             float fontSpacing = paint.FontSpacing;
@@ -40,11 +40,13 @@ namespace SkiaSharpFormsDemos
             float y = fontSpacing;      // first baseline
             float indent = 100;
 
-            canvas.DrawText("Height and Width of SKCanvasView:", x, y, paint);
+            canvas.DrawText("SKCanvasView Height and Width:", x, y, paint);
             y += fontSpacing;
-            canvas.DrawText(String.Format("{0} x {1}", canvasView.Width, canvasView.Height), x + indent, y, paint);
+            canvas.DrawText(String.Format("{0:F2} x {1:F2}", 
+                                          canvasView.Width, canvasView.Height), 
+                            x + indent, y, paint);
             y += fontSpacing * 2;
-            canvas.DrawText("CanvasSize of SKCanvasView:", x, y, paint);
+            canvas.DrawText("SKCanvasView CanvasSize:", x, y, paint);
             y += fontSpacing;
             canvas.DrawText(canvasView.CanvasSize.ToString(), x + indent, y, paint);
             y += fontSpacing * 2;
