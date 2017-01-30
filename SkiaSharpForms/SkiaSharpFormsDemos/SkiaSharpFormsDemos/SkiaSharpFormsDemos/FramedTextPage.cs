@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
 
 using Xamarin.Forms;
 
@@ -32,7 +28,7 @@ namespace SkiaSharpFormsDemos
 
             string str = "Hello SkiaSharp!";
 
-            // Create an SKPaint object for display the text
+            // Create an SKPaint object to display the text
             SKPaint textPaint = new SKPaint
             {
                 Color = SKColors.Chocolate
@@ -50,12 +46,15 @@ namespace SkiaSharpFormsDemos
             float xText = info.Width / 2 - textBounds.MidX;
             float yText = info.Height / 2 - textBounds.MidY;
 
-            // Create a new SKRect object for the frame about the text
+            // And draw the text
+            canvas.DrawText(str, xText, yText, textPaint);
+
+            // Create a new SKRect object for the frame around the text
             SKRect frameRect = textBounds;
             frameRect.Offset(xText, yText);
             frameRect.Inflate(10, 10);
 
-            // Create an SKPaint object for display the frame
+            // Create an SKPaint object to display the frame
             SKPaint framePaint = new SKPaint
             {
                 Style = SKPaintStyle.Stroke,
@@ -70,9 +69,6 @@ namespace SkiaSharpFormsDemos
             frameRect.Inflate(10, 10);
             framePaint.Color = SKColors.DarkBlue;
             canvas.DrawRoundRect(frameRect, 30, 30, framePaint);
-
-            // Finally draw the text
-            canvas.DrawText(str, xText, yText, textPaint);
         }
     }
 }

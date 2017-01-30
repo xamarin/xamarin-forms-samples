@@ -36,9 +36,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="BlendModesPage.xaml.cs">
-      <DependentUpon>BlendModesPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="EllipseFillPage.xaml.cs">
       <DependentUpon>EllipseFillPage.xaml</DependentUpon>
     </Compile>
@@ -102,12 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="PulsatingEllipsePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="BlendModesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

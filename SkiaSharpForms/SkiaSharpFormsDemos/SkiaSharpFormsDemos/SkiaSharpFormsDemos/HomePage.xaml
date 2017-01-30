@@ -37,12 +37,6 @@
                           Detail="Draw a rounded rectangle around a text string"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:FramedTextPage}" />
-
-                <TextCell Text="Blend Modes"
-                          
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:BlendModesPage}" />
-
             </TableSection>
         </TableRoot>
     </TableView>

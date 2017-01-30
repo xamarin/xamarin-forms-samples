@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -15,20 +12,32 @@ namespace SkiaSharpFormsDemos
     public partial class PulsatingEllipsePage : ContentPage
     {
         Stopwatch stopwatch = new Stopwatch();
+        bool pageIsActive;
         float scale;            // ranges from 0 to 1 to 0
 
         public PulsatingEllipsePage()
         {
             InitializeComponent();
+        }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            pageIsActive = true;
             AnimationLoop();
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            pageIsActive = false;
         }
 
         async void AnimationLoop()
         {
             stopwatch.Start();
 
-            while (true)
+            while (pageIsActive)
             {
                 double cycleTime = slider.Value;
                 double t = stopwatch.Elapsed.TotalSeconds % cycleTime / cycleTime;
@@ -36,6 +45,7 @@ namespace SkiaSharpFormsDemos
                 canvasView.InvalidateSurface();
                 await Task.Delay(TimeSpan.FromSeconds(1.0 / 30));
             }
+            stopwatch.Stop();
         }
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -64,6 +74,5 @@ namespace SkiaSharpFormsDemos
             paint.Color = SKColors.SkyBlue;
             canvas.DrawOval(info.Width / 2, info.Height / 2, xRadius, yRadius, paint);
         }
-
     }
 }
