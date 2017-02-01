@@ -36,20 +36,30 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="EllipseFillPage.xaml.cs">
+    <Compile Include="Basics\EllipseFillPage.xaml.cs">
       <DependentUpon>EllipseFillPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FramedTextPage.cs" />
+    <Compile Include="Basics\FramedTextPage.cs" />
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LinesAndPaths\FivePointedStarPage.xaml.cs">
+      <DependentUpon>FivePointedStarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LinesAndPaths\MultipleLinesPage.xaml.cs">
+      <DependentUpon>MultipleLinesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LinesAndPaths\ArchimedeanSpiralPage.cs" />
+    <Compile Include="LinesAndPaths\StrokeCapsPage.cs" />
+    <Compile Include="LinesAndPaths\StrokeJoinsPage.cs" />
+    <Compile Include="LinesAndPaths\TwoTrianglePathsPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PulsatingEllipsePage.xaml.cs">
+    <Compile Include="Basics\PulsatingEllipsePage.xaml.cs">
       <DependentUpon>PulsatingEllipsePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SimpleCirclePage.cs" />
-    <Compile Include="SurfaceSizePage.cs" />
-    <Compile Include="TapToggleFillPage.xaml.cs">
+    <Compile Include="Basics\SimpleCirclePage.cs" />
+    <Compile Include="Basics\SurfaceSizePage.cs" />
+    <Compile Include="Basics\TapToggleFillPage.xaml.cs">
       <DependentUpon>TapToggleFillPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -85,19 +95,31 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="TapToggleFillPage.xaml">
+    <EmbeddedResource Include="Basics\TapToggleFillPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="EllipseFillPage.xaml">
+    <EmbeddedResource Include="Basics\EllipseFillPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="PulsatingEllipsePage.xaml">
+    <EmbeddedResource Include="Basics\PulsatingEllipsePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LinesAndPaths\MultipleLinesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LinesAndPaths\FivePointedStarPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

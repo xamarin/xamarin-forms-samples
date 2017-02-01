@@ -1,4 +1,6 @@
-﻿using System;
+﻿#pragma warning disable 4014        // suppress warning about not using await on AnimationLoop
+
+using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
@@ -33,7 +35,7 @@ namespace SkiaSharpFormsDemos
             pageIsActive = false;
         }
 
-        async void AnimationLoop()
+        async Task AnimationLoop()
         {
             stopwatch.Start();
 

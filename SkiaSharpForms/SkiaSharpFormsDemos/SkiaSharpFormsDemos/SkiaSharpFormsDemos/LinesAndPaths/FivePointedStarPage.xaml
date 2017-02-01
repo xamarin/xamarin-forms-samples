@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="SkiaSharpFormsDemos.FivePointedStarPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Picker x:Name="fillTypePicker"
+                Title="Path Fill Type"
+                Grid.Row="0"
+                Margin="10"
+                SelectedIndexChanged="OnPickerSelectedIndexChanged">
+            <Picker.Items>
+                <x:String>Winding</x:String>
+                <x:String>EvenOdd</x:String>
+                <x:String>InverseWinding</x:String>
+                <x:String>InverseEvenOdd</x:String>
+            </Picker.Items>
+            <Picker.SelectedIndex>
+                0
+            </Picker.SelectedIndex>
+        </Picker>
+
+        <skia:SKCanvasView x:Name="canvasView"
+                           Grid.Row="1"
+                           PaintSurface="OnCanvasViewPaintSurface" />
+    </Grid>
+</ContentPage>

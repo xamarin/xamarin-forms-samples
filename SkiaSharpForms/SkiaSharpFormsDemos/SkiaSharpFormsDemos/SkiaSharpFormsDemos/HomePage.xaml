@@ -38,6 +38,38 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:FramedTextPage}" />
             </TableSection>
+
+            <TableSection Title="Lines and Paths">
+                <TextCell Text="Stroke Caps"
+                          Detail="List and show the three stroke cap options"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:StrokeCapsPage}" />
+
+                <TextCell Text="Multiple Lines"
+                          Detail="Draw multiple lines using DrawPoints"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MultipleLinesPage}" />
+
+                <TextCell Text="Two Triangle Paths"
+                          Detail="Use a graphics path to draw triangles, open and closed"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:TwoTrianglePathsPage}" />
+
+                <TextCell Text="Stroke Joins"
+                          Detail="List and show the three stroke join options"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:StrokeJoinsPage}" />
+
+                <TextCell Text="Five Pointed Star"
+                          Detail="Demonstrate path fill styles"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:FivePointedStarPage}" />
+
+                <TextCell Text="Archimedean Spiral"
+                          Detail="Use a graphics path to draw a spiral"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ArchimedeanSpiralPage}" />
+            </TableSection>
         </TableRoot>
     </TableView>
 </ContentPage>
