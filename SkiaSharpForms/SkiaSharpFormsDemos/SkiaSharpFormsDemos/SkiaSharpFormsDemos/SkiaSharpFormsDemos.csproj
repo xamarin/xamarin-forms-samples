@@ -43,6 +43,11 @@
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LinesAndPaths\AnimatedSpiralPage.cs" />
+    <Compile Include="LinesAndPaths\Arc.cs" />
+    <Compile Include="LinesAndPaths\DotsAndDashesPage.xaml.cs">
+      <DependentUpon>DotsAndDashesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LinesAndPaths\FivePointedStarPage.xaml.cs">
       <DependentUpon>FivePointedStarPage.xaml</DependentUpon>
     </Compile>
@@ -50,6 +55,7 @@
       <DependentUpon>MultipleLinesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="LinesAndPaths\ArchimedeanSpiralPage.cs" />
+    <Compile Include="LinesAndPaths\OverlappingCirclesPage.cs" />
     <Compile Include="LinesAndPaths\StrokeCapsPage.cs" />
     <Compile Include="LinesAndPaths\StrokeJoinsPage.cs" />
     <Compile Include="LinesAndPaths\TwoTrianglePathsPage.cs" />
@@ -120,6 +126,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="LinesAndPaths\FivePointedStarPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LinesAndPaths\DotsAndDashesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

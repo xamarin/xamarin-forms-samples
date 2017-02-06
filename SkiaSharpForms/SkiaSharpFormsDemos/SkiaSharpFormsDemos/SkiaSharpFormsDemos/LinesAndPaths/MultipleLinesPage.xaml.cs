@@ -35,6 +35,9 @@ namespace SkiaSharpFormsDemos
                 Style = SKPaintStyle.Stroke,
                 Color = SKColors.Blue,
                 StrokeWidth = 50,
+
+     
+
                 StrokeCap = GetPickerItem<SKStrokeCap>(strokeCapPicker) // ,
    //             StrokeJoin = GetPickerItem<SKStrokeJoin>(strokeJoinPicker)
             };

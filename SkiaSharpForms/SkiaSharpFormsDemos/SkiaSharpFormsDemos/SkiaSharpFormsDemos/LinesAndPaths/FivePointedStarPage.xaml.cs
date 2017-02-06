@@ -49,7 +49,8 @@ namespace SkiaSharpFormsDemos
 
             SKPath path = new SKPath
             {
-                FillType = (SKPathFillType)Enum.Parse(typeof(SKPathFillType), fillTypePicker.Items[fillTypePicker.SelectedIndex])
+                FillType = (SKPathFillType)Enum.Parse(typeof(SKPathFillType), 
+                                fillTypePicker.Items[fillTypePicker.SelectedIndex])
             };
             path.MoveTo(info.Width / 2, info.Height / 2 - radius);
 
@@ -62,8 +63,26 @@ namespace SkiaSharpFormsDemos
             }
             path.Close();
 
-       //     canvas.DrawPath(path, strokePaint);
-            canvas.DrawPath(path, fillPaint);
+            switch (drawingModePicker.SelectedIndex)
+            {
+                case 0:
+                    canvas.DrawPath(path, fillPaint);
+                    break;
+
+                case 1:
+                    canvas.DrawPath(path, strokePaint);
+                    break;
+
+                case 2:
+                    canvas.DrawPath(path, strokePaint);
+                    canvas.DrawPath(path, fillPaint);
+                    break;
+
+                case 3:
+                    canvas.DrawPath(path, fillPaint);
+                    canvas.DrawPath(path, strokePaint);
+                    break;
+            }
         }
     }
 }
