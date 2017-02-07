@@ -8,7 +8,6 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
-            <!--<ColumnDefinition Width="*" />-->
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -45,21 +44,6 @@
                 0
             </Picker.SelectedIndex>
         </Picker>
-
-        <!--<Picker x:Name="strokeJoinPicker"
-                Title="Stroke Join"
-                Grid.Row="0"
-                Grid.Column="2"
-                SelectedIndexChanged="OnPickerSelectedIndexChanged">
-            <Picker.Items>
-                <x:String>Mitter</x:String>
-                <x:String>Round</x:String>
-                <x:String>Bevel</x:String>
-            </Picker.Items>
-            <Picker.SelectedIndex>
-                0
-            </Picker.SelectedIndex>
-        </Picker>-->
 
         <skia:SKCanvasView x:Name="canvasView"
                            PaintSurface="OnCanvasViewPaintSurface"

@@ -50,18 +50,18 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:MultipleLinesPage}" />
 
-                <TextCell Text="Two Triangle Paths"
-                          Detail="Use a graphics path to draw triangles, open and closed"
+                <TextCell Text="Two Triangle Contours"
+                          Detail="Use a graphics path to draw open and closed triangles"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:TwoTrianglePathsPage}" />
+                          CommandParameter="{x:Type local:TwoTriangleContoursPage}" />
 
                 <TextCell Text="Stroke Joins"
                           Detail="List and show the three stroke join options"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:StrokeJoinsPage}" />
 
-                <TextCell Text="Five Pointed Star"
-                          Detail="Demonstrate path fill styles"
+                <TextCell Text="Five-Pointed Star"
+                          Detail="Demonstrate path fill types"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:FivePointedStarPage}" />
 

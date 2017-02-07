@@ -31,12 +31,12 @@ namespace SkiaSharpFormsDemos
 
             using (SKPath path = new SKPath())
             {
-                for (float angle = 0; angle < 3600; angle += 1)
+                for (float angle = 0; angle < 360 /* 0 */ ; angle += 1)
                 {
-                    float scaledRadius = radius * angle / 3600;
+                    float scaledRadius = radius; //  radius * angle / 3600;
                     double radians = Math.PI * angle / 180;
-                    float x = center.X + scaledRadius * (float)Math.Cos(radians);
-                    float y = center.Y + scaledRadius * (float)Math.Sin(radians);
+                    float x = info.Width / 2 /* center.X */ + (info.Width / 2) /*  scaledRadius */ * (float)Math.Cos(radians);
+                    float y = info.Height / 2 /* center.Y */ + (info.Height / 2) /* scaledRadius */ * (float)Math.Sin(radians);
                     SKPoint point = new SKPoint(x, y);
 
                     if (angle == 0)

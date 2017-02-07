@@ -30,20 +30,6 @@ namespace SkiaSharpFormsDemos
 
             canvas.Clear();
 
-            SKPaint strokePaint = new SKPaint
-            {
-                Style = SKPaintStyle.Stroke,
-                Color = SKColors.Red,
-                StrokeWidth = 50,
-                StrokeJoin = SKStrokeJoin.Round
-            };
-
-            SKPaint fillPaint = new SKPaint
-            {
-                Style = SKPaintStyle.Fill,
-                Color = SKColors.Blue
-            };
-
             SKPoint center = new SKPoint(info.Width / 2, info.Height / 2);
             float radius = 0.45f * Math.Min(info.Width, info.Height);
 
@@ -62,6 +48,20 @@ namespace SkiaSharpFormsDemos
                                                 -radius * (float)Math.Cos(angle)));
             }
             path.Close();
+
+            SKPaint strokePaint = new SKPaint
+            {
+                Style = SKPaintStyle.Stroke,
+                Color = SKColors.Red,
+                StrokeWidth = 50,
+                StrokeJoin = SKStrokeJoin.Round
+            };
+
+            SKPaint fillPaint = new SKPaint
+            {
+                Style = SKPaintStyle.Fill,
+                Color = SKColors.Blue
+            };
 
             switch (drawingModePicker.SelectedIndex)
             {

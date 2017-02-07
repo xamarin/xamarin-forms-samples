@@ -7,11 +7,11 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos
 {
-    public class TwoTrianglePathsPage : ContentPage
+    public class TwoTriangleContoursPage : ContentPage
     {
-        public TwoTrianglePathsPage()
+        public TwoTriangleContoursPage()
         {
-            Title = "Two Triangle Paths";
+            Title = "Two Triangle Contours";
 
             SKCanvasView canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;
@@ -26,6 +26,22 @@ namespace SkiaSharpFormsDemos
 
             canvas.Clear();
 
+            // Create the path
+            SKPath path = new SKPath();
+
+            // Define the first contour
+            path.MoveTo(0.5f * info.Width, 0.1f * info.Height);
+            path.LineTo(0.2f * info.Width, 0.4f * info.Height);
+            path.LineTo(0.8f * info.Width, 0.4f * info.Height);
+            path.LineTo(0.5f * info.Width, 0.1f * info.Height);
+
+            // Define the second contour
+            path.MoveTo(0.5f * info.Width, 0.6f * info.Height);
+            path.LineTo(0.2f * info.Width, 0.9f * info.Height);
+            path.LineTo(0.8f * info.Width, 0.9f * info.Height);
+            path.Close();
+
+            // Create two SKPaint objects
             SKPaint strokePaint = new SKPaint
             {
                 Style = SKPaintStyle.Stroke,
@@ -39,21 +55,7 @@ namespace SkiaSharpFormsDemos
                 Color = SKColors.Cyan
             };
 
-            // First path
-            SKPath path = new SKPath();
-            path.MoveTo(0.5f * info.Width, 0.1f * info.Height);
-            path.LineTo(0.2f * info.Width, 0.4f * info.Height);
-            path.LineTo(0.8f * info.Width, 0.4f * info.Height);
-            path.LineTo(0.5f * info.Width, 0.1f * info.Height);
-            canvas.DrawPath(path, fillPaint);
-            canvas.DrawPath(path, strokePaint);
-
-            // Second path
-            path.Reset();
-            path.MoveTo(0.5f * info.Width, 0.6f * info.Height);
-            path.LineTo(0.2f * info.Width, 0.9f * info.Height);
-            path.LineTo(0.8f * info.Width, 0.9f * info.Height);
-            path.Close();
+            // Fill and stroke the path
             canvas.DrawPath(path, fillPaint);
             canvas.DrawPath(path, strokePaint);
         }
