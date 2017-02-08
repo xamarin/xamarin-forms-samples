@@ -44,7 +44,6 @@
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="LinesAndPaths\AnimatedSpiralPage.cs" />
-    <Compile Include="LinesAndPaths\Arc.cs" />
     <Compile Include="LinesAndPaths\DotsAndDashesPage.xaml.cs">
       <DependentUpon>DotsAndDashesPage.xaml</DependentUpon>
     </Compile>

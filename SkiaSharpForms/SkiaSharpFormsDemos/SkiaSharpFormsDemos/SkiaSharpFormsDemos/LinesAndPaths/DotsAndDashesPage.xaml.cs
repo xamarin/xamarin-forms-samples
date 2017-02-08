@@ -38,19 +38,16 @@ namespace SkiaSharpFormsDemos
                 StrokeCap = (SKStrokeCap)Enum.Parse(typeof(SKStrokeCap), 
                                 strokeCapPicker.Items[strokeCapPicker.SelectedIndex]),
 
-
                 PathEffect = SKPathEffect.CreateDash(GetPickerArray(dashArrayPicker), 20)
-                // ,
-                                                                                                   //             StrokeJoin = GetPickerItem<SKStrokeJoin>(strokeJoinPicker)
             };
 
             SKPath path = new SKPath();
-            path.MoveTo(0, 0); //  0.2f * info.Width, 0.2f * info.Height);
+            path.MoveTo(0.2f * info.Width, 0.2f * info.Height);
             path.LineTo(0.8f * info.Width, 0.8f * info.Height);
             path.LineTo(0.2f * info.Width, 0.8f * info.Height);
             path.LineTo(0.8f * info.Width, 0.2f * info.Height);
 
-            canvas.DrawPath(path, paint); //  GetPickerItem<SKPointMode>(pointModePicker), points, paint);
+            canvas.DrawPath(path, paint); 
         }
 
         T GetPickerItem<T>(Picker picker)

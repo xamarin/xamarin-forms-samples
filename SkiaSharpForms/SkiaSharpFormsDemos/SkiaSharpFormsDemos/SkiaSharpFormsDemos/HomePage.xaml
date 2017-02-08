@@ -84,11 +84,6 @@
                           Detail="Animate an Archimedean Spiral"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:AnimatedSpiralPage}" />
-
-                <TextCell Text="Arc"
-                          Detail="Experiment"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Arc}" />
             </TableSection>
         </TableRoot>
     </TableView>

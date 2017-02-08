@@ -36,11 +36,6 @@ namespace SkiaSharpFormsDemos
             {
                 double t = stopwatch.Elapsed.TotalMilliseconds % cycleTime / cycleTime;
                 dashPhase = (float)(10 * t);
-
-
-          //      Debug.WriteLine("{0} {1}", t, dashPhase);
-
-
                 canvasView.InvalidateSurface();
 
                 if (!pageIsActive)

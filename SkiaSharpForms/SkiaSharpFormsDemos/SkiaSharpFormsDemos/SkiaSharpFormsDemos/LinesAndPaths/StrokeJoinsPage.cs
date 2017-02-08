@@ -36,7 +36,7 @@ namespace SkiaSharpFormsDemos
             SKPaint thickLinePaint = new SKPaint
             {
                 Style = SKPaintStyle.Stroke,
-                Color = SKColors.Cyan,
+                Color = SKColors.Orange,
                 StrokeWidth = 50
             };
 
@@ -59,9 +59,9 @@ namespace SkiaSharpFormsDemos
 
                 // Create path
                 SKPath path = new SKPath();
-                path.MoveTo(xLine1, y - 100);
-                path.LineTo(xLine1, y + 100);
-                path.LineTo(xLine2, y + 100);
+                path.MoveTo(xLine1, y - 80);
+                path.LineTo(xLine1, y + 80);
+                path.LineTo(xLine2, y + 80);
 
                 // Display thick line
                 thickLinePaint.StrokeJoin = strokeJoin;

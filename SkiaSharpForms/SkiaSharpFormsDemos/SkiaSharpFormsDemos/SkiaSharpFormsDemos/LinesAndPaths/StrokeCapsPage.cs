@@ -36,7 +36,7 @@ namespace SkiaSharpFormsDemos
             SKPaint thickLinePaint = new SKPaint
             {
                 Style = SKPaintStyle.Stroke,
-                Color = SKColors.Cyan,
+                Color = SKColors.Orange,
                 StrokeWidth = 50
             };
 
