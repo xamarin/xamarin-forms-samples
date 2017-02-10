@@ -109,7 +109,7 @@ namespace TouchTracking.Droid
                     break;
 
                 case MotionEventActions.Cancel:
-
+                    onTouchAction(Element, new TouchActionEventArgs(id, TouchActionType.Cancelled, point, true));
 
 
 

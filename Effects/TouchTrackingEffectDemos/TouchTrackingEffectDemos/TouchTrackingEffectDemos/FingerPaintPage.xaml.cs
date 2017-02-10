@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+
 using Xamarin.Forms;
+
+using SkiaSharp;
+using SkiaSharp.Views.Forms;
 
 using TouchTracking;
 
@@ -10,45 +14,34 @@ namespace TouchTrackingEffectDemos
 {
     public partial class FingerPaintPage : ContentPage
     {
-        Dictionary<long, FingerPaintInfo> linesInProgress = new Dictionary<long, FingerPaintInfo>();
-        Color strokeColor = Color.Red;
-        double strokeThickness = 1;
+        Dictionary<long, FingerPaintPolyline> inProgressPolylines = new Dictionary<long, FingerPaintPolyline>();
+        List<FingerPaintPolyline> completedPolylines = new List<FingerPaintPolyline>();
+
+        SKPaint paint = new SKPaint
+        {
+            Style = SKPaintStyle.Stroke,
+            StrokeCap = SKStrokeCap.Round,
+            StrokeJoin = SKStrokeJoin.Round
+        };
 
         public FingerPaintPage()
         {
             InitializeComponent();
         }
 
-        void OnColorPickerSelectedIndexChanged(object sender, EventArgs args)
-        {
-            Picker picker = sender as Picker;
-
-            if (picker.SelectedIndex != -1)
-            {
-                string strColor = picker.Items[picker.SelectedIndex];
-                strokeColor = (Color)typeof(Color).GetRuntimeField(strColor).GetValue(null);
-            }
-        }
-
-        void OnThicknessPickerSelectedIndexChanged(object sender, EventArgs args)
-        {
-            Picker picker = sender as Picker;
-
-            if (picker.SelectedIndex != -1)
-            {
-                strokeThickness = new double[] { 1, 2, 5, 10, 20 }[picker.SelectedIndex];
-            }
-        }
-
         void OnClearButtonClicked(object sender, EventArgs args)
         {
-            absoluteLayout.Children.Clear();
+            completedPolylines.Clear(); 
+            canvasView.InvalidateSurface();
         }
 
         void OnTouchEffectTouchAction(object sender, TouchActionEventArgs args)
         {
-            AbsoluteLayout absoluteLayout = sender as AbsoluteLayout;
-            TouchEffect touchEffect = (TouchEffect)absoluteLayout.Effects.First(e => e is TouchEffect);
+        //    SKCanvasView canvasView = sender as SKCanvasView;
+
+
+
+            TouchEffect touchEffect = (TouchEffect)canvasViewGrid.Effects.First(e => e is TouchEffect);
 
             switch (args.Type)
             {
@@ -56,63 +49,84 @@ namespace TouchTrackingEffectDemos
                 case TouchActionType.Pressed:
                     if (args.IsInContact)
                     {
-                        if (!linesInProgress.ContainsKey(args.Id))
+                        if (!inProgressPolylines.ContainsKey(args.Id))
                         {
-                            FingerPaintInfo info = new FingerPaintInfo
+                            touchEffect.Capture = true;
+
+                            Color strokeColor = (Color)typeof(Color).GetRuntimeField(colorPicker.Items[colorPicker.SelectedIndex]).GetValue(null);
+                            float strokeWidth = ConvertToPixel(new float[] { 1, 2, 5, 10, 20 }[widthPicker.SelectedIndex]);
+
+                            FingerPaintPolyline polyline = new FingerPaintPolyline
                             {
                                 StrokeColor = strokeColor,
-                                StrokeThickness = strokeThickness,
-                                PreviousPoint = args.Location
+                                StrokeWidth = strokeWidth
                             };
-                            linesInProgress.Add(args.Id, info);
+                            polyline.Path.MoveTo(ConvertToPixel(args.Location));
+
+                            inProgressPolylines.Add(args.Id, polyline);
+                            canvasView.InvalidateSurface();
                         }
                     }
                     break;
 
                 case TouchActionType.Moved:
-                    if (linesInProgress.ContainsKey(args.Id))
+                    if (inProgressPolylines.ContainsKey(args.Id))
                     {
-                        FingerPaintInfo info = linesInProgress[args.Id];
-                        DrawSimulatedLine(absoluteLayout, info, args.Location);
-                        info.PreviousPoint = args.Location;
+                        FingerPaintPolyline polyline = inProgressPolylines[args.Id];
+                        polyline.Path.LineTo(ConvertToPixel(args.Location));
+                        canvasView.InvalidateSurface();
                     }
                     break;
 
                 case TouchActionType.Released:
                 case TouchActionType.Exited:
-                case TouchActionType.Cancelled:
-                    if (linesInProgress.ContainsKey(args.Id))
+                    if (inProgressPolylines.ContainsKey(args.Id))
                     {
-                        FingerPaintInfo info = linesInProgress[args.Id];
-                        DrawSimulatedLine(absoluteLayout, info, args.Location);
-                        linesInProgress.Remove(args.Id);
+                        completedPolylines.Add(inProgressPolylines[args.Id]);
+                        inProgressPolylines.Remove(args.Id);
+                        canvasView.InvalidateSurface();
+                    }
+                    break;
+
+                case TouchActionType.Cancelled:
+                    if (inProgressPolylines.ContainsKey(args.Id))
+                    {
+                        inProgressPolylines.Remove(args.Id);
+                        canvasView.InvalidateSurface();
                     }
                     break;
             }
         }
 
-        void DrawSimulatedLine(AbsoluteLayout absoluteLayout, FingerPaintInfo info, Point point)
+        void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
-            // Calculate size of BoxView
-            double width = Math.Sqrt(Math.Pow(point.X - info.PreviousPoint.X, 2) +
-                                     Math.Pow(point.Y - info.PreviousPoint.Y, 2)) +
-                           info.StrokeThickness;
-            double height = info.StrokeThickness;
+            SKCanvas canvas = args.Surface.Canvas;
+            canvas.Clear();
 
-            // Find location of BoxView
-            Point midPoint = new Point((point.X + info.PreviousPoint.X) / 2,
-                                       (point.Y + info.PreviousPoint.Y) / 2);
-            Point location = new Point(midPoint.X - width / 2, midPoint.Y - height / 2);
+            foreach (FingerPaintPolyline polyline in completedPolylines)
+            {
+                paint.Color = polyline.StrokeColor.ToSKColor();
+                paint.StrokeWidth = polyline.StrokeWidth;
+                canvas.DrawPath(polyline.Path, paint);
+            }
 
-            // Create BoxView and set it in AbsoluteLayout
-            BoxView boxView = new BoxView { Color = info.StrokeColor };
-            AbsoluteLayout.SetLayoutBounds(boxView, new Rectangle(location.X, location.Y, width, height));
-            absoluteLayout.Children.Add(boxView);
+            foreach (FingerPaintPolyline polyline in inProgressPolylines.Values)
+            {
+                paint.Color = polyline.StrokeColor.ToSKColor();
+                paint.StrokeWidth = polyline.StrokeWidth;
+                canvas.DrawPath(polyline.Path, paint);
+            }
+        }
 
-            // Rotate it
-            double radians = Math.Atan2(point.Y - info.PreviousPoint.Y,
-                                        point.X - info.PreviousPoint.X);
-            boxView.Rotation = 180 * radians / Math.PI;
+        SKPoint ConvertToPixel(Point pt)
+        {
+            return new SKPoint((float)(canvasView.CanvasSize.Width * pt.X / canvasView.Width),
+                               (float)(canvasView.CanvasSize.Height * pt.Y / canvasView.Height));
+        }
+
+        float ConvertToPixel(float fl)
+        {
+            return (float)(canvasView.CanvasSize.Width * fl / canvasView.Width);
         }
     }
 }

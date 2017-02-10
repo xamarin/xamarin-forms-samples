@@ -39,12 +39,14 @@ namespace TouchTracking.UWP
                 frameworkElement.PointerMoved += OnPointerMoved;
                 frameworkElement.PointerReleased += OnPointerReleased;
                 frameworkElement.PointerExited += OnPointerExited;
+                frameworkElement.PointerCanceled += OnPointerCancelled;
 
                 // TODO
 
             //    frameworkElement.PointerCanceled
             }
         }
+
 
         protected override void OnDetached()
         {
@@ -56,10 +58,11 @@ namespace TouchTracking.UWP
                 frameworkElement.PointerMoved -= OnPointerMoved;
                 frameworkElement.PointerReleased -= OnPointerReleased;
                 frameworkElement.PointerExited -= OnPointerEntered;
+                frameworkElement.PointerCanceled -= OnPointerCancelled;
 
                 // TODO
 
-     //           frameworkElement.PointerCanceled
+                //           frameworkElement.PointerCanceled
             }
         }
 
@@ -92,6 +95,12 @@ namespace TouchTracking.UWP
         {
             CommonHandler(sender, TouchActionType.Exited, args);
         }
+
+        void OnPointerCancelled(object sender, PointerRoutedEventArgs args)
+        {
+            CommonHandler(sender, TouchActionType.Cancelled, args);
+        }
+
 
         void CommonHandler(object sender, TouchActionType touchActionType, PointerRoutedEventArgs args)
         {

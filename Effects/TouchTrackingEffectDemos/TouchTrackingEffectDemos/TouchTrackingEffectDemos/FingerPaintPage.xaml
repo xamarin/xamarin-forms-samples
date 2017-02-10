@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              xmlns:tt="clr-namespace:TouchTracking"
              x:Class="TouchTrackingEffectDemos.FingerPaintPage">
     <Grid>
@@ -15,10 +16,10 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Picker Title="Color"
+        <Picker x:Name="colorPicker"
+                Title="Color"
                 Grid.Row="0"
-                Grid.Column="0"
-                SelectedIndexChanged="OnColorPickerSelectedIndexChanged">
+                Grid.Column="0">
             <Picker.Items>
                 <x:String>Red</x:String>
                 <x:String>Green</x:String>
@@ -36,10 +37,10 @@
             </Picker.SelectedIndex>
         </Picker>
 
-        <Picker Title="Thickness"
+        <Picker x:Name="widthPicker"
+                Title="Width"
                 Grid.Row="0"
-                Grid.Column="1"
-                SelectedIndexChanged="OnThicknessPickerSelectedIndexChanged">
+                Grid.Column="1">
             <Picker.Items>
                 <x:String>Thin</x:String>
                 <x:String>Thinish</x:String>
@@ -60,15 +61,24 @@
                 VerticalOptions="Center"
                 Clicked="OnClearButtonClicked" />
 
-        <AbsoluteLayout x:Name="absoluteLayout"
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        Grid.ColumnSpan="3"
-                        BackgroundColor="White">
-            <AbsoluteLayout.Effects>
+        <Grid     x:Name="canvasViewGrid"                       Grid.Row="1"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="3"
+                           BackgroundColor="White"
+                                         
+>
+
+        <skia:SKCanvasView x:Name="canvasView"
+                           PaintSurface="OnCanvasViewPaintSurface">
+        </skia:SKCanvasView>
+
+
+            <Grid.Effects>
                 <tt:TouchEffect Capture="True"
                                 TouchAction="OnTouchEffectTouchAction" />
-            </AbsoluteLayout.Effects>
-        </AbsoluteLayout>
-    </Grid>
+            </Grid.Effects>
+
+
+        </Grid>
+    </Grid>    
 </ContentPage>

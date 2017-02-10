@@ -6,16 +6,20 @@
     <TableView Intent="Menu">
         <TableRoot>
             <TableSection Title="Touch Tracking Demos">
-                
+                <TextCell Text="Silent Keyboard"
+                          Detail="Tap or sweep the music piano keys"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SilentKeyboardPage}" />
+
                 <TextCell Text="Finger Paint"
                           Detail="Draw on the screen with your fingers"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:FingerPaintPage}" />
 
-                <TextCell Text="Finger Skia Paint"
+                <!--<TextCell Text="Finger Skia Paint"
                           Detail="Draw on the screen with your fingers"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:FingerSkiaPaintPage}" />
+                          CommandParameter="{x:Type local:FingerSkiaPaintPage}" />-->
 
             </TableSection>            
         </TableRoot>
