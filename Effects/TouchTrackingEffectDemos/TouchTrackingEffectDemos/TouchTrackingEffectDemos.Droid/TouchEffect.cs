@@ -17,20 +17,27 @@ namespace TouchTracking.Droid
         bool capture;
         Func<double, double> fromPixels;
 
-        /*
-                class TouchInfo
-                {
-                    public Element Element { set; get; }
-                    public Action<Element, TouchActionEventArgs> OnTouchAction { set; get; }
-                };
+        // Information retained for all elements that attach this effect
+        class TouchInfo
+        {
+            public TouchInfo(Element element, Action<Element, TouchActionEventArgs> onTouchAction)
+            {
+                Element = element;
+                OnTouchAction = onTouchAction;
+            }
 
-                static Dictionary<Android.Views.View, TouchInfo> viewDictionary = new Dictionary<Android.Views.View, TouchInfo>();
+            public Element Element { private set; get; }
+            public Action<Element, TouchActionEventArgs> OnTouchAction { private set; get; }
+        };
+
+        // 
+        static Dictionary<Android.Views.View, TouchInfo> viewDictionary = new Dictionary<Android.Views.View, TouchInfo>();
 
          //       static Dictionary<int, Android.Views.View> indexDictionary = new Dictionary<int, Android.Views.View>();
 
 
-                static Dictionary<int, TouchInfo> idToInfoDictionary = new Dictionary<int, TouchInfo>();
-        */
+        static Dictionary<int, TouchInfo> idToInfoDictionary = new Dictionary<int, TouchInfo>();
+        
 
 
         protected override void OnAttached()
@@ -43,11 +50,17 @@ namespace TouchTracking.Droid
 
             if (effect != null && view != null)
             {
+
+                viewDictionary.Add(view, new TouchInfo(Element, effect.OnTouchAction));
+
+
+
+
                 // Save the method to call on touch events
-                onTouchAction = effect.OnTouchAction;
+                onTouchAction = effect.OnTouchAction;                   // Remove
 
                 // Save setting of Capture property
-                capture = effect.Capture;
+                capture = effect.Capture;                               // Move to TouchInfo??? NO, NO, NO. Need to move Capture access to Down handler, if possible
 
                 // Save fromPixels function
                 fromPixels = view.Context.FromPixels;
@@ -61,13 +74,20 @@ namespace TouchTracking.Droid
         {
             if (onTouchAction != null)
             {
-                view.Touch -= OnTouch;
+                view.Touch -= OnTouch;                              // Remove
+            }
+
+
+            if (viewDictionary.ContainsKey(view))
+            {
+                viewDictionary.Remove(view);
+     //           view.Touch -= OnTouch;
             }
         }
 
         void OnTouch(object sender, Android.Views.View.TouchEventArgs args)
         {
-            //         View senderView = sender as Android.Views.View;
+            Android.Views.View senderView = sender as Android.Views.View;
 
             MotionEvent motionEvent = args.Event;
 
@@ -87,6 +107,9 @@ namespace TouchTracking.Droid
                 case MotionEventActions.PointerDown:
                     onTouchAction(Element, new TouchActionEventArgs(id, TouchActionType.Entered, point, true));
                     onTouchAction(Element, new TouchActionEventArgs(id, TouchActionType.Pressed, point, true));
+
+                    // Add the TouchInfo to the idToInfoDictonary
+                    idToInfoDictionary.Add(id, viewDictionary[senderView]);
                     break;
 
                 case MotionEventActions.Move:
@@ -94,25 +117,128 @@ namespace TouchTracking.Droid
                     for (pointerIndex = 0; pointerIndex < motionEvent.PointerCount; pointerIndex++)
                     {
                         id = motionEvent.GetPointerId(pointerIndex);
+
                         point = new Point(fromPixels(motionEvent.GetX(pointerIndex)),
                                           fromPixels(motionEvent.GetY(pointerIndex)));
 
-                        onTouchAction(Element, new TouchActionEventArgs(id, TouchActionType.Moved, point, true));
+                        if (capture)
+                        {
+                            onTouchAction(Element, new TouchActionEventArgs(id, TouchActionType.Moved, point, true));
+                        }
+                        else
+                        {
+                            // Get the screen location of the Android View generating this event
+                            int[] screenLocation = new int[2];
+                            senderView.GetLocationOnScreen(screenLocation);
+                            Point pointerScreenCoordinates = new Point(screenLocation[0] + point.X,
+                                                                       screenLocation[1] + point.Y);
+
+
+                            Android.Views.View viewOver = null;
+
+                            // Need to replace this...
+                            TouchInfo touchInfoOver = null;
+
+                            // ... with this, and then determine which one is one top
+                            List<TouchInfo> touchInfosOver = new List<TouchInfo>();
+
+                            // Enumerate Android Views with this effect attached
+                            foreach (Android.Views.View view in viewDictionary.Keys)
+                            {
+                                // Get screen location of this view (use array created earlier)
+                                view.GetLocationOnScreen(screenLocation);
+
+                                // Determine if the touch is over this view
+                                if (pointerScreenCoordinates.X >= screenLocation[0] &&
+                                    pointerScreenCoordinates.X < screenLocation[0] + view.Width &&
+                                    pointerScreenCoordinates.Y >= screenLocation[1] &&
+                                    pointerScreenCoordinates.Y < screenLocation[1] + view.Height)
+                                {
+                                    viewOver = view;
+
+                                    if (viewDictionary.ContainsKey(viewOver))
+                                    {
+                                        touchInfoOver = viewDictionary[viewOver];
+                                        touchInfosOver.Add(touchInfoOver);
+                                    }
+                                }
+                            }
+
+                            // Switch touch event ids from one element to another.
+                            // Either element could be null
+                            if (touchInfoOver != idToInfoDictionary[id])
+                            {
+                                if (idToInfoDictionary[id] != null)
+                                {
+                                    // TODO: NEED TO CHANGE POINT!!!!!!
+
+                                    idToInfoDictionary[id].OnTouchAction(idToInfoDictionary[id].Element,
+                                        new TouchActionEventArgs(id, TouchActionType.Exited, point, true));
+                                }
+
+                                if (touchInfoOver != null)
+                                {
+                                    // TODO: NEED TO CHANGE POINT!!!!!!
+
+                                    touchInfoOver.OnTouchAction(touchInfoOver.Element,
+                                        new TouchActionEventArgs(id, TouchActionType.Entered, point, true));
+                                }
+
+                                // Save the new elementOver in the dictionary
+                                idToInfoDictionary[id] = touchInfoOver;
+                            }
+
+                            if (touchInfoOver != null)
+                            {
+                                touchInfoOver.OnTouchAction(touchInfoOver.Element,
+                                    new TouchActionEventArgs(id, TouchActionType.Moved, point, true));
+                            }
+                        }
                     }
                     break;
 
 
                 case MotionEventActions.Up:
                 case MotionEventActions.Pointer1Up:
-                    onTouchAction(Element, new TouchActionEventArgs(id, TouchActionType.Released, point, true));
-                    onTouchAction(Element, new TouchActionEventArgs(id, TouchActionType.Exited, point, true));
+                    if (capture)
+                    {
+                        onTouchAction(Element, new TouchActionEventArgs(id, TouchActionType.Released, point, true));
+                        onTouchAction(Element, new TouchActionEventArgs(id, TouchActionType.Exited, point, true));
+                    }
+                    else
+                    {
+                        if (idToInfoDictionary[id] != null)
+                        {
+                            // TODO: Need to convert point!
+
+                            // Can share code with capture OnTouchAction and Element
+
+                            TouchInfo touchInfo = idToInfoDictionary[id];
+                            touchInfo.OnTouchAction(touchInfo.Element, new TouchActionEventArgs(id, TouchActionType.Released, point, true));
+                            touchInfo.OnTouchAction(touchInfo.Element, new TouchActionEventArgs(id, TouchActionType.Exited, point, true));
+                        }
+                    }
+                    idToInfoDictionary.Remove(id);
                     break;
 
                 case MotionEventActions.Cancel:
-                    onTouchAction(Element, new TouchActionEventArgs(id, TouchActionType.Cancelled, point, true));
+                    if (capture)
+                    {
+                        onTouchAction(Element, new TouchActionEventArgs(id, TouchActionType.Cancelled, point, true));
+                    }
+                    else
+                    {
+                        if (idToInfoDictionary[id] != null)
+                        {
+                            // TODO: Need to convert point!
+
+                            TouchInfo touchInfo = idToInfoDictionary[id];
+                            touchInfo.OnTouchAction(touchInfo.Element, new TouchActionEventArgs(id, TouchActionType.Cancelled, point, true));
 
 
-
+                        }
+                    }
+                    idToInfoDictionary.Remove(id);
                     break;
             }
         }
