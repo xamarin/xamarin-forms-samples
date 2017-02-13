@@ -6,6 +6,14 @@
     <TableView Intent="Menu">
         <TableRoot>
             <TableSection Title="Touch Tracking Demos">
+                
+                
+                <TextCell Text="Tracking Test"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:TrackingTest}" />
+
+
+
                 <TextCell Text="Silent Keyboard"
                           Detail="Tap or sweep the music piano keys"
                           Command="{Binding NavigateCommand}"

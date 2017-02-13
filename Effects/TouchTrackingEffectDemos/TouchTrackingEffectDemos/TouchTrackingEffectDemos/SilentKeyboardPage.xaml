@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TouchTrackingEffectDemos"
-             x:Class="TouchTrackingEffectDemos.SilentKeyboardPage">
+             x:Class="TouchTrackingEffectDemos.SilentKeyboardPage"
+             Title="Silent Keyboard">
     <AbsoluteLayout x:Name="absoluteLayout"
                     BackgroundColor="Gray"
                     Padding="10, 20">

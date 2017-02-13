@@ -53,6 +53,9 @@
     <Compile Include="TouchActionEventHandler.cs" />
     <Compile Include="TouchActionType.cs" />
     <Compile Include="TouchEffect.cs" />
+    <Compile Include="TrackingTest.xaml.cs">
+      <DependentUpon>TrackingTest.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WhiteKey.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="SilentKeyboardPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TrackingTest.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
