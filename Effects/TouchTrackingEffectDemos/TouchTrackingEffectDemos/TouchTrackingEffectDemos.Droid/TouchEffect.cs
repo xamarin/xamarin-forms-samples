@@ -39,17 +39,10 @@ namespace TouchTracking.Droid
         // 
         static Dictionary<Android.Views.View, TouchInfo> viewDictionary = new Dictionary<Android.Views.View, TouchInfo>();
 
-
         static Dictionary<int, TouchInfo> idToInfoDictionary = new Dictionary<int, TouchInfo>();
-       
-
 
         protected override void OnAttached()
         {
-            System.Diagnostics.Debug.WriteLine("OnAttached: " + viewDictionary.Count);
-
-
-
             // Get the Android View corresponding to the Element that the effect is attached to
             view = Control == null ? Container : Control;
 
@@ -60,17 +53,7 @@ namespace TouchTracking.Droid
 
             if (touchEffect != null && view != null)
             {
-
                 viewDictionary.Add(view, new TouchInfo(Element, view, touchEffect.OnTouchAction));
-
-
-                
-
-                // Save the method to call on touch events
-//                onTouchAction = effect.OnTouchAction;                   // Remove
-
-                // Save setting of Capture property
-    //            capture = touchEffect.Capture;                               // Move to TouchInfo??? NO, NO, NO. Need to move Capture access to Down handler, if possible
 
                 // Save fromPixels function
                 fromPixels = view.Context.FromPixels;
@@ -82,15 +65,6 @@ namespace TouchTracking.Droid
 
         protected override void OnDetached()
         {
-            System.Diagnostics.Debug.WriteLine("OnDetached: " + viewDictionary.Count);
-
-
-            //          if (onTouchAction != null)
-            {
-                //           view.Touch -= OnTouch;                              // Remove
-            }
-
-
             if (viewDictionary.ContainsKey(view))
             {
                 viewDictionary.Remove(view);
@@ -122,10 +96,7 @@ namespace TouchTracking.Droid
             {
                 case MotionEventActions.Down:
                 case MotionEventActions.PointerDown:
-                    // Trigger the Entered and Pressed events
-  //                  touchInfo.OnTouchAction(touchInfo.Element, 
-  //                      new TouchActionEventArgs(id, TouchActionType.Entered, point, true));
-
+                    // Trigger the Pressed events
                     touchInfo.OnTouchAction(touchInfo.FormsElement, 
                         new TouchActionEventArgs(id, TouchActionType.Pressed, point, true));
 
@@ -205,8 +176,6 @@ namespace TouchTracking.Droid
                             touchInfo = idToInfoDictionary[id];
                             touchInfo.OnTouchAction(touchInfo.FormsElement, 
                                 new TouchActionEventArgs(id, TouchActionType.Cancelled, point, true));
-
-
                         }
                     }
                     idToInfoDictionary.Remove(id);
@@ -235,6 +204,7 @@ namespace TouchTracking.Droid
             // ... with this, and then determine which one is one top
             List<TouchInfo> touchInfosOver = new List<TouchInfo>();
 
+            // Or, does is last one always on top because they're in creation order?
 
 
             // Enumerate Android Views with this effect attached
@@ -306,19 +276,8 @@ namespace TouchTracking.Droid
 
             if (viewUnderPointer != null)           // Change this to touchInfoOver, but renamed.
             {
-                //      viewUnderPointer.GetLocationOnScreen(screenLocation);
-                //       double x = fromPixels(fingerScreenCoordinates.X - screenLocation[0]);
-                //     double y = fromPixels(fingerScreenCoordinates.Y - screenLocation[1]);
-                //   point = new Point(x, y);
-
                 point = GetViewRelativePoint(viewUnderPointer, fingerScreenCoordinates);
             }
-
-
-
-
-
-
 
             return touchInfoOver;
         }
