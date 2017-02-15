@@ -37,6 +37,10 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="BlackKey.cs" />
+    <Compile Include="EllipseDrawingFigure.cs" />
+    <Compile Include="EllipseDrawingPage.xaml.cs">
+      <DependentUpon>EllipseDrawingPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FingerPaintPolyline.cs" />
     <Compile Include="FingerPaintPage.xaml.cs">
       <DependentUpon>FingerPaintPage.xaml</DependentUpon>
@@ -104,6 +108,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TrackingTest.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EllipseDrawingPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

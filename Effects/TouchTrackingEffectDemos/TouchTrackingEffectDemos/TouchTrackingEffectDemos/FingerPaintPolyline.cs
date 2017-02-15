@@ -13,10 +13,6 @@ namespace TouchTrackingEffectDemos
 
         public SKPath Path { set; get; }
 
-
-        // TODO: Remove!
-        public Point PreviousPoint { set; get; }
-
         public Color StrokeColor { set; get; }
 
         public float StrokeWidth { set; get; }

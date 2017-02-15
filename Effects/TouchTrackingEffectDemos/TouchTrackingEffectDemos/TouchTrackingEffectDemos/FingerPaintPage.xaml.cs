@@ -37,20 +37,17 @@ namespace TouchTrackingEffectDemos
 
         void OnTouchEffectTouchAction(object sender, TouchActionEventArgs args)
         {
-        //    SKCanvasView canvasView = sender as SKCanvasView;
-
-
-
-            TouchEffect touchEffect = (TouchEffect)canvasViewGrid.Effects.First(e => e is TouchEffect);
-
             switch (args.Type)
             {
-                case TouchActionType.Entered:
+     //           case TouchActionType.Entered:
                 case TouchActionType.Pressed:
                     if (args.IsInContact)
                     {
                         if (!inProgressPolylines.ContainsKey(args.Id))
                         {
+                            // Set the Capture property to true
+                            TouchEffect touchEffect =
+                                (TouchEffect)canvasViewGrid.Effects.First(e => e is TouchEffect);
                             touchEffect.Capture = true;
 
                             Color strokeColor = (Color)typeof(Color).GetRuntimeField(colorPicker.Items[colorPicker.SelectedIndex]).GetValue(null);
@@ -79,7 +76,7 @@ namespace TouchTrackingEffectDemos
                     break;
 
                 case TouchActionType.Released:
-                case TouchActionType.Exited:
+//                case TouchActionType.Exited:
                     if (inProgressPolylines.ContainsKey(args.Id))
                     {
                         completedPolylines.Add(inProgressPolylines[args.Id]);

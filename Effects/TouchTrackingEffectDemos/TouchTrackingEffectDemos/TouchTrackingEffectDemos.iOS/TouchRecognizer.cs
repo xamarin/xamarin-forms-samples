@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Xamarin.Forms;
-using Xamarin.Forms.Platform.iOS;
 
 using CoreGraphics;
 using Foundation;
@@ -13,10 +12,9 @@ namespace TouchTracking.iOS
 {
     class TouchRecognizer : UIGestureRecognizer
     {
-        Element formsElement;
-        UIView uiView;
+        Element element;        // Forms element for firing events
+        UIView view;            // iOS UIView 
         TouchTracking.TouchEffect touchEffect;
-        Action<Element, TouchActionEventArgs> onTouchAction;
         bool capture;
 
         static Dictionary<UIView, TouchRecognizer> viewDictionary = new Dictionary<UIView, TouchRecognizer>();
@@ -25,17 +23,16 @@ namespace TouchTracking.iOS
 
         public TouchRecognizer(Element element, UIView view, TouchTracking.TouchEffect touchEffect)
         {
-            this.formsElement = element;
-            this.uiView = view;
+            this.element = element;
+            this.view = view;
             this.touchEffect = touchEffect;
-            onTouchAction = touchEffect.OnTouchAction;
 
-            viewDictionary.Add(uiView, this);
+            viewDictionary.Add(view, this);
         }
 
         public void Detach()
         {
-            viewDictionary.Remove(uiView);
+            viewDictionary.Remove(view);
         }
 
         // touches = touches of interest; evt = all touches of type UITouch
@@ -46,11 +43,7 @@ namespace TouchTracking.iOS
             foreach (UITouch touch in touches.Cast<UITouch>())
             {
                 long id = touch.Handle.ToInt64();
-                Point point = ConvertToPoint(touch.LocationInView(View));
-
-                // touch.Type = UITouchType.Indirect;
-                onTouchAction(formsElement, 
-                    new TouchActionEventArgs(id, TouchActionType.Pressed, point, true));
+                FireEvent(this, id, TouchActionType.Pressed, touch);
 
                 idToTouchDictionary.Add(id, this);
             }
@@ -69,60 +62,19 @@ namespace TouchTracking.iOS
 
                 if (capture)
                 {
-                    onTouchAction(formsElement, new TouchActionEventArgs(id,
-                                                                         TouchActionType.Moved,
-                                                                         ConvertToPoint(touch.LocationInView(View)),
-                                                                         true));
+                    FireEvent(this, id, TouchActionType.Moved, touch);
                 }
                 else
                 {
-
-                    /*
-                                   //     void CheckForBoundaryHop(UITouch touch)
-
-                                        // TODO: Might require converting to a List for multiple hits
-                                        TouchRecognizer recognizerHit = null;
-
-                                        foreach (UIView view in viewDictionary.Keys)
-                                        {
-                                            CGPoint location = touch.LocationInView(view);
-
-                                            if (new CGRect(new CGPoint(), view.Frame.Size).Contains(location))
-                                            {
-                                                recognizerHit = viewDictionary[view];
-                                            }
-                                        }
-
-                                        if (recognizerHit != idToTouchDictionary[id])
-                                        {
-                                            if (idToTouchDictionary[id] != null)
-                                            {
-                                                FireEvent(idToTouchDictionary[id], id, TouchActionType.Exited, touch);
-                                            }
-
-                                            if (recognizerHit != null)
-                                            {
-                                                FireEvent(recognizerHit, id, TouchActionType.Entered, touch);
-                                            }
-
-                                            idToTouchDictionary[id] = recognizerHit;
-                                        }
-
-                        */
-
                     CheckForBoundaryHop(touch);
 
-
-
-
-                    if (idToTouchDictionary[id] != null) // recognizerHit != null)      // or idToTouchDictionary[id] to move stuff to other method
+                    if (idToTouchDictionary[id] != null)
                     {
-                        FireEvent(idToTouchDictionary[id] /* recognizerHit */ , id, TouchActionType.Moved, touch);
+                        FireEvent(idToTouchDictionary[id], id, TouchActionType.Moved, touch);
                     }
                 }
             }
         }
-
 
         public override void TouchesEnded(NSSet touches, UIEvent evt)
         {
@@ -130,14 +82,22 @@ namespace TouchTracking.iOS
 
             foreach (UITouch touch in touches.Cast<UITouch>())
             {
-                //    int id = idDictionary[touch.Handle];
-                Point point = ConvertToPoint(touch.LocationInView(View));
+                long id = touch.Handle.ToInt64();
 
-                // TK: Or should isInContact be false for these?????
-                onTouchAction(formsElement, new TouchActionEventArgs(touch.Handle.ToInt64(), TouchActionType.Released, point, true));
-            //    onTouchAction(formsElement, new TouchActionEventArgs(touch.Handle.ToInt64(), TouchActionType.Exited, point, true));
+                if (capture)
+                {
+                    FireEvent(this, id, TouchActionType.Released, touch);
+                }
+                else
+                {
+                    CheckForBoundaryHop(touch);
 
-                //    idDictionary.Remove(touch.Handle);
+                    if (idToTouchDictionary[id] != null)
+                    {
+                        FireEvent(idToTouchDictionary[id], id, TouchActionType.Released, touch);
+                    }
+                }
+                idToTouchDictionary.Remove(id);
             }
         }
 
@@ -147,15 +107,19 @@ namespace TouchTracking.iOS
 
             foreach (UITouch touch in touches.Cast<UITouch>())
             {
-                //     int id = idDictionary[touch.Handle];
-                Point point = ConvertToPoint(touch.LocationInView(View));
+                long id = touch.Handle.ToInt64();
 
-                onTouchAction(formsElement, new TouchActionEventArgs(touch.Handle.ToInt64(), TouchActionType.Cancelled, point, true));
-
-                //    idDictionary.Remove(touch.Handle);
+                if (capture)
+                {
+                    FireEvent(this, id, TouchActionType.Cancelled, touch);
+                }
+                else if (idToTouchDictionary[id] != null)
+                {
+                    FireEvent(idToTouchDictionary[id], id, TouchActionType.Cancelled, touch);
+                }
+                idToTouchDictionary.Remove(id);
             }
         }
-
 
         void CheckForBoundaryHop(UITouch touch)
         {
@@ -173,40 +137,32 @@ namespace TouchTracking.iOS
                     recognizerHit = viewDictionary[view];
                 }
             }
-
             if (recognizerHit != idToTouchDictionary[id])
             {
                 if (idToTouchDictionary[id] != null)
                 {
                     FireEvent(idToTouchDictionary[id], id, TouchActionType.Exited, touch);
                 }
-
                 if (recognizerHit != null)
                 {
                     FireEvent(recognizerHit, id, TouchActionType.Entered, touch);
                 }
-
                 idToTouchDictionary[id] = recognizerHit;
             }
         }
 
-
-
-
-
-
         void FireEvent(TouchRecognizer recognizer, long id, TouchActionType actionType, UITouch touch)
         {
-            Element formsElement = recognizer.formsElement;
-            CGPoint location = touch.LocationInView(recognizer.uiView);
+            // Convert touch location to Xamarin.Forms Point value
+            CGPoint cgPoint = touch.LocationInView(recognizer.View);
+            Point xfPoint = new Point(cgPoint.X, cgPoint.Y);
 
-            recognizer.onTouchAction(recognizer.formsElement,
-                new TouchActionEventArgs(id, actionType, ConvertToPoint(location), true));
-        }
+            // Get the method to call for firing events
+            Action<Element, TouchActionEventArgs> onTouchAction = recognizer.touchEffect.OnTouchAction;
 
-        Point ConvertToPoint(CGPoint cgPoint)
-        {
-            return new Point(cgPoint.X, cgPoint.Y);
+            // Call that method
+            onTouchAction(recognizer.element,
+                new TouchActionEventArgs(id, actionType, xfPoint, true));
         }
     }
 }

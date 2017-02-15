@@ -62,24 +62,21 @@
                 VerticalOptions="Center"
                 Clicked="OnClearButtonClicked" />
 
-        <Grid     x:Name="canvasViewGrid"                       Grid.Row="1"
-                           Grid.Column="0"
-                           Grid.ColumnSpan="3"
-                           BackgroundColor="White"
-                                         
->
+        <!-- Enclose SKCanvasView in single-cell Grid. 
+                Otherwise, iOS won't get the touch events. -->
+        
+        <Grid x:Name="canvasViewGrid"
+              Grid.Row="1"
+              Grid.Column="0"
+              Grid.ColumnSpan="3"
+              BackgroundColor="White">
 
-        <skia:SKCanvasView x:Name="canvasView"
-                           PaintSurface="OnCanvasViewPaintSurface">
-        </skia:SKCanvasView>
-
-
+            <skia:SKCanvasView x:Name="canvasView"
+                               PaintSurface="OnCanvasViewPaintSurface" />
             <Grid.Effects>
                 <tt:TouchEffect Capture="True"
                                 TouchAction="OnTouchEffectTouchAction" />
             </Grid.Effects>
-
-
         </Grid>
     </Grid>    
 </ContentPage>

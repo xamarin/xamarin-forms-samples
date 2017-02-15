@@ -26,6 +26,7 @@ namespace TouchTracking.iOS
 
             if (effect != null && view != null)
             {
+                // Create a TouchRecognizer for this UIView
                 touchRecognizer = new TouchRecognizer(Element, view, effect); 
                 view.AddGestureRecognizer(touchRecognizer);
             }
@@ -35,7 +36,10 @@ namespace TouchTracking.iOS
         {
             if (touchRecognizer != null)
             {
+                // Clean up the TouchRecognizer object
                 touchRecognizer.Detach();
+
+                // Remove the TouchRecognizer from the UIView
                 view.RemoveGestureRecognizer(touchRecognizer);
             }
         }

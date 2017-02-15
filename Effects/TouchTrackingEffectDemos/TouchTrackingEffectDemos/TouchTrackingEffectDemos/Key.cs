@@ -34,7 +34,7 @@ namespace TouchTrackingEffectDemos
 
         void OnTouchAction(object sender, TouchActionEventArgs args)
         {
-            System.Diagnostics.Debug.WriteLine("Key {0} {1} {2}", KeyNumber, args.Type, args.Id);
+    //        System.Diagnostics.Debug.WriteLine("Key {0} {1} {2}", KeyNumber, args.Type, args.Id);
 
             switch (args.Type)
             {

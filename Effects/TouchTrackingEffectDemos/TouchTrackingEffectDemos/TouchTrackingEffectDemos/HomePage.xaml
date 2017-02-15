@@ -3,7 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TouchTrackingEffectDemos"
              x:Class="TouchTrackingEffectDemos.HomePage">
-    <TableView Intent="Menu">
+    <StackLayout>
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Button">
+                    <Setter Property="HorizontalOptions" Value="Center" />
+                    <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                </Style>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+
+        <Button Text="Ellipse Drawing"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:EllipseDrawingPage}" />
+
+        <Button Text="Finger Paint"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:FingerPaintPage}" />
+        
+        <Button Text="Tracking Test"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:TrackingTest}" />
+        
+        <Button Text="Silent Keyboard"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:SilentKeyboardPage}" />
+
+        <!--<TableView Intent="Menu">
         <TableRoot>
             <TableSection Title="Touch Tracking Demos">
                 
@@ -24,12 +50,9 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:FingerPaintPage}" />
 
-                <!--<TextCell Text="Finger Skia Paint"
-                          Detail="Draw on the screen with your fingers"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:FingerSkiaPaintPage}" />-->
 
             </TableSection>            
         </TableRoot>
-    </TableView>
+    </TableView>-->
+    </StackLayout>
 </ContentPage>

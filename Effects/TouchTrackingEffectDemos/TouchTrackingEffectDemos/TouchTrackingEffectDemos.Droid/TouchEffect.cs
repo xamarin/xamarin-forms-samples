@@ -15,7 +15,9 @@ namespace TouchTracking.Droid
     public class TouchEffect : PlatformEffect
     {
         Android.Views.View view;
-  //      Action<Element, TouchActionEventArgs> onTouchAction;
+        Element formsElement;
+        TouchTracking.TouchEffect touchEffect;
+   //     Action<Element, TouchActionEventArgs> onTouchAction;
         bool capture;
         Func<double, double> fromPixels;
 
@@ -37,23 +39,33 @@ namespace TouchTracking.Droid
         };
 
         // 
-        static Dictionary<Android.Views.View, TouchInfo> viewDictionary = new Dictionary<Android.Views.View, TouchInfo>();
+        static Dictionary<Android.Views.View, TouchInfo> xviewDictionary = new Dictionary<Android.Views.View, TouchInfo>();
 
-        static Dictionary<int, TouchInfo> idToInfoDictionary = new Dictionary<int, TouchInfo>();
+        static Dictionary<int, TouchInfo> xidToInfoDictionary = new Dictionary<int, TouchInfo>();
+
+        static Dictionary<Android.Views.View, TouchEffect> viewDictionary = new Dictionary<Android.Views.View, TouchEffect>();
+
+        static Dictionary<int, TouchEffect> idToEffectDictionary = new Dictionary<int, TouchEffect>();
 
         protected override void OnAttached()
         {
             // Get the Android View corresponding to the Element that the effect is attached to
             view = Control == null ? Container : Control;
 
-            // Get access to the TouchEffect class in the PCL
+            // Get access to the TouchEffect class in the PCL -- can save directly to field
             TouchTracking.TouchEffect touchEffect = 
                 (TouchTracking.TouchEffect)Element.Effects.
                     FirstOrDefault(e => e is TouchTracking.TouchEffect);
 
             if (touchEffect != null && view != null)
             {
-                viewDictionary.Add(view, new TouchInfo(Element, view, touchEffect.OnTouchAction));
+                xviewDictionary.Add(view, new TouchInfo(Element, view, touchEffect.OnTouchAction));
+
+                formsElement = Element;
+
+                this.touchEffect = touchEffect;
+
+            //    onTouchAction = touchEffect.OnTouchAction
 
                 // Save fromPixels function
                 fromPixels = view.Context.FromPixels;
@@ -65,9 +77,9 @@ namespace TouchTracking.Droid
 
         protected override void OnDetached()
         {
-            if (viewDictionary.ContainsKey(view))
+            if (xviewDictionary.ContainsKey(view))
             {
-                viewDictionary.Remove(view);
+                xviewDictionary.Remove(view);
                 view.Touch -= OnTouch;
             }
         }
@@ -85,7 +97,13 @@ namespace TouchTracking.Droid
             int id = motionEvent.GetPointerId(pointerIndex);
 
             // Get the TouchInfo for this View
-            TouchInfo touchInfo = viewDictionary[senderView];
+            TouchInfo touchInfo = xviewDictionary[senderView];
+
+
+            // Not needed: This is the touchEffect saved as a field!
+        //    TouchEffect touchEffect = viewDictionary[senderView];
+
+
 
             // Convert the point to device-independent coordinates
             Point point = new Point(fromPixels(motionEvent.GetX(pointerIndex)),
@@ -97,16 +115,22 @@ namespace TouchTracking.Droid
                 case MotionEventActions.Down:
                 case MotionEventActions.PointerDown:
                     // Trigger the Pressed events
-                    touchInfo.OnTouchAction(touchInfo.FormsElement, 
+        //            touchInfo.OnTouchAction(touchInfo.FormsElement, 
+        //                new TouchActionEventArgs(id, TouchActionType.Pressed, point, true));
+
+                    touchEffect.OnTouchAction(formsElement,
                         new TouchActionEventArgs(id, TouchActionType.Pressed, point, true));
 
+
                     // Add the TouchInfo to the idToInfoDictonary
-                    idToInfoDictionary.Add(id, touchInfo);
+                    xidToInfoDictionary.Add(id, touchInfo);
+
+                    idToEffectDictionary.Add(id, this);
 
                     // Get access to the TouchEffect class in the PCL
-                    TouchTracking.TouchEffect touchEffect = 
-                        (TouchTracking.TouchEffect)Element.Effects.
-                            FirstOrDefault(e => e is TouchTracking.TouchEffect);
+        //            TouchTracking.TouchEffect touchEffect = 
+           //             (TouchTracking.TouchEffect)Element.Effects.
+            //                FirstOrDefault(e => e is TouchTracking.TouchEffect);
 
                     // Get the Capture property setting from the effect
                     capture = touchEffect.Capture;
@@ -156,7 +180,8 @@ namespace TouchTracking.Droid
                                 new TouchActionEventArgs(id, TouchActionType.Released, point, true));
                         }
                     }
-                    idToInfoDictionary.Remove(id);
+                    xidToInfoDictionary.Remove(id);
+                    idToEffectDictionary.Remove(id);
                     break;
 
                 case MotionEventActions.Cancel:
@@ -167,18 +192,19 @@ namespace TouchTracking.Droid
                     }
                     else
                     {
-                        if (idToInfoDictionary[id] != null)
+                        if (xidToInfoDictionary[id] != null)
                         {
                             // TODO: Need to convert point!
 
                             // TODO: Is this right?
 
-                            touchInfo = idToInfoDictionary[id];
+                            touchInfo = xidToInfoDictionary[id];
                             touchInfo.OnTouchAction(touchInfo.FormsElement, 
                                 new TouchActionEventArgs(id, TouchActionType.Cancelled, point, true));
                         }
                     }
-                    idToInfoDictionary.Remove(id);
+                    xidToInfoDictionary.Remove(id);
+                    idToEffectDictionary.Remove(id);
                     break;
             }
         }
@@ -208,7 +234,7 @@ namespace TouchTracking.Droid
 
 
             // Enumerate Android Views with this effect attached
-            foreach (Android.Views.View view in viewDictionary.Keys)
+            foreach (Android.Views.View view in xviewDictionary.Keys)
             {
                 // Get pixel screen location of this view (use array created earlier)
                 try
@@ -229,9 +255,9 @@ namespace TouchTracking.Droid
                 {
                     viewUnderPointer = view;
 
-                    if (viewDictionary.ContainsKey(viewUnderPointer))
+                    if (xviewDictionary.ContainsKey(viewUnderPointer))
                     {
-                        touchInfoOver = viewDictionary[viewUnderPointer];
+                        touchInfoOver = xviewDictionary[viewUnderPointer];
                         touchInfosOver.Add(touchInfoOver);
                     }
                 }
@@ -244,17 +270,17 @@ namespace TouchTracking.Droid
             int id = motionEvent.GetPointerId(pointerIndex);
 
 
-            if (touchInfoOver != idToInfoDictionary[id])
+            if (touchInfoOver != xidToInfoDictionary[id])
             {
-                if (idToInfoDictionary[id] != null)
+                if (xidToInfoDictionary[id] != null)
                 {
                     // TODO: Exited point is (0, 0) if moving outside View
                     // ---------------------------------------------------
                     // Need to get Point in relative to idToInfoDictionary[id]
 
-                    Point pt = GetViewRelativePoint(idToInfoDictionary[id].AndroidView, fingerScreenCoordinates);
+                    Point pt = GetViewRelativePoint(xidToInfoDictionary[id].AndroidView, fingerScreenCoordinates);
 
-                    idToInfoDictionary[id].OnTouchAction(idToInfoDictionary[id].FormsElement,
+                    xidToInfoDictionary[id].OnTouchAction(xidToInfoDictionary[id].FormsElement,
                         new TouchActionEventArgs(id, TouchActionType.Exited, pt, true));
                 }
 
@@ -267,7 +293,7 @@ namespace TouchTracking.Droid
                 }
 
                 // Save the new elementOver in the dictionary
-                idToInfoDictionary[id] = touchInfoOver;
+                xidToInfoDictionary[id] = touchInfoOver;
             }
 
 
