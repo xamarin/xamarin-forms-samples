@@ -122,7 +122,7 @@ namespace TouchTrackingEffectDemos
                     {
                         EllipseDrawingFigure figure = inProgressFigures[args.Id];
                         figure.EndPoint = ConvertToPixel(args.Location);
-                        figure.Rectangle = figure.InterimRectangle;
+                 //       figure.Rectangle = figure.InterimRectangle;
                         completedFigures.Add(figure);
                         inProgressFigures.Remove(args.Id);
                     }
@@ -153,11 +153,10 @@ namespace TouchTrackingEffectDemos
                 paint.Color = figure.Color;
                 canvas.DrawOval(figure.Rectangle, paint);
             }
-
             foreach (EllipseDrawingFigure figure in inProgressFigures.Values)
             {
                 paint.Color = figure.Color;
-                canvas.DrawOval(figure.InterimRectangle, paint);
+                canvas.DrawOval(figure.Rectangle, paint);
             }
         }
 

@@ -6,26 +6,37 @@ namespace TouchTrackingEffectDemos
 {
     class EllipseDrawingFigure
     {
+        SKPoint pt1, pt2;
+
         public EllipseDrawingFigure()
         {
         }
 
         public SKColor Color { set; get; }
 
-        public SKPoint StartPoint { set; get; }
-
-        public SKPoint EndPoint { set; get; }
-
-        public SKRect InterimRectangle
+        public SKPoint StartPoint
         {
-            get
+            set
             {
-                return new SKRect(StartPoint.X, StartPoint.Y, 
-                                  EndPoint.X, EndPoint.Y).Standardized;
+                pt1 = value;
+                MakeRectangle();
+            } 
+        }
+
+        public SKPoint EndPoint
+        {
+            set
+            {
+                pt2 = value;
+                MakeRectangle();
             }
         }
 
-        // Only valid after the ellipse has been completed
+        void MakeRectangle()
+        {
+            Rectangle = new SKRect(pt1.X, pt1.Y, pt2.X, pt2.Y).Standardized;
+        }
+
         public SKRect Rectangle { set; get; }
 
         // For dragging operations
@@ -36,20 +47,8 @@ namespace TouchTrackingEffectDemos
         {
             SKRect rect = Rectangle;
 
-            // Eliminate the obvious
-            if (!rect.Contains(pt))
-                return false;
-
-            // Unlikely but the tests must be done
-            if (pt.X == rect.MidX || pt.Y == rect.MidY)
-                return true;
-
-            // Determine the angle from the center
-            double angle = Math.Atan2(pt.Y - rect.MidY, pt.X - rect.MidX);
-
-            // The basic test
-            return (Math.Abs(pt.X - rect.MidX) < Math.Abs(rect.Width / 2 * Math.Cos(angle)) &&
-                    Math.Abs(pt.Y - rect.MidY) < Math.Abs(rect.Height / 2 * Math.Sin(angle)));
+            return (Math.Pow(pt.X - rect.MidX, 2) / Math.Pow(rect.Width / 2, 2) +
+                    Math.Pow(pt.Y - rect.MidY, 2) / Math.Pow(rect.Height / 2, 2)) < 1;
         }
     }
 }
