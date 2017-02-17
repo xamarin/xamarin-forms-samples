@@ -13,6 +13,11 @@
             </ResourceDictionary>
         </StackLayout.Resources>
 
+
+        <Button Text="BoxView Dragging"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:BoxViewDraggingPage}" />
+
         <Button Text="Ellipse Drawing"
                 Command="{Binding NavigateCommand}"
                 CommandParameter="{x:Type local:EllipseDrawingPage}" />

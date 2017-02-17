@@ -37,6 +37,9 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="BlackKey.cs" />
+    <Compile Include="BoxViewDraggingPage.xaml.cs">
+      <DependentUpon>BoxViewDraggingPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EllipseDrawingFigure.cs" />
     <Compile Include="EllipseDrawingPage.xaml.cs">
       <DependentUpon>EllipseDrawingPage.xaml</DependentUpon>
@@ -114,6 +117,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="EllipseDrawingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BoxViewDraggingPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

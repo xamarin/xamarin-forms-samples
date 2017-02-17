@@ -21,9 +21,11 @@ namespace TouchTracking.Droid
         Func<double, double> fromPixels;
         int[] twoIntArray = new int[2];
 
-        static Dictionary<Android.Views.View, TouchEffect> viewDictionary = new Dictionary<Android.Views.View, TouchEffect>();
+        static Dictionary<Android.Views.View, TouchEffect> viewDictionary = 
+            new Dictionary<Android.Views.View, TouchEffect>();
 
-        static Dictionary<int, TouchEffect> idToEffectDictionary = new Dictionary<int, TouchEffect>();
+        static Dictionary<int, TouchEffect> idToEffectDictionary = 
+            new Dictionary<int, TouchEffect>();
 
         protected override void OnAttached()
         {
@@ -158,22 +160,16 @@ namespace TouchTracking.Droid
 
             foreach (Android.Views.View view in viewDictionary.Keys)
             {
-              //  Rectangle viewRect = new Rectangle();
-
                 // Get the view rectangle
                 try
                 {
                     view.GetLocationOnScreen(twoIntArray);
-
-//                    viewRect = GetViewRect(view); 
                 }
                 catch // System.ObjectDisposedException: Cannot access a disposed object.
                 {
                     continue;
                 }
                 Rectangle viewRect = new Rectangle(twoIntArray[0], twoIntArray[1], view.Width, view.Height);
-
-                //          Rectangle viewRect = GetViewRect(view);
 
                 if (viewRect.Contains(pointerLocation))
                 {
@@ -210,25 +206,5 @@ namespace TouchTracking.Droid
             onTouchAction(touchEffect.formsElement,
                 new TouchActionEventArgs(id, actionType, point, true));
         }
-/*
-        Rectangle GetViewRect(Android.Views.View view)
-        {
-            view.GetLocationOnScreen(twoIntArray);
-            return new Rectangle(twoIntArray[0], twoIntArray[1], view.Width, view.Height);
-        }
-*/
-/*
-        Point GetLocationInView(Android.Views.View view, Point pointerLocation)
-        {
-            view.GetLocationOnScreen(twoIntArray);
-            double x = pointerLocation.X - twoIntArray[0];
-            double y = pointerLocation.Y - twoIntArray[1];
-            return new Point(x, y);
-        }
-*/
- //       Point ConvertFromPixels(Point pt)
-  //      {
-    //        return new Point(fromPixels(pt.X), fromPixels(pt.Y));
-   //     }
     }
 }

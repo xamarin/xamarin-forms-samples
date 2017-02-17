@@ -14,8 +14,8 @@ namespace TouchTracking.UWP
     public class TouchEffect : PlatformEffect
     {
         FrameworkElement frameworkElement;
+        TouchTracking.TouchEffect effect;
         Action<Element, TouchActionEventArgs> onTouchAction;
-        bool capture;
 
         protected override void OnAttached()
         {
@@ -23,15 +23,13 @@ namespace TouchTracking.UWP
             frameworkElement = Control == null ? Container : Control;
 
             // Get access to the TouchEffect class in the PCL
-            TouchTracking.TouchEffect effect = (TouchTracking.TouchEffect)Element.Effects.FirstOrDefault(e => e is TouchTracking.TouchEffect);
+            effect = (TouchTracking.TouchEffect)Element.Effects.
+                        FirstOrDefault(e => e is TouchTracking.TouchEffect);
 
             if (effect != null && frameworkElement != null)
             {
                 // Save the method to call on touch events
                 onTouchAction = effect.OnTouchAction;
-
-                // Save setting of Capture property
-                capture = effect.Capture;
 
                 // Set event handlers on FrameworkElement
                 frameworkElement.PointerEntered += OnPointerEntered;
@@ -40,13 +38,8 @@ namespace TouchTracking.UWP
                 frameworkElement.PointerReleased += OnPointerReleased;
                 frameworkElement.PointerExited += OnPointerExited;
                 frameworkElement.PointerCanceled += OnPointerCancelled;
-
-                // TODO
-
-            //    frameworkElement.PointerCanceled
             }
         }
-
 
         protected override void OnDetached()
         {
@@ -59,10 +52,6 @@ namespace TouchTracking.UWP
                 frameworkElement.PointerReleased -= OnPointerReleased;
                 frameworkElement.PointerExited -= OnPointerEntered;
                 frameworkElement.PointerCanceled -= OnPointerCancelled;
-
-                // TODO
-
-                //           frameworkElement.PointerCanceled
             }
         }
 
@@ -75,7 +64,8 @@ namespace TouchTracking.UWP
         {
             CommonHandler(sender, TouchActionType.Pressed, args);
 
-            if (capture)
+            // Check setting of Capture property
+            if (effect.Capture)
             {
                 (sender as FrameworkElement).CapturePointer(args.Pointer);
             }
@@ -100,7 +90,6 @@ namespace TouchTracking.UWP
         {
             CommonHandler(sender, TouchActionType.Cancelled, args);
         }
-
 
         void CommonHandler(object sender, TouchActionType touchActionType, PointerRoutedEventArgs args)
         {

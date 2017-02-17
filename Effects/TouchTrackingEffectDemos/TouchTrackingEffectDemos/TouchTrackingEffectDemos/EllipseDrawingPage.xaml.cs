@@ -39,7 +39,6 @@ namespace TouchTrackingEffectDemos
         {
             switch (args.Type)
             {
-      //          case TouchActionType.Entered:
                 case TouchActionType.Pressed:
                     if (args.IsInContact)
                     {
@@ -112,7 +111,6 @@ namespace TouchTrackingEffectDemos
                     break;
 
                 case TouchActionType.Released:
-      //          case TouchActionType.Exited:
                     if (draggingFigures.ContainsKey(args.Id))
                     {
 
@@ -122,7 +120,6 @@ namespace TouchTrackingEffectDemos
                     {
                         EllipseDrawingFigure figure = inProgressFigures[args.Id];
                         figure.EndPoint = ConvertToPixel(args.Location);
-                 //       figure.Rectangle = figure.InterimRectangle;
                         completedFigures.Add(figure);
                         inProgressFigures.Remove(args.Id);
                     }

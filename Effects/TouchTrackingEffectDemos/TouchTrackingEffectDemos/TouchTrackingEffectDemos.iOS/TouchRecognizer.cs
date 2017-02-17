@@ -17,9 +17,11 @@ namespace TouchTracking.iOS
         TouchTracking.TouchEffect touchEffect;
         bool capture;
 
-        static Dictionary<UIView, TouchRecognizer> viewDictionary = new Dictionary<UIView, TouchRecognizer>();
+        static Dictionary<UIView, TouchRecognizer> viewDictionary = 
+            new Dictionary<UIView, TouchRecognizer>();
 
-        static Dictionary<long, TouchRecognizer> idToTouchDictionary = new Dictionary<long, TouchRecognizer>();
+        static Dictionary<long, TouchRecognizer> idToTouchDictionary = 
+            new Dictionary<long, TouchRecognizer>();
 
         public TouchRecognizer(Element element, UIView view, TouchTracking.TouchEffect touchEffect)
         {
