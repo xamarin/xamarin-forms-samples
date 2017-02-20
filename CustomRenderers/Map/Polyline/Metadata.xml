@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>8e59f6fd-5d1e-4e95-9b64-a09983c7d1ed</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Advanced</Level>
+	<Tags>User Interface, Custom Renderers, Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>This sample demonstrates how to add a polyline overlay to a map. A polyline overlay is a series of connected line segments that are typically used to show a route on a map, or form any shape that's required.</Brief>
+</SampleMetadata>
