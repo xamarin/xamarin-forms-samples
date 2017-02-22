@@ -66,7 +66,7 @@ namespace TouchTrackingEffectDemos
             {
                 case TouchActionType.Pressed:
                     // Don't allow a second touch on an already touched BoxView
-                    if (args.IsInContact && !dragDictionary.ContainsKey(boxView))
+                    if (!dragDictionary.ContainsKey(boxView))
                     {
                         dragDictionary.Add(boxView, new DragInfo(args.Id, args.Location));
 

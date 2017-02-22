@@ -35,13 +35,13 @@ namespace TouchTrackingEffectDemos
             canvasView.InvalidateSurface();
         }
 
-        void OnTouchEffectTouchAction(object sender, TouchActionEventArgs args)
+        void OnTouchEffectAction(object sender, TouchActionEventArgs args)
         {
             switch (args.Type)
             {
                 case TouchActionType.Pressed:
-                    if (args.IsInContact)
-                    {
+    //                if (args.IsInContact)
+    //                {
                         if (!inProgressPolylines.ContainsKey(args.Id))
                         {
                             // Set the Capture property to true
@@ -62,7 +62,7 @@ namespace TouchTrackingEffectDemos
                             inProgressPolylines.Add(args.Id, polyline);
                             canvasView.InvalidateSurface();
                         }
-                    }
+         //           }
                     break;
 
                 case TouchActionType.Moved:

@@ -9,12 +9,12 @@ namespace TouchTrackingEffectDemos
     {
         List<long> ids = new List<long>();
 
-        public event EventHandler Status;
+        public event EventHandler StatusChanged;
 
         public Key()
         {
             TouchEffect effect = new TouchEffect();
-            effect.TouchAction += OnTouchAction;
+            effect.TouchAction += OnTouchEffectAction;
             Effects.Add(effect);
         }
 
@@ -26,19 +26,19 @@ namespace TouchTrackingEffectDemos
 
         protected Color DownColor { set; get; }
 
-        void OnTouchAction(object sender, TouchActionEventArgs args)
+        void OnTouchEffectAction(object sender, TouchActionEventArgs args)
         {
             switch (args.Type)
             {
+                case TouchActionType.Pressed:
+                    AddToList(args.Id);
+                    break;
+
                 case TouchActionType.Entered:
                     if (args.IsInContact)
                     {
                         AddToList(args.Id);
                     }
-                    break;
-
-                case TouchActionType.Pressed:
-                    AddToList(args.Id);
                     break;
 
                 case TouchActionType.Moved:
@@ -73,9 +73,12 @@ namespace TouchTrackingEffectDemos
 
         void CheckList()
         {
-            IsPressed = ids.Count > 0;
-            Color = IsPressed ? DownColor : UpColor;
-            Status?.Invoke(this, EventArgs.Empty);
+            if (IsPressed != ids.Count > 0)
+            {
+                IsPressed = ids.Count > 0;
+                Color = IsPressed ? DownColor : UpColor;
+                StatusChanged?.Invoke(this, EventArgs.Empty);
+            }
         }
     }
 }

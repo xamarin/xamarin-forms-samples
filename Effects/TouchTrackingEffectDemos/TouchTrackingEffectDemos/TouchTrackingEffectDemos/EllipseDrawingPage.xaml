@@ -28,7 +28,7 @@
                                PaintSurface="OnCanvasViewPaintSurface" />
             <Grid.Effects>
                 <tt:TouchEffect Capture="True"
-                                TouchAction="OnTouchEffectTouchAction" />
+                                TouchAction="OnTouchEffectAction" />
             </Grid.Effects>
         </Grid>
 

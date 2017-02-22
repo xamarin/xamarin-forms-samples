@@ -45,7 +45,7 @@ namespace TouchTracking.iOS
             foreach (UITouch touch in touches.Cast<UITouch>())
             {
                 long id = touch.Handle.ToInt64();
-                FireEvent(this, id, TouchActionType.Pressed, touch);
+                FireEvent(this, id, TouchActionType.Pressed, touch, true);
 
                 idToTouchDictionary.Add(id, this);
             }
@@ -64,7 +64,7 @@ namespace TouchTracking.iOS
 
                 if (capture)
                 {
-                    FireEvent(this, id, TouchActionType.Moved, touch);
+                    FireEvent(this, id, TouchActionType.Moved, touch, true);
                 }
                 else
                 {
@@ -72,7 +72,7 @@ namespace TouchTracking.iOS
 
                     if (idToTouchDictionary[id] != null)
                     {
-                        FireEvent(idToTouchDictionary[id], id, TouchActionType.Moved, touch);
+                        FireEvent(idToTouchDictionary[id], id, TouchActionType.Moved, touch, true);
                     }
                 }
             }
@@ -88,7 +88,7 @@ namespace TouchTracking.iOS
 
                 if (capture)
                 {
-                    FireEvent(this, id, TouchActionType.Released, touch);
+                    FireEvent(this, id, TouchActionType.Released, touch, false);
                 }
                 else
                 {
@@ -96,7 +96,7 @@ namespace TouchTracking.iOS
 
                     if (idToTouchDictionary[id] != null)
                     {
-                        FireEvent(idToTouchDictionary[id], id, TouchActionType.Released, touch);
+                        FireEvent(idToTouchDictionary[id], id, TouchActionType.Released, touch, false);
                     }
                 }
                 idToTouchDictionary.Remove(id);
@@ -113,11 +113,11 @@ namespace TouchTracking.iOS
 
                 if (capture)
                 {
-                    FireEvent(this, id, TouchActionType.Cancelled, touch);
+                    FireEvent(this, id, TouchActionType.Cancelled, touch, false);
                 }
                 else if (idToTouchDictionary[id] != null)
                 {
-                    FireEvent(idToTouchDictionary[id], id, TouchActionType.Cancelled, touch);
+                    FireEvent(idToTouchDictionary[id], id, TouchActionType.Cancelled, touch, false);
                 }
                 idToTouchDictionary.Remove(id);
             }
@@ -143,17 +143,17 @@ namespace TouchTracking.iOS
             {
                 if (idToTouchDictionary[id] != null)
                 {
-                    FireEvent(idToTouchDictionary[id], id, TouchActionType.Exited, touch);
+                    FireEvent(idToTouchDictionary[id], id, TouchActionType.Exited, touch, true);
                 }
                 if (recognizerHit != null)
                 {
-                    FireEvent(recognizerHit, id, TouchActionType.Entered, touch);
+                    FireEvent(recognizerHit, id, TouchActionType.Entered, touch, true);
                 }
                 idToTouchDictionary[id] = recognizerHit;
             }
         }
 
-        void FireEvent(TouchRecognizer recognizer, long id, TouchActionType actionType, UITouch touch)
+        void FireEvent(TouchRecognizer recognizer, long id, TouchActionType actionType, UITouch touch, bool isInContact)
         {
             // Convert touch location to Xamarin.Forms Point value
             CGPoint cgPoint = touch.LocationInView(recognizer.View);
@@ -164,7 +164,7 @@ namespace TouchTracking.iOS
 
             // Call that method
             onTouchAction(recognizer.element,
-                new TouchActionEventArgs(id, actionType, xfPoint, true));
+                new TouchActionEventArgs(id, actionType, xfPoint, isInContact));
         }
     }
 }

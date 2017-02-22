@@ -85,7 +85,7 @@ namespace TouchTracking.Droid
             {
                 case MotionEventActions.Down:
                 case MotionEventActions.PointerDown:
-                    FireEvent(this, id, TouchActionType.Pressed, screenPointerCoords);
+                    FireEvent(this, id, TouchActionType.Pressed, screenPointerCoords, true);
 
                     idToEffectDictionary.Add(id, this);
 
@@ -105,7 +105,7 @@ namespace TouchTracking.Droid
                             screenPointerCoords = new Point(twoIntArray[0] + motionEvent.GetX(pointerIndex),
                                                             twoIntArray[1] + motionEvent.GetY(pointerIndex));
 
-                            FireEvent(this, id, TouchActionType.Moved, screenPointerCoords);
+                            FireEvent(this, id, TouchActionType.Moved, screenPointerCoords, true);
                         }
                         else
                         {
@@ -113,7 +113,7 @@ namespace TouchTracking.Droid
 
                             if (idToEffectDictionary[id] != null)
                             {
-                                FireEvent(idToEffectDictionary[id], id, TouchActionType.Moved, screenPointerCoords);
+                                FireEvent(idToEffectDictionary[id], id, TouchActionType.Moved, screenPointerCoords, true);
                             }
                         }
                     }
@@ -123,7 +123,7 @@ namespace TouchTracking.Droid
                 case MotionEventActions.Pointer1Up:
                     if (capture)
                     {
-                        FireEvent(this, id, TouchActionType.Released, screenPointerCoords);
+                        FireEvent(this, id, TouchActionType.Released, screenPointerCoords, false);
                     }
                     else
                     {
@@ -131,7 +131,7 @@ namespace TouchTracking.Droid
 
                         if (idToEffectDictionary[id] != null)
                         {
-                            FireEvent(idToEffectDictionary[id], id, TouchActionType.Released, screenPointerCoords);
+                            FireEvent(idToEffectDictionary[id], id, TouchActionType.Released, screenPointerCoords, false);
                         }
                     }
                     idToEffectDictionary.Remove(id);
@@ -140,13 +140,13 @@ namespace TouchTracking.Droid
                 case MotionEventActions.Cancel:
                     if (capture)
                     {
-                        FireEvent(this, id, TouchActionType.Cancelled, screenPointerCoords);
+                        FireEvent(this, id, TouchActionType.Cancelled, screenPointerCoords, false);
                     }
                     else
                     {
                         if (idToEffectDictionary[id] != null)
                         {
-                            FireEvent(idToEffectDictionary[id], id, TouchActionType.Cancelled, screenPointerCoords);
+                            FireEvent(idToEffectDictionary[id], id, TouchActionType.Cancelled, screenPointerCoords, false);
                         }
                     }
                     idToEffectDictionary.Remove(id);
@@ -181,17 +181,17 @@ namespace TouchTracking.Droid
             {
                 if (idToEffectDictionary[id] != null)
                 {
-                    FireEvent(idToEffectDictionary[id], id, TouchActionType.Exited, pointerLocation);
+                    FireEvent(idToEffectDictionary[id], id, TouchActionType.Exited, pointerLocation, true);
                 }
                 if (touchEffectHit != null)
                 {
-                    FireEvent(touchEffectHit, id, TouchActionType.Entered, pointerLocation);
+                    FireEvent(touchEffectHit, id, TouchActionType.Entered, pointerLocation, true);
                 }
                 idToEffectDictionary[id] = touchEffectHit;
             }
         }
 
-        void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType, Point pointerLocation)
+        void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType, Point pointerLocation, bool isInContact)
         {
             // Get the method to call for firing events
             Action<Element, TouchActionEventArgs> onTouchAction = touchEffect.pclTouchEffect.OnTouchAction;
@@ -204,7 +204,7 @@ namespace TouchTracking.Droid
 
             // Call the method
             onTouchAction(touchEffect.formsElement,
-                new TouchActionEventArgs(id, actionType, point, true));
+                new TouchActionEventArgs(id, actionType, point, isInContact));
         }
     }
 }

@@ -16,16 +16,16 @@ namespace TouchTrackingEffectDemos
             {
                 Capture = true
             };
-            touchEffect.TouchAction += OnTouchAction;
+            touchEffect.TouchAction += OnTouchEffectAction;
             Effects.Add(touchEffect);
         }
 
-        void OnTouchAction(object sender, TouchActionEventArgs args)
+        void OnTouchEffectAction(object sender, TouchActionEventArgs args)
         {
             switch (args.Type)
             {
                 case TouchActionType.Pressed:
-                    if (!isBeingDragged && args.IsInContact)
+                    if (!isBeingDragged)
                     {
                         isBeingDragged = true;
                         touchId = args.Id;
