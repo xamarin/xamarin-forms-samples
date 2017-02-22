@@ -35,61 +35,71 @@ namespace TouchTrackingEffectDemos
             canvasView.InvalidateSurface();
         }
 
-        void OnTouchEffectTouchAction(object sender, TouchActionEventArgs args)
+        void OnTouchEffectAction(object sender, TouchActionEventArgs args)
         {
             switch (args.Type)
             {
                 case TouchActionType.Pressed:
-                    if (args.IsInContact)
-                    {
-                        // This shouldn't happen but check anyway
-                        if (!inProgressFigures.ContainsKey(args.Id) && 
-                            !draggingFigures.ContainsKey(args.Id))
-                        {
-                            bool isDragOperation = false;
+                    bool isDragOperation = false;
 
-                            foreach (EllipseDrawingFigure fig in completedFigures.Reverse<EllipseDrawingFigure>())
+                    // Loop through the completed figures
+                    foreach (EllipseDrawingFigure fig in completedFigures.Reverse<EllipseDrawingFigure>())
+                    {
+                        // Check if the finger is touching one of the ellipses
+                        if (fig.IsInEllipse(ConvertToPixel(args.Location)))
+                        {
+                            // Tentatively assume this is a dragging operation
+                            isDragOperation = true;
+
+                            // Loop through all the figures currently being dragged
+                            foreach (EllipseDrawingFigure draggedFigure in draggingFigures.Values)
                             {
-                                if (fig.IsInEllipse(ConvertToPixel(args.Location)))
+                                // If there's a match, try deeper
+                                if (fig == draggedFigure)
                                 {
-                                    fig.LastFingerLocation = args.Location;
-                                    draggingFigures.Add(args.Id, fig);
-                                    isDragOperation = true;
+                                    isDragOperation = false;
                                     break;
                                 }
                             }
 
                             if (isDragOperation)
                             {
-                                // Move the dragged ellipse to the end so it's drawn on top
-                                EllipseDrawingFigure fig = draggingFigures[args.Id];
-                                completedFigures.Remove(fig);
-                                completedFigures.Add(fig);
+                                fig.LastFingerLocation = args.Location;
+                                draggingFigures.Add(args.Id, fig);
+                                break;
                             }
-                            else // start making a new ellipse
-                            {
-                                // Random bytes for random color
-                                byte[] buffer = new byte[4];
-                                random.NextBytes(buffer);
-
-                                EllipseDrawingFigure figure = new EllipseDrawingFigure
-                                {
-                                    Color = new SKColor(buffer[0], buffer[1], buffer[2], buffer[3]),
-                                    StartPoint = ConvertToPixel(args.Location),
-                                    EndPoint = ConvertToPixel(args.Location)
-                                };
-
-                                inProgressFigures.Add(args.Id, figure);
-                            }
-
-                            // Set the Capture property to true
-                            TouchEffect touchEffect =
-                                (TouchEffect)canvasViewGrid.Effects.First(e => e is TouchEffect);
-                            touchEffect.Capture = true;
-
-                            canvasView.InvalidateSurface();
                         }
                     }
+
+                    if (isDragOperation)
+                    {
+                        // Move the dragged ellipse to the end of completedFigures so it's drawn on top
+                        EllipseDrawingFigure fig = draggingFigures[args.Id];
+                        completedFigures.Remove(fig);
+                        completedFigures.Add(fig);
+                    }
+                    else // start making a new ellipse
+                    {
+                        // Random bytes for random color
+                        byte[] buffer = new byte[4];
+                        random.NextBytes(buffer);
+
+                        EllipseDrawingFigure figure = new EllipseDrawingFigure
+                        {
+                            Color = new SKColor(buffer[0], buffer[1], buffer[2], buffer[3]),
+                            StartPoint = ConvertToPixel(args.Location),
+                            EndPoint = ConvertToPixel(args.Location)
+                        };
+
+                        inProgressFigures.Add(args.Id, figure);
+                    }
+
+                    // Set the Capture property to true
+                    TouchEffect touchEffect =
+                        (TouchEffect)canvasViewGrid.Effects.First(e => e is TouchEffect);
+                    touchEffect.Capture = true;
+
+                    canvasView.InvalidateSurface();
                     break;
 
                 case TouchActionType.Moved:
@@ -113,7 +123,6 @@ namespace TouchTrackingEffectDemos
                 case TouchActionType.Released:
                     if (draggingFigures.ContainsKey(args.Id))
                     {
-
                         draggingFigures.Remove(args.Id);
                     }
                     else if (inProgressFigures.ContainsKey(args.Id))
