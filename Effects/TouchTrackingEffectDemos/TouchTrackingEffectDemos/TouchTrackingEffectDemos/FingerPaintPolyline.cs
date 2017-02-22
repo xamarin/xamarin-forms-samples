@@ -1,5 +1,4 @@
 ﻿using Xamarin.Forms;
-
 using SkiaSharp;
 
 namespace TouchTrackingEffectDemos

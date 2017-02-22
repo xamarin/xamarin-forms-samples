@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using TouchTracking;
 using Xamarin.Forms;
+using TouchTracking;
 
 namespace TouchTrackingEffectDemos
 {
-
-    // public temporarily
-
-
-    public class Key : BoxView
+    class Key : BoxView
     {
         List<long> ids = new List<long>();
 
@@ -17,10 +13,8 @@ namespace TouchTrackingEffectDemos
 
         public Key()
         {
-            TouchEffect effect = new TouchEffect(); // OR: TouchEffect effect = Effect.Resolve("XamarinDocs.TouchEffect") as TouchEffect;
-            
+            TouchEffect effect = new TouchEffect();
             effect.TouchAction += OnTouchAction;
-
             Effects.Add(effect);
         }
 
@@ -34,8 +28,6 @@ namespace TouchTrackingEffectDemos
 
         void OnTouchAction(object sender, TouchActionEventArgs args)
         {
-    //        System.Diagnostics.Debug.WriteLine("Key {0} {1} {2}", KeyNumber, args.Type, args.Id);
-
             switch (args.Type)
             {
                 case TouchActionType.Entered:

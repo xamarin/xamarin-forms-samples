@@ -39,7 +39,6 @@ namespace TouchTrackingEffectDemos
         {
             switch (args.Type)
             {
-     //           case TouchActionType.Entered:
                 case TouchActionType.Pressed:
                     if (args.IsInContact)
                     {
@@ -76,7 +75,6 @@ namespace TouchTrackingEffectDemos
                     break;
 
                 case TouchActionType.Released:
-//                case TouchActionType.Exited:
                     if (inProgressPolylines.ContainsKey(args.Id))
                     {
                         completedPolylines.Add(inProgressPolylines[args.Id]);

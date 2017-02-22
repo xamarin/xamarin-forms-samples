@@ -5,7 +5,6 @@
              xmlns:tt="clr-namespace:TouchTracking"
              x:Class="TouchTrackingEffectDemos.EllipseDrawingPage"
              Title="Ellipse Drawing">
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />

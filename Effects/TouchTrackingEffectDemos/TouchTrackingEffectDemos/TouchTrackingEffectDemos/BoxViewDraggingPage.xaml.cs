@@ -1,20 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Linq;
 using Xamarin.Forms;
-
 using TouchTracking;
 
 namespace TouchTrackingEffectDemos
 {
     public partial class BoxViewDraggingPage : ContentPage
     {
+        class DragInfo
+        {
+            public DragInfo(long id, Point pressPoint)
+            {
+                Id = id;
+                PressPoint = pressPoint;
+            }
+
+            public long Id { private set; get; }
+
+            public Point PressPoint { private set; get; }
+        }
+
+        Dictionary<BoxView, DragInfo> dragDictionary = new Dictionary<BoxView, DragInfo>();
         Random random = new Random();
-        Dictionary<long, Point> dragDictionary = new Dictionary<long, Point>();
 
         public BoxViewDraggingPage()
         {
             InitializeComponent();
+            AddBoxViewToLayout();
         }
 
         void OnNewBoxViewClicked(object sender, EventArgs args)
@@ -25,6 +38,7 @@ namespace TouchTrackingEffectDemos
         void OnClearClicked(object sender, EventArgs args)
         {
             absoluteLayout.Children.Clear();
+            dragDictionary.Clear();
         }
 
         void AddBoxViewToLayout()
@@ -41,36 +55,32 @@ namespace TouchTrackingEffectDemos
             TouchEffect touchEffect = new TouchEffect();
             touchEffect.TouchAction += OnTouchEffectAction;
             boxView.Effects.Add(touchEffect);
-
             absoluteLayout.Children.Add(boxView);
         }
         
-        private void OnTouchEffectAction(object sender, TouchActionEventArgs args)
+        void OnTouchEffectAction(object sender, TouchActionEventArgs args)
         {
             BoxView boxView = sender as BoxView;
-            TouchEffect touchEffect = boxView.Effects[0] as TouchEffect;
 
             switch (args.Type)
             {
                 case TouchActionType.Pressed:
-                    if (args.IsInContact && !dragDictionary.ContainsKey(args.Id))
+                    // Don't allow a second touch on an already touched BoxView
+                    if (args.IsInContact && !dragDictionary.ContainsKey(boxView))
                     {
-                        System.Diagnostics.Debug.WriteLine("Pressed: " + args.Location);
+                        dragDictionary.Add(boxView, new DragInfo(args.Id, args.Location));
 
-
-                        dragDictionary.Add(args.Id, args.Location);
+                        // Set Capture property to true
+                        TouchEffect touchEffect = (TouchEffect)boxView.Effects.FirstOrDefault(e => e is TouchEffect);
                         touchEffect.Capture = true;
                     }
                     break;
 
                 case TouchActionType.Moved:
-                    if (dragDictionary.ContainsKey(args.Id))
+                    if (dragDictionary.ContainsKey(boxView) && dragDictionary[boxView].Id == args.Id)
                     {
-                        System.Diagnostics.Debug.WriteLine("Moved: " + args.Location);
-
-
                         Rectangle rect = AbsoluteLayout.GetLayoutBounds(boxView);
-                        Point initialLocation = dragDictionary[args.Id];
+                        Point initialLocation = dragDictionary[boxView].PressPoint;
                         rect.X += args.Location.X - initialLocation.X;
                         rect.Y += args.Location.Y - initialLocation.Y;
                         AbsoluteLayout.SetLayoutBounds(boxView, rect);
@@ -78,9 +88,9 @@ namespace TouchTrackingEffectDemos
                     break;
 
                 case TouchActionType.Released:
-                    if (dragDictionary.ContainsKey(args.Id))
+                    if (dragDictionary.ContainsKey(boxView) && dragDictionary[boxView].Id == args.Id)
                     {
-                        dragDictionary.Remove(args.Id);
+                        dragDictionary.Remove(boxView);
                     }
                     break;
             }

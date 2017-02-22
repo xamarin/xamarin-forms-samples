@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TouchTrackingEffectDemos"
-             x:Class="TouchTrackingEffectDemos.HomePage">
+             x:Class="TouchTrackingEffectDemos.HomePage"
+             Title="Touch Tracking Effect">
     <StackLayout>
         <StackLayout.Resources>
             <ResourceDictionary>
@@ -13,10 +14,13 @@
             </ResourceDictionary>
         </StackLayout.Resources>
 
-
         <Button Text="BoxView Dragging"
                 Command="{Binding NavigateCommand}"
                 CommandParameter="{x:Type local:BoxViewDraggingPage}" />
+
+        <Button Text="Draggable BoxView Dragging"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:DraggableBoxViewDraggingPage}" />
 
         <Button Text="Ellipse Drawing"
                 Command="{Binding NavigateCommand}"
@@ -26,38 +30,8 @@
                 Command="{Binding NavigateCommand}"
                 CommandParameter="{x:Type local:FingerPaintPage}" />
         
-        <Button Text="Tracking Test"
-                Command="{Binding NavigateCommand}"
-                CommandParameter="{x:Type local:TrackingTest}" />
-        
         <Button Text="Silent Keyboard"
                 Command="{Binding NavigateCommand}"
                 CommandParameter="{x:Type local:SilentKeyboardPage}" />
-
-        <!--<TableView Intent="Menu">
-        <TableRoot>
-            <TableSection Title="Touch Tracking Demos">
-                
-                
-                <TextCell Text="Tracking Test"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:TrackingTest}" />
-
-
-
-                <TextCell Text="Silent Keyboard"
-                          Detail="Tap or sweep the music piano keys"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:SilentKeyboardPage}" />
-
-                <TextCell Text="Finger Paint"
-                          Detail="Draw on the screen with your fingers"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:FingerPaintPage}" />
-
-
-            </TableSection>            
-        </TableRoot>
-    </TableView>-->
     </StackLayout>
 </ContentPage>
