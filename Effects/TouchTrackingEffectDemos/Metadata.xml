@@ -5,7 +5,7 @@
     <Brief>This sample demonstrates an effect to trigger events for multi-touch finger tracking.</Brief>
     <Level>Intermediate</Level>
     <LicenseRequirement>Indie</LicenseRequirement>
-    <Tags>Effects, Graphics, Xamarin.Forms</Tags>
+    <Tags>Effects, Touch, Graphics, Xamarin.Forms</Tags>
     <SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
     <Gallery>true</Gallery>
 </SampleMetadata>
