@@ -54,7 +54,7 @@ namespace TouchTrackingEffectDemos
                             // Loop through all the figures currently being dragged
                             foreach (EllipseDrawingFigure draggedFigure in draggingFigures.Values)
                             {
-                                // If there's a match, try deeper
+                                // If there's a match, we'll need to dig deeper
                                 if (fig == draggedFigure)
                                 {
                                     isDragOperation = false;
@@ -90,15 +90,8 @@ namespace TouchTrackingEffectDemos
                             StartPoint = ConvertToPixel(args.Location),
                             EndPoint = ConvertToPixel(args.Location)
                         };
-
                         inProgressFigures.Add(args.Id, figure);
                     }
-
-                    // Set the Capture property to true
-                    TouchEffect touchEffect =
-                        (TouchEffect)canvasViewGrid.Effects.First(e => e is TouchEffect);
-                    touchEffect.Capture = true;
-
                     canvasView.InvalidateSurface();
                     break;
 

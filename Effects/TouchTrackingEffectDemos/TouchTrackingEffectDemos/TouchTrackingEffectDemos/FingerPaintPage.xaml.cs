@@ -40,29 +40,21 @@ namespace TouchTrackingEffectDemos
             switch (args.Type)
             {
                 case TouchActionType.Pressed:
-    //                if (args.IsInContact)
-    //                {
-                        if (!inProgressPolylines.ContainsKey(args.Id))
+                    if (!inProgressPolylines.ContainsKey(args.Id))
+                    {
+                        Color strokeColor = (Color)typeof(Color).GetRuntimeField(colorPicker.Items[colorPicker.SelectedIndex]).GetValue(null);
+                        float strokeWidth = ConvertToPixel(new float[] { 1, 2, 5, 10, 20 }[widthPicker.SelectedIndex]);
+
+                        FingerPaintPolyline polyline = new FingerPaintPolyline
                         {
-                            // Set the Capture property to true
-                            TouchEffect touchEffect =
-                                (TouchEffect)canvasViewGrid.Effects.First(e => e is TouchEffect);
-                            touchEffect.Capture = true;
+                            StrokeColor = strokeColor,
+                            StrokeWidth = strokeWidth
+                        };
+                        polyline.Path.MoveTo(ConvertToPixel(args.Location));
 
-                            Color strokeColor = (Color)typeof(Color).GetRuntimeField(colorPicker.Items[colorPicker.SelectedIndex]).GetValue(null);
-                            float strokeWidth = ConvertToPixel(new float[] { 1, 2, 5, 10, 20 }[widthPicker.SelectedIndex]);
-
-                            FingerPaintPolyline polyline = new FingerPaintPolyline
-                            {
-                                StrokeColor = strokeColor,
-                                StrokeWidth = strokeWidth
-                            };
-                            polyline.Path.MoveTo(ConvertToPixel(args.Location));
-
-                            inProgressPolylines.Add(args.Id, polyline);
-                            canvasView.InvalidateSurface();
-                        }
-         //           }
+                        inProgressPolylines.Add(args.Id, polyline);
+                        canvasView.InvalidateSurface();
+                    }
                     break;
 
                 case TouchActionType.Moved:
