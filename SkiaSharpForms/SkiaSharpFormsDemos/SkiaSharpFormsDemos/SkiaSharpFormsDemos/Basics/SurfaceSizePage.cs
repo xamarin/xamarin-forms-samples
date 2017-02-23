@@ -6,7 +6,7 @@ using SkiaSharp;
 using SkiaSharp.Views.Forms;
 
 
-namespace SkiaSharpFormsDemos
+namespace SkiaSharpFormsDemos.Basics
 {
     public class SurfaceSizePage : ContentPage
     {

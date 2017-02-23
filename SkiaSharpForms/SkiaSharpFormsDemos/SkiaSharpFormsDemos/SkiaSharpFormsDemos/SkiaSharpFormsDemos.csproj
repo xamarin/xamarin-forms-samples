@@ -40,6 +40,10 @@
       <DependentUpon>EllipseFillPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Basics\FramedTextPage.cs" />
+    <Compile Include="Curves\BezierSplinePage.xaml.cs">
+      <DependentUpon>BezierSplinePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TouchPoint.cs" />
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
@@ -67,6 +71,10 @@
     <Compile Include="Basics\TapToggleFillPage.xaml.cs">
       <DependentUpon>TapToggleFillPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TouchActionEventArgs.cs" />
+    <Compile Include="TouchActionEventHandler.cs" />
+    <Compile Include="TouchActionType.cs" />
+    <Compile Include="TouchEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SkiaSharp, Version=1.56.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
@@ -131,6 +139,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="LinesAndPaths\DotsAndDashesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\BezierSplinePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

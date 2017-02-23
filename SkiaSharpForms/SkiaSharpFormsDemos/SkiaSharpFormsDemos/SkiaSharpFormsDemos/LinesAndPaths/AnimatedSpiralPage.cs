@@ -6,7 +6,7 @@ using Xamarin.Forms;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 
-namespace SkiaSharpFormsDemos
+namespace SkiaSharpFormsDemos.LinesAndPaths
 {
     public class AnimatedSpiralPage : ContentPage
     {

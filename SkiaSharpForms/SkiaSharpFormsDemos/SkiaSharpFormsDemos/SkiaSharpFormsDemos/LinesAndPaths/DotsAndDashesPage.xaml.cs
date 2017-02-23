@@ -5,7 +5,7 @@ using Xamarin.Forms;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 
-namespace SkiaSharpFormsDemos
+namespace SkiaSharpFormsDemos.LinesAndPaths
 {
     public partial class DotsAndDashesPage : ContentPage
     {
