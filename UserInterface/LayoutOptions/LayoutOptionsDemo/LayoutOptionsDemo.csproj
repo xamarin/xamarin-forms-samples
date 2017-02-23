@@ -33,17 +33,31 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
-    <EmbeddedResource Include="LayoutOptionsPage.xaml" />
+    <EmbeddedResource Include="XAML\LayoutOptionsAlignmentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XAML\LayoutOptionsExpansionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XAML\LayoutOptionsPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LayoutOptionsPage.cs">
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XAML\LayoutOptionsAlignmentPage.xaml.cs">
+      <DependentUpon>LayoutOptionsAlignmentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XAML\LayoutOptionsExpansionPage.xaml.cs">
+      <DependentUpon>LayoutOptionsExpansionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XAML\LayoutOptionsPage.cs">
       <DependentUpon>LayoutOptionsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="LayoutOptionsPageCS.cs" />
+    <Compile Include="CS\LayoutOptionsPageCS.cs" />
+    <Compile Include="CS\LayoutOptionsAlignmentPageCS.cs" />
+    <Compile Include="CS\LayoutOptionsExpansionPageCS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -61,6 +75,10 @@
       <HintPath>..\packages\Xamarin.Forms.2.3.3.180\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
       <Private>True</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="XAML\" />
+    <Folder Include="CS\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

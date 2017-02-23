@@ -62,7 +62,7 @@ namespace XamlSamples
                 using (StreamReader reader = new StreamReader(stream))
                 {
                     string xaml = reader.ReadToEnd();
-                    await this.Navigation.PushAsync(new XamlBrowserPage(xaml));
+                    await this.Navigation.PushAsync(new XamlBrowserPage { XamlString = xaml });
                 }
             }
         }

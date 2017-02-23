@@ -64,17 +64,18 @@ namespace SkiaSharpFormsDemos
             float xRadius = minRadius * scale + maxRadius * (1 - scale);
             float yRadius = maxRadius * scale + minRadius * (1 - scale);
 
-            SKPaint paint = new SKPaint
+            using (SKPaint paint = new SKPaint())
             {
-                Style = SKPaintStyle.Stroke,
-                Color = SKColors.Blue,
-                StrokeWidth = 50
-            };
-            canvas.DrawOval(info.Width / 2, info.Height / 2, xRadius, yRadius, paint);
+                paint.Style = SKPaintStyle.Stroke;
+                paint.Color = SKColors.Blue;
+                paint.StrokeWidth = 50;
+                canvas.DrawOval(info.Width / 2, info.Height / 2, xRadius, yRadius, paint);
 
-            paint.Style = SKPaintStyle.Fill;
-            paint.Color = SKColors.SkyBlue;
-            canvas.DrawOval(info.Width / 2, info.Height / 2, xRadius, yRadius, paint);
+                paint.Style = SKPaintStyle.Fill;
+                paint.Color = SKColors.SkyBlue;
+                canvas.DrawOval(info.Width / 2, info.Height / 2, xRadius, yRadius, paint);
+            }
         }
     }
 }
+
