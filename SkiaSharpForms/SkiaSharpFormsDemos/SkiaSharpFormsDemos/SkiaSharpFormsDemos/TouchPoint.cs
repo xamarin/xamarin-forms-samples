@@ -4,7 +4,7 @@ using TouchTracking;
 
 namespace SkiaSharpFormsDemos
 {
-    class TouchPoint
+    public class TouchPoint
     {
         // For painting
         SKPaint paint = new SKPaint
@@ -19,9 +19,9 @@ namespace SkiaSharpFormsDemos
 
         public SKPoint Center { set; get; }
 
-        public float Radius { set; get; }
+        public float Radius { set; get; } = 75;
 
-        public SKColor Color { set; get; }
+        public SKColor Color { set; get; } = new SKColor(0, 0, 255, 64);
 
         public void Paint(SKCanvas canvas)
         {

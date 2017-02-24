@@ -88,9 +88,30 @@
 
             <TableSection Title="Curves">
                 <TextCell Text="Bézier Spline"
-                          Detail="Interactively draw a Bézier spline"
+                          Detail="Interactively draw a cubic Bézier spline"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.BezierSplinePage}" />
+
+                <TextCell Text="Quadratic Spline"
+                          Detail="Interactively draw a quadratic Bézier spline"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.QuadraticSplinePage}" />
+
+
+                <TextCell Text="Conic Spline"
+                          Detail=""
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ConicSplinePage}" />
+
+                <TextCell Text="SVG Arc"
+                          Detail=""
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.SvgArcPage}" />
+
+                <TextCell Text="Corner Arc"
+                          Detail=""
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.CornerArcPage}" />
             </TableSection>
         </TableRoot>
     </TableView>

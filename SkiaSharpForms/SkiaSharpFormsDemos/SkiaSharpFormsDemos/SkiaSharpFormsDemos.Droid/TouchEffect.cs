@@ -32,7 +32,7 @@ namespace TouchTracking.Droid
             // Get the Android View corresponding to the Element that the effect is attached to
             view = Control == null ? Container : Control;
 
-            // Get access to the TouchEffect class in the PCL -- can save directly to field
+            // Get access to the TouchEffect class in the PCL
             TouchTracking.TouchEffect touchEffect = 
                 (TouchTracking.TouchEffect)Element.Effects.
                     FirstOrDefault(e => e is TouchTracking.TouchEffect);
@@ -43,7 +43,7 @@ namespace TouchTracking.Droid
 
                 formsElement = Element;
 
-                this.pclTouchEffect = touchEffect;
+                pclTouchEffect = touchEffect;
 
                 // Save fromPixels function
                 fromPixels = view.Context.FromPixels;

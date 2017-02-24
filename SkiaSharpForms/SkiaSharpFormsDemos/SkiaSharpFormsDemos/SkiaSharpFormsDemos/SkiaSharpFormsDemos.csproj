@@ -43,6 +43,19 @@
     <Compile Include="Curves\BezierSplinePage.xaml.cs">
       <DependentUpon>BezierSplinePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Curves\ConicSplinePage.xaml.cs">
+      <DependentUpon>ConicSplinePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Curves\CornerArcPage.xaml.cs">
+      <DependentUpon>CornerArcPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Curves\InteractivePage.cs" />
+    <Compile Include="Curves\QuadraticSplinePage.xaml.cs">
+      <DependentUpon>QuadraticSplinePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Curves\SvgArcPage.xaml.cs">
+      <DependentUpon>SvgArcPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TouchPoint.cs" />
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -145,6 +158,30 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Curves\BezierSplinePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\ConicSplinePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\QuadraticSplinePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\SvgArcPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\CornerArcPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

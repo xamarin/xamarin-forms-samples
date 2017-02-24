@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
@@ -9,9 +13,9 @@ using TouchTracking;
 
 namespace SkiaSharpFormsDemos.Curves
 {
-    public partial class BezierSplinePage : ContentPage
+    public partial class ConicSplinePage : ContentPage
     {
-        TouchPoint[] touchPoints = new TouchPoint[4];
+        TouchPoint[] touchPoints = new TouchPoint[3];
 
         SKPaint strokePaint = new SKPaint
         {
@@ -28,19 +32,24 @@ namespace SkiaSharpFormsDemos.Curves
             PathEffect = SKPathEffect.CreateDash(new float[] { 7, 7 }, 0)
         };
 
-        public BezierSplinePage()
+        public ConicSplinePage()
         {
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 3; i++)
             {
                 TouchPoint touchPoint = new TouchPoint
                 {
-                    Center = new SKPoint(100 + 200 * (i % 2),
-                                         100 + 200 * i)
+                    Center = new SKPoint(100 + 200 * i,
+                                         100 + (i == 1 ? 300 : 0))
                 };
                 touchPoints[i] = touchPoint;
             }
 
             InitializeComponent();
+        }
+
+        void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
+        {
+            canvasView.InvalidateSurface();
         }
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -54,9 +63,9 @@ namespace SkiaSharpFormsDemos.Curves
             using (SKPath path = new SKPath())
             {
                 path.MoveTo(touchPoints[0].Center);
-                path.CubicTo(touchPoints[1].Center, 
-                             touchPoints[2].Center, 
-                             touchPoints[3].Center);
+                path.ConicTo(touchPoints[1].Center,
+                             touchPoints[2].Center,
+                             (float)weightSlider.Value);
 
                 canvas.DrawPath(path, strokePaint);
             }
@@ -67,14 +76,14 @@ namespace SkiaSharpFormsDemos.Curves
                             touchPoints[1].Center.X,
                             touchPoints[1].Center.Y, dottedStrokePaint);
 
-            canvas.DrawLine(touchPoints[2].Center.X,
-                            touchPoints[2].Center.Y,
-                            touchPoints[3].Center.X,
-                            touchPoints[3].Center.Y, dottedStrokePaint);
+            canvas.DrawLine(touchPoints[1].Center.X,
+                            touchPoints[1].Center.Y,
+                            touchPoints[2].Center.X,
+                            touchPoints[2].Center.Y, dottedStrokePaint);
 
             foreach (TouchPoint touchPoint in touchPoints)
             {
-               touchPoint.Paint(canvas);
+                touchPoint.Paint(canvas);
             }
         }
 
@@ -85,7 +94,7 @@ namespace SkiaSharpFormsDemos.Curves
             foreach (TouchPoint touchPoint in touchPoints)
             {
                 float scale = canvasView.CanvasSize.Width / (float)canvasView.Width;
-                SKPoint point = new SKPoint(scale * (float)args.Location.X, 
+                SKPoint point = new SKPoint(scale * (float)args.Location.X,
                                             scale * (float)args.Location.Y);
                 touchPointMoved |= touchPoint.ProcessTouchEvent(args.Id, args.Type, point);
             }
