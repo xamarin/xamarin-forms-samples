@@ -1,5 +1,4 @@
-﻿using System;
-using AVFoundation;
+﻿using AVFoundation;
 
 namespace TodoAWSSimpleDB.iOS
 {
@@ -12,18 +11,20 @@ namespace TodoAWSSimpleDB.iOS
 		/// Speak example from: 
 		/// http://blog.xamarin.com/make-your-ios-7-app-speak/
 		/// </summary>
-		public void Speak (string text)
+		public void Speak(string text)
 		{
-			if (!string.IsNullOrWhiteSpace (text)) {
-				var speechSynthesizer = new AVSpeechSynthesizer ();
-				var speechUtterance = new AVSpeechUtterance (text) {
-					Rate = AVSpeechUtterance.MaximumSpeechRate/4,
-					Voice = AVSpeechSynthesisVoice.FromLanguage ("en-US"),
+			if (!string.IsNullOrWhiteSpace(text))
+			{
+				var speechSynthesizer = new AVSpeechSynthesizer();
+				var speechUtterance = new AVSpeechUtterance(text)
+				{
+					Rate = AVSpeechUtterance.MaximumSpeechRate / 4,
+					Voice = AVSpeechSynthesisVoice.FromLanguage("en-US"),
 					Volume = volume,
 					PitchMultiplier = pitch
 				};
 
-				speechSynthesizer.SpeakUtterance (speechUtterance);		
+				speechSynthesizer.SpeakUtterance(speechUtterance);
 			}
 		}
 	}
