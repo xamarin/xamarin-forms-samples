@@ -57,30 +57,22 @@ namespace SkiaSharpFormsDemos.Curves
 
                 canvas.DrawPath(path, strokePaint);
 
-                // Draw the circle the arc wraps around
-                SKPoint v1 = new SKPoint(touchPoints[0].Center.X - touchPoints[1].Center.X,
-                                         touchPoints[0].Center.Y - touchPoints[1].Center.Y);
-                SKPoint v2 = new SKPoint(touchPoints[2].Center.X - touchPoints[1].Center.X,
-                                         touchPoints[2].Center.Y - touchPoints[1].Center.Y);
+
+                System.Diagnostics.Debug.WriteLine(path.ToSvgPathData());
+
+
+                // Draw the circle that the arc wraps around
+                SKPoint v1 = Normalize(touchPoints[0].Center - touchPoints[1].Center); // MakeVector(touchPoints[1].Center, touchPoints[0].Center));
+                SKPoint v2 = Normalize(touchPoints[2].Center - touchPoints[1].Center); //  MakeVector(touchPoints[1].Center, touchPoints[2].Center));
 
                 double dotProduct = v1.X * v2.X + v1.Y * v2.Y;
-                double angleBetween = Math.Acos(dotProduct /
-                                (Math.Sqrt(v1.X * v1.X + v1.Y * v1.Y) *
-                                 Math.Sqrt(v2.X * v2.X + v2.Y * v2.Y)));
-
-
-                double acos = Math.Acos(dotProduct);
-                double v1Mag = Math.Sqrt(v1.X * v1.X + v1.Y * v1.Y);
-                double v2Mag = Math.Sqrt(v2.X * v2.X + v2.Y * v2.Y);
-
-
+                double angleBetween = Math.Acos(dotProduct);
                 float hypotenuse = radius / (float)Math.Sin(angleBetween / 2);
-
-                SKPoint vMid = new SKPoint((v1.X + v2.X) / 2, (v1.Y + v2.Y) / 2);
-                float vMidMag = (float)Magnitude(vMid);
-                vMid = new SKPoint(vMid.X / vMidMag, vMid.Y / vMidMag);
+                SKPoint vMid = Normalize(new SKPoint((v1.X + v2.X) / 2, (v1.Y + v2.Y) / 2));
                 SKPoint center = new SKPoint(touchPoints[1].Center.X + vMid.X * hypotenuse,
                                              touchPoints[1].Center.Y + vMid.Y * hypotenuse);
+
+
 
 
 
@@ -92,7 +84,7 @@ namespace SkiaSharpFormsDemos.Curves
                 canvas.DrawPath(path, redStrokePaint);
 
 
-
+                canvas.DrawCircle(center.X, center.Y, radius, redStrokePaint);
 
                 // TODO: Draw circle
             }
@@ -103,9 +95,20 @@ namespace SkiaSharpFormsDemos.Curves
             }
         }
 
-        double Magnitude(SKPoint v)
+        //SKPoint MakeVector(SKPoint ptFrom, SKPoint ptTo)
+        //{
+        //    return new SKPoint(ptTo.X - ptFrom.X, ptTo.Y - ptFrom.Y);
+        //}
+
+        SKPoint Normalize(SKPoint v)
         {
-            return Math.Sqrt(v.X * v.X + v.Y * v.Y);
+            float magnitude = Magnitude(v);
+            return new SKPoint(v.X / magnitude, v.Y / magnitude);
+        }
+
+        float Magnitude(SKPoint v)
+        {
+            return (float)Math.Sqrt(v.X * v.X + v.Y * v.Y);
         }
 
     }

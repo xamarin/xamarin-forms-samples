@@ -43,50 +43,50 @@
                 <TextCell Text="Stroke Caps"
                           Detail="List and show the three stroke cap options"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:LinesAndPaths.StrokeCapsPage}" />
+                          CommandParameter="{x:Type local:Paths.StrokeCapsPage}" />
 
                 <TextCell Text="Multiple Lines"
                           Detail="Draw multiple lines using DrawPoints"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:LinesAndPaths.MultipleLinesPage}" />
+                          CommandParameter="{x:Type local:Paths.MultipleLinesPage}" />
 
                 <TextCell Text="Two Triangle Contours"
                           Detail="Use a graphics path to draw open and closed triangles"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:LinesAndPaths.TwoTriangleContoursPage}" />
+                          CommandParameter="{x:Type local:Paths.TwoTriangleContoursPage}" />
 
                 <TextCell Text="Stroke Joins"
                           Detail="List and show the three stroke join options"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:LinesAndPaths.StrokeJoinsPage}" />
+                          CommandParameter="{x:Type local:Paths.StrokeJoinsPage}" />
 
                 <TextCell Text="Five-Pointed Star"
                           Detail="Demonstrate path fill types"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:LinesAndPaths.FivePointedStarPage}" />
+                          CommandParameter="{x:Type local:Paths.FivePointedStarPage}" />
 
                 <TextCell Text="Overlapping Circles"
                           Detail="Draw overlapping circles"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:LinesAndPaths.OverlappingCirclesPage}" />
+                          CommandParameter="{x:Type local:Paths.OverlappingCirclesPage}" />
 
                 <TextCell Text="Archimedean Spiral"
                           Detail="Use a graphics path to draw a spiral"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:LinesAndPaths.ArchimedeanSpiralPage}" />
+                          CommandParameter="{x:Type local:Paths.ArchimedeanSpiralPage}" />
 
                 <TextCell Text="Dots and Dashes"
                           Detail="Render a line with dots and dashes"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:LinesAndPaths.DotsAndDashesPage}" />
+                          CommandParameter="{x:Type local:Paths.DotsAndDashesPage}" />
 
                 <TextCell Text="Animated Spiral"
                           Detail="Animate an Archimedean Spiral"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:LinesAndPaths.AnimatedSpiralPage}" />
+                          CommandParameter="{x:Type local:Paths.AnimatedSpiralPage}" />
             </TableSection>
 
-            <TableSection Title="Curves">
+            <TableSection Title="Curves (Splines &amp; Arcs)">
                 <TextCell Text="Bézier Spline"
                           Detail="Interactively draw a cubic Bézier spline"
                           Command="{Binding NavigateCommand}"
@@ -97,22 +97,42 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.QuadraticSplinePage}" />
 
+                <TextCell Text="Angle Arc"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.AngleArcPage}" />
 
-                <TextCell Text="Conic Spline"
+                <TextCell Text="Corner Arc"
                           Detail=""
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.ConicSplinePage}" />
+                          CommandParameter="{x:Type local:Curves.CornerArcPage}" />
 
                 <TextCell Text="SVG Arc"
                           Detail=""
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.SvgArcPage}" />
 
-                <TextCell Text="Corner Arc"
+                <TextCell Text="Conic Spline"
                           Detail=""
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.CornerArcPage}" />
+                          CommandParameter="{x:Type local:Curves.ConicSplinePage}" />
             </TableSection>
+
+
+            <TableSection Title="Matrix Transforms">
+                <TextCell Text="Accumulated Translate"
+                          Detail=" "
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.AccumulatedTranslatePage}" />
+
+                <TextCell Text="Analog Clock"
+                          Detail="-"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.AnalogClockPage}" />
+
+            </TableSection>
+
+
+
         </TableRoot>
     </TableView>
 </ContentPage>

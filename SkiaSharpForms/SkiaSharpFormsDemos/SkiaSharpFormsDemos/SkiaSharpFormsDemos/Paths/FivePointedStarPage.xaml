@@ -2,43 +2,47 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
-             x:Class="SkiaSharpFormsDemos.LinesAndPaths.MultipleLinesPage"
-             Title="Multiple Lines">
+             x:Class="SkiaSharpFormsDemos.Paths.FivePointedStarPage"
+             Title="Five-Pointed Star">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Picker x:Name="pointModePicker"
-                Title="Point Mode"
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Picker x:Name="fillTypePicker"
+                Title="Path Fill Type"
                 Grid.Row="0"
                 Grid.Column="0"
+                Margin="10"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged">
             <Picker.Items>
-                <x:String>Points</x:String>
-                <x:String>Lines</x:String>
-                <x:String>Polygon</x:String>
+                <x:String>Winding</x:String>
+                <x:String>EvenOdd</x:String>
+                <x:String>InverseWinding</x:String>
+                <x:String>InverseEvenOdd</x:String>
             </Picker.Items>
             <Picker.SelectedIndex>
                 0
             </Picker.SelectedIndex>
         </Picker>
 
-        <Picker x:Name="strokeCapPicker"
-                Title="Stroke Cap"
+        <Picker x:Name="drawingModePicker"
+                Title="Drawing Mode"
                 Grid.Row="0"
                 Grid.Column="1"
+                Margin="10"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged">
             <Picker.Items>
-                <x:String>Butt</x:String>
-                <x:String>Round</x:String>
-                <x:String>Square</x:String>
+                <x:String>Fill only</x:String>
+                <x:String>Stroke only</x:String>
+                <x:String>Stroke then Fill</x:String>
+                <x:String>Fill then Stroke</x:String>
             </Picker.Items>
             <Picker.SelectedIndex>
                 0
@@ -46,9 +50,9 @@
         </Picker>
 
         <skia:SKCanvasView x:Name="canvasView"
-                           PaintSurface="OnCanvasViewPaintSurface"
                            Grid.Row="1"
                            Grid.Column="0"
-                           Grid.ColumnSpan="2" />
+                           Grid.ColumnSpan="2"
+                           PaintSurface="OnCanvasViewPaintSurface" />
     </Grid>
 </ContentPage>

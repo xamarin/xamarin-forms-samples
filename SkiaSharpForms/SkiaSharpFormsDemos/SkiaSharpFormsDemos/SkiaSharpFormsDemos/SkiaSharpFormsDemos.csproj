@@ -40,6 +40,9 @@
       <DependentUpon>EllipseFillPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Basics\FramedTextPage.cs" />
+    <Compile Include="Curves\AngleArcPage.xaml.cs">
+      <DependentUpon>AngleArcPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Curves\BezierSplinePage.xaml.cs">
       <DependentUpon>BezierSplinePage.xaml</DependentUpon>
     </Compile>
@@ -60,21 +63,21 @@
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LinesAndPaths\AnimatedSpiralPage.cs" />
-    <Compile Include="LinesAndPaths\DotsAndDashesPage.xaml.cs">
+    <Compile Include="Paths\AnimatedSpiralPage.cs" />
+    <Compile Include="Paths\DotsAndDashesPage.xaml.cs">
       <DependentUpon>DotsAndDashesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LinesAndPaths\FivePointedStarPage.xaml.cs">
+    <Compile Include="Paths\FivePointedStarPage.xaml.cs">
       <DependentUpon>FivePointedStarPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LinesAndPaths\MultipleLinesPage.xaml.cs">
+    <Compile Include="Paths\MultipleLinesPage.xaml.cs">
       <DependentUpon>MultipleLinesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LinesAndPaths\ArchimedeanSpiralPage.cs" />
-    <Compile Include="LinesAndPaths\OverlappingCirclesPage.cs" />
-    <Compile Include="LinesAndPaths\StrokeCapsPage.cs" />
-    <Compile Include="LinesAndPaths\StrokeJoinsPage.cs" />
-    <Compile Include="LinesAndPaths\TwoTriangleContoursPage.cs" />
+    <Compile Include="Paths\ArchimedeanSpiralPage.cs" />
+    <Compile Include="Paths\OverlappingCirclesPage.cs" />
+    <Compile Include="Paths\StrokeCapsPage.cs" />
+    <Compile Include="Paths\StrokeJoinsPage.cs" />
+    <Compile Include="Paths\TwoTriangleContoursPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Basics\PulsatingEllipsePage.xaml.cs">
       <DependentUpon>PulsatingEllipsePage.xaml</DependentUpon>
@@ -88,6 +91,8 @@
     <Compile Include="TouchActionEventHandler.cs" />
     <Compile Include="TouchActionType.cs" />
     <Compile Include="TouchEffect.cs" />
+    <Compile Include="Transforms\AccumulatedTranslatePage.cs" />
+    <Compile Include="Transforms\AnalogClockPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SkiaSharp, Version=1.56.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
@@ -139,19 +144,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="LinesAndPaths\MultipleLinesPage.xaml">
+    <EmbeddedResource Include="Paths\MultipleLinesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="LinesAndPaths\FivePointedStarPage.xaml">
+    <EmbeddedResource Include="Paths\FivePointedStarPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="LinesAndPaths\DotsAndDashesPage.xaml">
+    <EmbeddedResource Include="Paths\DotsAndDashesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -186,6 +191,13 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\AngleArcPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

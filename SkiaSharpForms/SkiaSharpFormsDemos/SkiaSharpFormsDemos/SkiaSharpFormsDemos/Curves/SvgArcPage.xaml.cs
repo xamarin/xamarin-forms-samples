@@ -68,6 +68,12 @@ namespace SkiaSharpFormsDemos.Curves
 
                         strokePaint.Color = colors[colorIndex++];
                         canvas.DrawPath(path, strokePaint);
+
+
+                        System.Diagnostics.Debug.WriteLine(path.ToSvgPathData());
+
+
+
                         path.Reset();
                     }
             }

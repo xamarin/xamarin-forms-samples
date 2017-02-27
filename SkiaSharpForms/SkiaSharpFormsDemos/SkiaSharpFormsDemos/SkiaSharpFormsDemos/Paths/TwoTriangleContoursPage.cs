@@ -5,7 +5,7 @@ using Xamarin.Forms;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 
-namespace SkiaSharpFormsDemos.LinesAndPaths
+namespace SkiaSharpFormsDemos.Paths
 {
     public class TwoTriangleContoursPage : ContentPage
     {

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:InteractivePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SkiaSharpFormsDemos.Curves"
+                          xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:tt="clr-namespace:TouchTracking"
+
+             x:Class="SkiaSharpFormsDemos.Curves.AngleArcPage"
+             Title="Angle Arc">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Label">
+                    <Setter Property="HorizontalTextAlignment" Value="Center" />
+                </Style>
+
+                <Style TargetType="Slider">
+                    <Setter Property="Margin" Value="20, 0" />
+                    <Setter Property="Maximum" Value="500" />
+                    <Setter Property="Minimum" Value="100" />
+                </Style>
+            </ResourceDictionary>
+        </Grid.Resources>
+
+        <Slider x:Name="startAngleSlider"
+                Grid.Row="0"
+                Margin="20, 0"
+                Maximum="360"
+                ValueChanged="sliderValueChanged" />
+
+        <Label Text="{Binding Source={x:Reference startAngleSlider},
+                              Path=Value,
+                              StringFormat='Start Angle = {0:F0}'}"
+               Grid.Row="1" />
+
+        <Slider x:Name="sweepAngleSlider"
+                Grid.Row="2"
+                Margin="20, 0"
+                Minimum="-360"
+                Maximum="360"
+                ValueChanged="sliderValueChanged" />
+
+        <Label Text="{Binding Source={x:Reference sweepAngleSlider},
+                              Path=Value,
+                              StringFormat='Sweep Angle = {0:F0}'}"
+               Grid.Row="3" />
+
+        <Grid BackgroundColor="White"
+              Grid.Row="4">
+
+            <skia:SKCanvasView x:Name="canvasView"
+                           PaintSurface="OnCanvasViewPaintSurface" />
+            <Grid.Effects>
+                <tt:TouchEffect Capture="True"
+                            TouchAction="OnTouchEffectAction" />
+            </Grid.Effects>
+        </Grid>
+    </Grid>
+
+
+
+
+
+
+</local:InteractivePage>

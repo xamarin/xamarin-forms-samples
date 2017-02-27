@@ -5,13 +5,13 @@ using Xamarin.Forms;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 
-namespace SkiaSharpFormsDemos.LinesAndPaths
+namespace SkiaSharpFormsDemos.Paths
 {
-    public class StrokeJoinsPage : ContentPage
+    public class StrokeCapsPage : ContentPage
     {
-        public StrokeJoinsPage()
+        public StrokeCapsPage()
         {
-            Title = "Stroke Joins";
+            Title = "Stroke Caps";
 
             SKCanvasView canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;
@@ -29,8 +29,8 @@ namespace SkiaSharpFormsDemos.LinesAndPaths
             SKPaint textPaint = new SKPaint
             {
                 Color = SKColors.Black,
-                TextSize = 75,
-                TextAlign = SKTextAlign.Right
+                TextSize = 75, 
+                TextAlign = SKTextAlign.Center
             };
 
             SKPaint thickLinePaint = new SKPaint
@@ -47,29 +47,24 @@ namespace SkiaSharpFormsDemos.LinesAndPaths
                 StrokeWidth = 2
             };
 
-            float xText = info.Width - 100;
+            float xText = info.Width / 2;
             float xLine1 = 100;
             float xLine2 = info.Width - xLine1;
-            float y = 2 * textPaint.FontSpacing;
+            float y = textPaint.FontSpacing;
 
-            foreach (SKStrokeJoin strokeJoin in Enum.GetValues(typeof(SKStrokeJoin)))
+            foreach (SKStrokeCap strokeCap in Enum.GetValues(typeof(SKStrokeCap)))
             {
                 // Display text
-                canvas.DrawText(strokeJoin.ToString().Replace("Mitter", "Miter"), xText, y, textPaint);
-
-                // Create path
-                SKPath path = new SKPath();
-                path.MoveTo(xLine1, y - 80);
-                path.LineTo(xLine1, y + 80);
-                path.LineTo(xLine2, y + 80);
+                canvas.DrawText(strokeCap.ToString(), xText, y, textPaint);
+                y += textPaint.FontSpacing;
 
                 // Display thick line
-                thickLinePaint.StrokeJoin = strokeJoin;
-                canvas.DrawPath(path, thickLinePaint);
+                thickLinePaint.StrokeCap = strokeCap;
+                canvas.DrawLine(xLine1, y, xLine2, y, thickLinePaint);
 
                 // Display thin line
-                canvas.DrawPath(path, thinLinePaint);
-                y += 3 * textPaint.FontSpacing;
+                canvas.DrawLine(xLine1, y, xLine2, y, thinLinePaint);
+                y += 2 * textPaint.FontSpacing;
             }
         }
     }
