@@ -24,9 +24,9 @@ namespace TodoAWSSimpleDB
 			await Navigation.PopAsync();
 		}
 
-		void OnCancelActivated (object sender, EventArgs e)
+		async void OnCancelActivated (object sender, EventArgs e)
 		{
-			Navigation.PopAsync();
+			await Navigation.PopAsync();
 		}
 
 		void OnSpeakActivated (object sender, EventArgs e)

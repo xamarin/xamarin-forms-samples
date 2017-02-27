@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Collections.Generic;
 
 namespace TodoAWSSimpleDB
@@ -8,8 +7,8 @@ namespace TodoAWSSimpleDB
 	{
 		Task<List<TodoItem>> RefreshDataAsync();
 
-		Task SaveTodoItemAsync (TodoItem item);
+		Task SaveTodoItemAsync(TodoItem item);
 
-		Task DeleteTodoItemAsync (TodoItem id);
+		Task DeleteTodoItemAsync(TodoItem id);
 	}
 }
