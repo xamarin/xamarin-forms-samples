@@ -85,6 +85,35 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Paths.AnimatedSpiralPage}" />
             </TableSection>
+            
+            <TableSection Title="Matrix Transforms">
+                <TextCell Text="Accumulated Translate"
+                          Detail=" "
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.AccumulatedTranslatePage}" />
+
+                <TextCell Text="Basic Scaling"
+                          Detail="-"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.BasicScalingPage}" />
+
+                <TextCell Text="Centered Scaling"
+                          Detail="-"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.CenteredScalingPage}" />
+
+
+
+
+
+
+
+                <TextCell Text="Test Text Scaling"
+                          Detail="-"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.TestTextScalingPage}" />
+
+            </TableSection>
 
             <TableSection Title="Curves (Splines &amp; Arcs)">
                 <TextCell Text="Bézier Spline"
@@ -111,6 +140,16 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.SvgArcPage}" />
 
+                <TextCell Text="Arc Infinity"
+                          Detail="-"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.ArcInfinityPage}" />
+
+                <TextCell Text="Analog Clock"
+                          Detail="-"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.AnalogClockPage}" />
+
                 <TextCell Text="Conic Spline"
                           Detail=""
                           Command="{Binding NavigateCommand}"
@@ -118,18 +157,6 @@
             </TableSection>
 
 
-            <TableSection Title="Matrix Transforms">
-                <TextCell Text="Accumulated Translate"
-                          Detail=" "
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Transforms.AccumulatedTranslatePage}" />
-
-                <TextCell Text="Analog Clock"
-                          Detail="-"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Transforms.AnalogClockPage}" />
-
-            </TableSection>
 
 
 

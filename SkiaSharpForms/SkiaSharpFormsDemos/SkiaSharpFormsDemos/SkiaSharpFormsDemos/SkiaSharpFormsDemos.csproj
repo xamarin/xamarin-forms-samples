@@ -92,7 +92,15 @@
     <Compile Include="TouchActionType.cs" />
     <Compile Include="TouchEffect.cs" />
     <Compile Include="Transforms\AccumulatedTranslatePage.cs" />
-    <Compile Include="Transforms\AnalogClockPage.cs" />
+    <Compile Include="Curves\AnalogClockPage.cs" />
+    <Compile Include="Curves\ArcInfinityPage.cs" />
+    <Compile Include="Transforms\BasicScalingPage.xaml.cs">
+      <DependentUpon>BasicScalingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transforms\CenteredScalingPage.xaml.cs">
+      <DependentUpon>CenteredScalingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transforms\TestTextScalingPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SkiaSharp, Version=1.56.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
@@ -197,7 +205,18 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Transforms\BasicScalingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Transforms\CenteredScalingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
