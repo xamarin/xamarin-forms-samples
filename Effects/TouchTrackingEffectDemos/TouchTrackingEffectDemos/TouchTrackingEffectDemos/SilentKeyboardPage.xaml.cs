@@ -10,7 +10,7 @@ namespace TouchTrackingEffectDemos
             InitializeComponent();
         }
 
-        void OnKeyStatus(object sender, EventArgs args)
+        void OnKeyStatusChanged(object sender, EventArgs args)
         {
 
         }
