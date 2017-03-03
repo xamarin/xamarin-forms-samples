@@ -109,13 +109,16 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Info.plist" />
+    <None Include="Info.plist">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="PicturePickerImplementation.cs" />
     <Compile Include="TextToSpeech_iOS.cs" />
     <Compile Include="BatteryImplementation.cs" />
     <Compile Include="DeviceOrientationImplementation.cs" />
