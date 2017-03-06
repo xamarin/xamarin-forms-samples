@@ -11,7 +11,6 @@ using DependencyServiceSample.Droid;
 [assembly: Xamarin.Forms.Dependency (typeof (DeviceOrientationImplementation))]
 namespace DependencyServiceSample.Droid
 {
-	
 	public class DeviceOrientationImplementation : IDeviceOrientation
 	{
 		public DeviceOrientationImplementation() { }

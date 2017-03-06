@@ -117,7 +117,6 @@ namespace DependencyServiceSample
             {
                 pickPictureButton.IsEnabled = false;
                 Stream stream = await DependencyService.Get<IPicturePicker>().GetImageStreamAsync();
-   //             pickPictureButton.IsEnabled = true;
 
                 if (stream != null)
                 {
@@ -126,6 +125,7 @@ namespace DependencyServiceSample
                         Source = ImageSource.FromStream(() => stream),
                         BackgroundColor = Color.Gray
                     };
+
                     TapGestureRecognizer recognizer = new TapGestureRecognizer();
                     recognizer.Tapped += (sender2, args) =>
                     {
@@ -133,6 +133,7 @@ namespace DependencyServiceSample
                         pickPictureButton.IsEnabled = true;
                     };
                     image.GestureRecognizers.Add(recognizer);
+
                     (MainPage as ContentPage).Content = image;
                 }
                 else
