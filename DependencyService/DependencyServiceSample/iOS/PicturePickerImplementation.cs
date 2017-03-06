@@ -1,15 +1,15 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
 using Foundation;
 using UIKit;
 
-using DependencyServiceSample.iOS;
-using CoreImage;
+using Xamarin.Forms;
 
-[assembly: Xamarin.Forms.Dependency (typeof (PicturePickerImplementation))]
+using DependencyServiceSample.iOS;
+
+[assembly: Dependency (typeof (PicturePickerImplementation))]
 
 namespace DependencyServiceSample.iOS
 {
@@ -20,66 +20,44 @@ namespace DependencyServiceSample.iOS
 
         public Task<Stream> GetImageStreamAsync()
         {
-            imagePicker = new UIImagePickerController();
-            imagePicker.SourceType = UIImagePickerControllerSourceType.PhotoLibrary;
-            imagePicker.MediaTypes = UIImagePickerController.AvailableMediaTypes(UIImagePickerControllerSourceType.PhotoLibrary);
+            // Create and define UIImagePickerController
+            imagePicker = new UIImagePickerController
+            {
+                SourceType = UIImagePickerControllerSourceType.PhotoLibrary,
+                MediaTypes = UIImagePickerController.AvailableMediaTypes(UIImagePickerControllerSourceType.PhotoLibrary)
+            };
+
+            // Set event handlers
             imagePicker.FinishedPickingMedia += OnImagePickerFinishedPickingMedia;
             imagePicker.Canceled += OnImagePickerCancelled;
 
-            taskCompletionSource = new TaskCompletionSource<Stream>();
-
-            //      UIPopoverController popover = new UIPopoverController(imagePicker);
-
+            // Present UIImagePickerController;
             UIWindow window = UIApplication.SharedApplication.KeyWindow;
-       //     UIViewController rootViewController = window.RootViewController;
-         //   var pvc = rootViewController.PresentedViewController;
+            var viewController = window.RootViewController;
+            viewController.PresentModalViewController(imagePicker, true);
 
-
-         //   var window = UIApplication.SharedApplication.KeyWindow;
-            var vc = window.RootViewController;
-
-
-/*
-            while (vc.PresentedViewController != null)
-            {
-                vc = vc.PresentedViewController;
-            }
-*/
-            // Present
-
-            vc.PresentModalViewController(imagePicker, true);
-
-
-
-        //    vc.NavigationController.PresentModalViewController(imagePicker, true);
-
-            //     UINavigationController navController = new UINavigationController();
-            //     navController.PresentModalViewController(imagePicker, true);
-
-
-
+            // Return Task object
+            taskCompletionSource = new TaskCompletionSource<Stream>();
             return taskCompletionSource.Task;
         }
 
         void OnImagePickerFinishedPickingMedia(object sender, UIImagePickerMediaPickedEventArgs args)
         {
-            // TODO: Check that image and not video!!!!
+            UIImage image = args.EditedImage ?? args.OriginalImage;
 
-            // TODO: Check for edited image first!!!!
+            if (image != null)
+            {
+                // Convert UIImage to .NET Stream object
+                NSData data = image.AsJPEG(1);
+                Stream stream = data.AsStream();
 
-            // TODO: Can the orienation be fixed?????
-
-            UIImage image = args.OriginalImage;
-
-            var x = image.Orientation;
-
-
-            
-
-            NSData data = image.AsPNG();
-            Stream stream = data.AsStream();
-
-            taskCompletionSource.SetResult(stream);
+                // Set the Stream as the completion of the Task
+                taskCompletionSource.SetResult(stream);
+            }
+            else
+            {
+                taskCompletionSource.SetResult(null);
+            }
             imagePicker.DismissModalViewController(true);
         }
 
