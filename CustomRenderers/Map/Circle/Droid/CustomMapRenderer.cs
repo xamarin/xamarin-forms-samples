@@ -13,7 +13,7 @@ namespace MapOverlay.Droid
 		GoogleMap map;
 		CustomCircle circle;
 
-		protected override void OnElementChanged (Xamarin.Forms.Platform.Android.ElementChangedEventArgs<View> e)
+		protected override void OnElementChanged (Xamarin.Forms.Platform.Android.ElementChangedEventArgs<Xamarin.Forms.Maps.Map> e)
 		{
 			base.OnElementChanged (e);
 
