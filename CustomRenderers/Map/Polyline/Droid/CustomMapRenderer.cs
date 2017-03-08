@@ -15,7 +15,7 @@ namespace MapOverlay.Droid
 		GoogleMap map;
 		List<Position> routeCoordinates;
 
-		protected override void OnElementChanged (Xamarin.Forms.Platform.Android.ElementChangedEventArgs<View> e)
+		protected override void OnElementChanged (Xamarin.Forms.Platform.Android.ElementChangedEventArgs<Map> e)
 		{
 			base.OnElementChanged (e);
 
