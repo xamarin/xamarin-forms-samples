@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>NSPhotoLibraryUsageDescription</key>
-	<string>Picture Picker uses photo library</string>
-    
-	<key>CFBundleDisplayName</key>
+    <string>Picture Picker uses photo library</string>
+
+    <key>CFBundleDisplayName</key>
 	<string>DependencyServiceSample</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.xamarin.dependencyservicesample</string>
