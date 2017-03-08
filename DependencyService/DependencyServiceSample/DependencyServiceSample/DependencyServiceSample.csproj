@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DependencyServiceSample.cs" />
+    <Compile Include="IPicturePicker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ITextToSpeech.cs" />
     <Compile Include="IBattery.cs" />

@@ -8,7 +8,6 @@ namespace DependencyServiceSample.iOS
 {
 	public class BatteryImplementation : IBattery
 	{
-		NSObject batteryLevel, batteryState;
 		public BatteryImplementation ()
 		{
 			UIDevice.CurrentDevice.BatteryMonitoringEnabled = true;
