@@ -92,6 +92,18 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.AccumulatedTranslatePage}" />
 
+                <TextCell Text="Translate Text Effects"
+                          Detail=" "
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.TranslateTextEffectsPage}" />
+                
+                <TextCell Text="Hendecagram"
+                          Detail="Draw an 11-pointed star and random locations"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.HendecagramPage}" />
+                
+                
+
                 <TextCell Text="Basic Scaling"
                           Detail="-"
                           Command="{Binding NavigateCommand}"
@@ -114,52 +126,6 @@
                           CommandParameter="{x:Type local:Transforms.TestTextScalingPage}" />
 
             </TableSection>
-
-            <TableSection Title="Curves (Splines &amp; Arcs)">
-                <TextCell Text="Bézier Spline"
-                          Detail="Interactively draw a cubic Bézier spline"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.BezierSplinePage}" />
-
-                <TextCell Text="Quadratic Spline"
-                          Detail="Interactively draw a quadratic Bézier spline"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.QuadraticSplinePage}" />
-
-                <TextCell Text="Angle Arc"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.AngleArcPage}" />
-
-                <TextCell Text="Corner Arc"
-                          Detail=""
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.CornerArcPage}" />
-
-                <TextCell Text="SVG Arc"
-                          Detail=""
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.SvgArcPage}" />
-
-                <TextCell Text="Arc Infinity"
-                          Detail="-"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Transforms.ArcInfinityPage}" />
-
-                <TextCell Text="Analog Clock"
-                          Detail="-"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Transforms.AnalogClockPage}" />
-
-                <TextCell Text="Conic Spline"
-                          Detail=""
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.ConicSplinePage}" />
-            </TableSection>
-
-
-
-
-
         </TableRoot>
     </TableView>
 </ContentPage>

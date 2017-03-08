@@ -28,18 +28,15 @@ namespace SkiaSharpFormsDemos.Transforms
 
             using (SKPaint strokePaint = new SKPaint())
             {
+                strokePaint.Color = SKColors.Black;
                 strokePaint.Style = SKPaintStyle.Stroke;
                 strokePaint.StrokeWidth = 3;
-                SKRect rect = new SKRect(50, 50, 250, 250);
+                SKRect rect = new SKRect(0, 0, 250, 250);
 
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < 20; i++)
                 {
-                    strokePaint.Color = SKColor.FromHsl(i / 10f, 1, 0.5f);
                     canvas.DrawRect(rect, strokePaint);
                     canvas.Translate(10, 50);
-
-
-
                 }
             }
         }

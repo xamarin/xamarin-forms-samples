@@ -100,7 +100,9 @@
     <Compile Include="Transforms\CenteredScalingPage.xaml.cs">
       <DependentUpon>CenteredScalingPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Transforms\HendecagramPage.cs" />
     <Compile Include="Transforms\TestTextScalingPage.cs" />
+    <Compile Include="Transforms\TranslateTextEffectsPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SkiaSharp, Version=1.56.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
