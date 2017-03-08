@@ -100,6 +100,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PicturePickerImplementation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextToSpeech.cs" />
   </ItemGroup>
