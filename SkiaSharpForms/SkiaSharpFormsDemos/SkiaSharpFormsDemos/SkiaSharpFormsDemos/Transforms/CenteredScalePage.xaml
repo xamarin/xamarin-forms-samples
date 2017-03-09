@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
-             x:Class="SkiaSharpFormsDemos.Transforms.BasicScalingPage"
-             Title="Basic Scaling">
+             x:Class="SkiaSharpFormsDemos.Transforms.CenteredScalePage"
+             Title="Centered Scale">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -12,7 +12,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
+
         <Grid.Resources>
             <ResourceDictionary>
                 <Style TargetType="Label">
@@ -21,7 +21,8 @@
 
                 <Style TargetType="Slider">
                     <Setter Property="Margin" Value="20, 0" />
-                    <Setter Property="Maximum" Value="25" />
+                    <Setter Property="Minimum" Value="-10" />
+                    <Setter Property="Maximum" Value="10" />
                 </Style>
             </ResourceDictionary>
         </Grid.Resources>

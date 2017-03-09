@@ -9,12 +9,13 @@ namespace SkiaSharpFormsDemos.Transforms
 {
     public class HendecagramPage : ContentPage
     {
-        public static readonly SKPath hendecagramPath;
+        Random random = new Random();
+        public static readonly SKPath HendecagramPath;
 
         static HendecagramPage()
         {
             // Create 11-pointed star
-            hendecagramPath = new SKPath();
+            HendecagramPath = new SKPath();
             for (int i = 0; i < 11; i++)
             {
                 double angle = 5 * i * 2 * Math.PI / 11;
@@ -22,17 +23,15 @@ namespace SkiaSharpFormsDemos.Transforms
                                         -100 * (float)Math.Cos(angle));
                 if (i == 0)
                 {
-                    hendecagramPath.MoveTo(pt);
+                    HendecagramPath.MoveTo(pt);
                 }
                 else
                 {
-                    hendecagramPath.LineTo(pt);
+                    HendecagramPath.LineTo(pt);
                 }
             }
-            hendecagramPath.Close();
+            HendecagramPath.Close();
         }
-
-        Random random = new Random();
 
         public HendecagramPage()
         {
@@ -68,7 +67,7 @@ namespace SkiaSharpFormsDemos.Transforms
 
                     canvas.Save();
                     canvas.Translate(x, y);
-                    canvas.DrawPath(hendecagramPath, paint);
+                    canvas.DrawPath(HendecagramPath, paint);
                     canvas.Restore();
                 }
             }

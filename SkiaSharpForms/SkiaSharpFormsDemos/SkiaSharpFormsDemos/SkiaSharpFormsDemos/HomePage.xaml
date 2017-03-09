@@ -101,22 +101,31 @@
                           Detail="Draw an 11-pointed star and random locations"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.HendecagramPage}" />
-                
-                
 
-                <TextCell Text="Basic Scaling"
+                <TextCell Text="Hendecagram Animation"
+                          Detail="Rotate the 11-pointed star in a circle"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.HendecagramAnimationPage}" />
+                
+                <TextCell Text="Basic Scale"
                           Detail="-"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Transforms.BasicScalingPage}" />
-
-                <TextCell Text="Centered Scaling"
+                          CommandParameter="{x:Type local:Transforms.BasicScalePage}" />
+                
+                <TextCell Text="Centered Scale"
                           Detail="-"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Transforms.CenteredScalingPage}" />
+                          CommandParameter="{x:Type local:Transforms.CenteredScalePage}" />
 
+                <TextCell Text="Anisotropic Scaling"
+                          Detail="-"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.AnisotropicScalingPage}" />
 
-
-
+                <TextCell Text="Anisotropic Text"
+                          Detail="-"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.AnisotropicTextPage}" />
 
 
 

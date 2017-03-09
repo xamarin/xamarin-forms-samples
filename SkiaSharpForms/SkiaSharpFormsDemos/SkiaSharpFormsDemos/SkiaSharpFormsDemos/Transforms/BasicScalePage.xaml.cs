@@ -11,9 +11,9 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Transforms
 {
-    public partial class BasicScalingPage : ContentPage
+    public partial class BasicScalePage : ContentPage
     {
-        public BasicScalingPage()
+        public BasicScalePage()
         {
             InitializeComponent();
 
@@ -52,7 +52,7 @@ namespace SkiaSharpFormsDemos.Transforms
             })
             {
                 canvas.Scale((float)xScaleSlider.Value,
-                             (float)yScaleSlider.Value);        // Only the canvas, nothing in paint.
+                             (float)yScaleSlider.Value);
 
                 SKRect textBounds = new SKRect();
                 textPaint.MeasureText(Title, ref textBounds);

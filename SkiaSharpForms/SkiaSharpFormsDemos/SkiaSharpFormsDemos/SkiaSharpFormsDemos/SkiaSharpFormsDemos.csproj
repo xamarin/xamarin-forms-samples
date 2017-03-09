@@ -94,12 +94,15 @@
     <Compile Include="Transforms\AccumulatedTranslatePage.cs" />
     <Compile Include="Curves\AnalogClockPage.cs" />
     <Compile Include="Curves\ArcInfinityPage.cs" />
-    <Compile Include="Transforms\BasicScalingPage.xaml.cs">
-      <DependentUpon>BasicScalingPage.xaml</DependentUpon>
+    <Compile Include="Transforms\AnisotropicScalingPage.cs" />
+    <Compile Include="Transforms\AnisotropicTextPage.cs" />
+    <Compile Include="Transforms\BasicScalePage.xaml.cs">
+      <DependentUpon>BasicScalePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Transforms\CenteredScalingPage.xaml.cs">
-      <DependentUpon>CenteredScalingPage.xaml</DependentUpon>
+    <Compile Include="Transforms\CenteredScalePage.xaml.cs">
+      <DependentUpon>CenteredScalePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Transforms\HendecagramAnimationPage.cs" />
     <Compile Include="Transforms\HendecagramPage.cs" />
     <Compile Include="Transforms\TestTextScalingPage.cs" />
     <Compile Include="Transforms\TranslateTextEffectsPage.cs" />
@@ -208,13 +211,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Transforms\BasicScalingPage.xaml">
+    <EmbeddedResource Include="Transforms\BasicScalePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Transforms\CenteredScalingPage.xaml">
+    <EmbeddedResource Include="Transforms\CenteredScalePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

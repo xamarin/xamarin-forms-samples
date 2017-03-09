@@ -7,9 +7,9 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Transforms
 {
-    public partial class CenteredScalingPage : ContentPage
+    public partial class CenteredScalePage : ContentPage
     {
-        public CenteredScalingPage()
+        public CenteredScalePage()
         {
             InitializeComponent();
 
@@ -51,10 +51,12 @@ namespace SkiaSharpFormsDemos.Transforms
                 textPaint.MeasureText(Title, ref textBounds);
                 float margin = (info.Width - textBounds.Width) / 2;
 
-                canvas.Scale((float)xScaleSlider.Value,
-                             (float)yScaleSlider.Value,
-                             margin + textBounds.Width / 2,
-                             margin + textBounds.Height / 2);
+                float sx = (float)xScaleSlider.Value;
+                float sy = (float)yScaleSlider.Value;
+                float px = margin + textBounds.Width / 2;
+                float py = margin + textBounds.Height / 2;
+
+                canvas.Scale(sx, sy, px, py);
 
                 SKRect borderRect = SKRect.Create(new SKPoint(margin, margin), textBounds.Size);
                 canvas.DrawRoundRect(borderRect, 20, 20, strokePaint);
