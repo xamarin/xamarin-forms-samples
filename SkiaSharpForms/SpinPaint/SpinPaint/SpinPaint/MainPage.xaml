@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:tt="clr-namespace:TouchTracking"
+             xmlns:local="clr-namespace:SpinPaint"
+             x:Class="SpinPaint.MainPage">
+    <StackLayout>
+
+        <Label x:Name="titleLabel"
+               Text="SpinPaint"
+               FontSize="24"
+               FontAttributes="Italic"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand" />
+
+        <local:SquareLayout x:Name="canvasViewLayout">
+
+            <skia:SKCanvasView x:Name="canvasView"
+                               PaintSurface="OnCanvasViewPaintSurface" />
+            
+            <local:SquareLayout.Effects>
+                <tt:TouchEffect Capture="True"
+                                TouchAction="OnTouchEffectAction" />
+            </local:SquareLayout.Effects>
+
+        </local:SquareLayout>
+
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="FillAndExpand">
+            <Button Text="One" />
+
+            <Button Text="Two" />
+
+            <Button Text="Three" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>    
