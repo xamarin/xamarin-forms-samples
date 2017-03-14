@@ -42,7 +42,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SquareLayout.cs" />
+    <Compile Include="AspectRatioLayout.cs" />
     <Compile Include="TouchActionEventArgs.cs" />
     <Compile Include="TouchActionEventHandler.cs" />
     <Compile Include="TouchActionType.cs" />

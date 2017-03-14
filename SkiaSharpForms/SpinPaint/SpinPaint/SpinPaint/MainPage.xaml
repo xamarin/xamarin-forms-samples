@@ -14,25 +14,32 @@
                VerticalOptions="CenterAndExpand"
                HorizontalOptions="CenterAndExpand" />
 
-        <local:SquareLayout x:Name="canvasViewLayout">
+        <local:AspectRatioLayout x:Name="canvasViewLayout">
 
             <skia:SKCanvasView x:Name="canvasView"
                                PaintSurface="OnCanvasViewPaintSurface" />
             
-            <local:SquareLayout.Effects>
+            <local:AspectRatioLayout.Effects>
                 <tt:TouchEffect Capture="True"
                                 TouchAction="OnTouchEffectAction" />
-            </local:SquareLayout.Effects>
+            </local:AspectRatioLayout.Effects>
 
-        </local:SquareLayout>
+        </local:AspectRatioLayout>
 
         <StackLayout Orientation="Horizontal"
                      VerticalOptions="FillAndExpand">
-            <Button Text="One" />
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Button">
+                        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                    </Style>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            
+            <Button Text="Clear"
+                    Clicked="OnClearButtonClicked" />
 
-            <Button Text="Two" />
-
-            <Button Text="Three" />
+            <Button Text="Save (yeah, right)" />
         </StackLayout>
     </StackLayout>
 </ContentPage>    

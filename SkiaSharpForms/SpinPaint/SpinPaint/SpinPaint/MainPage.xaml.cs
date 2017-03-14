@@ -15,6 +15,7 @@ namespace SpinPaint
     {
         SKBitmap bitmap;
         SKCanvas bitmapCanvas;
+        int bitmapSize;
 
         SKPaint paint = new SKPaint
         {
@@ -69,7 +70,7 @@ namespace SpinPaint
         {
             float tColor = stopwatch.ElapsedMilliseconds % 10000 / 10000f;
             paint.Color = SKColor.FromHsl(360 * tColor, 100, 50);
-            titleLabel.TextColor = paint.Color.ToFormsColor();
+     //       titleLabel.TextColor = paint.Color.ToFormsColor();
 
             float tAngle = stopwatch.ElapsedMilliseconds % 5000 / 5000f;
             angle = 360 * tAngle;
@@ -83,6 +84,14 @@ namespace SpinPaint
                 float factor = canvasView.CanvasSize.Width / (float)canvasView.Width;
                 SKPoint convertedPoint = new SKPoint(factor * (float)fingerInfo.ThisPosition.X,
                                                      factor * (float)fingerInfo.ThisPosition.Y);
+
+
+
+
+                //float bitmapSize = Math.Min(canvasView.CanvasSize.Width, canvasView.CanvasSize.Height);
+                //float bitmapLeft = canvasView.CanvasSize.Width - bitmapSize;
+                //float bitmapTop = canvasView.CanvasSize.Height - bitmapSize;
+
 
 
                 SKPoint pt0 = matrix.MapPoint(convertedPoint);
@@ -115,20 +124,16 @@ namespace SpinPaint
             SKSurface surface = args.Surface;
             SKCanvas canvas = surface.Canvas;
 
+
             if (bitmap == null)
             {
-                // Note: info.Width == info.Height because
-                //  SKCanvasView is a child of SquareLayout
-                int bitmapSize = info.Width;
+                bitmapSize = Math.Min(info.Width, info.Height);
+                //              int bitmapSize = Math.Min(info.Width, info.Height);
                 bitmap = new SKBitmap(bitmapSize, bitmapSize);
+
                 bitmapCanvas = new SKCanvas(bitmap);
-                SKPath clipPath = new SKPath();
-                clipPath.AddCircle(bitmapSize / 2, bitmapSize / 2, bitmapSize / 2);
-                bitmapCanvas.ClipPath(clipPath);
-                bitmapCanvas.Clear(SKColors.White);
 
-
-                // TODO: Decorate bitmap with circle and quadrant lines
+                PrepBitmap(bitmapCanvas, bitmapSize);
 
                 // TODO: Figure out if bitmap is now wrong size
 
@@ -136,9 +141,50 @@ namespace SpinPaint
 
             }
 
+            float radius = bitmapSize / 2f;
+
             canvas.Clear();
-            canvas.RotateDegrees(angle, info.Width / 2, info.Height / 2);
-            canvas.DrawBitmap(bitmap, 0, 0);
+
+            //      int bitmapLeft = info.Width - bitmapSize;
+            //    int bitmapTop = info.Height - bitmapSize;
+
+            canvas.RotateDegrees(angle, /* bitmapLeft + */ radius, /* bitmapTop + */ radius);
+            canvas.DrawBitmap(bitmap, 0, 0); //  bitmapLeft, bitmapTop);
+        }
+
+        void PrepBitmap(SKCanvas bitmapCanvas, int bitmapSize)
+        {
+            float radius = bitmapSize / 2f;
+   //         bitmapCanvas.ClipPath(new SKPath());
+
+            using (SKPaint paint = new SKPaint())
+            {
+                paint.Style = SKPaintStyle.Fill;
+                paint.Color = SKColors.White;
+
+                bitmapCanvas.DrawCircle(radius, radius, radius, paint);
+            }
+
+            using (SKPaint paint = new SKPaint())
+            {
+                paint.Style = SKPaintStyle.Stroke;
+                paint.Color = SKColors.Black;
+                paint.StrokeWidth = 1;
+
+                bitmapCanvas.DrawCircle(radius, radius, radius, paint);
+                bitmapCanvas.DrawLine(radius, 0, radius, bitmapSize, paint);
+                bitmapCanvas.DrawLine(0, radius, bitmapSize, radius, paint);
+            }
+
+            // Set clipping path for all future drawing
+            SKPath clipPath = new SKPath();
+            clipPath.AddCircle(radius, radius, radius);
+            bitmapCanvas.ClipPath(clipPath);
+        }
+
+        void OnClearButtonClicked(object sender, EventArgs args)
+        {
+            PrepBitmap(bitmapCanvas, bitmapSize);
         }
     }
 }
