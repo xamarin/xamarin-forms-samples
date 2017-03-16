@@ -48,29 +48,43 @@ namespace SpinPaint
             switch (args.Type)
             {
                 case TouchActionType.Pressed:
-                    idDictionary.Add(args.Id, new FingerInfo
+                    if (args.IsInContact)
                     {
-                        ThisPosition = args.Location,
-                        LastPosition = new SKPoint(float.PositiveInfinity, float.PositiveInfinity)
-                    });
+                        idDictionary.Add(args.Id, new FingerInfo
+                        {
+                            ThisPosition = args.Location,
+                            LastPosition = new SKPoint(float.PositiveInfinity, float.PositiveInfinity)
+                        });
+                    }
                     break;
 
                 case TouchActionType.Moved:
-                    idDictionary[args.Id].ThisPosition = args.Location;
+                    if (idDictionary.ContainsKey(args.Id))
+                    {
+                        idDictionary[args.Id].ThisPosition = args.Location;
+                    }
                     break;
 
                 case TouchActionType.Released:
                 case TouchActionType.Cancelled:
-                    idDictionary.Remove(args.Id);
+                    if (idDictionary.ContainsKey(args.Id))
+                    {
+                        idDictionary.Remove(args.Id);
+                    }
                     break;
             }
         }
 
         bool OnTimerTick()
         {
+            if (bitmap == null)
+            {
+                return true;
+            }
+
             float tColor = stopwatch.ElapsedMilliseconds % 10000 / 10000f;
             paint.Color = SKColor.FromHsl(360 * tColor, 100, 50);
-     //       titleLabel.TextColor = paint.Color.ToFormsColor();
+            titleLabel.TextColor = paint.Color.ToFormsColor();
 
             float tAngle = stopwatch.ElapsedMilliseconds % 5000 / 5000f;
             angle = 360 * tAngle;
@@ -118,9 +132,13 @@ namespace SpinPaint
             return true;
         }
 
-        void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
+        void OnCanvasViewPaintSurface(object sender, SKPaintGLSurfaceEventArgs args) //  SKPaintSurfaceEventArgs args)
         {
-            SKImageInfo info = args.Info;
+            //          SKImageInfo info = args.Info;
+
+            GRBackendRenderTargetDesc info = args.RenderTarget;
+
+
             SKSurface surface = args.Surface;
             SKCanvas canvas = surface.Canvas;
 
@@ -143,7 +161,7 @@ namespace SpinPaint
 
             float radius = bitmapSize / 2f;
 
-            canvas.Clear();
+            canvas.Clear(SKColors.White);               // not needed with regular
 
             //      int bitmapLeft = info.Width - bitmapSize;
             //    int bitmapTop = info.Height - bitmapSize;

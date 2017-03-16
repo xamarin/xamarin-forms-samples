@@ -5,33 +5,48 @@
              xmlns:tt="clr-namespace:TouchTracking"
              xmlns:local="clr-namespace:SpinPaint"
              x:Class="SpinPaint.MainPage">
-    <StackLayout>
-
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+     
+    <!--<StackLayout>-->
         <Label x:Name="titleLabel"
                Text="SpinPaint"
-               FontSize="24"
+               Grid.Row="0"
+               Margin="0, 20"
+               FontSize="48"
                FontAttributes="Italic"
-               VerticalOptions="CenterAndExpand"
-               HorizontalOptions="CenterAndExpand" />
+               VerticalOptions="Center"
+               HorizontalOptions="Center" />
 
-        <local:AspectRatioLayout x:Name="canvasViewLayout">
+        <local:AspectRatioLayout x:Name="canvasViewLayout"
+                                 Grid.Row="1"
+                                 VerticalOptions="Center">
 
-            <skia:SKCanvasView x:Name="canvasView"
-                               PaintSurface="OnCanvasViewPaintSurface" />
+            <skia:SKGLView x:Name="canvasView"
+                           PaintSurface="OnCanvasViewPaintSurface" />
+
+            <!--<skia:SKCanvasView x:Name="canvasView"
+                               PaintSurface="OnCanvasViewPaintSurface" />-->
             
             <local:AspectRatioLayout.Effects>
                 <tt:TouchEffect Capture="True"
                                 TouchAction="OnTouchEffectAction" />
             </local:AspectRatioLayout.Effects>
-
         </local:AspectRatioLayout>
 
-        <StackLayout Orientation="Horizontal"
-                     VerticalOptions="FillAndExpand">
+        <StackLayout Grid.Row="2"
+                     Orientation="Horizontal"
+                     Margin="0, 20">
             <StackLayout.Resources>
                 <ResourceDictionary>
                     <Style TargetType="Button">
                         <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                        <Setter Property="VerticalOptions" Value="Center" />
                     </Style>
                 </ResourceDictionary>
             </StackLayout.Resources>
@@ -39,7 +54,14 @@
             <Button Text="Clear"
                     Clicked="OnClearButtonClicked" />
 
-            <Button Text="Save (yeah, right)" />
+            <Button Text="Save (TODO)" />
         </StackLayout>
-    </StackLayout>
+    <!--</StackLayout>-->
+
+
+
+    </Grid>
+
+
+
 </ContentPage>    
