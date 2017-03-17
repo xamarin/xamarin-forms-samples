@@ -61,15 +61,15 @@ namespace SkiaSharpFormsDemos.Curves
                 canvas.Translate(info.Width / 2, info.Height / 2);
                 canvas.Scale(Math.Min(info.Width / 200, info.Height / 200));
 
-                // Circle for tick marks
+                // Circle for hour and minute marks
                 SKRect rect = new SKRect(-90, -90, 90, 90);
 
-                // Small tick marks
+                // Minute marks
                 strokePaint.StrokeWidth = 3;
                 strokePaint.PathEffect = SKPathEffect.CreateDash(new float[] { 0, strokePaint.StrokeWidth * 3.14159f }, 0);
                 canvas.DrawOval(rect, strokePaint);
 
-                // Large tick marks
+                // Hour marks
                 strokePaint.StrokeWidth = 6;
                 strokePaint.PathEffect = SKPathEffect.CreateDash(new float[] { 0, strokePaint.StrokeWidth * 2.5f * 3.14159f }, 0);
                 canvas.DrawOval(rect, strokePaint);

@@ -7,9 +7,9 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Transforms
 {
-    public partial class BasicRotatePage : ContentPage
+    public partial class CenteredRotatePage : ContentPage
     {
-        public BasicRotatePage()
+        public CenteredRotatePage()
         {
             InitializeComponent();
         }
@@ -38,9 +38,19 @@ namespace SkiaSharpFormsDemos.Transforms
                 TextSize = 100
             })
             {
-                canvas.RotateDegrees((float)rotateSlider.Value);
-                canvas.DrawText(Title, info.Width / 2, info.Height / 2, textPaint);
+                //          canvas.RotateDegrees((float)rotateSlider.Value, info.Width / 2, info.Height / 2);
+                //         canvas.DrawText(Title, info.Width / 2, info.Height / 2, textPaint);
+
+
+
+                canvas.RotateDegrees((float)rotateSlider.Value, info.Width / 2, info.Height / 2);
+                canvas.Translate(info.Width / 2, info.Height / 2);
+                canvas.DrawText(Title, 0, 0, textPaint);
+
+
+
             }
         }
     }
 }
+

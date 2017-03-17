@@ -57,11 +57,11 @@ namespace SkiaSharpFormsDemos.Transforms
                 fillPaint.Style = SKPaintStyle.Fill;
                 fillPaint.Color = SKColors.Gray;
 
-                // Transform for 100-radius circle in center
-                canvas.Translate(info.Width / 2, info.Height / 2);
-                canvas.Scale(Math.Min(info.Width / 200, info.Height / 200));
+                // Transform for 100-radius circle centered at origin
+                canvas.Translate(info.Width / 2f, info.Height / 2f);
+                canvas.Scale(Math.Min(info.Width / 200f, info.Height / 200f));
 
-                // Tick marks
+                // Hour and minute marks
                 for (int angle = 0; angle < 360; angle += 6)
                 {
                     canvas.DrawCircle(0, -90, angle % 30 == 0 ? 4 : 2, fillPaint);
@@ -74,7 +74,7 @@ namespace SkiaSharpFormsDemos.Transforms
                 strokePaint.StrokeWidth = 20;
                 canvas.Save();
                 canvas.RotateDegrees(30 * dateTime.Hour + dateTime.Minute / 2f);
-                canvas.DrawLine(0, 0, 0, -60, strokePaint);
+                canvas.DrawLine(0, 0, 0, -50, strokePaint);
                 canvas.Restore();
 
                 // Minute hand

@@ -134,13 +134,24 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.BasicRotatePage}" />
 
+                <TextCell Text="Centered Rotate"
+                          Detail="-"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.CenteredRotatePage}" />
+
+                <TextCell Text="Rotate and Revolve"
+                          Detail="-"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.RotateAndRevolvePage}" />
+                
+                
 
                 <TextCell Text="Rotated Text"
                           Detail="Rotate a text string around a center"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.RotatedTextPage}" />
 
-
+                
 
 
 
