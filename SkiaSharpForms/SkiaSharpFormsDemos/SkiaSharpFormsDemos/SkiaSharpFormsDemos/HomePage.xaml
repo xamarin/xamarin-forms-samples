@@ -129,10 +129,27 @@
 
 
 
-                <TextCell Text="Test Text Scaling"
+                <TextCell Text="Basic Rotate"
                           Detail="-"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Transforms.TestTextScalingPage}" />
+                          CommandParameter="{x:Type local:Transforms.BasicRotatePage}" />
+
+
+                <TextCell Text="Rotated Text"
+                          Detail="Rotate a text string around a center"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.RotatedTextPage}" />
+
+
+
+
+
+
+
+                <TextCell Text="Ugly Analog Clock"
+                          Detail="-"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.UglyAnalogClockPage}" />
 
             </TableSection>
         </TableRoot>

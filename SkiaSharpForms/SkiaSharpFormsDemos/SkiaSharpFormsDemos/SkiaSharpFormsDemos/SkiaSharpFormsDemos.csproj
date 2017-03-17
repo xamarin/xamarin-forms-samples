@@ -96,6 +96,9 @@
     <Compile Include="Curves\ArcInfinityPage.cs" />
     <Compile Include="Transforms\AnisotropicScalingPage.cs" />
     <Compile Include="Transforms\AnisotropicTextPage.cs" />
+    <Compile Include="Transforms\BasicRotatePage.xaml.cs">
+      <DependentUpon>BasicRotatePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Transforms\BasicScalePage.xaml.cs">
       <DependentUpon>BasicScalePage.xaml</DependentUpon>
     </Compile>
@@ -104,8 +107,9 @@
     </Compile>
     <Compile Include="Transforms\HendecagramAnimationPage.cs" />
     <Compile Include="Transforms\HendecagramPage.cs" />
-    <Compile Include="Transforms\TestTextScalingPage.cs" />
+    <Compile Include="Transforms\RotatedTextPage.cs" />
     <Compile Include="Transforms\TranslateTextEffectsPage.cs" />
+    <Compile Include="Transforms\UglyAnalogClockPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SkiaSharp, Version=1.56.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
@@ -218,6 +222,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Transforms\CenteredScalePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Transforms\BasicRotatePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
