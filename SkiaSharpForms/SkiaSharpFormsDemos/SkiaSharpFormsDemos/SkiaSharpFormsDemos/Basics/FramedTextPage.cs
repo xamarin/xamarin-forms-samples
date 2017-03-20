@@ -11,7 +11,7 @@ namespace SkiaSharpFormsDemos.Basics
     {
         public FramedTextPage()
         {
-            Title = "Simple Circle";
+            Title = "Framed Text";
 
             SKCanvasView canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;

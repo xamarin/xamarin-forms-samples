@@ -40,6 +40,7 @@
       <DependentUpon>EllipseFillPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Basics\FramedTextPage.cs" />
+    <Compile Include="Basics\OutlinedTextPage.cs" />
     <Compile Include="Curves\AngleArcPage.xaml.cs">
       <DependentUpon>AngleArcPage.xaml</DependentUpon>
     </Compile>
@@ -112,6 +113,13 @@
     <Compile Include="Transforms\HendecagramPage.cs" />
     <Compile Include="Transforms\RotateAndRevolvePage.cs" />
     <Compile Include="Transforms\RotatedTextPage.cs" />
+    <Compile Include="Transforms\SkewAngleExperimentPage.xaml.cs">
+      <DependentUpon>SkewAngleExperimentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transforms\SkewShadowTextPage.cs" />
+    <Compile Include="Transforms\SkewExperimentPage.xaml.cs">
+      <DependentUpon>SkewExperimentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Transforms\TranslateTextEffectsPage.cs" />
     <Compile Include="Transforms\UglyAnalogClockPage.cs" />
   </ItemGroup>
@@ -238,6 +246,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Transforms\CenteredRotatePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Transforms\SkewExperimentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Transforms\SkewAngleExperimentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -26,7 +26,6 @@ namespace SkiaSharpFormsDemos.Transforms
 
             canvas.Clear();
 
-
             float textSize = 150;
 
             using (SKPaint textPaint = new SKPaint())

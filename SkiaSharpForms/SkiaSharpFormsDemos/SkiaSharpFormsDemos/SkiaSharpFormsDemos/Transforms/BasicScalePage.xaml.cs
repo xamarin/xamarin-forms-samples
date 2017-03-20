@@ -35,7 +35,7 @@ namespace SkiaSharpFormsDemos.Transforms
             SKSurface surface = args.Surface;
             SKCanvas canvas = surface.Canvas;
 
-            canvas.Clear(SKColors.SkyBlue);
+            canvas.Clear();
 
             using (SKPaint strokePaint = new SKPaint
             {

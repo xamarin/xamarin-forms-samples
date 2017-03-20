@@ -7,9 +7,9 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Transforms
 {
-    public partial class CenteredRotatePage : ContentPage
+    public partial class SkewExperimentPage : ContentPage
     {
-        public CenteredRotatePage()
+        public SkewExperimentPage()
         {
             InitializeComponent();
         }
@@ -34,23 +34,16 @@ namespace SkiaSharpFormsDemos.Transforms
             {
                 Style = SKPaintStyle.Fill,
                 Color = SKColors.Blue,
-                TextAlign = SKTextAlign.Center,
-                TextSize = 100
+                TextSize = 200
             })
             {
-                //          canvas.RotateDegrees((float)rotateSlider.Value, info.Width / 2, info.Height / 2);
-                //         canvas.DrawText(Title, info.Width / 2, info.Height / 2, textPaint);
+                string text = "SKEW";
+                SKRect textBounds = new SKRect();
+                textPaint.MeasureText(text, ref textBounds);
 
-
-
-                canvas.RotateDegrees((float)rotateSlider.Value, info.Width / 2, info.Height / 2);
-                canvas.Translate(info.Width / 2, info.Height / 2);
-                canvas.DrawText(Title, 0, 0, textPaint);
-
-
-
+                canvas.Skew((float)xSkewSlider.Value, (float)ySkewSlider.Value);
+                canvas.DrawText(text, 0, -textBounds.Top, textPaint);
             }
         }
     }
 }
-

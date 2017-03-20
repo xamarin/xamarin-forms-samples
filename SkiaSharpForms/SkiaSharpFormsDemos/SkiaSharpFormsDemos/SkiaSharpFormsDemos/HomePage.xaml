@@ -37,6 +37,11 @@
                           Detail="Draw a rounded rectangle around a text string"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Basics.FramedTextPage}" />
+
+                <TextCell Text="Outlined Text"
+                          Detail="Outline text characters"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.OutlinedTextPage}" />
             </TableSection>
 
             <TableSection Title="Lines and Paths">
@@ -161,6 +166,21 @@
                           Detail="-"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.UglyAnalogClockPage}" />
+
+                <TextCell Text="Skew Experiment"
+                          Detail="Discover how the skew transform works"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.SkewExperimentPage}" />
+
+                <TextCell Text="Skew Angle Experiment"
+                          Detail="Specify skew in terms of angles"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.SkewAngleExperimentPage}" />
+
+                <TextCell Text="Skew Shadow Text"
+                          Detail="Use the skew transform for a text shadow"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.SkewShadowTextPage}" />
 
             </TableSection>
         </TableRoot>
