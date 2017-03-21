@@ -16,6 +16,10 @@ namespace SkiaSharpFormsDemos.Basics
         Stopwatch stopwatch = new Stopwatch();
         bool pageIsActive;
         float t;
+        SKPaint paint = new SKPaint
+        {
+            Style = SKPaintStyle.Stroke
+        };
 
         public ExpandingCirclesPage()
         {
@@ -41,7 +45,6 @@ namespace SkiaSharpFormsDemos.Basics
                 {
                     stopwatch.Stop();
                 }
-
                 return pageIsActive;
             });
         }
@@ -63,20 +66,15 @@ namespace SkiaSharpFormsDemos.Basics
             SKPoint center = new SKPoint(info.Width / 2, info.Height / 2);
             float baseRadius = Math.Min(info.Width, info.Height) / 12;
 
-            using (SKPaint paint = new SKPaint())
+            for (int circle = 0; circle < 5; circle++)
             {
-                paint.Style = SKPaintStyle.Stroke;
+                float radius = baseRadius * (circle + t);
 
-                for (int circle = 0; circle < 5; circle++)
-                {
-                    float radius = baseRadius * (circle + t);
+                paint.StrokeWidth = baseRadius / 2 * (circle == 0 ? t : 1);
+                paint.Color = new SKColor(0, 0, 255,
+                    (byte)(255 * (circle == 4 ? (1 - t) : 1)));
 
-                    paint.StrokeWidth = baseRadius / 2 * (circle == 0 ? t : 1);
-                    paint.Color = new SKColor(0, 0, 255, 
-                        (byte)(255 * (circle == 4 ? (1 - t) : 1)));
-
-                    canvas.DrawCircle(center.X, center.Y, radius, paint);
-                }
+                canvas.DrawCircle(center.X, center.Y, radius, paint);
             }
         }
     }
