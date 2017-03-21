@@ -39,6 +39,7 @@
     <Compile Include="Basics\EllipseFillPage.xaml.cs">
       <DependentUpon>EllipseFillPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Basics\ExpandingCirclesPage.cs" />
     <Compile Include="Basics\FramedTextPage.cs" />
     <Compile Include="Basics\OutlinedTextPage.cs" />
     <Compile Include="Curves\AngleArcPage.xaml.cs">

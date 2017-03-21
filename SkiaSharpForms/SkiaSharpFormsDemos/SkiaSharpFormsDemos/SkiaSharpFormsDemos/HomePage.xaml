@@ -33,6 +33,11 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Basics.PulsatingEllipsePage}" />
 
+                <TextCell Text="Expanding Circles"
+                          Detail="Animate circles to expand forever"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.ExpandingCirclesPage}" />
+
                 <TextCell Text="Framed Text"
                           Detail="Draw a rounded rectangle around a text string"
                           Command="{Binding NavigateCommand}"

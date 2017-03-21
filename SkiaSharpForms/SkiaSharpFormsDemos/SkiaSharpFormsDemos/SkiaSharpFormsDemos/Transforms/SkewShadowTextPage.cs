@@ -32,7 +32,7 @@ namespace SkiaSharpFormsDemos.Transforms
                 textPaint.TextSize = info.Width / 6;   // empirically determined
 
                 // Common to shadow and text
-                string text = "quirky";
+                string text = "shadow";
                 float xText = 20;
                 float yText = info.Height / 2;
 
