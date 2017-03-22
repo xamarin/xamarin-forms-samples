@@ -7,10 +7,12 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Transforms
 {
+    public class HendecagramArrayPage : ContentPage
     {
         Random random = new Random();
         public static readonly SKPath HendecagramPath;
 
+        static HendecagramArrayPage()
         {
             // Create 11-pointed star
             HendecagramPath = new SKPath();
@@ -31,6 +33,7 @@ namespace SkiaSharpFormsDemos.Transforms
             HendecagramPath.Close();
         }
 
+        public HendecagramArrayPage()
         {
             Title = "Hendecagram";
 
