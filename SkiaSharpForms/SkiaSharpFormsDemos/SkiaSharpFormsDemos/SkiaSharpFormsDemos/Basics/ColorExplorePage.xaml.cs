@@ -25,7 +25,7 @@ namespace SkiaSharpFormsDemos.Basics
             hsvCanvasView.InvalidateSurface();
         }
 
-        void OnHslCanvasViewPaintSurface(object sender, SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs args)
+        void OnHslCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
             SKColor color = SKColor.FromHsl((float)hueSlider.Value, 
                                             (float)saturationSlider.Value, 
@@ -36,7 +36,7 @@ namespace SkiaSharpFormsDemos.Basics
                                           color.Red, color.Green, color.Blue);
         }
 
-        void OnHsvCanvasViewPaintSurface(object sender, SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs args)
+        void OnHsvCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
             SKColor color = SKColor.FromHsv((float)hueSlider.Value, 
                                             (float)saturationSlider.Value,

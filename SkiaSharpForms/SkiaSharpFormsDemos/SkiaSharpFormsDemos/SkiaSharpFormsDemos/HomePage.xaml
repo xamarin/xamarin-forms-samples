@@ -142,7 +142,10 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.AnisotropicTextPage}" />
 
-
+                <TextCell Text="Isotropic Scaling"
+                          Detail="-"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.IsotropicScalingPage}" />
 
                 <TextCell Text="Basic Rotate"
                           Detail="-"

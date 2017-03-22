@@ -29,25 +29,16 @@ namespace SkiaSharpFormsDemos.Transforms
             SKPath path = HendecagramArrayPage.HendecagramPath;
             SKRect pathBounds = path.Bounds;
 
-            using (SKPaint fillPaint = new SKPaint
+            using (SKPaint fillPaint = new SKPaint())
             {
-                Style = SKPaintStyle.Fill,
-                Color = SKColors.Pink
-            })
-            using (SKPaint strokePaint = new SKPaint
-            {
-                Style = SKPaintStyle.Stroke,
-                Color = SKColors.Blue,
-                StrokeWidth = 3,
-                StrokeJoin = SKStrokeJoin.Round
-            })
-            {
-                canvas.Scale(info.Width / pathBounds.Width,
-                             info.Height / pathBounds.Height);
+                fillPaint.Style = SKPaintStyle.Fill;
+
+                float scale = Math.Min(info.Width / pathBounds.Width,
+                                       info.Height / pathBounds.Height);
                 canvas.Translate(-pathBounds.Left, -pathBounds.Top);
 
                 canvas.DrawPath(path, fillPaint);
-                canvas.DrawPath(path, strokePaint);
+          //      canvas.DrawPath(path, strokePaint);
             }
         }
     }
