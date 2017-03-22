@@ -31,12 +31,16 @@ namespace SkiaSharpFormsDemos.Transforms
                 strokePaint.Color = SKColors.Black;
                 strokePaint.Style = SKPaintStyle.Stroke;
                 strokePaint.StrokeWidth = 3;
-                SKRect rect = new SKRect(0, 0, 250, 250);
 
-                for (int i = 0; i < 20; i++)
+                int rectangleCount = 20;
+                SKRect rect = new SKRect(0, 0, 250, 250);
+                float xTranslate = (info.Width - rect.Width) / (rectangleCount - 1);
+                float yTranslate = (info.Height - rect.Height) / (rectangleCount - 1);
+
+                for (int i = 0; i < rectangleCount; i++)
                 {
                     canvas.DrawRect(rect, strokePaint);
-                    canvas.Translate(10, 50);
+                    canvas.Translate(xTranslate, yTranslate);
                 }
             }
         }

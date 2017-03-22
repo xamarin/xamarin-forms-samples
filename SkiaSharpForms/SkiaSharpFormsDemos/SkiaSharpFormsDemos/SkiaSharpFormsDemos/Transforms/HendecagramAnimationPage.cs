@@ -71,7 +71,7 @@ namespace SkiaSharpFormsDemos.Transforms
                 float x = radius * (float)Math.Sin(Math.PI * angle / 180);
                 float y = -radius * (float)Math.Cos(Math.PI * angle / 180);
                 canvas.Translate(x, y);
-                canvas.DrawPath(HendecagramPage.HendecagramPath, paint);
+                canvas.DrawPath(HendecagramArrayPage.HendecagramPath, paint);
             }
         }
     }

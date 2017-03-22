@@ -7,12 +7,10 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Transforms
 {
-    public class HendecagramPage : ContentPage
     {
         Random random = new Random();
         public static readonly SKPath HendecagramPath;
 
-        static HendecagramPage()
         {
             // Create 11-pointed star
             HendecagramPath = new SKPath();
@@ -33,7 +31,6 @@ namespace SkiaSharpFormsDemos.Transforms
             HendecagramPath.Close();
         }
 
-        public HendecagramPage()
         {
             Title = "Hendecagram";
 
@@ -52,24 +49,20 @@ namespace SkiaSharpFormsDemos.Transforms
 
             using (SKPaint paint = new SKPaint())
             {
-                paint.Style = SKPaintStyle.Fill;
+                for (int x = 100; x < info.Width + 100; x += 200)
+                    for (int y = 100; y < info.Height + 100; y += 200)
+                    {
+                        // Set random color
+                        byte[] bytes = new byte[3];
+                        random.NextBytes(bytes);
+                        paint.Color = new SKColor(bytes[0], bytes[1], bytes[2]);
 
-                for (int i = 0; i < 10; i++)
-                {
-                    // Set random color
-                    byte[] bytes = new byte[4];
-                    random.NextBytes(bytes);
-                    paint.Color = new SKColor(bytes[0], bytes[1], bytes[2], bytes[3]);
-
-                    // Set random location
-                    int x = random.Next(100, info.Width - 100);
-                    int y = random.Next(100, info.Height - 100);
-
-                    canvas.Save();
-                    canvas.Translate(x, y);
-                    canvas.DrawPath(HendecagramPath, paint);
-                    canvas.Restore();
-                }
+                        // Display the hendecagram
+                        canvas.Save();
+                        canvas.Translate(x, y);
+                        canvas.DrawPath(HendecagramPath, paint);
+                        canvas.Restore();
+                    }
             }
         }
     }

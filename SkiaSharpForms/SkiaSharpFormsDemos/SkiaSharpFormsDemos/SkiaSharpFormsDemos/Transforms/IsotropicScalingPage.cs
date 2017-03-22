@@ -7,11 +7,11 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Transforms
 {
-    public class AnisotropicScalingPage : ContentPage
+    public class IsotropicScalingPage : ContentPage
     {
-        public AnisotropicScalingPage()
+        public IsotropicScalingPage()
         {
-            Title = "Anisotropic Scaling";
+            Title = "Isotropic Scaling";
 
             SKCanvasView canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;
@@ -42,7 +42,7 @@ namespace SkiaSharpFormsDemos.Transforms
                 StrokeJoin = SKStrokeJoin.Round
             })
             {
-                canvas.Scale(info.Width / pathBounds.Width, 
+                canvas.Scale(info.Width / pathBounds.Width,
                              info.Height / pathBounds.Height);
                 canvas.Translate(-pathBounds.Left, -pathBounds.Top);
 

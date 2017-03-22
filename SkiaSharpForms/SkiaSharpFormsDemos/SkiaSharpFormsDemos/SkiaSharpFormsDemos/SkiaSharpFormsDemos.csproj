@@ -36,31 +36,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Basics\ColorExplorePage.xaml.cs">
+      <DependentUpon>ColorExplorePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Basics\EllipseFillPage.xaml.cs">
       <DependentUpon>EllipseFillPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Basics\ExpandingCirclesPage.cs" />
     <Compile Include="Basics\FramedTextPage.cs" />
     <Compile Include="Basics\OutlinedTextPage.cs" />
-    <Compile Include="Curves\AngleArcPage.xaml.cs">
-      <DependentUpon>AngleArcPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Curves\BezierSplinePage.xaml.cs">
-      <DependentUpon>BezierSplinePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Curves\ConicSplinePage.xaml.cs">
-      <DependentUpon>ConicSplinePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Curves\CornerArcPage.xaml.cs">
-      <DependentUpon>CornerArcPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Curves\InteractivePage.cs" />
-    <Compile Include="Curves\QuadraticSplinePage.xaml.cs">
-      <DependentUpon>QuadraticSplinePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Curves\SvgArcPage.xaml.cs">
-      <DependentUpon>SvgArcPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="TouchPoint.cs" />
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -94,8 +78,6 @@
     <Compile Include="TouchActionType.cs" />
     <Compile Include="TouchEffect.cs" />
     <Compile Include="Transforms\AccumulatedTranslatePage.cs" />
-    <Compile Include="Curves\AnalogClockPage.cs" />
-    <Compile Include="Curves\ArcInfinityPage.cs" />
     <Compile Include="Transforms\AnisotropicScalingPage.cs" />
     <Compile Include="Transforms\AnisotropicTextPage.cs" />
     <Compile Include="Transforms\BasicRotatePage.xaml.cs">
@@ -111,7 +93,8 @@
       <DependentUpon>CenteredScalePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Transforms\HendecagramAnimationPage.cs" />
-    <Compile Include="Transforms\HendecagramPage.cs" />
+    <Compile Include="Transforms\HendecagramArrayPage.cs" />
+    <Compile Include="Transforms\IsotropicScalingPage.cs" />
     <Compile Include="Transforms\RotateAndRevolvePage.cs" />
     <Compile Include="Transforms\RotatedTextPage.cs" />
     <Compile Include="Transforms\SkewAngleExperimentPage.xaml.cs">
@@ -192,42 +175,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Curves\BezierSplinePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Curves\ConicSplinePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Curves\QuadraticSplinePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Curves\SvgArcPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Curves\CornerArcPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Curves\AngleArcPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Transforms\BasicScalePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
@@ -259,6 +206,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Transforms\SkewAngleExperimentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Basics\ColorExplorePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
