@@ -33,7 +33,7 @@
 
         <Label Text="{Binding Source={x:Reference xSkewSlider},
                               Path=Value,
-                              StringFormat='Horizontal Skew = {0:F0}'}"
+                              StringFormat='Horizontal Skew = {0:F0}°'}"
                Grid.Row="1" />
 
         <Slider x:Name="ySkewSlider"
@@ -42,7 +42,7 @@
 
         <Label Text="{Binding Source={x:Reference ySkewSlider},
                               Path=Value,
-                              StringFormat='Vertical Skew = {0:F0}'}"
+                              StringFormat='Vertical Skew = {0:F0}°'}"
                Grid.Row="3" />
 
         <skia:SKCanvasView x:Name="canvasView"

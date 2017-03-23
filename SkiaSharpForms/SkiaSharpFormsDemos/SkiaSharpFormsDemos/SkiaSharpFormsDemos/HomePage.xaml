@@ -102,6 +102,7 @@
             </TableSection>
             
             <TableSection Title="Transforms">
+                <!-- Translate -->
                 <TextCell Text="Accumulated Translate"
                           Detail="Discover how transforms are accumulated"
                           Command="{Binding NavigateCommand}"
@@ -122,64 +123,59 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.HendecagramAnimationPage}" />
                 
+                <!-- Scale -->
                 <TextCell Text="Basic Scale"
-                          Detail="-"
+                          Detail="Experiment with the scale transform"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.BasicScalePage}" />
                 
                 <TextCell Text="Centered Scale"
-                          Detail="-"
+                          Detail="Scale relative to a specified center point"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.CenteredScalePage}" />
 
                 <TextCell Text="Anisotropic Scaling"
-                          Detail="-"
+                          Detail="Stretch a graphics object to fill the page"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.AnisotropicScalingPage}" />
 
                 <TextCell Text="Anisotropic Text"
-                          Detail="-"
+                          Detail="Stretch text to fill the page"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.AnisotropicTextPage}" />
 
                 <TextCell Text="Isotropic Scaling"
-                          Detail="-"
+                          Detail="Preserve the aspect ratios when scaling"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.IsotropicScalingPage}" />
 
+                <!-- Rotate -->
                 <TextCell Text="Basic Rotate"
-                          Detail="-"
+                          Detail="Experiment with rotation"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.BasicRotatePage}" />
 
                 <TextCell Text="Centered Rotate"
-                          Detail="-"
+                          Detail="Rotate objects around a center point"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.CenteredRotatePage}" />
-
-                <TextCell Text="Rotate and Revolve"
-                          Detail="-"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Transforms.RotateAndRevolvePage}" />
-                
-                
 
                 <TextCell Text="Rotated Text"
                           Detail="Rotate a text string around a center"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.RotatedTextPage}" />
 
+                <TextCell Text="Rotate and Revolve"
+                          Detail="Rotate a square around its center and also revolve"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.RotateAndRevolvePage}" />
                 
-
-
-
-
-
                 <TextCell Text="Ugly Analog Clock"
-                          Detail="-"
+                          Detail="First try with an analog clock"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.UglyAnalogClockPage}" />
-
+                
+                <!-- Skew -->
                 <TextCell Text="Skew Experiment"
                           Detail="Discover how the skew transform works"
                           Command="{Binding NavigateCommand}"
