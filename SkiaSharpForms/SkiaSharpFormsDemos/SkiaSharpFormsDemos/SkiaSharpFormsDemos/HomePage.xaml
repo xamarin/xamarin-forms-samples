@@ -186,6 +186,11 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.SkewAngleExperimentPage}" />
 
+                <TextCell Text="Oblique Text"
+                          Detail="Tilt text for an oblique (or italic) effect"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.ObliqueTextPage}" />
+
                 <TextCell Text="Skew Shadow Text"
                           Detail="Use the skew transform for a text shadow"
                           Command="{Binding NavigateCommand}"

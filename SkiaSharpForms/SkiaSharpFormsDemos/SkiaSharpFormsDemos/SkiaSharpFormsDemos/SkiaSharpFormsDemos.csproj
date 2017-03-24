@@ -95,6 +95,7 @@
     <Compile Include="Transforms\HendecagramAnimationPage.cs" />
     <Compile Include="Transforms\HendecagramArrayPage.cs" />
     <Compile Include="Transforms\IsotropicScalingPage.cs" />
+    <Compile Include="Transforms\ObliqueTextPage.cs" />
     <Compile Include="Transforms\RotateAndRevolvePage.cs" />
     <Compile Include="Transforms\RotatedTextPage.cs" />
     <Compile Include="Transforms\SkewAngleExperimentPage.xaml.cs">
