@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Basics\BasicBitmapsPage.cs" />
     <Compile Include="Basics\ColorExplorePage.xaml.cs">
       <DependentUpon>ColorExplorePage.xaml</DependentUpon>
     </Compile>
@@ -45,6 +46,7 @@
     <Compile Include="Basics\ExpandingCirclesPage.cs" />
     <Compile Include="Basics\FramedTextPage.cs" />
     <Compile Include="Basics\OutlinedTextPage.cs" />
+    <Compile Include="IPicturePicker.cs" />
     <Compile Include="TouchPoint.cs" />
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -216,6 +218,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Media\monkey.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
