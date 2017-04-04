@@ -37,6 +37,7 @@ namespace SkiaSharpFormsDemos.Basics
                     {
                         stream.CopyTo(memStream);
                         memStream.Seek(0, SeekOrigin.Begin);
+
                         using (SKManagedStream skStream = new SKManagedStream(memStream))
                         {
                             webBitmap = SKBitmap.Decode(skStream);
@@ -67,6 +68,7 @@ namespace SkiaSharpFormsDemos.Basics
             {
                 // Load bitmap from photo library
                 IPicturePicker picturePicker = DependencyService.Get<IPicturePicker>();
+
                 using (Stream stream = await picturePicker.GetImageStreamAsync())
                 {
                     if (stream != null)
@@ -75,14 +77,15 @@ namespace SkiaSharpFormsDemos.Basics
                         {
                             stream.CopyTo(memStream);
                             memStream.Seek(0, SeekOrigin.Begin);
+
                             using (SKManagedStream skStream = new SKManagedStream(memStream))
                             {
                                 libraryBitmap = SKBitmap.Decode(skStream);
                             }
                         }
+                        canvasView.InvalidateSurface();
                     }
                 }
-                canvasView.InvalidateSurface();
             };
             canvasView.GestureRecognizers.Add(tapRecognizer);
         }
@@ -130,7 +133,8 @@ namespace SkiaSharpFormsDemos.Basics
                     paint.TextAlign = SKTextAlign.Center;
                     paint.TextSize = 48;
 
-                    canvas.DrawText("Tap to load bitmap", info.Width / 2, 5 * info.Height / 6, paint);
+                    canvas.DrawText("Tap to load bitmap", 
+                        info.Width / 2, 5 * info.Height / 6, paint);
                 }
             }
         }
