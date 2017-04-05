@@ -104,6 +104,11 @@
                           Detail="Animate an Archimedean Spiral"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Paths.AnimatedSpiralPage}" />
+
+                <TextCell Text="Finger Paint"
+                          Detail="Draw Lines with Your Fingers"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.FingerPaintPage}" />
             </TableSection>
             
             <TableSection Title="Transforms">
