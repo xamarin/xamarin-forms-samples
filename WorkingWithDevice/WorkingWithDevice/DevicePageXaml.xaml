@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 x:Class="WorkingWithPlatformSpecifics.DevicePageXaml"
@@ -34,7 +34,7 @@
 
   	<Label x:Name="timer" Text="click start below" />
 
-  	<Button Text="Start Timer" 
+  	<Button Text="Start 10s Timer" 
   		Clicked="TimerClicked" 
   		BackgroundColor="Gray" 
   		HorizontalOptions="Center">

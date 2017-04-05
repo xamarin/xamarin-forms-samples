@@ -12,7 +12,7 @@ namespace WorkingWithPlatformSpecifics
 		}
 
 		void OpenUriClicked (object s, EventArgs e) {
-			Device.OpenUri(new Uri("http://xamarin.com/evolve"));
+			Device.OpenUri(new Uri("https://xamarin.com/evolve"));
 		}
 
 		void TimerClicked (object s, EventArgs e) {

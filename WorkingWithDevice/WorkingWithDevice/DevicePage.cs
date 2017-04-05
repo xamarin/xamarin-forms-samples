@@ -74,13 +74,11 @@ namespace WorkingWithPlatformSpecifics
 			);
 
 
-
-
 			//
 			// Device.OnPlatform<T>
 			//
 			var timerButton = new Button { 
-				Text = "Start Timer",
+				Text = "Start 10s Timer",
 				BackgroundColor = Color.Gray.MultiplyAlpha(0.5),
 				HorizontalOptions = LayoutOptions.Center
 			};
@@ -115,7 +113,7 @@ namespace WorkingWithPlatformSpecifics
 				Text = "Open Uri"
 			};
 			webButton.Clicked += ((sender, e) => 
-				Device.OpenUri(new Uri("http://xamarin.com/evolve")));
+				Device.OpenUri(new Uri("https://xamarin.com/evolve")));
 
 
 
