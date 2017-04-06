@@ -14,7 +14,7 @@ using Xamarin.Forms.Maps.Android;
 [assembly:ExportRenderer (typeof(CustomMap), typeof(CustomMapRenderer))]
 namespace CustomRenderer.Droid
 {
-	public class CustomMapRenderer : MapRenderer, GoogleMap.IInfoWindowAdapter, IOnMapReadyCallback
+	public class CustomMapRenderer : MapRenderer, GoogleMap.IInfoWindowAdapter
 	{
 		GoogleMap map;
 		List<CustomPin> customPins;
@@ -25,6 +25,11 @@ namespace CustomRenderer.Droid
 			base.OnElementChanged (e);
 
 			if (e.OldElement != null) {
+				map = NativeMap;
+		    		if (map == null)
+		    		{
+					return;
+		    		}
 				map.InfoWindowClick -= OnInfoWindowClick;
 			}
 
@@ -35,17 +40,16 @@ namespace CustomRenderer.Droid
 			}
 		}
 
-		public void OnMapReady (GoogleMap googleMap)
-		{
-			map = googleMap;
-			map.InfoWindowClick += OnInfoWindowClick;
-			map.SetInfoWindowAdapter (this);
-		}
-
 		protected override void OnElementPropertyChanged (object sender, PropertyChangedEventArgs e)
 		{
 			base.OnElementPropertyChanged (sender, e);
-
+			
+			map = NativeMap;
+		    	if (map == null)
+		    	{
+				return;
+		    	}
+			
 			if (e.PropertyName.Equals ("VisibleRegion") && !isDrawn) {
 				map.Clear ();
 
