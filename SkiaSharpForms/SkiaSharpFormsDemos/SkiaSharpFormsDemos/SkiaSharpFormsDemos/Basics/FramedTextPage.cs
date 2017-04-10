@@ -5,13 +5,13 @@ using Xamarin.Forms;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 
-namespace SkiaSharpFormsDemos
+namespace SkiaSharpFormsDemos.Basics
 {
     public class FramedTextPage : ContentPage
     {
         public FramedTextPage()
         {
-            Title = "Simple Circle";
+            Title = "Framed Text";
 
             SKCanvasView canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;

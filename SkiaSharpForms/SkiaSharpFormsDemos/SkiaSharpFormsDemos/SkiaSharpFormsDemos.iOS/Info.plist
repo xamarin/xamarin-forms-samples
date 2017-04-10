@@ -47,5 +47,9 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleShortVersionString</key>
 	<string></string>
+
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>SkiaSharp Forms Demos uses photo library</string>
+
 </dict>
 </plist>

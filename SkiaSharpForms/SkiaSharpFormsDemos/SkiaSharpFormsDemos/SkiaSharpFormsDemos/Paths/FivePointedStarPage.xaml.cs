@@ -5,7 +5,7 @@ using Xamarin.Forms;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 
-namespace SkiaSharpFormsDemos
+namespace SkiaSharpFormsDemos.Paths
 {
     public partial class FivePointedStarPage : ContentPage
     {

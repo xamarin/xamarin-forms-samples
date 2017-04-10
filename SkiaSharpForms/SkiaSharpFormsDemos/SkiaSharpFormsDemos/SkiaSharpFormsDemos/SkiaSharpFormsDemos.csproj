@@ -36,28 +36,38 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Basics\BasicBitmapsPage.cs" />
+    <Compile Include="Basics\ColorExplorePage.xaml.cs">
+      <DependentUpon>ColorExplorePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Basics\EllipseFillPage.xaml.cs">
       <DependentUpon>EllipseFillPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Basics\ExpandingCirclesPage.cs" />
     <Compile Include="Basics\FramedTextPage.cs" />
+    <Compile Include="Basics\OutlinedTextPage.cs" />
+    <Compile Include="IPicturePicker.cs" />
+    <Compile Include="Paths\FingerPaintPage.xaml.cs">
+      <DependentUpon>FingerPaintPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LinesAndPaths\AnimatedSpiralPage.cs" />
-    <Compile Include="LinesAndPaths\DotsAndDashesPage.xaml.cs">
+    <Compile Include="Paths\AnimatedSpiralPage.cs" />
+    <Compile Include="Paths\DotsAndDashesPage.xaml.cs">
       <DependentUpon>DotsAndDashesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LinesAndPaths\FivePointedStarPage.xaml.cs">
+    <Compile Include="Paths\FivePointedStarPage.xaml.cs">
       <DependentUpon>FivePointedStarPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LinesAndPaths\MultipleLinesPage.xaml.cs">
+    <Compile Include="Paths\MultipleLinesPage.xaml.cs">
       <DependentUpon>MultipleLinesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LinesAndPaths\ArchimedeanSpiralPage.cs" />
-    <Compile Include="LinesAndPaths\OverlappingCirclesPage.cs" />
-    <Compile Include="LinesAndPaths\StrokeCapsPage.cs" />
-    <Compile Include="LinesAndPaths\StrokeJoinsPage.cs" />
-    <Compile Include="LinesAndPaths\TwoTriangleContoursPage.cs" />
+    <Compile Include="Paths\ArchimedeanSpiralPage.cs" />
+    <Compile Include="Paths\OverlappingCirclesPage.cs" />
+    <Compile Include="Paths\StrokeCapsPage.cs" />
+    <Compile Include="Paths\StrokeJoinsPage.cs" />
+    <Compile Include="Paths\TwoTriangleContoursPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Basics\PulsatingEllipsePage.xaml.cs">
       <DependentUpon>PulsatingEllipsePage.xaml</DependentUpon>
@@ -67,6 +77,40 @@
     <Compile Include="Basics\TapToggleFillPage.xaml.cs">
       <DependentUpon>TapToggleFillPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TouchActionEventArgs.cs" />
+    <Compile Include="TouchActionEventHandler.cs" />
+    <Compile Include="TouchActionType.cs" />
+    <Compile Include="TouchEffect.cs" />
+    <Compile Include="Transforms\AccumulatedTranslatePage.cs" />
+    <Compile Include="Transforms\AnisotropicScalingPage.cs" />
+    <Compile Include="Transforms\AnisotropicTextPage.cs" />
+    <Compile Include="Transforms\BasicRotatePage.xaml.cs">
+      <DependentUpon>BasicRotatePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transforms\BasicScalePage.xaml.cs">
+      <DependentUpon>BasicScalePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transforms\CenteredRotatePage.xaml.cs">
+      <DependentUpon>CenteredRotatePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transforms\CenteredScalePage.xaml.cs">
+      <DependentUpon>CenteredScalePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transforms\HendecagramAnimationPage.cs" />
+    <Compile Include="Transforms\HendecagramArrayPage.cs" />
+    <Compile Include="Transforms\IsotropicScalingPage.cs" />
+    <Compile Include="Transforms\ObliqueTextPage.cs" />
+    <Compile Include="Transforms\RotateAndRevolvePage.cs" />
+    <Compile Include="Transforms\RotatedTextPage.cs" />
+    <Compile Include="Transforms\SkewAngleExperimentPage.xaml.cs">
+      <DependentUpon>SkewAngleExperimentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transforms\SkewShadowTextPage.cs" />
+    <Compile Include="Transforms\SkewExperimentPage.xaml.cs">
+      <DependentUpon>SkewExperimentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transforms\TranslateTextEffectsPage.cs" />
+    <Compile Include="Transforms\UglyAnalogClockPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SkiaSharp, Version=1.56.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
@@ -118,19 +162,70 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="LinesAndPaths\MultipleLinesPage.xaml">
+    <EmbeddedResource Include="Paths\MultipleLinesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="LinesAndPaths\FivePointedStarPage.xaml">
+    <EmbeddedResource Include="Paths\FivePointedStarPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="LinesAndPaths\DotsAndDashesPage.xaml">
+    <EmbeddedResource Include="Paths\DotsAndDashesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Transforms\BasicScalePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Transforms\CenteredScalePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Transforms\BasicRotatePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Transforms\CenteredRotatePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Transforms\SkewExperimentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Transforms\SkewAngleExperimentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Basics\ColorExplorePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Media\monkey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Paths\FingerPaintPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

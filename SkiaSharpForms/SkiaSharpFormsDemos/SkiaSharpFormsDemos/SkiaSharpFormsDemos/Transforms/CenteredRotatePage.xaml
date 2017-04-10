@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
-             x:Class="SkiaSharpFormsDemos.Basics.PulsatingEllipsePage"
-             Title="Pulsating Ellipse">
+             x:Class="SkiaSharpFormsDemos.Transforms.CenteredRotatePage"
+             Title="Centered Rotate">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -11,21 +11,23 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Slider x:Name="slider"
+        <Slider x:Name="rotateSlider"
                 Grid.Row="0"
-                Maximum="10"
-                Minimum="0.1"
-                Value="5"
-                Margin="20, 0" />
+                Margin="20, 0"
+                Minimum="-360"
+                Maximum="360"
+                ValueChanged="sliderValueChanged" />
 
-        <Label Grid.Row="1"
-               Text="{Binding Source={x:Reference slider},
+        <Label Text="{Binding Source={x:Reference rotateSlider},
                               Path=Value,
-                              StringFormat='Cycle time = {0:F1} seconds'}"
+                              StringFormat='Rotation = {0:F0}'}"
+               Grid.Row="1"
                HorizontalTextAlignment="Center" />
-
+        
         <skia:SKCanvasView x:Name="canvasView"
                            Grid.Row="2"
                            PaintSurface="OnCanvasViewPaintSurface" />
     </Grid>
-</ContentPage>
+</ContentPage>    
+    
+    
