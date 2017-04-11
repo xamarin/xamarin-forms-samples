@@ -4,11 +4,12 @@ using Xamarin.Forms.Xaml;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace PlatformSpecifics
 {
-	public partial class App : Application
+	public partial class App : Xamarin.Forms.Application
 	{
 		public App()
 		{
 			InitializeComponent();
+
 			MainPage = new NavigationPage(new PlatformSpecificsPage());
 			//MainPage = new iOSNavigationPage();
 			//MainPage = new WindowsTabbedPage();

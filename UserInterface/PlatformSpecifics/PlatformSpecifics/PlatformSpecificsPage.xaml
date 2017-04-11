@@ -3,7 +3,10 @@
 	<StackLayout Margin="20">
 		<Button Text="Blur Effect (iOS only)" Clicked="OnBlurEffectButtonClicked" />
 		<Button Text="Translucent Navigation Bar (iOS only)" Clicked="OnTranslucentNavigationBarButtonClicked" />
+		<Button Text="Entry Font Size Adjusts to Text Width (iOS only)" Clicked="OnEntryFontSizeChangesButtonClicked" />
+		<Button Text="Hide Status Bar (iOS only)" Clicked="OnHideStatusBarButtonClicked" />
 		<Button Text="Soft Input Mode Adjust (Android only)" Clicked="OnSoftInputModeAdjustButtonClicked" />
+		<Button Text="Pause and Resume Lifecycle Events (Android only)" Clicked="OnPageLifecycleEventsButtonClicked" />
 		<Button Text="Tabbed Page Toolbar Location Adjust (Windows only)" Clicked="OnTabbedPageButtonClicked" />
 		<Button Text="Navigation Page Toolbar Location Adjust (Windows only)" Clicked="OnNavigationPageButtonClicked" />
 		<Button Text="Master Detail Page Toolbar Location Adjust (Windows only)" Clicked="OnMasterDetailPageButtonClicked" />
