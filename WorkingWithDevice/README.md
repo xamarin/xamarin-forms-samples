@@ -1,7 +1,7 @@
 Working with Platform Tweaks
 ==============
 
-These samples relate to the [Working with Platform Tweaks in Xamarin.Forms](http://http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/platform-specifics/) doc.
+This samples demonstrates how to use the `Device` class. For more information, see the [Device Class](http://developer.xamarin.com/guides/xamarin-forms/platform-features/device/).
 
 
 Author
