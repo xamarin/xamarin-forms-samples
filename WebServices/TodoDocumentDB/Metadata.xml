@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>2d2653d4-e666-436b-aa0e-7390c0bfbd13</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Intermediate</Level>
+	<Tags>Web Services, Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>This sample demonstrates how to use the Microsoft Azure DocumentDB Client Library to integrate the Azure DocumentDB service into a Xamarin.Forms application.</Brief>
+</SampleMetadata>

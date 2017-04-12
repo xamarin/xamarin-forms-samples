@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TouchTrackingEffectDemos"
+             x:Class="TouchTrackingEffectDemos.SilentKeyboardPage"
+             Title="Silent Keyboard">
+    <AbsoluteLayout BackgroundColor="Gray"
+                    Padding="10, 20">
+        <AbsoluteLayout.Resources>
+            <ResourceDictionary>
+                <Style TargetType="local:WhiteKey">
+                    <Setter Property="AbsoluteLayout.LayoutFlags" Value="All" />
+                </Style>
+
+                <Style TargetType="local:BlackKey">
+                    <Setter Property="AbsoluteLayout.LayoutFlags" Value="All" />
+                </Style>
+            </ResourceDictionary>
+        </AbsoluteLayout.Resources>
+
+        <local:WhiteKey KeyNumber="48" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.000, 0, 0.060, 1.0" />
+        <local:WhiteKey KeyNumber="50" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.071, 0, 0.060, 1.0" />
+        <local:WhiteKey KeyNumber="52" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.143, 0, 0.060, 1.0" />
+        <local:WhiteKey KeyNumber="53" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.214, 0, 0.060, 1.0" />
+        <local:WhiteKey KeyNumber="55" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.286, 0, 0.060, 1.0" />
+        <local:WhiteKey KeyNumber="57" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.357, 0, 0.060, 1.0" />
+        <local:WhiteKey KeyNumber="59" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.429, 0, 0.060, 1.0" />
+
+        <local:WhiteKey KeyNumber="60" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.500, 0, 0.060, 1.0" />
+        <local:WhiteKey KeyNumber="62" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.571, 0, 0.060, 1.0" />
+        <local:WhiteKey KeyNumber="64" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.643, 0, 0.060, 1.0" />
+        <local:WhiteKey KeyNumber="65" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.714, 0, 0.060, 1.0" />
+        <local:WhiteKey KeyNumber="67" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.786, 0, 0.060, 1.0" />
+        <local:WhiteKey KeyNumber="69" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.857, 0, 0.060, 1.0" />
+        <local:WhiteKey KeyNumber="71" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.929, 0, 0.060, 1.0" />
+
+        <local:WhiteKey KeyNumber="72" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="1.000, 0, 0.060, 1.0" />
+
+        <local:BlackKey KeyNumber="49" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.041, 0, 0.050, 0.7" />
+        <local:BlackKey KeyNumber="51" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.112, 0, 0.050, 0.7" />
+        <local:BlackKey KeyNumber="54" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.253, 0, 0.050, 0.7" />
+        <local:BlackKey KeyNumber="56" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.324, 0, 0.050, 0.7" />
+        <local:BlackKey KeyNumber="58" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.395, 0, 0.050, 0.7" />
+
+        <local:BlackKey KeyNumber="61" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.537, 0, 0.050, 0.7" />
+        <local:BlackKey KeyNumber="63" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.608, 0, 0.050, 0.7" />
+        <local:BlackKey KeyNumber="66" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.749, 0, 0.050, 0.7" />
+        <local:BlackKey KeyNumber="68" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.820, 0, 0.050, 0.7" />
+        <local:BlackKey KeyNumber="70" StatusChanged="OnKeyStatusChanged" AbsoluteLayout.LayoutBounds="0.891, 0, 0.050, 0.7" />
+    </AbsoluteLayout>
+</ContentPage>
