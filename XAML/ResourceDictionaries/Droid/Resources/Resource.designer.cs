@@ -26,7 +26,6 @@ namespace ResourceDictionaryDemo.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::ResourceDictionaryDemo.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Attribute

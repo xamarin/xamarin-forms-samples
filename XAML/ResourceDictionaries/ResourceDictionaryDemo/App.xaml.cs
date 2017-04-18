@@ -9,7 +9,7 @@ namespace ResourceDictionaryDemo
 		public App ()
 		{
 			InitializeComponent ();
-			MainPage = new NavigationPage (new HomePage ()) { BarBackgroundColor = (Color)Application.Current.Resources ["PageBackgroundColor"]	};
+			MainPage = new NavigationPage (new HomePage ());
 		}
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 /*
 Glyphish icons from
