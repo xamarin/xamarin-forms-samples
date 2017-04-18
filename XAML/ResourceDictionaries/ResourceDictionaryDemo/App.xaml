@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ResourceDictionaryDemo.App">
+<Application xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:theme="clr-namespace:UIDemo.Style"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ResourceDictionaryDemo.App">
 	<Application.Resources>
-		<ResourceDictionary>
+		<ResourceDictionary MergedWith="theme:NewStyle">
 			<Color x:Key="PageBackgroundColor">Yellow</Color>
 			<Color x:Key="HeadingTextColor">Black</Color>
 			<Color x:Key="NormalTextColor">Blue</Color>
