@@ -13,7 +13,7 @@ namespace WeatherApp.Mac
 		{
 			var style = NSWindowStyle.Closable | NSWindowStyle.Resizable | NSWindowStyle.Titled;
 
-			var rect = new CoreGraphics.CGRect(200, 1000, 1024, 768);
+			var rect = new CoreGraphics.CGRect(200, 1000, 550, 300);
 			_window = new NSWindow(rect, style, NSBackingStore.Buffered, false);
 			_window.Title = "Xamarin.Forms Mac";
 			_window.TitleVisibility = NSWindowTitleVisibility.Hidden;
