@@ -9,6 +9,7 @@
         public string Visibility { get; set; }
         public string Sunrise { get; set; }
         public string Sunset { get; set; }
+		public string Icon { get; set; }
 
         public Weather()
         {
@@ -21,6 +22,22 @@
             this.Visibility = " ";
             this.Sunrise = " ";
             this.Sunset = " ";
+			this.Icon = " ";
         }
+
+		public string IconUrl
+		{
+			get
+			{
+				if (!string.IsNullOrEmpty(Icon))
+				{
+					return string.Format("http://openweathermap.org/img/w/{0}.png", Icon);
+				}
+				else
+				{
+					return string.Empty;
+				}
+			}
+		}
     }
 }
