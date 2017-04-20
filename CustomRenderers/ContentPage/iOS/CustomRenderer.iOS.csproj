@@ -25,7 +25,6 @@
     <MtouchDebug>true</MtouchDebug>
     <MtouchProfiling>true</MtouchProfiling>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchI18n></MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
@@ -63,7 +62,7 @@
     <MtouchProfiling>true</MtouchProfiling>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignProvision>aa0b02fc-5936-4326-b795-73a7748d40db</CodesignProvision>
+    <CodesignProvision></CodesignProvision>
     <IpaPackageName></IpaPackageName>
   </PropertyGroup>
   <ItemGroup>
