@@ -17,7 +17,7 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
@@ -53,16 +53,16 @@
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="SkiaSharp, Version=1.56.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.1.56.0\lib\MonoAndroid\SkiaSharp.dll</HintPath>
+    <Reference Include="SkiaSharp, Version=1.57.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SkiaSharp.1.57.0\lib\MonoAndroid\SkiaSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SkiaSharp.Views.Android, Version=1.56.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.Views.1.56.0\lib\MonoAndroid\SkiaSharp.Views.Android.dll</HintPath>
+    <Reference Include="SkiaSharp.Views.Android, Version=1.57.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SkiaSharp.Views.1.57.0\lib\MonoAndroid\SkiaSharp.Views.Android.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SkiaSharp.Views.Forms, Version=1.56.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.Views.Forms.1.56.0\lib\MonoAndroid\SkiaSharp.Views.Forms.dll</HintPath>
+    <Reference Include="SkiaSharp.Views.Forms, Version=1.57.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SkiaSharp.Views.Forms.1.57.0\lib\MonoAndroid\SkiaSharp.Views.Forms.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
