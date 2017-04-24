@@ -3,7 +3,7 @@
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 
-namespace SkiaSharpFormsDemos
+namespace SkiaSharpFormsDemos.Basics
 {
     public partial class EllipseFillPage : ContentPage
     {

@@ -1,10 +1,10 @@
-{
+﻿{
   "dependencies": {
     "Microsoft.ApplicationInsights": "1.0.0",
     "Microsoft.ApplicationInsights.PersistenceChannel": "1.0.0",
     "Microsoft.ApplicationInsights.WindowsApps": "1.0.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-    "Xamarin.Forms": "2.3.3.180"
+    "Xamarin.Forms": "2.3.4.224"
   },
   "frameworks": {
     "uap10.0": {}

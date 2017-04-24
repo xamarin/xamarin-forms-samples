@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" x:Class="PlatformSpecifics.iOSEntryPage" Title="AdjustsFontSizeToFitWidth">
+	<StackLayout Margin="20">
+		<Entry x:Name="entry" Placeholder="Enter text here to see the font size change" FontSize="22" ios:Entry.AdjustsFontSizeToFitWidth="true" />
+		<Button Text="Toggle AdjustsFontSizeToFitWidth" Clicked="OnButtonClicked" />
+	</StackLayout>
+</ContentPage>
