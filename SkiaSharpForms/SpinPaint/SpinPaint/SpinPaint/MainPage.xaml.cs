@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Collections.Generic;
+using System.IO;
 
 using Xamarin.Forms;
 
@@ -132,11 +133,11 @@ namespace SpinPaint
             return true;
         }
 
-        void OnCanvasViewPaintSurface(object sender, SKPaintGLSurfaceEventArgs args) //  SKPaintSurfaceEventArgs args)
+        void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args) // SKPaintGLSurfaceEventArgs args) //  SKPaintSurfaceEventArgs args)
         {
-            //          SKImageInfo info = args.Info;
+                      SKImageInfo info = args.Info;
 
-            GRBackendRenderTargetDesc info = args.RenderTarget;
+          //  GRBackendRenderTargetDesc info = args.RenderTarget;
 
 
             SKSurface surface = args.Surface;
@@ -203,6 +204,36 @@ namespace SpinPaint
         void OnClearButtonClicked(object sender, EventArgs args)
         {
             PrepBitmap(bitmapCanvas, bitmapSize);
+        }
+
+        async void OnSaveButtonClicked(object sender, EventArgs args)
+        {
+            SKData data = SKImage.FromBitmap(bitmap).Encode();
+       //     Stream stream = data.AsStream();
+
+            
+
+         //   System.IO.MemoryStream memoryStream = new System.IO.MemoryStream();
+           // await stream.CopyToAsync(memoryStream);
+         //   memoryStream.Position = 0;
+
+
+            DateTime dt = DateTime.Now;
+            string filename = String.Format("SpinPaint-{0:D4}{1:D2}{2:D2}-{3:D2}{4:D2}{5:D2}{6:D3}.png",
+                                            dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second, dt.Millisecond);
+
+
+
+
+
+            ISpinPaintDependencyService dependencyService = DependencyService.Get<ISpinPaintDependencyService>();
+
+            bool result = await dependencyService.SaveBitmap(data.ToArray(), filename);
+
+            if (!result)
+            {
+                await DisplayAlert("SpinPaint", "Artwork could not be saved. Sorry!", "OK");
+            }
         }
     }
 }

@@ -90,6 +90,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="SpinPaintDependencyService.cs" />
     <Compile Include="TouchEffect.cs" />
     <Compile Include="TouchRecognizer.cs" />
     <None Include="Entitlements.plist" />

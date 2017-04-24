@@ -27,11 +27,11 @@
                                  Grid.Row="1"
                                  VerticalOptions="Center">
 
-            <skia:SKGLView x:Name="canvasView"
-                           PaintSurface="OnCanvasViewPaintSurface" />
+            <!--<skia:SKGLView x:Name="canvasView"
+                           PaintSurface="OnCanvasViewPaintSurface" />-->
 
-            <!--<skia:SKCanvasView x:Name="canvasView"
-                               PaintSurface="OnCanvasViewPaintSurface" />-->
+            <skia:SKCanvasView x:Name="canvasView"
+                               PaintSurface="OnCanvasViewPaintSurface" />
             
             <local:AspectRatioLayout.Effects>
                 <tt:TouchEffect Capture="True"
@@ -54,7 +54,8 @@
             <Button Text="Clear"
                     Clicked="OnClearButtonClicked" />
 
-            <Button Text="Save (TODO)" />
+            <Button Text="Save"
+                    Clicked="OnSaveButtonClicked" />
         </StackLayout>
     <!--</StackLayout>-->
 
