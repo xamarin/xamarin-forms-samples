@@ -6,6 +6,6 @@ namespace SpinPaint
 {
     public interface ISpinPaintDependencyService
     {
-        Task<bool> SaveBitmap(byte[] buffer, string filename);
+        Task<bool> SaveBitmap(byte[] bitmapData, string filename);
     }
 }

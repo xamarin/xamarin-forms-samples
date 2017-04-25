@@ -1,9 +1,9 @@
 ﻿using System;
-using System.IO;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices.WindowsRuntime;
 
 using Windows.Storage;
+using Windows.Storage.Streams;
 
 using Xamarin.Forms;
 
@@ -15,11 +15,12 @@ namespace SpinPaint.UWP
 {
     public class SpinPaintDependencyService : ISpinPaintDependencyService
     {
-        public async Task<bool> SaveBitmap(byte[] buffer, string filename) //  Stream stream, string filename)
+        public async Task<bool> SaveBitmap(byte[] bitmapData, string filename)
         {
             StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
             StorageFolder spinPaintFolder = null;
 
+            // Get the folder or create it if necessary
             try
             {
                 spinPaintFolder = await picturesFolder.GetFolderAsync("SpinPaint");
@@ -41,15 +42,12 @@ namespace SpinPaint.UWP
 
             try
             { 
+                // Create the file.
                 StorageFile storageFile = await spinPaintFolder.CreateFileAsync(filename);
-                //     MemoryStream memoryStream = new MemoryStream();
-                //      await stream.CopyToAsync(memoryStream);
-                //      memoryStream.Position = 0;
 
-
-                //                WindowsRuntimeBuffer.Create()
-
-                await FileIO.WriteBufferAsync(storageFile, WindowsRuntimeBuffer.Create(buffer, 0, buffer.Length, buffer.Length)); //  buffer); //  memoryStream.GetWindowsRuntimeBuffer());
+                // Convert byte[] to Windows buffer and write it out.
+                IBuffer buffer = WindowsRuntimeBuffer.Create(bitmapData, 0, bitmapData.Length, bitmapData.Length);
+                await FileIO.WriteBufferAsync(storageFile, buffer);
             }
             catch
             {

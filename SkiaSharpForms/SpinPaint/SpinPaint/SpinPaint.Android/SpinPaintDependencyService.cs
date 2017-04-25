@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 
+using Android.Media;
 using Android.OS;
 using Java.IO;
 
@@ -13,32 +14,35 @@ namespace SpinPaint.Droid
 {
     public class SpinPaintDependencyService : ISpinPaintDependencyService
     {
-        public Task<bool> SaveBitmap(byte[] buffer, string filename)
+        public async Task<bool> SaveBitmap(byte[] buffer, string filename)
         {
             try
             {
-                File spinPaintDirectory = new File(Environment.GetExternalStoragePublicDirectory(Environment.DirectoryPictures), "SpinPaint");
+                File picturesDirectory = Environment.GetExternalStoragePublicDirectory(Environment.DirectoryPictures);
+                File spinPaintDirectory = new File(picturesDirectory, "SpinPaint");
                 spinPaintDirectory.Mkdirs();
 
                 using (File bitmapFile = new File(spinPaintDirectory, filename))
                 {
                     bitmapFile.CreateNewFile();
+
                     using (FileOutputStream outputStream = new FileOutputStream(bitmapFile))
                     {
-                        //      System.IO.MemoryStream memoryStream = new System.IO.MemoryStream();
-                        //      await stream.CopyToAsync(memoryStream);
-                        //     memoryStream.Position = 0;
-
-                        outputStream.Write(buffer); //  memoryStream.GetBuffer());
+                        await outputStream.WriteAsync(buffer);
                     }
+
+                    // Make sure it shows up in the Photos gallery promptly.
+                    MediaScannerConnection.ScanFile(Forms.Context,
+                                                    new string[] { bitmapFile.Path },
+                                                    new string[] { "image/png", "image/jpeg" }, null);
                 }
             }
             catch
             {
-                return Task.FromResult(false);
+                return false;
             }
 
-            return Task.FromResult(true); //  true;
+            return true;
         }
     }
 }

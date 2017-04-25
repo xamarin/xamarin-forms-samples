@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              xmlns:tt="clr-namespace:TouchTracking"
              xmlns:local="clr-namespace:SpinPaint"
              x:Class="SpinPaint.MainPage">
@@ -13,7 +12,6 @@
         </Grid.RowDefinitions>
         
      
-    <!--<StackLayout>-->
         <Label x:Name="titleLabel"
                Text="SpinPaint"
                Grid.Row="0"
@@ -24,15 +22,13 @@
                HorizontalOptions="Center" />
 
         <local:AspectRatioLayout x:Name="canvasViewLayout"
-                                 Grid.Row="1"
+                                 Grid.Row="1"                       
+                                 BackgroundColor="White"
+                                 HorizontalOptions="Center"
                                  VerticalOptions="Center">
-
-            <!--<skia:SKGLView x:Name="canvasView"
-                           PaintSurface="OnCanvasViewPaintSurface" />-->
-
-            <skia:SKCanvasView x:Name="canvasView"
-                               PaintSurface="OnCanvasViewPaintSurface" />
             
+            <!-- SKCanvasView or SKGLView created in code-behind file -->
+
             <local:AspectRatioLayout.Effects>
                 <tt:TouchEffect Capture="True"
                                 TouchAction="OnTouchEffectAction" />
@@ -57,12 +53,5 @@
             <Button Text="Save"
                     Clicked="OnSaveButtonClicked" />
         </StackLayout>
-    <!--</StackLayout>-->
-
-
-
     </Grid>
-
-
-
 </ContentPage>    
