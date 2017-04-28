@@ -254,6 +254,15 @@
                           Detail="Animate a 2D object in 3D space"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.AnimatedRotation3DPage}" />
+            </TableSection>
+
+            <TableSection Title="Curves and More Paths">
+                <TextCell Text="Globular Text"
+                          Detail="Wrap text around a hemisphere"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.GlobularTextPage}" />
+
+
 
             </TableSection>
         </TableRoot>
