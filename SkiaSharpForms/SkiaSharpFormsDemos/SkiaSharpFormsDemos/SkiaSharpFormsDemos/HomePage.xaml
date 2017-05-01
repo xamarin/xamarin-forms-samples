@@ -257,12 +257,67 @@
             </TableSection>
 
             <TableSection Title="Curves and More Paths">
+                
+                <!-- Arcs -->
+                <TextCell Text="Angle Arc"
+                          Detail="Experiment with creating an angle arc"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.AngleArcPage}" />
+
+                <TextCell Text="Exploded Pie Chart"
+                          Detail="Display a pie chart using the angle arc"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ExplodedPieChartPage}" />
+
+                <TextCell Text="Tangent Arc"
+                          Detail="Experiment with creating a tangent arc"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.TangentArcPage}" />
+
+                <TextCell Text="Rounded Heptagon"
+                          Detail="Draw a heptagon with rounded corners"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.RoundedHeptagonPage}" />
+
+                <TextCell Text="Elliptical Arc"
+                          Detail="Experiment with creating an elliptical arc"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.EllipticalArcPage}" />
+
+                <TextCell Text="Arc Infinity"
+                          Detail="Draw an infinity sign with an elliptical arc"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ArcInfinityPage}" />
+
+                <!-- Bezier splines -->
+                <TextCell Text="Bézier Spline"
+                          Detail="Interactively draw a cubic Bézier spline"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.BezierSplinePage}" />
+
+                <TextCell Text="Analog Clock"
+                          Detail="-"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.AnalogClockPage}" />
+
+                <TextCell Text="Quadratic Spline"
+                          Detail="Interactively draw a quadratic Bézier spline"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.QuadraticSplinePage}" />
+
+                <TextCell Text="Conic Spline"
+                          Detail="Interactively draw a conic spline"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ConicSplinePage}" />
+
+
+
+
+                <!-- Path information -->
                 <TextCell Text="Globular Text"
                           Detail="Wrap text around a hemisphere"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.GlobularTextPage}" />
-
-
 
             </TableSection>
         </TableRoot>
