@@ -290,7 +290,7 @@
                           CommandParameter="{x:Type local:Curves.ArcInfinityPage}" />
 
                 <!-- Bezier splines -->
-                <TextCell Text="Bézier Spline"
+                <!-- TextCell Text="Bézier Spline"
                           Detail="Interactively draw a cubic Bézier spline"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.BezierSplinePage}" />
@@ -308,16 +308,13 @@
                 <TextCell Text="Conic Spline"
                           Detail="Interactively draw a conic spline"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.ConicSplinePage}" />
-
-
-
+                          CommandParameter="{x:Type local:Curves.ConicSplinePage}" / -->
 
                 <!-- Path information -->
-                <TextCell Text="Globular Text"
+                <!-- TextCell Text="Globular Text"
                           Detail="Wrap text around a hemisphere"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.GlobularTextPage}" />
+                          CommandParameter="{x:Type local:Curves.GlobularTextPage}" / -->
 
             </TableSection>
         </TableRoot>

@@ -28,17 +28,18 @@ namespace SkiaSharpFormsDemos.Curves
 
             using (SKPath path = new SKPath())
             {
-                path.MoveTo(0, 0);
                 path.LineTo(83, 75);
                 path.ArcTo(100, 100, 0, SKPathArcSize.Large, SKPathDirection.CounterClockwise, 83, -75);
                 path.LineTo(-83, 75);
                 path.ArcTo(100, 100, 0, SKPathArcSize.Large, SKPathDirection.Clockwise, -85, -75);
                 path.Close();
 
+                // Use path.TightBounds for coordinates without control points
                 SKRect pathBounds = path.Bounds;
 
                 canvas.Translate(info.Width / 2, info.Height / 2);
-                canvas.Scale(Math.Min(info.Width / pathBounds.Width, info.Height / pathBounds.Height));
+                canvas.Scale(Math.Min(info.Width / pathBounds.Width, 
+                                      info.Height / pathBounds.Height));
 
                 using (SKPaint paint = new SKPaint())
                 {

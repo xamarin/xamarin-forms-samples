@@ -36,10 +36,6 @@ namespace SkiaSharpFormsDemos
             PathEffect = SKPathEffect.CreateDash(new float[] { 7, 7 }, 0)
         };
 
-//        public InteractivePage()
-  //      {
-    //    }
-
         protected void OnTouchEffectAction(object sender, TouchActionEventArgs args)
         {
             bool touchPointMoved = false;
