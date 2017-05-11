@@ -75,7 +75,7 @@ namespace SkiaSharpFormsDemos.Curves
                 {
                     path.MoveTo(center);
                     path.ArcTo(rect, startAngle, sweepAngle, false);
-                    path.LineTo(center);
+                    path.Close();
 
                     fillPaint.Style = SKPaintStyle.Fill;
                     fillPaint.Color = item.Color;
