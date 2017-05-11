@@ -31,7 +31,7 @@ namespace SkiaSharpFormsDemos.Curves
                 path.LineTo(83, 75);
                 path.ArcTo(100, 100, 0, SKPathArcSize.Large, SKPathDirection.CounterClockwise, 83, -75);
                 path.LineTo(-83, 75);
-                path.ArcTo(100, 100, 0, SKPathArcSize.Large, SKPathDirection.Clockwise, -85, -75);
+                path.ArcTo(100, 100, 0, SKPathArcSize.Large, SKPathDirection.Clockwise, -83, -75);
                 path.Close();
 
                 // Use path.TightBounds for coordinates without control points
