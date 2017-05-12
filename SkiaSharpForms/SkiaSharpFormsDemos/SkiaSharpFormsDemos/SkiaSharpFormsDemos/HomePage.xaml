@@ -289,32 +289,32 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.ArcInfinityPage}" />
 
-                <!-- Bezier splines -->
-                <!-- TextCell Text="Bézier Spline"
-                          Detail="Interactively draw a cubic Bézier spline"
+                <!-- Bezier curves -->
+                <TextCell Text="Bézier Curve"
+                          Detail="Interactively draw a cubic Bézier curve"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.BezierSplinePage}" />
+                          CommandParameter="{x:Type local:Curves.BezierCurvePage}" />
+
+                <TextCell Text="Quadratic Curve"
+                          Detail="Interactively draw a quadratic Bézier curve"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.QuadraticCurvePage}" />
+
+                <TextCell Text="Conic Curve"
+                          Detail="Interactively draw a conic curve"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ConicCurvePage}" />
 
                 <TextCell Text="Analog Clock"
                           Detail="-"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.AnalogClockPage}" />
 
-                <TextCell Text="Quadratic Spline"
-                          Detail="Interactively draw a quadratic Bézier spline"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.QuadraticSplinePage}" />
-
-                <TextCell Text="Conic Spline"
-                          Detail="Interactively draw a conic spline"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.ConicSplinePage}" / -->
-
                 <!-- Path information -->
-                <!-- TextCell Text="Globular Text"
+                <TextCell Text="Globular Text"
                           Detail="Wrap text around a hemisphere"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.GlobularTextPage}" / -->
+                          CommandParameter="{x:Type local:Curves.GlobularTextPage}" />
 
             </TableSection>
         </TableRoot>

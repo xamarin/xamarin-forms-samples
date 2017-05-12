@@ -12,6 +12,10 @@ namespace SkiaSharpFormsDemos.Curves
         SKCanvasView canvasView;
         bool pageIsActive;
 
+
+        // TODO Define path effects and paints and paths here!!!!
+
+
         public AnalogClockPage()
         {
             Title = "Analog Clock";

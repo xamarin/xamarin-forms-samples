@@ -1,19 +1,11 @@
-﻿using System;
-
-using Xamarin.Forms;
-
-using SkiaSharp;
+﻿using SkiaSharp;
 using SkiaSharp.Views.Forms;
-
-using TouchTracking;
 
 namespace SkiaSharpFormsDemos.Curves
 {
-    public partial class QuadraticSplinePage : InteractivePage // ContentPage
+    public partial class QuadraticCurvePage : InteractivePage
     {
- //       TouchPoint[] touchPoints = new TouchPoint[3];
-
-        public QuadraticSplinePage()
+        public QuadraticCurvePage()
         {
             touchPoints = new TouchPoint[3];
 
@@ -28,7 +20,6 @@ namespace SkiaSharpFormsDemos.Curves
             }
 
             InitializeComponent();
-
             baseCanvasView = canvasView;
         }
 
@@ -40,6 +31,7 @@ namespace SkiaSharpFormsDemos.Curves
 
             canvas.Clear();
 
+            // Draw path with quadratic Bezier
             using (SKPath path = new SKPath())
             {
                 path.MoveTo(touchPoints[0].Center);
@@ -65,24 +57,5 @@ namespace SkiaSharpFormsDemos.Curves
                 touchPoint.Paint(canvas);
             }
         }
-/*
-        void OnTouchEffectAction(object sender, TouchActionEventArgs args)
-        {
-            bool touchPointMoved = false;
-
-            foreach (TouchPoint touchPoint in touchPoints)
-            {
-                float scale = canvasView.CanvasSize.Width / (float)canvasView.Width;
-                SKPoint point = new SKPoint(scale * (float)args.Location.X,
-                                            scale * (float)args.Location.Y);
-                touchPointMoved |= touchPoint.ProcessTouchEvent(args.Id, args.Type, point);
-            }
-
-            if (touchPointMoved)
-            {
-                canvasView.InvalidateSurface();
-            }
-        }
-*/
     }
 }

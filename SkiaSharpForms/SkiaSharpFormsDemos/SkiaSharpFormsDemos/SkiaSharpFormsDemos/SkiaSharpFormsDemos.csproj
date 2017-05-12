@@ -51,11 +51,11 @@
       <DependentUpon>AngleArcPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Curves\ArcInfinityPage.cs" />
-    <Compile Include="Curves\BezierSplinePage.xaml.cs">
-      <DependentUpon>BezierSplinePage.xaml</DependentUpon>
+    <Compile Include="Curves\BezierCurvePage.xaml.cs">
+      <DependentUpon>BezierCurvePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Curves\ConicSplinePage.xaml.cs">
-      <DependentUpon>ConicSplinePage.xaml</DependentUpon>
+    <Compile Include="Curves\ConicCurvePage.xaml.cs">
+      <DependentUpon>ConicCurvePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Curves\EllipticalArcPage.xaml.cs">
       <DependentUpon>EllipticalArcPage.xaml</DependentUpon>
@@ -63,8 +63,8 @@
     <Compile Include="Curves\ExplodedPieChartPage.cs" />
     <Compile Include="Curves\GlobularTextPage.cs" />
     <Compile Include="Curves\PathExtensions.cs" />
-    <Compile Include="Curves\QuadraticSplinePage.xaml.cs">
-      <DependentUpon>QuadraticSplinePage.xaml</DependentUpon>
+    <Compile Include="Curves\QuadraticCurvePage.xaml.cs">
+      <DependentUpon>QuadraticCurvePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Curves\RoundedHeptagonPage.cs" />
     <Compile Include="Curves\TangentArcPage.xaml.cs">
@@ -347,19 +347,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Curves\BezierSplinePage.xaml">
+    <EmbeddedResource Include="Curves\BezierCurvePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Curves\QuadraticSplinePage.xaml">
+    <EmbeddedResource Include="Curves\QuadraticCurvePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Curves\ConicSplinePage.xaml">
+    <EmbeddedResource Include="Curves\ConicCurvePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

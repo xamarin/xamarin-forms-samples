@@ -1,21 +1,10 @@
-﻿using System;
-
-using Xamarin.Forms;
-
-using SkiaSharp;
+﻿using SkiaSharp;
 using SkiaSharp.Views.Forms;
-
-using TouchTracking;
 
 namespace SkiaSharpFormsDemos.Curves
 {
-    public partial class BezierSplinePage : ContentPage
+    public partial class BezierCurvePage : InteractivePage
     {
-
-        // Change to Interactive Page !!!!!
-
-        TouchPoint[] touchPoints = new TouchPoint[4];
-
         SKPaint strokePaint = new SKPaint
         {
             Style = SKPaintStyle.Stroke,
@@ -31,8 +20,10 @@ namespace SkiaSharpFormsDemos.Curves
             PathEffect = SKPathEffect.CreateDash(new float[] { 7, 7 }, 0)
         };
 
-        public BezierSplinePage()
+        public BezierCurvePage()
         {
+            touchPoints = new TouchPoint[4];
+
             for (int i = 0; i < 4; i++)
             {
                 TouchPoint touchPoint = new TouchPoint
@@ -44,6 +35,7 @@ namespace SkiaSharpFormsDemos.Curves
             }
 
             InitializeComponent();
+            baseCanvasView = canvasView;
         }
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -54,6 +46,7 @@ namespace SkiaSharpFormsDemos.Curves
 
             canvas.Clear();
 
+            // Draw path with cubic Bezier curve
             using (SKPath path = new SKPath())
             {
                 path.MoveTo(touchPoints[0].Center);
@@ -78,24 +71,6 @@ namespace SkiaSharpFormsDemos.Curves
             foreach (TouchPoint touchPoint in touchPoints)
             {
                touchPoint.Paint(canvas);
-            }
-        }
-
-        void OnTouchEffectAction(object sender, TouchActionEventArgs args)
-        {
-            bool touchPointMoved = false;
-
-            foreach (TouchPoint touchPoint in touchPoints)
-            {
-                float scale = canvasView.CanvasSize.Width / (float)canvasView.Width;
-                SKPoint point = new SKPoint(scale * (float)args.Location.X, 
-                                            scale * (float)args.Location.Y);
-                touchPointMoved |= touchPoint.ProcessTouchEvent(args.Id, args.Type, point);
-            }
-
-            if (touchPointMoved)
-            {
-                canvasView.InvalidateSurface();
             }
         }
     }

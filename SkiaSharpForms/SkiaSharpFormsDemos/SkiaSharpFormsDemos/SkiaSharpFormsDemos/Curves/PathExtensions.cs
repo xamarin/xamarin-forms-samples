@@ -124,7 +124,7 @@ namespace SkiaSharpFormsDemos.Curves
 
 
 
-        static SKPoint[] FlattenQuadraticBezier(SKPoint pt0, SKPoint pt1, SKPoint pt2)
+        public static SKPoint[] FlattenQuadraticBezier(SKPoint pt0, SKPoint pt1, SKPoint pt2)
         {
             int count = (int)Math.Max(1, Length(pt0, pt1) + Length(pt1, pt2));
             SKPoint[] points = new SKPoint[count];
@@ -141,7 +141,7 @@ namespace SkiaSharpFormsDemos.Curves
         }
 
 
-        static SKPoint[] FlattenCubicBezier(SKPoint pt0, SKPoint pt1, SKPoint pt2, SKPoint pt3)
+        public static SKPoint[] FlattenCubicBezier(SKPoint pt0, SKPoint pt1, SKPoint pt2, SKPoint pt3)
         {
             int count = (int)Math.Max(1, Length(pt0, pt1) + Length(pt1, pt2) + Length(pt2, pt3));
             SKPoint[] points = new SKPoint[count];
@@ -162,6 +162,26 @@ namespace SkiaSharpFormsDemos.Curves
 
             return points;
         }
+
+        public static SKPoint[] FlattenRationalQuadraticBezier(SKPoint pt0, SKPoint pt1, SKPoint pt2, float weight)
+        {
+            int count = (int)Math.Max(1, Length(pt0, pt1) + Length(pt1, pt2));
+            SKPoint[] points = new SKPoint[count];
+
+            for (int i = 0; i < count; i++)
+            {
+                float t = (i + 1f) / count;
+
+                float d = (1 - t) * (1 - t) + 2 * weight * t * (1 - t) + t * t;
+
+                float x = ((1 - t) * (1 - t) * pt0.X + 2 * weight * t * (1 - t) * pt1.X + t * t * pt2.X) / d;
+                float y = ((1 - t) * (1 - t) * pt0.Y + 2 * weight * t * (1 - t) * pt1.Y + t * t * pt2.Y) / d;
+                points[i] = new SKPoint(x, y);
+            }
+
+            return points;
+        }
+
 
         static double Length(SKPoint pt0, SKPoint pt1)
         {
