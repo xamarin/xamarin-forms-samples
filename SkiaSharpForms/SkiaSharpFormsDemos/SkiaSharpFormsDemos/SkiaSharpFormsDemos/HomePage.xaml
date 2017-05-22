@@ -295,6 +295,26 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.BezierCurvePage}" />
 
+                <TextCell Text="Analog Clock"
+                          Detail="-"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.AnalogClockPage}" />
+
+                <TextCell Text="Bézier Circular Arc"
+                          Detail="-"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.BezierCircularArcPage}" />
+
+                <TextCell Text="Squaring the Circle"
+                          Detail="-"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.SquaringTheCirclePage}" />
+
+                <TextCell Text="Bézier Infinity"
+                          Detail="Draw an infinity sign with a cubic Bézier curve"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.BezierInfinityPage}" />
+
                 <TextCell Text="Quadratic Curve"
                           Detail="Interactively draw a quadratic Bézier curve"
                           Command="{Binding NavigateCommand}"
@@ -305,10 +325,10 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.ConicCurvePage}" />
 
-                <TextCell Text="Analog Clock"
-                          Detail="-"
+                <TextCell Text="Conic Circular Arc"
+                          Detail="TK"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.AnalogClockPage}" />
+                          CommandParameter="{x:Type local:Curves.ConicCircularArcPage}" />
 
                 <!-- Path information -->
                 <TextCell Text="Globular Text"

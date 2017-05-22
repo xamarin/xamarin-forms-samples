@@ -51,8 +51,15 @@
       <DependentUpon>AngleArcPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Curves\ArcInfinityPage.cs" />
+    <Compile Include="Curves\BezierCircularArcPage.xaml.cs">
+      <DependentUpon>BezierCircularArcPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Curves\BezierCurvePage.xaml.cs">
       <DependentUpon>BezierCurvePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Curves\BezierInfinityPage.cs" />
+    <Compile Include="Curves\ConicCircularArcPage.xaml.cs">
+      <DependentUpon>ConicCircularArcPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Curves\ConicCurvePage.xaml.cs">
       <DependentUpon>ConicCurvePage.xaml</DependentUpon>
@@ -67,6 +74,7 @@
       <DependentUpon>QuadraticCurvePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Curves\RoundedHeptagonPage.cs" />
+    <Compile Include="Curves\SquaringTheCirclePage.cs" />
     <Compile Include="Curves\TangentArcPage.xaml.cs">
       <DependentUpon>TangentArcPage.xaml</DependentUpon>
     </Compile>
@@ -360,6 +368,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Curves\ConicCurvePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\ConicCircularArcPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\BezierCircularArcPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

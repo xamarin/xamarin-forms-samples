@@ -31,6 +31,7 @@ namespace SkiaSharpFormsDemos.Curves
 
             InitializeComponent();
             baseCanvasView = canvasView;
+            weightSlider.Value = 0.5;
         }
 
         void OnSliderValueChanged(object sender, ValueChangedEventArgs args)

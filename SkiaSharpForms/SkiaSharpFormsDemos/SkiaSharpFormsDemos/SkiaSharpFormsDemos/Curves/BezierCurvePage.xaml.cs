@@ -5,21 +5,6 @@ namespace SkiaSharpFormsDemos.Curves
 {
     public partial class BezierCurvePage : InteractivePage
     {
-        SKPaint strokePaint = new SKPaint
-        {
-            Style = SKPaintStyle.Stroke,
-            Color = SKColors.Black,
-            StrokeWidth = 3
-        };
-
-        SKPaint dottedStrokePaint = new SKPaint
-        {
-            Style = SKPaintStyle.Stroke,
-            Color = SKColors.Black,
-            StrokeWidth = 3,
-            PathEffect = SKPathEffect.CreateDash(new float[] { 7, 7 }, 0)
-        };
-
         public BezierCurvePage()
         {
             touchPoints = new TouchPoint[4];
