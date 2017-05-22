@@ -31,7 +31,7 @@ namespace WorkingWithFonts
 				FontFamily = Device.OnPlatform(
 					"Lobster-Regular", // iOS
 					"Lobster-Regular.ttf#Lobster-Regular", // Android
-					@"\Assets\Fonts\Lobster-Regular.ttf#Lobster-Regular" // WinPhone
+					"Assets/Fonts/Lobster-Regular.ttf#Lobster" //Windows
 				),
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,

@@ -51,11 +51,16 @@ namespace SkiaSharpFormsDemos.Paths
             float xLine1 = 100;
             float xLine2 = info.Width - xLine1;
             float y = 2 * textPaint.FontSpacing;
+            string[] strStrokeJoins = { "Miter", "Round", "Bevel" };
 
-            foreach (SKStrokeJoin strokeJoin in Enum.GetValues(typeof(SKStrokeJoin)))
+            foreach (string strStrokeJoin in strStrokeJoins)
             {
                 // Display text
-                canvas.DrawText(strokeJoin.ToString().Replace("Mitter", "Miter"), xText, y, textPaint);
+                canvas.DrawText(strStrokeJoin, xText, y, textPaint);
+
+                // Get stroke-join value
+                SKStrokeJoin strokeJoin;
+                Enum.TryParse(strStrokeJoin, out strokeJoin);
 
                 // Create path
                 SKPath path = new SKPath();

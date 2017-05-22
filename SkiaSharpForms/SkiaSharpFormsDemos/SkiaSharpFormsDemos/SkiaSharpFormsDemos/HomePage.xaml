@@ -205,6 +205,55 @@
                           Detail="Use the skew transform for a text shadow"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.SkewShadowTextPage}" />
+                
+                <!-- Matrix -->
+                <TextCell Text="Path Transform"
+                          Detail="Apply a transform to a path"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.PathTransformPage}" />
+
+                <TextCell Text="Show Affine Matrix"
+                          Detail="Display the matrix for affine transforms"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.ShowAffineMatrixPage}" />
+
+                <!-- Touch Manipulation -->
+                <TextCell Text="Touch Manipulation"
+                          Detail="Pan, scale, and rotate a bitmap"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.TouchManipulationPage}" />
+
+                <TextCell Text="Bitmap Scatter View"
+                          Detail="Pan, scale, and rotate multiple bitmaps"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.BitmapScatterViewPage}" />
+
+                <!-- Non-Affine -->
+                <TextCell Text="Test Perspective"
+                          Detail="Experiment with the third matrix column"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.TestPerspectivePage}" />
+
+                <TextCell Text="Taper Transform"
+                          Detail="Discover how to calculate a taper transform"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.TaperTransformPage}" />
+
+                <TextCell Text="Show Non-Affine Matrix"
+                          Detail="Display the matrix for non-affine transforms"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.ShowNonAffineMatrixPage}" />
+
+                <!-- 3D Rotations -->
+                <TextCell Text="Rotation 3D"
+                          Detail="Rotate a 2D bitmap in 3D space"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.Rotation3DPage}" />
+
+                <TextCell Text="Animated Rotation 3D"
+                          Detail="Animate a 2D object in 3D space"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.AnimatedRotation3DPage}" />
 
             </TableSection>
         </TableRoot>
