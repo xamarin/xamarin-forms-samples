@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -17,12 +16,8 @@ namespace TodoREST
 
 		public RestService ()
 		{
-			var authData = string.Format ("{0}:{1}", Constants.Username, Constants.Password);
-			var authHeaderValue = Convert.ToBase64String (Encoding.UTF8.GetBytes (authData));
-
 			client = new HttpClient ();
 			client.MaxResponseContentBufferSize = 256000;
-			client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue ("Basic", authHeaderValue);
 		}
 
 		public async Task<List<TodoItem>> RefreshDataAsync ()
