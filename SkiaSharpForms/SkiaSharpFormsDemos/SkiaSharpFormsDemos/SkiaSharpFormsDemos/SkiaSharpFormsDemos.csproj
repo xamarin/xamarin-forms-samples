@@ -69,6 +69,8 @@
     </Compile>
     <Compile Include="Curves\ExplodedPieChartPage.cs" />
     <Compile Include="Curves\GlobularTextPage.cs" />
+    <Compile Include="Curves\PathDataCatPage.cs" />
+    <Compile Include="Curves\PathDataHelloPage.cs" />
     <Compile Include="Curves\PathExtensions.cs" />
     <Compile Include="Curves\QuadraticCurvePage.xaml.cs">
       <DependentUpon>QuadraticCurvePage.xaml</DependentUpon>
