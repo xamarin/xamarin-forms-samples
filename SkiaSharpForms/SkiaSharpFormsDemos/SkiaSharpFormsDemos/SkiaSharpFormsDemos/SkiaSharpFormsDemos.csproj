@@ -46,7 +46,7 @@
     <Compile Include="Basics\ExpandingCirclesPage.cs" />
     <Compile Include="Basics\FramedTextPage.cs" />
     <Compile Include="Basics\OutlinedTextPage.cs" />
-    <Compile Include="Curves\AnalogClockPage.cs" />
+    <Compile Include="Curves\PrettyAnalogClockPage.cs" />
     <Compile Include="Curves\AngleArcPage.xaml.cs">
       <DependentUpon>AngleArcPage.xaml</DependentUpon>
     </Compile>

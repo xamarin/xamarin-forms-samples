@@ -336,10 +336,10 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.PathDataCatPage}" />
 
-                <TextCell Text="Analog Clock"
-                          Detail="Display an analog clock"
+                <TextCell Text="Pretty Analog Clock"
+                          Detail="Display an analog clock using Bézier curves"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.AnalogClockPage}" />
+                          CommandParameter="{x:Type local:Curves.PrettyAnalogClockPage}" />
 
                 <!-- Path information -->
                 <TextCell Text="Globular Text"

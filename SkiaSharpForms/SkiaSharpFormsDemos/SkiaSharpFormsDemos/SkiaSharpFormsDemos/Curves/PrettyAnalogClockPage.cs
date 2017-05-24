@@ -7,7 +7,7 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Curves
 {
-    public class AnalogClockPage : ContentPage
+    public class PrettyAnalogClockPage : ContentPage
     {
         SKCanvasView canvasView;
         bool pageIsActive;
@@ -59,9 +59,9 @@ namespace SkiaSharpFormsDemos.Curves
             PathEffect = SKPathEffect.CreateDash(new float[] { 0, 15 * 3.14159f }, 0)
         };
 
-        public AnalogClockPage()
+        public PrettyAnalogClockPage()
         {
-            Title = "Analog Clock";
+            Title = "Pretty Analog Clock";
 
             canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;
