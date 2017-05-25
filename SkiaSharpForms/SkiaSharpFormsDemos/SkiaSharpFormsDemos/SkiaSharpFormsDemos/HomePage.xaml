@@ -340,13 +340,6 @@
                           Detail="Display an analog clock using Bézier curves"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.PrettyAnalogClockPage}" />
-
-                <!-- Path information -->
-                <TextCell Text="Globular Text"
-                          Detail="Wrap text around a hemisphere"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.GlobularTextPage}" />
-
             </TableSection>
         </TableRoot>
     </TableView>

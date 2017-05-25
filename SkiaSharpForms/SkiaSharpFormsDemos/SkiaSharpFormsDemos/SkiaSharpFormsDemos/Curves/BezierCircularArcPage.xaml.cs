@@ -81,11 +81,11 @@ namespace SkiaSharpFormsDemos.Curves
             // Find the control points
             SKPoint point0Normalized = Normalize(point0);
             SKPoint point1 = point0 + new SKPoint(length * point0Normalized.Y,
-                                                  -length * point0Normalized.X);
+                                                    -length * point0Normalized.X);
 
             SKPoint point3Normalized = Normalize(point3);
             SKPoint point2 = point3 + new SKPoint(-length * point3Normalized.Y,
-                                                  length * point3Normalized.X);
+                                                    length * point3Normalized.X);
 
             // Draw the points
             canvas.DrawCircle(point0.X, point0.Y, 10, blackFill);

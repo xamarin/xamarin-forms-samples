@@ -4,7 +4,7 @@
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              xmlns:tt="clr-namespace:TouchTracking"
              x:Class="SkiaSharpFormsDemos.Curves.BezierCircularArcPage"
-             Title="Bezier CircularArc">
+             Title="Bezier Circular Arc">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
@@ -58,27 +54,11 @@ namespace SkiaSharpFormsDemos.Curves
                 canvas.DrawPath(path, strokePaint);
             }
 
-            SKPoint[] points = PathExtensions.FlattenRationalQuadraticBezier(touchPoints[0].Center,
-                                                                             touchPoints[1].Center,
-                                                                             touchPoints[2].Center,
-                                                                             (float)weightSlider.Value);
-
-            using (SKPath path = new SKPath())
-            {
-                path.AddPoly(points, false);
-
-                canvas.DrawPath(path, redStrokePaint);
-            }
-
-
-
-
-
-                // Draw tangent lines
-                canvas.DrawLine(touchPoints[0].Center.X,
-                                touchPoints[0].Center.Y,
-                                touchPoints[1].Center.X,
-                                touchPoints[1].Center.Y, dottedStrokePaint);
+            // Draw tangent lines
+            canvas.DrawLine(touchPoints[0].Center.X,
+                            touchPoints[0].Center.Y,
+                            touchPoints[1].Center.X,
+                            touchPoints[1].Center.Y, dottedStrokePaint);
 
             canvas.DrawLine(touchPoints[1].Center.X,
                             touchPoints[1].Center.Y,
