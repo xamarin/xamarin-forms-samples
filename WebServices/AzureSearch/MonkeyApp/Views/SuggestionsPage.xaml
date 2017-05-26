@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MonkeyApp" x:Class="MonkeyApp.SuggestionsPage" Title="Suggestions" Icon="xaml.png">
+	<StackLayout Margin="20">
+		<SearchBar x:Name="searchBar" Placeholder="Enter your search term here" SearchCommand="{Binding SuggestionsCommand}" SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}" />
+		<ListView ItemsSource="{Binding Suggestions}" ItemTapped="OnListViewItemTapped" ItemSelected="OnListViewItemSelected">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<local:HighlightedLabel HighlightedText="{Binding Name}" Style="{DynamicResource TitleStyle}" />
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
+</ContentPage>

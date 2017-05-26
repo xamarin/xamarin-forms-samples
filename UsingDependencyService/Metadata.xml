@@ -3,7 +3,7 @@
 	<ID>be2172e8-574b-402e-a1a9-6e14c968041b</ID>
 	<IsFullApplication>false</IsFullApplication>
 	<Level>Beginner</Level>
-	<Tags>Xamarin.Forms</Tags>
+	<Tags>Xamarin.Forms, Dependency Service</Tags>
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>false</Gallery>

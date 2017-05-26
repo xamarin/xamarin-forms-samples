@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{0D04AADA-8E17-4E6C-98B2-123331F14741}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FileUploader</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)waterfront.jpg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)XAML\FileUploaderPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)XAML\TextFileBrowserPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)XAML\ImageFileUploaderPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)XAML\TextFileUploaderPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AzureStorage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Convert.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ContainerType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)XAML\FileUploaderPage.xaml.cs">
+      <DependentUpon>FileUploaderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)XAML\TextFileBrowserPage.xaml.cs">
+      <DependentUpon>TextFileBrowserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)XAML\ImageFileUploaderPage.xaml.cs">
+      <DependentUpon>ImageFileUploaderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)XAML\TextFileUploaderPage.xaml.cs">
+      <DependentUpon>TextFileUploaderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)CS\FileUploaderPageCS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CS\ImageFileUploaderPageCS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CS\TextFileBrowserPageCS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CS\TextFileUploaderPageCS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)XAML\" />
+    <Folder Include="$(MSBuildThisFileDirectory)CS\" />
+  </ItemGroup>
+</Project>

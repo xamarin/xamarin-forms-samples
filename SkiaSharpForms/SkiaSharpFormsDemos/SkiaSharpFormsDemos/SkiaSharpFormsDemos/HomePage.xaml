@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SkiaSharpFormsDemos"
+             x:Class="SkiaSharpFormsDemos.HomePage"
+             Title="SkiaSharp Forms Demos"
+             Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="SkiaSharp Basics">
+                <TextCell Text="Simple Circle"
+                          Detail="Outline and fill a circle with SkiaSharp"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.SimpleCirclePage}" />
+
+                <TextCell Text="Tap Toggle Fill"
+                          Detail="Tap the screen to toggle the circle fill"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.TapToggleFillPage}" />
+
+                <TextCell Text="Color Explore"
+                          Detail="Use sliders to select color"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.ColorExplorePage}" />
+
+                <TextCell Text="Surface Size"
+                          Detail="Display the surface size three different ways"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.SurfaceSizePage}" />
+
+                <TextCell Text="Ellipse Fill"
+                          Detail="Fill the surface with an ellipse"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.EllipseFillPage}" />
+
+                <TextCell Text="Pulsating Ellipse"
+                          Detail="Animate the axes of an ellipse"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.PulsatingEllipsePage}" />
+
+                <TextCell Text="Expanding Circles"
+                          Detail="Animate circles to expand forever"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.ExpandingCirclesPage}" />
+
+                <TextCell Text="Framed Text"
+                          Detail="Draw a rounded rectangle around a text string"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.FramedTextPage}" />
+
+                <TextCell Text="Outlined Text"
+                          Detail="Outline text characters"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.OutlinedTextPage}" />
+
+                <TextCell Text="Basic Bitmaps"
+                          Detail="Load and display bitmaps"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.BasicBitmapsPage}" />
+            </TableSection>
+
+            <TableSection Title="Lines and Paths">
+                <TextCell Text="Stroke Caps"
+                          Detail="List and show the three stroke cap options"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.StrokeCapsPage}" />
+
+                <TextCell Text="Multiple Lines"
+                          Detail="Draw multiple lines using DrawPoints"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.MultipleLinesPage}" />
+
+                <TextCell Text="Two Triangle Contours"
+                          Detail="Use a graphics path to draw open and closed triangles"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.TwoTriangleContoursPage}" />
+
+                <TextCell Text="Stroke Joins"
+                          Detail="List and show the three stroke join options"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.StrokeJoinsPage}" />
+
+                <TextCell Text="Five-Pointed Star"
+                          Detail="Demonstrate path fill types"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.FivePointedStarPage}" />
+
+                <TextCell Text="Overlapping Circles"
+                          Detail="Draw overlapping circles"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.OverlappingCirclesPage}" />
+
+                <TextCell Text="Archimedean Spiral"
+                          Detail="Use a graphics path to draw a spiral"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.ArchimedeanSpiralPage}" />
+
+                <TextCell Text="Dots and Dashes"
+                          Detail="Render a line with dots and dashes"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.DotsAndDashesPage}" />
+
+                <TextCell Text="Animated Spiral"
+                          Detail="Animate an Archimedean Spiral"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.AnimatedSpiralPage}" />
+
+                <TextCell Text="Finger Paint"
+                          Detail="Draw Lines with Your Fingers"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.FingerPaintPage}" />
+            </TableSection>
+            
+            <TableSection Title="Transforms">
+                <!-- Translate -->
+                <TextCell Text="Accumulated Translate"
+                          Detail="Discover how transforms are accumulated"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.AccumulatedTranslatePage}" />
+
+                <TextCell Text="Translate Text Effects"
+                          Detail="Use translation for basic text effects"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.TranslateTextEffectsPage}" />
+                
+                <TextCell Text="Hendecagram Array"
+                          Detail="Draw 11-pointed stard on the page"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.HendecagramArrayPage}" />
+
+                <TextCell Text="Hendecagram Animation"
+                          Detail="Rotate the 11-pointed star in a circle"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.HendecagramAnimationPage}" />
+                
+                <!-- Scale -->
+                <TextCell Text="Basic Scale"
+                          Detail="Experiment with the scale transform"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.BasicScalePage}" />
+                
+                <TextCell Text="Centered Scale"
+                          Detail="Scale relative to a specified center point"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.CenteredScalePage}" />
+
+                <TextCell Text="Anisotropic Scaling"
+                          Detail="Stretch a graphics object to fill the page"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.AnisotropicScalingPage}" />
+
+                <TextCell Text="Anisotropic Text"
+                          Detail="Stretch text to fill the page"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.AnisotropicTextPage}" />
+
+                <TextCell Text="Isotropic Scaling"
+                          Detail="Preserve the aspect ratios when scaling"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.IsotropicScalingPage}" />
+
+                <!-- Rotate -->
+                <TextCell Text="Basic Rotate"
+                          Detail="Experiment with rotation"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.BasicRotatePage}" />
+
+                <TextCell Text="Centered Rotate"
+                          Detail="Rotate objects around a center point"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.CenteredRotatePage}" />
+
+                <TextCell Text="Rotated Text"
+                          Detail="Rotate a text string around a center"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.RotatedTextPage}" />
+
+                <TextCell Text="Rotate and Revolve"
+                          Detail="Rotate a square around its center and also revolve"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.RotateAndRevolvePage}" />
+                
+                <TextCell Text="Ugly Analog Clock"
+                          Detail="First try with an analog clock"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.UglyAnalogClockPage}" />
+                
+                <!-- Skew -->
+                <TextCell Text="Skew Experiment"
+                          Detail="Discover how the skew transform works"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.SkewExperimentPage}" />
+
+                <TextCell Text="Skew Angle Experiment"
+                          Detail="Specify skew in terms of angles"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.SkewAngleExperimentPage}" />
+
+                <TextCell Text="Oblique Text"
+                          Detail="Tilt text for an oblique (or italic) effect"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.ObliqueTextPage}" />
+
+                <TextCell Text="Skew Shadow Text"
+                          Detail="Use the skew transform for a text shadow"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.SkewShadowTextPage}" />
+                
+                <!-- Matrix -->
+                <TextCell Text="Path Transform"
+                          Detail="Apply a transform to a path"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.PathTransformPage}" />
+
+                <TextCell Text="Show Affine Matrix"
+                          Detail="Display the matrix for affine transforms"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.ShowAffineMatrixPage}" />
+
+                <!-- Touch Manipulation -->
+                <TextCell Text="Touch Manipulation"
+                          Detail="Pan, scale, and rotate a bitmap"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.TouchManipulationPage}" />
+
+                <TextCell Text="Bitmap Scatter View"
+                          Detail="Pan, scale, and rotate multiple bitmaps"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.BitmapScatterViewPage}" />
+
+                <!-- Non-Affine -->
+                <TextCell Text="Test Perspective"
+                          Detail="Experiment with the third matrix column"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.TestPerspectivePage}" />
+
+                <TextCell Text="Taper Transform"
+                          Detail="Discover how to calculate a taper transform"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.TaperTransformPage}" />
+
+                <TextCell Text="Show Non-Affine Matrix"
+                          Detail="Display the matrix for non-affine transforms"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.ShowNonAffineMatrixPage}" />
+
+                <!-- 3D Rotations -->
+                <TextCell Text="Rotation 3D"
+                          Detail="Rotate a 2D bitmap in 3D space"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.Rotation3DPage}" />
+
+                <TextCell Text="Animated Rotation 3D"
+                          Detail="Animate a 2D object in 3D space"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.AnimatedRotation3DPage}" />
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

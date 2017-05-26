@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TodoREST
+﻿namespace TodoREST
 {
 	public static class Constants
 	{

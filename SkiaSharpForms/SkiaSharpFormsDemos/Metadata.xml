@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+    <ID>BEDA5573-442F-4044-934C-A58F7F90FCAF</ID>
+    <IsFullApplication>false</IsFullApplication>
+    <Level>Intermediate</Level>
+    <Tags>Xamarin.Forms, Graphics</Tags>
+    <SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+    <LicenseRequirement>Indie</LicenseRequirement>
+    <Brief>A project showing SkiaSharp features in a Xamarin.Forms application.</Brief>
+    <Gallery>true</Gallery>
+</SampleMetadata>

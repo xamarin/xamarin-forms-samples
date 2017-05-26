@@ -6,20 +6,17 @@
 				<OnPlatform x:TypeArguments="FileImageSource" Android="plus" />
 			</ToolbarItem.Icon>
 		</ToolbarItem>
-		<ToolbarItem Text="Logout" Clicked="OnLogoutClicked" />
 	</ContentPage.ToolbarItems>
-	<ContentPage.Content>
-		<ListView x:Name="listView" ItemSelected="OnItemSelected">
-			<ListView.ItemTemplate>
-				<DataTemplate>
-					<ViewCell>
-						<StackLayout Padding="20,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
-							<Label Text="{Binding Name}" VerticalTextAlignment="Center" />
-							<Image Source="check" IsVisible="{Binding Done}" />
-						</StackLayout>
-					</ViewCell>
-				</DataTemplate>
-			</ListView.ItemTemplate>
-		</ListView>
-	</ContentPage.Content>
+	<ListView x:Name="listView" Margin="20" ItemSelected="OnItemSelected">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<StackLayout Margin="20,0,0,0" Orientation="Horizontal">
+						<Label Text="{Binding Name}" VerticalTextAlignment="Center" />
+						<Image Source="check" IsVisible="{Binding Done}" HorizontalOptions="EndAndExpand" />
+					</StackLayout>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
 </ContentPage>

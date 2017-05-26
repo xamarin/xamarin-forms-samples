@@ -6,41 +6,35 @@ namespace TodoAWSSimpleDB
 {
 	public partial class TodoListPage : ContentPage
 	{
-		public TodoListPage ()
+		public TodoListPage()
 		{
-			InitializeComponent ();
+			InitializeComponent();
 		}
 
-		protected async override void OnAppearing ()
+		protected async override void OnAppearing()
 		{
-			base.OnAppearing ();
-			listView.ItemsSource = await App.TodoManager.GetTasksAsync ();
+			base.OnAppearing();
+			listView.ItemsSource = await App.TodoManager.GetTasksAsync();
 		}
 
-		async void OnLogoutClicked (object sender, EventArgs e)
+		async void OnAddItemClicked(object sender, EventArgs e)
 		{
-			DependencyService.Get<IAuthentication> ().Logout ();
-			Navigation.InsertPageBefore (new LoginPage (), Navigation.NavigationStack.First ());
-			await Navigation.PopToRootAsync ();
+			await Navigation.PushAsync(new TodoItemPage
+			{
+				BindingContext = new TodoItem
+				{
+					ID = Guid.NewGuid().ToString(),
+					Notes = string.Empty
+				}
+			});
 		}
 
-		void OnAddItemClicked (object sender, EventArgs e)
+		async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
-			var todoItem = new TodoItem () {
-				ID = Guid.NewGuid ().ToString (),
-				Notes = string.Empty
-			};
-			var todoPage = new TodoItemPage ();
-			todoPage.BindingContext = todoItem;
-			Navigation.PushAsync (todoPage);
-		}
-
-		void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
-		{
-			var todoItem = e.SelectedItem as TodoItem;
-			var todoPage = new TodoItemPage ();
-			todoPage.BindingContext = todoItem;
-			Navigation.PushAsync (todoPage);
+			await Navigation.PushAsync(new TodoItemPage
+			{
+				BindingContext = e.SelectedItem as TodoItem
+			});
 		}
 	}
 }

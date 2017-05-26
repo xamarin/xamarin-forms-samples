@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+    <ID>CAFFF6D6-AA2B-46B9-AD5A-4EF8109E0CB5</ID>
+    <IsFullApplication>false</IsFullApplication>
+    <Brief>This sample demonstrates an effect to trigger events for multi-touch finger tracking.</Brief>
+    <Level>Intermediate</Level>
+    <LicenseRequirement>Indie</LicenseRequirement>
+    <Tags>Effects, Touch, Graphics, Xamarin.Forms</Tags>
+    <SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+    <Gallery>true</Gallery>
+</SampleMetadata>
+

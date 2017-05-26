@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace CustomRenderer
 {
@@ -12,23 +10,24 @@ namespace CustomRenderer
 	/// </summary>
 	public partial class NativeCellPage : ContentPage
 	{
-		public NativeCellPage ()
+		public NativeCellPage()
 		{
-			InitializeComponent ();
+			InitializeComponent();
 
-			listView.ItemsSource = DataSource.GetList ();
+			listView.ItemsSource = DataSource.GetList();
 		}
 
-		async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
+		async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
-			if (e.SelectedItem == null) {
+			if (e.SelectedItem == null)
+			{
 				return;
 			}
 
 			// Deselect row
 			listView.SelectedItem = null;
 
-			await Navigation.PushModalAsync (new DetailPage (e.SelectedItem));
+			await Navigation.PushModalAsync(new DetailPage(e.SelectedItem));
 		}
 	}
 }

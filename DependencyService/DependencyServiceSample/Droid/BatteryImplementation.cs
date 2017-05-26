@@ -9,10 +9,8 @@ using DependencyServiceSample.Droid;
 [assembly: Xamarin.Forms.Dependency (typeof (BatteryImplementation))]
 namespace DependencyServiceSample.Droid
 {
-	
 	public class BatteryImplementation : IBattery
 	{
-		
 		public BatteryImplementation ()
 		{
 		}
