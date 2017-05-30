@@ -254,7 +254,92 @@
                           Detail="Animate a 2D object in 3D space"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.AnimatedRotation3DPage}" />
+            </TableSection>
 
+            <TableSection Title="Curves and More Paths">
+                
+                <!-- Arcs -->
+                <TextCell Text="Angle Arc"
+                          Detail="Experiment with creating an angle arc"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.AngleArcPage}" />
+
+                <TextCell Text="Exploded Pie Chart"
+                          Detail="Display a pie chart using the angle arc"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ExplodedPieChartPage}" />
+
+                <TextCell Text="Tangent Arc"
+                          Detail="Experiment with creating a tangent arc"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.TangentArcPage}" />
+
+                <TextCell Text="Rounded Heptagon"
+                          Detail="Draw a heptagon with rounded corners"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.RoundedHeptagonPage}" />
+
+                <TextCell Text="Elliptical Arc"
+                          Detail="Experiment with creating an elliptical arc"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.EllipticalArcPage}" />
+
+                <TextCell Text="Arc Infinity"
+                          Detail="Draw an infinity sign with an elliptical arc"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ArcInfinityPage}" />
+
+                <!-- Bezier curves -->
+                <TextCell Text="Bézier Curve"
+                          Detail="Interactively draw a cubic Bézier curve"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.BezierCurvePage}" />
+
+                <TextCell Text="Bézier Circular Arc"
+                          Detail="Draw a circular arc using a Bézier curve"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.BezierCircularArcPage}" />
+
+                <TextCell Text="Squaring the Circle"
+                          Detail="Animate between a square and a circle"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.SquaringTheCirclePage}" />
+
+                <TextCell Text="Bézier Infinity"
+                          Detail="Draw an infinity sign using cubic Bézier curves"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.BezierInfinityPage}" />
+
+                <TextCell Text="Quadratic Curve"
+                          Detail="Interactively draw a quadratic Bézier curve"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.QuadraticCurvePage}" />
+
+                <TextCell Text="Conic Curve"
+                          Detail="Interactively draw a conic curve"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ConicCurvePage}" />
+
+                <TextCell Text="Conic Circular Arc"
+                          Detail="Draw a circular arc using a conic curve"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ConicCircularArcPage}" />
+                
+                <!-- SVG Path Data -->
+                <TextCell Text="Path Data Hello"
+                          Detail="Say &#x201C;HELLO&#x201D; using SVG path-drawing commands"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.PathDataHelloPage}" />
+
+                <TextCell Text="Path Data Cat"
+                          Detail="Draw a cat using SVG path-drawing commands"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.PathDataCatPage}" />
+
+                <TextCell Text="Pretty Analog Clock"
+                          Detail="Display an analog clock using Bézier curves"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.PrettyAnalogClockPage}" />
             </TableSection>
         </TableRoot>
     </TableView>

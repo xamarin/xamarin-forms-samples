@@ -46,6 +46,39 @@
     <Compile Include="Basics\ExpandingCirclesPage.cs" />
     <Compile Include="Basics\FramedTextPage.cs" />
     <Compile Include="Basics\OutlinedTextPage.cs" />
+    <Compile Include="Curves\PrettyAnalogClockPage.cs" />
+    <Compile Include="Curves\AngleArcPage.xaml.cs">
+      <DependentUpon>AngleArcPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Curves\ArcInfinityPage.cs" />
+    <Compile Include="Curves\BezierCircularArcPage.xaml.cs">
+      <DependentUpon>BezierCircularArcPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Curves\BezierCurvePage.xaml.cs">
+      <DependentUpon>BezierCurvePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Curves\BezierInfinityPage.cs" />
+    <Compile Include="Curves\ConicCircularArcPage.xaml.cs">
+      <DependentUpon>ConicCircularArcPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Curves\ConicCurvePage.xaml.cs">
+      <DependentUpon>ConicCurvePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Curves\EllipticalArcPage.xaml.cs">
+      <DependentUpon>EllipticalArcPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Curves\ExplodedPieChartPage.cs" />
+    <Compile Include="Curves\PathDataCatPage.cs" />
+    <Compile Include="Curves\PathDataHelloPage.cs" />
+    <Compile Include="Curves\QuadraticCurvePage.xaml.cs">
+      <DependentUpon>QuadraticCurvePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Curves\RoundedHeptagonPage.cs" />
+    <Compile Include="Curves\SquaringTheCirclePage.cs" />
+    <Compile Include="Curves\TangentArcPage.xaml.cs">
+      <DependentUpon>TangentArcPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InteractivePage.cs" />
     <Compile Include="IPicturePicker.cs" />
     <Compile Include="MatrixDisplay.cs" />
     <Compile Include="Paths\FingerPaintPage.xaml.cs">
@@ -299,6 +332,54 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Transforms\Rotation3DPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\AngleArcPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\TangentArcPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\EllipticalArcPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\BezierCurvePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\QuadraticCurvePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\ConicCurvePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\ConicCircularArcPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\BezierCircularArcPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
