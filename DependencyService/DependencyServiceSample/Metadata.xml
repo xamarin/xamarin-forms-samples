@@ -3,7 +3,7 @@
     <ID>d53f0550-a188-4e87-a824-4b95b7857d6d</ID>
     <IsFullApplication>false</IsFullApplication>
     <Level>Intermediate</Level>
-    <Tags>Xamarin.Forms, Dependency Service</Tags>
+    <Tags>Xamarin.Forms, Dependency Service, liveplayer</Tags>
     <SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
     <LicenseRequirement>Indie</LicenseRequirement>
     <Gallery>false</Gallery>
