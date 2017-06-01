@@ -6,6 +6,6 @@
 	<Tags>User Interface, Xamarin.Forms, liveplayer</Tags>
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
-	<Gallery>false</Gallery>
+	<Gallery>true</Gallery>
 	<Brief>These samples demonstrate how to work with ListView using Xamarin Forms.</Brief>
 </SampleMetadata>
