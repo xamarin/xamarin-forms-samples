@@ -340,6 +340,38 @@
                           Detail="Display an analog clock using Bézier curves"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.PrettyAnalogClockPage}" />
+                
+                <!-- Clipping -->
+                <TextCell Text="Monkey through Keyhole"
+                          Detail="Clip a bitmap to a path"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.MonkeyThroughKeyholePage}" />
+
+                <TextCell Text="Four Circle Intersect Clip"
+                          Detail="Combine paths for a more complex clip"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.FourCircleIntersectClipPage}" />
+
+                <TextCell Text="Clip Operations"
+                          Detail="Illustrate the two clip operations"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ClipOperationsPage}" />
+
+                <TextCell Text="Region Operations"
+                          Detail="Illustrate the six region operations"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.RegionOperationsPage}" />
+
+                <TextCell Text="Four-Leaf Clover"
+                          Detail="Draw a four-leaf clover with overlapping circles"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.FourLeafCloverPage}" />
+
+                <TextCell Text="Region Paint"
+                          Detail="Paint a region to see what happens"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.RegionPaintPage}" />
+
             </TableSection>
         </TableRoot>
     </TableView>

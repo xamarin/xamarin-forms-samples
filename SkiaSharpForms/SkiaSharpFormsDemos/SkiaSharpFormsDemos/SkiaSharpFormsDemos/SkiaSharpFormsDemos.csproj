@@ -46,6 +46,10 @@
     <Compile Include="Basics\ExpandingCirclesPage.cs" />
     <Compile Include="Basics\FramedTextPage.cs" />
     <Compile Include="Basics\OutlinedTextPage.cs" />
+    <Compile Include="Curves\ClipOperationsPage.cs" />
+    <Compile Include="Curves\FourCircleIntersectClipPage.cs" />
+    <Compile Include="Curves\FourLeafCloverPage.cs" />
+    <Compile Include="Curves\MonkeyThroughKeyholePage.cs" />
     <Compile Include="Curves\PrettyAnalogClockPage.cs" />
     <Compile Include="Curves\AngleArcPage.xaml.cs">
       <DependentUpon>AngleArcPage.xaml</DependentUpon>
@@ -73,6 +77,8 @@
     <Compile Include="Curves\QuadraticCurvePage.xaml.cs">
       <DependentUpon>QuadraticCurvePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Curves\RegionOperationsPage.cs" />
+    <Compile Include="Curves\RegionPaintPage.cs" />
     <Compile Include="Curves\RoundedHeptagonPage.cs" />
     <Compile Include="Curves\SquaringTheCirclePage.cs" />
     <Compile Include="Curves\TangentArcPage.xaml.cs">
