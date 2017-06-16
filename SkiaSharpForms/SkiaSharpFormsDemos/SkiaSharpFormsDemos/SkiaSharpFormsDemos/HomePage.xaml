@@ -362,15 +362,15 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.RegionOperationsPage}" />
 
-                <TextCell Text="Four-Leaf Clover"
-                          Detail="Draw a four-leaf clover with overlapping circles"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.FourLeafCloverPage}" />
-
                 <TextCell Text="Region Paint"
                           Detail="Paint a region to see what happens"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.RegionPaintPage}" />
+
+                <TextCell Text="Four-Leaf Clover"
+                          Detail="Draw a four-leaf clover with overlapping circles"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.FourLeafCloverPage}" />
 
             </TableSection>
         </TableRoot>
