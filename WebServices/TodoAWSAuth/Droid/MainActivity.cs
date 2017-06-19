@@ -12,14 +12,9 @@ namespace TodoAWSSimpleDB.Droid
 			base.OnCreate(bundle);
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
+            global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, bundle);
 
-			Xamarin.Auth.Presenters.OAuthLoginPresenter.PlatformLogin = (authenticator) =>
-			{
-				var oAuthLogin = new OAuthLoginPresenter();
-				oAuthLogin.Login(authenticator);
-			};
-
-			App.Speech = new Speech();
+            App.Speech = new Speech();
 			LoadApplication(new App());
 		}
 	}
