@@ -10,7 +10,8 @@ namespace WorkingWithMaps
 		Map map;
 		public MapPage ()
 		{
-			map = new Map { 
+			map = new MarineOps.Common.CustomRenderers.CustomMap
+			{ 
 				//IsShowingUser = true,
 				HeightRequest = 100,
 				WidthRequest = 960,

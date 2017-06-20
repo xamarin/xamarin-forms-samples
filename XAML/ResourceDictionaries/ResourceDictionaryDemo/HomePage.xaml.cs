@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
+using System.Diagnostics;
 
 namespace ResourceDictionaryDemo
 {
@@ -8,12 +9,22 @@ namespace ResourceDictionaryDemo
 		public HomePage ()
 		{
 			InitializeComponent ();
+
+			object res;
+			Application.Current.Resources.TryGetValue("ANormalStyle", out res);
+			Debug.WriteLine("got it?");
 		}
 
 		async void OnNavigateButtonClicked (object sender, EventArgs e)
 		{
 			await Navigation.PushAsync (new ListDataPage ());
 		}
+
+		protected override void OnAppearing()
+		{
+			base.OnAppearing();
+
+
+		}
 	}
 }
-
