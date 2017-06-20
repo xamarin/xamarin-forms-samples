@@ -22,25 +22,44 @@ namespace TodoAWSSimpleDB
 
 		void OnLoginClicked(object sender, EventArgs e)
 		{
-			var authenticator = new OAuth2Authenticator(
-				Constants.ClientId,
-				Constants.ClientSecret,
-				Constants.Scope,
-				new Uri(Constants.AuthorizeUrl),
-				new Uri(Constants.RedirectUrl),
-				new Uri(Constants.AccessTokenUrl));
+            string clientId = null;
+            string redirectUri = null;
+
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                    clientId = Constants.iOSClientId;
+                    redirectUri = Constants.iOSRedirectUrl;
+                    break;
+
+                case Device.Android:
+                    clientId = Constants.AndroidClientId;
+                    redirectUri = Constants.AndroidRedirectUrl;
+                    break;
+            }
+
+            var authenticator = new OAuth2Authenticator(
+                clientId,
+                null,
+                Constants.Scope,
+                new Uri(Constants.AuthorizeUrl),
+                new Uri(redirectUri),
+                new Uri(Constants.AccessTokenUrl),
+                null,
+                true);
 
 			authenticator.Completed += OnAuthCompleted;
 			authenticator.Error += OnAuthError;
 
+            AuthenticationState.Authenticator = authenticator;
+
 			var presenter = new Xamarin.Auth.Presenters.OAuthLoginPresenter();
-			presenter.Login(authenticator);
+            presenter.Login(authenticator);
 		}
 
 		async void OnAuthCompleted(object sender, AuthenticatorCompletedEventArgs e)
 		{
 			var authenticator = sender as OAuth2Authenticator;
-
 			if (authenticator != null)
 			{
 				authenticator.Completed -= OnAuthCompleted;
@@ -75,7 +94,6 @@ namespace TodoAWSSimpleDB
 		void OnAuthError(object sender, AuthenticatorErrorEventArgs e)
 		{
 			var authenticator = sender as OAuth2Authenticator;
-
 			if (authenticator != null)
 			{
 				authenticator.Completed -= OnAuthCompleted;

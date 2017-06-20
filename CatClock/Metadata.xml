@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+    <ID>DFCEE065-6496-414C-8ADD-23BFFC4DAA41</ID>
+    <IsFullApplication>true</IsFullApplication>
+    <Level>Intermediate</Level>
+    <Tags>Xamarin.Forms, Graphics, Animation</Tags>
+    <SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+    <LicenseRequirement>Indie</LicenseRequirement>
+    <Brief>A cat with a clock in its belly</Brief>
+    <Gallery>true</Gallery>
+</SampleMetadata>

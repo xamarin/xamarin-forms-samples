@@ -11,7 +11,7 @@ namespace SkiaSharpFormsDemos.Curves
     {
         public RegionPaintPage()
         {
-            Title = "Arc Infinity";
+            Title = "Region Paint";
 
             SKCanvasView canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+    <ID>3DE8B26A-2DD5-40E8-9D68-76344BA1FF14</ID>
+    <IsFullApplication>false</IsFullApplication>
+    <Level>Intermediate</Level>
+    <Tags>Xamarin.Forms, Graphics, Touch</Tags>
+    <SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+    <LicenseRequirement>Indie</LicenseRequirement>
+    <Brief>A painting program that creates pretty patterns</Brief>
+    <Gallery>false</Gallery>
+</SampleMetadata>
