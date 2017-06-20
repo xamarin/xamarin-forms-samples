@@ -2,12 +2,12 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace SkiaSharpFormsDemos
+namespace SkiaSharpFormsDemos.Basics
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : HomeBasePage
+    public partial class BasicsHomePage : HomeBasePage
     {
-        public HomePage()
+        public BasicsHomePage()
         {
             InitializeComponent();
         }
