@@ -16,7 +16,6 @@ namespace CustomRenderer.Droid
 {
 	public class CustomMapRenderer : MapRenderer, GoogleMap.IInfoWindowAdapter, IOnMapReadyCallback
 	{
-		GoogleMap map;
 		List<CustomPin> customPins;
 		bool isDrawn;
 
@@ -25,21 +24,24 @@ namespace CustomRenderer.Droid
 			base.OnElementChanged (e);
 
 			if (e.OldElement != null) {
-				map.InfoWindowClick -= OnInfoWindowClick;
+				NativeMap.InfoWindowClick -= OnInfoWindowClick;
 			}
 
 			if (e.NewElement != null) {
 				var formsMap = (CustomMap)e.NewElement;
 				customPins = formsMap.CustomPins;
-				((MapView)Control).GetMapAsync (this);
+				Control.GetMapAsync(this);
 			}
 		}
 
 		public void OnMapReady (GoogleMap googleMap)
 		{
-			map = googleMap;
-			map.InfoWindowClick += OnInfoWindowClick;
-			map.SetInfoWindowAdapter (this);
+			NativeMap = googleMap;
+            		NativeMap.InfoWindowClick += OnInfoWindowClick;
+            		NativeMap.SetInfoWindowAdapter(this);
+            		NativeMap.UiSettings.ZoomControlsEnabled = Map.HasZoomEnabled;
+            		NativeMap.UiSettings.ZoomGesturesEnabled = Map.HasZoomEnabled;
+            		NativeMap.UiSettings.ScrollGesturesEnabled = Map.HasScrollEnabled;
 		}
 
 		protected override void OnElementPropertyChanged (object sender, PropertyChangedEventArgs e)
@@ -47,7 +49,7 @@ namespace CustomRenderer.Droid
 			base.OnElementPropertyChanged (sender, e);
 
 			if (e.PropertyName.Equals ("VisibleRegion") && !isDrawn) {
-				map.Clear ();
+				NativeMap.Clear ();
 
 				foreach (var pin in customPins) {
 					var marker = new MarkerOptions ();
@@ -56,7 +58,7 @@ namespace CustomRenderer.Droid
 					marker.SetSnippet (pin.Pin.Address);
 					marker.SetIcon (BitmapDescriptorFactory.FromResource (Resource.Drawable.pin));
 
-					map.AddMarker (marker);
+					NativeMap.AddMarker (marker);
 				}
 				isDrawn = true;
 			}
