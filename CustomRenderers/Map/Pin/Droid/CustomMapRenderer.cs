@@ -37,11 +37,11 @@ namespace CustomRenderer.Droid
 		public void OnMapReady (GoogleMap googleMap)
 		{
 			NativeMap = googleMap;
-            		NativeMap.InfoWindowClick += OnInfoWindowClick;
-            		NativeMap.SetInfoWindowAdapter(this);
-            		NativeMap.UiSettings.ZoomControlsEnabled = Map.HasZoomEnabled;
-            		NativeMap.UiSettings.ZoomGesturesEnabled = Map.HasZoomEnabled;
-            		NativeMap.UiSettings.ScrollGesturesEnabled = Map.HasScrollEnabled;
+    		NativeMap.InfoWindowClick += OnInfoWindowClick;
+    		NativeMap.SetInfoWindowAdapter(this);
+    		NativeMap.UiSettings.ZoomControlsEnabled = Map.HasZoomEnabled;
+    		NativeMap.UiSettings.ZoomGesturesEnabled = Map.HasZoomEnabled;
+    		NativeMap.UiSettings.ScrollGesturesEnabled = Map.HasScrollEnabled;
 		}
 
 		protected override void OnElementPropertyChanged (object sender, PropertyChangedEventArgs e)
