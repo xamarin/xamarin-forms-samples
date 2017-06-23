@@ -24,9 +24,9 @@
     <MtouchDebug>true</MtouchDebug>
     <MtouchProfiling>true</MtouchProfiling>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
-    <CodesignKey>iPhone Developer: Amy Burns (6VJF5AQF8M)</CodesignKey>
+    <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <CodesignProvision>51a283de-4971-440a-a8a4-8a3592747bdc</CodesignProvision>
+    <CodesignProvision></CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
