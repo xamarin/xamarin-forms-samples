@@ -50,12 +50,16 @@
     </Compile>
     <Compile Include="Basics\OutlinedTextPage.cs" />
     <Compile Include="Curves\ClipOperationsPage.cs" />
+    <Compile Include="Curves\ClippingTextPage.cs" />
     <Compile Include="Curves\CurvesHomePage.xaml.cs">
       <DependentUpon>CurvesHomePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Curves\FourCircleIntersectClipPage.cs" />
     <Compile Include="Curves\FourLeafCloverPage.cs" />
     <Compile Include="Curves\MonkeyThroughKeyholePage.cs" />
+    <Compile Include="Curves\OneDimensionalPathEffectPage.xaml.cs">
+      <DependentUpon>OneDimensionalPathEffectPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Curves\PrettyAnalogClockPage.cs" />
     <Compile Include="Curves\AngleArcPage.xaml.cs">
       <DependentUpon>AngleArcPage.xaml</DependentUpon>
@@ -90,6 +94,7 @@
     <Compile Include="Curves\TangentArcPage.xaml.cs">
       <DependentUpon>TangentArcPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Curves\TextPathEffectPage.cs" />
     <Compile Include="HomeBasePage.cs" />
     <Compile Include="InteractivePage.cs" />
     <Compile Include="IPicturePicker.cs" />
@@ -218,7 +223,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="HomePage.xaml">
@@ -427,6 +434,15 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Curves\CurvesHomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Media\PageOfCode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\OneDimensionalPathEffectPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

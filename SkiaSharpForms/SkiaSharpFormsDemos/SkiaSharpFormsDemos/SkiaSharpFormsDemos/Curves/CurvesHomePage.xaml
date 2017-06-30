@@ -37,7 +37,6 @@
                           Detail="Draw an infinity sign with an elliptical arc"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.ArcInfinityPage}" />
-
             </TableSection>
 
             <TableSection Title="Three Types of Bézier Curves">
@@ -124,7 +123,25 @@
                           Detail="Draw a four-leaf clover with overlapping circles"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.FourLeafCloverPage}" />
+            </TableSection>
 
+            <TableSection Title="Path Effects">
+                <TextCell Text="1D Path Effect"
+                          Detail="Explore the one-dimensional path effect"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.OneDimensionalPathEffectPage}" />
+            </TableSection>
+
+            <TableSection Title="Paths from Text">
+                <TextCell Text="Clipping Text"
+                          Detail="Use text to clip a bitmap"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ClippingTextPage}" />
+                
+                <TextCell Text="Text Path Effect"
+                          Detail="Use text path for a 1D path effect"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.TextPathEffectPage}" />
             </TableSection>
         </TableRoot>
     </TableView>
