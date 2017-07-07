@@ -24,7 +24,7 @@
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>True</MtouchDebug>
     <MtouchSdkVersion>8.1</MtouchSdkVersion>
-    <MtouchArch>i386</MtouchArch>
+    <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchOptimizePNGs>True</MtouchOptimizePNGs>
     <MtouchI18n></MtouchI18n>
     <CodesignKey>iPhone Developer</CodesignKey>
@@ -39,7 +39,7 @@
     <MtouchLink>None</MtouchLink>
     <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchI18n></MtouchI18n>
-    <MtouchArch>i386</MtouchArch>
+    <MtouchArch>i386, x86_64</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,7 +52,7 @@
     <ConsolePause>false</ConsolePause>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchArch>ARMv7</MtouchArch>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
     <IpaPackageName></IpaPackageName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
