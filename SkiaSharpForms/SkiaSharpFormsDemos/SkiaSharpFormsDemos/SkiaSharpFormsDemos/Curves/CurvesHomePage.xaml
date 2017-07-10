@@ -126,10 +126,33 @@
             </TableSection>
 
             <TableSection Title="Path Effects">
+                
+                <!-- TextCell Text=""
+                          Detail="Animate dots around outlined text"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="}x:Type local:Curves. }" />
+
+                <TextCell Text=""
+                          Detail=""
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="}x:Type local:Curves. }" / -->
+
                 <TextCell Text="1D Path Effect"
                           Detail="Explore the one-dimensional path effect"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.OneDimensionalPathEffectPage}" />
+
+                <TextCell Text="Linked Chain"
+                          Detail="Use 1D path effect to create a chain"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.LinkedChainPage}" />
+
+                <TextCell Text="Conveyer Belt"
+                          Detail="Rotate a path around another path"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ConveyerBeltPage}" />
+
+
             </TableSection>
 
             <TableSection Title="Paths from Text">
