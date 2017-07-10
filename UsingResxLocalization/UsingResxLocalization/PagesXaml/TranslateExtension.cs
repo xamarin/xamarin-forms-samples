@@ -14,7 +14,7 @@ namespace UsingResxLocalization
 		readonly CultureInfo ci;
 		const string ResourceId = "UsingResxLocalization.Resx.AppResources";
 
-		private static readonly Lazy<ResourceManager> resmgr = new Lazy<ResourceManager>(() => new ResourceManager(ResourceId
+		private static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(() => new ResourceManager(ResourceId
 		                                                                                                          , typeof(TranslateExtension).GetTypeInfo().Assembly));
 		
 		public TranslateExtension()
@@ -32,7 +32,7 @@ namespace UsingResxLocalization
 			if (Text == null)
 				return "";
 
-			var translation = resmgr.Value.GetString(Text, ci);
+			var translation = ResMgr.Value.GetString(Text, ci);
 
 			if (translation == null)
 			{
