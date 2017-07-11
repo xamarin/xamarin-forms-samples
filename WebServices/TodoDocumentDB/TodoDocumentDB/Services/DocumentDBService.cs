@@ -42,7 +42,7 @@ namespace TodoDocumentDB
 			{
 				// Create collection with 400 RU/s
 				await client.CreateDocumentCollectionIfNotExistsAsync(
-					UriFactory.CreateDatabaseUri(Constants.DatabaseName),
+					UriFactory.CreateDatabaseUri(databaseName),
 					new DocumentCollection
 					{
 						Id = collectionName
