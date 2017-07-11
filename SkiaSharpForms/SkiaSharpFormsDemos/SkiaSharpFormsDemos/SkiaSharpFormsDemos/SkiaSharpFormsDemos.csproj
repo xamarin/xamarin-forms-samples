@@ -57,6 +57,7 @@
     </Compile>
     <Compile Include="Curves\FourCircleIntersectClipPage.cs" />
     <Compile Include="Curves\FourLeafCloverPage.cs" />
+    <Compile Include="Curves\HatchFillPage.cs" />
     <Compile Include="Curves\LinkedChainPage.cs" />
     <Compile Include="Curves\MonkeyThroughKeyholePage.cs" />
     <Compile Include="Curves\OneDimensionalPathEffectPage.xaml.cs">

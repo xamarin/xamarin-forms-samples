@@ -152,6 +152,12 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.ConveyerBeltPage}" />
 
+                <TextCell Text="Hatch Fill"
+                          Detail="Use 2D line effect to fill an area"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.HatchFillPage}" />
+
+
 
             </TableSection>
 
