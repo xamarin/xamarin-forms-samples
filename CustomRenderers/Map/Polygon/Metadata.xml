@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>ed8e6d31-1635-4f39-9aed-775ba41da7fc</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Advanced</Level>
+	<Tags>User Interface, Custom Renderers, Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>This sample demonstrates how to add a polygon overlay to a map in order to highlight a region on the map. Polygons are a closed shape and have their interiors filled in.</Brief>
+</SampleMetadata>

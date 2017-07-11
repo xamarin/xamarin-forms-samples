@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Phoneword
+﻿namespace Phoneword
 {
     public interface IDialer
     {

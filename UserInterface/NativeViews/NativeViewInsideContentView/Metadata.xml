@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>d8284e0b-ca3f-4668-8e83-ee4c75bebb87</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Beginner</Level>
+	<Tags>User Interface, Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>This sample demonstrates how to refer to native views declared in XAML, from code.</Brief>
+</SampleMetadata>

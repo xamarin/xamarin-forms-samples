@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
+		xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
+        xmlns:androidGraphics="clr-namespace:Android.Graphics;assembly=Mono.Android;targetPlatform=Android"
+        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
+        xmlns:winMedia="clr-namespace:Windows.UI.Xaml.Media;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
+		xmlns:winText="clr-namespace:Windows.UI.Text;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
+        xmlns:winui="clr-namespace:Windows.UI;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
+		xmlns:local="clr-namespace:SimpleColorPicker" 
+		x:Class="SimpleColorPicker.SimpleColorPickerPage">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<local:DoubleToSingleConverter x:Key="doubleToSingleConverter" />
+			<local:DoubleToIntConverter x:Key="doubleToIntConverter" Multiplier="256" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<StackLayout Margin="20">
+		<ios:UILabel Text="Simple Native Color Picker" View.HorizontalOptions="Center">
+			<ios:UILabel.Font>
+				<ios:UIFont x:FactoryMethod="FromName">
+					<x:Arguments>
+						<x:String>Papyrus</x:String>
+						<x:Single>24</x:Single>
+					</x:Arguments>
+				</ios:UIFont>
+			</ios:UILabel.Font>
+		</ios:UILabel>
+		<androidWidget:TextView x:Arguments="{x:Static formsAndroid:Forms.Context}" Text="Simple Native Color Picker" TextSize="24" View.HorizontalOptions="Center">
+			<androidWidget:TextView.Typeface>
+				<androidGraphics:Typeface x:FactoryMethod="Create">
+					<x:Arguments>
+						<x:String>cursive</x:String>
+						<androidGraphics:TypefaceStyle>Normal</androidGraphics:TypefaceStyle>
+					</x:Arguments>
+				</androidGraphics:Typeface>
+			</androidWidget:TextView.Typeface>
+		</androidWidget:TextView>
+		<winControls:TextBlock Text="Simple Native Color Picker" FontSize="20" FontStyle="{x:Static winText:FontStyle.Italic}" View.HorizontalOptions="Center">
+			<winControls:TextBlock.FontFamily>
+				<winMedia:FontFamily>
+					<x:Arguments>
+						<x:String>Georgia</x:String>
+					</x:Arguments>
+				</winMedia:FontFamily>
+			</winControls:TextBlock.FontFamily>
+		</winControls:TextBlock>
+		<BoxView Color="{Binding SelectedColor}" HeightRequest="100" />
+		<ios:UISlider Value="{Binding Red, Mode=TwoWay, UpdateSourceEventName=ValueChanged, Converter={StaticResource doubleToSingleConverter}" ThumbTintColor="{x:Static ios:UIColor.Red}" MinimumTrackTintColor="{x:Static ios:UIColor.Black}" MaximumTrackTintColor="{x:Static ios:UIColor.Red}" />
+		<ios:UISlider Value="{Binding Green, Mode=TwoWay, UpdateSourceEventName=ValueChanged, Converter={StaticResource doubleToSingleConverter}" ThumbTintColor="{x:Static ios:UIColor.Green}" MinimumTrackTintColor="{x:Static ios:UIColor.Black}" MaximumTrackTintColor="{x:Static ios:UIColor.Green}" />
+		<ios:UISlider Value="{Binding Blue, Mode=TwoWay, UpdateSourceEventName=ValueChanged, Converter={StaticResource doubleToSingleConverter}" ThumbTintColor="{x:Static ios:UIColor.Blue}" MinimumTrackTintColor="{x:Static ios:UIColor.Black}" MaximumTrackTintColor="{x:Static ios:UIColor.Blue}" />
+		<androidWidget:SeekBar x:Arguments="{x:Static formsAndroid:Forms.Context}" Progress="{Binding Red, Mode=TwoWay, UpdateSourceEventName=ProgressChanged, Converter={StaticResource doubleToIntConverter}}" Max="256" />
+		<androidWidget:SeekBar x:Arguments="{x:Static formsAndroid:Forms.Context}" Progress="{Binding Green, Mode=TwoWay, UpdateSourceEventName=ProgressChanged, Converter={StaticResource doubleToIntConverter}}" Max="256" />
+		<androidWidget:SeekBar x:Arguments="{x:Static formsAndroid:Forms.Context}" Progress="{Binding Blue, Mode=TwoWay, UpdateSourceEventName=ProgressChanged, Converter={StaticResource doubleToIntConverter}}" Max="256" />
+		<winControls:Slider Value="{Binding Red, Mode=TwoWay, UpdateSourceEventName=ValueChanged}" Maximum="1" StepFrequency="0.01" IsThumbToolTipEnabled="True">
+			<winControls:Slider.Foreground>
+				<winMedia:SolidColorBrush Color="{x:Static winui:Colors.Red}" />
+			</winControls:Slider.Foreground>
+		</winControls:Slider>
+		<winControls:Slider Value="{Binding Green, Mode=TwoWay, UpdateSourceEventName=ValueChanged}" Maximum="1" StepFrequency="0.01" IsThumbToolTipEnabled="True">
+			<winControls:Slider.Foreground>
+				<winMedia:SolidColorBrush Color="{x:Static winui:Colors.Green}" />
+			</winControls:Slider.Foreground>
+		</winControls:Slider>
+		<winControls:Slider Value="{Binding Blue, Mode=TwoWay, UpdateSourceEventName=ValueChanged}" Maximum="1" StepFrequency="0.01" IsThumbToolTipEnabled="True">
+			<winControls:Slider.Foreground>
+				<winMedia:SolidColorBrush Color="{x:Static winui:Colors.Blue}" />
+			</winControls:Slider.Foreground>
+		</winControls:Slider>
+	</StackLayout>
+</ContentPage>

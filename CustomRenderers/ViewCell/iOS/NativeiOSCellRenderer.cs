@@ -1,36 +1,55 @@
 ﻿using CustomRenderer;
 using CustomRenderer.iOS;
-using Foundation;
 using System;
+using System.ComponentModel;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer (typeof(NativeCell), typeof(NativeiOSCellRenderer))]
+[assembly: ExportRenderer(typeof(NativeCell), typeof(NativeiOSCellRenderer))]
 namespace CustomRenderer.iOS
 {
 	public class NativeiOSCellRenderer : ViewCellRenderer
 	{
-		static NSString rid = new NSString ("NativeCell");
+		NativeiOSCell cell;
 
-		public override UITableViewCell GetCell (Xamarin.Forms.Cell item, UITableViewCell reusableCell, UITableView tv)
+		public override UITableViewCell GetCell(Cell item, UITableViewCell reusableCell, UITableView tv)
 		{
-			var x = (NativeCell)item;
-			Console.WriteLine (x);
+			var nativeCell = (NativeCell)item;
+			Console.WriteLine("\t\t" + nativeCell.Name);
 
-			NativeiOSCell c = reusableCell as NativeiOSCell;
-
-			if (c == null) {
-				c = new NativeiOSCell (rid);
+			cell = reusableCell as NativeiOSCell;
+			if (cell == null)
+			{
+				cell = new NativeiOSCell(item.GetType().FullName, nativeCell);
+			}
+			else
+			{
+				cell.NativeCell.PropertyChanged -= OnNativeCellPropertyChanged;
 			}
 
-			UIImage i = null;
-			if (!String.IsNullOrWhiteSpace (x.ImageFilename)) {
-				i = UIImage.FromFile ("Images/" + x.ImageFilename + ".jpg");
-			}
-			c.UpdateCell (x.Name, x.Category, i);
+			nativeCell.PropertyChanged += OnNativeCellPropertyChanged;
 
-			return c;
+			cell.UpdateCell(nativeCell);
+			return cell;
+		}
+
+		void OnNativeCellPropertyChanged(object sender, PropertyChangedEventArgs e)
+		{
+			var nativeCell = (NativeCell)sender;
+			if (e.PropertyName == NativeCell.NameProperty.PropertyName)
+			{
+				cell.HeadingLabel.Text = nativeCell.Name;
+			}
+			else if (e.PropertyName == NativeCell.CategoryProperty.PropertyName)
+			{
+				cell.SubheadingLabel.Text = nativeCell.Category;
+			}
+			else if (e.PropertyName == NativeCell.ImageFilenameProperty.PropertyName)
+			{
+				cell.CellImageView.Image = cell.GetImage(nativeCell.ImageFilename);
+			}
 		}
 	}
 }
+

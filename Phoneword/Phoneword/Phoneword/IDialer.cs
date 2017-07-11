@@ -1,9 +1,7 @@
-﻿using System;
-
-namespace Phoneword
+﻿namespace Phoneword
 {
-    public interface IDialer
-    {
-        bool Dial(string number);
-    }
+	public interface IDialer
+	{
+		bool Dial(string number);
+	}
 }

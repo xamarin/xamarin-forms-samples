@@ -6,7 +6,7 @@
 	<ContentPage.Content>
 		<StackLayout>
 			<Label Text="Xamarin.Forms native cell" HorizontalTextAlignment="Center" />
-			<ListView x:Name="listView" ItemSelected="OnItemSelected">
+			<ListView x:Name="listView" CachingStrategy="RecycleElement" ItemSelected="OnItemSelected">
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<local:NativeCell Name="{Binding Name}" Category="{Binding Category}" ImageFilename="{Binding ImageFilename}" />

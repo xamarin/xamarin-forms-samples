@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PlatformSpecifics.CollapseWidthAdjusterContentView">
+  <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+    <Label Text="Adjust Collapse Width" VerticalOptions="Center" VerticalTextAlignment="Center" />
+    <Entry x:Name="entry" />
+    <Button Text="Change" BackgroundColor="Gray" Clicked="OnChangeButtonClicked" />
+  </StackLayout>
+</ContentView>

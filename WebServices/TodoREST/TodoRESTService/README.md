@@ -10,7 +10,7 @@ The REST service provides the following operations:
 - PUT: updates a todo item - /api/todoitems/{id}
 - DELETE: deletes a todo item - /api/todoitems/{id}
 
-For more information about the sample see [Consuming a RESTful Web Service](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/web-services/consuming/rest/) and [Authenticating a RESTful Web Service](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/web-services/authentication/rest/).
+For more information about the sample see [Consuming a RESTful Web Service](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/web-services/consuming/rest/) and [Authenticating a RESTful Web Service](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/web-services/authentication/rest/), and [Creating Backend Services for Native Mobile Applications](https://docs.microsoft.com/en-us/aspnet/core/mobile/native-mobile-backend).
 
 Setting up the REST service
 ---------------------------

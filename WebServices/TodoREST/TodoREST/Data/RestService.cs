@@ -17,19 +17,19 @@ namespace TodoREST
 
 		public RestService ()
 		{
-			var authData = string.Format ("{0}:{1}", Constants.Username, Constants.Password);
-			var authHeaderValue = Convert.ToBase64String (Encoding.UTF8.GetBytes (authData));
+			var authData = string.Format("{0}:{1}", Constants.Username, Constants.Password);
+			var authHeaderValue = Convert.ToBase64String(Encoding.UTF8.GetBytes(authData));
 
 			client = new HttpClient ();
 			client.MaxResponseContentBufferSize = 256000;
-			client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue ("Basic", authHeaderValue);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authHeaderValue);
 		}
 
 		public async Task<List<TodoItem>> RefreshDataAsync ()
 		{
 			Items = new List<TodoItem> ();
 
-			// RestUrl = http://developer.xamarin.com:8081/api/todoitems{0}
+			// RestUrl = http://developer.xamarin.com:8081/api/todoitems
 			var uri = new Uri (string.Format (Constants.RestUrl, string.Empty));
 
 			try {
@@ -47,8 +47,8 @@ namespace TodoREST
 
 		public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 		{
-			// RestUrl = http://developer.xamarin.com:8081/api/todoitems{0}
-			var uri = new Uri (string.Format (Constants.RestUrl, item.ID));
+			// RestUrl = http://developer.xamarin.com:8081/api/todoitems
+			var uri = new Uri (string.Format (Constants.RestUrl, string.Empty));
 
 			try {
 				var json = JsonConvert.SerializeObject (item);
@@ -72,7 +72,7 @@ namespace TodoREST
 
 		public async Task DeleteTodoItemAsync (string id)
 		{
-			// RestUrl = http://developer.xamarin.com:8081/api/todoitems{0}
+			// RestUrl = http://developer.xamarin.com:8081/api/todoitems/{0}
 			var uri = new Uri (string.Format (Constants.RestUrl, id));
 
 			try {

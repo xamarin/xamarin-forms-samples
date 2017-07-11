@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Todo.TodoListPage" Title="Todo">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Icon="plus.png" Clicked="OnItemAdded" />
+		<ToolbarItem Icon="rating.png" Clicked="OnRateApplication" />
+	</ContentPage.ToolbarItems>
+	<ListView x:Name="listView" Margin="20" ItemSelected="OnItemSelected">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<StackLayout Margin="20,0,0,0" Orientation="Horizontal">
+						<Label Text="{Binding Name}" VerticalTextAlignment="Center" />
+						<Image Source="check.png" IsVisible="{Binding Done}" HorizontalOptions="EndAndExpand" />
+					</StackLayout>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+</ContentPage>

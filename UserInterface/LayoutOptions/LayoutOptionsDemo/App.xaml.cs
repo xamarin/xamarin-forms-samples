@@ -9,7 +9,7 @@ namespace LayoutOptionsDemo
 		public App()
 		{
 			InitializeComponent();
-			MainPage = new NavigationPage(new LayoutOptionsPage());
+			MainPage = new LayoutOptionsPage();
 		}
 
 		protected override void OnStart()

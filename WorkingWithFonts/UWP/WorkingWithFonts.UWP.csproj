@@ -89,6 +89,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\Fonts\Lobster-Regular.ttf" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +107,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Fonts\OFL.txt" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

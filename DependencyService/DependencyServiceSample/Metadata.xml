@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <SampleMetadata>
-	<ID>d53f0550-a188-4e87-a824-4b95b7857d6d</ID>
-	<IsFullApplication>false</IsFullApplication>
-	<Level>Intermediate</Level>
-	<Tags>Xamarin.Forms</Tags>
-	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
-	<LicenseRequirement>Indie</LicenseRequirement>
-	<Gallery>false</Gallery>
-    <Brief>This sample demonstrates how to use the DependencyService to implement text-to-speech, check device orientation, and check battery status.</Brief>
+    <ID>d53f0550-a188-4e87-a824-4b95b7857d6d</ID>
+    <IsFullApplication>false</IsFullApplication>
+    <Level>Intermediate</Level>
+    <Tags>Xamarin.Forms, Dependency Service, Xamarin Live Player</Tags>
+    <SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+    <LicenseRequirement>Indie</LicenseRequirement>
+    <Gallery>true</Gallery>
+    <Brief>This sample demonstrates how to use the DependencyService to implement text-to-speech, check device orientation, check battery status, and pick a photo from the phone's photo library.</Brief>
 </SampleMetadata>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Name="page"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PlatformSpecifics"
+             x:Class="PlatformSpecifics.ContentPageMasterPage"
+             Title="Master Page">
+  <StackLayout Margin="0,10,5,0" Spacing="10">
+    <ListView BindingContext="{x:Reference page}" ItemsSource="{Binding Items}" ItemTapped="OnListViewItemTapped">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <Grid Margin="0,10,0,10" WidthRequest="40">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="48" />
+                <ColumnDefinition Width="200" />
+              </Grid.ColumnDefinitions>
+              <Label Text="{Binding Icon}" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalTextAlignment="Center" />
+              <Label Grid.Column="1" Text="{Binding Text}" />
+            </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>      
+    </ListView>
+  </StackLayout>
+</ContentPage>

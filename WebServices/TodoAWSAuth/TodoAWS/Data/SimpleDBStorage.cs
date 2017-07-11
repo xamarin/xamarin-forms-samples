@@ -17,54 +17,63 @@ namespace TodoAWSSimpleDB
 
 		public List<TodoItem> Items { get; private set; }
 
-		public SimpleDBStorage ()
+		public SimpleDBStorage()
 		{
-			var credentials = new CognitoAWSCredentials (
-				                  Constants.CognitoIdentityPoolId, 
-				                  RegionEndpoint.USEast1);
-			var config = new AmazonSimpleDBConfig ();
+			var credentials = new CognitoAWSCredentials(
+								  Constants.CognitoIdentityPoolId,
+								  RegionEndpoint.USEast1);
+			var config = new AmazonSimpleDBConfig();
 			config.RegionEndpoint = RegionEndpoint.USWest2;
-			client = new AmazonSimpleDBClient (credentials, config);
+			client = new AmazonSimpleDBClient(credentials, config);
 
-			Items = new List<TodoItem> ();
-			SetupDomain ();
+			Items = new List<TodoItem>();
+			SetupDomain();
 		}
 
-		async void SetupDomain ()
+		async Task SetupDomain()
 		{
-			var domainExists = await IsExistingDomain ();
-			if (!domainExists) {
-				await CreateDomain ();
+			var domainExists = await IsExistingDomain();
+			if (!domainExists)
+			{
+				await CreateDomain();
 			}
 		}
 
-		async Task<bool> IsExistingDomain ()
+		async Task<bool> IsExistingDomain()
 		{
-			try {
-				var response = await client.ListDomainsAsync (new ListDomainsRequest ());
-				foreach (var domain in response.DomainNames) {
-					if (domain == tableName) {
+			try
+			{
+				var response = await client.ListDomainsAsync(new ListDomainsRequest());
+				foreach (var domain in response.DomainNames)
+				{
+					if (domain == tableName)
+					{
 						return true;
 					}
 				}
-			} catch (Exception ex) {
-				Debug.WriteLine (@"				ERROR {0}", ex.Message);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"				ERROR {0}", ex.Message);
 			}
 			return false;
 		}
 
-		async Task CreateDomain ()
+		async Task CreateDomain()
 		{
-			try {
-				await client.CreateDomainAsync (new CreateDomainRequest { DomainName = tableName });
-			} catch (Exception ex) {
-				Debug.WriteLine (@"				ERROR {0}", ex.Message);
+			try
+			{
+				await client.CreateDomainAsync(new CreateDomainRequest { DomainName = tableName });
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"				ERROR {0}", ex.Message);
 			}
 		}
 
-		List<Amazon.SimpleDB.Model.Attribute> ToSimpleDBAttributes (TodoItem item)
+		List<Amazon.SimpleDB.Model.Attribute> ToSimpleDBAttributes(TodoItem item)
 		{
-			return new List<Amazon.SimpleDB.Model.Attribute> () {
+			return new List<Amazon.SimpleDB.Model.Attribute>() {
 				new Amazon.SimpleDB.Model.Attribute () {
 					Name = "Name",
 					Value = item.Name
@@ -85,9 +94,9 @@ namespace TodoAWSSimpleDB
 			};
 		}
 
-		List<ReplaceableAttribute> ToSimpleDBReplaceableAttributes (TodoItem item)
+		List<ReplaceableAttribute> ToSimpleDBReplaceableAttributes(TodoItem item)
 		{
-			return new List<ReplaceableAttribute> () {
+			return new List<ReplaceableAttribute>() {
 				new ReplaceableAttribute () {
 					Name = "Name",
 					Value = item.Name,
@@ -111,62 +120,75 @@ namespace TodoAWSSimpleDB
 			};
 		}
 
-		TodoItem FromSimpleDBAttributes (List<Amazon.SimpleDB.Model.Attribute> attributeList, string id)
+		TodoItem FromSimpleDBAttributes(List<Amazon.SimpleDB.Model.Attribute> attributeList, string id)
 		{
-			var todoItem = new TodoItem ();
+			var todoItem = new TodoItem();
 			todoItem.ID = id;
-			todoItem.Name = attributeList.Where (attr => attr.Name == "Name").FirstOrDefault ().Value;
-			todoItem.Notes = attributeList.Where (attr => attr.Name == "Notes").FirstOrDefault ().Value;
-			todoItem.Done = Convert.ToBoolean (attributeList.Where (attr => attr.Name == "Done").FirstOrDefault ().Value);
+			todoItem.Name = attributeList.Where(attr => attr.Name == "Name").FirstOrDefault().Value;
+			todoItem.Notes = attributeList.Where(attr => attr.Name == "Notes").FirstOrDefault().Value;
+			todoItem.Done = Convert.ToBoolean(attributeList.Where(attr => attr.Name == "Done").FirstOrDefault().Value);
 			return todoItem;
 		}
 
-		public async Task<List<TodoItem>> RefreshDataAsync ()
+		public async Task<List<TodoItem>> RefreshDataAsync()
 		{
-			var Items = new List<TodoItem> ();
+			var Items = new List<TodoItem>();
 
-			try {
-				var request = new SelectRequest () {
+			try
+			{
+				var request = new SelectRequest()
+				{
 					// The users email address is used to identify data in SimpleDB
-					SelectExpression = string.Format ("SELECT * from {0} WHERE User = '{1}'", tableName, App.User.Email)
+					SelectExpression = string.Format("SELECT * from {0} WHERE User = '{1}'", tableName, App.User.Email)
 				};
-				var response = await client.SelectAsync (request);
-				foreach (var item in response.Items) {
-					Items.Add (FromSimpleDBAttributes (item.Attributes, item.Name));
+				var response = await client.SelectAsync(request);
+				foreach (var item in response.Items)
+				{
+					Items.Add(FromSimpleDBAttributes(item.Attributes, item.Name));
 				}
-			} catch (Exception ex) {
-				Debug.WriteLine (@"				ERROR {0}", ex.Message);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"				ERROR {0}", ex.Message);
 			}
 			return Items;
 		}
 
-		public async Task SaveTodoItemAsync (TodoItem todoItem)
+		public async Task SaveTodoItemAsync(TodoItem todoItem)
 		{
-			try {
-				var attributeList = ToSimpleDBReplaceableAttributes (todoItem);
-				var request = new PutAttributesRequest () { 
+			try
+			{
+				var attributeList = ToSimpleDBReplaceableAttributes(todoItem);
+				var request = new PutAttributesRequest()
+				{
 					DomainName = tableName,
 					ItemName = todoItem.ID,
 					Attributes = attributeList
 				};
-				await client.PutAttributesAsync (request);
-			} catch (Exception ex) {
-				Debug.WriteLine (@"				ERROR {0}", ex.Message);
+				await client.PutAttributesAsync(request);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"				ERROR {0}", ex.Message);
 			}
 		}
 
-		public async Task DeleteTodoItemAsync (TodoItem todoItem)
+		public async Task DeleteTodoItemAsync(TodoItem todoItem)
 		{
-			try {
-				var attributeList = ToSimpleDBAttributes (todoItem);
-				var request = new DeleteAttributesRequest () {
+			try
+			{
+				var attributeList = ToSimpleDBAttributes(todoItem);
+				var request = new DeleteAttributesRequest()
+				{
 					DomainName = tableName,
 					ItemName = todoItem.ID,
 					Attributes = attributeList
 				};
-				await client.DeleteAttributesAsync (request);
-			} catch (Exception ex) {
-				Debug.WriteLine (@"				ERROR {0}", ex.Message);
+				await client.DeleteAttributesAsync(request);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"				ERROR {0}", ex.Message);
 			}
 		}
 	}
