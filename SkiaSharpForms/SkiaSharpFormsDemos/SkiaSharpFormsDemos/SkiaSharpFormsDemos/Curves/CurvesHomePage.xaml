@@ -157,7 +157,20 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.HatchFillPage}" />
 
+                <TextCell Text="Path Tile Fill"
+                          Detail="Use 2D path effect to file an area"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.PathTileFillPage}" />
+                
+                <TextCell Text="Another Rounded Heptagon"
+                          Detail="Round corners using a path effect"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.AnotherRoundedHeptagonPage}" />
 
+                <TextCell Text="Jitter Experiment"
+                          Detail="Experiment with the discrete path effect"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.JitterExperimentPage}" />
 
             </TableSection>
 

@@ -9,12 +9,12 @@ namespace SkiaSharpFormsDemos.Curves
     {
         SKPaint fillPaint = new SKPaint();
 
-        SKPathEffect horz = SKPathEffect.Create2DLine(3, SKMatrix.MakeScale(6, 6));
+        SKPathEffect horzLinesPath = SKPathEffect.Create2DLine(3, SKMatrix.MakeScale(6, 6));
 
-        SKPathEffect vert = SKPathEffect.Create2DLine(6, 
+        SKPathEffect vertLinesPath = SKPathEffect.Create2DLine(6, 
             Multiply(SKMatrix.MakeRotationDegrees(90), SKMatrix.MakeScale(24, 24)));
 
-        SKPathEffect diag = SKPathEffect.Create2DLine(12, 
+        SKPathEffect diagLinesPath = SKPathEffect.Create2DLine(12, 
             Multiply(SKMatrix.MakeScale(36, 36), SKMatrix.MakeRotationDegrees(45)));
 
         SKPaint strokePaint = new SKPaint
@@ -43,35 +43,31 @@ namespace SkiaSharpFormsDemos.Curves
 
             using (SKPath roundRectPath = new SKPath())
             {
+                // Create a path 
                 roundRectPath.AddRoundedRect(
                     new SKRect(50, 50, info.Width - 50, info.Height - 50), 100, 100);
 
-                fillPaint.PathEffect = horz;
+                // Horizontal hatch marks
+                fillPaint.PathEffect = horzLinesPath;
                 fillPaint.Color = SKColors.Red;
-                canvas.DrawPath(roundRectPath, fillPaint); // .DrawRoundRect(rect, 100, 100, fillPaint);        // replace
+                canvas.DrawPath(roundRectPath, fillPaint); 
 
-                fillPaint.PathEffect = vert;
+                // Vertical hatch marks
+                fillPaint.PathEffect = vertLinesPath;
                 fillPaint.Color = SKColors.Blue;
-                canvas.DrawPath(roundRectPath, fillPaint); // .DrawRoundRect(rect, 100, 100, fillPaint);        // replace
+                canvas.DrawPath(roundRectPath, fillPaint);
 
-                fillPaint.PathEffect = diag;
+                // Diagonal hatch marks -- use clipping
+                fillPaint.PathEffect = diagLinesPath;
                 fillPaint.Color = SKColors.Green;
-
-
-                //  canvas.DrawRoundRect(rect, 100, 100, fillPaint);
-
 
                 canvas.Save();
                 canvas.ClipPath(roundRectPath);
-                canvas.DrawRect(new SKRect(0, 0, info.Width, info.Height), fillPaint); // .DrawPaint(fillPaint);
+                canvas.DrawRect(new SKRect(0, 0, info.Width, info.Height), fillPaint);
                 canvas.Restore();
 
-
-
-
-
                 // Outline the path
-                canvas.DrawPath(roundRectPath, strokePaint); // .DrawRoundRect(rect, 100, 100, strokePaint);      // replace
+                canvas.DrawPath(roundRectPath, strokePaint);
             }
         }
 
