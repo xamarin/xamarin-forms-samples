@@ -49,13 +49,16 @@
       <DependentUpon>BasicsHomePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Basics\OutlinedTextPage.cs" />
+    <Compile Include="Curves\AnimatedDottedTextPage.cs" />
     <Compile Include="Curves\AnotherRoundedHeptagonPage.cs" />
+    <Compile Include="Curves\CircularTextPage.cs" />
     <Compile Include="Curves\ClipOperationsPage.cs" />
     <Compile Include="Curves\ClippingTextPage.cs" />
     <Compile Include="Curves\ConveyerBeltPage.cs" />
     <Compile Include="Curves\CurvesHomePage.xaml.cs">
       <DependentUpon>CurvesHomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Curves\DotDashMorphPage.cs" />
     <Compile Include="Curves\FourCircleIntersectClipPage.cs" />
     <Compile Include="Curves\FourLeafCloverPage.cs" />
     <Compile Include="Curves\HatchFillPage.cs" />

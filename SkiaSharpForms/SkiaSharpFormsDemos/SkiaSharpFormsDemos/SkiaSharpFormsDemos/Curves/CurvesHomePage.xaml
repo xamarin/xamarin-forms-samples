@@ -127,15 +127,15 @@
 
             <TableSection Title="Path Effects">
                 
-                <!-- TextCell Text=""
+                <TextCell Text="Animated Dotted Text"
                           Detail="Animate dots around outlined text"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="}x:Type local:Curves. }" />
+                          CommandParameter="{x:Type local:Curves.AnimatedDottedTextPage}" />
 
-                <TextCell Text=""
-                          Detail=""
+                <TextCell Text="Dot / Dash Morph"
+                          Detail="Morph between dots and dashes"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="}x:Type local:Curves. }" / -->
+                          CommandParameter="{x:Type local:Curves.DotDashMorphPage}" />
 
                 <TextCell Text="1D Path Effect"
                           Detail="Explore the one-dimensional path effect"
@@ -171,10 +171,13 @@
                           Detail="Experiment with the discrete path effect"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.JitterExperimentPage}" />
+                
+                <!-- Jitter Text -->
 
             </TableSection>
 
-            <TableSection Title="Paths from Text">
+            <TableSection Title="Paths and Text">
+                
                 <TextCell Text="Clipping Text"
                           Detail="Use text to clip a bitmap"
                           Command="{Binding NavigateCommand}"
@@ -184,6 +187,11 @@
                           Detail="Use text path for a 1D path effect"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.TextPathEffectPage}" />
+
+                <TextCell Text="Circular Text"
+                          Detail="Draw text along a circular path"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.CircularTextPage}" />
             </TableSection>
         </TableRoot>
     </TableView>
