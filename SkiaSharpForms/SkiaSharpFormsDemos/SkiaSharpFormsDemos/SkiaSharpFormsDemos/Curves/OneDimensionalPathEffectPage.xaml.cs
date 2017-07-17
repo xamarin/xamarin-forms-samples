@@ -9,7 +9,7 @@ namespace SkiaSharpFormsDemos.Curves
     {
         SKPathEffect translatePathEffect =
             SKPathEffect.Create1DPath(SKPath.ParseSvgPathData("M -10 -10 L 10 -10, 10 10, -10 10 Z"),
-                                      24, 0, SKPath1DPathEffectStyle.Translate);                          // Capital SK !!!!!!!!!!!!!!!!!!!
+                                      24, 0, SKPath1DPathEffectStyle.Translate); 
 
         SKPathEffect rotatePathEffect =
             SKPathEffect.Create1DPath(SKPath.ParseSvgPathData("M -10 0 L 0 -10, 10 0, 0 10 Z"),
@@ -21,7 +21,6 @@ namespace SkiaSharpFormsDemos.Curves
 
         SKPaint pathPaint = new SKPaint
         {
-            Style = SKPaintStyle.Stroke,
             Color = SKColors.Blue
         };
 

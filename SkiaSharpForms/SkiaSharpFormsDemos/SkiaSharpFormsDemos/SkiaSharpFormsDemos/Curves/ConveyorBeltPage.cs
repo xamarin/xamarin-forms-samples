@@ -5,7 +5,7 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Curves
 {
-    public class ConveyerBeltPage : ContentPage
+    public class ConveyorBeltPage : ContentPage
     {
         SKCanvasView canvasView;
         bool pageIsActive = false;
@@ -15,9 +15,6 @@ namespace SkiaSharpFormsDemos.Curves
             Style = SKPaintStyle.Stroke,
             StrokeWidth = 20,
             Color = SKColors.DarkGray
-            //   PathEffect = SKPathEffect.Create1DPath(
-            //     100, 0, SKPath1DPathEffectStyle.Rotate)
-
         };
 
         SKPath bucketPath = new SKPath();
@@ -35,9 +32,9 @@ namespace SkiaSharpFormsDemos.Curves
 
         
 
-        public ConveyerBeltPage()
+        public ConveyorBeltPage()
         {
-            Title = "Conveyer Belt";
+            Title = "Conveyor Belt";
 
             canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;

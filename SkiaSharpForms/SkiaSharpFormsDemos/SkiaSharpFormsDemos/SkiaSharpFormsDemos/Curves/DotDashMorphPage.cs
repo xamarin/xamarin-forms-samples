@@ -13,7 +13,7 @@ namespace SkiaSharpFormsDemos.Curves
         SKCanvasView canvasView;
         bool pageIsActive = false;
 
-        SKPaint circlePaint = new SKPaint
+        SKPaint ellipsePaint = new SKPaint
         {
             Style = SKPaintStyle.Stroke,
             StrokeWidth = strokeWidth,
@@ -56,10 +56,10 @@ namespace SkiaSharpFormsDemos.Curves
 
             canvas.Clear();
 
-            // Create circular path
-            using (SKPath circlePath = new SKPath())
+            // Create elliptical path
+            using (SKPath ellipsePath = new SKPath())
             {
-                circlePath.AddOval(new SKRect(50, 50, info.Width - 50, info.Height - 50));
+                ellipsePath.AddOval(new SKRect(50, 50, info.Width - 50, info.Height - 50));
 
                 // Create animated path effect 
                 TimeSpan timeSpan = new TimeSpan(DateTime.Now.Ticks);
@@ -103,26 +103,8 @@ namespace SkiaSharpFormsDemos.Curves
 
                 using (SKPathEffect pathEffect = SKPathEffect.CreateDash(dashArray, phase))
                 {
-                    circlePaint.PathEffect = pathEffect;
-
-                    //   canvas.DrawPath(circlePath, circlePaint);
-
-
-
-
-
-
-                    SKPath newPath = new SKPath();
-                    bool fill = circlePaint.GetFillPath(circlePath, newPath);
-                    SKPaint newPaint = new SKPaint
-                    {
-//                        Style = fill ? SKPaintStyle.Fill : SKPaintStyle.Stroke
-                    };
-                    canvas.DrawPath(newPath, newPaint);
-
-                    // not color, but strokeWidth, strokeCap and path effect
-
-
+                    ellipsePaint.PathEffect = pathEffect;
+                    canvas.DrawPath(ellipsePath, ellipsePaint);
                 }
             }
         }

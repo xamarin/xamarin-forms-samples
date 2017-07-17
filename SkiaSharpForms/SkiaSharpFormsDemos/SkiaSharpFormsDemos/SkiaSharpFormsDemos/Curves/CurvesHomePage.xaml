@@ -147,10 +147,10 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.LinkedChainPage}" />
 
-                <TextCell Text="Conveyer Belt"
+                <TextCell Text="Conveyor Belt"
                           Detail="Rotate a path around another path"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.ConveyerBeltPage}" />
+                          CommandParameter="{x:Type local:Curves.ConveyorBeltPage}" />
 
                 <TextCell Text="Hatch Fill"
                           Detail="Use 2D line effect to fill an area"
