@@ -34,7 +34,7 @@ namespace SkiaSharpFormsDemos.Curves
                 paint.Color = SKColors.Red;
 
                 using (SKPathEffect pathEffect =
-                        SKPathEffect.Create2DPath(SKMatrix.MakeScale(64, 64), tilePath))
+                       SKPathEffect.Create2DPath(SKMatrix.MakeScale(64, 64), tilePath))
                 {
                     paint.PathEffect = pathEffect;
 

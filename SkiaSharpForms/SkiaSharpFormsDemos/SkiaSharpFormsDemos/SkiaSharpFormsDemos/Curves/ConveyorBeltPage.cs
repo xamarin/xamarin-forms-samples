@@ -18,19 +18,11 @@ namespace SkiaSharpFormsDemos.Curves
         };
 
         SKPath bucketPath = new SKPath();
-        //SKPath conveyerPath = SKPath.ParseSvgPathData(
-        //            "M -5 0 A 5 5 0 1 0 5 0 A 5 5 0 1 0 -5 0 Z" + // little circle
-        //            "M 95 0 A 5 5 0 1 0 105 0 A 5 5 0 1 0 95 0 Z" +  // another
-        //            "M 0 -20 L 100 -20 A 20 20 0 1 1 100 20" +
-        //                    "L 0 20 A 20 20 0 1 1 0 -20");
-
 
         SKPaint bucketsPaint = new SKPaint
         {
             Color = SKColors.BurlyWood,
         };
-
-        
 
         public ConveyorBeltPage()
         {
@@ -65,10 +57,10 @@ namespace SkiaSharpFormsDemos.Curves
             // Arc to suggest the hidden side
             bucketPath.MoveTo(25, -17);
             bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small, 
-                             SKPathDirection.Clockwise, 65, -17);
+                                SKPathDirection.Clockwise, 65, -17);
             bucketPath.LineTo(65, -19);
             bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small, 
-                             SKPathDirection.CounterClockwise, 25, -19);
+                                SKPathDirection.CounterClockwise, 25, -19);
             bucketPath.Close();
 
             // Make it a little bigger and correct the orientation
@@ -121,7 +113,7 @@ namespace SkiaSharpFormsDemos.Curves
                                    SKPathDirection.Clockwise, width, info.Height - verticalMargin);
                 conveyerPath.Close();
 
-
+                // Draw the conveyor belt itself
                 canvas.DrawPath(conveyerPath, conveyerPaint);
 
                 // Calculate spacing based on length of conveyer path
@@ -143,7 +135,16 @@ namespace SkiaSharpFormsDemos.Curves
                 {
                     // Set it to the Paint object and draw the path again
                     bucketsPaint.PathEffect = bucketsPathEffect;
-                    canvas.DrawPath(conveyerPath, bucketsPaint);
+                    //      canvas.DrawPath(conveyerPath, bucketsPaint);
+
+
+                    SKPath newPath = new SKPath();
+                    bool fill = bucketsPaint.GetFillPath(conveyerPath, newPath);
+                    SKPaint newPaint = new SKPaint
+                    {
+                        Style = fill ? SKPaintStyle.Fill : SKPaintStyle.Stroke
+                    };
+                    canvas.DrawPath(newPath, newPaint);
                 }
             }
         }

@@ -33,7 +33,7 @@ namespace SkiaSharpFormsDemos.Curves
 
             using (SKPaint paint = new SKPaint())
             {
-                paint.Style = SKPaintStyle.Stroke;              // either stroke or fill!
+                paint.Style = SKPaintStyle.Stroke; 
                 paint.StrokeWidth = 5;
                 paint.Color = SKColors.Blue;
 
