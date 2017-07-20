@@ -7,8 +7,8 @@ namespace SkiaSharpFormsDemos.Curves
 {
     public class LinkedChainPage : ContentPage
     {
-        const int linkRadius = 30;
-        const int linkThickness = 5;
+        const float linkRadius = 30;
+        const float linkThickness = 5;
 
         Func<float, float, float> catenary = (float a, float x) => (float)(a * Math.Cosh(x / a));
 

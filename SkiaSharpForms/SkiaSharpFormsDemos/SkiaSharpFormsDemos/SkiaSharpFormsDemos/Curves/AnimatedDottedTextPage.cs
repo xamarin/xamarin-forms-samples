@@ -60,7 +60,7 @@ namespace SkiaSharpFormsDemos.Curves
             {
                 // Adjust TextSize property so text is 95% of screen width
                 float textWidth = textPaint.MeasureText(text);
-                textPaint.TextSize = 0.95f * info.Width * textPaint.TextSize / textWidth;
+                textPaint.TextSize *= 0.95f * info.Width / textWidth;
 
                 // Find the text bounds
                 SKRect textBounds;

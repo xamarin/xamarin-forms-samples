@@ -172,26 +172,25 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.JitterExperimentPage}" />
                 
-                <!-- Jitter Text -->
-
-            </TableSection>
-
-            <TableSection Title="Paths and Text">
-                
-                <TextCell Text="Clipping Text"
-                          Detail="Use text to clip a bitmap"
+                <TextCell Text="Jitter Text"
+                          Detail="Display text with the discrete path effect"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.ClippingTextPage}" />
-                
-                <TextCell Text="Text Path Effect"
-                          Detail="Use text path for a 1D path effect"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.TextPathEffectPage}" />
+                          CommandParameter="{x:Type local:Curves.JitterTextPage}" />
 
-                <TextCell Text="Circular Text"
-                          Detail="Draw text along a circular path"
+                <TextCell Text="Tap to Outline the Path"
+                          Detail="Demonstrate GetFillPath"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.CircularTextPage}" />
+                          CommandParameter="{x:Type local:Curves.TapToOutlineThePathPage}" />
+
+                <TextCell Text="Cats in Frame"
+                          Detail="Sum two path effects"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.CatsInFramePage}" />
+
+                <TextCell Text="Dashed Hatch Lines"
+                          Detail="Compose two path effects"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.DashedHatchLinesPage}" />
             </TableSection>
         </TableRoot>
     </TableView>
