@@ -88,7 +88,7 @@ namespace SkiaSharpFormsDemos.Curves
             Func<float, float> right = (float a) => 1 + height / a;
 
             float gtA = 1;         // starting value for left > right
-            float ltA = 10000;     // starting value for right > left
+            float ltA = 10000;     // starting value for left < right
 
             while (Math.Abs(gtA - ltA) > 0.1f)
             {

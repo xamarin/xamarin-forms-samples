@@ -66,11 +66,6 @@ namespace SkiaSharpFormsDemos.Curves
             // Make it a little bigger and correct the orientation
             bucketPath.Transform(SKMatrix.MakeScale(-2, 2));
             bucketPath.Transform(SKMatrix.MakeRotationDegrees(90));
-
-            // Set that path as the 1D path effect for bucketsPaint
-            bucketsPaint.PathEffect =
-                SKPathEffect.Create1DPath(bucketPath, 200, 0,
-                                          SKPath1DPathEffectStyle.Rotate);
         }
 
         protected override void OnAppearing()
@@ -135,16 +130,7 @@ namespace SkiaSharpFormsDemos.Curves
                 {
                     // Set it to the Paint object and draw the path again
                     bucketsPaint.PathEffect = bucketsPathEffect;
-                    //      canvas.DrawPath(conveyerPath, bucketsPaint);
-
-
-                    SKPath newPath = new SKPath();
-                    bool fill = bucketsPaint.GetFillPath(conveyerPath, newPath);
-                    SKPaint newPaint = new SKPaint
-                    {
-                        Style = fill ? SKPaintStyle.Fill : SKPaintStyle.Stroke
-                    };
-                    canvas.DrawPath(newPath, newPaint);
+                    canvas.DrawPath(conveyerPath, bucketsPaint);
                 }
             }
         }
