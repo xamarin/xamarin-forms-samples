@@ -49,13 +49,32 @@
       <DependentUpon>BasicsHomePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Basics\OutlinedTextPage.cs" />
+    <Compile Include="Curves\AnimatedDottedTextPage.cs" />
+    <Compile Include="Curves\AnotherRoundedHeptagonPage.cs" />
+    <Compile Include="Curves\CatsInFramePage.cs" />
     <Compile Include="Curves\ClipOperationsPage.cs" />
+    <Compile Include="Curves\ConveyorBeltPage.cs" />
     <Compile Include="Curves\CurvesHomePage.xaml.cs">
       <DependentUpon>CurvesHomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Curves\DashedHatchLinesPage.cs" />
+    <Compile Include="Curves\DotDashMorphPage.cs" />
     <Compile Include="Curves\FourCircleIntersectClipPage.cs" />
     <Compile Include="Curves\FourLeafCloverPage.cs" />
+    <Compile Include="Curves\HatchFillPage.cs" />
+    <Compile Include="Curves\JitterExperimentPage.xaml.cs">
+      <DependentUpon>JitterExperimentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Curves\LinkedChainPage.cs" />
     <Compile Include="Curves\MonkeyThroughKeyholePage.cs" />
+    <Compile Include="Curves\OneDimensionalPathEffectPage.xaml.cs">
+      <DependentUpon>OneDimensionalPathEffectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Curves\JitterTextPage.cs" />
+    <Compile Include="Curves\TapToOutlineThePathPage.xaml.cs">
+      <DependentUpon>TapToOutlineThePathPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Curves\PathTileFillPage.cs" />
     <Compile Include="Curves\PrettyAnalogClockPage.cs" />
     <Compile Include="Curves\AngleArcPage.xaml.cs">
       <DependentUpon>AngleArcPage.xaml</DependentUpon>
@@ -218,7 +237,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="HomePage.xaml">
@@ -427,6 +448,27 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Curves\CurvesHomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Media\PageOfCode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\OneDimensionalPathEffectPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\JitterExperimentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\TapToOutlineThePathPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

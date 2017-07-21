@@ -1,7 +1,5 @@
 ﻿using System;
-
 using Xamarin.Forms;
-
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 
