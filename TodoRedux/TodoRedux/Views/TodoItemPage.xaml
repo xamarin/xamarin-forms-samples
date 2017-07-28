@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TodoRedux.Views.TodoItemPage" Title="{Binding Name}">
+	<StackLayout Margin="20" VerticalOptions="StartAndExpand">
+		<Label Text="Type a note:" />
+		<Entry Text="{Binding Text}" />
+		<Button Text="Save" Command="{Binding Save}" />
+		<Button Text="Delete" Command="{Binding Delete}" />
+		<Button Text="Cancel" Command="{Binding Cancel}" />
+	</StackLayout>
+</ContentPage>

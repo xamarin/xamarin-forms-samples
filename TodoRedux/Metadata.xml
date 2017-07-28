@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleMetadata>
+	<ID>3b01b08e-d616-4fd9-9e2e-0b24515f95f0</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Brief>Sample Xamarin app demonstrating how to use Redux.NET Middleware with a LiteDb database to store and restore state.</Brief>
+	<Level>Advanced</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>Data, User Interface, Xamarin.Forms, Redux</Tags>
+	<SupportedPlatforms>iOS, Windows</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>
