@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using MapKit;
+﻿using MapKit;
 using MapOverlay;
 using MapOverlay.iOS;
 using ObjCRuntime;
