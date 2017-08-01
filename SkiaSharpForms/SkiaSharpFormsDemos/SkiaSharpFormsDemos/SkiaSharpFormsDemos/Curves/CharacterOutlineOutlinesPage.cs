@@ -26,11 +26,13 @@ namespace SkiaSharpFormsDemos.Curves
 
             using (SKPaint textPaint = new SKPaint())
             {
+                // Set Style for the character outlines
                 textPaint.Style = SKPaintStyle.Stroke;
 
-                // Set textPaint textSize based on screen size
+                // Set TextSize based on screen size
                 textPaint.TextSize = Math.Min(info.Width, info.Height);
 
+                // Measure the text
                 SKRect textBounds;
                 textPaint.MeasureText("@", ref textBounds);
 
@@ -38,17 +40,17 @@ namespace SkiaSharpFormsDemos.Curves
                 float xText = info.Width / 2 - textBounds.MidX;
                 float yText = info.Height / 2 - textBounds.MidY;
 
-
-                //   textPaint.StrokeWidth = 20;
-
+                // Get the path for the character outlines
                 using (SKPath textPath = textPaint.GetTextPath("@", xText, yText))
                 {
+                    // Create a new path for the outlines of the path
                     using (SKPath outlinePath = new SKPath())
                     {
+                        // Convert the path to the outlines of the stroked path
                         textPaint.StrokeWidth = 25;
-
                         textPaint.GetFillPath(textPath, outlinePath);
 
+                        // Stroke that new path
                         using (SKPaint outlinePaint = new SKPaint())
                         {
                             outlinePaint.Style = SKPaintStyle.Stroke;
@@ -58,11 +60,7 @@ namespace SkiaSharpFormsDemos.Curves
                             canvas.DrawPath(outlinePath, outlinePaint);
                         }
                     }
-
-
                 }
-
-
             }
         }
     }

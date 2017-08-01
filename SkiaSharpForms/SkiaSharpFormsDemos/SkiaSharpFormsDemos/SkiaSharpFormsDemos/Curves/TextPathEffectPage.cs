@@ -10,7 +10,6 @@ namespace SkiaSharpFormsDemos.Curves
         const string character = "@";
         const float littleSize = 50;
 
-        SKPath textPath;
         SKPathEffect pathEffect;
 
         SKPaint textPathPaint = new SKPaint
@@ -18,7 +17,7 @@ namespace SkiaSharpFormsDemos.Curves
             TextSize = littleSize
         };
 
-        SKPaint textPaint = new SKPaint                     // doesn't need a stroke width
+        SKPaint textPaint = new SKPaint
         {
             Style = SKPaintStyle.Stroke,
             Color = SKColors.Black
@@ -37,8 +36,9 @@ namespace SkiaSharpFormsDemos.Curves
             textPathPaint.MeasureText(character, ref textPathPaintBounds);
 
             // Create textPath centered around (0, 0)
-            textPath = textPathPaint.GetTextPath(character, -textPathPaintBounds.MidX,
-                                                 -textPathPaintBounds.MidY);
+            SKPath textPath = textPathPaint.GetTextPath(character, 
+                                                        -textPathPaintBounds.MidX,
+                                                        -textPathPaintBounds.MidY);
             // Create the path effect
             pathEffect = SKPathEffect.Create1DPath(textPath, littleSize, 0,
                                                    SKPath1DPathEffectStyle.Translate);
@@ -52,10 +52,10 @@ namespace SkiaSharpFormsDemos.Curves
 
             canvas.Clear();
 
-            // Set textPaint textSize based on screen size
+            // Set textPaint TextSize based on screen size
             textPaint.TextSize = Math.Min(info.Width, info.Height);
 
-            // Do not measure the text with PathEffect set!                             // !!!!!!
+            // Do not measure the text with PathEffect set!
             SKRect textBounds;
             textPaint.MeasureText(character, ref textBounds);
 

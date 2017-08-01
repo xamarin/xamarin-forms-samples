@@ -39,8 +39,8 @@ namespace SkiaSharpFormsDemos.Curves
 
             using (SKPaint paint = new SKPaint())
             {
-                paint.TextSize = 10;                                                            // arbitrary, also Style is irrelevant
                 paint.Typeface = SKTypeface.FromFamilyName(null, SKTypefaceStyle.Bold);
+                paint.TextSize = 10;
 
                 using (SKPath textPath = paint.GetTextPath("CODE", 0, 0))
                 {
