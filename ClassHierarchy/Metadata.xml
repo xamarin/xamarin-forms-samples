@@ -3,7 +3,7 @@
 	<ID>5181B971-4D1E-4BF0-BD03-76CB6D60DD3C</ID>
 	<IsFullApplication>true</IsFullApplication>
 	<Level>Intermediate</Level>
-	<Tags>User Interface, Xamarin.Forms</Tags>
+	<Tags>User Interface, Xamarin.Forms, liveplayer</Tags>
 	<SupportedPlatforms>Android, iOS, windows-rt</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>

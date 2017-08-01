@@ -50,7 +50,7 @@ namespace TodoRESTService.Controllers
 
         [HttpPut]
         [BasicAuthentication(RequireSsl = false)]
-        public HttpResponseMessage Edit(string id, TodoItem item)
+        public HttpResponseMessage Edit(TodoItem item)
         {
             try
             {
@@ -61,7 +61,7 @@ namespace TodoRESTService.Controllers
                     return base.BuildErrorResult(HttpStatusCode.BadRequest, ErrorCode.TodoItemNameAndNotesRequired.ToString());
                 }
 
-                var todoItem = todoService.Find(id);
+                var todoItem = todoService.Find(item.ID);
                 if (todoItem != null)
                 {
                     todoService.UpdateData(item);
