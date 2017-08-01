@@ -52,7 +52,10 @@
     <Compile Include="Curves\AnimatedDottedTextPage.cs" />
     <Compile Include="Curves\AnotherRoundedHeptagonPage.cs" />
     <Compile Include="Curves\CatsInFramePage.cs" />
+    <Compile Include="Curves\CharacterOutlineOutlinesPage.cs" />
+    <Compile Include="Curves\CircularTextPage.cs" />
     <Compile Include="Curves\ClipOperationsPage.cs" />
+    <Compile Include="Curves\ClippingTextPage.cs" />
     <Compile Include="Curves\ConveyorBeltPage.cs" />
     <Compile Include="Curves\CurvesHomePage.xaml.cs">
       <DependentUpon>CurvesHomePage.xaml</DependentUpon>
@@ -109,6 +112,7 @@
     <Compile Include="Curves\TangentArcPage.xaml.cs">
       <DependentUpon>TangentArcPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Curves\TextPathEffectPage.cs" />
     <Compile Include="HomeBasePage.cs" />
     <Compile Include="InteractivePage.cs" />
     <Compile Include="IPicturePicker.cs" />

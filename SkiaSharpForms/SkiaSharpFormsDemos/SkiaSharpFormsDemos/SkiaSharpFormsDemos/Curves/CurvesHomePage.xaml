@@ -192,6 +192,29 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.DashedHatchLinesPage}" />
             </TableSection>
+
+            <TableSection Title="Paths and Text">
+
+                <TextCell Text="Clipping Text"
+                          Detail="Use text to clip a bitmap"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ClippingTextPage}" />
+
+                <TextCell Text="Text Path Effect"
+                          Detail="Use text path for a 1D path effect"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.TextPathEffectPage}" />
+
+                <TextCell Text="CharacterOutlineOutlines"
+                          Detail="Show the outline of a character outline"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.CharacterOutlineOutlinesPage}" />
+
+                <TextCell Text="Circular Text"
+                          Detail="Draw text along a circular path"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.CircularTextPage}" />
+            </TableSection>
         </TableRoot>
     </TableView>
 </local:HomeBasePage>
