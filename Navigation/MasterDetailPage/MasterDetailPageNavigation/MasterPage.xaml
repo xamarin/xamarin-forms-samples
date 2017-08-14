@@ -5,15 +5,22 @@
 			 Padding="0,40,0,0"
 			 Icon="hamburger.png"
 			 Title="Personal Organiser">
-	<ContentPage.Content>
-		<StackLayout VerticalOptions="FillAndExpand">
-			<ListView x:Name="listView" VerticalOptions="FillAndExpand" SeparatorVisibility="None">
-				<ListView.ItemTemplate>
-					<DataTemplate>
-						<ImageCell Text="{Binding Title}" ImageSource="{Binding IconSource}" />
-					</DataTemplate>
-				</ListView.ItemTemplate>
-			</ListView>
-		</StackLayout>
-	</ContentPage.Content>
+    <StackLayout>
+        <ListView x:Name="listView" SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSource}" />
+                            <Label Grid.Column="1" Text="{Binding Title}" VerticalOptions="FillAndExpand" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>
