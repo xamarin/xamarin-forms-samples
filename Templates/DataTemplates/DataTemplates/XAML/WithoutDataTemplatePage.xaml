@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:DataTemplates" x:Class="DataTemplates.WithoutDataTemplatePage" Title="Without a Data Template" Icon="xaml.png">
+    <StackLayout Margin="20">
+		<Label Text="ListView without a Data Template" FontAttributes="Bold" HorizontalOptions="Center" />
+		<ListView Margin="0,20,0,0">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:Person}">
+                    <local:Person Name="Steve" Age="21" Location="USA" />
+                    <local:Person Name="John" Age="37" Location="USA" />
+                    <local:Person Name="Tom" Age="42" Location="UK" />
+                    <local:Person Name="Lucas" Age="29" Location="Germany" />
+                    <local:Person Name="Tariq" Age="39" Location="UK" />
+                    <local:Person Name="Jane" Age="30" Location="USA" />
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+	</StackLayout>
+</ContentPage>
