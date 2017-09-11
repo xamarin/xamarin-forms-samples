@@ -31,23 +31,28 @@ namespace MasterDetailPageNavigation
 			listView = new ListView {
 				ItemsSource = masterPageItems,
 				ItemTemplate = new DataTemplate (() => {
-					var imageCell = new ImageCell ();
-					imageCell.SetBinding (TextCell.TextProperty, "Title");
-					imageCell.SetBinding (ImageCell.ImageSourceProperty, "IconSource");
-					return imageCell;
+                    var grid = new Grid { Padding = new Thickness(5, 10) };
+                    grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(30) });
+                    grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
+
+                    var image = new Image();
+                    image.SetBinding(Image.SourceProperty, "IconSource");
+                    var label = new Label { VerticalOptions = LayoutOptions.FillAndExpand };
+                    label.SetBinding(Label.TextProperty, "Title");
+
+                    grid.Children.Add(image);
+                    grid.Children.Add(label, 1, 0);
+
+                    return new ViewCell { View = grid };
 				}),
-				VerticalOptions = LayoutOptions.FillAndExpand,
 				SeparatorVisibility = SeparatorVisibility.None
 			};
 
-			Padding = new Thickness (0, 40, 0, 0);
 			Icon = "hamburger.png";
 			Title = "Personal Organiser";
-			Content = new StackLayout {
-				VerticalOptions = LayoutOptions.FillAndExpand,
-				Children = {
-					listView
-				}	
+			Content = new StackLayout
+            {
+				Children = { listView }	
 			};
 		}
 	}

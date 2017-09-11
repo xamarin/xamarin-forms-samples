@@ -1,24 +1,16 @@
 ﻿namespace DataTemplates
 {
-	public class Person
-	{
-		public string Name { get; private set; }
+    public class Person
+    {
+        public string Name { get; set; }
 
-		public int Age { get; private set; }
+        public int Age { get; set; }
 
-		public string Location { get; private set; }
+        public string Location { get; set; }
 
-		public Person (string name, int age, string location)
-		{
-			Name = name;
-			Age = age;
-			Location = location;
-		}
-
-		public override string ToString ()
-		{
-			return Name;
-		}
-	}
+        public override string ToString()
+        {
+            return Name;
+        }
+    }
 }
-

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:DataTemplates" x:Class="DataTemplates.WithDataTemplatePage" Title="With a Data Template" Icon="xaml.png">
+	<StackLayout Margin="20">
+		<Label Text="ListView with a Data Template" FontAttributes="Bold" HorizontalOptions="Center" />
+		<ListView Margin="0,20,0,0">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:Person}">
+                    <local:Person Name="Steve" Age="21" Location="USA" />
+                    <local:Person Name="John" Age="37" Location="USA" />
+                    <local:Person Name="Tom" Age="42" Location="UK" />
+                    <local:Person Name="Lucas" Age="29" Location="Germany" />
+                    <local:Person Name="Tariq" Age="39" Location="UK" />
+                    <local:Person Name="Jane" Age="30" Location="USA" />
+                </x:Array>
+            </ListView.ItemsSource>
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="0.5*" />
+								<ColumnDefinition Width="0.2*" />
+								<ColumnDefinition Width="0.3*" />
+							</Grid.ColumnDefinitions>
+							<Label Text="{Binding Name}" FontAttributes="Bold" />
+							<Label Grid.Column="1" Text="{Binding Age}" />
+							<Label Grid.Column="2" Text="{Binding Location}" HorizontalTextAlignment="End" />
+						</Grid>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
+</ContentPage>

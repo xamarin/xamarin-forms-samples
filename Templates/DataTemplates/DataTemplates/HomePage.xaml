@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:DataTemplates;assembly=DataTemplates" x:Class="DataTemplates.HomePage">
-	<local:WithoutDataTemplatePage />
-	<local:WithDataTemplatePage />
-</TabbedPage>

@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterDetailPageNavigation", "MasterDetailPageNavigation\MasterDetailPageNavigation.csproj", "{9A1ED959-56BE-48DB-BD07-545B00242318}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterDetailPageNavigation.iOS", "iOS\MasterDetailPageNavigation.iOS.csproj", "{3D54620E-23F2-462B-A824-B074D41BD507}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterDetailPageNavigation.Droid", "Droid\MasterDetailPageNavigation.Droid.csproj", "{94BA3405-8AC9-47A8-90B4-59DBF2D56EF0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterDetailPageNavigation.WinPhone81", "WinPhone81\MasterDetailPageNavigation.WinPhone81.csproj", "{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterDetailPageNavigation.UWP", "UWP\MasterDetailPageNavigation.UWP.csproj", "{A72F716D-5184-48BC-A334-057D81C3574F}"
 EndProject
@@ -105,40 +103,6 @@ Global
 		{94BA3405-8AC9-47A8-90B4-59DBF2D56EF0}.Release|x64.Build.0 = Release|Any CPU
 		{94BA3405-8AC9-47A8-90B4-59DBF2D56EF0}.Release|x64.Deploy.0 = Release|Any CPU
 		{94BA3405-8AC9-47A8-90B4-59DBF2D56EF0}.Release|x86.ActiveCfg = Release|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|ARM.ActiveCfg = Debug|ARM
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|ARM.Build.0 = Debug|ARM
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|ARM.Deploy.0 = Debug|ARM
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|Mixed Platforms.Deploy.0 = Debug|x86
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|x64.Build.0 = Debug|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|x64.Deploy.0 = Debug|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|x86.ActiveCfg = Debug|x86
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|x86.Build.0 = Debug|x86
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Debug|x86.Deploy.0 = Debug|x86
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|ARM.ActiveCfg = Release|ARM
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|ARM.Build.0 = Release|ARM
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|ARM.Deploy.0 = Release|ARM
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|Mixed Platforms.Build.0 = Release|x86
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|Mixed Platforms.Deploy.0 = Release|x86
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|x64.ActiveCfg = Release|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|x64.Build.0 = Release|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|x64.Deploy.0 = Release|Any CPU
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|x86.ActiveCfg = Release|x86
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|x86.Build.0 = Release|x86
-		{81BA67D6-D9A1-4E8C-9BF1-964CA8AF96EE}.Release|x86.Deploy.0 = Release|x86
 		{A72F716D-5184-48BC-A334-057D81C3574F}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{A72F716D-5184-48BC-A334-057D81C3574F}.Debug|ARM.ActiveCfg = Debug|ARM
 		{A72F716D-5184-48BC-A334-057D81C3574F}.Debug|ARM.Build.0 = Debug|ARM

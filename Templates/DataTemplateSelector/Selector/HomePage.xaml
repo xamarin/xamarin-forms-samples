@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Selector;assembly=Selector" x:Class="Selector.HomePage">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Selector" x:Class="Selector.HomePage">
 	<ContentPage.Resources>
 		<ResourceDictionary>
 			<DataTemplate x:Key="validPersonTemplate">
@@ -33,8 +33,8 @@
 			<local:PersonDataTemplateSelector x:Key="personDataTemplateSelector" ValidTemplate="{StaticResource validPersonTemplate}" InvalidTemplate="{StaticResource invalidPersonTemplate}" />
 		</ResourceDictionary>
 	</ContentPage.Resources>
-	<StackLayout Padding="0,20,0,0">
+	<StackLayout Margin="20">
 		<Label Text="ListView with a DataTemplateSelector" FontAttributes="Bold" HorizontalOptions="Center" />
-		<ListView x:Name="listView" ItemTemplate="{StaticResource personDataTemplateSelector}" />
+		<ListView x:Name="listView" Margin="0,20,0,0" ItemTemplate="{StaticResource personDataTemplateSelector}" />
 	</StackLayout>
 </ContentPage>
