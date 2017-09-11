@@ -4,9 +4,8 @@
                        xmlns:local="clr-namespace:SkiaSharpFormsDemos"
                        xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
                        xmlns:tt="clr-namespace:TouchTracking"
-                       x:Class="SkiaSharpFormsDemos.Curves.BezierCurvePage"
-                       Title="Bezier Curve">
-    
+                       x:Class="SkiaSharpFormsDemos.Curves.PathLengthPage"
+                       Title="Path Length">
     <Grid BackgroundColor="White">
         <skia:SKCanvasView x:Name="canvasView"
                            PaintSurface="OnCanvasViewPaintSurface" />
@@ -16,3 +15,7 @@
         </Grid.Effects>
     </Grid>
 </local:InteractivePage>
+    
+    
+    
+    
