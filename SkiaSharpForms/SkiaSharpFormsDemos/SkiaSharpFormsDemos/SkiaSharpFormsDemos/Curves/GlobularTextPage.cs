@@ -9,21 +9,13 @@ namespace SkiaSharpFormsDemos.Curves
 {
     public class GlobularTextPage : ContentPage
     {
-        SKCanvasView canvasView;
         SKPath globePath;
-        SKPaint pathPaint = new SKPaint()
-        {
-            Style = SKPaintStyle.Fill,
-            Color = SKColors.Blue,
-            StrokeWidth = 3,
-            IsAntialias = true
-        };
 
         public GlobularTextPage()
         {
             Title = "Globular Text";
 
-            canvasView = new SKCanvasView();
+            SKCanvasView canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;
             Content = canvasView;
 
@@ -39,8 +31,10 @@ namespace SkiaSharpFormsDemos.Curves
 
                     globePath = textPath.CloneWithTransform((SKPoint pt) =>
                     {
-                        double longitude = (Math.PI / textPathBounds.Width) * (pt.X - textPathBounds.Left) - Math.PI / 2;
-                        double latitude = (Math.PI / textPathBounds.Height) * (pt.Y - textPathBounds.Top) - Math.PI / 2;
+                        double longitude = (Math.PI / textPathBounds.Width) * 
+                                                (pt.X - textPathBounds.Left) - Math.PI / 2;
+                        double latitude = (Math.PI / textPathBounds.Height) * 
+                                                (pt.Y - textPathBounds.Top) - Math.PI / 2;
 
                         longitude *= 0.75;
                         latitude *= 0.75;
@@ -62,9 +56,17 @@ namespace SkiaSharpFormsDemos.Curves
 
             canvas.Clear();
 
-            canvas.Translate(info.Width / 2, info.Height / 2);
-            canvas.Scale(0.45f * Math.Min(info.Width, info.Height));     // radius
-            canvas.DrawPath(globePath, pathPaint);
+            using (SKPaint pathPaint = new SKPaint())
+            {
+                pathPaint.Style = SKPaintStyle.Fill;
+                pathPaint.Color = SKColors.Blue;
+                pathPaint.StrokeWidth = 3;
+                pathPaint.IsAntialias = true;
+
+                canvas.Translate(info.Width / 2, info.Height / 2);
+                canvas.Scale(0.45f * Math.Min(info.Width, info.Height));     // radius
+                canvas.DrawPath(globePath, pathPaint);
+            }
         }
     }
 }

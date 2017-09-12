@@ -220,6 +220,11 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.PathLengthPage}" />
 
+                <TextCell Text="Unicycle Half-Pipe"
+                          Detail="Animate an object along a path"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.UnicycleHalfPipePage}" />
+
                 <TextCell Text="Globular Text"
                           Detail="Transform text in 3D space"
                           Command="{Binding NavigateCommand}"

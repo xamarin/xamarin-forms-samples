@@ -118,6 +118,7 @@
       <DependentUpon>TangentArcPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Curves\TextPathEffectPage.cs" />
+    <Compile Include="Curves\UnicycleHalfPipePage.cs" />
     <Compile Include="HomeBasePage.cs" />
     <Compile Include="InteractivePage.cs" />
     <Compile Include="IPicturePicker.cs" />
