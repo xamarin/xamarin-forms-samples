@@ -126,7 +126,6 @@
             </TableSection>
 
             <TableSection Title="Path Effects">
-                
                 <TextCell Text="Animated Dotted Text"
                           Detail="Animate dots around outlined text"
                           Command="{Binding NavigateCommand}"
@@ -194,7 +193,6 @@
             </TableSection>
 
             <TableSection Title="Paths and Text">
-
                 <TextCell Text="Clipping Text"
                           Detail="Use text to clip a bitmap"
                           Command="{Binding NavigateCommand}"
@@ -214,6 +212,18 @@
                           Detail="Draw text along a circular path"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.CircularTextPage}" />
+            </TableSection>
+
+            <TableSection Title="Information &amp; Enumeration">
+                <TextCell Text="Path Length"
+                          Detail="Compute the length of a path"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.PathLengthPage}" />
+
+                <TextCell Text="Globular Text"
+                          Detail="Transform text in 3D space"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.GlobularTextPage}" />
             </TableSection>
         </TableRoot>
     </TableView>

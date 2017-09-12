@@ -64,6 +64,7 @@
     <Compile Include="Curves\DotDashMorphPage.cs" />
     <Compile Include="Curves\FourCircleIntersectClipPage.cs" />
     <Compile Include="Curves\FourLeafCloverPage.cs" />
+    <Compile Include="Curves\GlobularTextPage.cs" />
     <Compile Include="Curves\HatchFillPage.cs" />
     <Compile Include="Curves\JitterExperimentPage.xaml.cs">
       <DependentUpon>JitterExperimentPage.xaml</DependentUpon>
@@ -74,6 +75,10 @@
       <DependentUpon>OneDimensionalPathEffectPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Curves\JitterTextPage.cs" />
+    <Compile Include="Curves\PathExtensions.cs" />
+    <Compile Include="Curves\PathLengthPage.xaml.cs">
+      <DependentUpon>PathLengthPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Curves\TapToOutlineThePathPage.xaml.cs">
       <DependentUpon>TapToOutlineThePathPage.xaml</DependentUpon>
     </Compile>
@@ -473,6 +478,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Curves\TapToOutlineThePathPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Curves\PathLengthPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
