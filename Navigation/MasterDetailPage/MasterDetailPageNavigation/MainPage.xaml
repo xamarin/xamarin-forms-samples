@@ -7,7 +7,7 @@
   	<local:MasterPage x:Name="masterPage" />
   </MasterDetailPage.Master>
 	<MasterDetailPage.Detail>
-		<NavigationPage x:Name="navigationPage">
+		<NavigationPage>
 			<x:Arguments>
 				<local:ContactsPage />
 			</x:Arguments>

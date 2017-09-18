@@ -17,13 +17,12 @@ namespace MasterDetailPageNavigation
             }
         }
 
-        async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var item = e.SelectedItem as MasterPageItem;
             if (item != null)
             {
-                var page = (Page)Activator.CreateInstance(item.TargetType);
-                await navigationPage.PushAsync(page);
+                Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
                 masterPage.ListView.SelectedItem = null;
                 IsPresented = false;
             }
