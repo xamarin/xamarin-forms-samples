@@ -11,6 +11,7 @@ namespace Phoneword
 
         public App()
         {
+            InitializeComponent();
             PhoneNumbers = new List<string>();
             MainPage = new NavigationPage(new Phoneword.MainPage());
         }

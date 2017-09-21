@@ -8,6 +8,7 @@ namespace Phoneword
     {
         public App()
         {
+            InitializeComponent();
             MainPage = new Phoneword.MainPage();
         }
 
