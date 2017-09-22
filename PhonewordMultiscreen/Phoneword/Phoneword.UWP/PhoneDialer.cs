@@ -18,7 +18,7 @@ namespace Phoneword.UWP
             return dialled;
         }
 
-        async void DialNumber(string number)
+        async Task DialNumber(string number)
         {
             var phoneLine = await GetDefaultPhoneLineAsync();
             if (phoneLine != null)
