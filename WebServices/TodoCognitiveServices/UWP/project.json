@@ -1,4 +1,4 @@
-﻿{
+{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "Microsoft.ProjectOxford.Emotion": "1.0.331.1",
@@ -6,7 +6,7 @@
     "PCLStorage": "1.0.2",
     "sqlite-net-pcl": "1.2.1",
     "Xam.Plugin.Media": "2.6.1",
-    "Xamarin.Forms": "2.3.4.224"
+    "Xamarin.Forms": "2.4.0.282"
   },
   "frameworks": {
     "uap10.0": {}

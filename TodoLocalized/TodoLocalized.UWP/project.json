@@ -3,7 +3,7 @@
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "sqlite-net": "1.0.8",
     "sqlite-net-pcl": "1.1.2",
-    "Xamarin.Forms": "2.3.4.224"
+    "Xamarin.Forms": "2.4.0.282"
   },
   "frameworks": {
     "uap10.0": {}
