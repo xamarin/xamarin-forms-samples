@@ -58,13 +58,16 @@ namespace Todo
 			};
 			listView.ItemSelected += async (sender, e) =>
 			{
-				((App)App.Current).ResumeAtTodoId = (e.SelectedItem as TodoItem).ID;
-				Debug.WriteLine("setting ResumeAtTodoId = " + (e.SelectedItem as TodoItem).ID);
+                //((App)App.Current).ResumeAtTodoId = (e.SelectedItem as TodoItem).ID;
+                //Debug.WriteLine("setting ResumeAtTodoId = " + (e.SelectedItem as TodoItem).ID);
 
-				await Navigation.PushAsync(new TodoItemPageCS
-				{
-					BindingContext = e.SelectedItem as TodoItem
-				});
+                if (e.SelectedItem != null)
+                {
+                    await Navigation.PushAsync(new TodoItemPageCS
+                    {
+                        BindingContext = e.SelectedItem as TodoItem
+                    });
+                }
 			};
 
 			Content = listView;
