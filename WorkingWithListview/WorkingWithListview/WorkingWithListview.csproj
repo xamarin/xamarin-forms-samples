@@ -62,16 +62,16 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
     <EmbeddedResource Include="Basic\BasicListXaml.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Context\ContextActionsXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Custom\CustomCellXaml.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Uneven\UnevenRowsXaml.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="HeaderFooter\HeaderFooterXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
