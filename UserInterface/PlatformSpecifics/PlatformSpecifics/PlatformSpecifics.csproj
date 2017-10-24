@@ -50,6 +50,21 @@
     <EmbeddedResource Include="iOS\XAML\iOSStatusBarPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Android\XAML\AndroidListViewFastScrollPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Android\XAML\AndroidTabbedPageSwipePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iOS\XAML\iOSPickerPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iOS\XAML\iOSScrollViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iOS\XAML\iOSStatusBarTextColorModePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -128,6 +143,30 @@
       <DependentUpon>iOSStatusBarPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="iOS\CS\iOSStatusBarPageCS.cs" />
+    <Compile Include="Android\XAML\AndroidListViewFastScrollPage.xaml.cs">
+      <DependentUpon>AndroidListViewFastScrollPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Android\CS\AndroidListViewFastScrollPageCS.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="ViewModels\ListViewViewModel.cs" />
+    <Compile Include="Models\Grouping.cs" />
+    <Compile Include="Android\CS\AndroidTabbedPageSwipePageCS.cs" />
+    <Compile Include="Android\XAML\AndroidTabbedPageSwipePage.xaml.cs">
+      <DependentUpon>AndroidTabbedPageSwipePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="iOS\XAML\iOSPickerPage.xaml.cs">
+      <DependentUpon>iOSPickerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="iOS\CS\iOSPickerPageCS.cs" />
+    <Compile Include="iOS\XAML\iOSScrollViewPage.xaml.cs">
+      <DependentUpon>iOSScrollViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="iOS\CS\iOSScrollViewPageCS.cs" />
+    <Compile Include="iOS\XAML\iOSStatusBarTextColorModePage.xaml.cs">
+      <DependentUpon>iOSStatusBarTextColorModePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="iOS\CS\iOSStatusBarTextColorModePageCS.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="UWP\XAML\NavigationPage\WindowsNavigationPage.xaml">
@@ -208,27 +247,28 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Reference Include="Faker.Portable">
+      <HintPath>..\packages\Faker.Net.Portable.2.5.0\lib\portable-net40+sl5+win8+wpa81+wp8\Faker.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.282\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.282\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.282\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\Xamarin.Forms.2.4.0.282\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\Xamarin.Forms.2.4.0.282\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Platform.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\Xamarin.Forms.2.4.0.282\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Xaml.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.4.0.282\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.4.0.282\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Xamarin.Forms.2.4.0.282\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.2.4.0.282\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets'))" />
   </Target>

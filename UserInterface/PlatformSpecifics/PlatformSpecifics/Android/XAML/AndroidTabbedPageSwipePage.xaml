@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+        x:Class="PlatformSpecifics.AndroidTabbedPageSwipePage"
+        android:TabbedPage.OffscreenPageLimit="2"
+        android:TabbedPage.IsSwipePagingEnabled="true"
+        Title="Tabbed Page">
+    <ContentPage Title="Page 1">
+        <StackLayout Margin="20">
+            <Label Text="Page 1" HorizontalOptions="Center" />
+            <Button Text="Toggle Swipe Paging" Clicked="OnButtonClicked" />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Page 2">
+        <StackLayout Margin="20">
+            <Label Text="Page 2" HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Page 3">
+        <StackLayout Margin="20">
+            <Label Text="Page 3" HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Page 4">
+        <StackLayout Margin="20">
+            <Label Text="Page 4" HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Page 5">
+        <StackLayout Margin="20">
+            <Label Text="Page 5" HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

@@ -4,34 +4,50 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace PlatformSpecifics
 {
-	public class iOSTranslucentNavigationBarPageCS : ContentPage
-	{
-		public iOSTranslucentNavigationBarPageCS()
-		{
-			var button = new Button { Text = "Toggle Translucent Navigation Bar " };
-			button.Clicked += (sender, e) => (App.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().SetIsNavigationBarTranslucent(!(App.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().IsNavigationBarTranslucent());
+    public class iOSTranslucentNavigationBarPageCS : ContentPage
+    {
+        public iOSTranslucentNavigationBarPageCS()
+        {
+            var translucentButton = new Button { Text = "Toggle Translucent Navigation Bar" };
+            translucentButton.Clicked += (sender, e) => (App.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().SetIsNavigationBarTranslucent(!(App.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().IsNavigationBarTranslucent());
 
-			Title = "Navigation Bar";
-			Content = new StackLayout
-			{
-				Margin = new Thickness(20),
-				Children = { button }
-			};
-		}
+            var colorModeButton = new Button { Text = "Toggle Status Bar Text Color Mode" };
+            colorModeButton.Clicked += (sender, e) =>
+            {
+                switch ((App.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().GetStatusBarTextColorMode())
+                {
+                    case StatusBarTextColorMode.MatchNavigationBarTextLuminosity:
+                        (App.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().SetStatusBarTextColorMode(StatusBarTextColorMode.DoNotAdjust);
+                        break;
+                    case StatusBarTextColorMode.DoNotAdjust:
+                        (App.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().SetStatusBarTextColorMode(StatusBarTextColorMode.MatchNavigationBarTextLuminosity);
+                        break;
+                }
+            };
 
-		protected override void OnAppearing()
-		{
-			base.OnAppearing();
+            Title = "Navigation Bar";
+            Content = new StackLayout
+            {
+                Margin = new Thickness(20),
+                Children = { translucentButton, colorModeButton }
+            };
+        }
 
-			(App.Current.MainPage as Xamarin.Forms.NavigationPage).BackgroundColor = Color.Blue;
-			(App.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().EnableTranslucentNavigationBar();
-		}
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
 
-		protected override void OnDisappearing()
-		{
-			base.OnDisappearing();
+            (App.Current.MainPage as Xamarin.Forms.NavigationPage).BackgroundColor = Color.Blue;
+            (App.Current.MainPage as Xamarin.Forms.NavigationPage).BarTextColor = Color.Black;
+            (App.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().EnableTranslucentNavigationBar();
+            (App.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().SetStatusBarTextColorMode(StatusBarTextColorMode.DoNotAdjust);
+        }
 
-			(App.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().DisableTranslucentNavigationBar();
-		}
-	}
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            (App.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().DisableTranslucentNavigationBar();
+        }
+    }
 }
