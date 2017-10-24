@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="SolitairePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
