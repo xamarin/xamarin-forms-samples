@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using CoreGraphics;
 using CustomRenderer;
 using CustomRenderer.iOS;
@@ -26,14 +25,10 @@ namespace CustomRenderer.iOS
             if (e.OldElement != null)
             {
                 var nativeMap = Control as MKMapView;
-                if (nativeMap != null)
-                {
-                    nativeMap.RemoveAnnotations(nativeMap.Annotations);
-                    nativeMap.GetViewForAnnotation = null;
-                    nativeMap.CalloutAccessoryControlTapped -= OnCalloutAccessoryControlTapped;
-                    nativeMap.DidSelectAnnotationView -= OnDidSelectAnnotationView;
-                    nativeMap.DidDeselectAnnotationView -= OnDidDeselectAnnotationView;
-                }
+                nativeMap.GetViewForAnnotation = null;
+                nativeMap.CalloutAccessoryControlTapped -= OnCalloutAccessoryControlTapped;
+                nativeMap.DidSelectAnnotationView -= OnDidSelectAnnotationView;
+                nativeMap.DidDeselectAnnotationView -= OnDidDeselectAnnotationView;
             }
 
             if (e.NewElement != null)
@@ -56,8 +51,7 @@ namespace CustomRenderer.iOS
             if (annotation is MKUserLocation)
                 return null;
 
-            var anno = annotation as MKPointAnnotation;
-            var customPin = GetCustomPin(anno);
+            var customPin = GetCustomPin(annotation as MKPointAnnotation);
             if (customPin == null)
             {
                 throw new Exception("Custom pin not found");
@@ -66,17 +60,16 @@ namespace CustomRenderer.iOS
             annotationView = mapView.DequeueReusableAnnotation(customPin.Id);
             if (annotationView == null)
             {
-                annotationView = new CustomMKAnnotationView(annotation, customPin.Id)
-                {
-                    Image = UIImage.FromFile("pin.png"),
-                    CalloutOffset = new CGPoint(0, 0),
-                    LeftCalloutAccessoryView = new UIImageView(UIImage.FromFile("monkey.png")),
-                    RightCalloutAccessoryView = UIButton.FromType(UIButtonType.DetailDisclosure)
-                };
+                annotationView = new CustomMKAnnotationView(annotation, customPin.Id);
+                annotationView.Image = UIImage.FromFile("pin.png");
+                annotationView.CalloutOffset = new CGPoint(0, 0);
+                annotationView.LeftCalloutAccessoryView = new UIImageView(UIImage.FromFile("monkey.png"));
+                annotationView.RightCalloutAccessoryView = UIButton.FromType(UIButtonType.DetailDisclosure);
                 ((CustomMKAnnotationView)annotationView).Id = customPin.Id;
                 ((CustomMKAnnotationView)annotationView).Url = customPin.Url;
             }
             annotationView.CanShowCallout = true;
+
             return annotationView;
         }
 
@@ -118,7 +111,14 @@ namespace CustomRenderer.iOS
         CustomPin GetCustomPin(MKPointAnnotation annotation)
         {
             var position = new Position(annotation.Coordinate.Latitude, annotation.Coordinate.Longitude);
-            return customPins.FirstOrDefault(pin => pin.Pin.Position == position);
+            foreach (var pin in customPins)
+            {
+                if (pin.Position == position)
+                {
+                    return pin;
+                }
+            }
+            return null;
         }
     }
 }

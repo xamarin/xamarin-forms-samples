@@ -18,8 +18,8 @@ namespace CustomRenderer.UWP
 
         void SetupData()
         {
-            Label.Text = customPin.Pin.Label;
-            Address.Text = customPin.Pin.Address;
+            Label.Text = customPin.Label;
+            Address.Text = customPin.Address;
         }
 
         private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)

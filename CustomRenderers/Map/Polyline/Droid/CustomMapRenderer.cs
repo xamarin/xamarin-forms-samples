@@ -12,7 +12,6 @@ namespace MapOverlay.Droid
     public class CustomMapRenderer : MapRenderer
     {
         List<Position> routeCoordinates;
-        bool isDrawn;
 
         protected override void OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs<Map> e)
         {
@@ -31,23 +30,19 @@ namespace MapOverlay.Droid
             }
         }
 
-        protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        protected override void OnMapReady(Android.Gms.Maps.GoogleMap map)
         {
-            base.OnElementPropertyChanged(sender, e);
+            base.OnMapReady(map);
 
-            if (e.PropertyName.Equals("VisibleRegion") && !isDrawn)
+            var polylineOptions = new PolylineOptions();
+            polylineOptions.InvokeColor(0x66FF0000);
+
+            foreach (var position in routeCoordinates)
             {
-                var polylineOptions = new PolylineOptions();
-                polylineOptions.InvokeColor(0x66FF0000);
-
-                foreach (var position in routeCoordinates)
-                {
-                    polylineOptions.Add(new LatLng(position.Latitude, position.Longitude));
-                }
-
-                NativeMap.AddPolyline(polylineOptions);
-                isDrawn = true;
+                polylineOptions.Add(new LatLng(position.Latitude, position.Longitude));
             }
+
+            NativeMap.AddPolyline(polylineOptions);
         }
     }
 }

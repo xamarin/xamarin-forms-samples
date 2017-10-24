@@ -43,7 +43,7 @@ namespace CustomRenderer.UWP
 
                 foreach (var pin in customPins)
                 {
-                    var snPosition = new BasicGeoposition { Latitude = pin.Pin.Position.Latitude, Longitude = pin.Pin.Position.Longitude };
+                    var snPosition = new BasicGeoposition { Latitude = pin.Position.Latitude, Longitude = pin.Position.Longitude };
                     var snPoint = new Geopoint(snPosition);
 
                     var mapIcon = new MapIcon();
@@ -77,7 +77,7 @@ namespace CustomRenderer.UWP
                             mapOverlay = new XamarinMapOverlay(customPin);
                         }
 
-                        var snPosition = new BasicGeoposition { Latitude = customPin.Pin.Position.Latitude, Longitude = customPin.Pin.Position.Longitude };
+                        var snPosition = new BasicGeoposition { Latitude = customPin.Position.Latitude, Longitude = customPin.Position.Longitude };
                         var snPoint = new Geopoint(snPosition);
 
                         nativeMap.Children.Add(mapOverlay);
@@ -99,7 +99,7 @@ namespace CustomRenderer.UWP
             var pos = new Position(position.Latitude, position.Longitude);
             foreach (var pin in customPins)
             {
-                if (pin.Pin.Position == pos)
+                if (pin.Position == pos)
                 {
                     return pin;
                 }
