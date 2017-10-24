@@ -5,8 +5,8 @@
 			 Title="DevicePageXaml">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
-            <On Platform="iOS" Value="5,20,0,0,5" />
-            <On Platform="Android, WinPhone, Windows" Value="5,0,0,5" />
+            <On Platform="iOS" Value="5,20,0,5" />
+            <On Platform="Android, WinPhone, UWP" Value="5,0,0,5" />
         </OnPlatform>
     </ContentPage.Padding>
     <StackLayout>
@@ -16,14 +16,14 @@
                 <OnPlatform x:TypeArguments="Color">
                     <On Platform="iOS" Value="Green" />
                     <On Platform="Android" Value="#738182" />
-                    <On Platform="WinPhone, Windows" Value="Accent" />
+                    <On Platform="WinPhone, UWP" Value="Accent" />
                 </OnPlatform>
 		</BoxView.Color>
 		<BoxView.WidthRequest>
                 <OnPlatform x:TypeArguments="x:Double">
                     <On Platform="iOS" Value="30" />
                     <On Platform="Android" Value="40" />
-                    <On Platform="WinPhone, Windows" Value="50" />
+                    <On Platform="WinPhone, UWP" Value="50" />
                 </OnPlatform>
             </BoxView.WidthRequest>
   	</BoxView>
@@ -37,7 +37,7 @@
                 <OnPlatform x:TypeArguments="x:Double">
                     <On Platform="iOS" Value="200" />
                     <On Platform="Android" Value="300" />
-                    <On Platform="WinPhone, Windows" Value="150" />
+                    <On Platform="WinPhone, UWP" Value="150" />
                 </OnPlatform>
             </Button.WidthRequest>
   	</Button>

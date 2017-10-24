@@ -1,4 +1,4 @@
-{
+﻿{
   "dependencies": {
     "Microsoft.ApplicationInsights": "1.0.0",
     "Microsoft.ApplicationInsights.PersistenceChannel": "1.0.0",
@@ -7,7 +7,7 @@
     "Xamarin.Forms": "2.4.0.282"
   },
   "frameworks": {
-    "uap10.0": {}
+    "uap10.0.10240": {}
   },
   "runtimes": {
     "win10-arm": {},
