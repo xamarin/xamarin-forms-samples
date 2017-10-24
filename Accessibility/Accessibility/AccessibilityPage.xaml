@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Accessibility" x:Class="Accessibility.AccessibilityPage">
+	<ScrollView Margin="20">
+        <StackLayout>
+            <Label Text="Accessibility Demo" HorizontalOptions="Center" FontAttributes="Bold" AutomationProperties.IsInAccessibleTree="true" AutomationProperties.Name="Title Label" />
+            <Label AutomationProperties.IsInAccessibleTree="true" AutomationProperties.Name="Instructions Label">
+                <Label.Text>
+                    <OnPlatform x:TypeArguments="x:String"> 
+                        <On Platform="iOS" Value="Use two fingers to swipe up or down the screen to read each element on the page." />
+                        <On Platform="Android" Value="Quickly swipe right or left to navigate through elements on the page in sequence." />
+                        <On Platform="UWP" Value="Use three fingers to swipe up the screen to read each element on the page." />
+                    </OnPlatform>
+                </Label.Text>
+            </Label>
+            <Button Text="Toggle ActivityIndicator" Clicked="OnButtonClicked" AutomationProperties.IsInAccessibleTree="true" AutomationProperties.HelpText="Tap to toggle the activity indicator" />
+            <ActivityIndicator x:Name="activityIndicator" AutomationProperties.IsInAccessibleTree="true" AutomationProperties.Name="Progress indicator" />
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="label" Text="Enter your name: " />
+                <Entry Placeholder="Enter name here" AutomationProperties.IsInAccessibleTree="true" AutomationProperties.LabeledBy="{x:Reference label}" />
+            </StackLayout>
+            <Label Text="Tap image to hear the alert box." AutomationProperties.IsInAccessibleTree="true" AutomationProperties.Name="Image Label" />
+            <Image Source="monkeyface.png" AutomationProperties.IsInAccessibleTree="true" AutomationProperties.Name="Monkey Image" AutomationProperties.HelpText="Tap to show an alert">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnImageTapped" />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
