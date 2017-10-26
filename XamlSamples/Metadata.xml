@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>6daa29d3-8fe0-49be-93d4-9b345dc5a7a1</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Intermediate</Level>
+	<Tags>Graphics, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>A collection of samples that demonstrate how to utilize XAML with Xamarin.Forms.</Brief>
+</SampleMetadata>
