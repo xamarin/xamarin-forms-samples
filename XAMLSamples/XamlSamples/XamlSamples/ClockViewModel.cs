@@ -31,8 +31,7 @@ namespace XamlSamples
 
                     if (PropertyChanged != null)
                     {
-                        PropertyChanged(this, 
-                            new PropertyChangedEventArgs("DateTime"));
+                        PropertyChanged(this, new PropertyChangedEventArgs("DateTime"));
                     }
                 }
             }

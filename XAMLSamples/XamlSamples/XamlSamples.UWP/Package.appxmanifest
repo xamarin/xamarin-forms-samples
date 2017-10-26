@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="92029758-763d-402e-9e07-d81c3a362334"
-    Publisher="CN=Dave"
+    Name="fcad0496-1c7e-482e-bdfd-ebb34cc8d739"
+    Publisher="CN=User"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="92029758-763d-402e-9e07-d81c3a362334" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="fcad0496-1c7e-482e-bdfd-ebb34cc8d739" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>XamlSamples.UWP</DisplayName>
-    <PublisherDisplayName>Dave</PublisherDisplayName>
+    <PublisherDisplayName>User</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

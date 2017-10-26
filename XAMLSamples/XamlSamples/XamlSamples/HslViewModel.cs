@@ -71,9 +71,9 @@ namespace XamlSamples
                     color = value;
                     OnPropertyChanged("Color");
 
-                    this.Hue = value.Hue;
-                    this.Saturation = value.Saturation;
-                    this.Luminosity = value.Luminosity;
+                    Hue = value.Hue;
+                    Saturation = value.Saturation;
+                    Luminosity = value.Luminosity;
                 }
             }
             get
@@ -84,18 +84,12 @@ namespace XamlSamples
 
         void SetNewColor()
         {
-            this.Color = Color.FromHsla(this.Hue, 
-                                        this.Saturation, 
-                                        this.Luminosity);
+            Color = Color.FromHsla(Hue, Saturation, Luminosity);
         }
 
         protected virtual void OnPropertyChanged(string propertyName)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, 
-                    new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

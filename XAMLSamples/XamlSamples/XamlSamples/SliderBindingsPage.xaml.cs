@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
 namespace XamlSamples
 {
-    public partial class SliderBindingsPage
+    public partial class SliderBindingsPage : ContentPage
     {
         public SliderBindingsPage()
         {

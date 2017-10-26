@@ -16,22 +16,21 @@ namespace XamlSamples
         // Constructor
         public KeypadViewModel()
         {
-            this.AddCharCommand = new Command<string>((key) =>
+            AddCharCommand = new Command<string>((key) =>
                 {
                     // Add the key to the input string.
-                    this.InputString += key;
+                    InputString += key;
                 });
 
-            this.DeleteCharCommand = new Command((nothing) =>
+            DeleteCharCommand = new Command(() =>
                 {
                     // Strip a character from the input string.
-                    this.InputString = this.InputString.Substring(0, 
-                                        this.InputString.Length - 1);
+                    InputString = InputString.Substring(0, InputString.Length - 1);
                 },
-                (nothing) =>
+                () =>
                 {
                     // Return true if there's something to delete.
-                    return this.InputString.Length > 0;  
+                    return InputString.Length > 0;  
                 });
         }
 
@@ -44,10 +43,10 @@ namespace XamlSamples
                 {
                     inputString = value;
                     OnPropertyChanged("InputString");
-                    this.DisplayText = FormatText(inputString);
+                    DisplayText = FormatText(inputString);
 
                     // Perhaps the delete button must be enabled/disabled.
-                    ((Command)this.DeleteCharCommand).ChangeCanExecute();
+                    ((Command)DeleteCharCommand).ChangeCanExecute();
                 }
             }
 
@@ -98,8 +97,7 @@ namespace XamlSamples
 
         protected void OnPropertyChanged(string propertyName)
         {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

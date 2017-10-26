@@ -5,13 +5,12 @@
              x:Class="XamlSamples.ClockPage"
              Title="Clock Page">
 
-  <Label Text="{Binding DateTime,
-                        StringFormat='{0:T}'}"
-         Font="Large"
-         HorizontalOptions="Center"
-         VerticalOptions="Center">
-    <Label.BindingContext>
-      <local:ClockViewModel />
-    </Label.BindingContext>
-  </Label>
+    <Label Text="{Binding DateTime, StringFormat='{0:T}'}"
+           FontSize="Large"
+           HorizontalOptions="Center"
+           VerticalOptions="Center">
+        <Label.BindingContext>
+            <local:ClockViewModel />
+        </Label.BindingContext>
+    </Label>
 </ContentPage>

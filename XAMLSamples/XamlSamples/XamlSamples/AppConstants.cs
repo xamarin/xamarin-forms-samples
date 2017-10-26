@@ -5,16 +5,33 @@ namespace XamlSamples
 {
     static class AppConstants
     {
-        public static readonly Thickness PagePadding =
-            new Thickness(5, Device.OnPlatform(20, 0, 0), 5, 0);
+        public static readonly Thickness PagePadding;
 
-        public static readonly Font TitleFont = 
-            Font.SystemFontOfSize(Device.OnPlatform(35, 40, 50), FontAttributes.Bold);
+        public static readonly Font TitleFont;
 
-        public static readonly Color BackgroundColor =
-            Device.OnPlatform(Color.White, Color.Black, Color.Black);
+        public static readonly Color BackgroundColor = Color.Aqua;
 
-        public static readonly Color ForegroundColor =
-            Device.OnPlatform(Color.Black, Color.White, Color.White);
+        public static readonly Color ForegroundColor = Color.Brown;
+
+        static AppConstants()
+        {
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                    PagePadding = new Thickness(5, 20, 5, 0);
+                    TitleFont = Font.SystemFontOfSize(35, FontAttributes.Bold);
+                    break;
+
+                case Device.Android:
+                    PagePadding = new Thickness(5, 0, 5, 0);
+                    TitleFont = Font.SystemFontOfSize(40, FontAttributes.Bold);
+                    break;
+                    
+                case Device.UWP:
+                    PagePadding = new Thickness(5, 0, 5, 0);
+                    TitleFont = Font.SystemFontOfSize(50, FontAttributes.Bold);
+                    break;
+            }
+        }
     }
 }
