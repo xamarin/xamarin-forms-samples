@@ -11,6 +11,8 @@ namespace TodoLocalized
 	{
         const string ResourceId = "TodoLocalized.Resx.AppResources";
 
+        private static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(() => new ResourceManager(ResourceId, typeof(L10n).GetTypeInfo().Assembly));
+
         public static void SetLocale (CultureInfo ci)
         {
             DependencyService.Get<ILocale>().SetLocale(ci);
@@ -30,9 +32,8 @@ namespace TodoLocalized
             //var netLanguage = Locale ();
 
             // Platform-specific
-            ResourceManager temp = new ResourceManager(ResourceId, typeof(L10n).GetTypeInfo().Assembly);
             Debug.WriteLine("Localize " + key);
-            string result = temp.GetString(key, DependencyService.Get<ILocale>().GetCurrentCultureInfo());
+            string result = ResMgr.Value.GetString(key, DependencyService.Get<ILocale>().GetCurrentCultureInfo());
 
             if (result == null)
             {
