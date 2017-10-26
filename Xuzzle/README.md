@@ -7,9 +7,6 @@ application for Microsoft Pascal for Windows 1.0, where it was called MUZZLE (fo
 This is the Xamarin.Forms version, so it's called Xuzzle, and the 15 tiles spell out the text
 "{XAMARIN.FORMS}".
 
-**If you open the solution in Xamarin Studio, it will not be able to load the Windows Phone project;
-and if you open the solution in Xamarin Studio under Windows, it will not be able to load the iOS project either.**
-
 After pressing the Randomize button, just tap a tile to move it into an empty position. 
 You can *tap* any tile in the row or column 
 of the empty position to move one, two, or three tiles at once. 

@@ -11,9 +11,6 @@ point relative to the transformed view that remains in place when the transform 
 *Stepper* views let you set the *AnchorX* and *AnchorY* properties to values ranging from -1 to 2, 
 in increments of 0.5.
 
-**If you open the solution in Xamarin Studio, it will not be able to load the Windows Phone project;
-and if you open the solution in Xamarin Studio under Windows, it will not be able to load the iOS project either.**
-
 Author
 ------
 

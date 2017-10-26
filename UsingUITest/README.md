@@ -17,7 +17,7 @@ Important points:
 
 * In the **UITests** unit test project the iOS and Android subclasses of `CrossPlatformTests` do the platform-specific set-up.
 
-The Xamarin Studio test runner can run these tests in the platform simulators. Note that the virtual class containing the core tests is shown but with all tests ignored. The tests only run 'for real' from within the platform-specific sub-classes of `CrossPlatformTests`. 
+The Visual Studio for Mac test runner can run these tests in the platform simulators. Note that the virtual class containing the core tests is shown but with all tests ignored. The tests only run 'for real' from within the platform-specific sub-classes of `CrossPlatformTests`. 
 
 ![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/UITestDemo/Screenshots/Tests.png "Test hierarchy")
 
