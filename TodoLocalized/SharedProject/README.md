@@ -14,7 +14,7 @@ The differences between this Shared Project sample and the PCL sample are:
 
 * The default namespace in each platform project was changed:
 
-   - before: Todo.iOS, Todo.Android, Todo.WinPhone
+   - before: Todo.iOS, Todo.Android, Todo.UWP
    - after: TodoLocalized (all the same)
    
    normalizing the namespaces to a single value helps with the resource loading.
@@ -24,4 +24,4 @@ The differences between this Shared Project sample and the PCL sample are:
 * For the default resources **AppResources.resx** file - which *normally* would have the `AppResources.designer.cs` file auto-generated - you must manually keep the C# properties synchronized with whatever string elements you add to the resources XML. **This is going to be incredibly tedious and error prone, so using RESX localiztion with Shared Projects is not typically recommended unless you understand these limitations!**
 
 
-**WARNING:** the WinPhone project has not yet been completed.
+**WARNING:** the Universal Windows Platform project has not yet been completed.
