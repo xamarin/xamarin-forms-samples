@@ -1,9 +1,12 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 x:Class="CustomRenderer.DetailPage">
 	<ContentPage.Padding>
-		<OnPlatform x:TypeArguments="Thickness" iOS="20, 40, 20, 20" Android="20, 20, 20, 20" WinPhone="20, 20, 20, 20" />
+		<OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="20,40,20,20" />
+            <On Platform="Android, UWP" Value="20" />
+        </OnPlatform>
 	</ContentPage.Padding>
 	<ContentPage.Content>
 		<StackLayout HorizontalOptions="Center" VerticalOptions="Center">

@@ -1,7 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:CustomRenderer;assembly=CustomRenderer" x:Class="CustomRenderer.MainPage">
 	<ContentPage.Padding>
-		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0" WinPhone="0" />
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0,20,0,0" />
+            <On Platform="Android, UWP" Value="0" />
+        </OnPlatform>
 	</ContentPage.Padding>
 	<ContentPage.Content>
 		<Grid>
