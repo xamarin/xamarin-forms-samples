@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 		x:Class="UsingResxLocalization.FirstPageXaml"
@@ -12,7 +12,10 @@
 		<Button Text="{i18n:TranslateExtension Text=AddButton}" />
     <Image>
       <Image.Source>
-        <OnPlatform x:TypeArguments="ImageSource" iOS="flag.png" Android="flag.png" WinPhone="Assets/Images/flag.png" />
+        <OnPlatform x:TypeArguments="ImageSource">
+            <On Platform="iOS, Android" Value="flag.png" />
+            <On Platform="UWP" Value="Assets/Images/flag.png" />
+        </OnPlatform>
       </Image.Source>
     </Image>
 	</StackLayout>
