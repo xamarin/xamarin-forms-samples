@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:EffectsDemo" x:Class="EffectsDemo.HomePage">
 	<Grid Padding="0,20,0,0">
 		<Label Text="Effects Demo" FontAttributes="Bold" HorizontalOptions="Center" />
@@ -6,7 +6,11 @@
 			<Label.Effects>
 				<local:ShadowEffect Radius="5" DistanceX="5" DistanceY="5">
 					<local:ShadowEffect.Color>
-						<OnPlatform x:TypeArguments="Color" iOS="Black" Android="White" WinPhone="Red" />
+                        <OnPlatform x:TypeArguments="Color">
+                            <On Platform="iOS" Value="Black" />
+                            <On Platform="Android" Value="White" />
+                            <On Platform="UWP" Value="Red" />
+                        </OnPlatform>
 					</local:ShadowEffect.Color>
 				</local:ShadowEffect>
 			</Label.Effects>

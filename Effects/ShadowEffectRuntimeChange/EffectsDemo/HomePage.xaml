@@ -1,10 +1,14 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:EffectsDemo;assembly=EffectsDemo" x:Class="EffectsDemo.HomePage">
 	<Grid Padding="0,20,0,0">
 		<Label Text="Effects Demo" FontAttributes="Bold" HorizontalOptions="Center" />
 		<Label x:Name="label" Text="Label Shadow Effect" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" local:ShadowEffect.HasShadow="true" local:ShadowEffect.Radius="5" local:ShadowEffect.DistanceX="5" local:ShadowEffect.DistanceY="5">
 			<local:ShadowEffect.Color>
-				<OnPlatform x:TypeArguments="Color" iOS="Black" Android="White" WinPhone="Red" />
+                <OnPlatform x:TypeArguments="Color">
+                    <On Platform="iOS" Value="Black" />
+                    <On Platform="Android" Value="White" />
+                    <On Platform="UWP" Value="Red" />
+                </OnPlatform>
 			</local:ShadowEffect.Color>
 		</Label>
 		<Button Text="Change Shadow Color" Clicked="OnButtonClicked" VerticalOptions="EndAndExpand" />
