@@ -4,6 +4,7 @@ using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace TodoAzure.UWP
 {
@@ -92,6 +93,17 @@ namespace TodoAzure.UWP
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+
+        protected override void OnActivated(IActivatedEventArgs args)
+        {
+            base.OnActivated(args);
+
+            if (args.Kind == ActivationKind.Protocol)
+            {
+                var protocolArgs = args as ProtocolActivatedEventArgs;
+                TodoItemManager.DefaultManager.CurrentClient.ResumeWithURL(protocolArgs.Uri);
+            }
         }
     }
 }
