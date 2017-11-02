@@ -16,7 +16,7 @@ namespace TodoAzure
 
             // OnPlatform<T> doesn't currently support the "Windows" target platform, so we have this check here.
             if (manager.IsOfflineEnabled &&
-                (Device.OS == TargetPlatform.Windows || Device.OS == TargetPlatform.WinPhone))
+                (Device.RuntimePlatform == Device.UWP || Device.RuntimePlatform == Device.WinPhone))
             {
                 var syncButton = new Button
                 {
@@ -67,10 +67,10 @@ namespace TodoAzure
         public async void OnSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var todo = e.SelectedItem as TodoItem;
-            if (Device.OS != TargetPlatform.iOS && todo != null)
+            if (Device.RuntimePlatform != Device.iOS && todo != null)
             {
                 // Not iOS - the swipe-to-delete is discoverable there
-                if (Device.OS == TargetPlatform.Android)
+                if (Device.RuntimePlatform == Device.Android)
                 {
                     await DisplayAlert(todo.Name, "Press-and-hold to complete task " + todo.Name, "Got it!");
                 }
