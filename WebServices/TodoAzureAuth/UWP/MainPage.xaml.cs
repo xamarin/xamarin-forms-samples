@@ -1,9 +1,7 @@
 ﻿using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Threading.Tasks;
-using TodoAzure;
 using Windows.UI.Popups;
-using Windows.UI.Xaml.Navigation;
 
 namespace TodoAzure.UWP
 {
@@ -29,7 +27,7 @@ namespace TodoAzure.UWP
             {
                 if (user == null)
                 {
-                    user = await TodoItemManager.DefaultManager.CurrentClient.LoginAsync(MobileServiceAuthenticationProvider.Google);
+                    user = await TodoItemManager.DefaultManager.CurrentClient.LoginAsync(MobileServiceAuthenticationProvider.Google, Constants.URLScheme);
                     if (user != null)
                     {
                         var dialog = new MessageDialog(string.Format("You are now logged in - {0}", user.UserId), "Authentication");

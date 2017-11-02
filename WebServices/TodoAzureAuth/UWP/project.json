@@ -1,8 +1,6 @@
 ﻿{
   "dependencies": {
-    "Microsoft.Azure.Mobile.Client": "3.1.0",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-    "Newtonsoft.Json": "9.0.1",
+    "Microsoft.Azure.Mobile.Client": "4.0.2",
     "Xamarin.Forms": "2.4.0.282"
   },
   "frameworks": {
