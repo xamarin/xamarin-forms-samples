@@ -22,6 +22,18 @@ For information about how to Create an Azure Mobile App that can be consumed by 
 
 For information about how to configure the Azure Mobile App instance to manage the authentication process, see [Add authentication to your Xamarin.Forms app](https://azure.microsoft.com/en-gb/documentation/articles/app-service-mobile-xamarin-forms-get-started-users/) on the Azure website.
 
+Please ensure that the Azure Mobile App authentication options specifies a URL scheme.
+
+Sample Setup
+----------------
+
+In order to run this sample application the following steps must be carried out:
+
+1. Update Constants.cs, in the PCL project, to include the URL of the Azure Mobile App, and the URL scheme for the Xamarin.Forms app.
+1. In the iOS project, update Info.plist to include the URL scheme.
+1. In the Android project, update AndroidManifest.xml to include the URL scheme.
+1. In the UWP project, update Package.appxmanifest to include the URL scheme.
+
 Author
 ------
 
