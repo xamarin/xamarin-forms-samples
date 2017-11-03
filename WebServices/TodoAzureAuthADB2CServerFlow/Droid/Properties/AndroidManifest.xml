@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.xamarin.sample.TodoAzure">
-	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="21" />
+	<uses-sdk android:minSdkVersion="15" />
 	<application android:label="TodoAzure" android:icon="@drawable/icon">
+		<activity android:name="com.microsoft.windowsazure.mobileservices.authentication.RedirectUrlActivity" android:launchMode="singleTop" android:noHistory="true">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="INSERT_URL_SCHEME_HERE" android:host="easyauth.callback" />
+			</intent-filter>
+		</activity>
 	</application>
 </manifest>
