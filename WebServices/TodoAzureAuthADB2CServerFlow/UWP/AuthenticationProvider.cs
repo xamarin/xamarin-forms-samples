@@ -20,7 +20,7 @@ namespace TodoAzure.UWP
             {
                 if (user == null)
                 { 
-                    user = await TodoItemManager.DefaultManager.CurrentClient.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
+                    user = await TodoItemManager.DefaultManager.CurrentClient.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory, Constants.URLScheme);
                     if (user != null)
                     {
                         var dialog = new MessageDialog(string.Format("You are now logged in - {0}", user.UserId), "Authentication");
