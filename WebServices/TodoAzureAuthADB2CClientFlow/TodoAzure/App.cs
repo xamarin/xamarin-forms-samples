@@ -1,33 +1,36 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Microsoft.Identity.Client;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace TodoAzure
 {
-	public class App : Application
-	{
-		public static IAuthenticate AuthenticationProvider { get; private set; }
+    public class App : Application
+    {
+        public static IAuthenticate AuthenticationProvider { get; private set; }
 
-		public App()
-		{
-			AuthenticationProvider = new AuthenticationProvider();
-			MainPage = new NavigationPage(new LoginPage());
-		}
+        public static UIParent UiParent = null;
 
-		protected override void OnStart()
-		{
-			// Handle when your app starts
-		}
+        public App()
+        {
+            AuthenticationProvider = new AuthenticationProvider();
+            MainPage = new LoginPage();
+        }
 
-		protected override void OnSleep()
-		{
-			// Handle when your app sleeps
-		}
+        protected override void OnStart()
+        {
+            // Handle when your app starts
+        }
 
-		protected override void OnResume()
-		{
-			// Handle when your app resumes
-		}
-	}
+        protected override void OnSleep()
+        {
+            // Handle when your app sleeps
+        }
+
+        protected override void OnResume()
+        {
+            // Handle when your app resumes
+        }
+    }
 }
 
