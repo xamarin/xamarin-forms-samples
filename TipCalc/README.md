@@ -2,7 +2,7 @@ TipCalc
 =======
 
 TipCalc is based on an existing iOS and Android sample but has been completely rewritten for Xamarin.Forms
-using XAML and data-binding. This new version now builds for iOS, Android, and the Universal Windows Platform.
+using XAML and data-binding. This new version now builds for iOS, Android, the Universal Windows Platform, and Tizen.
 
 TipCalc lets you type in a food-and-drink subtotal
 and a post-tax total from your restaurant bill and then select a tip percentage. It applies the percentage
