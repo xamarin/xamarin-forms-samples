@@ -31,8 +31,8 @@ namespace ScaleAndRotate
 
 			// Set Bindings.
 			scaleSliderValue.BindingContext = scaleSlider;
-			scaleSliderValue.SetBinding (Label.TextProperty, 
-				new Binding ("Value", BindingMode.OneWay, 
+			scaleSliderValue.SetBinding (Label.TextProperty,
+				new Binding ("Value", BindingMode.OneWay,
 					null, null, "Scale = {0:F1}"));
 
 			scaleSlider.BindingContext = label;
@@ -57,11 +57,11 @@ namespace ScaleAndRotate
 			// Set bindings.
 			anchorxStepperValue.BindingContext = anchorxStepper;
 			anchorxStepperValue.SetBinding (Label.TextProperty,
-				new Binding ("Value", BindingMode.OneWay, 
+				new Binding ("Value", BindingMode.OneWay,
 					null, null, "AnchorX = {0:F1}"));
 
 			anchorxStepper.BindingContext = label;
-			anchorxStepper.SetBinding (Stepper.ValueProperty, 
+			anchorxStepper.SetBinding (Stepper.ValueProperty,
 				new Binding ("AnchorX", BindingMode.TwoWay));
 
 			// Label and Slider for AnchorY property.
@@ -82,11 +82,11 @@ namespace ScaleAndRotate
 			// Set bindings.
 			anchoryStepperValue.BindingContext = anchoryStepper;
 			anchoryStepperValue.SetBinding (Label.TextProperty,
-				new Binding ("Value", BindingMode.OneWay, 
+				new Binding ("Value", BindingMode.OneWay,
 					null, null, "AnchorY = {0:F1}"));
 
 			anchoryStepper.BindingContext = label;
-			anchoryStepper.SetBinding (Stepper.ValueProperty, 
+			anchoryStepper.SetBinding (Stepper.ValueProperty,
 				new Binding ("AnchorY", BindingMode.TwoWay));
 
 			// Assemble the page.
@@ -107,7 +107,7 @@ namespace ScaleAndRotate
 						Children = {
 							scaleSliderValue,
 							scaleSlider,
-							anchorxStepperValue, 
+							anchorxStepperValue,
 							anchorxStepper,
 							anchoryStepperValue,
 							anchoryStepper
