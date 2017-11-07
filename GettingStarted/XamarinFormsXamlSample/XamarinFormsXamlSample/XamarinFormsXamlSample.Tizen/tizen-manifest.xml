@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="XamarinFormsXamlSample.Tizen" version="1.0.7">
+	<profile name="common" />
+	<ui-application appid="org.tizen.example.XamarinFormsXamlSample.Tizen"
+					exec="XamarinFormsXamlSample.Tizen.dll"
+					type="dotnet"
+					multiple="false"
+					taskmanage="true"
+					launch_mode="single">
+	<icon>XamarinFormsXamlSample.Tizen.png</icon>
+	<label>XamarinFormsXamlSample.Tizen</label>
+	<metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
+	</ui-application>
+</manifest>
