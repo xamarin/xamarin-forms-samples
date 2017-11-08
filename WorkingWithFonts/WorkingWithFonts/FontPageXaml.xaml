@@ -10,9 +10,9 @@
 		<Label Text="Hello Forms with XAML">
 		    <Label.FontFamily>
 		        <OnPlatform x:TypeArguments="x:String">
-		            <OnPlatform.iOS>MarkerFelt-Thin</OnPlatform.iOS>
-		            <OnPlatform.Android>Lobster-Regular.ttf#Lobster-Regular</OnPlatform.Android>
-		            <OnPlatform.WinPhone>Assets/Fonts/Lobster-Regular.ttf#Lobster</OnPlatform.WinPhone>
+                    <On Platform="iOS" Value="MarkerFelt-Thin" />
+                    <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
+                    <On Platform="UWP, WinRT, WinPhone" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
 		        </OnPlatform>
 		    </Label.FontFamily>
 		</Label>
