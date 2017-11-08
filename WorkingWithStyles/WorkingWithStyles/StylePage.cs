@@ -8,7 +8,7 @@ namespace WorkingWithStyles
 		public StylePage ()
 		{
 			Content = new StackLayout {
-				Padding = new Thickness (0, Device.OnPlatform(20, 0, 0), 0, 0),
+				Padding = new Thickness(0, Device.RuntimePlatform == Device.iOS ? 20 : 0, 0, 0),
 				Children = {
 					new Label {
 						Text = "This uses TitleStyle",
@@ -55,11 +55,10 @@ namespace WorkingWithStyles
 					new Label {
 						Text = "This uses an implicit style from the Application ResourceDictionary",
 					},
-					// uses implicit style that applies to all BoxViews 
+					// uses implicit style that applies to all BoxViews
 					new BoxView ()
 				}
 			};
 		}
 	}
 }
-

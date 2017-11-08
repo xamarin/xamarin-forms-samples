@@ -3,7 +3,9 @@
 	<ContentPage.ToolbarItems>
 		<ToolbarItem Text="+" Clicked="OnAddItemClicked">
 			<ToolbarItem.Icon>
-				<OnPlatform x:TypeArguments="FileImageSource" Android="plus.png" WinPhone="plus.png" />
+				<OnPlatform x:TypeArguments="FileImageSource">
+        <On Platform="Android, UWP, WinRT, WinPhone" Value="plus.png" />
+    </OnPlatform>
 			</ToolbarItem.Icon>
 		</ToolbarItem>
 	</ContentPage.ToolbarItems>

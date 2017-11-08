@@ -4,11 +4,11 @@ using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
 // Map requires:
-//      - Xamarin.Forms.Maps and Xamarin.Forms.Maps.* assemblies, 
+//      - Xamarin.Forms.Maps and Xamarin.Forms.Maps.* assemblies,
 //      - a platform-specific call to Xamarin.FormsMaps.Init() in:
 //              - iOS: AppDelegate.cs
 //              - Android: MainActivity.cs
-//              - WP: MainPage.xaml.cs 
+//              - WP: MainPage.xaml.cs
 //      - platform-specific permission:
 //              - iOS: None
 //              - Android: API key!
@@ -30,7 +30,7 @@ namespace FormsGallery
 
             View view;
 
-            if (Device.OS == TargetPlatform.Android)
+            if (Device.RuntimePlatform == Device.Android)
             {
                 view = new Label
                 {
@@ -58,7 +58,7 @@ namespace FormsGallery
             // Build the page.
             this.Content = new StackLayout
             {
-                Children = 
+                Children =
                 {
                     header,
                     view

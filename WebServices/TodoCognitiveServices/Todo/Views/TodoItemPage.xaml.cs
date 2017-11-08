@@ -34,7 +34,7 @@ namespace Todo
 		{
 			InitializeComponent();
 
-			bingSpeechService = new BingSpeechService(new AuthenticationService(Constants.BingSpeechApiKey), Device.OS.ToString());
+			bingSpeechService = new BingSpeechService(new AuthenticationService(Constants.BingSpeechApiKey), Device.RuntimePlatform);
 			bingSpellCheckService = new BingSpellCheckService();
 			textTranslationService = new TextTranslationService(new AuthenticationService(Constants.TextTranslatorApiKey));
 		}

@@ -30,7 +30,7 @@ namespace ImageWrapLayout
 			{
 				var image = new Image
 				{
-					Source = ImageSource.FromUri(new Uri(photo + string.Format("?width={0}&height={0}&mode=max", Device.OnPlatform(240, 240, 120))))
+					Source = ImageSource.FromUri(new Uri(photo + string.Format("?width={0}&height={0}&mode=max", Device.RuntimePlatform == Device.UWP ? 120 : 240)))
 				};
 				wrapLayout.Children.Add(image);
 			}

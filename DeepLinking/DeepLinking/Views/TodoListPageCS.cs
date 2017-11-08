@@ -13,7 +13,7 @@ namespace DeepLinking
 
 			var toolbarItem = new ToolbarItem { Text = "+" };
 			toolbarItem.Clicked += OnAddItemClicked;
-			toolbarItem.Icon = Device.OnPlatform(null, "plus.png", null);
+			toolbarItem.Icon = Device.RuntimePlatform == Device.Android ? "plus.png" : null;
 			ToolbarItems.Add(toolbarItem);
 
 			var dataTemplate = new DataTemplate(() =>

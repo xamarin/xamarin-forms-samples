@@ -40,11 +40,11 @@ namespace EmployeeDirectoryUI.CSharp
 				HorizontalOptions = LayoutOptions.CenterAndExpand
 			};
 
-			if (Device.OS == TargetPlatform.iOS) {
+			if (Device.RuntimePlatform == Device.iOS) {
 				grid.Children.Add (loginButton, 0, 0);
 				grid.Children.Add (helpButton, 1, 0);
 
-				Content = new StackLayout () { 
+				Content = new StackLayout () {
 					VerticalOptions = LayoutOptions.StartAndExpand,
 					Padding = new Thickness (30),
 					Children = { logo, usernameEntry, passwordEntry, grid }
@@ -92,4 +92,3 @@ namespace EmployeeDirectoryUI.CSharp
 		}
 	}
 }
-

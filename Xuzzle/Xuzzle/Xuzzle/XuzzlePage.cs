@@ -95,8 +95,7 @@ namespace Xuzzle
 			stackLayout.SizeChanged += OnStackSizeChanged;
 
 			// And set that to the content of the page.
-			this.Padding =
-                new Thickness (0, Device.OnPlatform (20, 0, 0), 0, 0);
+			this.Padding = new Thickness(0, Device.RuntimePlatform == Device.iOS ? 20 : 0, 0, 0);
 			this.Content = stackLayout;
 		}
 

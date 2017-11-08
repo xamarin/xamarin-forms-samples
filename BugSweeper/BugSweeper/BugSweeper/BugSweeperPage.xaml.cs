@@ -111,7 +111,7 @@ namespace BugSweeper
             congratulationsText.Scale = 0;
             congratulationsText.IsVisible = true;
 
-            // Because IsVisible has been false, the text might not have a size yet, 
+            // Because IsVisible has been false, the text might not have a size yet,
             //  in which case Measure will return a size.
             double congratulationsTextWidth = congratulationsText.Measure(Double.PositiveInfinity, Double.PositiveInfinity).Request.Width;
 
@@ -164,7 +164,7 @@ namespace BugSweeper
         {
 #if FIX_WINPHONE_BUTTON
 
-            if (Device.OS == TargetPlatform.WinPhone && !((Button)sender).IsEnabled)
+            if (Device.RuntimePlatform == Device.WinPhone && !((Button)sender).IsEnabled)
                 return;
 
 #endif

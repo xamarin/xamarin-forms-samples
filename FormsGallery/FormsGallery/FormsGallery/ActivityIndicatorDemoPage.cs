@@ -17,7 +17,7 @@ namespace FormsGallery
 
             ActivityIndicator activityIndicator = new ActivityIndicator
             {
-                Color = Device.OnPlatform(Color.Black, Color.Default, Color.Default),
+                Color = Device.RuntimePlatform == Device.iOS ? Color.Black : Color.Default,
                 IsRunning = true,
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
@@ -25,7 +25,7 @@ namespace FormsGallery
             // Build the page.
             this.Content = new StackLayout
             {
-                Children = 
+                Children =
                 {
                     header,
                     activityIndicator

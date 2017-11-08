@@ -19,7 +19,7 @@ namespace MobileCRM.Shared.Pages
 
         public ListView Menu { get; set; }
 
-        public MenuPage ()
+        public MenuPage()
         {
             OptionItems.Add(new LeadsOptionItem());
             OptionItems.Add(new ContactsOptionItem());
@@ -30,23 +30,32 @@ namespace MobileCRM.Shared.Pages
 
             var layout = new StackLayout { Spacing = 0, VerticalOptions = LayoutOptions.FillAndExpand };
 
-            var label = new ContentView {
+            var label = new ContentView
+            {
                 Padding = new Thickness(10, 36, 0, 5),
-                Content = new Xamarin.Forms.Label {
+                Content = new Xamarin.Forms.Label
+                {
                     TextColor = Color.FromHex("AAAAAA"),
-                    Text = "MENU", 
+                    Text = "MENU",
                 }
             };
 
-			Label lbl = (Xamarin.Forms.Label)label.Content;
-			Device.OnPlatform (
-				iOS: () => lbl.FontSize = Device.GetNamedSize (NamedSize.Micro, lbl),
-				Android: () => lbl.FontSize = Device.GetNamedSize (NamedSize.Medium, lbl)
-			);
+            Label lbl = (Xamarin.Forms.Label)label.Content;
+
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                    lbl.FontSize = Device.GetNamedSize(NamedSize.Micro, lbl);
+                    break;
+                case Device.Android:
+                    lbl.FontSize = Device.GetNamedSize(NamedSize.Medium, lbl);
+                    break;
+            }
 
             layout.Children.Add(label);
 
-            Menu = new ListView {
+            Menu = new ListView
+            {
                 ItemsSource = OptionItems,
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 BackgroundColor = Color.Transparent,

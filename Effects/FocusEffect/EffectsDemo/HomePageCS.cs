@@ -10,11 +10,11 @@ namespace EffectsDemo
 				Text = "Effect attached to an Entry",
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
-				WidthRequest = Device.OnPlatform<double> (220, 220, 250)
+				WidthRequest = Device.RuntimePlatform == Device.UWP ? 250 : 220
 			};
 			entry.Effects.Add (Effect.Resolve ("Xamarin.FocusEffect"));
 
-			Content = new StackLayout { 
+			Content = new StackLayout {
 				Padding = new Thickness (0, 20, 0, 0),
 				Children = {
 					new Label {

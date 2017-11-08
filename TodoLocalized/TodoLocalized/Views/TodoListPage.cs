@@ -33,7 +33,7 @@ namespace TodoLocalized
 			};
 
 			var layout = new StackLayout();
-			if (Device.OS == TargetPlatform.WinPhone) { // WinPhone doesn't have the title showing
+			if (Device.RuntimePlatform == Device.WinPhone) { // WinPhone doesn't have the title showing
 				layout.Children.Add (new Label {
 					Text = "Todo",
 					FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label))
@@ -80,4 +80,3 @@ namespace TodoLocalized
 		}
 	}
 }
-

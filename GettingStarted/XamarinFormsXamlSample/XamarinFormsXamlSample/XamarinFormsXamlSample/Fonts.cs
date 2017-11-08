@@ -15,31 +15,34 @@ namespace XamarinFormsSample
         /// </summary>
         static Fonts()
         {
-            Device.OnPlatform(
-                iOS: () =>{
-                         LargeTitle = Font.OfSize("HelveticaNeue-UltraLight", 42);
-                         Title = Font.OfSize("HelveticaNeue-Light", 30);
-                         SmallTitle = Font.OfSize("HelveticaNeue-Light", 22);
-                         Twitter = Font.OfSize("HelveticaNeue-Light", NamedSize.Small);
-                     },
-                Android: () =>{
-                             LargeTitle = Font.SystemFontOfSize(42);
-                             Title = Font.SystemFontOfSize(30);
-                             SmallTitle = Font.SystemFontOfSize(18);
-                             Twitter = Font.SystemFontOfSize(14);
-                         },
-                WinPhone: () =>{
-                              LargeTitle = Font.SystemFontOfSize(60);
-                              Title = Font.SystemFontOfSize(46);
-                              SmallTitle = Font.SystemFontOfSize(30);
-                              Twitter = Font.SystemFontOfSize(18);
-                          }
-                );
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                    LargeTitle = Font.OfSize("HelveticaNeue-UltraLight", 42);
+                    Title = Font.OfSize("HelveticaNeue-Light", 30);
+                    SmallTitle = Font.OfSize("HelveticaNeue-Light", 22);
+                    Twitter = Font.OfSize("HelveticaNeue-Light", NamedSize.Small);
+                    break;
+                case Device.Android:
+                    LargeTitle = Font.SystemFontOfSize(42);
+                    Title = Font.SystemFontOfSize(30);
+                    SmallTitle = Font.SystemFontOfSize(18);
+                    Twitter = Font.SystemFontOfSize(14);
+                    break;
+                case Device.UWP:
+                case Device.WinRT:
+                case Device.WinPhone:
+                    LargeTitle = Font.SystemFontOfSize(60);
+                    Title = Font.SystemFontOfSize(46);
+                    SmallTitle = Font.SystemFontOfSize(30);
+                    Twitter = Font.SystemFontOfSize(18);
+                    break;
+            }
         }
 
         static int PlatformSize(int size)
         {
-            return Device.OnPlatform(size, size, (int)(size * 1.3));
+            return Device.RuntimePlatform == Device.UWP ? (int)(size * 1.3) : size;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Todo
 			var toolbarItem = new ToolbarItem
 			{
 				Text = "+",
-				Icon = Device.OnPlatform(null, "plus.png", "plus.png")
+				Icon = Device.RuntimePlatform == Device.iOS ? null : "plus.png"
 			};
 			toolbarItem.Clicked += async (sender, e) =>
 			{

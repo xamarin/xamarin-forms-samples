@@ -7,7 +7,7 @@ namespace WorkingWithListviewNative
 {
 	/// <summary>
 	/// This page uses built-in Xamarin.Forms controls to display a fast-scrolling list.
-	/// 
+	///
 	/// It uses the built-in <c>TextCell</c> class which does not require special 'layout'
 	/// and is therefore faster than building a custom ViewCell in Xamarin.Forms.
 	/// </summary>
@@ -31,12 +31,12 @@ namespace WorkingWithListviewNative
 				await Navigation.PushModalAsync (new DetailPage (e.SelectedItem));
 			};
 
-			Content = new StackLayout { 
-				Padding = new Thickness (0, Device.OnPlatform (20, 0, 0), 0, 0),
+			Content = new StackLayout {
+				Padding = new Thickness(0, Device.RuntimePlatform == Device.iOS ? 20 : 0, 0, 0),
 				Children = {
 					new Label {
 						HorizontalTextAlignment = TextAlignment.Center,
-						Text = "Xamarin.Forms native Cell" 
+						Text = "Xamarin.Forms native Cell"
 					},
 					listView
 				}

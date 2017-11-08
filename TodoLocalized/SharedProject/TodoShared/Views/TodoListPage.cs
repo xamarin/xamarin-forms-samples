@@ -30,7 +30,7 @@ namespace TodoLocalized
 			};
 
 			var layout = new StackLayout ();
-			if (Device.OS == TargetPlatform.WinPhone) { // WinPhone doesn't have the title showing
+			if (Device.RuntimePlatform == Device.WinPhone) { // WinPhone doesn't have the title showing
 				layout.Children.Add (new Label {
 					Text = "Todo",
 					FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label)),
@@ -43,7 +43,7 @@ namespace TodoLocalized
 
 
 			ToolbarItem tbi = null;
-			if (Device.OS == TargetPlatform.iOS) {
+			if (Device.RuntimePlatform == Device.iOS) {
 				tbi = new ToolbarItem ("+", null, () => {
 					var todoItem = new TodoItem ();
 					var todoPage = new TodoItemPage ();
@@ -51,7 +51,7 @@ namespace TodoLocalized
 					Navigation.PushAsync (todoPage);
 				}, 0, 0);
 			}
-			if (Device.OS == TargetPlatform.Android) { // BUG: Android doesn't support the icon being null
+			if (Device.RuntimePlatform == Device.Android) { // BUG: Android doesn't support the icon being null
 				tbi = new ToolbarItem ("+", "plus", () => {
 					var todoItem = new TodoItem ();
 					var todoPage = new TodoItemPage ();
@@ -60,7 +60,7 @@ namespace TodoLocalized
 				}, 0, 0);
 			}
 
-			if (Device.OS == TargetPlatform.WinPhone) {
+			if (Device.RuntimePlatform == Device.WinPhone) {
 				tbi = new ToolbarItem ("Add", "add.png", () => {
 					var todoItem = new TodoItem ();
 					var todoPage = new TodoItemPage ();
@@ -71,7 +71,7 @@ namespace TodoLocalized
 
 			ToolbarItems.Add (tbi);
 
-			if (Device.OS == TargetPlatform.iOS) {
+			if (Device.RuntimePlatform == Device.iOS) {
 				var tbi2 = new ToolbarItem ("?", null, () => {
 					var todos = App.Database.GetItemsNotDone ();
 					var tospeak = "";
@@ -93,4 +93,3 @@ namespace TodoLocalized
 		}
 	}
 }
-
