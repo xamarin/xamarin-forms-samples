@@ -10,20 +10,16 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "Image",
-				FontSize = 50,
-				FontAttributes = FontAttributes.Bold,
+                FontSize = 50,
+                FontAttributes = FontAttributes.Bold,
                 HorizontalOptions = LayoutOptions.Center
             };
 
             Image image = new Image
             {
                 // Some differences with loading images in initial release.
-                Source =
-                    Device.OnPlatform(ImageSource.FromUri(new Uri("https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png")),
-                                      ImageSource.FromFile("ide_xamarin_studio.png"),
-                                      ImageSource.FromUri(new Uri("https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png"))),
-
-
+                Source = Device.RuntimePlatform == Device.iOS ? ImageSource.FromUri(new Uri("https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png")) :
+                               Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("ide_xamarin_studio.png") : ImageSource.FromUri(new Uri("https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png")),
 
                 //Source = new UriImageSource
                 //{
@@ -35,7 +31,7 @@ namespace FormsGallery
             // Build the page.
             this.Content = new StackLayout
             {
-                Children = 
+                Children =
                 {
                     header,
                     image

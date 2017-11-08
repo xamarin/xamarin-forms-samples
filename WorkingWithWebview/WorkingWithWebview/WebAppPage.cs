@@ -15,7 +15,7 @@ namespace WorkingWithWebview
 				Text = "Open location using built-in Web Browser app"
 			};
 			openUrl.Clicked += (sender, e) => {
-				if (Device.OS != TargetPlatform.WinPhone){
+				if (Device.RuntimePlatform != Device.WinPhone){
 					Device.OpenUri(new Uri("http://xamarin.com/evolve"));
 				} else {
 					DisplayAlert("To Do","Not implemented yet","OK");
@@ -27,7 +27,7 @@ namespace WorkingWithWebview
 			};
 			makeCall.Clicked += (sender, e) => {
 
-				if (Device.OS != TargetPlatform.WinPhone){
+				if (Device.RuntimePlatform != Device.WinPhone){
 					Device.OpenUri(new Uri("tel:1855XAMARIN"));
 				} else {
 					DisplayAlert("To Do","Not implemented yet","OK");
@@ -46,4 +46,3 @@ namespace WorkingWithWebview
 		}
 	}
 }
-

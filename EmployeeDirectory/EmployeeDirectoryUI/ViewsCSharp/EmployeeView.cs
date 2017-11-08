@@ -28,10 +28,10 @@ namespace EmployeeDirectoryUI.CSharp
 				HorizontalTextAlignment = TextAlignment.Center,
 				FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label)),
 				FontAttributes = FontAttributes.Bold,
-				IsVisible = Device.OS == TargetPlatform.WinPhone
+				IsVisible = Device.RuntimePlatform == Device.WinPhone
 			};
 
-			var optionsView = new StackLayout { 
+			var optionsView = new StackLayout {
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				Orientation = StackOrientation.Vertical,
 				Children = { favoriteLabel, favoriteSwitch }

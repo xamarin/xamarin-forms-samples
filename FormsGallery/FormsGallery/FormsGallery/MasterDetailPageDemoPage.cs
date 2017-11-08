@@ -44,7 +44,7 @@ namespace FormsGallery
 				Title = "Color List",       // Title required!
 				Content = new StackLayout {
 					Children = {
-						header, 
+						header,
 						listView
 					}
 				}
@@ -55,7 +55,7 @@ namespace FormsGallery
 			this.Detail = detailPage;
 
 			// For Android & Windows Phone, provide a way to get back to the master page.
-			if (Device.OS != TargetPlatform.iOS) {
+			if (Device.RuntimePlatform != Device.iOS) {
 				TapGestureRecognizer tap = new TapGestureRecognizer ();
 				tap.Tapped += (sender, args) => {
 					this.IsPresented = true;

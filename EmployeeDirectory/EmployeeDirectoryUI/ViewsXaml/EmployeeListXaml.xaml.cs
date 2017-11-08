@@ -61,12 +61,12 @@ namespace EmployeeDirectoryUI.Xaml
 
 		private void SetToolbarItems(bool show)
 		{
-			if (Device.OS != TargetPlatform.WinPhone)
+			if (Device.RuntimePlatform != Device.WinPhone)
 				return;
 
 			if (show) {
 				ToolbarItems.Add (toolbarItem);
-			} else if (Device.OS == TargetPlatform.WinPhone) {
+			} else if (Device.RuntimePlatform == Device.WinPhone) {
 				ToolbarItems.Remove (toolbarItem);
 			}
 		}

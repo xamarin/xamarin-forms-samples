@@ -19,7 +19,7 @@ namespace EmployeeDirectoryUI.Xaml
 		{
 			base.OnAppearing ();
 			favoriteSwitch.Toggled += OnFavoriteClicked;
-			PersonName.IsVisible = Device.OS == TargetPlatform.WinPhone;
+			PersonName.IsVisible = Device.RuntimePlatform == Device.WinPhone;
 		}
 
 		protected override void OnBindingContextChanged ()

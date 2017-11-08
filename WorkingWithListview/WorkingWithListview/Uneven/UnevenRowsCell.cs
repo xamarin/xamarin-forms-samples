@@ -30,7 +30,7 @@ namespace WorkingWithListview
 //		{
 //			base.OnBindingContextChanged ();
 //
-//			if (Device.OS == TargetPlatform.iOS) {
+//			if (Device.RuntimePlatform == Device.iOS) {
 //				var text = (string)BindingContext;
 //
 //				var len = text.Length;
@@ -47,4 +47,3 @@ namespace WorkingWithListview
 //		}
 	}
 }
-

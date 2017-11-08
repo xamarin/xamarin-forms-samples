@@ -69,7 +69,7 @@ namespace EmployeeDirectoryUI.CSharp
 
 		private void SetToolbarItems(bool show)
 		{
-			if (Device.OS != TargetPlatform.WinPhone)
+			if (Device.RuntimePlatform != Device.WinPhone)
 				return;
 
 			if (show) {

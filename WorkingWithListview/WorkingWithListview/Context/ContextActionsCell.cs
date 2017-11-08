@@ -14,7 +14,7 @@ namespace WorkingWithListview
 		{
 			var label1 = new Label { Text = "Label 1", FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label)), FontAttributes = FontAttributes.Bold };
 			label1.SetBinding(Label.TextProperty, new Binding("."));
-			var hint = Device.OnPlatform ("Tip: swipe left for context action", "Tip: long press for context action", "Tip: long press for context action");
+			var hint = Device.RuntimePlatform == Device.iOS ? "Tip: swipe left for context action" : "Tip: long press for context action";
 			var label2 = new Label { Text = hint, FontSize=Device.GetNamedSize(NamedSize.Micro, typeof(Label)) };
 
 			//
@@ -56,5 +56,3 @@ namespace WorkingWithListview
 		}
 	}
 }
-
-

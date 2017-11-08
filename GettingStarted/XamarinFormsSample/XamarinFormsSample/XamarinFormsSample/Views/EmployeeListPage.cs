@@ -36,7 +36,7 @@ namespace XamarinFormsSample.Views
             }
 
             // There is a bug with Android which prevents the use of null for the iconName.
-            string iconName = Device.OnPlatform(null, "ic_action_content_new.png", null);
+            string iconName = Device.RuntimePlatform == Device.Android ? "ic_action_content_new.png" : null;
             _loginToolbarButton = new ToolbarItem("Login", iconName, async () => {
                                                                          ToolbarItems.Remove(_loginToolbarButton);
                                                                          await  Navigation.PushAsync(new LoginPage());
@@ -85,7 +85,7 @@ namespace XamarinFormsSample.Views
 
         protected override void OnAppearing()
         {
-            // This method is invoked by Xamarin.Forms at some point when the 
+            // This method is invoked by Xamarin.Forms at some point when the
             // page is being displayed.
             base.OnAppearing();
             LoadEmployeesForDisplay();
@@ -93,7 +93,7 @@ namespace XamarinFormsSample.Views
 
             if (App.IsLoggedIn)
             {
-                // Don't have to do anything. 
+                // Don't have to do anything.
             }
             else
             {

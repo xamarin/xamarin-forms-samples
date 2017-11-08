@@ -51,7 +51,7 @@ namespace ClassHierarchy
                     }
 
                     // If there's no base type, add it.
-                    if (!hasBaseType && 
+                    if (!hasBaseType &&
                         childType.BaseType != typeof(Object))
                     {
                         classList.Add(
@@ -61,7 +61,7 @@ namespace ClassHierarchy
                 index++;
             }
             while (index < classList.Count);
-            
+
             // Now sort the list.
             classList.Sort((t1, t2) =>
             {
@@ -69,7 +69,7 @@ namespace ClassHierarchy
             });
 
             // Start the display with System.Object.
-            ClassAndSubclasses rootClass = 
+            ClassAndSubclasses rootClass =
                 new ClassAndSubclasses(typeof(Object));
 
             // Recursive method to build the hierarchy tree.
@@ -85,22 +85,22 @@ namespace ClassHierarchy
             AddItemToStackLayout(rootClass, 0);
 
             // Put the StackLayout in a ScrollView.
-            this.Padding = 
-                new Thickness(5, Device.OnPlatform(20, 0, 0), 0, 0);
+            this.Padding =
+                new Thickness(0, Device.RuntimePlatform == Device.iOS ? 20 : 0, 0, 0);
             this.Content = new ScrollView
             {
                 Content = stackLayout
             };
         }
 
-        void AddChildrenToParent(ClassAndSubclasses parentClass, 
+        void AddChildrenToParent(ClassAndSubclasses parentClass,
                                  List<TypeInformation> classList)
         {
             foreach (TypeInformation typeInformation in classList)
             {
                 if (typeInformation.IsDerivedDirectlyFrom(parentClass.Type))
                 {
-                    ClassAndSubclasses subClass = 
+                    ClassAndSubclasses subClass =
                         new ClassAndSubclasses(typeInformation.Type);
                     parentClass.Subclasses.Add(subClass);
                     AddChildrenToParent(subClass, classList);
@@ -108,7 +108,7 @@ namespace ClassHierarchy
             }
         }
 
-        void AddItemToStackLayout(ClassAndSubclasses parentClass, 
+        void AddItemToStackLayout(ClassAndSubclasses parentClass,
                                   int level)
         {
             // If assembly is not Xamarin.Forms, display full name.
@@ -139,7 +139,7 @@ namespace ClassHierarchy
             // Create Label and add to StackLayout
             Label label = new Label
             {
-                Text = String.Format("{0}{1}", new string(' ', 4 * level), 
+                Text = String.Format("{0}{1}", new string(' ', 4 * level),
                                                 name),
                 TextColor = parentClass.Type.GetTypeInfo().IsAbstract ?
                                 Color.Accent : Color.Default
@@ -147,7 +147,7 @@ namespace ClassHierarchy
 
             stackLayout.Children.Add(label);
 
-            // Now display nested types. 
+            // Now display nested types.
             foreach (ClassAndSubclasses subclass in parentClass.Subclasses)
                 AddItemToStackLayout(subclass, level + 1);
         }

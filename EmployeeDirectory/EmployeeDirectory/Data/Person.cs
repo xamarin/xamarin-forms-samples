@@ -82,7 +82,7 @@ namespace EmployeeDirectory.Data
 		string email;
 
 		[Property (Group = "Contact", Ldap = "mail")]
-		public string Email { 
+		public string Email {
 			get {
 				return email;
 			}
@@ -169,7 +169,7 @@ namespace EmployeeDirectory.Data
 				return localImagePath;
 			}
 
-			set { 
+			set {
 				if (string.IsNullOrEmpty (value)) {
 					value = "Placeholder.jpg";
 				} else {
@@ -179,12 +179,9 @@ namespace EmployeeDirectory.Data
 		}
 
 		public ImageSource Photo {
-			get {
-				return Device.OnPlatform (
-					FileImageSource.FromUri (GravatarUrl),
-					FileImageSource.FromFile (LocalImagePath),
-					FileImageSource.FromUri (GravatarUrl)
-				);
+			get
+			{
+				return Device.RuntimePlatform == Device.Android ? FileImageSource.FromFile(LocalImagePath) : FileImageSource.FromUri(GravatarUrl);
 			}
 		}
 
@@ -289,4 +286,3 @@ namespace EmployeeDirectory.Data
 		}
 	}
 }
-

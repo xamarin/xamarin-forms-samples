@@ -15,17 +15,20 @@ namespace XamarinFormsSample
 
         static Colours()
         {
-            Device.OnPlatform(
-                Android: () =>{
-                             PositiveBalance = PositiveBalance.AddLuminosity(0.3);
-                             NegativeBalance = NegativeBalance.AddLuminosity(0.3);
-                             SubTitle = Color.FromRgb(115, 129, 130);
-                         },
-                WinPhone: () =>{
-                              PositiveBalance = PositiveBalance.AddLuminosity(0.3);
-                              NegativeBalance = NegativeBalance.AddLuminosity(0.3);
-                          }
-                );
+            switch (Device.RuntimePlatform)
+            {
+                case Device.Android:
+                    PositiveBalance = PositiveBalance.AddLuminosity(0.3);
+                    NegativeBalance = NegativeBalance.AddLuminosity(0.3);
+                    SubTitle = Color.FromRgb(115, 129, 130);
+                    break;
+                case Device.UWP:
+                case Device.WinRT:
+                case Device.WinPhone:
+                    PositiveBalance = PositiveBalance.AddLuminosity(0.3);
+                    NegativeBalance = NegativeBalance.AddLuminosity(0.3);
+                    break;
+            }
         }
     }
 }

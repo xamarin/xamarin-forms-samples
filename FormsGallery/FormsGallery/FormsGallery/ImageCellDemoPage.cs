@@ -10,8 +10,8 @@ namespace FormsGallery
             Label header = new Label
             {
                 Text = "ImageCell",
-				FontSize = 50,
-				FontAttributes = FontAttributes.Bold,
+                FontSize = 50,
+                FontAttributes = FontAttributes.Bold,
                 HorizontalOptions = LayoutOptions.Center
             };
 
@@ -25,10 +25,8 @@ namespace FormsGallery
                         new ImageCell
                         {
                             // Some differences with loading images in initial release.
-                            ImageSource = 
-                                Device.OnPlatform(ImageSource.FromUri(new Uri("https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png")),
-                                                  ImageSource.FromFile("ide_xamarin_studio.png"),
-                                                  ImageSource.FromFile("Images/ide-xamarin-studio.png")),
+                            ImageSource = Device.RuntimePlatform == Device.iOS ? ImageSource.FromUri(new Uri("https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png")) :
+                                          Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("ide_xamarin_studio.png") : ImageSource.FromFile("Images/ide-xamarin-studio.png"),
                             Text = "This is an ImageCell",
                             Detail = "This is some detail text",
                         }
@@ -39,7 +37,7 @@ namespace FormsGallery
             // Build the page.
             this.Content = new StackLayout
             {
-                Children = 
+                Children =
                 {
                     header,
                     tableView

@@ -8,7 +8,7 @@ namespace WorkingWithListviewNative
 	{
 		public DetailPage (object detail)
 		{
-			var l = new Label { Text = "Xamarin.Forms Detail Page" }; 
+			var l = new Label { Text = "Xamarin.Forms Detail Page" };
 
 			var t = new Label ();
 
@@ -21,8 +21,8 @@ namespace WorkingWithListviewNative
 			var b = new Button { Text = "Dismiss" };
 			b.Clicked += (sender, e) => Navigation.PopModalAsync();
 
-			Content = new StackLayout { 
-				Padding = new Thickness (0, Device.OnPlatform(20,0,0), 0, 0),
+			Content = new StackLayout {
+				Padding = new Thickness(0, Device.RuntimePlatform == Device.iOS ? 20 : 0, 0, 0),
 				HorizontalOptions = LayoutOptions.Center,
 				VerticalOptions =  LayoutOptions.Center,
 				Children = {
@@ -34,5 +34,3 @@ namespace WorkingWithListviewNative
 		}
 	}
 }
-
-
