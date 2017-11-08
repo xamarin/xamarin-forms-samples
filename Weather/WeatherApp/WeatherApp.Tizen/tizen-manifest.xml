@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="WeatherApp.Tizen" version="1.0.8">
+	<profile name="common" />
+	<ui-application appid="org.tizen.example.WeatherApp.Tizen"
+					exec="WeatherApp.Tizen.dll"
+					type="dotnet"
+					multiple="false"
+					taskmanage="true"
+					launch_mode="single">
+	<icon>WeatherApp.Tizen.png</icon>
+	<label>WeatherApp.Tizen</label>
+	<metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
+	</ui-application>
+	<privileges>
+		<privilege>http://tizen.org/privilege/haptic</privilege>
+		<privilege>http://tizen.org/privilege/internet</privilege>
+	</privileges>
+</manifest>
