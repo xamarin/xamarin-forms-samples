@@ -4,7 +4,7 @@
 	<IsFullApplication>false</IsFullApplication>
 	<Level>Advanced</Level>
 	<Tags>Behaviors, Xamarin.Forms</Tags>
-	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<SupportedPlatforms>iOS, Android, Windows, Tizen</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
 	<Brief>In the context of commanding, behaviors are a useful approach for connecting a control to a command. In addition, they can also be used to associate commands with controls that were not designed to interact with commands. This sample demonstrates using a behavior to invoke a command when an event fires.</Brief>
