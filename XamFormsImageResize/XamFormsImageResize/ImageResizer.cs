@@ -12,11 +12,29 @@ using CoreGraphics;
 using Android.Graphics;
 #endif
 
+#if WINDOWS_PHONE
+using Microsoft.Phone;
+using System.Windows.Media.Imaging;
+#endif
+
+#if WINDOWS_PHONE_APP
+using Windows.Storage.Streams;
+using Windows.Graphics.Imaging;
+using System.Runtime.InteropServices.WindowsRuntime;
+#endif
+
 #if WINDOWS_UWP
 using System.Threading.Tasks;
 using Windows.Storage.Streams;
 using Windows.Graphics.Imaging;
 using System.Runtime.InteropServices.WindowsRuntime;
+#endif
+
+#if __TIZEN__
+using System.Collections.Generic;
+using System.Linq;
+using Tizen.Multimedia;
+using Tizen.Multimedia.Util;
 #endif
 
 namespace XamFormsImageResize
@@ -33,10 +51,19 @@ namespace XamFormsImageResize
             return ResizeImageIOS(imageData, width, height);
 #endif
 #if __ANDROID__
-			return ResizeImageAndroid ( imageData, width, height );
+            return ResizeImageAndroid ( imageData, width, height );
+#endif
+#if WINDOWS_PHONE
+            return ResizeImageWinPhone ( imageData, width, height );
+#endif
+#if WINDOWS_PHONE_APP
+            return await ResizeImageWindows(imageData, width, height);
 #endif
 #if WINDOWS_UWP
             return await ResizeImageWindows(imageData, width, height);
+#endif
+#if __TIZEN__
+            return await ResizeImageTizen(imageData, width, height);
 #endif
         }
 
@@ -50,7 +77,7 @@ namespace XamFormsImageResize
             //create a 24bit RGB image
             using (CGBitmapContext context = new CGBitmapContext(IntPtr.Zero,
                                                  (int)width, (int)height, 8,
-                                                 4 * (int)width, CGColorSpace.CreateDeviceRGB(),
+                                                 (int)(4 * width), CGColorSpace.CreateDeviceRGB(),
                                                  CGImageAlphaInfo.PremultipliedFirst))
             {
 
@@ -88,19 +115,68 @@ namespace XamFormsImageResize
 #endif
 
 #if __ANDROID__
-		
-		public static byte[] ResizeImageAndroid (byte[] imageData, float width, float height)
-		{
-			// Load the bitmap
-			Bitmap originalImage = BitmapFactory.DecodeByteArray (imageData, 0, imageData.Length);
-			Bitmap resizedImage = Bitmap.CreateScaledBitmap(originalImage, (int)width, (int)height, false);
 
-			using (MemoryStream ms = new MemoryStream())
-			{
-				resizedImage.Compress (Bitmap.CompressFormat.Jpeg, 100, ms);
-				return ms.ToArray ();
-			}
-		}
+        public static byte[] ResizeImageAndroid (byte[] imageData, float width, float height)
+        {
+            // Load the bitmap
+            Bitmap originalImage = BitmapFactory.DecodeByteArray (imageData, 0, imageData.Length);
+            Bitmap resizedImage = Bitmap.CreateScaledBitmap(originalImage, (int)width, (int)height, false);
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                resizedImage.Compress (Bitmap.CompressFormat.Jpeg, 100, ms);
+                return ms.ToArray ();
+            }
+        }
+
+#endif
+
+#if WINDOWS_PHONE
+
+        public static byte[] ResizeImageWinPhone (byte[] imageData, float width, float height)
+        {
+            byte[] resizedData;
+
+            using (MemoryStream streamIn = new MemoryStream (imageData))
+            {
+                WriteableBitmap bitmap = PictureDecoder.DecodeJpeg (streamIn, (int)width, (int)height);
+
+                using (MemoryStream streamOut = new MemoryStream ())
+                {
+                    bitmap.SaveJpeg(streamOut, (int)width, (int)height, 0, 100);
+                    resizedData = streamOut.ToArray();
+                }
+            }
+            return resizedData;
+        }
+
+#endif
+
+#if WINDOWS_PHONE_APP
+
+        public static async Task<byte[]> ResizeImageWindows(byte[] imageData, float width, float height)
+        {
+            byte[] resizedData;
+
+            using (var streamIn = new MemoryStream(imageData))
+            {
+                using (var imageStream = streamIn.AsRandomAccessStream())
+                {
+                    var decoder = await BitmapDecoder.CreateAsync(imageStream);
+                    var resizedStream = new InMemoryRandomAccessStream();
+                    var encoder = await BitmapEncoder.CreateForTranscodingAsync(resizedStream, decoder);
+                    encoder.BitmapTransform.InterpolationMode = BitmapInterpolationMode.Linear;
+                    encoder.BitmapTransform.ScaledHeight = (uint)height;
+                    encoder.BitmapTransform.ScaledWidth = (uint)width;
+                    await encoder.FlushAsync();
+                    resizedStream.Seek(0);
+                    resizedData = new byte[resizedStream.Size];
+                    await resizedStream.ReadAsync(resizedData.AsBuffer(), (uint)resizedStream.Size, InputStreamOptions.None);
+                }
+            }
+
+            return resizedData;
+        }
 
 #endif
 
@@ -123,14 +199,49 @@ namespace XamFormsImageResize
                     await encoder.FlushAsync();
                     resizedStream.Seek(0);
                     resizedData = new byte[resizedStream.Size];
-                    await resizedStream.ReadAsync(resizedData.AsBuffer(), (uint)resizedStream.Size, InputStreamOptions.None);                  
-                }                
+                    await resizedStream.ReadAsync(resizedData.AsBuffer(), (uint)resizedStream.Size, InputStreamOptions.None);
+                }
             }
 
             return resizedData;
         }
 
 #endif
+
+#if __TIZEN__
+        public static async Task<byte[]> ResizeImageTizen(byte[] imageData, float width, float height)
+        {
+            using (JpegDecoder jpegDecoder = new JpegDecoder())
+            {
+                Size newImageSize = new Size((int)width, (int)height);
+                IEnumerable<BitmapFrame> image = await jpegDecoder.DecodeAsync(imageData);
+                Size oldImageSize = image.First().Size;
+                byte[] rawImageData = image.First().Buffer;
+                using (MediaPacket mediaPacket = MediaPacket.Create(new VideoMediaFormat(MediaFormatVideoMimeType.Rgba, oldImageSize)))
+                {
+                    mediaPacket.VideoPlanes[0].Buffer.CopyFrom(rawImageData, 0, rawImageData.Length);
+                    using (ImageTransformer imageTransformer = new ImageTransformer())
+                    {
+                        using (MediaPacket newMediaPacket = await imageTransformer.TransformAsync(mediaPacket, new ResizeTransform(newImageSize)))
+                        {
+                            IMediaBuffer buffer = newMediaPacket.VideoPlanes[0].Buffer;
+                            byte[] newRawImageData = new byte[buffer.Length];
+                            buffer.CopyTo(newRawImageData, 0, buffer.Length);
+                            using (var jpegEncoder = new JpegEncoder())
+                            {
+                                jpegEncoder.Quality = 100;
+                                jpegEncoder.SetResolution(newImageSize);
+                                using (MemoryStream ms = new MemoryStream())
+                                {
+                                    await jpegEncoder.EncodeAsync(newRawImageData, ms);
+                                    return ms.ToArray();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+#endif
     }
 }
-
