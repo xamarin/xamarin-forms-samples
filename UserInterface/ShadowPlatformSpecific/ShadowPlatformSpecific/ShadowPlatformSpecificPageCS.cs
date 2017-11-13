@@ -3,6 +3,7 @@ using Xamarin.Forms.PlatformConfiguration;
 using MyCompany.Forms.PlatformConfiguration.iOS;
 using MyCompany.Forms.PlatformConfiguration.Android;
 using MyCompany.Forms.PlatformConfiguration.UWP;
+using MyCompany.Forms.PlatformConfiguration.Tizen;
 
 namespace ShadowPlatformSpecific
 {
@@ -24,6 +25,7 @@ namespace ShadowPlatformSpecific
 			shadowLabel.On<iOS>().SetIsShadowed(true);
 			shadowLabel.On<Android>().SetIsShadowed(true);
 			shadowLabel.On<Windows>().SetIsShadowed(true);
+			shadowLabel.On<Tizen>().SetIsShadowed(true);
 		}
 	}
 }

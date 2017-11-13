@@ -1,12 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-		xmlns:ios="clr-namespace:MyCompany.Forms.PlatformConfiguration.iOS"
-		xmlns:android="clr-namespace:MyCompany.Forms.PlatformConfiguration.Android"
-		xmlns:uwp="clr-namespace:MyCompany.Forms.PlatformConfiguration.UWP"
-		x:Class="ShadowPlatformSpecific.ShadowPlatformSpecificPage">
-	<Grid Margin="20">
-		<Label Text="Effect Exposed by a Platform Specific" FontAttributes="Bold" HorizontalOptions="Center" />
-		<Label Text="Label Shadow Effect" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" ios:Shadow.IsShadowed="true" android:Shadow.IsShadowed="true" uwp:Shadow.IsShadowed="true" />
-	</Grid>
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ShadowPlatformSpecific.ShadowPlatformSpecificPage" xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:android="clr-namespace:MyCompany.Forms.PlatformConfiguration.Android"
+    xmlns:ios="clr-namespace:MyCompany.Forms.PlatformConfiguration.iOS" xmlns:tizen="clr-namespace:MyCompany.Forms.PlatformConfiguration.Tizen"
+    xmlns:uwp="clr-namespace:MyCompany.Forms.PlatformConfiguration.UWP">
+    <Grid Margin="20">
+        <Label
+            FontAttributes="Bold" HorizontalOptions="Center"
+            Text="Effect Exposed by a Platform Specific" />
+        <Label
+            android:Shadow.IsShadowed="True" ios:Shadow.IsShadowed="True"
+            tizen:Shadow.IsShadowed="True" uwp:Shadow.IsShadowed="True"
+            FontAttributes="Bold" HorizontalOptions="Center"
+            Text="Label Shadow Effect" VerticalOptions="CenterAndExpand" />
+    </Grid>
 </ContentPage>
