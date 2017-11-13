@@ -6,11 +6,25 @@ namespace EffectsDemo
 	{
 		public HomePageCS ()
 		{
+			double width;
+			switch (Device.RuntimePlatform)
+			{
+				case Device.UWP:
+					width = 250;
+					break;
+				case Device.Tizen:
+					width = 340;
+					break;
+				default:
+					width = 220;
+					break;
+			}
+
 			var entry = new Entry {
 				Text = "Effect attached to an Entry",
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
-				WidthRequest = Device.RuntimePlatform == Device.UWP ? 250 : 200
+				WidthRequest = width
 			};
 			entry.Effects.Add (Effect.Resolve ("MyCompany.BackgroundColorEffect"));
 
