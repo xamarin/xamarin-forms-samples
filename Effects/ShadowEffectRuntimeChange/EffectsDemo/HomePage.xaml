@@ -8,6 +8,7 @@
                     <On Platform="iOS" Value="Black" />
                     <On Platform="Android" Value="White" />
                     <On Platform="UWP" Value="Red" />
+                    <On Platform="Tizen" Value="Gray" />
                 </OnPlatform>
 			</local:ShadowEffect.Color>
 		</Label>
