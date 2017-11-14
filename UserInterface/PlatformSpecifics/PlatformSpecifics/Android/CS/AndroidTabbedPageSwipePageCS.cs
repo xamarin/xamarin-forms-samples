@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System.Windows.Input;
+using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
@@ -6,8 +7,12 @@ namespace PlatformSpecifics
 {
     public class AndroidTabbedPageSwipePageCS : Xamarin.Forms.TabbedPage
     {
-        public AndroidTabbedPageSwipePageCS()
+        ICommand _returnToPlatformSpecificsPage;
+
+        public AndroidTabbedPageSwipePageCS(ICommand restore)
         {
+            _returnToPlatformSpecificsPage = restore;
+
             On<Android>().SetOffscreenPageLimit(2)
                          .SetIsSwipePagingEnabled(true);
             Title = "Tabbed Page";
@@ -35,6 +40,9 @@ namespace PlatformSpecifics
 
         ContentPage CreatePage(int pageNumber)
         {
+            var returnButton = new Button { Text = "Return to Platform-Specifics List" };
+            returnButton.Clicked += (sender, e) => _returnToPlatformSpecificsPage.Execute(null);
+
             return new ContentPage
             {
                 Title = string.Format("Page {0}", pageNumber),
@@ -42,7 +50,8 @@ namespace PlatformSpecifics
                 {
                     Margin = new Thickness(20),
                     Children = {
-                        new Label { Text = string.Format("Page {0}", pageNumber), HorizontalOptions = LayoutOptions.Center }
+                        new Label { Text = string.Format("Page {0}", pageNumber), HorizontalOptions = LayoutOptions.Center },
+                        returnButton
                     }
                 }
             };

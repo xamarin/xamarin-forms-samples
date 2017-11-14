@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace PlatformSpecifics
@@ -15,7 +16,7 @@ namespace PlatformSpecifics
 
         Page detailPage;
 
-        public ContentPageMasterPage()
+        public ContentPageMasterPage(ICommand restore)
         {
             InitializeComponent();
 
@@ -26,10 +27,11 @@ namespace PlatformSpecifics
                 new NavigationItem("Set Detail to Navigation Page", "\uE16F", new Command(() =>
                 {
                     detailPage = (Parent as MasterDetailPage).Detail;
-                    (Parent as MasterDetailPage).Detail = new NavigationPage(new ContentPageTwo());
+                    (Parent as MasterDetailPage).Detail = new NavigationPage(new ContentPageTwo(restore));
                 })),
-                new NavigationItem("Set Detail to Content Page", "\uE160", new Command(() => (Parent as MasterDetailPage).Detail = (detailPage == null) ? (Parent as MasterDetailPage).Detail : detailPage))
-            };            
+                new NavigationItem("Set Detail to Content Page", "\uE160", new Command(() => (Parent as MasterDetailPage).Detail = (detailPage == null) ? (Parent as MasterDetailPage).Detail : detailPage)),
+                new NavigationItem("Back", "\uE106", restore)
+            };
         }
 
         void OnListViewItemTapped(object sender, ItemTappedEventArgs e)

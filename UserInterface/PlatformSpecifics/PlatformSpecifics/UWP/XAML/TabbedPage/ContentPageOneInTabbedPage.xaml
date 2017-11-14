@@ -1,8 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage x:Name="page" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:PlatformSpecifics" x:Class="PlatformSpecifics.ContentPageOneInTabbedPage" Title="ContentPage One"> 
   <StackLayout Margin="20" >
     <Label Text="Toolbar Items" FontAttributes="Bold" HorizontalOptions="Center" />
     <local:AddRemoveToolbarItemsContentView BindingContext="{x:Reference page}" ParentPage="{Binding Parent}" />
     <local:ToolbarPlacementChangerContentView BindingContext="{x:Reference page}" ParentPage="{Binding Parent}" />
+    <Button Text="Return to Platform-Specifics List" Clicked="OnReturnButtonClicked" />
   </StackLayout>
 </ContentPage>

@@ -1,12 +1,18 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Todo.RateAppPage" Title="Rate the App">
-	<StackLayout Margin="20">
-		<Button Text="Take Photo and Analyze" Clicked="OnTakePhotoButtonClicked" />
-		<Image x:Name="image" />
-		<ActivityIndicator x:Name="activityIndicator" />
-		<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-			<Label Text="Emotion:" />
-			<Label x:Name="emotionResultLabel" />
-		</StackLayout>
-	</StackLayout>
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TextSample.EditorPage"
+    Title="Editor Demo">
+    <ContentPage.Content>
+        <StackLayout Padding="5,10">
+            <Editor>
+                <Editor.BackgroundColor>
+                    <OnPlatform x:TypeArguments="x:Color">
+                        <On Platform="iOS" Value="#a4eaff" />
+                        <On Platform="Android, WinPhone, UWP" Value="#2c3e50" />
+                    </OnPlatform>
+                </Editor.BackgroundColor>
+            </Editor>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

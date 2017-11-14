@@ -5,6 +5,8 @@ namespace PlatformSpecifics
 {
     public partial class PlatformSpecificsPage : ContentPage
     {
+        Page _originalRoot;
+
         public PlatformSpecificsPage()
         {
             InitializeComponent();
@@ -15,9 +17,9 @@ namespace PlatformSpecifics
             await Navigation.PushAsync(new iOSBlurEffectPage());
         }
 
-        async void OnTranslucentNavigationBarButtonClicked(object sender, EventArgs e)
+        void OnTranslucentNavigationBarButtonClicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Alert", "Edit App.xaml.cs to view this platform specific.", "OK");
+            SetRoot(new iOSNavigationPage(new Command(RestoreOriginal)));
         }
 
         async void OnEntryFontSizeChangesButtonClicked(object sender, EventArgs e)
@@ -35,14 +37,14 @@ namespace PlatformSpecifics
             await Navigation.PushAsync(new iOSPickerPage());
         }
 
-        async void OnScrollViewButtonClicked(object sender, EventArgs e)
+        void OnScrollViewButtonClicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Alert", "Edit App.xaml.cs to view this platform specific.", "OK");
+            SetRoot(new iOSScrollViewPage(new Command(RestoreOriginal)));
         }
 
-        async void OnStatusBarTextColorModeClicked(object sender, EventArgs e)
+        void OnStatusBarTextColorModeClicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Alert", "Edit App.xaml.cs to view this platform specific.", "OK");
+            SetRoot(new iOSStatusBarTextColorModePage(new Command(RestoreOriginal)));
         }
 
         async void OnSoftInputModeAdjustButtonClicked(object sender, EventArgs e)
@@ -55,9 +57,9 @@ namespace PlatformSpecifics
             await Navigation.PushAsync(new AndroidLifecycleEventsPage());
         }
 
-        async void OnTabbedPageSwipeButtonClicked(object sender, EventArgs e)
+        void OnTabbedPageSwipeButtonClicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Alert", "Edit App.xaml.cs to view this platform specific.", "OK");
+            SetRoot(new AndroidTabbedPageSwipePage(new Command(RestoreOriginal)));
         }
 
         async void OnListViewFastScrollButtonClicked(object sender, EventArgs e)
@@ -65,19 +67,42 @@ namespace PlatformSpecifics
             await Navigation.PushAsync(new AndroidListViewFastScrollPage());
         }
 
-        async void OnTabbedPageButtonClicked(object sender, EventArgs e)
+        void OnTabbedPageButtonClicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Alert", "Edit App.xaml.cs to view this platform specific.", "OK");
+            SetRoot(new WindowsTabbedPage(new Command(RestoreOriginal)));
         }
 
-        async void OnNavigationPageButtonClicked(object sender, EventArgs e)
+        void OnNavigationPageButtonClicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Alert", "Edit App.xaml.cs to view this platform specific.", "OK");
+            SetRoot(new WindowsNavigationPage(new Command(RestoreOriginal)));
         }
 
-        async void OnMasterDetailPageButtonClicked(object sender, EventArgs e)
+        void OnMasterDetailPageButtonClicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Alert", "Edit App.xaml.cs to view this platform specific.", "OK");
+            SetRoot(new WindowsMasterDetailPage(new Command(RestoreOriginal)));
+        }
+
+        void SetRoot(Page page)
+        {
+            var app = Application.Current as App;
+            if (app == null)
+            {
+                return;
+            }
+
+            _originalRoot = app.MainPage;
+            app.SetMainPage(page);
+        }
+
+        void RestoreOriginal()
+        {
+            if (_originalRoot == null)
+            {
+                return;
+            }
+
+            var app = Application.Current as App;
+            app?.SetMainPage(_originalRoot);
         }
     }
 }

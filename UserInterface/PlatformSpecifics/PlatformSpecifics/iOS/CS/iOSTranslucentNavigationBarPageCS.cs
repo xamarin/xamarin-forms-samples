@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System.Windows.Input;
+using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
@@ -6,7 +7,7 @@ namespace PlatformSpecifics
 {
     public class iOSTranslucentNavigationBarPageCS : ContentPage
     {
-        public iOSTranslucentNavigationBarPageCS()
+        public iOSTranslucentNavigationBarPageCS(ICommand restore)
         {
             var translucentButton = new Button { Text = "Toggle Translucent Navigation Bar" };
             translucentButton.Clicked += (sender, e) => (App.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().SetIsNavigationBarTranslucent(!(App.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().IsNavigationBarTranslucent());
@@ -25,11 +26,14 @@ namespace PlatformSpecifics
                 }
             };
 
+            var returnButton = new Button { Text = "Return to Platform-Specifics List" };
+            returnButton.Clicked += (sender, e) => restore.Execute(null);
+
             Title = "Navigation Bar";
             Content = new StackLayout
             {
                 Margin = new Thickness(20),
-                Children = { translucentButton, colorModeButton }
+                Children = { translucentButton, colorModeButton, returnButton }
             };
         }
 

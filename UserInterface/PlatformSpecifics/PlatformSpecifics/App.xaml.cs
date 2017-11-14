@@ -9,15 +9,12 @@ namespace PlatformSpecifics
         public App()
         {
             InitializeComponent();
-
             MainPage = new NavigationPage(new PlatformSpecificsPage());
-            //MainPage = new iOSStatusBarTextColorModePageCS();
-            //MainPage = new iOSNavigationPage();
-            //MainPage = new iOSScrollViewPage();
-            //MainPage = new AndroidTabbedPageSwipePage();
-            //MainPage = new WindowsTabbedPage();
-            //MainPage = new WindowsNavigationPage();
-            //MainPage = new WindowsMasterDetailPage();
+        }
+
+        public void SetMainPage(Page rootPage)
+        {
+            MainPage = rootPage;
         }
 
         protected override void OnStart()

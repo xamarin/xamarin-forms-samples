@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage x:Name="page"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -10,6 +10,7 @@
     <local:AddRemoveToolbarItemsContentView BindingContext="{x:Reference page}" ParentPage="{Binding Parent}" />
     <local:ToolbarPlacementChangerContentView BindingContext="{x:Reference page}" ParentPage="{Binding Parent}"/>
     <Button Text="Navigate" Clicked="OnNavigateButtonClicked" HorizontalOptions="Center" />
+    <Button Text="Return to Platform-Specifics List" Clicked="OnReturnButtonClicked" />
   </StackLayout>
 </ContentPage>
 

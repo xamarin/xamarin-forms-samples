@@ -12,6 +12,7 @@
                 <StackLayout Margin="0,20">
                     <Slider />
                     <Button Text="Toggle ScrollView DelayContentTouches" Clicked="OnButtonClicked" />
+                    <Button Text="Return to Platform-Specifics List" Clicked="OnReturnButtonClicked" />
                 </StackLayout>
             </ScrollView>
         </ContentPage>

@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System.Windows.Input;
+using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
@@ -6,12 +7,22 @@ namespace PlatformSpecifics
 {
     public class iOSStatusBarTextColorModePageCS : MasterDetailPage
     {
-        public iOSStatusBarTextColorModePageCS()
+        public iOSStatusBarTextColorModePageCS(ICommand restore)
         {
+            var returnButton = new Button { Text = "Return to Platform-Specifics List" };
+            returnButton.Clicked += (sender, e) => restore.Execute(null);
+
             Master = new ContentPage { Title = "Master Page Title" };
             Detail = new Xamarin.Forms.NavigationPage(new ContentPage
             {
-                Content = new Label { Text = "Slide the master page to see the status bar text color mode change." }
+                Content = new StackLayout
+                {
+                    Margin = new Thickness(20),
+                    Children = {
+                        new Label { Text = "Slide the master page to see the status bar text color mode change." },
+                        returnButton
+                    }
+                }
             });
 
             ((Xamarin.Forms.NavigationPage)Detail).BarBackgroundColor = Color.Blue;

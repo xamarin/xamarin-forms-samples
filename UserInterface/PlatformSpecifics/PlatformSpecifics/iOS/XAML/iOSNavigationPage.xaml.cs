@@ -1,13 +1,14 @@
-﻿using Xamarin.Forms;
+﻿using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace PlatformSpecifics
 {
     public partial class iOSNavigationPage : Xamarin.Forms.NavigationPage
     {
-        public iOSNavigationPage()
+        public iOSNavigationPage(ICommand restore)
         {
             InitializeComponent();
-            PushAsync(new iOSTranslucentNavigationBarPage());
+            PushAsync(new iOSTranslucentNavigationBarPage(restore));
         }
     }
 }

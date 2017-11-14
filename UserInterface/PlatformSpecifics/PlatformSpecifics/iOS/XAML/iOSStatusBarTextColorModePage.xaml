@@ -10,7 +10,10 @@
         <NavigationPage BarBackgroundColor="Blue" BarTextColor="White" ios:NavigationPage.StatusBarTextColorMode="MatchNavigationBarTextLuminosity">
             <x:Arguments>
                 <ContentPage>
-                    <Label Text="Slide the master page to see the status bar text color mode change." />
+                    <StackLayout Margin="20">
+                        <Label Text="Slide the master page to see the status bar text color mode change." />
+                        <Button Text="Return to Platform-Specifics List" Clicked="OnReturnButtonClicked" />
+                    </StackLayout>
                 </ContentPage>
             </x:Arguments>
         </NavigationPage>
