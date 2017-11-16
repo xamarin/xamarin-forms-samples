@@ -4,7 +4,7 @@
     <IsFullApplication>false</IsFullApplication>
     <Level>Intermediate</Level>
     <Tags>Xamarin.Forms, Dependency Service, Xamarin Live Player</Tags>
-    <SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+    <SupportedPlatforms>iOS, Android, Windows, Tizen</SupportedPlatforms>
     <LicenseRequirement>Indie</LicenseRequirement>
     <Gallery>true</Gallery>
     <Brief>This sample demonstrates how to use the DependencyService to implement text-to-speech, check device orientation, check battery status, and pick a photo from the phone's photo library.</Brief>
