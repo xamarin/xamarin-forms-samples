@@ -17,9 +17,19 @@ namespace PlatformSpecifics
             await Navigation.PushAsync(new iOSBlurEffectPage());
         }
 
+        void OnLargeTitleDisplayButtonClicked(object sender, EventArgs e)
+        {
+            SetRoot(new iOSNavigationPage(new iOSLargeTitlePage(new Command(RestoreOriginal))));
+        }
+
+        async void OnSafeAreaButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new iOSSafeAreaPage());
+        }
+
         void OnTranslucentNavigationBarButtonClicked(object sender, EventArgs e)
         {
-            SetRoot(new iOSNavigationPage(new Command(RestoreOriginal)));
+            SetRoot(new iOSNavigationPage(new iOSTranslucentNavigationBarPage(new Command(RestoreOriginal))));
         }
 
         async void OnEntryFontSizeChangesButtonClicked(object sender, EventArgs e)

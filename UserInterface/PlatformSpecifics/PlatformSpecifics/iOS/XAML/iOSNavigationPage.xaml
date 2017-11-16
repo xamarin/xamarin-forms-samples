@@ -4,6 +4,7 @@
 		xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
 		x:Class="PlatformSpecifics.iOSNavigationPage"
         BackgroundColor="Blue"
-		ios:NavigationPage.IsNavigationBarTranslucent="true">
+		ios:NavigationPage.IsNavigationBarTranslucent="true"
+        ios:NavigationPage.PrefersLargeTitles="true">
 
 </NavigationPage>

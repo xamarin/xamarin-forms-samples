@@ -1,17 +1,28 @@
 ﻿using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace PlatformSpecifics
 {
     public class PlatformSpecificsPageCS : ContentPage
     {
-        Page _originalRoot;
+        Xamarin.Forms.Page _originalRoot;
 
         public PlatformSpecificsPageCS()
         {
             var blurButton = new Button { Text = "Blur Effect (iOS only)" };
             blurButton.Clicked += async (sender, e) => await Navigation.PushAsync(new iOSBlurEffectPageCS());
+            var largeTitleButton = new Button { Text = "Large Title Display (iOS only)" };
+            largeTitleButton.Clicked += (sender, e) =>
+            {
+                var navigationPage = new Xamarin.Forms.NavigationPage(new iOSLargeTitlePageCS(new Command(RestoreOriginal)));
+                navigationPage.On<iOS>().SetPrefersLargeTitles(true);
+                SetRoot(navigationPage);
+            };
+            var safeAreaButton = new Button { Text = "Safe Area Layout Guide (iOS only)" };
+            safeAreaButton.Clicked += async (sender, e) => await Navigation.PushAsync(new iOSSafeAreaPageCS());
             var translucentButton = new Button { Text = "Translucent Navigation Bar (iOS only) " };
-            translucentButton.Clicked += (sender, e) => SetRoot(new NavigationPage(new iOSTranslucentNavigationBarPageCS(new Command(RestoreOriginal))));
+            translucentButton.Clicked += (sender, e) => SetRoot(new Xamarin.Forms.NavigationPage(new iOSTranslucentNavigationBarPageCS(new Command(RestoreOriginal))));
             var entryButton = new Button { Text = "Entry Font Size Adjusts to Text Width (iOS only)" };
             entryButton.Clicked += async (sender, e) => await Navigation.PushAsync(new iOSEntryPageCS());
             var hideStatusBarButton = new Button { Text = "Hide Status Bar (iOS only) " };
@@ -38,17 +49,17 @@ namespace PlatformSpecifics
             masterDetailPageButton.Clicked += (sender, e) => SetRoot(new WindowsMasterDetailPageCS(new Command(RestoreOriginal)));
 
             Title = "Platform Specifics Demo";
-            Content = new ScrollView
+            Content = new Xamarin.Forms.ScrollView
             {
                 Content = new StackLayout
                 {
                     Margin = new Thickness(20),
-                    Children = { blurButton, translucentButton, entryButton, hideStatusBarButton, pickerUpdateModeButton, scrollViewButton, statusBarTextColorModeButton, inputModeButton, lifecycleEventsButton, tabbedPageSwipeButton, listViewFastScrollButton, tabbedPageButton, navigationPageButton, masterDetailPageButton }
+                    Children = { blurButton, largeTitleButton, safeAreaButton, translucentButton, entryButton, hideStatusBarButton, pickerUpdateModeButton, scrollViewButton, statusBarTextColorModeButton, inputModeButton, lifecycleEventsButton, tabbedPageSwipeButton, listViewFastScrollButton, tabbedPageButton, navigationPageButton, masterDetailPageButton }
                 }
             };
         }
 
-        void SetRoot(Page page)
+        void SetRoot(Xamarin.Forms.Page page)
         {
             var app = Application.Current as App;
             if (app == null)

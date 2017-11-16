@@ -23,7 +23,6 @@ namespace PlatformSpecifics
                     picker.On<iOS>().SetUpdateMode(UpdateMode.Immediately);
                     break;
             }
-
         }
     }
 }

@@ -35,7 +35,7 @@ namespace PlatformSpecifics
                 new NavigationItem("Back", "\uE106", _returnToPlatformSpecificsPage)
             };
 
-            var listView = new ListView
+            var listView = new Xamarin.Forms.ListView
             {
                 ItemsSource = items,
                 ItemTemplate = new DataTemplate(() =>

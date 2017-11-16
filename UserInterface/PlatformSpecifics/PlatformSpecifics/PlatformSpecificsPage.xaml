@@ -3,6 +3,8 @@
     <ScrollView>
         <StackLayout Margin="20">
             <Button Text="Blur Effect (iOS only)" Clicked="OnBlurEffectButtonClicked" />
+            <Button Text="Large Title Display (iOS only)" Clicked="OnLargeTitleDisplayButtonClicked" />
+            <Button Text="Safe Area Layout Guide (iOS only)" Clicked="OnSafeAreaButtonClicked" />
             <Button Text="Translucent Navigation Bar (iOS only)" Clicked="OnTranslucentNavigationBarButtonClicked" />
             <Button Text="Entry Font Size Adjusts to Text Width (iOS only)" Clicked="OnEntryFontSizeChangesButtonClicked" />
             <Button Text="Hide Status Bar (iOS only)" Clicked="OnHideStatusBarButtonClicked" />
