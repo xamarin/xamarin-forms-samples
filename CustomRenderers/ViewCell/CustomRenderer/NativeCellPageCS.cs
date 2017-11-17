@@ -29,6 +29,7 @@ namespace CustomRenderer
                     break;
                 case Device.Android:
                 case Device.UWP:
+                case "Tizen":
                     Padding = new Thickness(0);
                     break;
             }
