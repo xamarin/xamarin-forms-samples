@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest package="CustomRenderer.View.Tizen" version="1.0.9" api-version="3.0" xmlns="http://tizen.org/ns/packages">
+    <profile name="common" />
+    <ui-application appid="org.tizen.example.CustomRenderer.View.Tizen" exec="CustomRenderer.Tizen.dll" multiple="false" taskmanage="true" splash-screen-display="true" type="dotnet" launch_mode="single">
+        <icon>CustomRenderer.Tizen.png</icon>
+        <label>CustomRenderer.View.Tizen</label>
+        <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
+    </ui-application>
+    <shortcut-list />
+    <privileges>
+        <privilege>http://tizen.org/privilege/camera</privilege>
+    </privileges>
+    <provides-appdefined-privileges />
+</manifest>
