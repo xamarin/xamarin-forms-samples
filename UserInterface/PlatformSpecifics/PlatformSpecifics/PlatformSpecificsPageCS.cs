@@ -41,6 +41,8 @@ namespace PlatformSpecifics
             tabbedPageSwipeButton.Clicked += (sender, e) => SetRoot(new AndroidTabbedPageSwipePageCS(new Command(RestoreOriginal)));
             var listViewFastScrollButton = new Button { Text = "ListView FastScroll (Android only)" };
             listViewFastScrollButton.Clicked += async (sender, e) => await Navigation.PushAsync(new AndroidListViewFastScrollPageCS());
+            var elevationButton = new Button { Text = "Elevation (Android only)" };
+            elevationButton.Clicked += async (sender, e) => await Navigation.PushAsync(new AndroidElevationPageCS());
             var tabbedPageButton = new Button { Text = "Tabbed Page Toolbar Location Adjust (Windows only)" };
             tabbedPageButton.Clicked += (sender, e) => SetRoot(new WindowsTabbedPageCS(new Command(RestoreOriginal)));
             var navigationPageButton = new Button { Text = "Navigation Page Toolbar Location Adjust (Windows only)" };
@@ -54,7 +56,7 @@ namespace PlatformSpecifics
                 Content = new StackLayout
                 {
                     Margin = new Thickness(20),
-                    Children = { blurButton, largeTitleButton, safeAreaButton, translucentButton, entryButton, hideStatusBarButton, pickerUpdateModeButton, scrollViewButton, statusBarTextColorModeButton, inputModeButton, lifecycleEventsButton, tabbedPageSwipeButton, listViewFastScrollButton, tabbedPageButton, navigationPageButton, masterDetailPageButton }
+                    Children = { blurButton, largeTitleButton, safeAreaButton, translucentButton, entryButton, hideStatusBarButton, pickerUpdateModeButton, scrollViewButton, statusBarTextColorModeButton, inputModeButton, lifecycleEventsButton, tabbedPageSwipeButton, listViewFastScrollButton, elevationButton, tabbedPageButton, navigationPageButton, masterDetailPageButton }
                 }
             };
         }

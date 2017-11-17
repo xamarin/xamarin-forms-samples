@@ -15,6 +15,7 @@
             <Button Text="Pause and Resume Lifecycle Events (Android only)" Clicked="OnPageLifecycleEventsButtonClicked" />
             <Button Text="Tabbed Page Swipe (Android only)" Clicked="OnTabbedPageSwipeButtonClicked" />
             <Button Text="ListView FastScroll (Android only)" Clicked="OnListViewFastScrollButtonClicked" />
+            <Button Text="Elevation (Android only)" Clicked="OnElevationButtonClicked" />
             <Button Text="Tabbed Page Toolbar Location Adjust (Windows only)" Clicked="OnTabbedPageButtonClicked" />
             <Button Text="Navigation Page Toolbar Location Adjust (Windows only)" Clicked="OnNavigationPageButtonClicked" />
             <Button Text="Master Detail Page Toolbar Location Adjust (Windows only)" Clicked="OnMasterDetailPageButtonClicked" />

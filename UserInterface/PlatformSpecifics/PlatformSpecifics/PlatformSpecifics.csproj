@@ -73,6 +73,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Android\XAML\AndroidElevationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -183,6 +187,10 @@
     </Compile>
     <Compile Include="iOS\CS\iOSLargeTitlePageCS.cs" />
     <Compile Include="iOS\CS\iOSSafeAreaPageCS.cs" />
+    <Compile Include="Android\XAML\AndroidElevationPage.xaml.cs">
+      <DependentUpon>AndroidElevationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Android\CS\AndroidElevationPageCS.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="UWP\XAML\NavigationPage\WindowsNavigationPage.xaml">

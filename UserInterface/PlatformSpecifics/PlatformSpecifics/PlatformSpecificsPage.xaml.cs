@@ -77,6 +77,11 @@ namespace PlatformSpecifics
             await Navigation.PushAsync(new AndroidListViewFastScrollPage());
         }
 
+        async void OnElevationButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AndroidElevationPage());
+        }
+
         void OnTabbedPageButtonClicked(object sender, EventArgs e)
         {
             SetRoot(new WindowsTabbedPage(new Command(RestoreOriginal)));
