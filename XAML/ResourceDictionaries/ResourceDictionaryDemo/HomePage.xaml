@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ResourceDictionaryDemo.HomePage" BackgroundColor="{StaticResource PageBackgroundColor}" Title="Home Page">
 	<StackLayout Margin="0,20,0,0">
 		<StackLayout.Resources>
-			<ResourceDictionary>
+			<ResourceDictionary> 
 				<Style x:Key="LabelNormalStyle" TargetType="Label">
 					<Setter Property="TextColor" Value="{StaticResource NormalTextColor}" />
 				</Style>
