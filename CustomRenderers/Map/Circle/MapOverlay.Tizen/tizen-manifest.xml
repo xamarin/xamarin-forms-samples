@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest package="org.tizen.example.MapOverlay.Tizen" version="1.0.0" api-version="4" xmlns="http://tizen.org/ns/packages">
+    <profile name="common" />
+    <ui-application appid="org.tizen.example.MapOverlay.Tizen" exec="MapOverlay.Tizen.dll" multiple="false" nodisplay="false" taskmanage="true" splash-screen-display="true" type="dotnet" launch_mode="single">
+        <label>MapOverlay.Tizen</label>
+        <icon>MapOverlay.Tizen.png</icon>
+        <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
+    </ui-application>
+    <shortcut-list />
+    <privileges>
+        <privilege>http://tizen.org/privilege/mapservice</privilege>
+        <privilege>http://tizen.org/privilege/internet</privilege>
+    </privileges>
+    <provides-appdefined-privileges />
+</manifest>
