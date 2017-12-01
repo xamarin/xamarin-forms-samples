@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GameOfLife"
+             x:Class="GameOfLife.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0, 20, 0, 0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="Margin" Value="0, 10" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="Margin" Value="0, 5" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <AbsoluteLayout x:Name="absoluteLayout"
+                        BackgroundColor="Gray"
+                        SizeChanged="OnLayoutSizeChanged" />
+
+        <ScrollView x:Name="aboutText"
+                    Margin="20"
+                    IsVisible="False">
+            
+            <StackLayout Padding="20"
+                         BackgroundColor="White"
+                         Opacity="0.9">
+            
+                <Label Text="The Game of Life"
+                       FontSize="Large"
+                       HorizontalTextAlignment="Center" />
+
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text=
+"This is an implementation of the Game of Life for Xamarin.Forms. 
+Life is a cellular automaton invented by mathematician John Conway in 1970 and popularized in " />
+
+                            <Span Text="Scientfic American" 
+                                  FontAttributes="Italic" />
+
+                            <Span Text="." />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text=
+"Tap cells to make them &quot;alive&quot;. A clustered population of live cells works the best.
+Then press the " />
+                            <Span Text="Run!" 
+                                  FontAttributes="Bold" />
+
+                            <Span Text=
+" button. Rules are applied to the live cells to generate successive populations.
+A population might grow, or shrink, or stagnate, or disappear." />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label Text="For more information, see the Wikipedia article:" />
+
+                <Label Text="https://en.wikipedia.org/wiki/Conway's_Game_of_Life"
+                       TextColor="Blue"
+                       FontAttributes="Italic"
+                       HorizontalTextAlignment="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHyperlinkTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Button Text="OK"
+                        Clicked="OnCloseButtonClicked" />
+            </StackLayout>
+
+        </ScrollView>
+
+        <StackLayout Grid.Row="1"
+                     Orientation="Horizontal">
+            <Button x:Name="runButton"
+                    Text="Run!"
+                    Clicked="OnRunButtonClicked" />
+
+            <Button x:Name="clearButton"
+                    Text="Clear"
+                    Clicked="OnClearButtonClicked" />
+
+            <Button Text="About"
+                    Clicked="OnAboutButtonClicked" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
