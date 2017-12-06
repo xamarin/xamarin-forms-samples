@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>414526AA-B8C0-4B48-91B6-EEFCC2752622</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Basic</Level>
+	<Tags>Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>Basic BoxView Display.</Brief>
+</SampleMetadata>
