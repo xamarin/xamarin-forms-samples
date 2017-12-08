@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataBindingDemos.BindingContextInheritancePage"
+             Title="BindingContext Inheritance">
+    <StackLayout Padding="10">
+
+        <StackLayout VerticalOptions="FillAndExpand"
+                     BindingContext="{x:Reference slider}">
+            
+            <Label Text="TEXT 1"
+                   FontSize="60"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   Rotation="{Binding Value}" />
+            
+            <Label Text="TEXT 2"
+                   FontSize="60"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   Rotation="{Binding Value}" />
+        </StackLayout>
+
+        <Slider x:Name="slider" 
+                Maximum="360" />
+        
+    </StackLayout>
+</ContentPage>

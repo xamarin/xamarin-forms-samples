@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataBindingDemos"
+             x:Class="DataBindingDemos.MainPage"
+             Title="Data Binding Demos"
+             Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Basic Bindings">
+
+                <TextCell Text="Basic Code Binding"
+                          Detail="Define a data-binding in code"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicCodeBindingPage}" />
+
+                <TextCell Text="Basic XAML Binding"
+                          Detail="Define a data-binding in XAML"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicXamlBindingPage}" />
+
+                <TextCell Text="Alternative Code Binding"
+                          Detail="Define a data-binding in code without a BindingContext"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:AlternativeCodeBindingPage}" />
+
+                <TextCell Text="Alternative XAML Binding"
+                          Detail="Define a data-binding in XAML without a BindingContext"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:AlternativeXamlBindingPage}" />
+
+                <TextCell Text="BindingContext Inheritance"
+                          Detail="Simplify bindings with an inherited BindingContext"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BindingContextInheritancePage}" />
+            </TableSection>
+
+            <TableSection Title="Binding Mode">
+
+                <TextCell Text="Reverse Bindings"
+                          Detail="Set the binding source from the target"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ReverseBindingsPage}" />
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
