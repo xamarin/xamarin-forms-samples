@@ -1,7 +1,9 @@
 Dot-Matrix Clock
 ======
 
-This sample shows how to use the `BoxView` element for creating a simulation of a dot-matrix digital display.
+The `BoxView` element is ideal for creating a simulation of a dot-matrix digital display.
+
+This sample is described in more detail in the article on [BoxView](/guides/xamarin-forms/user-interface/boxview/).
 
 Author
 ------
