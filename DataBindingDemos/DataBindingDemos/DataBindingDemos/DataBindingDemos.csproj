@@ -57,8 +57,8 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReverseBindingsPage.xaml.cs">
-      <DependentUpon>ReverseBindingsPage.xaml</DependentUpon>
+    <Compile Include="ReverseBindingPage.xaml.cs">
+      <DependentUpon>ReverseBindingPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -119,7 +119,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ReverseBindingsPage.xaml">
+    <EmbeddedResource Include="ReverseBindingPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

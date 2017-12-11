@@ -37,10 +37,10 @@
 
             <TableSection Title="Binding Mode">
 
-                <TextCell Text="Reverse Bindings"
-                          Detail="Set the binding source from the target"
+                <TextCell Text="Reverse Binding"
+                          Detail="Reverse the source and the target"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:ReverseBindingsPage}" />
+                          CommandParameter="{x:Type local:ReverseBindingPage}" />
 
             </TableSection>
         </TableRoot>

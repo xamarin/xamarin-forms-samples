@@ -7,18 +7,19 @@
 
         <StackLayout VerticalOptions="FillAndExpand"
                      BindingContext="{x:Reference slider}">
-            
-            <Label Text="TEXT 1"
-                   FontSize="60"
+
+            <Label Text="TEXT"
+                   FontSize="80"
                    HorizontalOptions="Center"
-                   VerticalOptions="CenterAndExpand"
+                   VerticalOptions="EndAndExpand"
                    Rotation="{Binding Value}" />
-            
-            <Label Text="TEXT 2"
-                   FontSize="60"
-                   HorizontalOptions="Center"
-                   VerticalOptions="CenterAndExpand"
-                   Rotation="{Binding Value}" />
+
+            <BoxView Color="#800000FF"
+                     WidthRequest="180"
+                     HeightRequest="40"
+                     HorizontalOptions="Center"
+                     VerticalOptions="StartAndExpand"
+                     Rotation="{Binding Value}" />
         </StackLayout>
 
         <Slider x:Name="slider" 

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace DataBindingDemos
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ReverseBindingsPage : ContentPage
+    public partial class ReverseBindingPage : ContentPage
     {
-        public ReverseBindingsPage()
+        public ReverseBindingPage()
         {
             InitializeComponent();
         }
