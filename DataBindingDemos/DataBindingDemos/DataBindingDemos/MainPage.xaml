@@ -42,6 +42,28 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:ReverseBindingPage}" />
 
+                <TextCell Text="Simple Color Selector"
+                          Detail="Use a ViewModel for HSL Color"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SimpleColorSelectorPage}" />
+
+                <TextCell Text="Two-Way Binding"
+                          Detail="Override the default binding mode"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:TwoWayBindingPage}" />
+
+
+
+            </TableSection>
+
+            <TableSection>
+
+                <TextCell Text="Path Variations"
+                          Detail="Explore the various ways you can use Path"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PathVariationsPage}" />
+
+
             </TableSection>
         </TableRoot>
     </TableView>

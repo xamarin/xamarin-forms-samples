@@ -53,12 +53,25 @@
     <Compile Include="BindingContextInheritancePage.xaml.cs">
       <DependentUpon>BindingContextInheritancePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HslColorViewModel.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PathVariationsPage.xaml.cs">
+      <DependentUpon>PathVariationsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReverseBindingPage.xaml.cs">
       <DependentUpon>ReverseBindingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleColorSelectorPage.xaml.cs">
+      <DependentUpon>SimpleColorSelectorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TwoWayBindingPage.xaml.cs">
+      <DependentUpon>TwoWayBindingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TwoWayListViewPage.xaml.cs">
+      <DependentUpon>TwoWayListViewPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +133,30 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ReverseBindingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SimpleColorSelectorPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TwoWayBindingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PathVariationsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TwoWayListViewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
