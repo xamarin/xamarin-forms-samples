@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:LayoutCompression"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+    x:Class="LayoutCompression.LayoutCompressionPage"
+    Title="Profile"
+    BackgroundColor="#F3F3F3">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:InvertedBoolConverter x:Key="InvertedBoolConverter"/>
+    
+            <!-- Global Colors -->
+            <Color x:Key="primaryColor">#303030</Color>
+            <Color x:Key="secondaryColor">#C9AE98</Color>
+            <Color x:Key="validationColor">#FF3F56</Color>
+            <Color x:Key="callToActionColor">#4E8B4F</Color>
+            <Color x:Key="accentColor">White</Color>
+            <Color x:Key="darkAccentColor">#7c6a5c</Color>
+            
+            <!-- Global Sizes -->
+            <x:Double x:Key="mediumTextSize">20</x:Double>
+            <x:Double x:Key="smallTextSize">14</x:Double>
+            <x:Double x:Key="standardPadding">10</x:Double>
+
+            <!-- Global Element Styles -->
+            <Style TargetType="Entry">
+                <Setter Property="HeightRequest" Value="44" />
+                <Setter Property="TextColor" Value="{StaticResource darkAccentColor}" />
+            </Style>
+
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource primaryColor}" />
+            </Style>
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{StaticResource accentColor}" />
+                <Setter Property="Padding" Value="{StaticResource standardPadding}" />
+                <Setter Property="HasShadow" Value="False" />
+                <Setter Property="OutlineColor" Value="{StaticResource secondaryColor}" />
+            </Style>
+
+            <!-- Label Styles -->
+            <Style x:Key="switchLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="#999999" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+
+            <!-- Button Styles -->
+            <Style x:Key="callToActionButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource callToActionColor}" />
+                <Setter Property="TextColor" Value="{StaticResource accentColor}" />
+                <Setter Property="FontSize" Value="{StaticResource mediumTextSize}" />
+            </Style>
+            <Style x:Key="primaryButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource primaryColor}" />
+                <Setter Property="TextColor" Value="{StaticResource accentColor}" />
+                <Setter Property="FontSize" Value="{StaticResource smallTextSize}" />
+            </Style>
+
+            <Style x:Key="nakedButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{StaticResource accentColor}" />
+                <Setter Property="BorderColor" Value="Transparent"/>
+                <Setter Property="BorderWidth" Value="0"/>
+                <Setter Property="FontSize" Value="{StaticResource mediumTextSize}" />
+            </Style>
+
+            <Style x:Key="whiteClearButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="BorderColor" Value="{StaticResource accentColor}" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="TextColor" Value="{StaticResource accentColor}" />
+                <Setter Property="FontSize" Value="{StaticResource smallTextSize}" />
+            </Style>
+
+            <Style x:Key="secondaryButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource secondaryColor}" />
+                <Setter Property="TextColor" Value="{StaticResource accentColor}" />
+                <Setter Property="FontSize" Value="{StaticResource smallTextSize}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="footerButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource secondaryColor}" />
+                <Setter Property="TextColor" Value="{StaticResource accentColor}" />
+                <Setter Property="FontSize" Value="{StaticResource smallTextSize}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,0,0,0" Android="0,0,0,0" />
+    </ContentPage.Padding>
+        
+    <StackLayout CompressedLayout.IsHeadless="true" Spacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <AbsoluteLayout BackgroundColor="#909090" HorizontalOptions="FillAndExpand" HeightRequest="60">
+            <AbsoluteLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" Android="0,0,0,0" />
+            </AbsoluteLayout.Padding>
+            <Button Margin="10,10" FontSize="12" Text="Cancel" BackgroundColor="Transparent" Command="{Binding CancelCommand}" Style="{StaticResource nakedButton}"/>
+            <Image AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.36, 0.7" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent" HeightRequest="36" Source="microsoft_gray.png" />
+            <Button IsVisible="{Binding IsLoggedIn}" Margin="10,10" BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="1, 0, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" FontSize="12" Text="Logout" Command="{Binding LogoutCommand}" Style="{StaticResource nakedButton}"/>
+        </AbsoluteLayout>
+        <Label HorizontalOptions="FillAndExpand" BackgroundColor="#D1D1D1" HeightRequest="22" TextColor="#000000" FontSize="14" HorizontalTextAlignment="Center" Text="{Binding Title}"/>
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout CompressedLayout.IsHeadless="true" Spacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Button Margin="0,10,0,0" IsVisible="{Binding CanEdit}" Text="    EDIT    " Style="{StaticResource primaryButton}" BackgroundColor="#9B9B9B" HeightRequest="35" HorizontalOptions="Center" Command="{Binding ToggleEditModeCommand}" />
+                <Button Margin="0,10,0,0" IsVisible="{Binding IsEditing}" Text="    EDITING    " BackgroundColor="#9B9B9B" Style="{StaticResource primaryButton}" HeightRequest="35" HorizontalOptions="Center" Command="{Binding ToggleEditModeCommand}" />
+                <StackLayout CompressedLayout.IsHeadless="true" Margin="20" Spacing="20" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                    <StackLayout CompressedLayout.IsHeadless="true" Spacing="10" Orientation="Vertical">
+                        <controls:CircleImage x:Name="ProfilePic" Source="david.jpg" BorderThickness="3" BorderColor="#9B9B9B" Aspect="AspectFill">
+                            <controls:CircleImage.WidthRequest>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="104" Android="104" WinPhone="104"/>
+                            </controls:CircleImage.WidthRequest>
+                            <controls:CircleImage.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="104" Android="104" WinPhone="104"/>
+                            </controls:CircleImage.HeightRequest>
+                        </controls:CircleImage>
+                        <Button IsVisible="{Binding CanSave}" Text="Change Photo" Style="{StaticResource nakedButton}" FontSize="12" BorderColor="Transparent" BorderWidth="0" BackgroundColor="Transparent" TextColor="#303030" />
+                    </StackLayout>
+                    <StackLayout CompressedLayout.IsHeadless="true" Spacing="10" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                        <Entry IsVisible="{Binding IsLoggedIn, Converter={StaticResource InvertedBoolConverter}}" HorizontalOptions="FillAndExpand" Placeholder="Username" Text="{Binding Username}" x:Name="UsernameEntry" />
+                        <Label IsVisible="{Binding IsLoggedIn}" Text="{Binding Username}" TextColor="#303030" FontSize="12" FontAttributes="Bold" HeightRequest="40" VerticalTextAlignment="Center" />
+                        <Entry IsEnabled="{Binding CanSave}" x:Name="EmailEntry" HorizontalOptions="FillAndExpand" Placeholder="Email" Text="{Binding UserEmail}" />
+                    </StackLayout>
+                </StackLayout>
+                <Grid CompressedLayout.IsHeadless="true" Margin="20, 0, 20, 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="53" />
+                        <RowDefinition Height="53" />
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="28" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="45" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Entry Grid.Row="0" Grid.Column="0" IsEnabled="{Binding CanSave}" x:Name="FirstNameEntry" HorizontalOptions="FillAndExpand" Placeholder="First Name" Text="{Binding FirstName}" />
+                    <Entry Grid.Row="0" Grid.Column="1" IsEnabled="{Binding CanSave}" x:Name="LastNameEntry" HorizontalOptions="FillAndExpand" Placeholder="Last Name" Text="{Binding LastName}" />
+                    <Entry Grid.Row="1" Grid.Column="0" IsEnabled="{Binding CanSave}" x:Name="PasswordEntry" IsPassword="true" HorizontalOptions="FillAndExpand" Placeholder="Password" Text="{Binding UserPassword}" />
+                    <Entry Grid.Row="1" Grid.Column="1" IsEnabled="{Binding CanSave}" x:Name="ConfirmPasswordEntry" IsPassword="true" HorizontalOptions="FillAndExpand" Placeholder="Confirm Password" Text="{Binding ConfirmUserPassword, Mode=TwoWay}" />
+                    <Label Grid.Row="2" Grid.ColumnSpan="2" IsEnabled="{Binding CanSave}" Margin="10" Text="Password must be 8 digits long and include 1 number and 1 capital letter." TextColor="#303030" FontSize="12" HorizontalOptions="FillAndExpand" />
+                    <local:StrengthIndicators IsEnabled="{Binding CanSave}" Strength="{Binding PasswordStrength}" HorizontalOptions="Center" Grid.Row="3" Grid.ColumnSpan="2" />
+                    <StackLayout CompressedLayout.IsHeadless="true" Margin="0,20,0,40" Grid.Row="4" Grid.ColumnSpan="2" IsVisible="{Binding IsLoggedIn}">
+                        <BoxView Margin="30,10" BackgroundColor="#9B9B9B" HorizontalOptions="FillAndExpand" HeightRequest="1" />
+                        <Label Text="Connected Accounts:" HorizontalOptions="Center" TextColor="#303030" FontSize="12"/>
+                        <local:ConnectSocialButton HorizontalOptions="Center" BindingContext="{Binding FacebookVM}" />
+                        <local:ConnectSocialButton HorizontalOptions="Center" BindingContext="{Binding TwitterVM}" />
+                        <local:ConnectSocialButton HorizontalOptions="Center" BindingContext="{Binding YouTubeVM}" />
+                        <local:ConnectSocialButton HorizontalOptions="Center" BindingContext="{Binding InstagramVM}" />
+                    </StackLayout>
+                    <Button Grid.Row="5" Grid.ColumnSpan="2" IsVisible="{Binding CanSave}" HeightRequest="45" x:Name="SaveButton" Style="{StaticResource primaryButton}" Text="        Submit        " HorizontalOptions="Center" Command="{Binding SaveCommand}" />
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

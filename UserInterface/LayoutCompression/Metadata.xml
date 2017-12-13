@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleMetadata>
+	<ID>0158be74-07e3-42a4-9a10-ddcdf293b775</ID>
+	<IsFullApplication>false</IsFullApplication>
+    <Brief>Layout compression removes specified layouts from the visual tree in an attempt to improve page rendering performance. This sample demonstrates how to enable layout compression, and the benefits it can bring when combined with fast renderers on Android.</Brief>
+	<Level>Beginner</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>User Interface, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>

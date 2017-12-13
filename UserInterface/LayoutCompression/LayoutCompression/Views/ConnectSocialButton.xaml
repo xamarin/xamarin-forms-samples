@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:converters="using:LayoutCompression" x:Class="LayoutCompression.ConnectSocialButton" x:Name="Self">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <converters:StringToColorConverter x:Key="StringToColorConverter"/>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <StackLayout CompressedLayout.IsHeadless="true">
+        <StackLayout CompressedLayout.IsHeadless="true" HeightRequest="32" Orientation="Horizontal">
+            <AbsoluteLayout CompressedLayout.IsHeadless="true" VerticalOptions="Center">
+                <Button WidthRequest="130" HeightRequest="32" BorderColor="#D5D5D5" BorderRadius="5" BorderWidth="1" BackgroundColor="{Binding BgColor, Converter={StaticResource StringToColorConverter}}" />    
+                <Image IsVisible="{Binding IsDisconnected}" AbsoluteLayout.LayoutBounds="11, 5, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="None" Source="{Binding DisconnectedImageUrl}"/>
+                <Image IsVisible="{Binding IsConnectingOrConnected}" AbsoluteLayout.LayoutBounds="11, 5, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="None" Source="{Binding ConnectedImageUrl}"/>
+                <BoxView AbsoluteLayout.LayoutBounds="41, 5, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="None" BackgroundColor="#D5D5D5" WidthRequest="1" HeightRequest="18" />
+                <Label AbsoluteLayout.LayoutBounds="53, 0.5, AutoSize, AutoSize" AbsoluteLayout.LayoutFlags="YProportional" Text="{Binding Network}" TextColor="{Binding LabelColor, Converter={StaticResource StringToColorConverter}}" FontSize="12"/>
+                <Button IsVisible="{Binding CanConnect}" Command="{Binding ConnectCommand}" WidthRequest="130" HeightRequest="32" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Transparent" BorderRadius="5"/>
+            </AbsoluteLayout>
+        </StackLayout>
+        <Label IsVisible="{Binding IsConnecting}" HorizontalOptions="CenterAndExpand" Text="Connecting..." FontSize="12" TextColor="#FF3F56"/>
+    </StackLayout>    
+</ContentView>

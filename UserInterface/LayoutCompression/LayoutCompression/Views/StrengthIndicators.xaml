@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:converters="using:LayoutCompression" x:Class="LayoutCompression.StrengthIndicators" x:Name="Self">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <converters:StrengthToBoolConverter x:Key="StrengthToBoolConverter" />
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <AbsoluteLayout>
+        <Image IsVisible="{Binding Strength, Converter={StaticResource StrengthToBoolConverter}, ConverterParameter=1, Source={x:Reference Self}}" Source="check_strength_1.png"/>
+        <Image IsVisible="{Binding Strength, Source={x:Reference Self}, Converter={StaticResource StrengthToBoolConverter}, ConverterParameter=2}" Source="check_strength_2.png"/>
+        <Image IsVisible="{Binding Strength, Source={x:Reference Self}, Converter={StaticResource StrengthToBoolConverter}, ConverterParameter=3}" Source="check_strength_3.png"/>
+        <Image IsVisible="{Binding Strength, Source={x:Reference Self}, Converter={StaticResource StrengthToBoolConverter}, ConverterParameter=4}" Source="check_strength_4.png"/>
+        <Image IsVisible="{Binding Strength, Source={x:Reference Self}, Converter={StaticResource StrengthToBoolConverter}, ConverterParameter=5}" Source="check_strength_5.png"/>
+        <Image IsVisible="{Binding Strength, Source={x:Reference Self}, Converter={StaticResource StrengthToBoolConverter}, ConverterParameter=6}" Source="check_strength_6.png"/>
+    </AbsoluteLayout>
+</ContentView>
