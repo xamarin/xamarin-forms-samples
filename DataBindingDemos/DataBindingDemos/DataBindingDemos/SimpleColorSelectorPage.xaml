@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DataBindingDemos"
-             x:Class="DataBindingDemos.SimpleColorSelectorPage">
+             x:Class="DataBindingDemos.SimpleColorSelectorPage"
+             Title="Simple Color Selector">
 
     <ContentPage.Resources>
         <ResourceDictionary>

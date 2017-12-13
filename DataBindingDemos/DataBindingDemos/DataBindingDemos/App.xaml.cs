@@ -13,8 +13,12 @@ namespace DataBindingDemos
         {
             InitializeComponent();
 
+            Settings = new SampleSettingsViewModel(Current.Properties);
+
             MainPage = new NavigationPage(new MainPage());
         }
+
+        public SampleSettingsViewModel Settings { private set; get; }
 
         protected override void OnStart()
         {
@@ -24,6 +28,7 @@ namespace DataBindingDemos
         protected override void OnSleep()
         {
             // Handle when your app sleeps
+            Settings.SaveState(Current.Properties);
         }
 
         protected override void OnResume()

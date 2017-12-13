@@ -57,6 +57,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NamedColor.cs" />
     <Compile Include="PathVariationsPage.xaml.cs">
       <DependentUpon>PathVariationsPage.xaml</DependentUpon>
     </Compile>
@@ -64,14 +65,12 @@
     <Compile Include="ReverseBindingPage.xaml.cs">
       <DependentUpon>ReverseBindingPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SampleSettingsPage.xaml.cs">
+      <DependentUpon>SampleSettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleSettingsViewModel.cs" />
     <Compile Include="SimpleColorSelectorPage.xaml.cs">
       <DependentUpon>SimpleColorSelectorPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TwoWayBindingPage.xaml.cs">
-      <DependentUpon>TwoWayBindingPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TwoWayListViewPage.xaml.cs">
-      <DependentUpon>TwoWayListViewPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -144,19 +143,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="TwoWayBindingPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="PathVariationsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="TwoWayListViewPage.xaml">
+    <EmbeddedResource Include="SampleSettingsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

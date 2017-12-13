@@ -46,17 +46,14 @@
                           Detail="Use a ViewModel for HSL Color"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:SimpleColorSelectorPage}" />
-
-                <TextCell Text="Two-Way Binding"
-                          Detail="Override the default binding mode"
+   
+                <TextCell Text="Sample Settings"
+                          Detail="Create a ViewModel for Settings"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:TwoWayBindingPage}" />
-
-
-
+                          CommandParameter="{x:Type local:SampleSettingsPage}" />
             </TableSection>
 
-            <TableSection>
+            <TableSection Title="Binding Path">
 
                 <TextCell Text="Path Variations"
                           Detail="Explore the various ways you can use Path"
