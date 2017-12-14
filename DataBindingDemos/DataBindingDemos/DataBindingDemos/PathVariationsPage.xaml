@@ -14,7 +14,13 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     
-    <StackLayout>
+    <StackLayout Margin="10, 0">
+        <TimePicker x:Name="timePicker" />
+
+        <Label Text="{Binding Source={x:Reference timePicker},
+                              Path=Time.TotalSeconds,
+                              StringFormat='{0} total seconds'}" />
+
         <Label Text="{Binding Source={x:Reference page},
                               Path=Content.Children.Count,
                               StringFormat='There are {0} children in this StackLayout'}" />

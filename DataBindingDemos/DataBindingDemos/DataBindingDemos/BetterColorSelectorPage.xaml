@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataBindingDemos"
+             x:Class="DataBindingDemos.BetterColorSelectorPage"
+             Title="Better Color Selector">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Slider">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+        
+    <StackLayout>
+        <StackLayout.BindingContext>
+            <local:HslColorViewModel Color="Sienna" />
+        </StackLayout.BindingContext>
+
+        <BoxView Color="{Binding Color}"
+                 VerticalOptions="FillAndExpand" />
+
+        <StackLayout Margin="10, 0">
+            <Label Text="{Binding Name}" />
+
+            <Slider Value="{Binding Hue}" />
+            <Label Text="{Binding Hue, StringFormat='Hue = {0:F2}'}" />
+
+            <Slider Value="{Binding Saturation}" />
+            <Label Text="{Binding Saturation, StringFormat='Saturation = {0:F2}'}" />
+
+            <Slider Value="{Binding Luminosity}" />
+            <Label Text="{Binding Luminosity, StringFormat='Luminosity = {0:F2}'}" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>    

@@ -53,6 +53,20 @@
                           CommandParameter="{x:Type local:SampleSettingsPage}" />
             </TableSection>
 
+            <TableSection Title="String Formatting">
+
+                <TextCell Text="String Formatting"
+                          Detail="Use standard .NET formatting specfications"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:StringFormattingPage}" />
+
+                <TextCell Text="Better Color Selector"
+                          Detail="Display Slider values for HSL Color"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BetterColorSelectorPage}" />
+
+            </TableSection>
+
             <TableSection Title="Binding Path">
 
                 <TextCell Text="Path Variations"

@@ -50,6 +50,9 @@
     <Compile Include="BasicXamlBindingPage.xaml.cs">
       <DependentUpon>BasicXamlBindingPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BetterColorSelectorPage.xaml.cs">
+      <DependentUpon>BetterColorSelectorPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BindingContextInheritancePage.xaml.cs">
       <DependentUpon>BindingContextInheritancePage.xaml</DependentUpon>
     </Compile>
@@ -71,6 +74,9 @@
     <Compile Include="SampleSettingsViewModel.cs" />
     <Compile Include="SimpleColorSelectorPage.xaml.cs">
       <DependentUpon>SimpleColorSelectorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StringFormattingPage.xaml.cs">
+      <DependentUpon>StringFormattingPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +156,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="SampleSettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="StringFormattingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BetterColorSelectorPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
