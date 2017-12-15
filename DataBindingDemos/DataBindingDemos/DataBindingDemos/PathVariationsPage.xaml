@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:globe="clr-namespace:System.Globalization;assembly=mscorlib"
              x:Class="DataBindingDemos.PathVariationsPage"
+             Title="Path Variations"
              x:Name="page">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -46,6 +47,6 @@
 
         <Label Text="{Binding Source={x:Reference page},
                               Path=Content.Children[1].Text.Length,
-                              StringFormat='The second Label has {0} characters'}" />
+                              StringFormat='The first Label has {0} characters'}" />
     </StackLayout>
 </ContentPage>
