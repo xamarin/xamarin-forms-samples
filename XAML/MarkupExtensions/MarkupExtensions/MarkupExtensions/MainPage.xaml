@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MarkupExtensions"
+             x:Class="MarkupExtensions.MainPage"
+             Title="Markup Extensions"
+             Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <!--<TableSection Title="">
+
+                <TextCell Text=""
+                          Detail=""
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Page}" />
+            </TableSection>-->
+
+            <TableSection Title="x:Null Markup Extension">
+
+                <TextCell Text="Default Font Family"
+                          Detail="Override setter in intrinsic Style"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:DefaultFontFamilyPage}" />
+
+            </TableSection>
+
+            <TableSection Title="x:Array Markup Extension">
+                <TextCell Text="ListView Array"
+                          Detail="Use an x:Array to fill a ListView"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ListViewArrayPage}" />
+
+            </TableSection>
+            
+        </TableRoot>
+    </TableView>
+</ContentPage>    
