@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace MarkupExtensions
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ListViewArrayPage : ContentPage
+    public partial class NullDemoPage : ContentPage
     {
-        public ListViewArrayPage()
+        public NullDemoPage()
         {
             InitializeComponent();
         }

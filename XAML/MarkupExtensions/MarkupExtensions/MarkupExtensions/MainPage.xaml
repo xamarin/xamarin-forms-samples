@@ -7,31 +7,32 @@
              Padding="10">
     <TableView Intent="Menu">
         <TableRoot>
-            <!--<TableSection Title="">
-
-                <TextCell Text=""
-                          Detail=""
+            <TableSection>
+                <TextCell Text="x:Static Demo"
+                          Detail="Access constants or statics"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Page}" />
-            </TableSection>-->
+                          CommandParameter="{x:Type local:StaticDemoPage}" />
 
-            <TableSection Title="x:Null Markup Extension">
-
-                <TextCell Text="Default Font Family"
-                          Detail="Override setter in intrinsic Style"
+                <TextCell Text="x:Reference Demo"
+                          Detail="Reference named elements on the page"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:DefaultFontFamilyPage}" />
+                          CommandParameter="{x:Type local:ReferenceDemoPage}" />
 
+                <TextCell Text="x:Type Demo"
+                          Detail="Associate a Button with a Type"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:TypeDemoPage}" />
+
+                <TextCell Text="x:Array Demo"
+                          Detail="Use an array to fill a ListView"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ArrayDemoPage}" />
+
+                <TextCell Text="x:Null Demo"
+                          Detail="Set a property equal to null"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:NullDemoPage}" />
             </TableSection>
-
-            <TableSection Title="x:Array Markup Extension">
-                <TextCell Text="ListView Array"
-                          Detail="Use an x:Array to fill a ListView"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:ListViewArrayPage}" />
-
-            </TableSection>
-            
         </TableRoot>
     </TableView>
 </ContentPage>    
