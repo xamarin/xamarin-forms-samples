@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceDictionaryDemo", "ResourceDictionaryDemo\ResourceDictionaryDemo.csproj", "{A5451AEF-B5AC-4525-805D-03BD77E27ACC}"
 EndProject
@@ -79,6 +79,7 @@ Global
 		{2A704DD4-BB6A-4EB2-81C3-EDD584A5D421}.Release|x86.ActiveCfg = Release|iPhoneSimulator
 		{B4E8DFC9-19BF-4B84-9DC3-1658AE34BDB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B4E8DFC9-19BF-4B84-9DC3-1658AE34BDB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E8DFC9-19BF-4B84-9DC3-1658AE34BDB0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{B4E8DFC9-19BF-4B84-9DC3-1658AE34BDB0}.Debug|ARM.ActiveCfg = Debug|Any CPU
 		{B4E8DFC9-19BF-4B84-9DC3-1658AE34BDB0}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{B4E8DFC9-19BF-4B84-9DC3-1658AE34BDB0}.Debug|iPhone.Build.0 = Debug|Any CPU

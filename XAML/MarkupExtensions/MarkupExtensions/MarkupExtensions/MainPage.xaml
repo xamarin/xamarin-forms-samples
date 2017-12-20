@@ -32,6 +32,16 @@
                           Detail="Set a property equal to null"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:NullDemoPage}" />
+
+                <TextCell Text="HSL Color Demo"
+                          Detail="Specify a Color with HSL components"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:HslColorDemoPage}" />
+
+                <TextCell Text="Image Resource Demo"
+                          Detail="Use a custom markup extension to access bitmaps"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ImageResourceDemoPage}" />
             </TableSection>
         </TableRoot>
     </TableView>

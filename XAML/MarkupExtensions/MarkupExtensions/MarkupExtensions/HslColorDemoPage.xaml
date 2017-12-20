@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MarkupExtensions"
+             x:Class="MarkupExtensions.HslColorDemoPage"
+             Title="HSL Color Demo">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="BoxView">
+                <Setter Property="WidthRequest" Value="80" />
+                <Setter Property="HeightRequest" Value="80" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout>
+        <BoxView>
+            <BoxView.Color>
+                <local:HslColorExtension H="0" S="1" L="0.5" A="1" />
+            </BoxView.Color>
+        </BoxView>
+
+        <BoxView>
+            <BoxView.Color>
+                <local:HslColor H="0.33" S="1" L="0.5" />
+            </BoxView.Color>
+        </BoxView>
+
+        <BoxView Color="{local:HslColorExtension H=0.67, S=1, L=0.5}" />
+
+        <BoxView Color="{local:HslColor H=0, S=0, L=0.5}" />
+
+        <BoxView Color="{local:HslColor A=0.5}" />
+    </StackLayout>
+</ContentPage>

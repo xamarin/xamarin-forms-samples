@@ -42,6 +42,14 @@
     <Compile Include="ArrayDemoPage.xaml.cs">
       <DependentUpon>ArrayDemoPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HslColorDemoPage.xaml.cs">
+      <DependentUpon>HslColorDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HslColorExtension.cs" />
+    <Compile Include="ImageResourceDemoPage.xaml.cs">
+      <DependentUpon>ImageResourceDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageResourceExtension.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -115,6 +123,23 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HslColorDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="ImageResourceDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\FacePalm.jpg" />
+    <EmbeddedResource Include="Images\SeatedMonkey.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.4.0.91020\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.91020\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
