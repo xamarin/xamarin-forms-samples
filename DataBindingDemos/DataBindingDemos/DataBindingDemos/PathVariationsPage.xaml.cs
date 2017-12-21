@@ -5,11 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace DataBindingDemos
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PathVariationsPage : ContentPage
     {
         public PathVariationsPage()
