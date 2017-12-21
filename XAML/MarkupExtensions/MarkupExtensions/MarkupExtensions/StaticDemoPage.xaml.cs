@@ -9,7 +9,6 @@ using Xamarin.Forms.Xaml;
 
 namespace MarkupExtensions
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StaticDemoPage : ContentPage
     {
         public StaticDemoPage()

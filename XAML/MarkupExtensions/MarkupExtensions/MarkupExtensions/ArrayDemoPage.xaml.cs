@@ -9,7 +9,6 @@ using Xamarin.Forms.Xaml;
 
 namespace MarkupExtensions
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ArrayDemoPage : ContentPage
     {
         public ArrayDemoPage()
