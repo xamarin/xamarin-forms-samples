@@ -8,7 +8,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Label">
-                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="FontSize" Value="24" />
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="VerticalOptions" Value="CenterAndExpand" />
             </Style>
@@ -16,6 +16,8 @@
     </ContentPage.Resources>
     
     <StackLayout Margin="10, 0">
+        <Label Text="Select a time:" />
+
         <TimePicker x:Name="timePicker" />
 
         <Label Text="{Binding Source={x:Reference timePicker},
@@ -33,7 +35,7 @@
         <Label>
             <Label.Text>
                 <Binding Path="DateTimeFormat.DayNames[3]"
-                         StringFormat="The middle day of the week in France is {0}">
+                         StringFormat="The middle day of the week in French is {0}">
                     <Binding.Source>
                         <globe:CultureInfo>
                             <x:Arguments>
@@ -46,7 +48,7 @@
         </Label>
 
         <Label Text="{Binding Source={x:Reference page},
-                              Path=Content.Children[1].Text.Length,
-                              StringFormat='The first Label has {0} characters'}" />
+                              Path=Content.Children[2].Text.Length,
+                              StringFormat='The second Label has {0} characters'}" />
     </StackLayout>
 </ContentPage>
