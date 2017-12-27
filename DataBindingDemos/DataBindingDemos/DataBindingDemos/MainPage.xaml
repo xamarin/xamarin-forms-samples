@@ -73,7 +73,25 @@
                           Detail="Explore the various ways you can use Path"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:PathVariationsPage}" />
+                
+            </TableSection>
 
+            <TableSection Title="Binding Value Converters">
+
+                <TextCell Text="Enable Buttons"
+                          Detail="Use a value convert to enable buttons"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:EnableButtonsPage}" />
+
+                <TextCell Text="Switch Indicators"
+                          Detail="Show the value of a Switch in various ways"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SwitchIndicatorsPage}" />
+
+                <TextCell Text="RGB Color Selector"
+                          Detail="Display hexadecimal color components"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:RgbColorSelectorPage}" />
 
             </TableSection>
         </TableRoot>

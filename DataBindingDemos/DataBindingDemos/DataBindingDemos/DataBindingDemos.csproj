@@ -56,7 +56,13 @@
     <Compile Include="BindingContextInheritancePage.xaml.cs">
       <DependentUpon>BindingContextInheritancePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BoolToObjectConverter.cs" />
+    <Compile Include="DoubleToIntConverter.cs" />
+    <Compile Include="EnableButtonsPage.xaml.cs">
+      <DependentUpon>EnableButtonsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HslColorViewModel.cs" />
+    <Compile Include="IntToBoolConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -68,6 +74,10 @@
     <Compile Include="ReverseBindingPage.xaml.cs">
       <DependentUpon>ReverseBindingPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RgbColorSelectorPage.xaml.cs">
+      <DependentUpon>RgbColorSelectorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RgbColorViewModel.cs" />
     <Compile Include="SampleSettingsPage.xaml.cs">
       <DependentUpon>SampleSettingsPage.xaml</DependentUpon>
     </Compile>
@@ -77,6 +87,9 @@
     </Compile>
     <Compile Include="StringFormattingPage.xaml.cs">
       <DependentUpon>StringFormattingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SwitchIndicatorsPage.xaml.cs">
+      <DependentUpon>SwitchIndicatorsPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +181,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BetterColorSelectorPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EnableButtonsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RgbColorSelectorPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SwitchIndicatorsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
