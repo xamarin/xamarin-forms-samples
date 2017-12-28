@@ -94,6 +94,29 @@
                           CommandParameter="{x:Type local:RgbColorSelectorPage}" />
 
             </TableSection>
+
+            <TableSection Title="Command">
+
+                <TextCell Text="RPN Calculator"
+                          Detail=""
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:RpnCalculatorPage}" />
+
+            </TableSection>
+
+            <TableSection Title="Compiled Bindings">
+
+                <TextCell Text="Compiled Color List"
+                          Detail=""
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CompiledColorListPage}" />
+
+                <TextCell Text="Compiled Color Selector"
+                          Detail=""
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CompiledColorSelectorPage}" />
+
+            </TableSection>
         </TableRoot>
     </TableView>
 </ContentPage>

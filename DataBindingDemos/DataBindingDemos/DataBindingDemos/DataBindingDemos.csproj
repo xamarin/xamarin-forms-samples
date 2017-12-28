@@ -57,6 +57,12 @@
       <DependentUpon>BindingContextInheritancePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="BoolToObjectConverter.cs" />
+    <Compile Include="CompiledColorListPage.xaml.cs">
+      <DependentUpon>CompiledColorListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CompiledColorSelectorPage.xaml.cs">
+      <DependentUpon>CompiledColorSelectorPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DoubleToIntConverter.cs" />
     <Compile Include="EnableButtonsPage.xaml.cs">
       <DependentUpon>EnableButtonsPage.xaml</DependentUpon>
@@ -78,6 +84,9 @@
       <DependentUpon>RgbColorSelectorPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="RgbColorViewModel.cs" />
+    <Compile Include="RpnCalculatorPage.xaml.cs">
+      <DependentUpon>RpnCalculatorPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SampleSettingsPage.xaml.cs">
       <DependentUpon>SampleSettingsPage.xaml</DependentUpon>
     </Compile>
@@ -199,6 +208,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="SwitchIndicatorsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CompiledColorListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CompiledColorSelectorPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RpnCalculatorPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

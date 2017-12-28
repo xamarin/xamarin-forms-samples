@@ -8,28 +8,26 @@ namespace DataBindingDemos
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            string strParam = parameter as string;
-            double multiplier = 1;
-
-            if (!String.IsNullOrEmpty(strParam))
-            {
-                Double.TryParse(strParam, out multiplier);
-            }
-
-            return (int)Math.Round((double)value * multiplier);
+            return (int)Math.Round((double)value * GetParameter(parameter));
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            string strParam = parameter as string;
-            double divider = 1;
+            return (int)value / GetParameter(parameter);
+        }
 
-            if (!String.IsNullOrEmpty(strParam))
-            {
-                Double.TryParse(strParam, out divider);
-            }
+        double GetParameter(object parameter)
+        {
+            if (parameter is double)
+                return (double)parameter;
 
-            return (int)value / divider;
+            else if (parameter is int)
+                return (int)parameter;
+
+            else if (parameter is string)
+                return double.Parse((string)parameter);
+
+            return 1;
         }
     }
 }

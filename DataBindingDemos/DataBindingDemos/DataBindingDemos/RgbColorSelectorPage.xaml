@@ -42,10 +42,17 @@
                                   StringFormat='Green = {0:X2}'}" />
 
             <Slider Value="{Binding Blue}" />
-            <Label Text="{Binding Blue, 
-                                  Converter={StaticResource doubleToInt},
-                                  ConverterParameter=255,
-                                  StringFormat='Blue = {0:X2}'}" />
+            <Label>
+                <Label.Text>
+                    <Binding Path="Blue"
+                             StringFormat="Blue = {0:X2}"
+                             Converter="{StaticResource doubleToInt}">
+                        <Binding.ConverterParameter>
+                            <x:Double>255</x:Double>
+                        </Binding.ConverterParameter>
+                    </Binding>
+                </Label.Text>
+            </Label>
         </StackLayout>
     </StackLayout>
 </ContentPage>    
