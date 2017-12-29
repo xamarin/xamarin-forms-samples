@@ -97,10 +97,15 @@
 
             <TableSection Title="Command">
 
-                <TextCell Text="RPN Calculator"
+                <TextCell Text="Person Entry"
+                          Detail="Use the Command interface in a view model"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PersonEntryPage}" />
+
+                <!--<TextCell Text="RPN Calculator"
                           Detail=""
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:RpnCalculatorPage}" />
+                          CommandParameter="{x:Type local:RpnCalculatorPage}" />-->
 
             </TableSection>
 

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace DataBindingDemos
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RpnCalculatorPage : ContentPage
+    public partial class PersonEntryPage : ContentPage
     {
-        public RpnCalculatorPage()
+        public PersonEntryPage()
         {
             InitializeComponent();
         }

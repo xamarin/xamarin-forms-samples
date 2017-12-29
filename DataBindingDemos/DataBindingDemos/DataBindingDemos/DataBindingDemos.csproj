@@ -63,6 +63,8 @@
     <Compile Include="CompiledColorSelectorPage.xaml.cs">
       <DependentUpon>CompiledColorSelectorPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DecimalKeypadPage.cs" />
+    <Compile Include="DecimalKeypadViewModel.cs" />
     <Compile Include="DoubleToIntConverter.cs" />
     <Compile Include="EnableButtonsPage.xaml.cs">
       <DependentUpon>EnableButtonsPage.xaml</DependentUpon>
@@ -76,6 +78,11 @@
     <Compile Include="PathVariationsPage.xaml.cs">
       <DependentUpon>PathVariationsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PersonCollectionViewModel.cs" />
+    <Compile Include="PersonEntryPage.xaml.cs">
+      <DependentUpon>PersonEntryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PersonViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReverseBindingPage.xaml.cs">
       <DependentUpon>ReverseBindingPage.xaml</DependentUpon>
@@ -84,9 +91,6 @@
       <DependentUpon>RgbColorSelectorPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="RgbColorViewModel.cs" />
-    <Compile Include="RpnCalculatorPage.xaml.cs">
-      <DependentUpon>RpnCalculatorPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="SampleSettingsPage.xaml.cs">
       <DependentUpon>SampleSettingsPage.xaml</DependentUpon>
     </Compile>
@@ -225,7 +229,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="RpnCalculatorPage.xaml">
+    <EmbeddedResource Include="PersonEntryPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
