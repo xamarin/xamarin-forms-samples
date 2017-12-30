@@ -34,24 +34,22 @@ namespace Todo
 			string requestUri = GenerateRequestUri(Constants.SpeechRecognitionEndpoint);
 			string accessToken = authenticationService.GetAccessToken();
 			var response = await SendRequestAsync(fileStream, requestUri, accessToken, Constants.AudioContentType);
-			var speechResults = JsonConvert.DeserializeObject<SpeechResults>(response);
+			var speechResult = JsonConvert.DeserializeObject<SpeechResult>(response);
 
 			fileStream.Dispose();
-			return speechResults.results.FirstOrDefault();
+            return speechResult;
 		}
 
 		string GenerateRequestUri(string speechEndpoint)
 		{
-			string requestUri = speechEndpoint;
-			requestUri += @"?scenarios=ulm";                                    // websearch is the other option
-			requestUri += @"&appid=D4D52672-91D7-4C74-8AD8-42B1D98141A5";       // You must use this ID.
-			requestUri += @"&locale=en-US";                                     // Other languages supported.
-			requestUri += string.Format("&device.os={0}", operatingSystem);     // Open field
-			requestUri += @"&version=3.0";                                      // Required value
-			requestUri += @"&format=json";                                      // Required value
-			requestUri += @"&instanceid=fe34a4de-7927-4e24-be60-f0629ce1d808";  // GUID for device making the request
-			requestUri += @"&requestid=" + Guid.NewGuid().ToString();           // GUID for the request
-			return requestUri;
+            // To build a request URL, you should follow below guidance.
+            // https://docs.microsoft.com/en-us/azure/cognitive-services/speech/concepts#recognition-languages
+            string requestUri = speechEndpoint;
+            requestUri += @"dictation/cognitiveservices/v1?";       // 指定听写模式
+            requestUri += @"language=en-us";                        // 指定要识别的语言
+            requestUri += @"&format=simple";                        // 指定输出格式
+            System.Diagnostics.Debug.WriteLine(requestUri.ToString());
+            return requestUri;
 		}
 
 		async Task<string> SendRequestAsync(Stream fileStream, string url, string bearerToken, string contentType)
