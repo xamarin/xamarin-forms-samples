@@ -63,7 +63,9 @@
     <Compile Include="CompiledColorSelectorPage.xaml.cs">
       <DependentUpon>CompiledColorSelectorPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DecimalKeypadPage.cs" />
+    <Compile Include="DecimalKeypadPage.xaml.cs">
+      <DependentUpon>DecimalKeypadPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DecimalKeypadViewModel.cs" />
     <Compile Include="DoubleToIntConverter.cs" />
     <Compile Include="EnableButtonsPage.xaml.cs">
@@ -230,6 +232,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="PersonEntryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DecimalKeypadPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

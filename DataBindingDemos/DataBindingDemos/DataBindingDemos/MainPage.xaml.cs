@@ -10,11 +10,12 @@ namespace DataBindingDemos
         {
             InitializeComponent();
 
-            NavigateCommand = new Command<Type>(async (Type pageType) =>
-            {
-                Page page = (Page)Activator.CreateInstance(pageType);
-                await Navigation.PushAsync(page);
-            });
+            NavigateCommand = new Command<Type>(
+                async (Type pageType) =>
+                {
+                    Page page = (Page)Activator.CreateInstance(pageType);
+                    await Navigation.PushAsync(page);
+                });
 
             BindingContext = this;
         }

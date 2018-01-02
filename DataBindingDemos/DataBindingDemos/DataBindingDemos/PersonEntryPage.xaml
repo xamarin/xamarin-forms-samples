@@ -43,10 +43,12 @@
                        Grid.Row="0" Grid.Column="1" />
 
                 <Label Text="Age: " Grid.Row="1" Grid.Column="0" />
-                <StackLayout Grid.Row="1" Grid.Column="1">
+                <StackLayout Orientation="Horizontal" 
+                             Grid.Row="1" Grid.Column="1">
                     <Stepper Value="{Binding Age}"
                              Maximum="100" />
-                    <Label Text="{Binding Age, StringFormat='{0} years old'}" />
+                    <Label Text="{Binding Age, StringFormat='{0} years old'}"
+                           VerticalOptions="Center" />
                 </StackLayout>
 
                 <Label Text="Skills: " Grid.Row="2" Grid.Column="0" />

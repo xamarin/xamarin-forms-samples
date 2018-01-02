@@ -102,22 +102,22 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:PersonEntryPage}" />
 
-                <!--<TextCell Text="RPN Calculator"
-                          Detail=""
+                <TextCell Text="Decimal Keypad"
+                          Detail="Use the Command interface for a keypad"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:RpnCalculatorPage}" />-->
+                          CommandParameter="{x:Type local:DecimalKeypadPage}" />
 
             </TableSection>
 
             <TableSection Title="Compiled Bindings">
 
                 <TextCell Text="Compiled Color List"
-                          Detail=""
+                          Detail="Display a color list with compiled bindings"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:CompiledColorListPage}" />
 
                 <TextCell Text="Compiled Color Selector"
-                          Detail=""
+                          Detail="Select colors with compiled bindings"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:CompiledColorSelectorPage}" />
 

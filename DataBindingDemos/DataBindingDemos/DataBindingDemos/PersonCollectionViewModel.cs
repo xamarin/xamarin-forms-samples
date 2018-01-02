@@ -18,28 +18,28 @@ namespace DataBindingDemos
         public PersonCollectionViewModel()
         {
             NewCommand = new Command(
-                () =>
+                execute: () =>
                 {
                     PersonEdit = new PersonViewModel();
                     PersonEdit.PropertyChanged += OnPersonEditPropertyChanged;
                     IsEditing = true;
-                    ChangeCanExecutes();
+                    RefreshCanExecutes();
                 },
-                () =>
+                canExecute: () =>
                 {
                     return !IsEditing;
                 });
 
             SubmitCommand = new Command(
-                () =>
+                execute: () =>
                 {
                     Persons.Add(PersonEdit);
                     PersonEdit.PropertyChanged -= OnPersonEditPropertyChanged;
                     PersonEdit = null;
                     IsEditing = false;
-                    ChangeCanExecutes();
+                    RefreshCanExecutes();
                 },
-                () =>
+                canExecute: () =>
                 {
                     return PersonEdit != null && 
                            PersonEdit.Name != null && 
@@ -48,17 +48,29 @@ namespace DataBindingDemos
                 });
 
             CancelCommand = new Command(
-                () =>
+                execute: () =>
                 {
                     PersonEdit.PropertyChanged -= OnPersonEditPropertyChanged;
                     PersonEdit = null;
                     IsEditing = false;
-                    ChangeCanExecutes();
+                    RefreshCanExecutes();
                 },
-                () =>
+                canExecute: () =>
                 {
                     return IsEditing;
                 }); 
+        }
+
+        void OnPersonEditPropertyChanged(object sender, PropertyChangedEventArgs args)
+        {
+            (SubmitCommand as Command).ChangeCanExecute();
+        }
+
+        void RefreshCanExecutes()
+        {
+            (NewCommand as Command).ChangeCanExecute();
+            (SubmitCommand as Command).ChangeCanExecute();
+            (CancelCommand as Command).ChangeCanExecute();
         }
 
         public bool IsEditing
@@ -81,18 +93,6 @@ namespace DataBindingDemos
 
         public IList<PersonViewModel> Persons { get; } = new ObservableCollection<PersonViewModel>();
 
-        void ChangeCanExecutes()
-        {
-            (NewCommand as Command).ChangeCanExecute();
-            (SubmitCommand as Command).ChangeCanExecute();
-            (CancelCommand as Command).ChangeCanExecute();
-        }
-
-        void OnPersonEditPropertyChanged(object sender, PropertyChangedEventArgs args)
-        {
-            (SubmitCommand as Command).ChangeCanExecute();
-        }
-
         bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
         {
             if (Object.Equals(storage, value))
@@ -107,6 +107,5 @@ namespace DataBindingDemos
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
     }
 }

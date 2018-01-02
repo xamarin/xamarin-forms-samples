@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataBindingDemos"
+             x:Class="DataBindingDemos.DecimalKeypadPage"
+             Title="Decimal Keyboard">
+
+    <Grid WidthRequest="240"
+          HeightRequest="480"
+          ColumnSpacing="2"
+          RowSpacing="2"
+          HorizontalOptions="Center"
+          VerticalOptions="Center">
+
+        <Grid.BindingContext>
+            <local:DecimalKeypadViewModel />
+        </Grid.BindingContext>
+        
+        <Grid.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Button">
+                    <Setter Property="FontSize" Value="32" />
+                    <Setter Property="BorderWidth" Value="1" />
+                    <Setter Property="BorderColor" Value="Black" />
+                </Style>
+            </ResourceDictionary>
+        </Grid.Resources>
+
+        <Label Text="{Binding Entry}"
+               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+               FontSize="32"
+               LineBreakMode="HeadTruncation"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="End" />
+
+        <Button Text="CLEAR"
+                Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                Command="{Binding ClearCommand}" />
+
+        <Button Text="&#x21E6;"
+                Grid.Row="1" Grid.Column="2" 
+                Command="{Binding BackspaceCommand}" />
+
+        <Button Text="7"
+                Grid.Row="2" Grid.Column="0" 
+                Command="{Binding DigitCommand}"
+                CommandParameter="7" />
+
+        <Button Text="8"
+                Grid.Row="2" Grid.Column="1" 
+                Command="{Binding DigitCommand}"
+                CommandParameter="8" />
+        
+        <Button Text="9"
+                Grid.Row="2" Grid.Column="2" 
+                Command="{Binding DigitCommand}"
+                CommandParameter="9" />
+
+        <Button Text="4"
+                Grid.Row="3" Grid.Column="0" 
+                Command="{Binding DigitCommand}"
+                CommandParameter="4" />
+
+        <Button Text="5"
+                Grid.Row="3" Grid.Column="1" 
+                Command="{Binding DigitCommand}"
+                CommandParameter="5" />
+
+        <Button Text="6"
+                Grid.Row="3" Grid.Column="2" 
+                Command="{Binding DigitCommand}"
+                CommandParameter="6" />
+
+        <Button Text="1"
+                Grid.Row="4" Grid.Column="0" 
+                Command="{Binding DigitCommand}"
+                CommandParameter="1" />
+
+        <Button Text="2"
+                Grid.Row="4" Grid.Column="1" 
+                Command="{Binding DigitCommand}"
+                CommandParameter="2" />
+
+        <Button Text="3"
+                Grid.Row="4" Grid.Column="2" 
+                Command="{Binding DigitCommand}"
+                CommandParameter="3" />
+
+        <Button Text="0"
+                Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+                Command="{Binding DigitCommand}"
+                CommandParameter="0" />
+
+        <Button Text="&#x00B7;"
+                Grid.Row="5" Grid.Column="2" 
+                Command="{Binding DigitCommand}"
+                CommandParameter="." />
+    </Grid>
+</ContentPage>
