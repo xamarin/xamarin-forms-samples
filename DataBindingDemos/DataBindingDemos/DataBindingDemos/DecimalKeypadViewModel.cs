@@ -47,7 +47,7 @@ namespace DataBindingDemos
                 },
                 canExecute: (string arg) =>
                 {
-                    return !(arg == "." && entry.Contains("."));
+                    return !(arg == "." && Entry.Contains("."));
                 });
         }
 

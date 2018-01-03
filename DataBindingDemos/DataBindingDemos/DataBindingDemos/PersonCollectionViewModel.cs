@@ -33,8 +33,8 @@ namespace DataBindingDemos
             SubmitCommand = new Command(
                 execute: () =>
                 {
-                    Persons.Add(PersonEdit);
                     PersonEdit.PropertyChanged -= OnPersonEditPropertyChanged;
+                    Persons.Add(PersonEdit);
                     PersonEdit = null;
                     IsEditing = false;
                     RefreshCanExecutes();
