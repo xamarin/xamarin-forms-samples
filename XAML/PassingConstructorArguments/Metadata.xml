@@ -3,7 +3,7 @@
 	<ID>51d19eff-d20a-4d94-9a65-e522a85175ad</ID>
 	<IsFullApplication>false</IsFullApplication>
 	<Level>Beginner</Level>
-	<Tags>XAML Xamarin.Forms</Tags>
+	<Tags>Xamarin.Forms, XAML</Tags>
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
