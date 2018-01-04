@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:MarkupExtensions"
+             x:Class="MarkupExtensions.StaticDemoPage"
+             Title="x:Static Demo">
+    <StackLayout Margin="10, 0">
+        <Label Text="Label No. 1">
+            <Label.FontSize>
+                <x:StaticExtension Member="local:AppConstants.NormalFontSize" />
+            </Label.FontSize>
+        </Label>
+
+        <Label Text="Label No. 2">
+            <Label.FontSize>
+                <x:Static Member="local:AppConstants.NormalFontSize" />
+            </Label.FontSize>
+        </Label>
+
+        <Label Text="Label No. 3"
+               FontSize="{x:StaticExtension Member=local:AppConstants.NormalFontSize}" />
+
+        <Label Text="Label No. 4"
+               FontSize="{x:Static Member=local:AppConstants.NormalFontSize}" />
+        
+        <Label Text="Label No. 5"
+               FontSize="{x:Static local:AppConstants.NormalFontSize}" />
+
+        <Label Text="&#x03C0; &#x00D7; E sized text"
+               FontSize="{x:Static sys:Math.PI}"
+               Scale="{x:Static sys:Math.E}" 
+               HorizontalOptions="Center" />
+
+        <Label HorizontalTextAlignment="Center"
+               FontSize="{x:Static local:AppConstants.NormalFontSize}">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Runtime Platform: " />
+                    <Span Text="{x:Static sys:Environment.NewLine}" />
+                    <Span Text="{x:Static Device.RuntimePlatform}" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentPage>

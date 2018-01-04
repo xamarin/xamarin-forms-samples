@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MarkupExtensions.ArrayDemoPage"
+             Title="x:Array Demo Page">
+    <ListView Margin="10">
+        <ListView.ItemsSource>
+            <x:Array Type="{x:Type Color}">
+                <Color>Aqua</Color>
+                <Color>Black</Color>
+                <Color>Blue</Color>
+                <Color>Fuchsia</Color>
+                <Color>Gray</Color>
+                <Color>Green</Color>
+                <Color>Lime</Color>
+                <Color>Maroon</Color>
+                <Color>Navy</Color>
+                <Color>Olive</Color>
+                <Color>Pink</Color>
+                <Color>Purple</Color>
+                <Color>Red</Color>
+                <Color>Silver</Color>
+                <Color>Teal</Color>
+                <Color>White</Color>
+                <Color>Yellow</Color>
+            </x:Array>
+        </ListView.ItemsSource>
+            
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <BoxView Color="{Binding}"
+                             Margin="3" />    
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+                
+    </ListView>
+</ContentPage>        

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MarkupExtensions"
+             x:Class="MarkupExtensions.ImageResourceDemoPage"
+             Title="Image Resource Demo">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Image Source="{local:ImageResource Images.SeatedMonkey.jpg}"
+               Grid.Row="0" />
+
+        <Image Source="{local:ImageResource Images.FacePalm.jpg}"
+               Grid.Row="1" />
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>28F7614E-3EEC-479C-B359-F0C91144582F</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Intermediate</Level>
+	<Tags>Xamarin.Forms, XAML</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>This sample demonstrates data binding in both code and XAML.</Brief>
+</SampleMetadata>

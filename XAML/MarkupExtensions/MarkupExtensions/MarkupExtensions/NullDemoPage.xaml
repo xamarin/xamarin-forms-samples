@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MarkupExtensions.NullDemoPage"
+             Title="x:Null Demo">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="48" />
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Times New Roman" />
+                            <On Platform="Android" Value="serif" />
+                            <On Platform="UWP" Value="Times New Roman" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="10, 0">
+            <Label Text="Text 1" />
+            <Label Text="Text 2" />
+
+            <Label Text="Text 3"
+                   FontFamily="{x:Null}" />
+
+            <Label Text="Text 4" />
+            <Label Text="Text 5" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>    
