@@ -1,12 +1,8 @@
 ﻿using System;
+using System.Reflection;
 using System.Xml;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-
-
-using System.Reflection;
-
 
 namespace MarkupExtensions
 {
@@ -25,7 +21,6 @@ namespace MarkupExtensions
             }
 
             string assemblyName = GetType().GetTypeInfo().Assembly.GetName().Name;
-
             return ImageSource.FromResource(assemblyName + "." + Source);
         }
 

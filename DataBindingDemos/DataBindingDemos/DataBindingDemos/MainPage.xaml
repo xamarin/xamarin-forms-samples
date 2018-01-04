@@ -79,7 +79,7 @@
             <TableSection Title="Binding Value Converters">
 
                 <TextCell Text="Enable Buttons"
-                          Detail="Use a value convert to enable buttons"
+                          Detail="Use a value converter to enable buttons"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:EnableButtonsPage}" />
 
@@ -95,7 +95,7 @@
 
             </TableSection>
 
-            <TableSection Title="Command">
+            <TableSection Title="Commanding">
 
                 <TextCell Text="Person Entry"
                           Detail="Use the Command interface in a view model"
@@ -106,20 +106,6 @@
                           Detail="Use the Command interface for a keypad"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:DecimalKeypadPage}" />
-
-            </TableSection>
-
-            <TableSection Title="Compiled Bindings">
-
-                <TextCell Text="Compiled Color List"
-                          Detail="Display a color list with compiled bindings"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:CompiledColorListPage}" />
-
-                <TextCell Text="Compiled Color Selector"
-                          Detail="Select colors with compiled bindings"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:CompiledColorSelectorPage}" />
 
             </TableSection>
         </TableRoot>
