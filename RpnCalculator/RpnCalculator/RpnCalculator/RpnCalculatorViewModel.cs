@@ -91,8 +91,8 @@ namespace RpnCalculator
                         case "acos": result = Math.Acos(arg); break;
                         case "atan": result = Math.Atan(arg); break;
                         case "negate": result = -arg; break;
-                        case "rad": result = Math.PI * arg / 180; break;
-                        case "deg": result = 180 * arg / Math.PI; break;
+                        case "radians": result = Math.PI * arg / 180; break;
+                        case "degrees": result = 180 * arg / Math.PI; break;
                     }
 
                     stack.Push(result);
@@ -112,11 +112,11 @@ namespace RpnCalculator
 
                     switch (op)
                     {
-                        case "divide": result = x / y; break;
-                        case "multiply": result = x * y; break;
-                        case "subtract": result = x - y; break;
-                        case "add": result = x + y; break;
-                        case "power": result = Math.Pow(x, y); break;
+                        case "divide": result = y / x; break;
+                        case "multiply": result = y * x; break;
+                        case "subtract": result = y - x; break;
+                        case "add": result = y + x; break;
+                        case "pow": result = Math.Pow(y, x); break;
                         case "swap": stack.Push(x); result = y; break;
                     }
 
@@ -152,14 +152,14 @@ namespace RpnCalculator
 
         public double XStackValue
         {
-            get { return stack.Count > 0 ? stack.Peek() : 0; }
+            get { return stack.Count > 0 ? stack.Peek() : double.NaN; }
         }
 
         public double YStackValue
         {
             get
             {
-                double result = 0;
+                double result = double.NaN;
 
                 if (stack.Count > 1)
                 {

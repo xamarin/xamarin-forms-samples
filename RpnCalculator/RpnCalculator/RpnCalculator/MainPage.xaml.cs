@@ -9,13 +9,7 @@ namespace RpnCalculator
         {
             InitializeComponent();
 
-            SizeChanged += (sender, args) =>
-            {
-                bool isLandscape = Width > Height;
-                portrait.IsVisible = portrait.IsEnabled = !isLandscape;
-                landscape.IsVisible = landscape.IsEnabled = isLandscape;
-            };
-
+            SizeChanged += (sender, args) => portrait.IsVisible = !(landscape.IsVisible = Width > Height);
         }
     }
 }
