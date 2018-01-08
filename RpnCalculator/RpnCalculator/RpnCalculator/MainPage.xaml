@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RpnCalculator"
+             x:Class="RpnCalculator.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0, 20, 0, 0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ContentPage.BindingContext>
+        <local:RpnCalculatorViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Grid">
+                <Setter Property="RowSpacing" Value="2" />
+                <Setter Property="ColumnSpacing" Value="2" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="End" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="BorderColor" Value="Black" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid Margin="5">
+        
+        <!-- Portrait: 10 rows, 5 columns -->
+        <Grid x:Name="portrait">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- X and Y Stack Values -->
+            <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5"
+                   Padding="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Y = " 
+                           Grid.Row="0" Grid.Column="0" />
+
+                    <Label Text="{Binding YStackValue}"
+                           Grid.Row="0" Grid.Column="1" />
+
+                    <Label Text="X = " 
+                           Grid.Row="1" Grid.Column="0" />
+
+                    <Label Text="{Binding XStackValue}"
+                           Grid.Row="1" Grid.Column="1" />
+                </Grid>
+            </Frame>
+
+            <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5"
+                   Padding="0">
+                <Label Text="{Binding Entry}"
+                       FontSize="Large" />
+            </Frame>
+
+            <!-- Operations --> 
+            <Button Text="y&#x1D61;"
+                    Grid.Row="2" Grid.Column="0"
+                    Command="{Binding BinaryOperation}"
+                    CommandParameter="pow" />
+            
+            <Button Text="sin" 
+                    Grid.Row="2" Grid.Column="1"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="sin" />
+
+            <Button Text="cos" 
+                    Grid.Row="2" Grid.Column="2"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="cos" />
+        
+            <Button Text="tan" 
+                    Grid.Row="2" Grid.Column="3"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="tan" />
+
+            <Button Text="rad" 
+                    Grid.Row="2" Grid.Column="4"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="radians" />
+
+            <Button Text="log"
+                    Grid.Row="3" Grid.Column="0"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="log10" />
+
+            <Button Text="asin" 
+                    Grid.Row="3" Grid.Column="1"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="asin" />
+
+            <Button Text="acos" 
+                    Grid.Row="3" Grid.Column="2"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="acos" />
+
+            <Button Text="atan" 
+                    Grid.Row="3" Grid.Column="3"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="atan" />
+
+            <Button Text="deg" 
+                    Grid.Row="3" Grid.Column="4"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="degrees" />
+
+            <Button Text="ln"
+                    Grid.Row="4" Grid.Column="0"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="log" />
+            
+            <Button Text="e&#x1D61;"
+                    Grid.Row="5" Grid.Column="0"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="exp" />
+
+            <Button Text="&#x221A;"
+                    Grid.Row="6" Grid.Column="0"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="sqrt" />
+
+            <Button Text="1/x"
+                    Grid.Row="7" Grid.Column="0"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="invert" />
+
+            <Button Text="+/&#x2013;"
+                    Grid.Row="8" Grid.Column="0"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="negate" />
+
+            <Button Text="x&#x21D4;y"
+                    Grid.Row="9" Grid.Column="0"
+                    Command="{Binding BinaryOperation}"
+                    CommandParameter="swap" />
+
+            <!-- Numeric Keypad -->
+            <Button Text="C"
+                    Grid.Row="4" Grid.Column="1"
+                    Command="{Binding ClearCommand}" />
+
+            <Button Text="CE"
+                    Grid.Row="4" Grid.Column="2"
+                    Command="{Binding ClearEntryCommand}" />
+
+            <Button Text="&#x21E6;"
+                    Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2"
+                    Command="{Binding BackspaceCommand}" />
+
+            <Button Text="7" 
+                    Grid.Row="5" Grid.Column="1"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="7" />
+
+            <Button Text="8" 
+                    Grid.Row="5" Grid.Column="2"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="8" />
+
+            <Button Text="9" 
+                    Grid.Row="5" Grid.Column="3"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="9" />
+
+            <Button Text="/" 
+                    Grid.Row="5" Grid.Column="4"
+                    Command="{Binding BinaryOperation}"
+                    CommandParameter="divide" />
+
+            <Button Text="4" 
+                    Grid.Row="6" Grid.Column="1"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="4" />
+
+            <Button Text="5" 
+                    Grid.Row="6" Grid.Column="2"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="5" />
+
+            <Button Text="6" 
+                    Grid.Row="6" Grid.Column="3"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="6" />
+
+            <Button Text="&#x00D7;" 
+                    Grid.Row="6" Grid.Column="4"
+                    Command="{Binding BinaryOperation}"
+                    CommandParameter="multiply" />
+
+            <Button Text="1" 
+                    Grid.Row="7" Grid.Column="1"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="1" />
+
+            <Button Text="2" 
+                    Grid.Row="7" Grid.Column="2"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="2" />
+
+            <Button Text="3" 
+                    Grid.Row="7" Grid.Column="3"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="3" />
+
+            <Button Text="&#x2013;" 
+                    Grid.Row="7" Grid.Column="4"
+                    Command="{Binding BinaryOperation}"
+                    CommandParameter="subtract" />
+
+            <Button Text="0" 
+                    Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="0" />
+
+            <Button Text="&#x00B7;" 
+                    Grid.Row="8" Grid.Column="3"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="." />
+
+            <Button Text="+" 
+                    Grid.Row="8" Grid.Column="4"
+                    Command="{Binding BinaryOperation}"
+                    CommandParameter="add" />
+            
+            <Button Text="ENTER" 
+                    Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="4"
+                    Command="{Binding EnterCommand}" />
+        </Grid>
+
+        <!-- Landscape: 6 rows, 8 columns -->
+        <Grid x:Name="landscape">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- X and Y Stack Values -->
+            <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
+                   Padding="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Y = " 
+                           Grid.Row="0" Grid.Column="0" />
+
+                    <Label Text="{Binding YStackValue}"
+                           Grid.Row="0" Grid.Column="1" />
+
+                    <Label Text="X = " 
+                           Grid.Row="1" Grid.Column="0" />
+
+                    <Label Text="{Binding XStackValue}"
+                           Grid.Row="1" Grid.Column="1" />
+                </Grid>
+            </Frame>
+
+            <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4"
+                   Padding="0">
+                <Label Text="{Binding Entry}"
+                       FontSize="Large" />
+            </Frame>
+            
+            <!-- Operations -->
+            <Button Text="y&#x1D61;"
+                    Grid.Row="2" Grid.Column="0"
+                    Command="{Binding BinaryOperation}"
+                    CommandParameter="pow" />
+
+            <Button Text="log"
+                    Grid.Row="2" Grid.Column="1"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="log10" />
+
+            <Button Text="ln"
+                    Grid.Row="2" Grid.Column="2"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="log" />
+
+            <Button Text="e&#x1D61;"
+                    Grid.Row="2" Grid.Column="3"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="exp" />
+
+            <Button Text="&#x221A;"
+                    Grid.Row="3" Grid.Column="0"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="sqrt" />
+
+            <Button Text="sin"
+                    Grid.Row="3" Grid.Column="1"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="sin" />
+
+            <Button Text="cos"
+                    Grid.Row="3" Grid.Column="2"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="cos" />
+
+            <Button Text="tan"
+                    Grid.Row="3" Grid.Column="3"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="tan" />
+
+            <Button Text="1/x"
+                    Grid.Row="4" Grid.Column="0"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="invert" />
+
+            <Button Text="asin"
+                    Grid.Row="4" Grid.Column="1"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="asin" />
+
+            <Button Text="acos"
+                    Grid.Row="4" Grid.Column="2"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="acos" />
+
+            <Button Text="atan"
+                    Grid.Row="4" Grid.Column="3"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="atan" />
+
+            <Button Text="+/&#x2013;"
+                    Grid.Row="5" Grid.Column="0"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="negate" />
+
+            <Button Text="x&#x21D4;y"
+                    Grid.Row="5" Grid.Column="1"
+                    Command="{Binding BinaryOperation}"
+                    CommandParameter="swap" />
+
+            <Button Text="rad"
+                    Grid.Row="5" Grid.Column="2"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="radians" />
+
+            <Button Text="deg"
+                    Grid.Row="5" Grid.Column="3"
+                    Command="{Binding UnaryOperation}"
+                    CommandParameter="degrees" />
+
+            <!-- Numeric Keypad -->
+            <Button Text="C"
+                    Grid.Row="0" Grid.Column="4"
+                    Command="{Binding ClearCommand}" />
+
+            <Button Text="CE"
+                    Grid.Row="0" Grid.Column="5"
+                    Command="{Binding ClearEntryCommand}" />
+
+            <Button Text="&#x21E6;"
+                    Grid.Row="0" Grid.Column="6" Grid.ColumnSpan="2"
+                    Command="{Binding BackspaceCommand}" />
+
+            <Button Text="7" 
+                    Grid.Row="1" Grid.Column="4"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="7" />
+
+            <Button Text="8" 
+                    Grid.Row="1" Grid.Column="5"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="8" />
+
+            <Button Text="9" 
+                    Grid.Row="1" Grid.Column="6"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="9" />
+
+            <Button Text="/" 
+                    Grid.Row="1" Grid.Column="7"
+                    Command="{Binding BinaryOperation}"
+                    CommandParameter="divide" />
+
+            <Button Text="4" 
+                    Grid.Row="2" Grid.Column="4"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="4" />
+
+            <Button Text="5" 
+                    Grid.Row="2" Grid.Column="5"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="5" />
+
+            <Button Text="6" 
+                    Grid.Row="2" Grid.Column="6"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="6" />
+
+            <Button Text="&#x00D7;" 
+                    Grid.Row="2" Grid.Column="7"
+                    Command="{Binding BinaryOperation}"
+                    CommandParameter="multiply" />
+
+            <Button Text="1" 
+                    Grid.Row="3" Grid.Column="4"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="1" />
+
+            <Button Text="2" 
+                    Grid.Row="3" Grid.Column="5"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="2" />
+
+            <Button Text="3" 
+                    Grid.Row="3" Grid.Column="6"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="3" />
+
+            <Button Text="&#x2013;" 
+                    Grid.Row="3" Grid.Column="7"
+                    Command="{Binding BinaryOperation}"
+                    CommandParameter="subtract" />
+
+            <Button Text="0" 
+                    Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="0" />
+
+            <Button Text="&#x00B7;" 
+                    Grid.Row="4" Grid.Column="6"
+                    Command="{Binding DigitCommand}"
+                    CommandParameter="." />
+
+            <Button Text="+" 
+                    Grid.Row="4" Grid.Column="7"
+                    Command="{Binding BinaryOperation}"
+                    CommandParameter="add" />
+
+            <Button Text="ENTER" 
+                    Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="4"
+                    Command="{Binding EnterCommand}" />
+        </Grid>
+    </Grid>
+</ContentPage>
