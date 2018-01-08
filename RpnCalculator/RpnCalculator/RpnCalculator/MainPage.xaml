@@ -5,7 +5,7 @@
              x:Class="RpnCalculator.MainPage">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
-            <On Platform="iOS" Value="0, 10, 0, 0" />
+            <On Platform="iOS" Value="0, 20, 0, 0" />
         </OnPlatform>
     </ContentPage.Padding>
 
@@ -75,13 +75,13 @@
                     <Label Text="Y = " 
                            Grid.Row="0" Grid.Column="0" />
 
-                    <Label Text="{Binding YStackValue, StringFormat='{0:G}'}"
+                    <Label Text="{Binding YStackValue}"
                            Grid.Row="0" Grid.Column="1" />
 
                     <Label Text="X = " 
                            Grid.Row="1" Grid.Column="0" />
 
-                    <Label Text="{Binding XStackValue, StringFormat='{0:G}'}"
+                    <Label Text="{Binding XStackValue}"
                            Grid.Row="1" Grid.Column="1" />
                 </Grid>
             </Frame>
@@ -199,7 +199,7 @@
             <Button Text="9" 
                     Grid.Row="5" Grid.Column="3"
                     Command="{Binding DigitCommand}"
-                    CommandParameter="8" />
+                    CommandParameter="9" />
 
             <Button Text="/" 
                     Grid.Row="5" Grid.Column="4"
@@ -305,13 +305,13 @@
                     <Label Text="Y = " 
                            Grid.Row="0" Grid.Column="0" />
 
-                    <Label Text="{Binding YStackValue, StringFormat='{0:G}'}"
+                    <Label Text="{Binding YStackValue}"
                            Grid.Row="0" Grid.Column="1" />
 
                     <Label Text="X = " 
                            Grid.Row="1" Grid.Column="0" />
 
-                    <Label Text="{Binding XStackValue, StringFormat='{0:G}'}"
+                    <Label Text="{Binding XStackValue}"
                            Grid.Row="1" Grid.Column="1" />
                 </Grid>
             </Frame>
@@ -429,7 +429,7 @@
             <Button Text="9" 
                     Grid.Row="1" Grid.Column="6"
                     Command="{Binding DigitCommand}"
-                    CommandParameter="8" />
+                    CommandParameter="9" />
 
             <Button Text="/" 
                     Grid.Row="1" Grid.Column="7"

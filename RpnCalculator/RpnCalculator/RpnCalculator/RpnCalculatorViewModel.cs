@@ -150,21 +150,21 @@ namespace RpnCalculator
             get { return entry; }
         }
 
-        public double XStackValue
+        public string XStackValue
         {
-            get { return stack.Count > 0 ? stack.Peek() : double.NaN; }
+            get { return stack.Count > 0 ? stack.Peek().ToString() : ""; }
         }
 
-        public double YStackValue
+        public string YStackValue
         {
             get
             {
-                double result = double.NaN;
+                string result = "";
 
                 if (stack.Count > 1)
                 {
                     double hold = stack.Pop();
-                    result = stack.Peek();
+                    result = stack.Peek().ToString();
                     stack.Push(hold);
                 }
 
