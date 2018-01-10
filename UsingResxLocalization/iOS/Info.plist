@@ -53,5 +53,7 @@
 	<string>en</string>
 	<key>CFBundleName</key>
 	<string>ResxEnglish</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.xamarin.usingresxlocalization</string>
 </dict>
 </plist>
