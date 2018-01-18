@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="4" package="org.tizen.example.BoxViewClock.Tizen" version="1.0.0">
+	<profile name="common" />
+	<ui-application appid="org.tizen.example.BoxViewClock.Tizen"
+					exec="BoxViewClock.Tizen.dll"
+					type="dotnet"
+					multiple="false"
+					taskmanage="true"
+					launch_mode="single">
+	<icon>BoxViewClock.Tizen.png</icon>
+	<label>BoxViewClock.Tizen</label>
+	<metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
+	</ui-application>
+</manifest>
