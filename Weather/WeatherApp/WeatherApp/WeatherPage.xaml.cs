@@ -1,17 +1,17 @@
 ﻿using System;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace WeatherApp
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WeatherPage : ContentPage
     {
         public WeatherPage()
         {
             InitializeComponent();
-            this.Title = "Sample Weather App";
-            getWeatherBtn.Clicked += GetWeatherBtn_Clicked;
 
-            //Set the default binding to a default object for now
+            //Set the default binding to a default object for now  
             this.BindingContext = new Weather();
         }
 
@@ -20,11 +20,8 @@ namespace WeatherApp
             if (!String.IsNullOrEmpty(zipCodeEntry.Text))
             {
                 Weather weather = await Core.GetWeather(zipCodeEntry.Text);
-                if (weather != null)
-                {
-                    this.BindingContext = weather;
-                    getWeatherBtn.Text = "Search Again";
-                }
+                this.BindingContext = weather;
+                getWeatherBtn.Text = "Search Again";
             }
         }
     }

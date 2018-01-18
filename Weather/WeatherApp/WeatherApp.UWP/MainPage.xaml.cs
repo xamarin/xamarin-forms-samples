@@ -22,6 +22,17 @@ namespace WeatherApp.UWP
             this.InitializeComponent();
 
             LoadApplication(new WeatherApp.App());
+
+            SizeChanged += (sender, args) =>
+            {
+                System.Diagnostics.Debug.WriteLine("Page size: {0}", new Size(ActualWidth, ActualHeight));
+
+            };
+
+                Window.Current.SizeChanged += (sender, args) =>
+                {
+                    System.Diagnostics.Debug.WriteLine("Window size: {0}", args.Size);
+                };
         }
     }
 }
