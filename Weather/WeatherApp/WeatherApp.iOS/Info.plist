@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -21,11 +21,11 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>9.0</string>
+	<string>11.2</string>
 	<key>CFBundleDisplayName</key>
-	<string>WeatherForms</string>
+	<string>WeatherApp</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.WeatherApp.Forms</string>
+	<string>com.yourcompany.WeatherApp</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>CFBundleIconFiles</key>
@@ -49,6 +49,6 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
-	<string>WeatherForms</string>
+	<string>WeatherApp</string>
 </dict>
 </plist>

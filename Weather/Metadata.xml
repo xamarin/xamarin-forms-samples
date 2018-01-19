@@ -3,7 +3,7 @@
 	<ID>71D70AA5-FE69-4934-8FDB-3486D33155FC</ID>
 	<IsFullApplication>true</IsFullApplication>
 	<Level>Beginner</Level>
-	<Tags>User Interface, Getting Started</Tags>
+	<Tags>Xamarin.Forms, User Interface, Getting Started</Tags>
 	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
 	<LicenseRequirement>Starter</LicenseRequirement>
 	<Brief>Demonstrates a cross-platform app using Xamarin.Forms that retrieves data from a weather service.</Brief>
