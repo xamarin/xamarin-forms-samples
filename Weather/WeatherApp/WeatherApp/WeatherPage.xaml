@@ -65,22 +65,22 @@
                 <Label Text="{Binding Title}" Style="{StaticResource fieldStyle}" />
                 
                 <Label Text="Temperature" Style="{StaticResource labelStyle}" />
-                <Label x:Name="tempLabel" Text="{Binding Temperature}" Style="{StaticResource fieldStyle}" />
+                <Label Text="{Binding Temperature}" Style="{StaticResource fieldStyle}" />
                 
                 <Label Text="Wind Speed" Style="{StaticResource labelStyle}" />
-                <Label x:Name="windLabel" Text="{Binding Wind}" Style="{StaticResource fieldStyle}" />
+                <Label Text="{Binding Wind}" Style="{StaticResource fieldStyle}" />
                 
                 <Label Text="Humidity" Style="{StaticResource labelStyle}" />
-                <Label x:Name="humidityLabel" Text="{Binding Humidity}" Style="{StaticResource fieldStyle}" />
+                <Label Text="{Binding Humidity}" Style="{StaticResource fieldStyle}" />
                 
                 <Label Text="Visibility" Style="{StaticResource labelStyle}" />
-                <Label x:Name="visibilitylabel" Text="{Binding Visibility}" Style="{StaticResource fieldStyle}" />
+                <Label Text="{Binding Visibility}" Style="{StaticResource fieldStyle}" />
                 
                 <Label Text="Time of Sunrise" Style="{StaticResource labelStyle}" />
-                <Label x:Name="sunriseLabel" Text="{Binding Sunrise}" Style="{StaticResource fieldStyle}" />
+                <Label Text="{Binding Sunrise}" Style="{StaticResource fieldStyle}" />
                 
                 <Label Text="Time of Sunset" Style="{StaticResource labelStyle}" />
-                <Label x:Name="sunsetLabel" Text="{Binding Sunset}" Style="{StaticResource fieldStyle}" />
+                <Label Text="{Binding Sunset}" Style="{StaticResource fieldStyle}" />
             </StackLayout>
         </ScrollView>
     </StackLayout>

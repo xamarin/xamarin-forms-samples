@@ -12,7 +12,7 @@ namespace WeatherApp
             InitializeComponent();
 
             //Set the default binding to a default object for now  
-            this.BindingContext = new Weather();
+            BindingContext = new Weather();
         }
 
         private async void GetWeatherBtn_Clicked(object sender, EventArgs e)
@@ -20,7 +20,7 @@ namespace WeatherApp
             if (!String.IsNullOrEmpty(zipCodeEntry.Text))
             {
                 Weather weather = await Core.GetWeather(zipCodeEntry.Text);
-                this.BindingContext = weather;
+                BindingContext = weather;
                 getWeatherBtn.Text = "Search Again";
             }
         }
