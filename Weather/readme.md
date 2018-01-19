@@ -1,4 +1,4 @@
-WeatherApp for Xamarin.Forms
+Weather App for Xamarin.Forms
 ==========
 
 WeatherApp is an example that accompanies [Learn app-building basics with Xamarin.Forms in Visual Studio](https://docs.microsoft.com/en-us/visualstudio/cross-platform/learn-app-building-basics-with-xamarin-forms-in-visual-studio).
