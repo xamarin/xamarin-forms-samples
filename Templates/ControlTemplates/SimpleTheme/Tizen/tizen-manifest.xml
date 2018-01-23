@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="SimpleTheme.Tizen" version="1.0.7">
+<manifest xmlns="http://tizen.org/ns/packages" api-version="4" package="SimpleTheme.Tizen" version="1.0.7">
 	<profile name="common" />
 	<ui-application appid="org.tizen.example.SimpleTheme.Tizen"
 					exec="SimpleTheme.Tizen.dll"

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="CustomRenderer.Map.Tizen" version="1.0.6">
+<manifest xmlns="http://tizen.org/ns/packages" api-version="4" package="CustomRenderer.Map.Tizen" version="1.0.6">
 	<profile name="common" />
 	<ui-application appid="org.tizen.example.CustomRenderer.Map.Tizen"
 					exec="CustomRenderer.Map.Tizen.dll"

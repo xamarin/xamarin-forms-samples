@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest package="ShadowEffect.Tizen" version="1.0.7" api-version="3.0" xmlns="http://tizen.org/ns/packages">
+<manifest package="ShadowEffect.Tizen" version="1.0.7" api-version="4" xmlns="http://tizen.org/ns/packages">
     <profile name="common" />
     <ui-application appid="org.tizen.example.ShadowEffect.Tizen" exec="EffectsDemo.Tizen.dll" multiple="false" taskmanage="true" splash-screen-display="true" type="dotnet" launch_mode="single">
         <icon>EffectsDemo.Tizen.png</icon>
