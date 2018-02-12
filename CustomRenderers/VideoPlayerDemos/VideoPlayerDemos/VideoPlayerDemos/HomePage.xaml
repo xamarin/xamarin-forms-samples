@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:VideoPlayerDemos"
+             x:Class="VideoPlayerDemos.HomePage"
+             Title="VideoPlayer Demos"
+             Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="Play Web Video"
+                          Detail="Play a video by specifying a URL"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PlayWebVideoPage}" />
+
+                <TextCell Text="Select Web Video" 
+                          Detail="Select a video from a ListView"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SelectWebVideoPage}" />
+                
+                <TextCell Text="Bind to VideoPlayer"
+                          Detail="Select a video with a ListView binding"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BindToVideoPlayerPage}" />
+
+                <TextCell Text="Play Video Resource"
+                          Detail="Play a video saved as a resource"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PlayVideoResourcePage}" />
+
+                <TextCell Text="Play Library Video"
+                          Detail="Play a video from the photos and videos library"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PlayLibraryVideoPage}" />
+
+                <TextCell Text="Custom Transport"
+                          Detail="Play a video with custom Play and Pause buttons"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CustomTransportPage}" />
+
+                <TextCell Text="Custom Position Bar"
+                          Detail="Play a video with a custom position bar"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CustomPositionBarPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

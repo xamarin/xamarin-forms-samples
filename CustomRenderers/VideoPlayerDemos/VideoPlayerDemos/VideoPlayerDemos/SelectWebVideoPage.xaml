@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:video="clr-namespace:FormsVideoLibrary"
+             x:Class="VideoPlayerDemos.SelectWebVideoPage"
+             Title="Select Web Video">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <video:VideoPlayer x:Name="videoPlayer"
+                           Grid.Row="0" />
+
+        <ListView Grid.Row="1"
+                  ItemSelected="OnListViewItemSelected">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Elephant's Dream</x:String>
+                    <x:String>Big Buck Bunny</x:String>
+                    <x:String>Sintel</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+    </Grid>
+</ContentPage>

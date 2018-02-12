@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:video="clr-namespace:FormsVideoLibrary"
+             x:Class="VideoPlayerDemos.App">
+	<Application.Resources>
+        <ResourceDictionary>
+
+            <video:UriVideoSource x:Key="ElephantsDream"
+                                  Uri="https://archive.org/download/ElephantsDream/ed_hd_512kb.mp4" />
+
+            <video:UriVideoSource x:Key="BigBuckBunny"
+                                  Uri="https://archive.org/download/BigBuckBunny_328/BigBuckBunny_512kb.mp4" />
+
+            <video:UriVideoSource x:Key="Sintel"
+                                  Uri="https://archive.org/download/Sintel/sintel-2048-stereo_512kb.mp4" />
+            
+        </ResourceDictionary>
+	</Application.Resources>
+</Application>
