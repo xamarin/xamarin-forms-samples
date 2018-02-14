@@ -16,3 +16,9 @@ You can learn about MAT here:
 
 
 **MAT** stores language information in [XLIFF](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=xliff) (.xlf) files which are parsed into RESX files at build time. It is the RESX files that are loaded by the application to render the translated user-interface. The XLIFF files are **edited in Visual Studio** and the build step that transforms them only runs there, so language data should only be edited on Windows... luckily this runs in Visual Studio Express. You can then push your app (including the generated RESX files) into source control - they'll work fine for iOS, Android, and the Universal Windows Platform projects.
+
+_Note_: This sample may not work on Xamarin Live Player due to dependency on SQLite.
+ 
+ 
+ Learn more about Xamarin Live Player limitations [here](https://developer.xamarin.com/guides/cross-platform/live/limitations/#Limitations)
+ Learn more about Xamarin Live Player limitations [here](https://developer.xamarin.com/guides/cross-platform/live/limitations/#Limitations)
