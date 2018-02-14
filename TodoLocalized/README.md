@@ -21,4 +21,3 @@ _Note_: This sample may not work on Xamarin Live Player due to dependency on SQL
  
  
  Learn more about Xamarin Live Player limitations [here](https://developer.xamarin.com/guides/cross-platform/live/limitations/#Limitations)
- Learn more about Xamarin Live Player limitations [here](https://developer.xamarin.com/guides/cross-platform/live/limitations/#Limitations)
