@@ -60,12 +60,12 @@ namespace Todo
 				if (!isRecording)
 				{
 					var speechResult = await bingSpeechService.RecognizeSpeechAsync(Constants.AudioFilename);
-					Debug.WriteLine("Name: " + speechResult.Name);
-					Debug.WriteLine("Confidence: " + speechResult.Confidence);
+                    Debug.WriteLine("Name: " + speechResult.DisplayText);
+                    Debug.WriteLine("Recognition Status: " + speechResult.RecognitionStatus);
 
-					if (!string.IsNullOrWhiteSpace(speechResult.Name))
+                    if (!string.IsNullOrWhiteSpace(speechResult.DisplayText))
 					{
-						TodoItem.Name = char.ToUpper(speechResult.Name[0]) + speechResult.Name.Substring(1);
+                        TodoItem.Name = char.ToUpper(speechResult.DisplayText[0]) + speechResult.DisplayText.Substring(1);
 						OnPropertyChanged("TodoItem");
 					}
 				}

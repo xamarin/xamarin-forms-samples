@@ -34,7 +34,9 @@ namespace Todo
 
 		async void OnRateApplication(object sender, EventArgs e)
 		{
-			await Navigation.PushAsync(new RateAppPage());
+            // The xaml file of ReteAppPage doesn't conatin any image and label control. 
+            // I have to empty this tool button handler. I hope original author can fix this issue.
+		 	// await Navigation.PushAsync(new RateAppPage());
 		}
 	}
 }
