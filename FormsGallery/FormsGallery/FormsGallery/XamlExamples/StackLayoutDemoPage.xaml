@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.StackLayoutDemoPage"
+             Title="StackLayout">
+    <StackLayout>
+        <Label Text="StackLayout"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <StackLayout Spacing="0"
+                     VerticalOptions="FillAndExpand"
+                     Margin="10">
+            <Label Text="StackLayout"
+                   HorizontalOptions="Start" />
+
+            <Label Text="stacks its children"
+                   HorizontalOptions="Center" />
+
+            <Label Text="vertically"
+                   HorizontalOptions="End" />
+
+            <Label Text="by default,"
+                   HorizontalOptions="Center" />
+
+            <Label Text="but horizontal placement"
+                   HorizontalOptions="Start" />
+
+            <Label Text="can be controlled with"
+                   HorizontalOptions="Center" />
+
+            <Label Text="the HorizontalOptions property."
+                   HorizontalOptions="End" />
+
+            <Label Text=
+"An Expand option allows one or more children
+to occupy the an area within the remaining
+space of the StackLayout after it's been sized
+to the height of its parent."
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="End" />
+
+            <StackLayout Spacing="0"
+                         Orientation="Horizontal">
+
+                <Label Text="Stacking" />
+                <Label Text="can also be"
+                       HorizontalOptions="CenterAndExpand" />
+                <Label Text="horizontal." />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

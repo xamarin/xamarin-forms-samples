@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.PickerDemoPage"
+             Title="Picker Demo">
+    <StackLayout>
+        <Label Text="Picker"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Picker Title="Color"
+                VerticalOptions="CenterAndExpand"
+                Margin="10, 0"
+                SelectedIndexChanged="OnPickerSelectedIndexChanged">
+            <Picker.Items>
+                <x:String>Aqua</x:String>
+                <x:String>Black</x:String>
+                <x:String>Blue</x:String>
+                <x:String>Fuchsia</x:String>
+                <x:String>Gray</x:String>
+                <x:String>Green</x:String>
+                <x:String>Lime</x:String>
+                <x:String>Maroon</x:String>
+                <x:String>Navy</x:String>
+                <x:String>Olive</x:String>
+                <x:String>Purple</x:String>
+                <x:String>Red</x:String>
+                <x:String>Silver</x:String>
+                <x:String>Teal</x:String>
+                <x:String>White</x:String>
+                <x:String>Yellow</x:String>
+            </Picker.Items>
+        </Picker>
+        
+        <BoxView x:Name="boxView"
+                 WidthRequest="150"
+                 HeightRequest="150"
+                 HorizontalOptions="Center"
+                 VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>

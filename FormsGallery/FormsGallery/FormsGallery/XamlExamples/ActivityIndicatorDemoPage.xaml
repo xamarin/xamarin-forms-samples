@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.ActivityIndicatorDemoPage"
+             Title="ActivityIndicator">
+    <StackLayout>
+        <Label Text="ActivityIndicator"
+               FontSize="40"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <ActivityIndicator IsRunning="True"
+                           VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>

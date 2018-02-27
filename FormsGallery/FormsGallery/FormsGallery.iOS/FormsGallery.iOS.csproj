@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.props')" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.4.0.38779\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.38779\build\netstandard1.0\Xamarin.Forms.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{3E598DD3-5E94-465B-A9B6-3527DAD96BF9}</ProjectGuid>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29AE58F7-406F-4D66-BBEC-2BCF05DC1D8D}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>FormsGallery.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>FormsTemplateiOS</AssemblyName>
-    <NuGetPackageImportStamp>9fceced1</NuGetPackageImportStamp>
-    <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
-    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <AssemblyName>FormsGallery.iOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,9 +24,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
-    <MtouchArch>i386, x86_64</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -33,9 +34,9 @@
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>i386, x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,9 +47,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <MtouchDebug>true</MtouchDebug>
-    <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -56,9 +58,10 @@
     <OutputPath>bin\iPhone\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -67,9 +70,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
-    <CodesignKey>iPhone Distribution</CodesignKey>
-    <BuildIpa>True</BuildIpa>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <DebugType>none</DebugType>
@@ -78,83 +83,92 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
-    <CodesignKey>iPhone Distribution</CodesignKey>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist">
+      <SubType>Designer</SubType>
+    </None>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork@2x" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FormsGallery\FormsGallery.csproj">
-      <Name>FormsGallery</Name>
-      <Project>{3CD45692-4376-4FFA-B9ED-3A9503728016}</Project>
-    </ProjectReference>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon-60%403x.png" />
+    <BundleResource Include="Resources\Icon-76.png" />
+    <BundleResource Include="Resources\Icon-76%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40.png" />
+    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40%403x.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\Icon-Small%403x.png" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
+    <Reference Include="OpenTK-1.0" />
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.282\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.38779\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Maps, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.4.0.282\lib\Xamarin.iOS10\Xamarin.Forms.Maps.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Maps, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.4.0.38779\lib\Xamarin.iOS10\Xamarin.Forms.Maps.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Maps.iOS, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.4.0.282\lib\Xamarin.iOS10\Xamarin.Forms.Maps.iOS.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Maps.iOS, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.4.0.38779\lib\Xamarin.iOS10\Xamarin.Forms.Maps.iOS.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.282\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.38779\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Platform.iOS, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.282\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Platform.iOS, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.38779\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.282\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.38779\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Icon.png" />
-    <BundleResource Include="Resources\Icon%402x.png" />
-    <BundleResource Include="Resources\Icon-60%402x.png" />
-    <BundleResource Include="Resources\Icon-72.png" />
-    <BundleResource Include="Resources\Icon-76.png" />
-    <BundleResource Include="Resources\Icon-72%402x.png" />
-    <BundleResource Include="Resources\Icon-76%402x.png" />
-    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
-    <BundleResource Include="Resources\Icon-Small-40.png" />
-    <BundleResource Include="Resources\Icon-Small-50%402x.png" />
-    <BundleResource Include="Resources\Icon-Small-50.png" />
-    <BundleResource Include="Resources\Icon-Small%402x.png" />
-    <BundleResource Include="Resources\Icon-Small.png" />
-    <BundleResource Include="Resources\Default.png" />
-    <BundleResource Include="Resources\Default%402x.png" />
-    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <ProjectReference Include="..\FormsGallery\FormsGallery.csproj">
+      <Project>{9876e983-d7b4-45e2-b00e-160c3aed2862}</Project>
+      <Name>FormsGallery</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ITunesArtwork Include="iTunesArtwork%402x" />
-    <ITunesArtwork Include="iTunesArtwork" />
+    <BundleResource Include="Resources\csharp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\xaml.png" />
+  </ItemGroup>
+  <Import Project="..\FormsGallery.Shared\FormsGallery.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.props'))" />
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.4.0.38779\build\netstandard1.0\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.4.0.38779\build\netstandard1.0\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.4.0.38779\build\netstandard1.0\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.4.0.38779\build\netstandard1.0\Xamarin.Forms.targets'))" />
   </Target>
-  <Import Project="..\..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.4.0.38779\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.38779\build\netstandard1.0\Xamarin.Forms.targets')" />
 </Project>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:FormsGallery"
+              x:Class="FormsGallery.XamlExamples.CarouselPageDemoPage"
+              Title="CarouselPage Demo">
+    
+    <CarouselPage.ItemsSource>
+        <x:Array Type="{x:Type local:NamedColor}">
+            <local:NamedColor Name="Red" Color="Red" />
+            <local:NamedColor Name="Yellow" Color="Yellow" />
+            <local:NamedColor Name="Green" Color="Green" />
+            <local:NamedColor Name="Aqua" Color="Aqua" />
+            <local:NamedColor Name="Blue" Color="Blue" />
+            <local:NamedColor Name="Purple" Color="Purple" />
+        </x:Array>
+    </CarouselPage.ItemsSource>
+
+    <CarouselPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage>
+                <ContentPage.Resources>
+                    <ResourceDictionary>
+                        <Style TargetType="Label">
+                            <Setter Property="FontSize" Value="Large" />
+                            <Setter Property="HorizontalTextAlignment" Value="End" />
+                        </Style>
+                    </ResourceDictionary>
+                </ContentPage.Resources>
+
+                <StackLayout>
+                    <Label Text="{Binding Name}"
+                           FontSize="50"
+                            HorizontalOptions="Center" />
+
+                    <StackLayout HorizontalOptions="Center"
+                                 VerticalOptions="CenterAndExpand">
+
+                        <Label Text="{Binding Color.R, StringFormat='R = {0:F2}'}" />
+                        <Label Text="{Binding Color.G, StringFormat='G = {0:F2}'}" />
+                        <Label Text="{Binding Color.B, StringFormat='B = {0:F2}'}" />
+                    </StackLayout>
+
+                    <BoxView Color="{Binding Color}"
+                             WidthRequest="100"
+                             HeightRequest="100"
+                             HorizontalOptions="Center" />
+
+                    <StackLayout HorizontalOptions="Center"
+                                 VerticalOptions="CenterAndExpand">
+
+                        <Label Text="{Binding Color.Hue, StringFormat='Hue = {0:F2}'}" />
+                        <Label Text="{Binding Color.Saturation, StringFormat='Saturation = {0:F2}'}" />
+                        <Label Text="{Binding Color.Luminosity, StringFormat='Luminosity = {0:F2}'}" />
+                    </StackLayout>
+                </StackLayout>
+            </ContentPage>
+        </DataTemplate>
+    </CarouselPage.ItemTemplate>
+</CarouselPage>
