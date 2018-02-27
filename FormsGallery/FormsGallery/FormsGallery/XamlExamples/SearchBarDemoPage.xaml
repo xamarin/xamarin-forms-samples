@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.SearchBarDemoPage"
+             Title="SearchBar Demo"
+             Padding="10, 0">
+    <StackLayout>
+        <Label Text="SearchBar"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <SearchBar Placeholder="Xamarin.Forms Property"
+                   SearchButtonPressed="OnSearchBarButtonPressed" />
+
+        <ScrollView VerticalOptions="FillAndExpand">
+            <Label x:Name="resultsLabel" />
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.ContentViewDemoPage"
+             Title="ContentView Demo">
+    <StackLayout>
+        <Label Text="ContentView"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <ContentView BackgroundColor="Aqua"
+                     Margin="10"
+                     Padding="25"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="CenterAndExpand">
+            <Label Text=
+"The ContentView (colored aqua in this
+example) might not seem very useful
+because it can have a single child
+(in this example a Label) and doesn't
+do much else. But ContentView is sometimes a
+convenient way of providing a background
+color or giving a little margin to its
+child through its own Padding property."
+                   TextColor="Purple" />
+        </ContentView>
+    </StackLayout>
+</ContentPage>

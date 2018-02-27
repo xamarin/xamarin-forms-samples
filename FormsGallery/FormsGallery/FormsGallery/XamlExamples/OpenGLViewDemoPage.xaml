@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.OpenGLViewDemoPage"
+             Title="OpenGLView Demo">
+    
+    <!--
+        OpenGLView is only supported in iOS and Android projects.
+            To enable it, add a new Reference in the iOS and Android 
+            projects to a Framework assembly. In the list, select
+            openTK-1.0 (for iOS) and OpenTK 1.0.0.0 (for Android).
+    -->
+    
+    <StackLayout>
+        <Label Text="OpenGLView"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <OpenGLView x:Name="openGLView"
+                    VerticalOptions="FillAndExpand" />
+
+        <Label x:Name="regretsLabel"
+               Text="Sorry, OpenGLView cannot be used on this device!"
+               FontSize="Large"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="CenterAndExpand"
+               Margin="10, 0" />
+    </StackLayout>
+</ContentPage>

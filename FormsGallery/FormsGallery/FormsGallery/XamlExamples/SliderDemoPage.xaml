@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.SliderDemoPage"
+             Title="Slider Demo">
+    <StackLayout>
+        <Label Text="Slider"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        
+        <Slider x:Name="slider"
+                 Minimum="0"
+                 Maximum="100"
+                 VerticalOptions="CenterAndExpand" />
+
+        <Label Text="{Binding Source={x:Reference slider},
+                              Path=Value,
+                              StringFormat='Slider value is {0:F1}'}"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>

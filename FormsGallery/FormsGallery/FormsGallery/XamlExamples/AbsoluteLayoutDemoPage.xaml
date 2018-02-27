@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.AbsoluteLayoutDemoPage"
+             Title="AbsoluteLayout Demo">
+    <StackLayout>
+        <Label Text="AbsoluteLayout"
+               FontSize="40"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <AbsoluteLayout BackgroundColor="#CCCCFF"
+                        VerticalOptions="FillAndExpand">
+            
+            <!-- Create two Labels for animating. -->
+            <Label x:Name="text1" 
+                   Text="AbsoluteLayout"
+                   TextColor="Black"
+                   AbsoluteLayout.LayoutFlags="PositionProportional" />
+            
+            <Label x:Name="text2" 
+                   Text="AbsoluteLayout"
+                   TextColor="Black"
+                   AbsoluteLayout.LayoutFlags="PositionProportional" />
+        </AbsoluteLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.SwitchDemoPage"
+             Title="Switch Demo">
+    <StackLayout>
+        <Label Text="Switch"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Switch x:Name="switch"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand" />
+
+        <Label Text="Switch is now False"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand">
+            <Label.Triggers>
+                <DataTrigger TargetType="Label"
+                             Binding="{Binding Source={x:Reference switch},
+                                               Path=IsToggled}"
+                             Value="True">
+                    <Setter Property="Text" Value="Switch is now True" />
+                </DataTrigger>
+            </Label.Triggers>
+        </Label>
+    </StackLayout>
+</ContentPage>

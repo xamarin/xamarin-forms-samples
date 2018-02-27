@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.EntryCellDemoPage"
+             Title="EntryCell Demo">
+    <StackLayout>
+        <Label Text="EntryCell"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <TableView Intent="Form"
+                   Margin="10, 0">
+            <TableRoot>
+                <TableSection>
+                    <EntryCell Label="Entry Cell"
+                               Placeholder = "Type text here" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </StackLayout>
+</ContentPage>
