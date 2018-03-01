@@ -3,7 +3,7 @@
     "Microsoft.Azure.Mobile.Client": "4.0.2",
     "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
     "Newtonsoft.Json": "9.0.1",
-    "Xamarin.Forms": "2.4.0.282"
+    "Xamarin.Forms": "2.5.0.280555"
   },
   "frameworks": {
     "uap10.0.10240": {}
