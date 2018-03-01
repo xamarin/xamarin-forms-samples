@@ -22,6 +22,7 @@
     <JavaMaximumHeapSize></JavaMaximumHeapSize>
     <JavaOptions />
     <NuGetPackageImportStamp>d1ba60e0</NuGetPackageImportStamp>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
