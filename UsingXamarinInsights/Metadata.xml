@@ -6,6 +6,6 @@
 	<Tags>Platform Features,Insights,Xamarin.Forms</Tags>
 	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
-	<Gallery>true</Gallery>
-	<Brief>Xamarin Insights helps you report bugs and track users in your apps.</Brief>
+	<Gallery>false</Gallery>
+	<Brief>Xamarin Insights has been deprecated in 2018, please see App Center Analytics.</Brief>
 </SampleMetadata>
