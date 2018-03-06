@@ -69,7 +69,7 @@
                               CommandParameter="{x:Type local:XamlExamples.SearchBarDemoPage}" />
                 </TableSection>
                 
-                <TableSection Title="Views for Common Data Types">
+                <TableSection Title="Views for Setting Values">
                     
                     <TextCell Text= "Slider (double)"
                               Detail="Select a number from a continuous range"
@@ -98,6 +98,7 @@
                 </TableSection>
 
                 <TableSection Title="Views for Editing Text">
+                    
                     <TextCell Text="Entry (single line)"
                               Detail="Edit a single line of text"
                               Command="{Binding NavigateCommand}"
@@ -110,6 +111,7 @@
                 </TableSection>
 
                 <TableSection Title="Views to Indicate Activity">
+                    
                     <TextCell Text="ActivityIndicator"
                               Detail="Show that the program is busy"
                               Command="{Binding NavigateCommand}"
