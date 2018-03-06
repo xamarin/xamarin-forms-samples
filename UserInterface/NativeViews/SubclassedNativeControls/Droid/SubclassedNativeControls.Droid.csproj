@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>SubclassedNativeControls.Droid</RootNamespace>
     <AssemblyName>SubclassedNativeControls.Droid</AssemblyName>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
