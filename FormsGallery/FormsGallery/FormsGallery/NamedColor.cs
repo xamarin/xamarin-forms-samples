@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace FormsGallery
 {
-    // Used in TabbedPageDemoPage & CarouselPageDemoPage.
+    // Used in TabbedPageDemoPage, CarouselPageDemoPage & MasterDetailPageDemoPage.
     public class NamedColor
     {
         public NamedColor()
