@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.your-company.WorkingWithMaps.iOS</string>
+	<string>com.xamarin.WorkingWithMaps.iOS</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
-	<true />
+	<true/>
 	<key>MinimumOSVersion</key>
 	<string>9.0</string>
 	<key>UIDeviceFamily</key>
@@ -37,8 +37,10 @@
 	<key>CFBundleDisplayName</key>
 	<string>Maps</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-		<string>We are using your location</string>
+	<string>We are using your location</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-		<string>Can we use your location</string>
+	<string>Can we use your location</string>
+	<key>CFBundleName</key>
+	<string>Maps</string>
 </dict>
 </plist>

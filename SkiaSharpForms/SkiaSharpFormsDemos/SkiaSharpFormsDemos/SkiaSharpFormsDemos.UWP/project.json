@@ -3,7 +3,7 @@
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
     "SkiaSharp": "1.57.0",
     "SkiaSharp.Views.Forms": "1.57.0",
-    "Xamarin.Forms": "2.4.0.282"
+    "Xamarin.Forms": "2.5.0.280555"
   },
   "frameworks": {
     "uap10.0": {}

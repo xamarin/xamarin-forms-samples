@@ -6,7 +6,7 @@
     "PCLStorage": "1.0.2",
     "sqlite-net-pcl": "1.2.1",
     "Xam.Plugin.Media": "2.6.1",
-    "Xamarin.Forms": "2.4.0.282"
+    "Xamarin.Forms": "2.5.0.280555"
   },
   "frameworks": {
     "uap10.0": {}
