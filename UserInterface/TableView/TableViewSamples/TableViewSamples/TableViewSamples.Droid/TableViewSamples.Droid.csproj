@@ -163,6 +163,7 @@
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />
@@ -170,9 +171,6 @@
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable\XamarinLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TableViewSamples\TableViewSamples.csproj">
