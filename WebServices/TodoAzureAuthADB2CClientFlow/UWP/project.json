@@ -1,7 +1,7 @@
-{
+﻿{
   "dependencies": {
     "Microsoft.Azure.Mobile.Client": "4.0.2",
-    "Microsoft.Identity.Client": "1.1.0-preview",
+    "Microsoft.Identity.Client": "1.1.2-preview0008",
     "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
     "Newtonsoft.Json": "9.0.1",
     "Xamarin.Forms": "2.5.0.280555"
