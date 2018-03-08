@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Threading.Tasks;
 
 using Android.App;
@@ -9,16 +8,17 @@ using Android.OS;
 
 namespace DependencyServiceSample.Droid
 {
-    [Activity (Label = "DependencyServiceSample.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "DependencyServiceSample.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
-        protected override void OnCreate (Bundle bundle)
+        internal static MainActivity Instance { get; private set; }
+
+        protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate (bundle);
-
-            global::Xamarin.Forms.Forms.Init (this, bundle);
-
-            LoadApplication (new App ());
+            base.OnCreate(bundle);
+            Instance = this;
+            global::Xamarin.Forms.Forms.Init(this, bundle);
+            LoadApplication(new App());
         }
 
         // Field, property, and method for Picture Picker

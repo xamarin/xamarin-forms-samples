@@ -16,7 +16,7 @@ namespace DependencyServiceSample.Droid
             toSpeak = text;
             if (speaker == null)
             {
-                speaker = new TextToSpeech(Forms.Context, this);
+                speaker = new TextToSpeech(MainActivity.Instance, this);
             }
             else
             {

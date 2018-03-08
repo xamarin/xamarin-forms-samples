@@ -212,7 +212,7 @@ namespace CustomRenderer.Droid
                 var file = new Java.IO.File(filePath);
                 var uri = Android.Net.Uri.FromFile(file);
                 intent.SetData(uri);
-                Forms.Context.SendBroadcast(intent);
+                MainActivity.Instance.SendBroadcast(intent);
             }
             catch (Exception ex)
             {

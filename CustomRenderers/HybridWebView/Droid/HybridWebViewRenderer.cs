@@ -21,7 +21,7 @@ namespace CustomRenderer.Droid
 
             if (Control == null)
             {
-                var webView = new Android.Webkit.WebView(Forms.Context);
+                var webView = new Android.Webkit.WebView(MainActivity.Instance);
                 webView.Settings.JavaScriptEnabled = true;
                 SetNativeControl(webView);
             }

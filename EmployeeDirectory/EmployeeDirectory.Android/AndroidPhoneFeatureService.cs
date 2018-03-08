@@ -23,7 +23,7 @@ namespace EmployeeDirectory.Android
             var intent = new Intent(Intent.ActionSend);
             intent.SetType("message/rfc822");
             intent.PutExtra(Intent.ExtraEmail, new[] { emailAddress });
-            Forms.Context.StartActivity(Intent.CreateChooser(intent, "Send email"));
+            MainActivity.Instance.StartActivity(Intent.CreateChooser(intent, "Send email"));
 
             return true;
         }
@@ -35,7 +35,7 @@ namespace EmployeeDirectory.Android
                 "http://" + websiteUrl;
 
             var intent = new Intent(Intent.ActionView, global::Android.Net.Uri.Parse(url));
-            Forms.Context.StartActivity(intent);
+            MainActivity.Instance.StartActivity(intent);
 
             return true;
         }
@@ -48,7 +48,7 @@ namespace EmployeeDirectory.Android
 
             var url = "http://twitter.com/" + username;
             var intent = new Intent(Intent.ActionView, global::Android.Net.Uri.Parse(url));
-            Forms.Context.StartActivity(intent);
+            MainActivity.Instance.StartActivity(intent);
 
             return true;
         }
@@ -89,7 +89,7 @@ namespace EmployeeDirectory.Android
         {
             var intent = new Intent(Intent.ActionCall, global::Android.Net.Uri.Parse(
                              "tel:" + Uri.EscapeDataString(phoneNumber)));
-            Forms.Context.StartActivity(intent);
+            MainActivity.Instance.StartActivity(intent);
         }
 
     }

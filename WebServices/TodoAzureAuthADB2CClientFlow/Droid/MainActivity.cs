@@ -20,7 +20,7 @@ namespace TodoAzure.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
             LoadApplication(new App());
-            App.UiParent = new UIParent(Xamarin.Forms.Forms.Context as Activity);
+            App.UiParent = new UIParent(this);
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

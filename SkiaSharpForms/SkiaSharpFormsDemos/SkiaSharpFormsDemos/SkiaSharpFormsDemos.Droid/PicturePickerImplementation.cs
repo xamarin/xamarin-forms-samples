@@ -20,20 +20,17 @@ namespace SkiaSharpFormsDemos.Droid
             Intent intent = new Intent();
             intent.SetType("image/*");
             intent.SetAction(Intent.ActionGetContent);
-            
-            // Get the MainActivity instance
-            MainActivity activity = Forms.Context as MainActivity;
 
             // Start the picture-picker activity (resumes in MainActivity.cs)
-            activity.StartActivityForResult(
+            MainActivity.Instance.StartActivityForResult(
                 Intent.CreateChooser(intent, "Select Picture"),
                 MainActivity.PickImageId);
 
             // Save the TaskCompletionSource object as a MainActivity property
-            activity.PickImageTaskCompletionSource = new TaskCompletionSource<Stream>();
+            MainActivity.Instance.PickImageTaskCompletionSource = new TaskCompletionSource<Stream>();
 
             // Return Task object
-            return activity.PickImageTaskCompletionSource.Task;
+            return MainActivity.Instance.PickImageTaskCompletionSource.Task;
         }
     }
 }

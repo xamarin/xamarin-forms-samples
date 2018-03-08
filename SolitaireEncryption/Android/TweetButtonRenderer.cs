@@ -31,7 +31,7 @@ namespace Solitaire.Android
                     var intent = new Intent(Intent.ActionSend);
                     intent.PutExtra(Intent.ExtraText, message);
                     intent.SetType("text/plain");
-                    Forms.Context.StartActivity(Intent.CreateChooser(intent, "Tweet the Code"));
+                    MainActivity.Instance.StartActivity(Intent.CreateChooser(intent, "Tweet the Code"));
 
                 }
                 catch (Exception ex)

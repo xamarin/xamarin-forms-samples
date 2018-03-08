@@ -27,7 +27,7 @@ namespace CustomRenderer.Droid
             if (e.NewElement != null)
             {
                 // subscribe
-                Control.Adapter = new NativeAndroidListViewAdapter(Forms.Context as Android.App.Activity, e.NewElement as NativeListView);
+                Control.Adapter = new NativeAndroidListViewAdapter(MainActivity.Instance as Android.App.Activity, e.NewElement as NativeListView);
                 Control.ItemClick += OnItemClick;
             }
         }
@@ -38,7 +38,7 @@ namespace CustomRenderer.Droid
 
             if (e.PropertyName == NativeListView.ItemsProperty.PropertyName)
             {
-                Control.Adapter = new NativeAndroidListViewAdapter(Forms.Context as Android.App.Activity, Element as NativeListView);
+                Control.Adapter = new NativeAndroidListViewAdapter(MainActivity.Instance as Android.App.Activity, Element as NativeListView);
             }
         }
 
