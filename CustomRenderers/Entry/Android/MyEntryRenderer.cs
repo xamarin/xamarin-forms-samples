@@ -2,20 +2,26 @@
 using Xamarin.Forms;
 using CustomRenderer;
 using CustomRenderer.Android;
+using Android.Content;
 
-[assembly: ExportRenderer (typeof(MyEntry), typeof(MyEntryRenderer))]
+[assembly: ExportRenderer(typeof(MyEntry), typeof(MyEntryRenderer))]
 namespace CustomRenderer.Android
 {
-	class MyEntryRenderer : EntryRenderer
-	{
-		protected override void OnElementChanged (ElementChangedEventArgs<Entry> e)
-		{
-			base.OnElementChanged (e);
+    class MyEntryRenderer : EntryRenderer
+    {
+        public MyEntryRenderer(Context context) : base(context)
+        {
+        }
 
-			if (Control != null) {
-				Control.SetBackgroundColor (global::Android.Graphics.Color.LightGreen);
-			}
-		}
-	}
+        protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
+        {
+            base.OnElementChanged(e);
+
+            if (Control != null)
+            {
+                Control.SetBackgroundColor(global::Android.Graphics.Color.LightGreen);
+            }
+        }
+    }
 }
 

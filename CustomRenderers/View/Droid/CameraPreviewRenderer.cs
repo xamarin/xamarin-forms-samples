@@ -1,54 +1,66 @@
 ﻿using System;
+using Android.Content;
 using Android.Hardware;
 using CustomRenderer.Droid;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportRenderer (typeof(CustomRenderer.CameraPreview), typeof(CameraPreviewRenderer))]
+[assembly: ExportRenderer(typeof(CustomRenderer.CameraPreview), typeof(CameraPreviewRenderer))]
 namespace CustomRenderer.Droid
 {
-	public class CameraPreviewRenderer : ViewRenderer<CustomRenderer.CameraPreview, CustomRenderer.Droid.CameraPreview>
-	{
-		CameraPreview cameraPreview;
+    public class CameraPreviewRenderer : ViewRenderer<CustomRenderer.CameraPreview, CustomRenderer.Droid.CameraPreview>
+    {
+        CameraPreview cameraPreview;
 
-		protected override void OnElementChanged (ElementChangedEventArgs<CustomRenderer.CameraPreview> e)
-		{
-			base.OnElementChanged (e);
+        public CameraPreviewRenderer(Context context) : base(context)
+        {
+        }
 
-			if (Control == null) {
-				cameraPreview = new CameraPreview (Context);
-				SetNativeControl (cameraPreview);
-			}
+        protected override void OnElementChanged(ElementChangedEventArgs<CustomRenderer.CameraPreview> e)
+        {
+            base.OnElementChanged(e);
 
-			if (e.OldElement != null) {
-				// Unsubscribe
-				cameraPreview.Click -= OnCameraPreviewClicked;
-			}
-			if (e.NewElement != null) {
-				Control.Preview = Camera.Open ((int)e.NewElement.Camera);
+            if (Control == null)
+            {
+                cameraPreview = new CameraPreview(Context);
+                SetNativeControl(cameraPreview);
+            }
 
-				// Subscribe
-				cameraPreview.Click += OnCameraPreviewClicked;
-			}
-		}
+            if (e.OldElement != null)
+            {
+                // Unsubscribe
+                cameraPreview.Click -= OnCameraPreviewClicked;
+            }
+            if (e.NewElement != null)
+            {
+                Control.Preview = Camera.Open((int)e.NewElement.Camera);
 
-		void OnCameraPreviewClicked (object sender, EventArgs e)
-		{
-			if (cameraPreview.IsPreviewing) {
-				cameraPreview.Preview.StopPreview ();
-				cameraPreview.IsPreviewing = false;
-			} else {
-				cameraPreview.Preview.StartPreview ();
-				cameraPreview.IsPreviewing = true;
-			}
-		}
+                // Subscribe
+                cameraPreview.Click += OnCameraPreviewClicked;
+            }
+        }
 
-		protected override void Dispose (bool disposing)
-		{
-			if (disposing) {
-				Control.Preview.Release ();
-			}
-			base.Dispose (disposing);
-		}
-	}
+        void OnCameraPreviewClicked(object sender, EventArgs e)
+        {
+            if (cameraPreview.IsPreviewing)
+            {
+                cameraPreview.Preview.StopPreview();
+                cameraPreview.IsPreviewing = false;
+            }
+            else
+            {
+                cameraPreview.Preview.StartPreview();
+                cameraPreview.IsPreviewing = true;
+            }
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                Control.Preview.Release();
+            }
+            base.Dispose(disposing);
+        }
+    }
 }

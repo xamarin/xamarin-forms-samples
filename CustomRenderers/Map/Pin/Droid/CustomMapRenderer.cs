@@ -17,6 +17,10 @@ namespace CustomRenderer.Droid
     {
         List<CustomPin> customPins;
 
+        public CustomMapRenderer(Context context) : base(context)
+        {
+        }
+
         protected override void OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs<Map> e)
         {
             base.OnElementChanged(e);
