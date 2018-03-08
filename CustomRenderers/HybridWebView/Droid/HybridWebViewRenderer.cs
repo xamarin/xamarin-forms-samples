@@ -2,6 +2,7 @@
 using CustomRenderer.Droid;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
+using Android.Content;
 
 [assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]
 namespace CustomRenderer.Droid
@@ -9,6 +10,10 @@ namespace CustomRenderer.Droid
     public class HybridWebViewRenderer : ViewRenderer<HybridWebView, Android.Webkit.WebView>
     {
         const string JavaScriptFunction = "function invokeCSharpAction(data){jsBridge.invokeAction(data);}";
+
+        public HybridWebViewRenderer(Context context) : base(context)
+        {
+        }
 
         protected override void OnElementChanged(ElementChangedEventArgs<HybridWebView> e)
         {

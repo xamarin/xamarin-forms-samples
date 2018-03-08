@@ -1,4 +1,5 @@
-﻿using Android.Gms.Maps.Model;
+﻿using Android.Content;
+using Android.Gms.Maps.Model;
 using MapOverlay;
 using MapOverlay.Droid;
 using Xamarin.Forms;
@@ -10,6 +11,10 @@ namespace MapOverlay.Droid
     public class CustomMapRenderer : MapRenderer
     {
         CustomCircle circle;
+
+        public CustomMapRenderer(Context context) : base(context)
+        {
+        }
 
         protected override void OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs<Xamarin.Forms.Maps.Map> e)
         {
