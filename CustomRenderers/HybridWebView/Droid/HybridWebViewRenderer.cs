@@ -10,9 +10,11 @@ namespace CustomRenderer.Droid
     public class HybridWebViewRenderer : ViewRenderer<HybridWebView, Android.Webkit.WebView>
     {
         const string JavaScriptFunction = "function invokeCSharpAction(data){jsBridge.invokeAction(data);}";
+        Context _context;
 
         public HybridWebViewRenderer(Context context) : base(context)
         {
+            _context = context;
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<HybridWebView> e)
@@ -21,7 +23,7 @@ namespace CustomRenderer.Droid
 
             if (Control == null)
             {
-                var webView = new Android.Webkit.WebView(MainActivity.Instance);
+                var webView = new Android.Webkit.WebView(_context);
                 webView.Settings.JavaScriptEnabled = true;
                 SetNativeControl(webView);
             }

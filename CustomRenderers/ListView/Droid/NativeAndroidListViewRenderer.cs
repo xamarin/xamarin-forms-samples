@@ -10,8 +10,11 @@ namespace CustomRenderer.Droid
 {
     public class NativeAndroidListViewRenderer : ListViewRenderer
     {
+        Context _context;
+
         public NativeAndroidListViewRenderer(Context context) : base(context)
         {
+            _context = context;
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.ListView> e)
@@ -27,7 +30,7 @@ namespace CustomRenderer.Droid
             if (e.NewElement != null)
             {
                 // subscribe
-                Control.Adapter = new NativeAndroidListViewAdapter(MainActivity.Instance as Android.App.Activity, e.NewElement as NativeListView);
+                Control.Adapter = new NativeAndroidListViewAdapter(_context as Android.App.Activity, e.NewElement as NativeListView);
                 Control.ItemClick += OnItemClick;
             }
         }
@@ -38,7 +41,7 @@ namespace CustomRenderer.Droid
 
             if (e.PropertyName == NativeListView.ItemsProperty.PropertyName)
             {
-                Control.Adapter = new NativeAndroidListViewAdapter(MainActivity.Instance as Android.App.Activity, Element as NativeListView);
+                Control.Adapter = new NativeAndroidListViewAdapter(_context as Android.App.Activity, Element as NativeListView);
             }
         }
 
