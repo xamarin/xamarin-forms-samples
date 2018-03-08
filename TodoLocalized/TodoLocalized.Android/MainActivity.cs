@@ -1,28 +1,22 @@
-﻿using System;
-using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using Android.App;
 using Android.OS;
-using System.IO;
-using Android.Speech.Tts;
 using Android.Content.PM;
 
 namespace TodoLocalized
 {
-	[Activity (Label = "@string/app_name", Icon = "@drawable/icon", MainLauncher = true, 
-		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : 
-	global::Xamarin.Forms.Platform.Android.FormsApplicationActivity 
-	{
-		protected override void OnCreate (Bundle bundle)
-		{
-			base.OnCreate (bundle);
+    [Activity(Label = "@string/app_name", Icon = "@drawable/icon", MainLauncher = true,
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    public class MainActivity :
+    global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
+    {
+        internal static MainActivity Instance { get; private set; }
 
-			global::Xamarin.Forms.Forms.Init (this, bundle);
-
-			LoadApplication (new App ());
-		}
-	}
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+            Instance = this;
+            global::Xamarin.Forms.Forms.Init(this, bundle);
+            LoadApplication(new App());
+        }
+    }
 }

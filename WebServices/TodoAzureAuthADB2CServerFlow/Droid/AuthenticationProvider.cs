@@ -20,7 +20,7 @@ namespace TodoAzure.Droid
             {
                 if (user == null)
                 {
-                    user = await TodoItemManager.DefaultManager.CurrentClient.LoginAsync(Forms.Context, MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory, Constants.URLScheme);
+                    user = await TodoItemManager.DefaultManager.CurrentClient.LoginAsync(MainActivity.Instance, MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory, Constants.URLScheme);
                     if (user != null)
                     {
                         CreateAndShowDialog(string.Format("You are now logged in - {0}", user.UserId), "Logged in!");
@@ -59,7 +59,7 @@ namespace TodoAzure.Droid
 
         void CreateAndShowDialog(string message, string title)
         {
-            var builder = new AlertDialog.Builder(Forms.Context);
+            var builder = new AlertDialog.Builder(MainActivity.Instance);
             builder.SetMessage(message);
             builder.SetTitle(title);
             builder.SetNeutralButton("OK", (sender, args) => { });

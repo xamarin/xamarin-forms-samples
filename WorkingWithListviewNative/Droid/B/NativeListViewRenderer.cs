@@ -21,7 +21,7 @@ namespace WorkingWithListviewNative.Droid
 
             if (Control == null)
             {
-                SetNativeControl(new global::Android.Widget.ListView(Forms.Context));
+                SetNativeControl(new global::Android.Widget.ListView(MainActivity.Instance));
             }
 
             if (e.OldElement != null)
@@ -34,7 +34,7 @@ namespace WorkingWithListviewNative.Droid
             {
                 // subscribe
 
-                Control.Adapter = new NativeListViewAdapter(Forms.Context as Android.App.Activity, e.NewElement);
+                Control.Adapter = new NativeListViewAdapter(MainActivity.Instance as Android.App.Activity, e.NewElement);
                 Control.ItemClick += clicked;
             }
         }
@@ -51,7 +51,7 @@ namespace WorkingWithListviewNative.Droid
             {
                 // update the Items list in the UITableViewSource
 
-                Control.Adapter = new NativeListViewAdapter(Forms.Context as Android.App.Activity, Element);
+                Control.Adapter = new NativeListViewAdapter(MainActivity.Instance as Android.App.Activity, Element);
             }
         }
     }

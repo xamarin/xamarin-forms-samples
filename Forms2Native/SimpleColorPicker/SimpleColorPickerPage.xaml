@@ -4,7 +4,7 @@
 		xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
 		xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
         xmlns:androidGraphics="clr-namespace:Android.Graphics;assembly=Mono.Android;targetPlatform=Android"
-        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         xmlns:winMedia="clr-namespace:Windows.UI.Xaml.Media;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
 		xmlns:winText="clr-namespace:Windows.UI.Text;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
@@ -28,7 +28,7 @@
 				</ios:UIFont>
 			</ios:UILabel.Font>
 		</ios:UILabel>
-		<androidWidget:TextView x:Arguments="{x:Static formsAndroid:Forms.Context}" Text="Simple Native Color Picker" TextSize="24" View.HorizontalOptions="Center">
+		<androidWidget:TextView x:Arguments="{x:Static androidLocal:MainActivity.Instance}" Text="Simple Native Color Picker" TextSize="24" View.HorizontalOptions="Center">
 			<androidWidget:TextView.Typeface>
 				<androidGraphics:Typeface x:FactoryMethod="Create">
 					<x:Arguments>
@@ -51,9 +51,9 @@
 		<ios:UISlider Value="{Binding Red, Mode=TwoWay, UpdateSourceEventName=ValueChanged, Converter={StaticResource doubleToSingleConverter}" ThumbTintColor="{x:Static ios:UIColor.Red}" MinimumTrackTintColor="{x:Static ios:UIColor.Black}" MaximumTrackTintColor="{x:Static ios:UIColor.Red}" />
 		<ios:UISlider Value="{Binding Green, Mode=TwoWay, UpdateSourceEventName=ValueChanged, Converter={StaticResource doubleToSingleConverter}" ThumbTintColor="{x:Static ios:UIColor.Green}" MinimumTrackTintColor="{x:Static ios:UIColor.Black}" MaximumTrackTintColor="{x:Static ios:UIColor.Green}" />
 		<ios:UISlider Value="{Binding Blue, Mode=TwoWay, UpdateSourceEventName=ValueChanged, Converter={StaticResource doubleToSingleConverter}" ThumbTintColor="{x:Static ios:UIColor.Blue}" MinimumTrackTintColor="{x:Static ios:UIColor.Black}" MaximumTrackTintColor="{x:Static ios:UIColor.Blue}" />
-		<androidWidget:SeekBar x:Arguments="{x:Static formsAndroid:Forms.Context}" Progress="{Binding Red, Mode=TwoWay, UpdateSourceEventName=ProgressChanged, Converter={StaticResource doubleToIntConverter}}" Max="256" />
-		<androidWidget:SeekBar x:Arguments="{x:Static formsAndroid:Forms.Context}" Progress="{Binding Green, Mode=TwoWay, UpdateSourceEventName=ProgressChanged, Converter={StaticResource doubleToIntConverter}}" Max="256" />
-		<androidWidget:SeekBar x:Arguments="{x:Static formsAndroid:Forms.Context}" Progress="{Binding Blue, Mode=TwoWay, UpdateSourceEventName=ProgressChanged, Converter={StaticResource doubleToIntConverter}}" Max="256" />
+		<androidWidget:SeekBar x:Arguments="{x:Static androidLocal:MainActivity.Instance}" Progress="{Binding Red, Mode=TwoWay, UpdateSourceEventName=ProgressChanged, Converter={StaticResource doubleToIntConverter}}" Max="256" />
+		<androidWidget:SeekBar x:Arguments="{x:Static androidLocal:MainActivity.Instance}" Progress="{Binding Green, Mode=TwoWay, UpdateSourceEventName=ProgressChanged, Converter={StaticResource doubleToIntConverter}}" Max="256" />
+		<androidWidget:SeekBar x:Arguments="{x:Static androidLocal:MainActivity.Instance}" Progress="{Binding Blue, Mode=TwoWay, UpdateSourceEventName=ProgressChanged, Converter={StaticResource doubleToIntConverter}}" Max="256" />
 		<winControls:Slider Value="{Binding Red, Mode=TwoWay, UpdateSourceEventName=ValueChanged}" Maximum="1" StepFrequency="0.01" IsThumbToolTipEnabled="True">
 			<winControls:Slider.Foreground>
 				<winMedia:SolidColorBrush Color="{x:Static winui:Colors.Red}" />

@@ -10,6 +10,7 @@ using Xamarin.Forms.Platform.iOS;
 using Android.Widget;
 using Android.Views;
 using Xamarin.Forms.Platform.Android;
+using NestPlatformControl.Droid;
 #endif
 
 #if WINDOWS_PHONE_APP
@@ -35,11 +36,11 @@ using Xamarin.Forms.Platform.UWP;
 
 namespace NestPlatformControl
 {
-	public partial class HomePage : ContentPage
-	{
-		public HomePage ()
-		{
-			InitializeComponent ();
+    public partial class HomePage : ContentPage
+    {
+        public HomePage()
+        {
+            InitializeComponent();
 
 #if __IOS__
 			const string originalText = "Native UILabel.";
@@ -96,43 +97,48 @@ namespace NestPlatformControl
 #endif
 
 #if __ANDROID__
-			const string originalText = "Native TextView.";
-			const string longerText = "Native TextView. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel elit orci. Nam sollicitudin consectetur congue.";
+            const string originalText = "Native TextView.";
+            const string longerText = "Native TextView. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel elit orci. Nam sollicitudin consectetur congue.";
 
-			var textView = new TextView (Forms.Context) { Text = originalText, TextSize = 14 };
-			textView.SetSingleLine (false);
-			textView.SetLines (3);
-			stackLayout.Children.Add (textView);
+            var textView = new TextView(MainActivity.Instance) { Text = originalText, TextSize = 14 };
+            textView.SetSingleLine(false);
+            textView.SetLines(3);
+            stackLayout.Children.Add(textView);
 
-			var button = new Android.Widget.Button (Forms.Context) { Text = "Change Text" };
-			button.Click += (sender, args) => {
-				textView.Text = textView.Text == originalText ? longerText : originalText;
-			};
-			stackLayout.Children.Add (button);
+            var button = new Android.Widget.Button(MainActivity.Instance) { Text = "Change Text" };
+            button.Click += (sender, args) =>
+            {
+                textView.Text = textView.Text == originalText ? longerText : originalText;
+            };
+            stackLayout.Children.Add(button);
 
-			var explanation1 = new TextView (Forms.Context) {
-				Text = "The next control is a CustomControl (a customized TextView with a bad OnMeasure implementation).",
-				TextSize = 14
-			};
-			stackLayout.Children.Add (explanation1);
+            var explanation1 = new TextView(MainActivity.Instance)
+            {
+                Text = "The next control is a CustomControl (a customized TextView with a bad OnMeasure implementation).",
+                TextSize = 14
+            };
+            stackLayout.Children.Add(explanation1);
 
-			var brokenControl = new CustomControl (Forms.Context) {
-				Text = "This control has incorrect sizing - it doesn't occupy the available width of the device.",
-				TextSize = 14
-			};
-			stackLayout.Children.Add (brokenControl);
+            var brokenControl = new CustomControl(MainActivity.Instance)
+            {
+                Text = "This control has incorrect sizing - it doesn't occupy the available width of the device.",
+                TextSize = 14
+            };
+            stackLayout.Children.Add(brokenControl);
 
-			var explanation2 = new TextView (Forms.Context) {
-				Text = "The next control is a CustomControl, but with a custom GetDesiredSize delegate to accomodate it's sizing problem.",
-				TextSize = 14
-			};
-			stackLayout.Children.Add (explanation2);
+            var explanation2 = new TextView(MainActivity.Instance)
+            {
+                Text = "The next control is a CustomControl, but with a custom GetDesiredSize delegate to accomodate it's sizing problem.",
+                TextSize = 14
+            };
+            stackLayout.Children.Add(explanation2);
 
-			var goodControl = new CustomControl (Forms.Context) {
-				Text = "This control has correct sizing - it occupies the available width of the device.",
-				TextSize = 14
-			};
-			stackLayout.Children.Add (goodControl, FixSize);
+            var goodControl = new CustomControl(MainActivity.Instance)
+            {
+                Text = "This control has correct sizing - it occupies the available width of the device.",
+                TextSize = 14
+            };
+            stackLayout.Children.Add(goodControl, FixSize);
 #endif
 
 #if WINDOWS_PHONE_APP
@@ -236,9 +242,9 @@ namespace NestPlatformControl
                 return finalSize;
             });
 #endif
-		}
+        }
 
-		#if __IOS__
+#if __IOS__
 		SizeRequest? FixSize (NativeViewWrapperRenderer renderer, double width, double height)
 		{
 			var uiView = renderer.Control;
@@ -255,22 +261,23 @@ namespace NestPlatformControl
 			// Use the width and substitute the height
 			return new SizeRequest (new Size (badRect.Width, 70));
 		}
-		#endif
+#endif
 
-		#if __ANDROID__
-		SizeRequest? FixSize (NativeViewWrapperRenderer renderer, int widthConstraint, int heightConstraint)
-		{
-			var nativeView = renderer.Control;
+#if __ANDROID__
+        SizeRequest? FixSize(NativeViewWrapperRenderer renderer, int widthConstraint, int heightConstraint)
+        {
+            var nativeView = renderer.Control;
 
-			if ((widthConstraint == 0 && heightConstraint == 0) || nativeView == null) {
-				return null;
-			}
+            if ((widthConstraint == 0 && heightConstraint == 0) || nativeView == null)
+            {
+                return null;
+            }
 
-			int width = Android.Views.View.MeasureSpec.GetSize (widthConstraint);
-			int widthSpec = Android.Views.View.MeasureSpec.MakeMeasureSpec (width * 2, Android.Views.View.MeasureSpec.GetMode (widthConstraint));
-			nativeView.Measure (widthSpec, heightConstraint);
-			return new SizeRequest (new Size (nativeView.MeasuredWidth, nativeView.MeasuredHeight));
-		}
-		#endif
-	}
+            int width = Android.Views.View.MeasureSpec.GetSize(widthConstraint);
+            int widthSpec = Android.Views.View.MeasureSpec.MakeMeasureSpec(width * 2, Android.Views.View.MeasureSpec.GetMode(widthConstraint));
+            nativeView.Measure(widthSpec, heightConstraint);
+            return new SizeRequest(new Size(nativeView.MeasuredWidth, nativeView.MeasuredHeight));
+        }
+#endif
+    }
 }

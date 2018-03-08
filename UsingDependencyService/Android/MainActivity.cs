@@ -9,9 +9,12 @@ namespace UsingDependencyService.Android
     public class MainActivity :
     global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
+        internal static MainActivity Instance { get; private set; }
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            Instance = this;
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
