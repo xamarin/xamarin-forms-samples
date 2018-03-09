@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharpFormsDemos", "SkiaSharpFormsDemos\SkiaSharpFormsDemos\SkiaSharpFormsDemos.csproj", "{D6159062-AB0B-4A61-A2B2-B6963C1CD300}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharpFormsDemos", "Demos\SkiaSharpFormsDemos\SkiaSharpFormsDemos.csproj", "{D6159062-AB0B-4A61-A2B2-B6963C1CD300}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharpFormsDemos.Droid", "SkiaSharpFormsDemos\SkiaSharpFormsDemos.Droid\SkiaSharpFormsDemos.Droid.csproj", "{4FEC4CE6-E631-4DB6-95F8-C31E0D140CC9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharpFormsDemos.Droid", "Demos\SkiaSharpFormsDemos.Droid\SkiaSharpFormsDemos.Droid.csproj", "{4FEC4CE6-E631-4DB6-95F8-C31E0D140CC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharpFormsDemos.iOS", "SkiaSharpFormsDemos\SkiaSharpFormsDemos.iOS\SkiaSharpFormsDemos.iOS.csproj", "{DC1C9D66-B397-48BF-B12B-8B5C3CCE531E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharpFormsDemos.iOS", "Demos\SkiaSharpFormsDemos.iOS\SkiaSharpFormsDemos.iOS.csproj", "{DC1C9D66-B397-48BF-B12B-8B5C3CCE531E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharpFormsDemos.UWP", "SkiaSharpFormsDemos\SkiaSharpFormsDemos.UWP\SkiaSharpFormsDemos.UWP.csproj", "{FFC2D380-3DB4-45EB-AFB8-EB85BF66BF25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharpFormsDemos.UWP", "Demos\SkiaSharpFormsDemos.UWP\SkiaSharpFormsDemos.UWP.csproj", "{FFC2D380-3DB4-45EB-AFB8-EB85BF66BF25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

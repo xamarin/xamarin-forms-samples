@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsSample.WinPhone", "XamarinFormsSample\XamarinFormsSample.WinPhone\XamarinFormsSample.WinPhone.csproj", "{91819DF8-05A3-4AAE-858F-0214A99E7E2D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsSample.WinPhone", "CSSample\XamarinFormsSample.WinPhone\XamarinFormsSample.WinPhone.csproj", "{91819DF8-05A3-4AAE-858F-0214A99E7E2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsSample.iOS", "XamarinFormsSample\XamarinFormsSample.iOS\XamarinFormsSample.iOS.csproj", "{347FA955-E532-4973-88C5-D96C4F6823A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsSample.iOS", "CSSample\XamarinFormsSample.iOS\XamarinFormsSample.iOS.csproj", "{347FA955-E532-4973-88C5-D96C4F6823A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsSample.Android", "XamarinFormsSample\XamarinFormsSample.Android\XamarinFormsSample.Android.csproj", "{3CD0D9A8-210C-4D92-8F37-DF536E398B9C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsSample.Android", "CSSample\XamarinFormsSample.Android\XamarinFormsSample.Android.csproj", "{3CD0D9A8-210C-4D92-8F37-DF536E398B9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsSample", "XamarinFormsSample\XamarinFormsSample\XamarinFormsSample.csproj", "{2A916BDE-944E-444E-AD57-3CAA7DCB9240}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsSample", "CSSample\XamarinFormsSample\XamarinFormsSample.csproj", "{2A916BDE-944E-444E-AD57-3CAA7DCB9240}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsSample.WinPhone81", "XamarinFormsSample\XamarinFormsSample.WinPhone81\XamarinFormsSample.WinPhone81.csproj", "{299E8901-72F2-430A-BAD0-35E4916334EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsSample.WinPhone81", "CSSample\XamarinFormsSample.WinPhone81\XamarinFormsSample.WinPhone81.csproj", "{299E8901-72F2-430A-BAD0-35E4916334EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsSample.Windows", "XamarinFormsSample\XamarinFormsSample.Windows\XamarinFormsSample.Windows.csproj", "{BAE760CD-65F9-4DB6-A3DE-34488008C458}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsSample.Windows", "CSSample\XamarinFormsSample.Windows\XamarinFormsSample.Windows.csproj", "{BAE760CD-65F9-4DB6-A3DE-34488008C458}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsSample.UWP", "XamarinFormsSample\XamarinFormsSample.UWP\XamarinFormsSample.UWP.csproj", "{0C1D9208-7107-41AB-B553-C158491D3437}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsSample.UWP", "CSSample\XamarinFormsSample.UWP\XamarinFormsSample.UWP.csproj", "{0C1D9208-7107-41AB-B553-C158491D3437}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
