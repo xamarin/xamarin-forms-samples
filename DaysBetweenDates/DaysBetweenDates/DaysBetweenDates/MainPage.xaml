@@ -18,7 +18,7 @@
         <Label Text="Start Date:" />
 
         <DatePicker x:Name="startDatePicker"
-                    Format="D"                              HorizontalOptions="Center"
+                    Format="D"
                     Margin="30, 0, 0, 30"
                     DateSelected="OnDateSelected" />
 

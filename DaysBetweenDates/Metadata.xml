@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>309809D5-4E67-485B-A4D9-E31D6CA7D1B7</ID>
+	<IsFullApplication>true</IsFullApplication>
+	<Level>Intermediate</Level>
+	<Tags>User Interface, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>Demonstrates DatePicker and calculating a difference between two dates.</Brief>
+</SampleMetadata>
