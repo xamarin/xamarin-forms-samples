@@ -23,9 +23,6 @@ namespace SpinPaintShared
 
         protected override SizeRequest OnMeasure(double widthConstraint, double heightConstraint)
         {
-            System.Diagnostics.Debug.WriteLine("{0} {1} -->", widthConstraint, heightConstraint); ;
-
-
             if (Double.IsPositiveInfinity(widthConstraint) &&
                 Double.IsPositiveInfinity(heightConstraint))
             {
@@ -35,9 +32,6 @@ namespace SpinPaintShared
 
             double minWidth = Math.Min(widthConstraint, AspectRatio * heightConstraint);
             double minHeight = minWidth / AspectRatio;
-
-            System.Diagnostics.Debug.WriteLine("{0} {1}", minWidth, minHeight); ;
-
 
             return new SizeRequest(new Size(minWidth, minHeight));
         }

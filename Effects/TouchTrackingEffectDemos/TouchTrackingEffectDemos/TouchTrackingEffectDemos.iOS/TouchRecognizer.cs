@@ -47,7 +47,10 @@ namespace TouchTracking.iOS
                 long id = touch.Handle.ToInt64();
                 FireEvent(this, id, TouchActionType.Pressed, touch, true);
 
-                idToTouchDictionary.Add(id, this);
+                if (!idToTouchDictionary.ContainsKey(id))
+                {
+                    idToTouchDictionary.Add(id, this);
+                }
             }
 
             // Save the setting of the Capture property
