@@ -55,18 +55,6 @@
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="SkiaSharp, Version=1.57.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.1.57.1\lib\MonoAndroid\SkiaSharp.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SkiaSharp.Views.Android, Version=1.57.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.Views.1.57.1\lib\MonoAndroid\SkiaSharp.Views.Android.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SkiaSharp.Views.Forms, Version=1.57.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SkiaSharp.Views.Forms.1.57.0\lib\MonoAndroid\SkiaSharp.Views.Forms.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ObjectModel" />
@@ -164,6 +152,15 @@
       <HintPath>..\..\packages\Xamarin.Forms.2.5.0.280555\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="SkiaSharp">
+      <HintPath>..\..\packages\SkiaSharp.1.57.0\lib\MonoAndroid\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.Android">
+      <HintPath>..\..\packages\SkiaSharp.Views.1.57.0\lib\MonoAndroid\SkiaSharp.Views.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.Forms">
+      <HintPath>..\..\packages\SkiaSharp.Views.Forms.1.57.0\lib\MonoAndroid\SkiaSharp.Views.Forms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -191,7 +188,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CatClock\CatClock.csproj">
-      <Project>{23a0bde9-704d-4cb1-a7ef-ecdd1b4ff161}</Project>
+      <Project>{205E265F-281A-4ED3-BFC0-DF4D028E7324}</Project>
       <Name>CatClock</Name>
     </ProjectReference>
   </ItemGroup>
