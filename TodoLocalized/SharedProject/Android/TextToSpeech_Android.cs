@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Android.Speech.Tts;
+﻿using Android.Speech.Tts;
 using Java.Lang;
 using Xamarin.Forms;
 using TodoLocalized;
@@ -12,10 +11,6 @@ namespace TodoLocalized
         TextToSpeech speaker;
         string toSpeak;
 
-        public TextToSpeech_Android()
-        {
-        }
-
         public void Speak(string text)
         {
             toSpeak = text;
@@ -26,8 +21,7 @@ namespace TodoLocalized
             }
             else
             {
-                var p = new Dictionary<string, string>();
-                speaker.Speak(toSpeak, QueueMode.Flush, p);
+                speaker.Speak(toSpeak, QueueMode.Flush, null, null);
             }
         }
 
@@ -37,8 +31,7 @@ namespace TodoLocalized
             if (status.Equals(OperationResult.Success))
             {
                 System.Diagnostics.Debug.WriteLine("spoke");
-                var p = new Dictionary<string, string>();
-                speaker.Speak(toSpeak, QueueMode.Flush, p);
+                speaker.Speak(toSpeak, QueueMode.Flush, null, null);
             }
             else
             {

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Android.Speech.Tts;
-using Xamarin.Forms;
+﻿using Android.Speech.Tts;
 
 namespace TodoREST.Droid
 {
@@ -21,8 +18,7 @@ namespace TodoREST.Droid
                 }
                 else
                 {
-                    var p = new Dictionary<string, string>();
-                    textToSpeech.Speak(toSpeak, QueueMode.Flush, p);
+                    textToSpeech.Speak(toSpeak, QueueMode.Flush, null, null);
                 }
             }
         }
@@ -31,8 +27,7 @@ namespace TodoREST.Droid
         {
             if (status.Equals(OperationResult.Success))
             {
-                var p = new Dictionary<string, string>();
-                textToSpeech.Speak(toSpeak, QueueMode.Flush, p);
+                textToSpeech.Speak(toSpeak, QueueMode.Flush, null, null);
             }
         }
     }

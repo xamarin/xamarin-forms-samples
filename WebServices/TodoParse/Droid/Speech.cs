@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-using Android.Speech.Tts;
-using TodoParse.Droid;
+﻿using Android.Speech.Tts;
 
-namespace TodoParse
+namespace TodoParse.Droid
 {
     public class Speech : Java.Lang.Object, ITextToSpeech, TextToSpeech.IOnInitListener
     {
@@ -20,8 +18,7 @@ namespace TodoParse
                 }
                 else
                 {
-                    var p = new Dictionary<string, string>();
-                    textToSpeech.Speak(toSpeak, QueueMode.Flush, p);
+                    textToSpeech.Speak(toSpeak, QueueMode.Flush, null, null);
                 }
             }
         }
@@ -30,8 +27,7 @@ namespace TodoParse
         {
             if (status.Equals(OperationResult.Success))
             {
-                var p = new Dictionary<string, string>();
-                textToSpeech.Speak(toSpeak, QueueMode.Flush, p);
+                textToSpeech.Speak(toSpeak, QueueMode.Flush, null, null);
             }
         }
     }

@@ -1,6 +1,5 @@
 ﻿using Android.Speech.Tts;
 using Xamarin.Forms;
-using System.Collections.Generic;
 using Java.Lang;
 using Todo;
 
@@ -21,8 +20,7 @@ namespace Todo
                     speaker = new TextToSpeech(MainActivity.Instance, this);
                 else
                 {
-                    var p = new Dictionary<string, string>();
-                    speaker.Speak(toSpeak, QueueMode.Flush, p);
+                    speaker.Speak(toSpeak, QueueMode.Flush, null, null);
                 }
             }
         }
@@ -32,8 +30,7 @@ namespace Todo
         {
             if (status.Equals(OperationResult.Success))
             {
-                var p = new Dictionary<string, string>();
-                speaker.Speak(toSpeak, QueueMode.Flush, p);
+                speaker.Speak(toSpeak, QueueMode.Flush, null, null);
             }
         }
         #endregion

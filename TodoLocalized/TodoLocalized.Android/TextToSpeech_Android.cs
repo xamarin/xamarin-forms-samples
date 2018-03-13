@@ -1,20 +1,15 @@
 ﻿using Android.Speech.Tts;
 using Xamarin.Forms;
-using System.Collections.Generic;
 using Java.Lang;
 using TodoLocalized;
 
 [assembly: Dependency(typeof(TextToSpeech_Android))]
-
 namespace TodoLocalized
 {
     public class TextToSpeech_Android : Object, ITextToSpeech, TextToSpeech.IOnInitListener
     {
         TextToSpeech speaker;
         string toSpeak;
-        public TextToSpeech_Android()
-        {
-        }
 
         public void Speak(string text)
         {
@@ -23,8 +18,7 @@ namespace TodoLocalized
                 speaker = new TextToSpeech(MainActivity.Instance, this);
             else
             {
-                var p = new Dictionary<string, string>();
-                speaker.Speak(toSpeak, QueueMode.Flush, p);
+                speaker.Speak(toSpeak, QueueMode.Flush, null, null);
             }
         }
 
@@ -34,8 +28,7 @@ namespace TodoLocalized
             if (status.Equals(OperationResult.Success))
             {
                 System.Diagnostics.Debug.WriteLine("spoke");
-                var p = new Dictionary<string, string>();
-                speaker.Speak(toSpeak, QueueMode.Flush, p);
+                speaker.Speak(toSpeak, QueueMode.Flush, null, null);
             }
             else
                 System.Diagnostics.Debug.WriteLine("was quiet");

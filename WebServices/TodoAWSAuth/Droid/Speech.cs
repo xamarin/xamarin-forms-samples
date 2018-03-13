@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Android.Speech.Tts;
+﻿using Android.Speech.Tts;
 
 namespace TodoAWSSimpleDB.Droid
 {
@@ -19,8 +18,7 @@ namespace TodoAWSSimpleDB.Droid
                 }
                 else
                 {
-                    var p = new Dictionary<string, string>();
-                    textToSpeech.Speak(toSpeak, QueueMode.Flush, p);
+                    textToSpeech.Speak(toSpeak, QueueMode.Flush, null, null);
                 }
             }
         }
@@ -29,8 +27,7 @@ namespace TodoAWSSimpleDB.Droid
         {
             if (status.Equals(OperationResult.Success))
             {
-                var p = new Dictionary<string, string>();
-                textToSpeech.Speak(toSpeak, QueueMode.Flush, p);
+                textToSpeech.Speak(toSpeak, QueueMode.Flush, null, null);
             }
         }
     }
