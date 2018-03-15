@@ -153,9 +153,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TouchTrackingEffectDemos\TouchTrackingEffectDemos.csproj">
-      <Project>{580024b4-85c5-47ef-8130-898c1f762726}</Project>
-      <Name>TouchTrackingEffectDemos</Name>
+    <ProjectReference Include="..\TouchTrackingEffect\TouchTrackingEffect.csproj">
+      <Project>{580024B4-85C5-47EF-8130-898C1F762726}</Project>
+      <Name>TouchTrackingEffect</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
