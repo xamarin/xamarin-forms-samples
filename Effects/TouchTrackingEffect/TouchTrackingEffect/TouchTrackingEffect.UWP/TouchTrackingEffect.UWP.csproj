@@ -129,9 +129,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TouchTrackingEffectDemos\TouchTrackingEffectDemos.csproj">
+    <ProjectReference Include="..\TouchTrackingEffect\TouchTrackingEffect.csproj">
       <Project>{580024b4-85c5-47ef-8130-898c1f762726}</Project>
-      <Name>TouchTrackingEffectDemos</Name>
+      <Name>TouchTrackingEffect</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
