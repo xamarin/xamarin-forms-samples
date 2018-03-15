@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloXamarinFormsXaml.WinPhone", "HelloXamarinFormsXaml\HelloXamarinFormsXaml.WinPhone\HelloXamarinFormsXaml.WinPhone.csproj", "{9BC6B532-5DE0-4BEC-BD16-AD91C0652858}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloFormsXaml.WinPhone", "HelloFormsXaml\HelloFormsXaml.WinPhone\HelloFormsXaml.WinPhone.csproj", "{9BC6B532-5DE0-4BEC-BD16-AD91C0652858}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloXamarinFormsXaml.iOS", "HelloXamarinFormsXaml\HelloXamarinFormsXaml.iOS\HelloXamarinFormsXaml.iOS.csproj", "{74629727-B3F1-42A7-A960-B865313882B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloFormsXaml.iOS", "HelloFormsXaml\HelloFormsXaml.iOS\HelloFormsXaml.iOS.csproj", "{74629727-B3F1-42A7-A960-B865313882B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloXamarinFormsXaml.Android", "HelloXamarinFormsXaml\HelloXamarinFormsXaml.Android\HelloXamarinFormsXaml.Android.csproj", "{EFA55D02-19B5-4DB8-80A0-4F76A48931D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloFormsXaml.Android", "HelloFormsXaml\HelloFormsXaml.Android\HelloFormsXaml.Android.csproj", "{EFA55D02-19B5-4DB8-80A0-4F76A48931D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloXamarinFormsXaml", "HelloXamarinFormsXaml\HelloXamarinFormsXaml\HelloXamarinFormsXaml.csproj", "{CBA618B9-671A-4297-A22F-B60F02DB3BCA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloFormsXaml", "HelloFormsXaml\HelloFormsXaml\HelloFormsXaml.csproj", "{CBA618B9-671A-4297-A22F-B60F02DB3BCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloXamarinFormsXaml.WinPhone81", "HelloXamarinFormsXaml\HelloXamarinFormsXaml.WinPhone81\HelloXamarinFormsXaml.WinPhone81.csproj", "{E1857A95-C7AF-4EA1-BCFD-B385604673EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloFormsXaml.WinPhone81", "HelloFormsXaml\HelloFormsXaml.WinPhone81\HelloFormsXaml.WinPhone81.csproj", "{E1857A95-C7AF-4EA1-BCFD-B385604673EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloXamarinFormsXaml.Windows", "HelloXamarinFormsXaml\HelloXamarinFormsXaml.Windows\HelloXamarinFormsXaml.Windows.csproj", "{836CE063-7EBA-469B-81B6-9E87C6592842}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloFormsXaml.Windows", "HelloFormsXaml\HelloFormsXaml.Windows\HelloFormsXaml.Windows.csproj", "{836CE063-7EBA-469B-81B6-9E87C6592842}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloXamarinFormsXaml.UWP", "HelloXamarinFormsXaml\HelloXamarinFormsXaml.UWP\HelloXamarinFormsXaml.UWP.csproj", "{A2690A35-57E5-4B30-A1F2-D9D16A3BC7E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloFormsXaml.UWP", "HelloFormsXaml\HelloFormsXaml.UWP\HelloFormsXaml.UWP.csproj", "{A2690A35-57E5-4B30-A1F2-D9D16A3BC7E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
