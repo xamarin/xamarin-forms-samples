@@ -38,6 +38,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BasicSliderBindingsPage.xaml.cs">
+      <DependentUpon>BasicSliderBindingsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BasicSliderCodePage.cs" />
     <Compile Include="BasicSliderXamlPage.xaml.cs">
       <DependentUpon>BasicSliderXamlPage.xaml</DependentUpon>
@@ -45,7 +48,14 @@
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HslColorSlidersPage.xaml.cs">
+      <DependentUpon>HslColorSlidersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HslColorViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RgbColorSlidersPage.xaml.cs">
+      <DependentUpon>RgbColorSlidersPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -78,6 +88,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BasicSliderXamlPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RgbColorSlidersPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HslColorSlidersPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BasicSliderBindingsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

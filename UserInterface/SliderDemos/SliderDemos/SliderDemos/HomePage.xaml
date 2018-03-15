@@ -17,6 +17,21 @@
                           Detail="Implement a Slider in XAML"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:BasicSliderXamlPage}" />
+
+                <TextCell Text="Basic Slider Bindings" 
+                          Detail="Implement a Slider with data bindings"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicSliderBindingsPage}" />
+
+                <TextCell Text="RGB Color Sliders" 
+                          Detail="Use Sliders to select RGB colors"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:RgbColorSlidersPage}" />
+
+                <TextCell Text="HSL Color Sliders" 
+                          Detail="Use Sliders and MVVM to select HSL colors"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:HslColorSlidersPage}" />
             </TableSection>
         </TableRoot>
     </TableView>

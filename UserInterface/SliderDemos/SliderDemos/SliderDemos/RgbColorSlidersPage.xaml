@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SliderDemos.RgbColorSlidersPage"
+             Title="RGB Color Sliders">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Slider">
+                <Setter Property="Maximum" Value="255" />
+            </Style>
+            
+            <Style TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Margin="10">
+        <BoxView x:Name="boxView"
+                 Color="Black"
+                 VerticalOptions="FillAndExpand" />
+
+        <Slider x:Name="redSlider"
+                ValueChanged="OnSliderValueChanged" />
+
+        <Label x:Name="redLabel" />
+
+        <Slider x:Name="greenSlider" 
+                ValueChanged="OnSliderValueChanged" />
+
+        <Label x:Name="greenLabel" />
+
+        <Slider x:Name="blueSlider" 
+                ValueChanged="OnSliderValueChanged" />
+
+        <Label x:Name="blueLabel" />
+    </StackLayout>
+</ContentPage>

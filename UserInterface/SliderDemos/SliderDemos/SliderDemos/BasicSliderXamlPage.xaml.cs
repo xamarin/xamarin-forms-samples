@@ -10,7 +10,7 @@ namespace SliderDemos
             InitializeComponent();
         }
 
-        private void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
+        void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
         {
             double value = args.NewValue;
             rotatingLabel.Rotation = value;
