@@ -9,7 +9,6 @@ using Microsoft.Azure.Documents.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Net.Http;
-using TodoDocumentDB.Droid;
 
 namespace TodoDocumentDB
 {
@@ -32,7 +31,7 @@ namespace TodoDocumentDB
             var tcs = new TaskCompletionSource<bool>();
 
 #if __IOS__
-			var controller = UIKit.UIApplication.SharedApplication.KeyWindow.RootViewController;
+            var controller = UIKit.UIApplication.SharedApplication.KeyWindow.RootViewController;
 #endif
             try
             {
@@ -45,7 +44,7 @@ namespace TodoDocumentDB
                     if (e.IsAuthenticated && e.Account.Properties.ContainsKey("token"))
                     {
 #if __IOS__
-						controller.DismissViewController(true, null);
+                        controller.DismissViewController(true, null);
 #endif
                         var easyAuthResponseJson = JsonConvert.DeserializeObject<JObject>(e.Account.Properties["token"]);
                         var easyAuthToken = easyAuthResponseJson.GetValue("authenticationToken").ToString();
@@ -74,9 +73,9 @@ namespace TodoDocumentDB
                 };
 
 #if __IOS__
-				controller.PresentViewController(auth.GetUI(), true, null);
+                controller.PresentViewController(auth.GetUI(), true, null);
 #elif __ANDROID__
-                MainActivity.Instance.StartActivity(auth.GetUI(MainActivity.Instance));
+                TodoDocumentDB.Droid.MainActivity.Instance.StartActivity(auth.GetUI(TodoDocumentDB.Droid.MainActivity.Instance));
 #endif
             }
             catch (Exception ex)
