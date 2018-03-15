@@ -27,7 +27,6 @@
     <MtouchI18n>
     </MtouchI18n>
     <MtouchArch>i386, x86_64</MtouchArch>
-    <MtouchSdkVersion>7.1</MtouchSdkVersion>
     <MtouchExtraArgs>
     </MtouchExtraArgs>
     <MtouchOptimizePNGs>True</MtouchOptimizePNGs>
