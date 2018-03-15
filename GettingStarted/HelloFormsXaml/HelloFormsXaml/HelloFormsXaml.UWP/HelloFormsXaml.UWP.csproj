@@ -129,9 +129,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HelloXamarinFormsWorldXaml\HelloXamarinFormsWorldXaml.csproj">
+    <ProjectReference Include="..\HelloFormsXaml\HelloFormsXaml.csproj">
       <Project>{cba618b9-671a-4297-a22f-b60f02db3bca}</Project>
-      <Name>HelloXamarinFormsWorldXaml</Name>
+      <Name>HelloFormsXaml</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
