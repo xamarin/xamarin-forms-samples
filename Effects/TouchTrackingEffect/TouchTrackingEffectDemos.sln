@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchTrackingEffectDemos", "TouchTrackingEffectDemos\TouchTrackingEffectDemos\TouchTrackingEffectDemos.csproj", "{580024B4-85C5-47EF-8130-898C1F762726}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchTrackingEffect", "TouchTrackingEffect\TouchTrackingEffect\TouchTrackingEffect.csproj", "{580024B4-85C5-47EF-8130-898C1F762726}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchTrackingEffectDemos.Droid", "TouchTrackingEffectDemos\TouchTrackingEffectDemos.Droid\TouchTrackingEffectDemos.Droid.csproj", "{8F420072-71DC-4F25-A3B7-A8D85EFCBA7A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchTrackingEffect.Droid", "TouchTrackingEffect\TouchTrackingEffect.Droid\TouchTrackingEffect.Droid.csproj", "{8F420072-71DC-4F25-A3B7-A8D85EFCBA7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchTrackingEffectDemos.iOS", "TouchTrackingEffectDemos\TouchTrackingEffectDemos.iOS\TouchTrackingEffectDemos.iOS.csproj", "{34606C46-84A5-47AC-8CA2-281A32531027}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchTrackingEffect.iOS", "TouchTrackingEffect\TouchTrackingEffect.iOS\TouchTrackingEffect.iOS.csproj", "{34606C46-84A5-47AC-8CA2-281A32531027}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchTrackingEffectDemos.UWP", "TouchTrackingEffectDemos\TouchTrackingEffectDemos.UWP\TouchTrackingEffectDemos.UWP.csproj", "{F6480F2C-1F25-43E1-BD52-AE86F6414B71}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchTrackingEffect.UWP", "TouchTrackingEffect\TouchTrackingEffect.UWP\TouchTrackingEffect.UWP.csproj", "{F6480F2C-1F25-43E1-BD52-AE86F6414B71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

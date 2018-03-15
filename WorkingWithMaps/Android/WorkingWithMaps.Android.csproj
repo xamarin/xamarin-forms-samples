@@ -18,6 +18,7 @@
     <AssemblyName>WorkingWithMaps.Android</AssemblyName>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>

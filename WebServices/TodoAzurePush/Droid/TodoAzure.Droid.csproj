@@ -19,6 +19,7 @@
     <AssemblyName>TodoAzure.Droid</AssemblyName>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     <NuGetPackageImportStamp></NuGetPackageImportStamp>
     <AndroidLinkSkip></AndroidLinkSkip>
     <AndroidStoreUncompressedFileExtensions></AndroidStoreUncompressedFileExtensions>

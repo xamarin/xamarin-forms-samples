@@ -17,6 +17,7 @@
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
     <AssemblyName>DeepLinking.Droid</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <NuGetPackageImportStamp>716c0aa2</NuGetPackageImportStamp>
   </PropertyGroup>

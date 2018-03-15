@@ -18,6 +18,7 @@
     <AssemblyName>MapOverlay.Droid</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
