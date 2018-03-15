@@ -89,12 +89,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HelloXamarinFormsWorldXaml\HelloXamarinFormsWorldXaml.csproj">
-      <Name>HelloXamarinFormsWorldXaml</Name>
-      <Project>{CBA618B9-671A-4297-A22F-B60F02DB3BCA}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -117,6 +111,12 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HelloFormsXaml\HelloFormsXaml.csproj">
+      <Project>{CBA618B9-671A-4297-A22F-B60F02DB3BCA}</Project>
+      <Name>HelloFormsXaml</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
