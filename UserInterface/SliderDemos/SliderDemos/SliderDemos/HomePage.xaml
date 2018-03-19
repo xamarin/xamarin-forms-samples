@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SliderDemos"
+             x:Class="SliderDemos.HomePage"
+             Title="Slider Demos"
+             Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="Basic Slider Code"
+                          Detail="Implement a Slider in Code"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicSliderCodePage}" />
+
+                <TextCell Text="Basic Slider XAML" 
+                          Detail="Implement a Slider in XAML"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicSliderXamlPage}" />
+
+                <TextCell Text="Basic Slider Bindings" 
+                          Detail="Implement a Slider with data bindings"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicSliderBindingsPage}" />
+
+                <TextCell Text="RGB Color Sliders" 
+                          Detail="Use Sliders to select RGB colors"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:RgbColorSlidersPage}" />
+
+                <TextCell Text="HSL Color Sliders" 
+                          Detail="Use Sliders and MVVM to select HSL colors"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:HslColorSlidersPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

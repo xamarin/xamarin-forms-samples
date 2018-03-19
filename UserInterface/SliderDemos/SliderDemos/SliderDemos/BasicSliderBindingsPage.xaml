@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SliderDemos.BasicSliderBindingsPage"
+             Title="Basic Slider Bindings"
+             Padding="10, 0">
+    <StackLayout>
+        <Label Text="ROTATING TEXT"
+               Rotation="{Binding Source={x:Reference slider}, 
+                                  Path=Value}"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+
+        <Slider x:Name="slider"
+                Maximum="360" />
+
+        <Label x:Name="displayLabel"
+               Text="{Binding Source={x:Reference slider}, 
+                              Path=Value, 
+                              StringFormat='The Slider value is {0:F0}'}"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>
