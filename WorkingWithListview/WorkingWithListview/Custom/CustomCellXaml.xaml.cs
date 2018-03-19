@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Xamarin.Forms;
 using System.Diagnostics;
 
@@ -21,11 +20,12 @@ namespace WorkingWithListview
             ((ListView)sender).SelectedItem = null; // de-select the row
         }
 
-        public void OnCellClicked(object sender, EventArgs e)
+        async void OnCellClicked(object sender, EventArgs e)
         {
             var b = (Button)sender;
             var t = b.CommandParameter;
-            ((ContentPage)((ListView)((StackLayout)b.Parent).Parent).Parent).DisplayAlert("Clicked", t + " button was clicked", "OK");
+
+            await ((ContentPage)((ListView)((ViewCell)((StackLayout)b.Parent).Parent).Parent).Parent).DisplayAlert("Clicked", t + " button was clicked", "OK");
             Debug.WriteLine("clicked" + t);
         }
     }
