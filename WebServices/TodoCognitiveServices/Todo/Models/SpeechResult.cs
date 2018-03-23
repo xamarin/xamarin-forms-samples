@@ -3,17 +3,12 @@ using Newtonsoft.Json;
 
 namespace Todo
 {
-	[JsonObject("result")]
-	public class SpeechResult
-	{
-		public string Scenario { get; set; }
-		public string Name { get; set; }
-		public string Lexical { get; set; }
-		public string Confidence { get; set; }
-	}
-
-	public class SpeechResults
-	{
-		public List<SpeechResult> results { get; set; }
-	}
+    [JsonObject("result")]
+    public class SpeechResult
+    {
+        public string RecognitionStatus { get; set; }
+        public string DisplayText { get; set; }
+        public string Offset { get; set; }
+        public string Duration { get; set; }
+    }
 }
