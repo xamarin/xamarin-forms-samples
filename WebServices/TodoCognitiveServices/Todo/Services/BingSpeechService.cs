@@ -41,7 +41,7 @@ namespace Todo
 
         string GenerateRequestUri(string speechEndpoint)
         {
-            // To build a request URL, you should follow below guidance.
+            // To build a request URL, you should follow:
             // https://docs.microsoft.com/en-us/azure/cognitive-services/speech/concepts#recognition-languages
             string requestUri = speechEndpoint;
             requestUri += @"dictation/cognitiveservices/v1?";
@@ -56,8 +56,9 @@ namespace Todo
             if (httpClient == null)
             {
                 httpClient = new HttpClient();
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
             }
+
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
 
             var content = new StreamContent(fileStream);
             content.Headers.TryAddWithoutValidation("Content-Type", contentType);
