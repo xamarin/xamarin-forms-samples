@@ -35,8 +35,37 @@ namespace CustomRenderer.iOS
 				SetupLiveCameraStream ();
 				AuthorizeCameraUse ();
 			} catch (Exception ex) {
-				System.Diagnostics.Debug.WriteLine (@"			ERROR: ", ex.Message);
+				System.Diagnostics.Debug.WriteLine($"\t\t\tERROR: {ex.Message}");
 			}
+		}
+
+		protected override void Dispose(bool disposing)
+		{
+			if (captureDeviceInput != null && captureSession != null)
+			{
+				captureSession.RemoveInput(captureDeviceInput);
+			}
+
+			if(captureDeviceInput != null)
+			{
+				captureDeviceInput.Dispose();
+				captureDeviceInput = null;
+			}
+
+			if(captureSession != null)
+			{
+				captureSession.StopRunning();
+				captureSession.Dispose();
+				captureSession = null;
+			}
+
+			if (stillImageOutput != null)
+			{
+				stillImageOutput.Dispose();
+				stillImageOutput = null;
+			}
+
+			base.Dispose(disposing);
 		}
 
 		void SetupUserInterface ()
@@ -50,7 +79,7 @@ namespace CustomRenderer.iOS
 			var buttonHeight = 70;
 
 			liveCameraStream = new UIView () {
-				Frame = new CGRect (0f, 0f, 320f, View.Bounds.Height)
+				Frame = new CGRect (0f, 0f, View.Bounds.Width, View.Bounds.Height)
 			};
 
 			takePhotoButton = new UIButton () {
@@ -91,13 +120,17 @@ namespace CustomRenderer.iOS
 
 		async void CapturePhoto ()
 		{
-			var videoConnection = stillImageOutput.ConnectionFromMediaType (AVMediaType.Video);
-			var sampleBuffer = await stillImageOutput.CaptureStillImageTaskAsync (videoConnection);
-			var jpegImage = AVCaptureStillImageOutput.JpegStillToNSData (sampleBuffer);
+			var videoConnection = stillImageOutput.ConnectionFromMediaType(AVMediaType.Video);
+			var sampleBuffer = await stillImageOutput.CaptureStillImageTaskAsync(videoConnection);
+			var jpegImage = AVCaptureStillImageOutput.JpegStillToNSData(sampleBuffer);
 
-			var photo = new UIImage (jpegImage);
-			photo.SaveToPhotosAlbum ((image, error) => {
-				Console.Error.WriteLine (@"				Error: ", error);
+			var photo = new UIImage(jpegImage);
+			photo.SaveToPhotosAlbum((image, error) =>
+			{
+				if (!string.IsNullOrEmpty(error?.LocalizedDescription))
+				{
+					Console.Error.WriteLine($"\t\t\tError: {error.LocalizedDescription}");
+				}
 			});
 		}
 
@@ -162,7 +195,7 @@ namespace CustomRenderer.iOS
 			};
 			liveCameraStream.Layer.AddSublayer (videoPreviewLayer);
 
-			var captureDevice = AVCaptureDevice.DefaultDeviceWithMediaType (AVMediaType.Video);
+			var captureDevice = AVCaptureDevice.GetDefaultDevice(AVMediaType.Video);
 			ConfigureCameraForDevice (captureDevice);
 			captureDeviceInput = AVCaptureDeviceInput.FromDevice (captureDevice);
 
