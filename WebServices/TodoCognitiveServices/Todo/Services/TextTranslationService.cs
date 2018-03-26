@@ -44,8 +44,9 @@ namespace Todo
             if (httpClient == null)
             {
                 httpClient = new HttpClient();
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
             }
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+
             var response = await httpClient.GetAsync(url);
             return await response.Content.ReadAsStringAsync();
         }

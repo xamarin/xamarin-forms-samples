@@ -42,7 +42,7 @@ namespace Todo
         string GenerateRequestUri(string speechEndpoint)
         {
             // To build a request URL, you should follow:
-            // https://docs.microsoft.com/en-us/azure/cognitive-services/speech/concepts#recognition-languages
+            // https://docs.microsoft.com/en-us/azure/cognitive-services/speech/getstarted/getstartedrest
             string requestUri = speechEndpoint;
             requestUri += @"dictation/cognitiveservices/v1?";
             requestUri += @"language=en-us";
