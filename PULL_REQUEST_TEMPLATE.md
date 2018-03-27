@@ -3,6 +3,7 @@
 <!-- Describe your changes here -->
 
 <!-- Notes:
+Do not update the Xamarin.Forms NuGet packages, or Android support libraries.
 Do not use pre-release versions of NuGet packages.
 If you update a NuGet package in a project, please ensure that you update the same package in the other projects in the sample (if present).
 If you change code in the library project in a sample, please ensure that you thoroughly test the changes on all platforms.
