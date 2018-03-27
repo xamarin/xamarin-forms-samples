@@ -14,7 +14,7 @@
         public static readonly string TextTranslatorApiKey = "<INSERT_API_KEY_HERE>";
         public static readonly string TextTranslatorEndpoint = "https://api.microsofttranslator.com/v2/http.svc/translate";
 
-        public static readonly string EmotionApiKey = "<INSERT_API_KEY_HERE>";
+        public static readonly string FaceApiKey = "<INSERT_API_KEY_HERE>";
 
         public static readonly string AudioFilename = "Todo.wav";
     }

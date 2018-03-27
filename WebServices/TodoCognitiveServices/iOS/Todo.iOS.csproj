@@ -32,8 +32,6 @@
         <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
         <MtouchTlsProvider>Default</MtouchTlsProvider>
         <PlatformTarget>x86</PlatformTarget>
-        <CodesignProvision>
-        </CodesignProvision>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
         <DebugType>pdbonly</DebugType>
@@ -83,8 +81,6 @@
         <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
         <MtouchTlsProvider>Default</MtouchTlsProvider>
         <PlatformTarget>x86</PlatformTarget>
-        <CodesignProvision>
-        </CodesignProvision>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="System" />
