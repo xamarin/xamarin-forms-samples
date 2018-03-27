@@ -17,7 +17,7 @@ namespace Todo
         public RateAppPage()
         {
             InitializeComponent();
-            faceServiceClient = new FaceServiceClient(Constants.FaceApiKey, "https://westeurope.api.cognitive.microsoft.com/face/v1.0");
+            faceServiceClient = new FaceServiceClient(Constants.FaceApiKey, Constants.FaceEndpoint);
         }
 
         async void OnTakePhotoButtonClicked(object sender, EventArgs e)
