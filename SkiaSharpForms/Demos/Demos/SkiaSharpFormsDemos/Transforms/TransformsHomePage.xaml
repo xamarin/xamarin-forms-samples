@@ -127,7 +127,12 @@
                           Detail="Pan, scale, and rotate multiple bitmaps"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Transforms.BitmapScatterViewPage}" />
-            </TableSection>
+
+                <TextCell Text="Single Finger Corner Scale"
+                          Detail="Pan and scale a bitmap with one finger"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.SingleFingerCornerScalePage}" />
+          </TableSection>
 
             <TableSection Title="Non-Affine Transforms">
                 <TextCell Text="Test Perspective"

@@ -196,6 +196,9 @@
     <Compile Include="Transforms\ShowNonAffineMatrixPage.xaml.cs">
       <DependentUpon>ShowNonAffineMatrixPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Transforms\SingleFingerCornerScalePage.xaml.cs">
+      <DependentUpon>SingleFingerCornerScalePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Transforms\SkewAngleExperimentPage.xaml.cs">
       <DependentUpon>SkewAngleExperimentPage.xaml</DependentUpon>
     </Compile>
@@ -485,6 +488,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Curves\PathLengthPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Transforms\SingleFingerCornerScalePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
