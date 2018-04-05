@@ -45,7 +45,7 @@ namespace SkiaSharpFormsDemos.Curves
 
         static SKMatrix Multiply(SKMatrix first, SKMatrix second)
         {
-            SKMatrix target;
+            SKMatrix target = SKMatrix.MakeIdentity();
             SKMatrix.Concat(ref target, first, second);
             return target;
         }
