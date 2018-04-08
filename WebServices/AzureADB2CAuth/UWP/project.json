@@ -2,7 +2,7 @@
   "dependencies": {
     "Microsoft.Identity.Client": "1.0.304142221-alpha",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-    "Xamarin.Forms": "2.4.0.282"
+    "Xamarin.Forms": "2.5.0.280555"
   },
   "frameworks": {
     "uap10.0": {}

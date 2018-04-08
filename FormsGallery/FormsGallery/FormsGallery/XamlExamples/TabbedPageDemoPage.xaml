@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:FormsGallery"
+            x:Class="FormsGallery.XamlExamples.TabbedPageDemoPage"
+            Title="TabbedPage Demo">
+
+    <TabbedPage.ItemsSource>
+        <x:Array Type="{x:Type local:NamedColor}">
+            <local:NamedColor Name="Red" Color="Red" />
+            <local:NamedColor Name="Green" Color="Green" />
+            <local:NamedColor Name="Blue" Color="Blue" />
+            <local:NamedColor Name="Yellow" Color="Yellow" />
+        </x:Array>
+    </TabbedPage.ItemsSource>
+
+    <TabbedPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage Title="{Binding Name}">
+                <ContentPage.Resources>
+                    <ResourceDictionary>
+                        <Style TargetType="Label">
+                            <Setter Property="FontSize" Value="Large" />
+                            <Setter Property="HorizontalTextAlignment" Value="End" />
+                        </Style>
+                    </ResourceDictionary>
+                </ContentPage.Resources>
+
+                <StackLayout>
+                    <StackLayout HorizontalOptions="Center"
+                                 VerticalOptions="CenterAndExpand">
+
+                        <Label Text="{Binding Color.R, StringFormat='R = {0:F2}'}" />
+                        <Label Text="{Binding Color.G, StringFormat='G = {0:F2}'}" />
+                        <Label Text="{Binding Color.B, StringFormat='B = {0:F2}'}" />
+                    </StackLayout>
+
+                    <BoxView Color="{Binding Color}"
+                         WidthRequest="100"
+                         HeightRequest="100"
+                         HorizontalOptions="Center" />
+
+                    <StackLayout HorizontalOptions="Center"
+                                 VerticalOptions="CenterAndExpand">
+
+                        <Label Text="{Binding Color.Hue, StringFormat='Hue = {0:F2}'}" />
+                        <Label Text="{Binding Color.Saturation, StringFormat='Saturation = {0:F2}'}" />
+                        <Label Text="{Binding Color.Luminosity, StringFormat='Luminosity = {0:F2}'}" />
+                    </StackLayout>
+                </StackLayout>
+            </ContentPage>
+        </DataTemplate>
+    </TabbedPage.ItemTemplate>
+</TabbedPage>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:globe="clr-namespace:System.Globalization;assembly=mscorlib"
+             x:Class="DataBindingDemos.PathVariationsPage"
+             Title="Path Variations"
+             x:Name="page">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout Margin="10, 0">
+        <Label Text="Select a time:" />
+
+        <TimePicker x:Name="timePicker" />
+
+        <Label Text="{Binding Source={x:Reference timePicker},
+                              Path=Time.TotalSeconds,
+                              StringFormat='{0} total seconds'}" />
+
+        <Label Text="{Binding Source={x:Reference page},
+                              Path=Content.Children.Count,
+                              StringFormat='There are {0} children in this StackLayout'}" />
+        
+        <Label Text="{Binding Source={x:Static globe:CultureInfo.CurrentCulture},
+                              Path=DateTimeFormat.DayNames[3],
+                              StringFormat='The middle day of the week is {0}'}" />
+
+        <Label>
+            <Label.Text>
+                <Binding Path="DateTimeFormat.DayNames[3]"
+                         StringFormat="The middle day of the week in French is {0}">
+                    <Binding.Source>
+                        <globe:CultureInfo>
+                            <x:Arguments>
+                                <x:String>fr-FR</x:String>
+                            </x:Arguments>
+                        </globe:CultureInfo>
+                    </Binding.Source>
+                </Binding>
+            </Label.Text>
+        </Label>
+
+        <Label Text="{Binding Source={x:Reference page},
+                              Path=Content.Children[2].Text.Length,
+                              StringFormat='The second Label has {0} characters'}" />
+    </StackLayout>
+</ContentPage>

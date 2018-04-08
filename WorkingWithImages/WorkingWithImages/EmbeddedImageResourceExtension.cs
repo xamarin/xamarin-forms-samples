@@ -7,7 +7,7 @@ namespace WorkingWithImages
 {
 	// You exclude the 'Extension' suffix when using in Xaml markup
 	[Preserve(AllMembers = true)]
-	[ContentProperty ("Source")]
+	[ContentProperty (nameof(Source))]
 	public class ImageResourceExtension : IMarkupExtension
 	{
 		public string Source { get; set; }

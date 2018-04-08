@@ -17,6 +17,10 @@ namespace CustomRenderer.Droid
     {
         List<CustomPin> customPins;
 
+        public CustomMapRenderer(Context context) : base(context)
+        {
+        }
+
         protected override void OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs<Map> e)
         {
             base.OnElementChanged(e);
@@ -82,7 +86,7 @@ namespace CustomRenderer.Droid
                     throw new Exception("Custom pin not found");
                 }
 
-                if (customPin.Id == "Xamarin")
+                if (customPin.Id.ToString() == "Xamarin")
                 {
                     view = inflater.Inflate(Resource.Layout.XamarinMapInfoWindow, null);
                 }

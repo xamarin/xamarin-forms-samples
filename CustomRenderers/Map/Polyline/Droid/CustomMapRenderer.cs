@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Android.Content;
 using Android.Gms.Maps.Model;
 using MapOverlay;
 using MapOverlay.Droid;
@@ -12,6 +13,10 @@ namespace MapOverlay.Droid
     public class CustomMapRenderer : MapRenderer
     {
         List<Position> routeCoordinates;
+
+        public CustomMapRenderer(Context context) : base(context)
+        {
+        }
 
         protected override void OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs<Map> e)
         {

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataBindingDemos"
+             x:Class="DataBindingDemos.SimpleColorSelectorPage"
+             Title="Simple Color Selector">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:HslColorViewModel x:Key="viewModel" 
+                                     Color="MediumTurquoise" />
+
+            <Style TargetType="Slider">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+        
+    <Grid BindingContext="{StaticResource viewModel}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <BoxView Color="{Binding Color}"
+                 Grid.Row="0" />
+
+        <StackLayout Grid.Row="1"
+                     Margin="10, 0">
+
+            <Label Text="{Binding Name}"
+                   HorizontalTextAlignment="Center" />
+
+            <Slider Value="{Binding Hue}" />
+    
+            <Slider Value="{Binding Saturation}" />
+
+            <Slider Value="{Binding Luminosity}" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="FormsGallery.XamlExamples.MapDemoPage"
+             Title="Map Demo">
+    <!-- 
+        Map requires:
+            - Installing the Xamarin.Forms.Maps NuGet package
+                (Use the same version number as the Xamarin.Forms package)
+            - a platform-specific call to Xamarin.FormsMaps.Init() in:
+                - iOS: AppDelegate.cs
+                - Android: MainActivity.cs
+                - UWP: App.xaml.cs (with API key)
+            - platform-specific permission:
+                - iOS: location request in info.plist
+                - Android: API key in Android.Manifest.xml, plus location permissions
+                - UWP: package.appxmanifest Capabilities: Location
+    -->
+    
+    <StackLayout>
+        <Label Text="Map"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <maps:Map>
+            <x:Arguments>
+                <maps:MapSpan>
+                    <x:Arguments>
+                        <maps:Position>
+                            <x:Arguments>
+                                <x:Double>37.79762</x:Double>
+                                <x:Double>-122.40181</x:Double>
+                            </x:Arguments>
+                        </maps:Position>
+                        
+                        <x:Double>
+                            0.01
+                        </x:Double>
+                        
+                        <x:Double>
+                            0.01
+                        </x:Double>
+                    </x:Arguments>
+                </maps:MapSpan>
+            </x:Arguments>
+
+            <maps:Map.Pins>
+                <maps:Pin Label="Xamarin">
+                    <maps:Pin.Position>
+                        <maps:Position>
+                            <x:Arguments>
+                                <x:Double>37.79762</x:Double>
+                                <x:Double>-122.40181</x:Double>
+                            </x:Arguments>
+                        </maps:Position>
+                    </maps:Pin.Position>
+                </maps:Pin>
+            </maps:Map.Pins>
+        </maps:Map>
+    </StackLayout>
+</ContentPage>

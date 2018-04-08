@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MarkupExtensions"
+             x:Class="MarkupExtensions.MainPage"
+             Title="Markup Extensions"
+             Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="x:Static Demo"
+                          Detail="Access constants or statics"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:StaticDemoPage}" />
+
+                <TextCell Text="x:Reference Demo"
+                          Detail="Reference named elements on the page"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ReferenceDemoPage}" />
+
+                <TextCell Text="x:Type Demo"
+                          Detail="Associate a Button with a Type"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:TypeDemoPage}" />
+
+                <TextCell Text="x:Array Demo"
+                          Detail="Use an array to fill a ListView"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ArrayDemoPage}" />
+
+                <TextCell Text="x:Null Demo"
+                          Detail="Set a property equal to null"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:NullDemoPage}" />
+
+                <TextCell Text="HSL Color Demo"
+                          Detail="Specify a Color with HSL components"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:HslColorDemoPage}" />
+
+                <TextCell Text="Image Resource Demo"
+                          Detail="Use a custom markup extension to access bitmaps"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ImageResourceDemoPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>    

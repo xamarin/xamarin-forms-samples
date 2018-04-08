@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:video="clr-namespace:FormsVideoLibrary"
+             x:Class="VideoPlayerDemos.CustomTransportPage"
+             Title="Custom Transport">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <video:VideoPlayer x:Name="videoPlayer"
+                           Grid.Row="0"
+                           AutoPlay="False" 
+                           AreTransportControlsEnabled="False"
+                           Source="{StaticResource BigBuckBunny}" />
+
+        <ActivityIndicator Grid.Row="0"
+                           Color="Gray"
+                           IsVisible="False">
+            <ActivityIndicator.Triggers>
+                <DataTrigger TargetType="ActivityIndicator"
+                             Binding="{Binding Source={x:Reference videoPlayer}, 
+                                               Path=Status}"
+                             Value="{x:Static video:VideoStatus.NotReady}">
+                    <Setter Property="IsVisible" Value="True" />
+                    <Setter Property="IsRunning" Value="True" />
+                </DataTrigger>
+            </ActivityIndicator.Triggers>
+        </ActivityIndicator>
+
+        <StackLayout Grid.Row="1"
+                     Orientation="Horizontal"
+                     Margin="0, 10"
+                     BindingContext="{x:Reference videoPlayer}">
+
+            <Button Text="&#x25B6;&#xFE0F; Play"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="OnPlayPauseButtonClicked">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding Status}"
+                                 Value="{x:Static video:VideoStatus.Playing}">
+                        <Setter Property="Text" Value="&#x23F8; Pause" />
+                    </DataTrigger>
+
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding Status}"
+                                 Value="{x:Static video:VideoStatus.NotReady}">
+                        <Setter Property="IsEnabled" Value="False" />
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+
+            <Button Text="&#x23F9; Stop"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="OnStopButtonClicked">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding Status}"
+                                 Value="{x:Static video:VideoStatus.NotReady}">
+                        <Setter Property="IsEnabled" Value="False" />
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+        </StackLayout>
+    </Grid>
+</ContentPage>

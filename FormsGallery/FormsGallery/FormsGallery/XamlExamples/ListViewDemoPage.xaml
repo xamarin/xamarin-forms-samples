@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FormsGallery"
+             x:Class="FormsGallery.XamlExamples.ListViewDemoPage"
+             Title="ListView Demo">
+    <StackLayout>
+        <Label Text="ListView"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <ListView Margin="10, 0">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:Person}">
+                    <local:Person Name="Abigail" Birthday="01/15/1975" FavoriteColor="Aqua" />
+                    <local:Person Name="Bob" Birthday="02/20/1976" FavoriteColor="Black" />
+                    <local:Person Name="Cathy" Birthday="03/10/1977" FavoriteColor="Blue" />
+                    <local:Person Name="David" Birthday="04/25/1978" FavoriteColor="Fuchsia" />
+                    <local:Person Name="Eugenie" Birthday="05/05/1979" FavoriteColor="Gray" />
+                    <local:Person Name="Freddie" Birthday="06/30/1980" FavoriteColor="Green" />
+                    <local:Person Name="Greta" Birthday="07/15/1981" FavoriteColor="Lime" />
+                    <local:Person Name="Harold" Birthday="08/10/1982" FavoriteColor="Maroon" />
+                    <local:Person Name="Irene" Birthday="09/25/1983" FavoriteColor="Navy" />
+                    <local:Person Name="Jonathan" Birthday="10/10/1984" FavoriteColor="Olive" />
+                    <local:Person Name="Kathy" Birthday="11/20/1985" FavoriteColor="Purple" />
+                    <local:Person Name="Larry" Birthday="12/05/1986" FavoriteColor="Red" />
+                    <local:Person Name="Monica" Birthday="01/05/1975" FavoriteColor="Silver" />
+                    <local:Person Name="Nick" Birthday="02/10/1976" FavoriteColor="Teal" />
+                    <local:Person Name="Olive" Birthday="03/20/1977" FavoriteColor="White" />
+                    <local:Person Name="Pendleton" Birthday="04/10/1978" FavoriteColor="Yellow" />
+                    <local:Person Name="Queenie" Birthday="05/15/1979" FavoriteColor="Aqua" />
+                    <local:Person Name="Rob" Birthday="06/30/1980" FavoriteColor="Blue" />
+                    <local:Person Name="Sally" Birthday="07/05/1981" FavoriteColor="Fuchsia" />
+                    <local:Person Name="Timothy" Birthday="08/30/1982" FavoriteColor="Green" />
+                    <local:Person Name="Uma" Birthday="09/10/1983" FavoriteColor="Lime" />
+                    <local:Person Name="Victor" Birthday="10/20/1984" FavoriteColor="Maroon" />
+                    <local:Person Name="Wendy" Birthday="11/05/1985" FavoriteColor="Navy" />
+                    <local:Person Name="Xavier" Birthday="12/30/1986" FavoriteColor="Olive" />
+                    <local:Person Name="Yvonne" Birthday="01/10/1987" FavoriteColor="Purple" />
+                    <local:Person Name="Zachary" Birthday="02/05/1988" FavoriteColor="Red" />
+                </x:Array>
+            </ListView.ItemsSource>
+                
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="0, 5"
+                                     Orientation="Horizontal">
+                            <BoxView Color="{Binding FavoriteColor}" />
+                            <StackLayout VerticalOptions="Center"
+                                         Spacing="0">
+                                <Label Text="{Binding Name}" />
+                                <Label Text="{Binding Birthday, StringFormat='Born {0:d}'}" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

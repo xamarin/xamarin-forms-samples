@@ -24,7 +24,7 @@
                 <On Platform="UWP" Value="#00A0A0" />
             </OnPlatform>
 
-            <x:String x:Key="fontSize">Large</x:String>
+            <x:Double x:Key="fontSize">24</x:Double>
         </ResourceDictionary>
     </ContentPage.Resources>
 

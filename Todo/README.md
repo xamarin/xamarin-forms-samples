@@ -13,6 +13,10 @@ In all cases the tasks are stored in a local SQLite database.
 
 For more information about the sample see [Working with a Local Database](https://developer.xamarin.com/guides/xamarin-forms/working-with/databases/).
 
+_Note_: This sample may not work on Xamarin Live Player due to dependency on SQLite.
+
+Learn more about Xamarin Live Player limitations [here](https://developer.xamarin.com/guides/cross-platform/live/limitations/#Limitations)
+
 Authors
 -------
 

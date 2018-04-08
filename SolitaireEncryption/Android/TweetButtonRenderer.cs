@@ -5,35 +5,41 @@ using Xamarin.Forms;
 using Solitaire.Android;
 using Solitaire;
 
-[assembly:ExportRenderer(typeof(TweetButton), typeof(TweetButtonRenderer))]
-
-
+[assembly: ExportRenderer(typeof(TweetButton), typeof(TweetButtonRenderer))]
 namespace Solitaire.Android
 {
-	public class TweetButtonRenderer : ButtonRenderer
-	{
-		protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.Button> e)
-		{
-			base.OnElementChanged (e);
+    public class TweetButtonRenderer : ButtonRenderer
+    {
+        public TweetButtonRenderer(Context context) : base(context)
+        {
+        }
 
-			var tweetButton = e.NewElement as TweetButton;
+        protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Button> e)
+        {
+            base.OnElementChanged(e);
 
-			var button = Control as global::Android.Widget.Button;
+            var tweetButton = e.NewElement as TweetButton;
 
-			button.Click += (sender, e1) => {
-				// combine message with URL
-				var message = tweetButton.FormattedText + " " + tweetButton.AttachedUrl;
-				try {
-					var intent = new Intent (Intent.ActionSend);
-					intent.PutExtra (Intent.ExtraText, message);
-					intent.SetType ("text/plain");
-					Forms.Context.StartActivity(Intent.CreateChooser (intent, "Tweet the Code"));
+            var button = Control as global::Android.Widget.Button;
 
-				} catch(Exception ex) {
-					System.Diagnostics.Debug.WriteLine ("Android TweetButtonRenderer Exception: " + ex);
-				}
-			};
-		}
-	}
+            button.Click += (sender, e1) =>
+            {
+                // combine message with URL
+                var message = tweetButton.FormattedText + " " + tweetButton.AttachedUrl;
+                try
+                {
+                    var intent = new Intent(Intent.ActionSend);
+                    intent.PutExtra(Intent.ExtraText, message);
+                    intent.SetType("text/plain");
+                    MainActivity.Instance.StartActivity(Intent.CreateChooser(intent, "Tweet the Code"));
+
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine("Android TweetButtonRenderer Exception: " + ex);
+                }
+            };
+        }
+    }
 }
 

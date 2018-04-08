@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataBindingDemos"
+             x:Class="DataBindingDemos.MainPage"
+             Title="Data Binding Demos"
+             Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Basic Bindings">
+
+                <TextCell Text="Basic Code Binding"
+                          Detail="Define a data-binding in code"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicCodeBindingPage}" />
+
+                <TextCell Text="Basic XAML Binding"
+                          Detail="Define a data-binding in XAML"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicXamlBindingPage}" />
+
+                <TextCell Text="Alternative Code Binding"
+                          Detail="Define a data-binding in code without a BindingContext"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:AlternativeCodeBindingPage}" />
+
+                <TextCell Text="Alternative XAML Binding"
+                          Detail="Define a data-binding in XAML without a BindingContext"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:AlternativeXamlBindingPage}" />
+
+                <TextCell Text="BindingContext Inheritance"
+                          Detail="Simplify bindings with an inherited BindingContext"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BindingContextInheritancePage}" />
+            </TableSection>
+
+            <TableSection Title="Binding Mode">
+
+                <TextCell Text="Reverse Binding"
+                          Detail="Reverse the source and the target"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ReverseBindingPage}" />
+
+                <TextCell Text="Simple Color Selector"
+                          Detail="Use a ViewModel for HSL Color"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SimpleColorSelectorPage}" />
+   
+                <TextCell Text="Sample Settings"
+                          Detail="Create a ViewModel for Settings"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SampleSettingsPage}" />
+            </TableSection>
+
+            <TableSection Title="String Formatting">
+
+                <TextCell Text="String Formatting"
+                          Detail="Use standard .NET formatting specfications"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:StringFormattingPage}" />
+
+                <TextCell Text="Better Color Selector"
+                          Detail="Display Slider values for HSL Color"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BetterColorSelectorPage}" />
+
+            </TableSection>
+
+            <TableSection Title="Binding Path">
+
+                <TextCell Text="Path Variations"
+                          Detail="Explore the various ways you can use Path"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PathVariationsPage}" />
+                
+            </TableSection>
+
+            <TableSection Title="Binding Value Converters">
+
+                <TextCell Text="Enable Buttons"
+                          Detail="Use a value converter to enable buttons"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:EnableButtonsPage}" />
+
+                <TextCell Text="Switch Indicators"
+                          Detail="Show the value of a Switch in various ways"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SwitchIndicatorsPage}" />
+
+                <TextCell Text="RGB Color Selector"
+                          Detail="Display hexadecimal color components"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:RgbColorSelectorPage}" />
+
+            </TableSection>
+
+            <TableSection Title="Commanding">
+
+                <TextCell Text="Person Entry"
+                          Detail="Use the Command interface in a view model"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PersonEntryPage}" />
+
+                <TextCell Text="Decimal Keypad"
+                          Detail="Use the Command interface for a keypad"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:DecimalKeypadPage}" />
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

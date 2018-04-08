@@ -1,34 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using Android.Speech.Tts;
-using Xamarin.Forms;
+﻿using Android.Speech.Tts;
 
 namespace TodoASMX.Droid
 {
-	public class Speech : Java.Lang.Object, ITextToSpeech, TextToSpeech.IOnInitListener
-	{
-		TextToSpeech textToSpeech;
-		string toSpeak;
+    public class Speech : Java.Lang.Object, ITextToSpeech, TextToSpeech.IOnInitListener
+    {
+        TextToSpeech textToSpeech;
+        string toSpeak;
 
-		public void Speak (string text)
-		{
-			if (!string.IsNullOrWhiteSpace (text)) {
-				toSpeak = text;
-				if (textToSpeech == null) {
-					textToSpeech = new TextToSpeech (Forms.Context, this);
-				} else {
-					var p = new Dictionary<string, string> ();
-					textToSpeech.Speak (toSpeak, QueueMode.Flush, p);
-				}
-			}
-		}
+        public void Speak(string text)
+        {
+            if (!string.IsNullOrWhiteSpace(text))
+            {
+                toSpeak = text;
+                if (textToSpeech == null)
+                {
+                    textToSpeech = new TextToSpeech(MainActivity.Instance, this);
+                }
+                else
+                {
+                    textToSpeech.Speak(toSpeak, QueueMode.Flush, null, null);
+                }
+            }
+        }
 
-		public void OnInit (OperationResult status)
-		{
-			if (status.Equals (OperationResult.Success)) {
-				var p = new Dictionary<string, string> ();
-				textToSpeech.Speak (toSpeak, QueueMode.Flush, p);
-			}
-		}
-	}
+        public void OnInit(OperationResult status)
+        {
+            if (status.Equals(OperationResult.Success))
+            {
+                textToSpeech.Speak(toSpeak, QueueMode.Flush, null, null);
+            }
+        }
+    }
 }

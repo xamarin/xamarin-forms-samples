@@ -12,7 +12,7 @@ namespace WorkingWithFiles
 			var editor = new Label { Text = "loading...", HeightRequest = 300};
 
 			#region How to load a text file embedded resource
-			var assembly = typeof(LoadResourceText).GetTypeInfo().Assembly;
+			var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
 			Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLTextResource.txt");
 
 			string text = "";

@@ -32,7 +32,7 @@ namespace SpinPaintShared.Droid
                     }
 
                     // Make sure it shows up in the Photos gallery promptly.
-                    MediaScannerConnection.ScanFile(Forms.Context,
+                    MediaScannerConnection.ScanFile(MainActivity.Instance,
                                                     new string[] { bitmapFile.Path },
                                                     new string[] { "image/png", "image/jpeg" }, null);
                 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>ba407038-29c2-4eb5-9b03-34f6bb724a00</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Beginner</Level>
+	<Tags>Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>This sample demonstrates how to consume Xamarin.Forms ContentPages in native Xamarin.iOS, Xamarin.Android, and Universal Windows Platform projects, and how to navigate between them.</Brief>
+</SampleMetadata>

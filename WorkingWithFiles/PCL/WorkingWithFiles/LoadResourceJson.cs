@@ -12,7 +12,8 @@ namespace WorkingWithFiles
 		public LoadResourceJson()
 		{
 			#region How to load an Json file embedded resource
-			var assembly = typeof(LoadResourceText).GetTypeInfo().Assembly;
+			var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
+
 			Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLJsonResource.json");
 
 			Earthquake[] earthquakes;

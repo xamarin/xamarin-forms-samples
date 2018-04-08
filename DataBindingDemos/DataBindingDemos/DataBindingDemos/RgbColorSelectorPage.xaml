@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataBindingDemos"
+             x:Class="DataBindingDemos.RgbColorSelectorPage"
+             Title="RGB Color Selector">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Slider">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+
+            <local:DoubleToIntConverter x:Key="doubleToInt" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+        
+    <StackLayout>
+        <StackLayout.BindingContext>
+            <local:RgbColorViewModel Color="Gray" />
+        </StackLayout.BindingContext>
+
+        <BoxView Color="{Binding Color}"
+                 VerticalOptions="FillAndExpand" />
+
+        <StackLayout Margin="10, 0">
+            <Label Text="{Binding Name}" />
+
+            <Slider Value="{Binding Red}" />
+            <Label Text="{Binding Red, 
+                                  Converter={StaticResource doubleToInt},
+                                  ConverterParameter=255,
+                                  StringFormat='Red = {0:X2}'}" />
+
+            <Slider Value="{Binding Green}" />
+            <Label Text="{Binding Green, 
+                                  Converter={StaticResource doubleToInt},
+                                  ConverterParameter=255,
+                                  StringFormat='Green = {0:X2}'}" />
+
+            <Slider Value="{Binding Blue}" />
+            <Label>
+                <Label.Text>
+                    <Binding Path="Blue"
+                             StringFormat="Blue = {0:X2}"
+                             Converter="{StaticResource doubleToInt}">
+                        <Binding.ConverterParameter>
+                            <x:Double>255</x:Double>
+                        </Binding.ConverterParameter>
+                    </Binding>
+                </Label.Text>
+            </Label>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>    

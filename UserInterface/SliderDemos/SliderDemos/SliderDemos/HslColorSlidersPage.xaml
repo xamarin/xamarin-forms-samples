@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SliderDemos"
+             x:Class="SliderDemos.HslColorSlidersPage"
+             Title="HSL Color Sliders">
+
+    <ContentPage.BindingContext>
+        <local:HslColorViewModel Color="Chocolate" />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Margin="10">
+        <BoxView Color="{Binding Color}"
+                 VerticalOptions="FillAndExpand" />
+
+        <Slider Value="{Binding Hue}" />
+        <Label Text="{Binding Hue, StringFormat='Hue = {0:F2}'}" />
+
+        <Slider Value="{Binding Saturation}" />
+        <Label Text="{Binding Saturation, StringFormat='Saturation = {0:F2}'}" />
+
+        <Slider Value="{Binding Luminosity}" />
+        <Label Text="{Binding Luminosity, StringFormat='Luminosity = {0:F2}'}" />
+    </StackLayout>
+</ContentPage> 
+    
+    

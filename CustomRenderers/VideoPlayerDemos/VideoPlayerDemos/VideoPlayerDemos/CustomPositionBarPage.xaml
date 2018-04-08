@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:video="clr-namespace:FormsVideoLibrary"
+             x:Class="VideoPlayerDemos.CustomPositionBarPage"
+             Title="Custom Position Bar">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <video:VideoPlayer x:Name="videoPlayer"
+                           Grid.Row="0"
+                           AreTransportControlsEnabled="False"
+                           Source="{StaticResource ElephantsDream}" />
+        
+        <ActivityIndicator Grid.Row="0"
+                           Color="Gray"
+                           IsVisible="False">
+            <ActivityIndicator.Triggers>
+                <DataTrigger TargetType="ActivityIndicator"
+                             Binding="{Binding Source={x:Reference videoPlayer}, 
+                                               Path=Status}"
+                             Value="{x:Static video:VideoStatus.NotReady}">
+                    <Setter Property="IsVisible" Value="True" />
+                    <Setter Property="IsRunning" Value="True" />
+                </DataTrigger>
+            </ActivityIndicator.Triggers>
+        </ActivityIndicator>
+
+        <StackLayout Grid.Row="1"
+                     Orientation="Horizontal"
+                     Margin="10, 0"
+                     BindingContext="{x:Reference videoPlayer}">
+
+            <Label Text="{Binding Path=Position,
+                                  StringFormat='{0:hh\\:mm\\:ss}'}"
+                   VerticalOptions="Center"/>
+
+            <Button Text="&#x25B6;&#xFE0F; Play"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="OnPlayPauseButtonClicked">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding Status}"
+                                 Value="{x:Static video:VideoStatus.Playing}">
+                        <Setter Property="Text" Value="&#x23F8; Pause" />
+                    </DataTrigger>
+
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding Status}"
+                                 Value="{x:Static video:VideoStatus.NotReady}">
+                        <Setter Property="IsEnabled" Value="False" />
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+
+            <Button Text="&#x23F9; Stop"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="OnStopButtonClicked">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding Status}"
+                                 Value="{x:Static video:VideoStatus.NotReady}">
+                        <Setter Property="IsEnabled" Value="False" />
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+
+            <Label Text="{Binding Path=TimeToEnd,
+                                  StringFormat='{0:hh\\:mm\\:ss}'}"
+                   VerticalOptions="Center" />
+        </StackLayout>
+
+        <video:PositionSlider Grid.Row="2"
+                              Margin="10, 0, 10, 10"
+                              BindingContext="{x:Reference videoPlayer}"
+                              Duration="{Binding Duration}"           
+                              Position="{Binding Position}">
+            <video:PositionSlider.Triggers>
+                <DataTrigger TargetType="video:PositionSlider"
+                             Binding="{Binding Status}"
+                             Value="{x:Static video:VideoStatus.NotReady}">
+                    <Setter Property="IsEnabled" Value="False" />
+                </DataTrigger>
+            </video:PositionSlider.Triggers>
+        </video:PositionSlider>
+    </Grid>
+</ContentPage>

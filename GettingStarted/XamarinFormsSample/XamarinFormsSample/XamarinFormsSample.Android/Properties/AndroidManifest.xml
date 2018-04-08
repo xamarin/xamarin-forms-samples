@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1" package="com.xamarin.forms.sample">
-	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23" />
-	<application android:icon="@drawable/ic_launcher" android:label="Xamarin Forms Sample" android:theme="@android:style/Theme.Holo.Light">
-	</application>
-</manifest>

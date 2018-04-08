@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="DataBindingDemos.StringFormattingPage"
+             Title="String Formatting">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style TargetType="BoxView">
+                <Setter Property="Color" Value="Blue" />
+                <Setter Property="HeightRequest" Value="2" />
+                <Setter Property="Margin" Value="0, 5" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout Margin="10">
+        <Slider x:Name="slider" />
+        <Label Text="{Binding Source={x:Reference slider},
+                              Path=Value,
+                              StringFormat='The slider value is {0:F2}'}" />
+        
+        <BoxView />
+
+        <TimePicker x:Name="timePicker" />
+        <Label Text="{Binding Source={x:Reference timePicker},
+                              Path=Time,
+                              StringFormat='The TimeSpan is {0:c}'}" />
+
+        <BoxView />
+
+        <Entry x:Name="entry" />
+        <Label Text="{Binding Source={x:Reference entry}, 
+                              Path=Text,
+                              StringFormat='The Entry text is &quot;{0}&quot;'}" />
+
+        <BoxView />
+
+        <StackLayout BindingContext="{x:Static sys:DateTime.Now}">
+            <Label Text="{Binding}" />
+            <Label Text="{Binding Path=Ticks, 
+                                  StringFormat='{0:N0} ticks since 1/1/1'}" />
+            <Label Text="{Binding StringFormat='The {{0:MMMM}} specifier produces {0:MMMM}'}" />
+            <Label Text="{Binding StringFormat='The long date is {0:D}'}" />
+        </StackLayout>
+
+        <BoxView />
+
+        <StackLayout BindingContext="{x:Static sys:Math.PI}">
+            <Label Text="{Binding}" />
+            <Label Text="{Binding StringFormat='PI to 4 decimal points = {0:F4}'}" />
+            <Label Text="{Binding StringFormat='PI in scientific notation = {0:E7}'}" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   x:Class="Phoneword.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="20, 40, 20, 20" />
+            <On Platform="Android, WinPhone, Windows" Value="20" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout>
+        <Label Text="Enter a Phoneword:" />
+        <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
+        <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+        <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
+    </StackLayout>
+</ContentPage>

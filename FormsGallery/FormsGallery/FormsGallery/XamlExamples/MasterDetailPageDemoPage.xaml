@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:FormsGallery"
+                  x:Class="FormsGallery.XamlExamples.MasterDetailPageDemoPage"
+                  Title="MasterDetailPage Demo">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Color List">
+            <StackLayout>
+                <Label Text="MasterDetailPage"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" />
+
+                <ListView x:Name="listView"
+                          Margin="10, 0"
+                          ItemTapped="OnListViewItemTapped">
+                    <ListView.ItemsSource>
+                        <x:Array Type="{x:Type local:NamedColor}">
+                            <local:NamedColor Name="Aqua" Color="Aqua" />
+                            <local:NamedColor Name="Black" Color="Black" />
+                            <local:NamedColor Name="Blue" Color="Blue" />
+                            <local:NamedColor Name="Fuchsia" Color="Fuchsia" />
+                            <local:NamedColor Name="Gray" Color="Gray" />
+                            <local:NamedColor Name="Green" Color="Green" />
+                            <local:NamedColor Name="Lime" Color="Lime" />
+                            <local:NamedColor Name="Maroon" Color="Maroon" />
+                            <local:NamedColor Name="Navy" Color="Navy" />
+                            <local:NamedColor Name="Olive" Color="Olive" />
+                            <local:NamedColor Name="Purple" Color="Purple" />
+                            <local:NamedColor Name="Red" Color="Red" />
+                            <local:NamedColor Name="Silver" Color="Silver" />
+                            <local:NamedColor Name="Teal" Color="Teal" />
+                            <local:NamedColor Name="White" Color="White" />
+                            <local:NamedColor Name="Yellow" Color="Yellow" />
+                        </x:Array>
+                    </ListView.ItemsSource>
+                </ListView>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage Title="{Binding Name}"
+                     BindingContext="{Binding Source={x:Reference listView},
+                                              Path=SelectedItem}">
+            <ContentPage.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Label">
+                        <Setter Property="FontSize" Value="Large" />
+                        <Setter Property="HorizontalTextAlignment" Value="End" />
+                    </Style>
+                </ResourceDictionary>
+            </ContentPage.Resources>
+
+            <StackLayout>
+                <Label Text="{Binding Name}"
+                       FontSize="50"
+                       HorizontalOptions="Center" />
+
+                <StackLayout HorizontalOptions="Center"
+                             VerticalOptions="CenterAndExpand">
+
+                    <Label Text="{Binding Color.R, StringFormat='R = {0:F2}'}" />
+                    <Label Text="{Binding Color.G, StringFormat='G = {0:F2}'}" />
+                    <Label Text="{Binding Color.B, StringFormat='B = {0:F2}'}" />
+                </StackLayout>
+
+                <BoxView Color="{Binding Color}"
+                         WidthRequest="100"
+                         HeightRequest="100"
+                         HorizontalOptions="Center" />
+
+                <StackLayout HorizontalOptions="Center"
+                             VerticalOptions="CenterAndExpand">
+
+                    <Label Text="{Binding Color.Hue, StringFormat='Hue = {0:F2}'}" />
+                    <Label Text="{Binding Color.Saturation, StringFormat='Saturation = {0:F2}'}" />
+                    <Label Text="{Binding Color.Luminosity, StringFormat='Luminosity = {0:F2}'}" />
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

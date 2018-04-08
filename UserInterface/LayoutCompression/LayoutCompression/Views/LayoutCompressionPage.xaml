@@ -146,7 +146,7 @@
                     <Entry Grid.Row="1" Grid.Column="1" IsEnabled="{Binding CanSave}" x:Name="ConfirmPasswordEntry" IsPassword="true" HorizontalOptions="FillAndExpand" Placeholder="Confirm Password" Text="{Binding ConfirmUserPassword, Mode=TwoWay}" />
                     <Label Grid.Row="2" Grid.ColumnSpan="2" IsEnabled="{Binding CanSave}" Margin="10" Text="Password must be 8 digits long and include 1 number and 1 capital letter." TextColor="#303030" FontSize="12" HorizontalOptions="FillAndExpand" />
                     <local:StrengthIndicators IsEnabled="{Binding CanSave}" Strength="{Binding PasswordStrength}" HorizontalOptions="Center" Grid.Row="3" Grid.ColumnSpan="2" />
-                    <StackLayout CompressedLayout.IsHeadless="true" Margin="0,20,0,40" Grid.Row="4" Grid.ColumnSpan="2" IsVisible="{Binding IsLoggedIn}">
+                    <StackLayout CompressedLayout.IsHeadless="true" Margin="0,20,0,40" Grid.Row="4" Grid.ColumnSpan="2">
                         <BoxView Margin="30,10" BackgroundColor="#9B9B9B" HorizontalOptions="FillAndExpand" HeightRequest="1" />
                         <Label Text="Connected Accounts:" HorizontalOptions="Center" TextColor="#303030" FontSize="12"/>
                         <local:ConnectSocialButton HorizontalOptions="Center" BindingContext="{Binding FacebookVM}" />
