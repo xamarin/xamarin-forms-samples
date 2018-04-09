@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Android", "Android\Tod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.iOS", "iOS\Todo.iOS.csproj", "{27ACF4F4-862F-46C6-99B5-A0567B884F43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.WinPhone", "WinPhone\Todo.WinPhone.csproj", "{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -129,71 +127,13 @@ Global
 		{27ACF4F4-862F-46C6-99B5-A0567B884F43}.Release|Mixed Platforms.Build.0 = Release|iPhone
 		{27ACF4F4-862F-46C6-99B5-A0567B884F43}.Release|Mixed Platforms.Deploy.0 = Release|iPhone
 		{27ACF4F4-862F-46C6-99B5-A0567B884F43}.Release|x86.ActiveCfg = Release|iPhone
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Ad-Hoc|Any CPU.Deploy.0 = Release|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Ad-Hoc|ARM.ActiveCfg = Release|ARM
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Ad-Hoc|ARM.Build.0 = Release|ARM
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Ad-Hoc|ARM.Deploy.0 = Release|ARM
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Ad-Hoc|Mixed Platforms.ActiveCfg = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Ad-Hoc|Mixed Platforms.Build.0 = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Ad-Hoc|Mixed Platforms.Deploy.0 = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Ad-Hoc|x86.ActiveCfg = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Ad-Hoc|x86.Build.0 = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Ad-Hoc|x86.Deploy.0 = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.AppStore|Any CPU.Build.0 = Release|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.AppStore|Any CPU.Deploy.0 = Release|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.AppStore|ARM.ActiveCfg = Release|ARM
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.AppStore|ARM.Build.0 = Release|ARM
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.AppStore|ARM.Deploy.0 = Release|ARM
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.AppStore|iPhone.ActiveCfg = Release|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.AppStore|Mixed Platforms.ActiveCfg = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.AppStore|Mixed Platforms.Build.0 = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.AppStore|Mixed Platforms.Deploy.0 = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.AppStore|x86.ActiveCfg = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.AppStore|x86.Build.0 = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.AppStore|x86.Deploy.0 = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Debug|ARM.ActiveCfg = Debug|ARM
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Debug|ARM.Build.0 = Debug|ARM
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Debug|ARM.Deploy.0 = Debug|ARM
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Debug|Mixed Platforms.Deploy.0 = Debug|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Debug|x86.ActiveCfg = Debug|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Debug|x86.Build.0 = Debug|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Debug|x86.Deploy.0 = Debug|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Release|ARM.ActiveCfg = Release|ARM
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Release|ARM.Build.0 = Release|ARM
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Release|ARM.Deploy.0 = Release|ARM
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Release|Mixed Platforms.Build.0 = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Release|Mixed Platforms.Deploy.0 = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Release|x86.ActiveCfg = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Release|x86.Build.0 = Release|x86
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0286BCC0-AAC9-492B-A940-A1260837ECDE} = {7C8A0BA2-4933-4F90-B7D3-20504A8AB3C0}
 		{27ACF4F4-862F-46C6-99B5-A0567B884F43} = {7C8A0BA2-4933-4F90-B7D3-20504A8AB3C0}
-		{AAD6A9A1-7D9B-4526-A743-369E92BC0A29} = {7C8A0BA2-4933-4F90-B7D3-20504A8AB3C0}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Todo\Todo.projitems*{eac7244c-09d6-4922-a662-58743ae6d868}*SharedItemsImports = 13
-		Todo\Todo.projitems*{aad6a9a1-7d9b-4526-a743-369e92bc0a29}*SharedItemsImports = 4
 		Todo\Todo.projitems*{27acf4f4-862f-46c6-99b5-a0567b884f43}*SharedItemsImports = 4
 		Todo\Todo.projitems*{0286bcc0-aac9-492b-a940-a1260837ecde}*SharedItemsImports = 4
 	EndGlobalSection
