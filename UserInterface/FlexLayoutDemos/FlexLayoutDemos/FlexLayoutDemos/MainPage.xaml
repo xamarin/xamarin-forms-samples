@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:FlexLayoutDemos"
+                  x:Class="FlexLayoutDemos.MainPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Properties">
+            <ContentPage.Resources>
+                <ResourceDictionary>
+                    <!--<Style TargetType="Label">
+                        <Setter Property="IsVisible">
+                            <Setter.Value>
+                                <OnPlatform x:TypeArgument="x:Bool">
+                                    <On Platform="UWP" Value="False" />
+                                </OnPlatform>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>-->
+                    
+                    
+                    <Style TargetType="local:EnumPicker">
+                        <Setter Property="VerticalOptions" Value="StartAndExpand" />
+                        <Setter Property="Margin" Value="40, 0, 0, 0" />
+                    </Style>
+                </ResourceDictionary>
+            </ContentPage.Resources>
+    
+        <StackLayout BindingContext="{x:Reference flexLayout}"
+                     Margin="10, 0">
+
+
+            <Label Text="Direction:" />
+
+            <local:EnumPicker Title="Direction"
+                              EnumType="{x:Type FlexDirection}"
+                              SelectedItem="{Binding Direction}" />
+
+            <Label Text="Wrap:" />
+
+            <local:EnumPicker Title="Wrap"
+                              EnumType="{x:Type FlexWrap}"
+                              SelectedItem="{Binding Wrap}" />
+
+            <Label Text="JustifyContent:" />
+
+            <local:EnumPicker Title="JustifyContent"
+                              EnumType="{x:Type FlexJustify}"
+                              SelectedItem="{Binding JustifyContent}" />
+            
+            
+
+        </StackLayout>
+        </ContentPage>
+
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage>
+        
+        <FlexLayout x:Name="flexLayout">
+
+            <Label Text="One"
+                   FontSize="24"
+                   TextColor="Red"
+                   BackgroundColor="LightGray" />
+
+            <Label Text="Two"
+                   FontSize="24"
+                   TextColor="Green"
+                   BackgroundColor="LightGray" />
+
+            <Label Text="Three"
+                   FontSize="24"
+                   TextColor="Blue"
+                   BackgroundColor="LightGray" />
+
+        </FlexLayout>
+
+
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
