@@ -7,7 +7,7 @@
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <On Platform="iOS" Value="0, 20, 0, 0" />
-            <On Platform="Android, UWP, WinRT, WinPhone" Value="0, 0, 0, 0" />
+            <On Platform="Android, UWP" Value="0, 0, 0, 0" />
         </OnPlatform>
     </ContentPage.Padding>
     <ContentView SizeChanged="OnMainContentViewSizeChanged">

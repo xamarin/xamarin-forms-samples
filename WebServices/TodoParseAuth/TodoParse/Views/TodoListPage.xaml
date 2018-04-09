@@ -5,7 +5,7 @@
 			<ToolbarItem.Icon>
 				<OnPlatform x:TypeArguments="FileImageSource">
         <On Platform="Android" Value="plus" />
-        <On Platform="UWP, WinRT, WinPhone" Value="plus.png" />
+        <On Platform="UWP" Value="plus.png" />
     </OnPlatform>
 			</ToolbarItem.Icon>
 		</ToolbarItem>
