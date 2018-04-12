@@ -3,7 +3,7 @@ AzureADB2CAuth
 
 This sample demonstrates how to use Microsoft Authentication Library and Azure Active Directory B2C to integrate consumer identity management into a mobile application.
 
-For more information about this sample see [Authenticating Users with Azure Active Directory B2C](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/web-services/authentication/azure-ad-b2c/).
+For more information about this sample see [Authenticating Users with Azure Active Directory B2C](http://developer.xamarin.com/guides/xamarin-forms/web-services/authentication/azure-ad-b2c/).
 
 Setting up an Azure Active Directory B2C Tenant
 -----------------------------------------------

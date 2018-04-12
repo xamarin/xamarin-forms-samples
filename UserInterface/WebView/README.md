@@ -1,7 +1,7 @@
 Xamarin.Forms WebView
 ==============
 
-This sample relates to the [ WebView in Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/user-interface/web-view/) doc.
+This sample relates to the [ WebView in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/webview) doc.
 
 The app consists of two tabs. One tab demonstrates how to navigate within a `WebView`, taking advantage of:
 
