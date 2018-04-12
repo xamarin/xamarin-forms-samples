@@ -26,7 +26,7 @@ namespace WorkingWithMaps
 					// opens the Maps app directly
 					Device.OpenUri(new Uri("geo:0,0?q=394+Pacific+Ave+San+Francisco+CA"));
 
-				} else if (Device.RuntimePlatform == Device.UWP || Device.RuntimePlatform == Device.WinPhone) {
+				} else if (Device.RuntimePlatform == Device.UWP) {
                     Device.OpenUri(new Uri("bingmaps:?where=394 Pacific Ave San Francisco CA"));
 				}
 			};

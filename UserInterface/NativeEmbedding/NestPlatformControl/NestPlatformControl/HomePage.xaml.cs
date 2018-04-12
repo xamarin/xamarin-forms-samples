@@ -13,16 +13,6 @@ using Xamarin.Forms.Platform.Android;
 using NestPlatformControl.Droid;
 #endif
 
-#if WINDOWS_PHONE_APP
-using System;
-using Windows.Foundation;
-using Windows.Graphics.Display;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Media;
-using Xamarin.Forms.Platform.WinRT;
-#endif
-
 #if WINDOWS_UWP
 using System;
 using Windows.Foundation;

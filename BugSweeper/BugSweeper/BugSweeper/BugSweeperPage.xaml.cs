@@ -1,6 +1,4 @@
-﻿#define FIX_WINPHONE_BUTTON         // IsEnabled = false doesn't disable button
-
-#pragma warning disable 4014        // for non-await'ed async call
+﻿#pragma warning disable 4014        // for non-await'ed async call
 
 using System;
 using System.Linq;
@@ -162,12 +160,6 @@ namespace BugSweeper
 
         void OnplayAgainButtonClicked(object sender, object EventArgs)
         {
-#if FIX_WINPHONE_BUTTON
-
-            if (Device.RuntimePlatform == Device.WinPhone && !((Button)sender).IsEnabled)
-                return;
-
-#endif
             PrepareForNewGame();
         }
     }

@@ -30,8 +30,6 @@ namespace XamarinFormsSample
                     Twitter = Font.SystemFontOfSize(14);
                     break;
                 case Device.UWP:
-                case Device.WinRT:
-                case Device.WinPhone:
                     LargeTitle = Font.SystemFontOfSize(60);
                     Title = Font.SystemFontOfSize(46);
                     SmallTitle = Font.SystemFontOfSize(30);
