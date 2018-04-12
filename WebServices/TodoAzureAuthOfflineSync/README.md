@@ -11,7 +11,7 @@ The app functionality is:
 
 In all cases the tasks are stored locally, and are synchronized to an Azure Mobile Apps instance.
 
-For more information about this sample see [Synchronizing Offline Data with Azure Mobile Apps](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/web-services/sync/azure-mobile-apps/).
+For more information about this sample see [Synchronizing Offline Data with Azure Mobile Apps](http://developer.xamarin.com/guides/xamarin-forms/web-services/sync/azure-mobile-apps/).
 
 Setting up an Azure Mobile App
 ------------------------------
