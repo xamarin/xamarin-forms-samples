@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
 namespace FlexLayoutDemos
 {
@@ -13,7 +16,7 @@ namespace FlexLayoutDemos
 		{
 			InitializeComponent();
 
-			MainPage = new FlexLayoutDemos.MainPage();
+            MainPage = new NavigationPage(new ExperimentPage()); //  new FlexLayoutDemos.MainPage();
 		}
 
 		protected override void OnStart ()

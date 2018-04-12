@@ -2,21 +2,27 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                   xmlns:local="clr-namespace:FlexLayoutDemos"
-                  x:Class="FlexLayoutDemos.MainPage">
+                  x:Class="FlexLayoutDemos.MainPage"
+                  
+                  
+                  MasterBehavior="Popover">
 
     <MasterDetailPage.Master>
         <ContentPage Title="Properties">
             <ContentPage.Resources>
                 <ResourceDictionary>
-                    <!--<Style TargetType="Label">
+
+                   
+                    <Style TargetType="Label">
                         <Setter Property="IsVisible">
                             <Setter.Value>
-                                <OnPlatform x:TypeArgument="x:Bool">
+                                <OnPlatform x:TypeArguments="x:Boolean">
+                                    <On Platform="iOS, Android" Value="True" />
                                     <On Platform="UWP" Value="False" />
                                 </OnPlatform>
                             </Setter.Value>
                         </Setter>
-                    </Style>-->
+                    </Style>
                     
                     
                     <Style TargetType="local:EnumPicker">
@@ -28,6 +34,23 @@
     
         <StackLayout BindingContext="{x:Reference flexLayout}"
                      Margin="10, 0">
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Number of items: "             IsVisible="True"
+                           VerticalOptions="Center" />
+
+                    <Stepper x:Name="numberStepper"
+                             Minimum="0"
+                             Maximum="99"
+                             Increment="1"
+                             Value="10"
+                             ValueChanged="OnNumberStepperValueChanged" />
+
+                    <Label Text="{Binding Source={x:Reference numberStepper},           
+                                          Path=Value,
+                                          StringFormat='{0:F0}'}"               IsVisible="True"
+                           VerticalOptions="Center" />
+                </StackLayout>
 
 
             <Label Text="Direction:" />
@@ -47,36 +70,37 @@
             <local:EnumPicker Title="JustifyContent"
                               EnumType="{x:Type FlexJustify}"
                               SelectedItem="{Binding JustifyContent}" />
-            
-            
 
-        </StackLayout>
+
+                <Label Text="AlignItems:" />
+
+                <local:EnumPicker Title="AlignItems"
+                                  EnumType="{x:Type FlexAlignItems}"
+                                  SelectedItem="{Binding AlignItems}" />
+
+                <Label Text="AlignContent:" />
+
+                <local:EnumPicker Title="AlignContent"
+                              EnumType="{x:Type FlexAlignContent}"
+                              SelectedItem="{Binding AlignContent}" />
+
+                <Label Text="Position:" />
+
+                <local:EnumPicker Title="Position"
+                                  EnumType="{x:Type FlexPosition}"
+                                  SelectedItem="{Binding Position}" />
+
+
+
+            </StackLayout>
         </ContentPage>
 
     </MasterDetailPage.Master>
 
     <MasterDetailPage.Detail>
         <ContentPage>
-        
-        <FlexLayout x:Name="flexLayout">
 
-            <Label Text="One"
-                   FontSize="24"
-                   TextColor="Red"
-                   BackgroundColor="LightGray" />
-
-            <Label Text="Two"
-                   FontSize="24"
-                   TextColor="Green"
-                   BackgroundColor="LightGray" />
-
-            <Label Text="Three"
-                   FontSize="24"
-                   TextColor="Blue"
-                   BackgroundColor="LightGray" />
-
-        </FlexLayout>
-
+            <FlexLayout x:Name="flexLayout" />
 
         </ContentPage>
     </MasterDetailPage.Detail>

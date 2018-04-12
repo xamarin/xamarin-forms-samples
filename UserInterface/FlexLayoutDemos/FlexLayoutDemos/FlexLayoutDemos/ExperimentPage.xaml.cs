@@ -1,9 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace FlexLayoutDemos
 {
-	public partial class MainPage : MasterDetailPage
+	public partial class ExperimentPage : ContentPage
 	{
         static Color[] colors = { Color.Red, Color.Magenta, Color.Blue,
                                   Color.Cyan, Color.Green, Color.Yellow };
@@ -13,16 +19,17 @@ namespace FlexLayoutDemos
                                        "Eleven", "Twelve", "Thirteen", "Fourteen",
                                        "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
 
-        static string[] decadeText = { "", "", "Twenty", "Thirty", "Forty", "Fifty", 
+        static string[] decadeText = { "", "", "Twenty", "Thirty", "Forty", "Fifty",
                                        "Sixty", "Seventy", "Eighty", "Ninety" };
 
-		public MainPage()
-		{
-			InitializeComponent();
+        public ExperimentPage()
+        {
+            InitializeComponent();
 
-            // Create initial children
             OnNumberStepperValueChanged(flexLayout, new ValueChangedEventArgs(0, numberStepper.Value));
-		}
+
+            FlexLayout.SetBasis(flexLayout.Children[2], new FlexBasis(100, false)); //  0.25f, true));
+        }
 
         void OnNumberStepperValueChanged(object sender, ValueChangedEventArgs args)
         {
@@ -59,5 +66,6 @@ namespace FlexLayoutDemos
                 flexLayout.Children.Add(label);
             }
         }
-	}
+
+    }
 }
