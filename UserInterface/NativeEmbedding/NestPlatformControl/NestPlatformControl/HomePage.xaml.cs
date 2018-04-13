@@ -131,57 +131,6 @@ namespace NestPlatformControl
             stackLayout.Children.Add(goodControl, FixSize);
 #endif
 
-#if WINDOWS_PHONE_APP
-            const string originalText = "Native TextBlock.";
-            const string longerText = "Native TextBlock. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel elit orci. Nam sollicitudin consectetur congue.";
-
-            var textBlock = new TextBlock
-            {
-                Text = originalText,
-                FontSize = 14,
-                FontFamily = new FontFamily("HelveticaNeue"),
-                TextWrapping = TextWrapping.Wrap
-            };
-            stackLayout.Children.Add(textBlock);
-
-            var button = new Windows.UI.Xaml.Controls.Button { Content = "Change Text" };
-            button.Click += (sender, args) => { textBlock.Text = textBlock.Text == originalText ? longerText : originalText; };
-            stackLayout.Children.Add(button);
-
-            var explanation1 = new TextBlock
-            {
-                Text = "The next control is a CustomControl (a customized TextBlock with a bad ArrangeOverride implementation).",
-                FontSize = 14,
-                FontFamily = new FontFamily("HelveticaNeue"),
-                TextWrapping = TextWrapping.Wrap
-            };
-            stackLayout.Children.Add(explanation1);
-
-            var brokenControl = new CustomControl { Text = "This control has incorrect sizing - it doesn't occupy the available width of the device." };
-            stackLayout.Children.Add(brokenControl);
-
-            var explanation2 = new TextBlock
-            {
-                Text = "The next control is a CustomControl, but an ArrangeOverride delegate is passed in when adding the control to the layout.",
-                FontSize = 14,
-                FontFamily = new FontFamily("HelveticaNeue"),
-                TextWrapping = TextWrapping.Wrap
-            };
-            stackLayout.Children.Add(explanation2);
-
-            var fixedControl = new CustomControl { Text = "This control has correct sizing - it occupies the available width of the device." };
-            stackLayout.Children.Add(fixedControl, arrangeOverrideDelegate: (renderer, finalSize) =>
-            {
-                if (finalSize.Width <= 0 || double.IsInfinity(finalSize.Width))
-                {
-                    return null;
-                }
-                var frameworkElement = renderer.Control;
-                frameworkElement.Arrange(new Rect(0, 0, finalSize.Width * 2, finalSize.Height));
-                return finalSize;
-            }); 
-#endif
-
 #if WINDOWS_UWP
             const string originalText = "Native TextBlock.";
             const string longerText = "Native TextBlock. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel elit orci. Nam sollicitudin consectetur congue.";

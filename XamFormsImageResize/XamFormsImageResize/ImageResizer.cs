@@ -12,17 +12,6 @@ using CoreGraphics;
 using Android.Graphics;
 #endif
 
-#if WINDOWS_PHONE
-using Microsoft.Phone;
-using System.Windows.Media.Imaging;
-#endif
-
-#if WINDOWS_PHONE_APP
-using Windows.Storage.Streams;
-using Windows.Graphics.Imaging;
-using System.Runtime.InteropServices.WindowsRuntime;
-#endif
-
 #if WINDOWS_UWP
 using System.Threading.Tasks;
 using Windows.Storage.Streams;
