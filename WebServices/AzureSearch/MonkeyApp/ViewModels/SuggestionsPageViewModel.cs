@@ -26,6 +26,11 @@ namespace MonkeyApp
 		{
 			Suggestions.Clear();
 
+            if(string.IsNullOrWhiteSpace(text))
+            {
+                return;
+            }
+
 			var parameters = new SuggestParameters()
 			{
 				UseFuzzyMatching = true,

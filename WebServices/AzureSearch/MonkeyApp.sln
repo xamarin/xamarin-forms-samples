@@ -1,8 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyApp", "MonkeyApp\MonkeyApp.csproj", "{47329CEE-1F55-41AC-B9FA-048F11ABCBFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonkeyApp", "MonkeyApp\MonkeyApp.csproj", "{47329CEE-1F55-41AC-B9FA-048F11ABCBFB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyApp.iOS", "iOS\MonkeyApp.iOS.csproj", "{EB728B00-B991-45E1-AF1D-F7BA555A0752}"
 EndProject
@@ -72,6 +72,7 @@ Global
 		{EB728B00-B991-45E1-AF1D-F7BA555A0752}.Release|x86.ActiveCfg = Release|iPhoneSimulator
 		{0FFEBB86-2A4D-4CCE-9DE6-7BE3D675EFCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0FFEBB86-2A4D-4CCE-9DE6-7BE3D675EFCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FFEBB86-2A4D-4CCE-9DE6-7BE3D675EFCD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{0FFEBB86-2A4D-4CCE-9DE6-7BE3D675EFCD}.Debug|ARM.ActiveCfg = Debug|Any CPU
 		{0FFEBB86-2A4D-4CCE-9DE6-7BE3D675EFCD}.Debug|ARM.Build.0 = Debug|Any CPU
 		{0FFEBB86-2A4D-4CCE-9DE6-7BE3D675EFCD}.Debug|ARM.Deploy.0 = Debug|Any CPU
@@ -153,5 +154,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22103E0C-7F32-4687-B6CC-1D5380DD2CB9}
 	EndGlobalSection
 EndGlobal
