@@ -14,9 +14,7 @@ namespace TodoAzure
 
             manager = TodoItemManager.DefaultManager;
 
-            // OnPlatform<T> doesn't currently support the "Windows" target platform, so we have this check here.
-            if (manager.IsOfflineEnabled &&
-                (Device.RuntimePlatform == Device.UWP || Device.RuntimePlatform == Device.WinPhone))
+            if (manager.IsOfflineEnabled && (Device.RuntimePlatform == Device.UWP))
             {
                 var syncButton = new Button
                 {

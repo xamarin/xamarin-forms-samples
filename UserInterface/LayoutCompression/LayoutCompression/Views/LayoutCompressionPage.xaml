@@ -111,14 +111,7 @@
                 <Button Margin="0,10,0,0" IsVisible="{Binding IsEditing}" Text="    EDITING    " BackgroundColor="#9B9B9B" Style="{StaticResource primaryButton}" HeightRequest="35" HorizontalOptions="Center" Command="{Binding ToggleEditModeCommand}" />
                 <StackLayout CompressedLayout.IsHeadless="true" Margin="20" Spacing="20" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
                     <StackLayout CompressedLayout.IsHeadless="true" Spacing="10" Orientation="Vertical">
-                        <controls:CircleImage x:Name="ProfilePic" Source="david.jpg" BorderThickness="3" BorderColor="#9B9B9B" Aspect="AspectFill">
-                            <controls:CircleImage.WidthRequest>
-                                <OnPlatform x:TypeArguments="x:Double" iOS="104" Android="104" WinPhone="104"/>
-                            </controls:CircleImage.WidthRequest>
-                            <controls:CircleImage.HeightRequest>
-                                <OnPlatform x:TypeArguments="x:Double" iOS="104" Android="104" WinPhone="104"/>
-                            </controls:CircleImage.HeightRequest>
-                        </controls:CircleImage>
+                        <controls:CircleImage x:Name="ProfilePic" Source="david.jpg" BorderThickness="3" BorderColor="#9B9B9B" Aspect="AspectFill" WidthRequest="104" HeightRequest="104" />
                         <Button IsVisible="{Binding CanSave}" Text="Change Photo" Style="{StaticResource nakedButton}" FontSize="12" BorderColor="Transparent" BorderWidth="0" BackgroundColor="Transparent" TextColor="#303030" />
                     </StackLayout>
                     <StackLayout CompressedLayout.IsHeadless="true" Spacing="10" HorizontalOptions="FillAndExpand" Orientation="Vertical">

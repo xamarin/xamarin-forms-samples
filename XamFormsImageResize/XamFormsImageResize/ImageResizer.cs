@@ -46,12 +46,6 @@ namespace XamFormsImageResize
 #if __ANDROID__
 			return ResizeImageAndroid ( imageData, width, height );
 #endif
-#if WINDOWS_PHONE
-			return ResizeImageWinPhone ( imageData, width, height );
-#endif
-#if WINDOWS_PHONE_APP
-            return await ResizeImageWindows(imageData, width, height);
-#endif
 #if WINDOWS_UWP
             return await ResizeImageWindows(imageData, width, height);
 #endif
@@ -118,55 +112,6 @@ namespace XamFormsImageResize
 				return ms.ToArray ();
 			}
 		}
-
-#endif
-
-#if WINDOWS_PHONE
-		
-        public static byte[] ResizeImageWinPhone (byte[] imageData, float width, float height)
-        {
-            byte[] resizedData;
-
-            using (MemoryStream streamIn = new MemoryStream (imageData))
-            {
-                WriteableBitmap bitmap = PictureDecoder.DecodeJpeg (streamIn, (int)width, (int)height);
-
-                using (MemoryStream streamOut = new MemoryStream ())
-                {
-                    bitmap.SaveJpeg(streamOut, (int)width, (int)height, 0, 100);
-                    resizedData = streamOut.ToArray();
-                }
-            }
-            return resizedData;
-        }
-        
-#endif
-
-#if WINDOWS_PHONE_APP
-
-        public static async Task<byte[]> ResizeImageWindows(byte[] imageData, float width, float height)
-        {
-            byte[] resizedData;
-
-            using (var streamIn = new MemoryStream(imageData))
-            {
-                using (var imageStream = streamIn.AsRandomAccessStream())
-                {
-                    var decoder = await BitmapDecoder.CreateAsync(imageStream);
-                    var resizedStream = new InMemoryRandomAccessStream();
-                    var encoder = await BitmapEncoder.CreateForTranscodingAsync(resizedStream, decoder);
-                    encoder.BitmapTransform.InterpolationMode = BitmapInterpolationMode.Linear;
-                    encoder.BitmapTransform.ScaledHeight = (uint)height;
-                    encoder.BitmapTransform.ScaledWidth = (uint)width;
-                    await encoder.FlushAsync();
-                    resizedStream.Seek(0);
-                    resizedData = new byte[resizedStream.Size];
-                    await resizedStream.ReadAsync(resizedData.AsBuffer(), (uint)resizedStream.Size, InputStreamOptions.None);                  
-                }                
-            }
-
-            return resizedData;
-        }
 
 #endif
 
