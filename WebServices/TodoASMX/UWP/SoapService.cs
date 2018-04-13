@@ -14,6 +14,7 @@ namespace TodoASMX.UWP
         public SoapService()
         {
             todoService = new ASMXService.TodoASMXServiceSoapClient();
+            todoService.Endpoint.Address = new System.ServiceModel.EndpointAddress(Constants.SoapUrl);
         }
 
         ASMXService.TodoItem ToASMXServiceTodoItem(TodoItem item)
