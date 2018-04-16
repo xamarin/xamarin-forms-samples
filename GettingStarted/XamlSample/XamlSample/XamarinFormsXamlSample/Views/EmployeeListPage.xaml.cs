@@ -14,8 +14,7 @@ namespace XamarinFormsXamlSample.Views
             InitializeComponent();
             listView.IsVisible = App.IsLoggedIn;
 
-            string iconName = Device.RuntimePlatform == Device.UWP ||
-                              Device.RuntimePlatform == Device.WinPhone ? "/Toolkit.Content/ApplicationBar.Add.png" : null;
+            string iconName = Device.RuntimePlatform == Device.UWP ? "/Toolkit.Content/ApplicationBar.Add.png" : null;
 
             _loginToolbarItem = new ToolbarItem("Login", iconName, async () =>
             {

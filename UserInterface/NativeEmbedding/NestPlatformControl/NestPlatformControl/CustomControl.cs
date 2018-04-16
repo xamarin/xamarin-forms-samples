@@ -9,14 +9,6 @@ using Android.Views;
 using Android.Widget;
 #endif
 
-#if WINDOWS_PHONE_APP
-using Windows.Foundation;
-using Windows.Graphics.Display;
-using Windows.UI;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-#endif
-
 #if WINDOWS_UWP
 using Windows.Foundation;
 using Windows.Graphics.Display;
@@ -62,56 +54,6 @@ namespace NestPlatformControl
 		}
 	}
 	#endif
-
-	#if WINDOWS_PHONE_APP
-	public class CustomControl : Panel
-	{
-		public static readonly DependencyProperty TextProperty =
-			DependencyProperty.Register("Text", typeof(string), typeof(CustomControl), new PropertyMetadata(default(string), OnTextPropertyChanged));
-
-		public string Text
-		{
-			get { return (string)GetValue(TextProperty); }
-			set { SetValue(TextProperty, value.ToUpper()); }
-		}
-
-		readonly TextBlock textBlock;
-
-		public CustomControl()
-		{
-			textBlock = new TextBlock
-			{
-				MinHeight = 0,
-				MaxHeight = double.PositiveInfinity,
-				MinWidth = 0,
-				MaxWidth = double.PositiveInfinity,
-				FontSize = 14,
-			    TextWrapping = TextWrapping.Wrap,
-			    VerticalAlignment = VerticalAlignment.Center
-			};
-
-			Children.Add(textBlock);
-		}
-
-		static void OnTextPropertyChanged(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs args)
-		{
-			((CustomControl)dependencyObject).textBlock.Text = (string)args.NewValue;
-		}
-
-		protected override Size ArrangeOverride(Size finalSize)
-		{
-			// This is deliberately wrong in order to demonstrate providing an override to fix it with.
-		    textBlock.Arrange(new Rect(0, 0, finalSize.Width/2, finalSize.Height));
-		    return finalSize;
-		}
-
-	    protected override Size MeasureOverride(Size availableSize)
-	    {
-	        textBlock.Measure(availableSize);
-	        return new Size(textBlock.DesiredSize.Width, textBlock.DesiredSize.Height);
-	    }
-	}
-#endif
 
 	#if WINDOWS_UWP
     public class CustomControl : Panel

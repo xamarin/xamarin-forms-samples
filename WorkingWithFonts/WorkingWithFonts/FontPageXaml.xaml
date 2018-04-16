@@ -12,7 +12,7 @@
 		        <OnPlatform x:TypeArguments="x:String">
                     <On Platform="iOS" Value="MarkerFelt-Thin" />
                     <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                    <On Platform="UWP, WinRT, WinPhone" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
+                    <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
 		        </OnPlatform>
 		    </Label.FontFamily>
 		</Label>

@@ -44,9 +44,6 @@ namespace MobileCRM.Shared.Pages
 
             var displayPage = PageForOption(option);
 
-#if WINDOWS_PHONE
-            Detail = new ContentPage();//work around to clear current page.
-#endif
 			var color = Helpers.Color.Blue.ToFormsColor ();
 			Detail = new NavigationPage (displayPage) {
 				BarBackgroundColor = color,

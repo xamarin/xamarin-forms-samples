@@ -14,8 +14,7 @@ namespace TodoAzure
 
             manager = TodoItemManager.DefaultManager;
 
-            if (manager.IsOfflineEnabled &&
-                (Device.RuntimePlatform == Device.UWP || Device.RuntimePlatform == Device.WinPhone))
+            if (manager.IsOfflineEnabled && (Device.RuntimePlatform == Device.UWP))
             {
                 var syncButton = new Button
                 {

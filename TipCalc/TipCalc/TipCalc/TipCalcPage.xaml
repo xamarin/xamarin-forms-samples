@@ -3,7 +3,7 @@
 	<ContentPage.Padding>
 		<OnPlatform x:TypeArguments="Thickness">
       <On Platform="iOS" Value="5, 20, 5, 0" />
-      <On Platform="Android, UWP, WinRT, WinPhone" Value="5, 0, 5, 0" />
+      <On Platform="Android, UWP" Value="5, 0, 5, 0" />
   </OnPlatform>
 	</ContentPage.Padding>
 	<ContentPage.Resources>

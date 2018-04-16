@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -6,7 +6,6 @@
     BackgroundImage="login_box">
    <ContentPage.Content>
 			<OnPlatform x:TypeArguments="View">
-
 				<OnPlatform.iOS>
 					<StackLayout VerticalOptions="StartAndExpand" Padding="30">
 			        	<Image Source="logo" />
@@ -18,7 +17,6 @@
 			        	</Grid>
 		        	</StackLayout>
 				</OnPlatform.iOS>
-
 				<OnPlatform.Android>
 		        	<StackLayout VerticalOptions="Center" Padding="30">
 		        		<Grid HorizontalOptions="Center">
@@ -30,18 +28,6 @@
 			        	<Button x:Name="loginButtonAndroid" Text="Login" />
 		        	</StackLayout>
 				</OnPlatform.Android>
-
-				<OnPlatform.WinPhone>
-					  <StackLayout VerticalOptions="Center" Padding="30">
-                <Grid HorizontalOptions="Center">
-			        		<Image Source="logo.png" Grid.Row="0" Grid.Column="0" />
-			        		<Button x:Name="helpButtonWinPhone" Text="Help" Grid.Row="0" Grid.Column="1" />
-			        	</Grid>
-			        	<Entry StyleId="UserId" Text="{Binding Path=Username}" Placeholder="Username" />
-			        	<Entry StyleId="PassId" Text="{Binding Path=Password}" Placeholder="Password" IsPassword="true" />
-			        	<Button x:Name="loginButtonWinPhone" Text="Login" />
-		       </StackLayout>
-				</OnPlatform.WinPhone>
-			</OnPlatform>
+             </OnPlatform>
     </ContentPage.Content>
 </ContentPage>		

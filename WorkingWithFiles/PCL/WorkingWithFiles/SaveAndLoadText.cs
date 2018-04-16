@@ -25,7 +25,7 @@ namespace WorkingWithFiles
 			saveButton.Clicked += async (sender, e) => {
 				loadButton.IsEnabled = saveButton.IsEnabled = false;
 				// uses the Interface defined in this project, and the implementations that must
-				// be written in the iOS, Android and WinPhone app projects to do the actual file manipulation
+				// be written in the iOS, Android and UWP app projects to do the actual file manipulation
 
 				await fileService.SaveTextAsync (fileName, input.Text);
 				loadButton.IsEnabled = saveButton.IsEnabled = true;
@@ -36,7 +36,7 @@ namespace WorkingWithFiles
 				loadButton.IsEnabled = saveButton.IsEnabled = false;
 
 				// uses the Interface defined in this project, and the implementations that must
-				// be written in the iOS, Android and WinPhone app projects to do the actual file manipulation
+				// be written in the iOS, Android and UWP app projects to do the actual file manipulation
 				output.Text = await fileService.LoadTextAsync(fileName);
 				loadButton.IsEnabled = saveButton.IsEnabled = true;
 			};

@@ -13,7 +13,7 @@ using Xamarin.Forms.Maps;
 
 Xamarin.Forms uses the native MAP control on each platform.
 
-Both Android and Windows Phone require additional configuration to make MAPs work.
+Both Android and Windows require additional configuration to make MAPs work.
 
 See the document here for more information:
 http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/maps/
@@ -48,7 +48,6 @@ namespace MobileCRM.Shared.Pages
             var map = MakeMap();
             var stack = new StackLayout { Spacing = 0 };
 
-#if __ANDROID__ || __IOS__
             var searchAddress = new SearchBar { Placeholder = "Search Address", BackgroundColor = Xamarin.Forms.Color.White };
 
             searchAddress.SearchButtonPressed += async (e, a) =>
@@ -73,19 +72,6 @@ namespace MobileCRM.Shared.Pages
             };
 
             stack.Children.Add(searchAddress);
-
-#elif WINDOWS_PHONE
-           ToolbarItems.Add(new ToolbarItem("filter", "filter.png", async () =>
-            {
-                var page = new ContentPage();
-                var result = await page.DisplayAlert("Title", "Message", "Accept", "Cancel");
-                Debug.WriteLine("success: {0}", result);
-            }));
-
-          ToolbarItems.Add(new ToolbarItem("search", "search.png", () =>
-            {
-            }));
-#endif
 
             map.VerticalOptions = LayoutOptions.FillAndExpand;
             map.HeightRequest = 100;
