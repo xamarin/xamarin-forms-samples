@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{F36A2F81-911E-4BD2-8313-DB35E7D2A1B2}</ProjectGuid>
+    <ProjectGuid>{B0C39388-0AE0-4E30-A8AA-31B3072B4966}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WeatherApp.UWP</RootNamespace>
@@ -148,12 +148,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.1.444934" />
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WeatherApp\WeatherApp.csproj">
-      <Project>{A1F9D5EE-5DF4-4FD5-A236-B140E1109E8C}</Project>
+      <Project>{BFF15088-44BD-4A75-900A-D8C8FD968490}</Project>
       <Name>WeatherApp</Name>
     </ProjectReference>
   </ItemGroup>

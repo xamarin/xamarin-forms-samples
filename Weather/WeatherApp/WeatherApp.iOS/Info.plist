@@ -21,7 +21,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>11.2</string>
+	<string>11.3</string>
 	<key>CFBundleDisplayName</key>
 	<string>WeatherApp</string>
 	<key>CFBundleIdentifier</key>
