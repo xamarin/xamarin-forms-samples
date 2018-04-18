@@ -16,7 +16,7 @@ namespace FlexLayoutDemos
 		{
 			InitializeComponent();
 
-            MainPage = new NavigationPage(new ExperimentPage()); //  new FlexLayoutDemos.MainPage();
+            MainPage = new NavigationPage(new HomePage());
 		}
 
 		protected override void OnStart ()
