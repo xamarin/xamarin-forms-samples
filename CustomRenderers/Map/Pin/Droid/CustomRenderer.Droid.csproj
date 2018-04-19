@@ -48,10 +48,6 @@
     <PackageReference Include="Xamarin.Build.Download" Version="0.4.7" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="2.5.0.280555" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Base" Version="60.1142.0" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Basement" Version="60.1142.0" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Maps" Version="60.1142.0" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Tasks" Version="60.1142.0" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
