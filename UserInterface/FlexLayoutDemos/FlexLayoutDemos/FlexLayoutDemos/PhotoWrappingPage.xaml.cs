@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace FlexLayoutDemos
 {
-	public partial class BasicUsagePage : ContentPage
+	public partial class PhotoWrappingPage : ContentPage
 	{
         // Class for deserializing JSON list of sample bitmaps
         [DataContract]
@@ -19,7 +19,7 @@ namespace FlexLayoutDemos
             public List<string> Photos = null;
         }
 
-        public BasicUsagePage ()
+        public PhotoWrappingPage ()
 		{
 			InitializeComponent ();
 

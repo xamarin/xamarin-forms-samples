@@ -14,9 +14,17 @@
     </ContentPage.Resources>
     
     <StackLayout>
-        <Button Text="Basic Usage"
+        <Button Text="Simple Stack"
                 Command="{Binding NavigateCommand}"
-                CommandParameter="{x:Type local:BasicUsagePage}" />
+                CommandParameter="{x:Type local:SimpleStackPage}" />
+
+        <Button Text="Photo Wrapping"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:PhotoWrappingPage}" />
+
+        <Button Text="Catalog Items"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:CatalogItemsPage}" />
 
         <Button Text="Experiment"
                 Command="{Binding NavigateCommand}"
