@@ -1,462 +1,132 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AD67CD9C-6F46-47F0-957A-AEA55BFC143F}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FormsGallery</RootNamespace>
-    <AssemblyName>FormsGallery</AssemblyName>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
-    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CodeExamplesMainPage.cs" />
-    <Compile Include="CodeExamples\AbsoluteLayoutDemoPage.cs" />
-    <Compile Include="CodeExamples\ActivityIndicatorDemoPage.cs" />
-    <Compile Include="CodeExamples\BoxViewDemoPage.cs" />
-    <Compile Include="CodeExamples\ButtonDemoPage.cs" />
-    <Compile Include="CodeExamples\CarouselPageDemoPage.cs" />
-    <Compile Include="CodeExamples\ContentPageDemoPage.cs" />
-    <Compile Include="CodeExamples\ContentViewDemoPage.cs" />
-    <Compile Include="CodeExamples\DatePickerDemoPage.cs" />
-    <Compile Include="CodeExamples\EditorDemoPage.cs" />
-    <Compile Include="CodeExamples\EntryCellDemoPage.cs" />
-    <Compile Include="CodeExamples\EntryDemoPage.cs" />
-    <Compile Include="CodeExamples\FrameDemoPage.cs" />
-    <Compile Include="CodeExamples\GridDemoPage.cs" />
-    <Compile Include="CodeExamples\ImageCellDemoPage.cs" />
-    <Compile Include="CodeExamples\ImageDemoPage.cs" />
-    <Compile Include="CodeExamples\LabelDemoPage.cs" />
-    <Compile Include="CodeExamples\ListViewDemoPage.cs" />
-    <Compile Include="CodeExamples\MapDemoPage.cs" />
-    <Compile Include="CodeExamples\MasterDetailPageDemoPage.cs" />
-    <Compile Include="CodeExamples\NamedColorPage.cs" />
-    <Compile Include="CodeExamples\NavigationPageDemoPage.cs" />
-    <Compile Include="CodeExamples\OpenGLViewDemoPage.cs" />
-    <Compile Include="CodeExamples\PickerDemoPage.cs" />
-    <Compile Include="CodeExamples\ProgressBarDemoPage.cs" />
-    <Compile Include="CodeExamples\RelativeLayoutDemoPage.cs" />
-    <Compile Include="CodeExamples\ScrollViewDemoPage.cs" />
-    <Compile Include="CodeExamples\SearchBarDemoPage.cs" />
-    <Compile Include="CodeExamples\SliderDemoPage.cs" />
-    <Compile Include="CodeExamples\StackLayoutDemoPage.cs" />
-    <Compile Include="CodeExamples\StepperDemoPage.cs" />
-    <Compile Include="CodeExamples\SwitchCellDemoPage.cs" />
-    <Compile Include="CodeExamples\SwitchDemoPage.cs" />
-    <Compile Include="CodeExamples\TabbedPageDemoPage.cs" />
-    <Compile Include="CodeExamples\TableViewFormDemoPage.cs" />
-    <Compile Include="CodeExamples\TableViewMenuDemoPage.cs" />
-    <Compile Include="CodeExamples\TextCellDemoPage.cs" />
-    <Compile Include="CodeExamples\TimePickerDemoPage.cs" />
-    <Compile Include="CodeExamples\WebViewDemoPage.cs" />
-    <Compile Include="HomePage.xaml.cs">
-      <DependentUpon>HomePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="IOpenGLViewSharedCode.cs" />
-    <Compile Include="NamedColor.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XamlExamples\AbsoluteLayoutDemoPage.xaml.cs">
-      <DependentUpon>AbsoluteLayoutDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\ActivityIndicatorDemoPage.xaml.cs">
-      <DependentUpon>ActivityIndicatorDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\BoxViewDemoPage.xaml.cs">
-      <DependentUpon>BoxViewDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\ButtonDemoPage.xaml.cs">
-      <DependentUpon>ButtonDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\CarouselPageDemoPage.xaml.cs">
-      <DependentUpon>CarouselPageDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\ContentPageDemoPage.xaml.cs">
-      <DependentUpon>ContentPageDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\ContentViewDemoPage.xaml.cs">
-      <DependentUpon>ContentViewDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\DatePickerDemoPage.xaml.cs">
-      <DependentUpon>DatePickerDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\EditorDemoPage.xaml.cs">
-      <DependentUpon>EditorDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\EntryCellDemoPage.xaml.cs">
-      <DependentUpon>EntryCellDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\EntryDemoPage.xaml.cs">
-      <DependentUpon>EntryDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\FrameDemoPage.xaml.cs">
-      <DependentUpon>FrameDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\GridDemoPage.xaml.cs">
-      <DependentUpon>GridDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\ImageCellDemoPage.xaml.cs">
-      <DependentUpon>ImageCellDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\ImageDemoPage.xaml.cs">
-      <DependentUpon>ImageDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\LabelDemoPage.xaml.cs">
-      <DependentUpon>LabelDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\ListViewDemoPage.xaml.cs">
-      <DependentUpon>ListViewDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\MapDemoPage.xaml.cs">
-      <DependentUpon>MapDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\MasterDetailPageDemoPage.xaml.cs">
-      <DependentUpon>MasterDetailPageDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\NavigationPageDemoPage.xaml.cs">
-      <DependentUpon>NavigationPageDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\OpenGLViewDemoPage.xaml.cs">
-      <DependentUpon>OpenGLViewDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\PickerDemoPage.xaml.cs">
-      <DependentUpon>PickerDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\ProgressBarDemoPage.xaml.cs">
-      <DependentUpon>ProgressBarDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\RelativeLayoutDemoPage.xaml.cs">
-      <DependentUpon>RelativeLayoutDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\ScrollViewDemoPage.xaml.cs">
-      <DependentUpon>ScrollViewDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\SearchBarDemoPage.xaml.cs">
-      <DependentUpon>SearchBarDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\SliderDemoPage.xaml.cs">
-      <DependentUpon>SliderDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\StackLayoutDemoPage.xaml.cs">
-      <DependentUpon>StackLayoutDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\StepperDemoPage.xaml.cs">
-      <DependentUpon>StepperDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\SwitchCellDemoPage.xaml.cs">
-      <DependentUpon>SwitchCellDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\SwitchDemoPage.xaml.cs">
-      <DependentUpon>SwitchDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\TabbedPageDemoPage.xaml.cs">
-      <DependentUpon>TabbedPageDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\TableViewFormDemoPage.xaml.cs">
-      <DependentUpon>TableViewFormDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\TableViewMenuDemoPage.xaml.cs">
-      <DependentUpon>TableViewMenuDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\TextCellDemoPage.xaml.cs">
-      <DependentUpon>TextCellDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\TimePickerDemoPage.xaml.cs">
-      <DependentUpon>TimePickerDemoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XamlExamples\WebViewDemoPage.xaml.cs">
-      <DependentUpon>WebViewDemoPage.xaml</DependentUpon>
-    </Compile>
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="2.5.0.280555" />
   </ItemGroup>
+
   <ItemGroup>
-    <EmbeddedResource Include="App.xaml">
-      <SubType>Designer</SubType>
+    <EmbeddedResource Update="App.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\LabelDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\ImageCellDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\ImageDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\BoxViewDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\WebViewDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\MapDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\ButtonDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\SearchBarDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\SliderDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\StepperDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\SwitchDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\TimePickerDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\DatePickerDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\OpenGLViewDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\EntryDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\EditorDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\ActivityIndicatorDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\ProgressBarDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\PickerDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\ListViewDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\TableViewFormDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\TableViewMenuDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\TextCellDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\SwitchCellDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\EntryCellDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\ContentViewDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\FrameDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\ScrollViewDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\StackLayoutDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\AbsoluteLayoutDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\GridDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\RelativeLayoutDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\ContentPageDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\NavigationPageDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\MasterDetailPageDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\CarouselPageDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XamlExamples\TabbedPageDemoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="HomePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\LabelDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\ImageCellDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\ImageDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\BoxViewDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\WebViewDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\MapDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\ButtonDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\SearchBarDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\SliderDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\StepperDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\SwitchDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\TimePickerDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\DatePickerDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\OpenGLViewDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\EntryDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\EditorDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\ActivityIndicatorDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\ProgressBarDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\PickerDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\ListViewDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\TableViewFormDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\TableViewMenuDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\TextCellDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\SwitchCellDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\EntryCellDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\ContentViewDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\FrameDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\ScrollViewDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\StackLayoutDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\AbsoluteLayoutDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\GridDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\RelativeLayoutDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\ContentPageDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\NavigationPageDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\MasterDetailPageDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\CarouselPageDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="XamlExamples\TabbedPageDemoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.280555\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Maps, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.5.0.280555\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Maps.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.280555\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Platform.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.280555\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Xaml.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <Import Project="..\..\packages\Xamarin.Forms.2.5.0.280555\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.280555\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.5.0.280555\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.5.0.280555\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets'))" />
-  </Target>
+
 </Project>
