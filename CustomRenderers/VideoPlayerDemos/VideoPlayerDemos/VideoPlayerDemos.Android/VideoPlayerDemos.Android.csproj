@@ -84,7 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VideoPlayerDemos\VideoPlayerDemos.csproj">
-      <Project>{bf2b7997-9cc7-41d0-83cb-bfcd13f4ddaa}</Project>
+      <Project>{170E1B13-7D4A-4E6D-A115-4CF99AD44DBB}</Project>
       <Name>VideoPlayerDemos</Name>
     </ProjectReference>
   </ItemGroup>

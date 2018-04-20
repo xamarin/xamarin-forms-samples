@@ -87,7 +87,9 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.3.4.247" />
+    <PackageReference Include="Xamarin.Forms">
+      <Version>2.5.1.444934</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -124,7 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DaysBetweenDates\DaysBetweenDates.csproj">
-      <Project>{85b41c90-f1c3-4e95-a13d-a0f04d294c92}</Project>
+      <Project>{C4C7696C-6CA8-447C-A76F-E2F15FF2C406}</Project>
       <Name>DaysBetweenDates</Name>
     </ProjectReference>
   </ItemGroup>

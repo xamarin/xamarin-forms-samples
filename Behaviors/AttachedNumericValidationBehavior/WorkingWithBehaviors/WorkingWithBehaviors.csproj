@@ -17,4 +17,7 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="NumericValidationXaml.xaml.cs" />
+  </ItemGroup>
 </Project>

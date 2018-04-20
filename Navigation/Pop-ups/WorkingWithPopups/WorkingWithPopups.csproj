@@ -20,4 +20,7 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="AlertPage2.cs" />
+  </ItemGroup>
 </Project>
