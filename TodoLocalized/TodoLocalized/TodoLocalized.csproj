@@ -1,30 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="sqlite-net-pcl" Version="1.2.1" />
-    <PackageReference Include="SQLitePCL.bundle_green" Version="0.9.3" />
-    <PackageReference Include="SQLitePCL.raw" Version="0.9.3" />
-    <PackageReference Include="SQLitePCLRaw.bundle_green" Version="1.1.0" />
-    <PackageReference Include="SQLitePCLRaw.core" Version="1.1.0" />
-    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="Resx\AppResources.de.resx" />
-    <EmbeddedResource Include="Resx\AppResources.es.resx" />
-    <EmbeddedResource Include="Resx\AppResources.fr.resx" />
-    <EmbeddedResource Include="Resx\AppResources.it.resx" />
-    <EmbeddedResource Include="Resx\AppResources.pt-BR.resx" />
-    <EmbeddedResource Include="Resx\AppResources.resx" />
-    <EmbeddedResource Include="Resx\AppResources.ru.resx" />
-    <EmbeddedResource Include="Resx\AppResources.zh-Hans.resx" />
-    <EmbeddedResource Include="Resx\AppResources.zh-Hant.resx" />
-    <EmbeddedResource Include="Resx\AppResources.ko.resx" />
-    <EmbeddedResource Include="Resx\AppResources.ja.resx" />
-  </ItemGroup>
-
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="sqlite-net-pcl" Version="1.2.1" />
+        <PackageReference Include="SQLitePCL.bundle_green" Version="0.9.3" />
+        <PackageReference Include="SQLitePCL.raw" Version="0.9.3" />
+        <PackageReference Include="SQLitePCLRaw.bundle_green" Version="1.1.0" />
+        <PackageReference Include="SQLitePCLRaw.core" Version="1.1.0" />
+        <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+    </ItemGroup>
+    <ItemGroup>
+      <Compile Remove="ViewsXaml\TodoItemXaml.xaml.cs" />
+    </ItemGroup>
 </Project>
