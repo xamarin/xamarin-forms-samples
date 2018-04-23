@@ -82,15 +82,10 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Bcl.Build" Version="1.0.21" />
-    <PackageReference Include="PCLCrypto" Version="2.0.147" />
-    <PackageReference Include="PInvoke.BCrypt" Version="0.5.97" />
-    <PackageReference Include="PInvoke.Kernel32" Version="0.5.97" />
-    <PackageReference Include="PInvoke.NCrypt" Version="0.5.97" />
-    <PackageReference Include="PInvoke.Windows.Core" Version="0.5.97" />
-    <PackageReference Include="Validation" Version="2.4.15" />
-    <PackageReference Include="Xamarin.Auth" Version="1.5.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+    <PackageReference Include="Xamarin.Auth">
+      <Version>1.6.0.2</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
