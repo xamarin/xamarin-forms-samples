@@ -11,7 +11,7 @@ namespace EmployeeDirectoryUI.CSharp
     {
         private const int IMAGE_SIZE = 150;
         private Label favoriteLabel;
-        private Switch favoriteSwitch;
+        private Xamarin.Forms.Switch favoriteSwitch;
         private Image photo;
 
         public EmployeeView()
@@ -20,7 +20,7 @@ namespace EmployeeDirectoryUI.CSharp
             photo.SetBinding(Image.SourceProperty, "DetailsPlaceholder.jpg");
 
             favoriteLabel = new Label();
-            favoriteSwitch = new Switch();
+            favoriteSwitch = new Xamarin.Forms.Switch();
 
             var optionsView = new StackLayout
             {

@@ -14,85 +14,90 @@
 //    limitations under the License.
 //
 using System;
-using System.Net;
 using System.Threading.Tasks;
 using System.IO;
 using PCLStorage;
 
 namespace EmployeeDirectory.Utilities
 {
-	public abstract class ImageDownloader
-	{
-		readonly IFolder store;
+    public abstract class ImageDownloader
+    {
+        readonly IFolder store;
 
-		readonly ThrottledHttp http;
+        readonly ThrottledHttp http;
 
-		readonly TimeSpan cacheDuration;
+        readonly TimeSpan cacheDuration;
 
-		public ImageDownloader (int maxConcurrentDownloads = 2) : this (TimeSpan.FromDays (1))
-		{
-			http = new ThrottledHttp (maxConcurrentDownloads);
-		}
+        public ImageDownloader(int maxConcurrentDownloads = 2) : this(TimeSpan.FromDays(1))
+        {
+            http = new ThrottledHttp(maxConcurrentDownloads);
+        }
 
-		public ImageDownloader (TimeSpan cacheDuration)
-		{
-			this.cacheDuration = cacheDuration;
+        public ImageDownloader(TimeSpan cacheDuration)
+        {
+            this.cacheDuration = cacheDuration;
 
-			store = FileSystem.Current.LocalStorage;
-		}
+            store = FileSystem.Current.LocalStorage;
+        }
 
-		public bool HasLocallyCachedCopy (Uri uri)
-		{
-			var now = DateTime.UtcNow;
+        public bool HasLocallyCachedCopy(Uri uri)
+        {
+            var now = DateTime.UtcNow;
 
-			var filename = Uri.EscapeDataString (uri.AbsoluteUri);
+            var filename = Uri.EscapeDataString(uri.AbsoluteUri);
 
-			var lastWriteTime = GetLastWriteTimeUtc (filename);
+            var lastWriteTime = GetLastWriteTimeUtc(filename);
 
-			return lastWriteTime.HasValue &&
-			(now - lastWriteTime.Value) < cacheDuration;
-		}
+            return lastWriteTime.HasValue &&
+            (now - lastWriteTime.Value) < cacheDuration;
+        }
 
-		public async Task<object> GetImageAsync (Uri uri)
-		{
-			await store.CreateFolderAsync ("ImageCache", CreationCollisionOption.OpenIfExists);
-			return await GetImage (uri);
-		}
+        public async Task<object> GetImageAsync(Uri uri)
+        {
+            await store.CreateFolderAsync("ImageCache", CreationCollisionOption.OpenIfExists);
+            return await GetImage(uri);
+        }
 
-		public async Task<object> GetImage (Uri uri)
-		{
-			var filename = Uri.EscapeDataString (uri.AbsoluteUri);
+        public async Task<object> GetImage(Uri uri)
+        {
+            var filename = Uri.EscapeDataString(uri.AbsoluteUri);
 
-			if (HasLocallyCachedCopy (uri)) {
-				using (var o = await OpenStorage (filename, FileAccess.Read)) {
-					return LoadImage (o);
-				}
-			} else {
+            if (HasLocallyCachedCopy(uri))
+            {
+                using (var o = await OpenStorage(filename, PCLStorage.FileAccess.Read))
+                {
+                    return LoadImage(o);
+                }
+            }
+            else
+            {
 
-				using (var d = http.Get (uri))
-				using (var o = await OpenStorage (filename, FileAccess.ReadAndWrite)) {
-					d.CopyTo (o);
-				}
+                using (var d = http.Get(uri))
+                using (var o = await OpenStorage(filename, PCLStorage.FileAccess.ReadAndWrite))
+                {
+                    d.CopyTo(o);
+                }
 
-				using (var o = await OpenStorage (filename, FileAccess.Read)) {
-					return LoadImage (o);
-				}
-			}
-		}
+                using (var o = await OpenStorage(filename, PCLStorage.FileAccess.Read))
+                {
+                    return LoadImage(o);
+                }
+            }
+        }
 
-		protected virtual DateTime? GetLastWriteTimeUtc (string fileName)
-		{
-			return null;
-		}
+        protected virtual DateTime? GetLastWriteTimeUtc(string fileName)
+        {
+            return null;
+        }
 
-		protected async virtual Task<Stream> OpenStorage (string fileName, FileAccess mode)
-		{
-			IFolder store = FileSystem.Current.LocalStorage;
-			IFile file = await store.GetFileAsync (fileName);
-			return await file.OpenAsync (FileAccess.ReadAndWrite);
-		}
+        protected async virtual Task<Stream> OpenStorage(string fileName, PCLStorage.FileAccess mode)
+        {
+            IFolder store = FileSystem.Current.LocalStorage;
+            IFile file = await store.GetFileAsync(fileName);
+            return await file.OpenAsync(PCLStorage.FileAccess.ReadAndWrite);
+        }
 
-		protected abstract object LoadImage (Stream stream);
-	}
+        protected abstract object LoadImage(Stream stream);
+    }
 }
 

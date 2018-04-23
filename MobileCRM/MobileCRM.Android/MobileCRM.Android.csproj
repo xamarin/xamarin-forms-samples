@@ -134,7 +134,7 @@
     <AndroidResource Include="Resources\drawable\settings.png" />
   </ItemGroup>
   <Import Project="..\MobileCRM.Shared\MobileCRM.Shared.projitems" Label="Shared" Condition="Exists('..\MobileCRM.Shared\MobileCRM.Shared.projitems')" />
-  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\filter.png" />
   </ItemGroup>
