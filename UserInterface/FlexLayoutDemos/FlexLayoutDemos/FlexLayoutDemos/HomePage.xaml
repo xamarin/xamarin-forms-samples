@@ -22,6 +22,10 @@
                 Command="{Binding NavigateCommand}"
                 CommandParameter="{x:Type local:PhotoWrappingPage}" />
 
+        <Button Text="Holy Grail Layout"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:HolyGrailLayoutPage}" />
+
         <Button Text="Catalog Items"
                 Command="{Binding NavigateCommand}"
                 CommandParameter="{x:Type local:CatalogItemsPage}" />
@@ -30,7 +34,12 @@
                 Command="{Binding NavigateCommand}"
                 CommandParameter="{x:Type local:ExperimentPage}" />
 
+        <!--<Button Text="CSS Styling"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:CssStylingPage}" />
 
-
+        <Button Text="Adaptive Layout"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:AdaptiveLayoutPage}" />-->
     </StackLayout>
 </ContentPage>

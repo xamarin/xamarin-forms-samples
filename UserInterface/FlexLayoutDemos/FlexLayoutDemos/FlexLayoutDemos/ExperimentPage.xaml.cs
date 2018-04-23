@@ -27,8 +27,6 @@ namespace FlexLayoutDemos
             InitializeComponent();
 
             OnNumberStepperValueChanged(flexLayout, new ValueChangedEventArgs(0, numberStepper.Value));
-
-            FlexLayout.SetBasis(flexLayout.Children[2], new FlexBasis(100, false)); //  0.25f, true));
         }
 
         void OnNumberStepperValueChanged(object sender, ValueChangedEventArgs args)

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:FlexLayoutDemos"
              x:Class="FlexLayoutDemos.ExperimentPage"
-             Title="Experiment Page">
+             Title="Experiment">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Label">
@@ -86,11 +86,6 @@
             <local:EnumPicker EnumType="{x:Type FlexAlignContent}"
                               SelectedItem="{Binding AlignContent}"
                               Grid.Row="5" Grid.Column="1" />
-
-            <!--<Label Text="Position:" />
-
-            <local:EnumPicker EnumType="{x:Type FlexPosition}"
-                              SelectedItem="{Binding Position}" />-->
         </Grid>
 
         <FlexLayout x:Name="flexLayout"

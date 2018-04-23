@@ -38,7 +38,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <ScrollView Orientation="Horizontal">
+    <ScrollView Orientation="Both">
         <FlexLayout>
             <Frame WidthRequest="300"
                    HeightRequest="480">

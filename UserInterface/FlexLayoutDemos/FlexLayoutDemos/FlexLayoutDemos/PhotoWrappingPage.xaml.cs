@@ -44,7 +44,7 @@ namespace FlexLayoutDemos
                     // Convert to a Stream object
                     using (Stream stream = new MemoryStream(data))
                     {
-                        // Deserialize the JSON into and ImageList object
+                        // Deserialize the JSON into an ImageList object
                         var jsonSerializer = new DataContractJsonSerializer(typeof(ImageList));
                         ImageList imageList = (ImageList)jsonSerializer.ReadObject(stream);
 
@@ -67,6 +67,9 @@ namespace FlexLayoutDemos
                     });
                 }
             }
+
+            activityIndicator.IsRunning = false;
+            activityIndicator.IsVisible = false;
         }
     }
 }
