@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace FlexLayoutDemos
 {
-	public partial class SimpleStackPage : ContentPage
+	public partial class ShrinkExperimentPage : ContentPage
 	{
-		public SimpleStackPage ()
+		public ShrinkExperimentPage ()
 		{
 			InitializeComponent ();
 		}

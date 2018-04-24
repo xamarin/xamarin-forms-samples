@@ -12,34 +12,48 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
-    <StackLayout>
-        <Button Text="Simple Stack"
-                Command="{Binding NavigateCommand}"
-                CommandParameter="{x:Type local:SimpleStackPage}" />
 
-        <Button Text="Photo Wrapping"
-                Command="{Binding NavigateCommand}"
-                CommandParameter="{x:Type local:PhotoWrappingPage}" />
+    <ScrollView>
+        <StackLayout>
+            <Button Text="Simple Stack"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:SimpleStackPage}" />
 
-        <Button Text="Holy Grail Layout"
-                Command="{Binding NavigateCommand}"
-                CommandParameter="{x:Type local:HolyGrailLayoutPage}" />
+            <Button Text="Photo Wrapping"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:PhotoWrappingPage}" />
 
-        <Button Text="Catalog Items"
-                Command="{Binding NavigateCommand}"
-                CommandParameter="{x:Type local:CatalogItemsPage}" />
+            <Button Text="Holy Grail Layout"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:HolyGrailLayoutPage}" />
 
-        <Button Text="Experiment"
-                Command="{Binding NavigateCommand}"
-                CommandParameter="{x:Type local:ExperimentPage}" />
+            <Button Text="Catalog Items"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:CatalogItemsPage}" />
 
-        <!--<Button Text="CSS Styling"
-                Command="{Binding NavigateCommand}"
-                CommandParameter="{x:Type local:CssStylingPage}" />
+            <Button Text="Experiment"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:ExperimentPage}" />
 
-        <Button Text="Adaptive Layout"
-                Command="{Binding NavigateCommand}"
-                CommandParameter="{x:Type local:AdaptiveLayoutPage}" />-->
-    </StackLayout>
+            <Button Text="Basis Experiment"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:BasisExperimentPage}" />
+
+            <Button Text="Grow Experiment"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:GrowExperimentPage}" />
+
+            <Button Text="Shrink Experiment"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:ShrinkExperimentPage}" />
+
+            <!--<Button Text="CSS Styling"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:CssStylingPage}" />
+
+            <Button Text="Adaptive Layout"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:AdaptiveLayoutPage}" />-->
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

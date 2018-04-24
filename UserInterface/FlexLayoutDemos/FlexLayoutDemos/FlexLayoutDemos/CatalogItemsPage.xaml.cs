@@ -5,11 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace FlexLayoutDemos
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CatalogItemsPage : ContentPage
 	{
 		public CatalogItemsPage ()

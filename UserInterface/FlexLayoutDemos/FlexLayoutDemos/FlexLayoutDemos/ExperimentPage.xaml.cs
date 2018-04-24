@@ -9,8 +9,8 @@ using Xamarin.Forms.Xaml;
 
 namespace FlexLayoutDemos
 {
-	public partial class ExperimentPage : ContentPage
-	{
+    public partial class ExperimentPage : ContentPage
+    {
         static Color[] colors = { Color.Red, Color.Magenta, Color.Blue,
                                   Color.Cyan, Color.Green, Color.Yellow };
 
@@ -64,6 +64,5 @@ namespace FlexLayoutDemos
                 flexLayout.Children.Add(label);
             }
         }
-
     }
 }
