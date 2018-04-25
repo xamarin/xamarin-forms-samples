@@ -5,37 +5,35 @@
              x:Class="FlexLayoutDemos.CatalogItemsPage"
              Title="Catalog Items">
     <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style TargetType="Frame">
-                <Setter Property="BackgroundColor" Value="LightYellow" />
-                <Setter Property="OutlineColor" Value="Blue" />
-                <Setter Property="Margin" Value="10" />
-                <Setter Property="CornerRadius" Value="15" />
-            </Style>
+        <Style TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="LightYellow" />
+            <Setter Property="BorderColor" Value="Blue" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="CornerRadius" Value="15" />
+        </Style>
             
-            <Style TargetType="Label">
-                <Setter Property="Margin" Value="0, 4" />
-            </Style>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="0, 4" />
+        </Style>
 
-            <Style x:Key="headerLabel" TargetType="Label">
-                <Setter Property="Margin" Value="0, 8" />
-                <Setter Property="FontSize" Value="Large" />
-                <Setter Property="TextColor" Value="Blue" />
-            </Style>
+        <Style x:Key="headerLabel" TargetType="Label">
+            <Setter Property="Margin" Value="0, 8" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="Blue" />
+        </Style>
 
-            <Style TargetType="Image">
-                <Setter Property="FlexLayout.Order" Value="-1" />
-                <Setter Property="FlexLayout.AlignSelf" Value="Center" />
-            </Style>
+        <Style TargetType="Image">
+            <Setter Property="FlexLayout.Order" Value="-1" />
+            <Setter Property="FlexLayout.AlignSelf" Value="Center" />
+        </Style>
 
-            <Style TargetType="Button">
-                <Setter Property="Text" Value="LEARN MORE" />
-                <Setter Property="FontSize" Value="Large" />
-                <Setter Property="TextColor" Value="White" />
-                <Setter Property="BackgroundColor" Value="Green" />
-                <Setter Property="BorderRadius" Value="20" />
-            </Style>
-        </ResourceDictionary>
+        <Style TargetType="Button">
+            <Setter Property="Text" Value="LEARN MORE" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="Green" />
+            <Setter Property="BorderRadius" Value="20" />
+        </Style>
     </ContentPage.Resources>
 
     <ScrollView Orientation="Both">

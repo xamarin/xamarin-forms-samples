@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="CatalogItemsStyles.css" />
     <None Remove="Images\Banana.jpg" />
     <None Remove="Images\FacePalm.jpg" />
     <None Remove="Images\SeatedMonkey.jpg" />
@@ -33,10 +34,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="AdaptiveFlexLayoutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="BasisExperimentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="CatalogItemsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CssCatalogItemsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="GrowExperimentPage.xaml">

@@ -4,13 +4,12 @@
              xmlns:local="clr-namespace:FlexLayoutDemos"
              x:Class="FlexLayoutDemos.HomePage"
              Title="FlexLayout Demos">
+    
     <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style TargetType="Button">
-                <Setter Property="HorizontalOptions" Value="Center" />
-                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
-            </Style>
-        </ResourceDictionary>
+        <Style TargetType="Button">
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        </Style>
     </ContentPage.Resources>
 
     <ScrollView>
@@ -47,13 +46,13 @@
                     Command="{Binding NavigateCommand}"
                     CommandParameter="{x:Type local:ShrinkExperimentPage}" />
 
-            <!--<Button Text="CSS Styling"
+            <Button Text="CSS Catalog Items"
                     Command="{Binding NavigateCommand}"
-                    CommandParameter="{x:Type local:CssStylingPage}" />
+                    CommandParameter="{x:Type local:CssCatalogItemsPage}" />
 
-            <Button Text="Adaptive Layout"
+            <Button Text="Adaptive Flex Layout"
                     Command="{Binding NavigateCommand}"
-                    CommandParameter="{x:Type local:AdaptiveLayoutPage}" />-->
+                    CommandParameter="{x:Type local:AdaptiveFlexLayoutPage}" />
         </StackLayout>
     </ScrollView>
 </ContentPage>

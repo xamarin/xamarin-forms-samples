@@ -25,11 +25,9 @@
             </Grid.ColumnDefinitions>
 
             <Grid.Resources>
-                <ResourceDictionary>
-                    <Style TargetType="Label">
-                        <Setter Property="VerticalOptions" Value="Center" />
-                    </Style>
-                </ResourceDictionary>
+                <Style TargetType="Label">
+                    <Setter Property="VerticalOptions" Value="Center" />
+                </Style>
             </Grid.Resources>
 
             <!-- Controls for Label 2 -->
@@ -68,18 +66,16 @@
                     BackgroundColor="AliceBlue">
 
             <FlexLayout.Resources>
-                <ResourceDictionary>
-                    <Style TargetType="Label">
-                        <Setter Property="FontSize">
-                            <Setter.Value>
-                                <OnPlatform x:TypeArguments="x:Double">
-                                    <On Platform="iOS, Android" Value="32" />
-                                    <On Platform="UWP" Value="48" />
-                                </OnPlatform>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </ResourceDictionary>
+                <Style TargetType="Label">
+                    <Setter Property="FontSize">
+                        <Setter.Value>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="iOS, Android" Value="32" />
+                                <On Platform="UWP" Value="48" />
+                            </OnPlatform>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
             </FlexLayout.Resources>
 
             <Label Text="Label 1"

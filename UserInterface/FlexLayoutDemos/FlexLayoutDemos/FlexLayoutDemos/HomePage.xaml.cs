@@ -4,11 +4,11 @@ using Xamarin.Forms;
 
 namespace FlexLayoutDemos
 {
-	public partial class HomePage : ContentPage
-	{
-		public HomePage ()
-		{
-			InitializeComponent ();
+    public partial class HomePage : ContentPage
+    {
+        public HomePage ()
+        {
+            InitializeComponent ();
 
             NavigateCommand = new Command<Type>(
                 async (Type pageType) =>

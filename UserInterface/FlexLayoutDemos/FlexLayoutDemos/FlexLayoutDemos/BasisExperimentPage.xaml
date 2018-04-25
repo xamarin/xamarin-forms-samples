@@ -29,18 +29,16 @@
             </Grid.ColumnDefinitions>
 
             <Grid.Resources>
-                <ResourceDictionary>
-                    <local:BooleanInverseConverter x:Key="booleanInverse" />
+                <local:BooleanInverseConverter x:Key="booleanInverse" />
 
-                    <Style TargetType="Label">
-                        <Setter Property="VerticalOptions" Value="Center" />
-                    </Style>
+                <Style TargetType="Label">
+                    <Setter Property="VerticalOptions" Value="Center" />
+                </Style>
 
-                    <Style TargetType="StackLayout">
-                        <Setter Property="Orientation" Value="Horizontal" />
-                        <Setter Property="HorizontalOptions" Value="Center" />
-                    </Style>
-                </ResourceDictionary>
+                <Style TargetType="StackLayout">
+                    <Setter Property="Orientation" Value="Horizontal" />
+                    <Setter Property="HorizontalOptions" Value="Center" />
+                </Style>
             </Grid.Resources>
 
             <!-- Controls for Label 2 -->

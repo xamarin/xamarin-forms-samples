@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlexLayoutDemos.AdaptiveFlexLayoutPage"
+             Title="Adaptive FlexLayout">
+
+    <FlexLayout Direction="Column">
+
+        <!-- Header -->
+        <Label Text="MONKEY SELECTOR"
+               FontSize="Large"
+               BackgroundColor="Aqua"
+               HorizontalTextAlignment="Center" />
+
+        <!-- Body -->
+        <FlexLayout x:Name="bodyFlexLayout"
+                    FlexLayout.Grow="1">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup Name="Orientation">
+                    <VisualState Name="Portrait">
+                        <VisualState.Setters>
+                            <Setter Property="Direction" Value="Column" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Landscape" />
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+
+            <!-- Content -->
+            <Label Text="CONTENT"
+                   FontSize="Large"
+                   BackgroundColor="Gray"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   
+                   
+                   FlexLayout.Grow="0" />
+
+            <!-- Navigation items-->
+            <!--<FlexLayout x:Name="navFlexLayout"
+                        JustifyContent="SpaceEvenly"
+                        FlexLayout.Order="-1">-->
+                <!--<VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup Name="Orientation">
+                        <VisualState Name="Portrait">
+                            <VisualState.Setters>
+                                <Setter Property="Direction" Value="Column" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState Name="Landscape" />
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>-->
+
+            <FlexLayout>
+
+                <Label Text="Whatsit" />
+
+            </FlexLayout>
+
+            <!--<Button Text="Seated"
+                        Command="{Binding SelectedCommand}"
+                        CommandParameter="SeatedMonkey.jpg" />
+
+                <Button Text="Banana"
+                        Command="{Binding SelectedCommand}"
+                        CommandParameter="Banana.jpg" />
+                
+                <Button Text="Face Palm"
+                        Command="{Binding SelectedCommand}"
+                        CommandParameter="FacePalmMonkey.jpg" />-->
+            <!--</FlexLayout>-->
+            
+
+            <!-- Aside items -->
+            <BoxView FlexLayout.Basis="50"
+                     Color="Green" />
+
+        </FlexLayout>
+
+        <!-- Footer -->
+        <Label Text="Select your favorite monkey"
+               FontSize="Large"
+               BackgroundColor="Pink"
+               HorizontalTextAlignment="Center" />
+    </FlexLayout>
+</ContentPage>
