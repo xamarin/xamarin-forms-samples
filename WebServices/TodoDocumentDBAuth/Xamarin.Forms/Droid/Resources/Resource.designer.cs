@@ -26,15 +26,90 @@ namespace TodoDocumentDB.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::PCLCrypto.Resource.String.ApplicationName = global::TodoDocumentDB.Droid.Resource.String.ApplicationName;
-			global::PCLCrypto.Resource.String.Hello = global::TodoDocumentDB.Droid.Resource.String.Hello;
 			global::Xamarin.Auth.Resource.Animation.slide_in_right = global::TodoDocumentDB.Droid.Resource.Animation.slide_in_right;
 			global::Xamarin.Auth.Resource.Animation.slide_out_left = global::TodoDocumentDB.Droid.Resource.Animation.slide_out_left;
+			global::Xamarin.Auth.Resource.Boolean.abc_action_bar_embed_tabs = global::TodoDocumentDB.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Xamarin.Auth.Resource.Color.notification_action_color_filter = global::TodoDocumentDB.Droid.Resource.Color.notification_action_color_filter;
+			global::Xamarin.Auth.Resource.Color.notification_icon_bg_color = global::TodoDocumentDB.Droid.Resource.Color.notification_icon_bg_color;
+			global::Xamarin.Auth.Resource.Color.notification_material_background_media_default_color = global::TodoDocumentDB.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Xamarin.Auth.Resource.Color.primary_text_default_material_dark = global::TodoDocumentDB.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Xamarin.Auth.Resource.Color.ripple_material_light = global::TodoDocumentDB.Droid.Resource.Color.ripple_material_light;
+			global::Xamarin.Auth.Resource.Color.secondary_text_default_material_dark = global::TodoDocumentDB.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Xamarin.Auth.Resource.Color.secondary_text_default_material_light = global::TodoDocumentDB.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Xamarin.Auth.Resource.Dimension.notification_action_icon_size = global::TodoDocumentDB.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Xamarin.Auth.Resource.Dimension.notification_action_text_size = global::TodoDocumentDB.Droid.Resource.Dimension.notification_action_text_size;
+			global::Xamarin.Auth.Resource.Dimension.notification_big_circle_margin = global::TodoDocumentDB.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Xamarin.Auth.Resource.Dimension.notification_content_margin_start = global::TodoDocumentDB.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Xamarin.Auth.Resource.Dimension.notification_large_icon_height = global::TodoDocumentDB.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Xamarin.Auth.Resource.Dimension.notification_large_icon_width = global::TodoDocumentDB.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Xamarin.Auth.Resource.Dimension.notification_main_column_padding_top = global::TodoDocumentDB.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Xamarin.Auth.Resource.Dimension.notification_media_narrow_margin = global::TodoDocumentDB.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Xamarin.Auth.Resource.Dimension.notification_right_icon_size = global::TodoDocumentDB.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Xamarin.Auth.Resource.Dimension.notification_right_side_padding_top = global::TodoDocumentDB.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Xamarin.Auth.Resource.Dimension.notification_small_icon_background_padding = global::TodoDocumentDB.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Xamarin.Auth.Resource.Dimension.notification_small_icon_size_as_large = global::TodoDocumentDB.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Xamarin.Auth.Resource.Dimension.notification_subtext_size = global::TodoDocumentDB.Droid.Resource.Dimension.notification_subtext_size;
+			global::Xamarin.Auth.Resource.Dimension.notification_top_pad = global::TodoDocumentDB.Droid.Resource.Dimension.notification_top_pad;
+			global::Xamarin.Auth.Resource.Dimension.notification_top_pad_large_text = global::TodoDocumentDB.Droid.Resource.Dimension.notification_top_pad_large_text;
 			global::Xamarin.Auth.Resource.Drawable.ic_arrow_back = global::TodoDocumentDB.Droid.Resource.Drawable.ic_arrow_back;
+			global::Xamarin.Auth.Resource.Drawable.notification_action_background = global::TodoDocumentDB.Droid.Resource.Drawable.notification_action_background;
+			global::Xamarin.Auth.Resource.Drawable.notification_bg = global::TodoDocumentDB.Droid.Resource.Drawable.notification_bg;
+			global::Xamarin.Auth.Resource.Drawable.notification_bg_low = global::TodoDocumentDB.Droid.Resource.Drawable.notification_bg_low;
+			global::Xamarin.Auth.Resource.Drawable.notification_bg_low_normal = global::TodoDocumentDB.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Xamarin.Auth.Resource.Drawable.notification_bg_low_pressed = global::TodoDocumentDB.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Xamarin.Auth.Resource.Drawable.notification_bg_normal = global::TodoDocumentDB.Droid.Resource.Drawable.notification_bg_normal;
+			global::Xamarin.Auth.Resource.Drawable.notification_bg_normal_pressed = global::TodoDocumentDB.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Xamarin.Auth.Resource.Drawable.notification_icon_background = global::TodoDocumentDB.Droid.Resource.Drawable.notification_icon_background;
+			global::Xamarin.Auth.Resource.Drawable.notification_template_icon_bg = global::TodoDocumentDB.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Xamarin.Auth.Resource.Drawable.notification_template_icon_low_bg = global::TodoDocumentDB.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Xamarin.Auth.Resource.Drawable.notification_tile_bg = global::TodoDocumentDB.Droid.Resource.Drawable.notification_tile_bg;
+			global::Xamarin.Auth.Resource.Drawable.notify_panel_notification_icon_bg = global::TodoDocumentDB.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Xamarin.Auth.Resource.Id.action0 = global::TodoDocumentDB.Droid.Resource.Id.action0;
+			global::Xamarin.Auth.Resource.Id.action_container = global::TodoDocumentDB.Droid.Resource.Id.action_container;
+			global::Xamarin.Auth.Resource.Id.action_divider = global::TodoDocumentDB.Droid.Resource.Id.action_divider;
+			global::Xamarin.Auth.Resource.Id.action_image = global::TodoDocumentDB.Droid.Resource.Id.action_image;
+			global::Xamarin.Auth.Resource.Id.action_text = global::TodoDocumentDB.Droid.Resource.Id.action_text;
+			global::Xamarin.Auth.Resource.Id.actions = global::TodoDocumentDB.Droid.Resource.Id.actions;
+			global::Xamarin.Auth.Resource.Id.cancel_action = global::TodoDocumentDB.Droid.Resource.Id.cancel_action;
+			global::Xamarin.Auth.Resource.Id.chronometer = global::TodoDocumentDB.Droid.Resource.Id.chronometer;
+			global::Xamarin.Auth.Resource.Id.end_padder = global::TodoDocumentDB.Droid.Resource.Id.end_padder;
+			global::Xamarin.Auth.Resource.Id.icon = global::TodoDocumentDB.Droid.Resource.Id.icon;
+			global::Xamarin.Auth.Resource.Id.icon_group = global::TodoDocumentDB.Droid.Resource.Id.icon_group;
+			global::Xamarin.Auth.Resource.Id.info = global::TodoDocumentDB.Droid.Resource.Id.info;
+			global::Xamarin.Auth.Resource.Id.line1 = global::TodoDocumentDB.Droid.Resource.Id.line1;
+			global::Xamarin.Auth.Resource.Id.line3 = global::TodoDocumentDB.Droid.Resource.Id.line3;
+			global::Xamarin.Auth.Resource.Id.media_actions = global::TodoDocumentDB.Droid.Resource.Id.media_actions;
+			global::Xamarin.Auth.Resource.Id.normal = global::TodoDocumentDB.Droid.Resource.Id.normal;
+			global::Xamarin.Auth.Resource.Id.notification_background = global::TodoDocumentDB.Droid.Resource.Id.notification_background;
+			global::Xamarin.Auth.Resource.Id.notification_main_column = global::TodoDocumentDB.Droid.Resource.Id.notification_main_column;
+			global::Xamarin.Auth.Resource.Id.notification_main_column_container = global::TodoDocumentDB.Droid.Resource.Id.notification_main_column_container;
+			global::Xamarin.Auth.Resource.Id.right_icon = global::TodoDocumentDB.Droid.Resource.Id.right_icon;
+			global::Xamarin.Auth.Resource.Id.right_side = global::TodoDocumentDB.Droid.Resource.Id.right_side;
+			global::Xamarin.Auth.Resource.Id.status_bar_latest_event_content = global::TodoDocumentDB.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Xamarin.Auth.Resource.Id.text = global::TodoDocumentDB.Droid.Resource.Id.text;
+			global::Xamarin.Auth.Resource.Id.text2 = global::TodoDocumentDB.Droid.Resource.Id.text2;
+			global::Xamarin.Auth.Resource.Id.time = global::TodoDocumentDB.Droid.Resource.Id.time;
+			global::Xamarin.Auth.Resource.Id.title = global::TodoDocumentDB.Droid.Resource.Id.title;
 			global::Xamarin.Auth.Resource.Id.webview = global::TodoDocumentDB.Droid.Resource.Id.webview;
+			global::Xamarin.Auth.Resource.Integer.cancel_button_image_alpha = global::TodoDocumentDB.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Xamarin.Auth.Resource.Integer.status_bar_notification_info_maxnum = global::TodoDocumentDB.Droid.Resource.Integer.status_bar_notification_info_maxnum;
 			global::Xamarin.Auth.Resource.Layout.activity_webview = global::TodoDocumentDB.Droid.Resource.Layout.activity_webview;
-			global::Xamarin.Auth.Resource.String.ApplicationName = global::TodoDocumentDB.Droid.Resource.String.ApplicationName;
-			global::Xamarin.Auth.Resource.String.Hello = global::TodoDocumentDB.Droid.Resource.String.Hello;
+			global::Xamarin.Auth.Resource.Layout.notification_action = global::TodoDocumentDB.Droid.Resource.Layout.notification_action;
+			global::Xamarin.Auth.Resource.Layout.notification_action_tombstone = global::TodoDocumentDB.Droid.Resource.Layout.notification_action_tombstone;
+			global::Xamarin.Auth.Resource.Layout.notification_media_action = global::TodoDocumentDB.Droid.Resource.Layout.notification_media_action;
+			global::Xamarin.Auth.Resource.Layout.notification_media_cancel_action = global::TodoDocumentDB.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Xamarin.Auth.Resource.Layout.notification_template_big_media = global::TodoDocumentDB.Droid.Resource.Layout.notification_template_big_media;
+			global::Xamarin.Auth.Resource.Layout.notification_template_big_media_custom = global::TodoDocumentDB.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Xamarin.Auth.Resource.Layout.notification_template_big_media_narrow = global::TodoDocumentDB.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Xamarin.Auth.Resource.Layout.notification_template_big_media_narrow_custom = global::TodoDocumentDB.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Xamarin.Auth.Resource.Layout.notification_template_custom_big = global::TodoDocumentDB.Droid.Resource.Layout.notification_template_custom_big;
+			global::Xamarin.Auth.Resource.Layout.notification_template_icon_group = global::TodoDocumentDB.Droid.Resource.Layout.notification_template_icon_group;
+			global::Xamarin.Auth.Resource.Layout.notification_template_lines_media = global::TodoDocumentDB.Droid.Resource.Layout.notification_template_lines_media;
+			global::Xamarin.Auth.Resource.Layout.notification_template_media = global::TodoDocumentDB.Droid.Resource.Layout.notification_template_media;
+			global::Xamarin.Auth.Resource.Layout.notification_template_media_custom = global::TodoDocumentDB.Droid.Resource.Layout.notification_template_media_custom;
+			global::Xamarin.Auth.Resource.Layout.notification_template_part_chronometer = global::TodoDocumentDB.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Xamarin.Auth.Resource.Layout.notification_template_part_time = global::TodoDocumentDB.Droid.Resource.Layout.notification_template_part_time;
+			global::Xamarin.Auth.Resource.String.status_bar_notification_info_overflow = global::TodoDocumentDB.Droid.Resource.String.status_bar_notification_info_overflow;
 			global::Xamarin.Auth.Resource.String.title_activity_webview = global::TodoDocumentDB.Droid.Resource.String.title_activity_webview;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::TodoDocumentDB.Droid.Resource.Attribute.actionBarSize;
 		}
@@ -3637,12 +3712,6 @@ namespace TodoDocumentDB.Droid
 		
 		public partial class String
 		{
-			
-			// aapt resource value: 0x7f070040
-			public const int ApplicationName = 2131165248;
-			
-			// aapt resource value: 0x7f07003f
-			public const int Hello = 2131165247;
 			
 			// aapt resource value: 0x7f070016
 			public const int abc_action_bar_home_description = 2131165206;
