@@ -19,7 +19,4 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="Data\TodoServiceFacade.cs" />
-  </ItemGroup>
 </Project>
