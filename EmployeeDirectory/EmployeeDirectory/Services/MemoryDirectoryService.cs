@@ -27,98 +27,113 @@ using PCLStorage;
 
 namespace EmployeeDirectory
 {
-	public class MemoryDirectoryService : IDirectoryService
-	{
-		List<Person> people;
+    public class MemoryDirectoryService : IDirectoryService
+    {
+        List<Person> people;
 
-		Dictionary<string, PropertyInfo> properties;
+        Dictionary<string, PropertyInfo> properties;
 
-		public MemoryDirectoryService (IEnumerable<Person> people)
-		{
-			this.people = people.ToList ();
-			this.properties = typeof(Person).GetRuntimeProperties ().ToDictionary (p => p.Name);
-		}
+        public MemoryDirectoryService(IEnumerable<Person> people)
+        {
+            this.people = people.ToList();
+            this.properties = typeof(Person).GetRuntimeProperties().ToDictionary(p => p.Name);
+        }
 
-		#region IDirectoryService implementation
+        #region IDirectoryService implementation
 
-		public void Dispose ()
-		{
-		}
+        public void Dispose()
+        {
+        }
 
-		public Task LoginAsync (string username, string password, CancellationToken cancellationToken)
-		{
-			return Task.Factory.StartNew (() => { 
-				//Just for testing
-				//HACK: Thread.Sleep (2000);
-			});
-		}
+        public Task LoginAsync(string username, string password, CancellationToken cancellationToken)
+        {
+            return Task.Factory.StartNew(() =>
+            {
+                //Just for testing
+                //HACK: Thread.Sleep (2000);
+            });
+        }
 
-		public Task<IList<Person>> SearchAsync (Filter filter, int sizeLimit, CancellationToken cancellationToken)
-		{
-			return Task.Factory.StartNew (() => {
-				var s = Search (filter);
-				var list = s.ToList ();
-				return (IList<Person>)list;
-			}, cancellationToken);
-		}
+        public Task<IList<Person>> SearchAsync(Filter filter, int sizeLimit, CancellationToken cancellationToken)
+        {
+            return Task.Factory.StartNew(() =>
+            {
+                var s = Search(filter);
+                var list = s.ToList();
+                return (IList<Person>)list;
+            }, cancellationToken);
+        }
 
-		IEnumerable<Person> Search (Filter filter)
-		{
-			if (filter is OrFilter) {
-				var f = (OrFilter)filter;
-				var r = Enumerable.Empty<Person> ();
-				foreach (var sf in f.Filters) {
-					r = r.Concat (Search (sf));
-				}
-				return r.Distinct ();
-			} else if (filter is AndFilter) {
-				throw new NotImplementedException ();
-			} else if (filter is NotFilter) {
-				throw new NotImplementedException ();
-			} else if (filter is EqualsFilter) {
-				var f = (EqualsFilter)filter;
-				var upper = f.Value.ToUpperInvariant ();
-				var prop = properties [f.PropertyName];
-				var q = from p in people
-				        let v = prop.GetValue (p, null)
-				        where v != null && v.ToString ().ToUpperInvariant () == upper
-				        select p;
-				return q;
-			} else if (filter is ContainsFilter) {
-				var f = (ContainsFilter)filter;
-				var re = new Regex (Regex.Escape (f.Value).Replace ("\\ ", "|"), RegexOptions.IgnoreCase);
-				var prop = properties [f.PropertyName];
-				var q = from p in people
-				        let v = prop.GetValue (p, null)
-				        where v != null && re.IsMatch (v.ToString ())
-				        select p;
-				return q;
-			} else {
-				throw new NotSupportedException ("Unsupported filter type: " + filter.GetType ());
-			}
-		}
+        IEnumerable<Person> Search(Filter filter)
+        {
+            if (filter is OrFilter)
+            {
+                var f = (OrFilter)filter;
+                var r = Enumerable.Empty<Person>();
+                foreach (var sf in f.Filters)
+                {
+                    r = r.Concat(Search(sf));
+                }
+                return r.Distinct();
+            }
+            else if (filter is AndFilter)
+            {
+                throw new NotImplementedException();
+            }
+            else if (filter is NotFilter)
+            {
+                throw new NotImplementedException();
+            }
+            else if (filter is EqualsFilter)
+            {
+                var f = (EqualsFilter)filter;
+                var upper = f.Value.ToUpperInvariant();
+                var prop = properties[f.PropertyName];
+                var q = from p in people
+                        let v = prop.GetValue(p, null)
+                        where v != null && v.ToString().ToUpperInvariant() == upper
+                        select p;
+                return q;
+            }
+            else if (filter is ContainsFilter)
+            {
+                var f = (ContainsFilter)filter;
+                var re = new Regex(Regex.Escape(f.Value).Replace("\\ ", "|"), RegexOptions.IgnoreCase);
+                var prop = properties[f.PropertyName];
+                var q = from p in people
+                        let v = prop.GetValue(p, null)
+                        where v != null && re.IsMatch(v.ToString())
+                        select p;
+                return q;
+            }
+            else
+            {
+                throw new NotSupportedException("Unsupported filter type: " + filter.GetType());
+            }
+        }
 
-		#endregion
+        #endregion
 
-		#region File IO
+        #region File IO
 
-		public async static Task<MemoryDirectoryService> FromCsv (string path)
-		{
-			IFolder store = FileSystem.Current.LocalStorage;
-			var file = await store.GetFileAsync (path);
+        public async static Task<MemoryDirectoryService> FromCsv(string path)
+        {
+            IFolder store = FileSystem.Current.LocalStorage;
+            var file = await store.GetFileAsync(path);
 
-			using (var reader = new StreamReader (await file.OpenAsync (FileAccess.Read))) {
-				return FromCsv (reader);
-			}
-		}
+            using (var reader = new StreamReader(await file.OpenAsync(PCLStorage.FileAccess.Read)))
+            {
+                return FromCsv(reader);
+            }
+        }
 
-		public static MemoryDirectoryService FromCsv (TextReader textReader)
-		{
-			var reader = new CsvReader<Person> (textReader);
-			return new MemoryDirectoryService (reader.ReadAll ());
-		}
+        public static MemoryDirectoryService FromCsv(TextReader textReader)
+        {
+            var reader = new CsvReader<Person>(textReader);
+            return new MemoryDirectoryService(reader.ReadAll());
+        }
 
-		#endregion
-	}
+        #endregion
+    }
 }
 

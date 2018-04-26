@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>UsingUITest.UITests</RootNamespace>
     <AssemblyName>UsingUITest.UITests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,6 +28,10 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.0.1" />
+    <PackageReference Include="Xamarin.UITest" Version="1.2.0" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
@@ -40,10 +44,7 @@
     <Compile Include="Tests.cs" />
     <Compile Include="AppInitializer.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\iOS\UsingUITest.iOS.csproj">
       <Project>{5B64324F-7592-4B7F-87EE-85583DA46A61}</Project>

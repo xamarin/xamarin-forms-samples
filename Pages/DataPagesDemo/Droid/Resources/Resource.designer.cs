@@ -27,8 +27,6 @@ namespace DataPagesDemo.Droid
 		public static void UpdateIdValues()
 		{
 			global::ModernHttpClient.Resource.String.library_name = global::DataPagesDemo.Droid.Resource.String.library_name;
-			global::PCLCrypto.Resource.String.ApplicationName = global::DataPagesDemo.Droid.Resource.String.ApplicationName;
-			global::PCLCrypto.Resource.String.Hello = global::DataPagesDemo.Droid.Resource.String.Hello;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::DataPagesDemo.Droid.Resource.Attribute.actionBarSize;
 		}
 		
