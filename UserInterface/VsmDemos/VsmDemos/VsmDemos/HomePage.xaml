@@ -23,6 +23,14 @@
             <Button Text="VSM in Style"
                     Command="{Binding NavigateCommand}"
                     CommandParameter="{x:Type local:VsmInStylePage}" />
+
+            <Button Text="VSM Validation"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:VsmValidationPage}" />
+
+            <Button Text="VSM Adaptive Layout"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:VsmAdaptiveLayoutPage}" />
         </StackLayout>
     </ScrollView>
 </ContentPage>

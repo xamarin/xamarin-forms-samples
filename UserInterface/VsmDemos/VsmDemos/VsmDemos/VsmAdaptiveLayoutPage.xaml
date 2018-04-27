@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VsmDemos.VsmAdaptiveLayoutPage"
+             Title="VSM Adaptive Layout">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition>
+
+                    <!-- if based on 
+                    
+                    https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/GridOrientationBehavior.cs
+                    
+                    will need VSM markup attached to two rowdef's, two coldef's and two children.
+                    
+                    Too much!
+                    
+                    Yet, StackLayout too simple, and not adequate.
+                    
+                    -->
+                    
+                    
+            </RowDefinition>
+            
+            
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+           
+            
+        </Grid.ColumnDefinitions>
+
+
+
+
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup Name="OrientationStates">
+                <VisualState Name="Portrait">
+                    <VisualState.Setters>
+                        
+                    </VisualState.Setters>                    
+                </VisualState>
+
+                <VisualState Name="Landscape">
+                    <VisualState.Setters>
+                        
+                        
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>            
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</ContentPage>
