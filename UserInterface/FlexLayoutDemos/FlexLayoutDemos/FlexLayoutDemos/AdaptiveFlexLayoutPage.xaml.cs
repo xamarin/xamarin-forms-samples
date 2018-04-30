@@ -4,32 +4,32 @@ using Xamarin.Forms;
 
 namespace FlexLayoutDemos
 {
-	public partial class AdaptiveFlexLayoutPage : ContentPage
-	{
-		public AdaptiveFlexLayoutPage ()
-		{
+    public partial class AdaptiveFlexLayoutPage : ContentPage
+    {
+        public AdaptiveFlexLayoutPage ()
+        {
 			InitializeComponent ();
 
             SizeChanged += (sender, args) =>
             {
-                string state = Width > Height ? "Landscape" : "Portrait";
+                string visualState = Width > Height ? "Landscape" : "Portrait";
 
-                VisualStateManager.GoToState(bodyFlexLayout, state);
-     //           VisualStateManager.GoToState(navFlexLayout, state);
+       //         VisualStateManager.GoToState(mainFlex, visualState);
+       //         VisualStateManager.GoToState(menuScroll, visualState);
+         //       VisualStateManager.GoToState(menuFlex, visualState);
 
+            //    foreach (View child in menuFlex.Children)
+            //    {
+            //        VisualStateManager.GoToState(child, visualState);
+            //    }
             };
 
-            SelectedCommand = new Command<string>(
-                async (string filename) => // Type pageType) =>
-                {
-               //     Page page = (Page)Activator.CreateInstance(pageType);
-             //       await Navigation.PushAsync(page);
-                }
-                
-                
-                );
+            SelectedCommand = new Command<string>((filename) =>
+            {
+      //          image.Source = ImageSource.FromResource("FlexLayoutDemos.Images." + filename);
+            });
 
-    //        navFlexLayout.BindingContext = this;
+    //        menuFlex.BindingContext = this;
         }
 
         public ICommand SelectedCommand { private set; get; }
