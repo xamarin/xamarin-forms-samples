@@ -32,7 +32,7 @@ namespace TouchTracking.Droid
             // Get the Android View corresponding to the Element that the effect is attached to
             view = Control == null ? Container : Control;
 
-            // Get access to the TouchEffect class in the PCL
+            // Get access to the TouchEffect class in the .NET Standard library
             TouchTracking.TouchEffect touchEffect = 
                 (TouchTracking.TouchEffect)Element.Effects.
                     FirstOrDefault(e => e is TouchTracking.TouchEffect);

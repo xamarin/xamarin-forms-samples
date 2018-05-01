@@ -22,7 +22,7 @@ namespace TouchTracking.UWP
             // Get the Windows FrameworkElement corresponding to the Element that the effect is attached to
             frameworkElement = Control == null ? Container : Control;
 
-            // Get access to the TouchEffect class in the PCL
+            // Get access to the TouchEffect class in the .NET Standard library
             effect = (TouchTracking.TouchEffect)Element.Effects.
                         FirstOrDefault(e => e is TouchTracking.TouchEffect);
 
