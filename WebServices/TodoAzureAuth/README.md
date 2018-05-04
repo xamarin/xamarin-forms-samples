@@ -29,7 +29,7 @@ Sample Setup
 
 In order to run this sample application the following steps must be carried out:
 
-1. Update Constants.cs, in the PCL project, to include the URL of the Azure Mobile App, and the URL scheme for the Xamarin.Forms app.
+1. Update Constants.cs, in the .NET Standard Library project, to include the URL of the Azure Mobile App, and the URL scheme for the Xamarin.Forms app.
 1. In the iOS project, update Info.plist to include the URL scheme.
 1. In the Android project, update AndroidManifest.xml to include the URL scheme.
 1. In the UWP project, update Package.appxmanifest to include the URL scheme.
