@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleMetadata>
+	<ID>1d55e5d9-1347-4d26-ba20-77a7684b7c6f</ID>
+	<IsFullApplication>true</IsFullApplication>
+	<Level>Beginner</Level>
+	<Tags>Data, User Interface, Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>Demonstrates how to right-to-left localize Xamarin.Forms apps.</Brief>
+</SampleMetadata>
