@@ -49,10 +49,6 @@
             <Button Text="CSS Catalog Items"
                     Command="{Binding NavigateCommand}"
                     CommandParameter="{x:Type local:CssCatalogItemsPage}" />
-
-            <Button Text="Adaptive Flex Layout"
-                    Command="{Binding NavigateCommand}"
-                    CommandParameter="{x:Type local:AdaptiveFlexLayoutPage}" />
         </StackLayout>
     </ScrollView>
 </ContentPage>
