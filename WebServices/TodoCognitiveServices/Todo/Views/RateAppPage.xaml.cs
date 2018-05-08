@@ -4,20 +4,22 @@ using System.Linq;
 using Xamarin.Forms;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
-using Microsoft.ProjectOxford.Face;
-using Microsoft.ProjectOxford.Face.Contract;
+using Todo.Exceptions;
+using Todo.Models;
+using Todo.Services;
 
 namespace Todo
 {
     public partial class RateAppPage : ContentPage
     {
-        readonly IFaceServiceClient faceServiceClient;
+		IFaceRecognitionService _faceRecognitionService;
         MediaFile photo;
 
         public RateAppPage()
         {
             InitializeComponent();
-            faceServiceClient = new FaceServiceClient(Constants.FaceApiKey, Constants.FaceEndpoint);
+
+			_faceRecognitionService = new FaceRecognitionService();
         }
 
         async void OnTakePhotoButtonClicked(object sender, EventArgs e)
@@ -54,7 +56,7 @@ namespace Todo
                     var faceAttributes = new FaceAttributeType[] { FaceAttributeType.Emotion };
                     using (var photoStream = photo.GetStream())
                     {
-                        Face[] faces = await faceServiceClient.DetectAsync(photoStream, true, false, faceAttributes);
+						Face[] faces = await _faceRecognitionService.DetectAsync(photoStream, true, false, faceAttributes);
                         if (faces.Any())
                         {
                             // Emotions detected are happiness, sadness, surprise, anger, fear, contempt, disgust, or neutral.
