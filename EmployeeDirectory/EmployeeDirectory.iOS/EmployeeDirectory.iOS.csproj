@@ -28,6 +28,7 @@
     <AssemblyName>EmployeeDirectoryiOS</AssemblyName>
     <MtouchI18n />
     <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -41,6 +42,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <AssemblyName>EmployeeDirectoryiOS</AssemblyName>
     <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,6 +60,7 @@
     <IpaPackageName />
     <MtouchI18n />
     <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -73,6 +76,7 @@
     <IpaPackageName />
     <MtouchI18n />
     <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>full</DebugType>
@@ -88,6 +92,7 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
     <AssemblyName>QuickTodoiOS</AssemblyName>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <DebugType>full</DebugType>
@@ -102,6 +107,7 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
     <AssemblyName>QuickTodoiOS</AssemblyName>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Bcl.Build" Version="1.0.21" />

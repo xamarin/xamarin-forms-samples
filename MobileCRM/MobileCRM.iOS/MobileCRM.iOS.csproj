@@ -1,219 +1,225 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <PropertyGroup>
-        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-        <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-        <ProjectGuid>{6A02ABA0-EE87-4C04-A065-BEF98D7F4E53}</ProjectGuid>
-        <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-        <OutputType>Exe</OutputType>
-        <RootNamespace>MobileCRM.iOS</RootNamespace>
-        <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-        <NuGetPackageImportStamp>2febcc6b</NuGetPackageImportStamp>
-        <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
-        <AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>full</DebugType>
-        <Optimize>false</Optimize>
-        <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
-        <DefineConstants>DEBUG;__MOBILE__;__IOS__;</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <ConsolePause>false</ConsolePause>
-        <MtouchLink>None</MtouchLink>
-        <MtouchDebug>True</MtouchDebug>
-        <MtouchI18n />
-        <MtouchArch>i386, x86_64</MtouchArch>
-        <MtouchExtraArgs />
-        <MtouchOptimizePNGs>True</MtouchOptimizePNGs>
-        <AssemblyName>MobileCRM</AssemblyName>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
-        <DebugType>full</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
-        <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <MtouchLink>None</MtouchLink>
-        <ConsolePause>false</ConsolePause>
-        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-        <AssemblyName>MobileCRM</AssemblyName>
-        <MtouchArch>i386, x86_64</MtouchArch>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>full</DebugType>
-        <Optimize>false</Optimize>
-        <OutputPath>bin\iPhone\Debug</OutputPath>
-        <DefineConstants>DEBUG;__MOBILE__;__IOS__;TRACE;</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <ConsolePause>false</ConsolePause>
-        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-        <MtouchDebug>true</MtouchDebug>
-        <CodesignKey>iPhone Developer</CodesignKey>
-        <IpaPackageName />
-        <MtouchI18n />
-        <MtouchArch>ARMv7, ARM64</MtouchArch>
-        <AssemblyName>MobileCRMiOS</AssemblyName>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
-        <DebugType>full</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\iPhone\Release</OutputPath>
-        <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-        <ConsolePause>false</ConsolePause>
-        <CodesignKey>iPhone Developer</CodesignKey>
-        <AssemblyName>MobileCRMiOS</AssemblyName>
-        <MtouchArch>ARMv7, ARM64</MtouchArch>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
-        <DebugType>full</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
-        <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <ConsolePause>false</ConsolePause>
-        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-        <BuildIpa>true</BuildIpa>
-        <CodesignProvision>Automatic:AdHoc</CodesignProvision>
-        <CodesignKey>iPhone Distribution</CodesignKey>
-        <AssemblyName>MobileCRMiOS</AssemblyName>
-        <MtouchArch>ARMv7, ARM64</MtouchArch>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
-        <DebugType>full</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\iPhone\AppStore</OutputPath>
-        <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <ConsolePause>false</ConsolePause>
-        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-        <CodesignProvision>Automatic:AppStore</CodesignProvision>
-        <CodesignKey>iPhone Distribution</CodesignKey>
-        <AssemblyName>MobileCRMiOS</AssemblyName>
-        <MtouchArch>ARMv7, ARM64</MtouchArch>
-    </PropertyGroup>
-    <ItemGroup>
-        <PackageReference Include="Microsoft.CSharp" Version="4.4.0" />
-        <PackageReference Include="Microsoft.NETCore.Platforms" Version="2.0.0" />
-        <PackageReference Include="Microsoft.Win32.Primitives" Version="4.3.0" />
-        <PackageReference Include="NETStandard.Library" Version="2.0.0" />
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-        <PackageReference Include="System.AppContext" Version="4.3.0" />
-        <PackageReference Include="System.Collections" Version="4.3.0" />
-        <PackageReference Include="System.Collections.Concurrent" Version="4.3.0" />
-        <PackageReference Include="System.ComponentModel.TypeConverter" Version="4.3.0" />
-        <PackageReference Include="System.Console" Version="4.3.0" />
-        <PackageReference Include="System.Diagnostics.Debug" Version="4.3.0" />
-        <PackageReference Include="System.Diagnostics.Tools" Version="4.3.0" />
-        <PackageReference Include="System.Diagnostics.Tracing" Version="4.3.0" />
-        <PackageReference Include="System.Globalization" Version="4.3.0" />
-        <PackageReference Include="System.Globalization.Calendars" Version="4.3.0" />
-        <PackageReference Include="System.IO" Version="4.3.0" />
-        <PackageReference Include="System.IO.Compression" Version="4.3.0" />
-        <PackageReference Include="System.IO.Compression.ZipFile" Version="4.3.0" />
-        <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
-        <PackageReference Include="System.IO.FileSystem.Primitives" Version="4.3.0" />
-        <PackageReference Include="System.Linq" Version="4.3.0" />
-        <PackageReference Include="System.Linq.Expressions" Version="4.3.0" />
-        <PackageReference Include="System.Net.Http" Version="4.3.3" />
-        <PackageReference Include="System.Net.Primitives" Version="4.3.0" />
-        <PackageReference Include="System.Net.Sockets" Version="4.3.0" />
-        <PackageReference Include="System.ObjectModel" Version="4.3.0" />
-        <PackageReference Include="System.Reflection" Version="4.3.0" />
-        <PackageReference Include="System.Reflection.Extensions" Version="4.3.0" />
-        <PackageReference Include="System.Reflection.Primitives" Version="4.3.0" />
-        <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
-        <PackageReference Include="System.Runtime" Version="4.3.0" />
-        <PackageReference Include="System.Runtime.Extensions" Version="4.3.0" />
-        <PackageReference Include="System.Runtime.Handles" Version="4.3.0" />
-        <PackageReference Include="System.Runtime.InteropServices" Version="4.3.0" />
-        <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
-        <PackageReference Include="System.Runtime.Numerics" Version="4.3.0" />
-        <PackageReference Include="System.Runtime.Serialization.Formatters" Version="4.3.0" />
-        <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
-        <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.0" />
-        <PackageReference Include="System.Security.Cryptography.Encoding" Version="4.3.0" />
-        <PackageReference Include="System.Security.Cryptography.Primitives" Version="4.3.0" />
-        <PackageReference Include="System.Security.Cryptography.X509Certificates" Version="4.3.1" />
-        <PackageReference Include="System.Text.Encoding" Version="4.3.0" />
-        <PackageReference Include="System.Text.Encoding.Extensions" Version="4.3.0" />
-        <PackageReference Include="System.Text.RegularExpressions" Version="4.3.0" />
-        <PackageReference Include="System.Threading" Version="4.3.0" />
-        <PackageReference Include="System.Threading.Tasks" Version="4.3.0" />
-        <PackageReference Include="System.Threading.Timer" Version="4.3.0" />
-        <PackageReference Include="System.Xml.ReaderWriter" Version="4.3.0" />
-        <PackageReference Include="System.Xml.XDocument" Version="4.3.0" />
-        <PackageReference Include="System.Xml.XmlDocument" Version="4.3.0" />
-        <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
-        <PackageReference Include="Xamarin.Forms.Maps" Version="2.5.0.280555" />
-    </ItemGroup>
-    <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Xml" />
-        <Reference Include="System.Core" />
-        <Reference Include="Xamarin.iOS" />
-    </ItemGroup>
-    <ItemGroup>
-        <BundleResource Include="Resources\Default-568h%402x.png" />
-        <BundleResource Include="Resources\list.png" />
-        <BundleResource Include="Resources\list%402x.png" />
-        <BundleResource Include="Resources\map.png" />
-        <BundleResource Include="Resources\map%402x.png" />
-        <BundleResource Include="Resources\settings.png" />
-        <BundleResource Include="Resources\settings%402x.png" />
-        <BundleResource Include="Resources\zoom_in.png" />
-        <BundleResource Include="Resources\zoom_out.png" />
-        <BundleResource Include="Resources\filter.png" />
-        <BundleResource Include="Resources\Icon-60%402x.png" />
-        <BundleResource Include="Resources\Icon-76%402x.png" />
-        <BundleResource Include="Resources\Default-Portrait.png" />
-        <BundleResource Include="Resources\Default-Portrait%402x.png" />
-        <BundleResource Include="Resources\contact.png" />
-        <BundleResource Include="Resources\lead.png" />
-        <BundleResource Include="Resources\proposal.png" />
-        <BundleResource Include="Resources\opportunity.png" />
-        <BundleResource Include="Resources\account.png" />
-        <BundleResource Include="Resources\item.png" />
-    </ItemGroup>
-    <ItemGroup>
-        <EmbeddedResource Include="Data\Poi.json" />
-        <None Include="Info.plist" />
-        <None Include="Entitlements.plist" />
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="Main.cs" />
-        <Compile Include="AppDelegate.cs" />
-        <Compile Include="Renderers\BlueNavigationRenderer.cs" />
-        <Compile Include="Renderers\DarkTextCellRenderer.cs" />
-        <Compile Include="GeoService.cs" />
-    </ItemGroup>
-    <Import Project="..\MobileCRM.Shared\MobileCRM.Shared.projitems" Label="Shared" Condition="Exists('..\MobileCRM.Shared\MobileCRM.Shared.projitems')" />
-    <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-    <ItemGroup>
-        <BundleResource Include="Resources\xamarin-icon-simplified.png" />
-    </ItemGroup>
-    <ItemGroup>
-        <BundleResource Include="Resources\chart.png" />
-    </ItemGroup>
-    <ItemGroup>
-        <BundleResource Include="Resources\filter%402x.png" />
-    </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\MobileCRM.Services\MobileCRM.Services.csproj">
-            <Project>{ABDE5DEF-A5D7-410A-B9BE-FF897688EB8F}</Project>
-            <Name>MobileCRM.Services</Name>
-        </ProjectReference>
-    </ItemGroup>
-    <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-        <PropertyGroup />
-    </Target>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{6A02ABA0-EE87-4C04-A065-BEF98D7F4E53}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MobileCRM.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <NuGetPackageImportStamp>2febcc6b</NuGetPackageImportStamp>
+    <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
+    <AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>True</MtouchDebug>
+    <MtouchI18n />
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchExtraArgs />
+    <MtouchOptimizePNGs>True</MtouchOptimizePNGs>
+    <AssemblyName>MobileCRM</AssemblyName>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <AssemblyName>MobileCRM</AssemblyName>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;__MOBILE__;__IOS__;TRACE;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <IpaPackageName />
+    <MtouchI18n />
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <AssemblyName>MobileCRMiOS</AssemblyName>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <AssemblyName>MobileCRMiOS</AssemblyName>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <BuildIpa>true</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <AssemblyName>MobileCRMiOS</AssemblyName>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <AssemblyName>MobileCRMiOS</AssemblyName>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.4.0" />
+    <PackageReference Include="Microsoft.NETCore.Platforms" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Win32.Primitives" Version="4.3.0" />
+    <PackageReference Include="NETStandard.Library" Version="2.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="System.AppContext" Version="4.3.0" />
+    <PackageReference Include="System.Collections" Version="4.3.0" />
+    <PackageReference Include="System.Collections.Concurrent" Version="4.3.0" />
+    <PackageReference Include="System.ComponentModel.TypeConverter" Version="4.3.0" />
+    <PackageReference Include="System.Console" Version="4.3.0" />
+    <PackageReference Include="System.Diagnostics.Debug" Version="4.3.0" />
+    <PackageReference Include="System.Diagnostics.Tools" Version="4.3.0" />
+    <PackageReference Include="System.Diagnostics.Tracing" Version="4.3.0" />
+    <PackageReference Include="System.Globalization" Version="4.3.0" />
+    <PackageReference Include="System.Globalization.Calendars" Version="4.3.0" />
+    <PackageReference Include="System.IO" Version="4.3.0" />
+    <PackageReference Include="System.IO.Compression" Version="4.3.0" />
+    <PackageReference Include="System.IO.Compression.ZipFile" Version="4.3.0" />
+    <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
+    <PackageReference Include="System.IO.FileSystem.Primitives" Version="4.3.0" />
+    <PackageReference Include="System.Linq" Version="4.3.0" />
+    <PackageReference Include="System.Linq.Expressions" Version="4.3.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.3" />
+    <PackageReference Include="System.Net.Primitives" Version="4.3.0" />
+    <PackageReference Include="System.Net.Sockets" Version="4.3.0" />
+    <PackageReference Include="System.ObjectModel" Version="4.3.0" />
+    <PackageReference Include="System.Reflection" Version="4.3.0" />
+    <PackageReference Include="System.Reflection.Extensions" Version="4.3.0" />
+    <PackageReference Include="System.Reflection.Primitives" Version="4.3.0" />
+    <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
+    <PackageReference Include="System.Runtime" Version="4.3.0" />
+    <PackageReference Include="System.Runtime.Extensions" Version="4.3.0" />
+    <PackageReference Include="System.Runtime.Handles" Version="4.3.0" />
+    <PackageReference Include="System.Runtime.InteropServices" Version="4.3.0" />
+    <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
+    <PackageReference Include="System.Runtime.Numerics" Version="4.3.0" />
+    <PackageReference Include="System.Runtime.Serialization.Formatters" Version="4.3.0" />
+    <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
+    <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.0" />
+    <PackageReference Include="System.Security.Cryptography.Encoding" Version="4.3.0" />
+    <PackageReference Include="System.Security.Cryptography.Primitives" Version="4.3.0" />
+    <PackageReference Include="System.Security.Cryptography.X509Certificates" Version="4.3.1" />
+    <PackageReference Include="System.Text.Encoding" Version="4.3.0" />
+    <PackageReference Include="System.Text.Encoding.Extensions" Version="4.3.0" />
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.0" />
+    <PackageReference Include="System.Threading" Version="4.3.0" />
+    <PackageReference Include="System.Threading.Tasks" Version="4.3.0" />
+    <PackageReference Include="System.Threading.Timer" Version="4.3.0" />
+    <PackageReference Include="System.Xml.ReaderWriter" Version="4.3.0" />
+    <PackageReference Include="System.Xml.XDocument" Version="4.3.0" />
+    <PackageReference Include="System.Xml.XmlDocument" Version="4.3.0" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="2.5.0.280555" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\list.png" />
+    <BundleResource Include="Resources\list%402x.png" />
+    <BundleResource Include="Resources\map.png" />
+    <BundleResource Include="Resources\map%402x.png" />
+    <BundleResource Include="Resources\settings.png" />
+    <BundleResource Include="Resources\settings%402x.png" />
+    <BundleResource Include="Resources\zoom_in.png" />
+    <BundleResource Include="Resources\zoom_out.png" />
+    <BundleResource Include="Resources\filter.png" />
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon-76%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\contact.png" />
+    <BundleResource Include="Resources\lead.png" />
+    <BundleResource Include="Resources\proposal.png" />
+    <BundleResource Include="Resources\opportunity.png" />
+    <BundleResource Include="Resources\account.png" />
+    <BundleResource Include="Resources\item.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\Poi.json" />
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\BlueNavigationRenderer.cs" />
+    <Compile Include="Renderers\DarkTextCellRenderer.cs" />
+    <Compile Include="GeoService.cs" />
+  </ItemGroup>
+  <Import Project="..\MobileCRM.Shared\MobileCRM.Shared.projitems" Label="Shared" Condition="Exists('..\MobileCRM.Shared\MobileCRM.Shared.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\xamarin-icon-simplified.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\filter%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MobileCRM.Services\MobileCRM.Services.csproj">
+      <Project>{ABDE5DEF-A5D7-410A-B9BE-FF897688EB8F}</Project>
+      <Name>MobileCRM.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup />
+  </Target>
 </Project>

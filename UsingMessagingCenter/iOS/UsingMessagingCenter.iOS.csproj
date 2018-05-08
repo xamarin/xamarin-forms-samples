@@ -1,128 +1,134 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <PropertyGroup>
-        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-        <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-        <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-        <ProjectGuid>{BF423211-6E75-4059-B306-A518D9B34BE0}</ProjectGuid>
-        <OutputType>Exe</OutputType>
-        <RootNamespace>UsingMessagingCenter.iOS</RootNamespace>
-        <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-        <AssemblyName>UsingMessagingCenteriOS</AssemblyName>
-        <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>full</DebugType>
-        <Optimize>false</Optimize>
-        <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
-        <DefineConstants>DEBUG;</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <ConsolePause>false</ConsolePause>
-        <MtouchLink>None</MtouchLink>
-        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-        <MtouchDebug>true</MtouchDebug>
-        <MtouchArch>i386, x86_64</MtouchArch>
-        <CodesignKey>iPhone Developer</CodesignKey>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
-        <DebugType>full</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <MtouchLink>None</MtouchLink>
-        <ConsolePause>false</ConsolePause>
-        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-        <MtouchArch>i386, x86_64</MtouchArch>
-        <CodesignKey>iPhone Developer</CodesignKey>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>full</DebugType>
-        <Optimize>false</Optimize>
-        <OutputPath>bin\iPhone\Debug</OutputPath>
-        <DefineConstants>DEBUG;</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <ConsolePause>false</ConsolePause>
-        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-        <MtouchDebug>true</MtouchDebug>
-        <CodesignKey>iPhone Developer</CodesignKey>
-        <MtouchArch>ARMv7, ARM64</MtouchArch>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
-        <DebugType>full</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\iPhone\Release</OutputPath>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-        <ConsolePause>false</ConsolePause>
-        <CodesignKey>iPhone Developer</CodesignKey>
-        <MtouchArch>ARMv7, ARM64</MtouchArch>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
-        <DebugType>full</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <ConsolePause>false</ConsolePause>
-        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-        <BuildIpa>true</BuildIpa>
-        <CodesignKey>iPhone Developer</CodesignKey>
-        <MtouchArch>ARMv7, ARM64</MtouchArch>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
-        <DebugType>full</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\iPhone\AppStore</OutputPath>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <CodesignKey>iPhone Developer</CodesignKey>
-        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-        <ConsolePause>false</ConsolePause>
-        <MtouchArch>ARMv7, ARM64</MtouchArch>
-    </PropertyGroup>
-    <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
-    </ItemGroup>
-    <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Xml" />
-        <Reference Include="System.Core" />
-        <Reference Include="Xamarin.iOS" />
-    </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\UsingMessagingCenter\UsingMessagingCenter.csproj">
-            <Project>{02BB66DB-EF7F-4C3F-9892-49ECA64DF155}</Project>
-            <Name>UsingMessagingCenter</Name>
-        </ProjectReference>
-    </ItemGroup>
-    <ItemGroup>
-        <BundleResource Include="Resources\Default-568h%402x.png" />
-        <BundleResource Include="Resources\Default.png" />
-        <BundleResource Include="Resources\Default%402x.png" />
-        <BundleResource Include="Resources\Icon-60%402x.png" />
-        <BundleResource Include="Resources\Icon-76.png" />
-        <BundleResource Include="Resources\Icon-76%402x.png" />
-        <BundleResource Include="Resources\Icon-Small-40.png" />
-        <BundleResource Include="Resources\Icon-Small-40%402x.png" />
-        <BundleResource Include="Resources\Icon-Small.png" />
-        <BundleResource Include="Resources\Icon-Small%402x.png" />
-    </ItemGroup>
-    <ItemGroup>
-        <None Include="Info.plist" />
-        <None Include="Entitlements.plist" />
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="Main.cs" />
-        <Compile Include="AppDelegate.cs" />
-    </ItemGroup>
-    <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-    <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-        <PropertyGroup />
-    </Target>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{BF423211-6E75-4059-B306-A518D9B34BE0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>UsingMessagingCenter.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>UsingMessagingCenteriOS</AssemblyName>
+    <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <BuildIpa>true</BuildIpa>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UsingMessagingCenter\UsingMessagingCenter.csproj">
+      <Project>{02BB66DB-EF7F-4C3F-9892-49ECA64DF155}</Project>
+      <Name>UsingMessagingCenter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon-76.png" />
+    <BundleResource Include="Resources\Icon-76%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40.png" />
+    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup />
+  </Target>
 </Project>
