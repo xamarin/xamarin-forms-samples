@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MonkeyApp.Views.MonkeyDetailPage"
+             Title="Monkey Details">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Assets/styles.css" />
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout>
+            <Label Text="{Binding Name}" StyleClass="detailPageTitle" />
+            <Label Text="{Binding Location}" StyleClass="detailPageSubtitle"/>
+            <Image Source="{Binding ImageUrl}" />
+            <Label Text="{Binding Details}" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

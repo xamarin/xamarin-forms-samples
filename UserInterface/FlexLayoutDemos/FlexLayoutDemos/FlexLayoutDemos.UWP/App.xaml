@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="FlexLayoutDemos.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlexLayoutDemos.UWP"
+    RequestedTheme="Light">
+
+</Application>

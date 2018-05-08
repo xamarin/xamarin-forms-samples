@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>TodoLocalized</AssemblyName>
+    <RootNamespace>TodoLocalized</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewsXaml\TodoItemXaml.xaml.cs" />
+    <Compile Remove="Views\TodoItemPage_bad.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="ViewsXaml\TodoItemXaml.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl" Version="1.2.1" />
+    <PackageReference Include="SQLitePCL.bundle_green" Version="0.9.3" />
+    <PackageReference Include="SQLitePCL.raw" Version="0.9.3" />
+    <PackageReference Include="SQLitePCLRaw.bundle_green" Version="1.1.0" />
+    <PackageReference Include="SQLitePCLRaw.core" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resx\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="ViewsXaml\TodoItemPageXaml.xaml.cs">
+      <DependentUpon>TodoItemPageXaml.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resx\AppResources.resx">
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

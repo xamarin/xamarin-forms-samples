@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:VsmDemos"
+             x:Class="VsmDemos.HomePage"
+             Title="VSM Demos">
+
+
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout>
+            <Button Text="VSM on View"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:VsmOnViewPage}" />
+
+            <Button Text="VSM in Style"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:VsmInStylePage}" />
+
+            <Button Text="VSM Validation"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:VsmValidationPage}" />
+
+            <Button Text="VSM Adaptive Layout"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:VsmAdaptiveLayoutPage}" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -82,6 +82,15 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="PCLStorage" Version="1.0.2" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.2.1" />
+    <PackageReference Include="SQLitePCLRaw.bundle_green" Version="1.1.0" />
+    <PackageReference Include="SQLitePCLRaw.core" Version="1.1.0" />
+    <PackageReference Include="SQLitePCLRaw.provider.sqlite3.ios_unified" Version="1.1.0" />
+    <PackageReference Include="Xam.Plugin.Media" Version="2.6.1" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Net.Http" />
@@ -149,7 +158,6 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -168,5 +176,4 @@
     <BundleResource Include="Resources\rating.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <Import Project="..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.targets')" />
 </Project>

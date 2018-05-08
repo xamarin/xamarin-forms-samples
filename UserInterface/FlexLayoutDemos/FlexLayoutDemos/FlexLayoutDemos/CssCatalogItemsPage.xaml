@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FlexLayoutDemos"
+             x:Class="FlexLayoutDemos.CssCatalogItemsPage"
+             Title="CSS Catalog Items">
+    <ContentPage.Resources>
+        <StyleSheet Source="CatalogItemsStyles.css" />
+
+        <Style TargetType="Frame">
+            <Setter Property="BorderColor" Value="Blue" />
+            <Setter Property="CornerRadius" Value="15" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Text" Value="LEARN MORE" />
+            <Setter Property="BorderRadius" Value="20" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView Orientation="Both">
+        <FlexLayout>
+            <Frame>
+                <FlexLayout Direction="Column">
+                    <Label Text="Seated Monkey" StyleClass="header" />
+                    <Label Text="This monkey is laid back and relaxed, and likes to watch the world go by." />
+                    <Label Text="  &#x2022; Doesn't make a lot of noise" />
+                    <Label Text="  &#x2022; Often smiles mysteriously" />
+                    <Label Text="  &#x2022; Sleeps sitting up" />
+                    <Image Source="{local:ImageResource FlexLayoutDemos.Images.SeatedMonkey.jpg}" />
+                    <Label StyleClass="empty" />
+                    <Button />
+                </FlexLayout>
+            </Frame>
+
+            <Frame>
+                <FlexLayout Direction="Column">
+                    <Label Text="Banana Monkey" StyleClass="header" />
+                    <Label Text="Watch this monkey eat a giant banana." />
+                    <Label Text="  &#x2022; More fun than a barrel of monkeys" />
+                    <Label Text="  &#x2022; Banana not included" />
+                    <Image Source="{local:ImageResource FlexLayoutDemos.Images.Banana.jpg}" />
+                    <Label StyleClass="empty" />
+                    <Button />
+                </FlexLayout>
+            </Frame>
+
+            <Frame>
+                <FlexLayout Direction="Column">
+                    <Label Text="Face-Palm Monkey" StyleClass="header" />
+                    <Label Text="This monkey reacts appropriately to ridiculous assertions and actions." />
+                    <Label Text="  &#x2022; Cynical but not unfriendly" />
+                    <Label Text="  &#x2022; Seven varieties of grimaces" />
+                    <Label Text="  &#x2022; Doesn't laugh at your jokes" />
+                    <Image Source="{local:ImageResource FlexLayoutDemos.Images.FacePalm.jpg}" />
+                    <Label StyleClass="empty" />
+                    <Button />
+                </FlexLayout>
+            </Frame>
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>

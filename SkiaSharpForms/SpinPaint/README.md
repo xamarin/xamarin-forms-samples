@@ -9,7 +9,7 @@ The current color of the line is indicated by the color of the title of the prog
 
 SpinPaint demonstrates the use of SkiaSharp in a Xamarin.Forms application. For more information about SkiaSharp see [Using SkiaSharp in Xamarin.Forms](/guides/xamarin-forms/advanced/skiasharp/). The program also uses a touch-tracking effect discussed in the article [Invoking Events from Effects](/guides/xamarin-forms/application-fundamentals/effects/touch-tracking/).
 
-SpinPaint uses a Portable Class Library (PCL) for the shared code. For a version that uses a Shared Project, see [SpinPaintShared](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaintShared/).
+SpinPaint uses a .NET Standard Library for the shared code. For a version that uses a Shared Project, see [SpinPaintShared](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaintShared/).
 
 Author
 ------

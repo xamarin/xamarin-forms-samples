@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>F415093F-16FC-4D2A-89C1-BB0712DD26F4</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Intermediate</Level>
+	<Tags>Xamarin.Forms, User Interface</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>Demonstrates some common usages of the Visual State Manager (VSM).</Brief>
+</SampleMetadata>

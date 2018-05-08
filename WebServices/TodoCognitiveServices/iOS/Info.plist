@@ -44,7 +44,7 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This application needs access to the photo library.</string>
-  <key>NSMicrophoneUsageDescription</key>
-	<string>This app needs access to the mic to rec sounds.</string> 
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app needs access to the mic to rec sounds.</string>
 </dict>
 </plist>

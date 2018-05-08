@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:TodoLocalized" x:Class="TodoLocalized.TodoListPageXaml" Title="{local:Translate ApplicationTitle}" FlowDirection="{x:Static Device.FlowDirection}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Icon="plus.png" Clicked="OnItemAdded" />
+        <ToolbarItem Text="Speak" Icon="chat.png" Clicked="OnSpeakClicked" />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="listView" Margin="20" ItemSelected="OnListItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                        <Image Source="check.png" IsVisible="{Binding Done}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
