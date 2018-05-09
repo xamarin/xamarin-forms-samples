@@ -320,7 +320,7 @@ namespace CustomRenderer.UWP
             DisplayInformation.AutoRotationPreferences = DisplayOrientations.None;
         }
 
-        static async Task<DeviceInformation> FindCameraDeviceByPanelAsync(Windows.Devices.Enumeration.Panel desiredPanel)
+        async Task<DeviceInformation> FindCameraDeviceByPanelAsync(Windows.Devices.Enumeration.Panel desiredPanel)
         {
             var allVideoDevices = await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture);
             var desiredDevice = allVideoDevices.FirstOrDefault(d => d.EnclosureLocation != null && d.EnclosureLocation.Panel == desiredPanel);
@@ -348,7 +348,7 @@ namespace CustomRenderer.UWP
 
         async void OnAppSuspending(object sender, SuspendingEventArgs e)
         {
-            _isSuspending = false;
+            _isSuspending = true;
             var deferral = e.SuspendingOperation.GetDeferral();
             await Dispatcher.RunAsync(CoreDispatcherPriority.High, async () =>
             {

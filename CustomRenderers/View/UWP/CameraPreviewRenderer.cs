@@ -3,11 +3,10 @@ using CustomRenderer.UWP;
 using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.Devices.Enumeration;
-using Windows.Devices.Sensors;
-using Windows.Foundation.Metadata;
 using Windows.Graphics.Display;
 using Windows.Media.Capture;
 using Windows.System.Display;
@@ -23,24 +22,23 @@ namespace CustomRenderer.UWP
 {
     public class CameraPreviewRenderer : ViewRenderer<CameraPreview, Windows.UI.Xaml.Controls.CaptureElement>
     {
-        readonly DisplayInformation displayInformation = DisplayInformation.GetForCurrentView();
-        readonly SimpleOrientationSensor orientationSensor = SimpleOrientationSensor.GetDefault();
-        readonly DisplayRequest displayRequest = new DisplayRequest();
-        SimpleOrientation deviceOrientation = SimpleOrientation.NotRotated;
-        DisplayOrientations displayOrientation = DisplayOrientations.Portrait;
+        readonly DisplayInformation _displayInformation = DisplayInformation.GetForCurrentView();
+        DisplayOrientations _displayOrientation = DisplayOrientations.Portrait;
+        readonly DisplayRequest _displayRequest = new DisplayRequest();
         
         // Rotation metadata to apply to preview stream (https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh868174.aspx)
         static readonly Guid RotationKey = new Guid("C380465D-2271-428C-9B83-ECEA3B4A85C1"); // (MF_MT_VIDEO_ROTATION)
-        
-        MediaCapture mediaCapture;
-        CaptureElement captureElement;
-        bool isInitialized;
-        bool isPreviewing;
-        bool externalCamera;
-        bool mirroringPreview;
 
-        Application app;
-        CameraOptions cameraOptions;
+        static readonly SemaphoreSlim _mediaCaptureLifeLock = new SemaphoreSlim(1);
+
+        MediaCapture _mediaCapture;
+        CaptureElement _captureElement;
+        bool _isInitialized;
+        bool _isPreviewing;
+        bool _externalCamera;
+        bool _mirroringPreview;
+
+        Application _app;
 
         protected override void OnElementChanged(ElementChangedEventArgs<CameraPreview> e)
         {
@@ -48,21 +46,23 @@ namespace CustomRenderer.UWP
 
             if (Control == null)
             {
-                app = Application.Current;
-                app.Suspending += OnAppSuspending;
-                app.Resuming += OnAppResuming;
+                _app = Application.Current;
+                _app.Suspending += OnAppSuspending;
+                _app.Resuming += OnAppResuming;
 
-                cameraOptions = e.NewElement.Camera;
-                captureElement = new CaptureElement();
-                captureElement.Stretch = Stretch.UniformToFill;
+                _captureElement = new CaptureElement();
+                _captureElement.Stretch = Stretch.UniformToFill;
 
                 SetupCamera();
-                SetNativeControl(captureElement);
+                SetNativeControl(_captureElement);
             }
             if (e.OldElement != null)
             {
                 // Unsubscribe
                 Tapped -= OnCameraPreviewTapped;
+                _displayInformation.OrientationChanged -= OnOrientationChanged;
+                _app.Suspending -= OnAppSuspending;
+                _app.Resuming -= OnAppResuming;
             }
             if (e.NewElement != null)
             {
@@ -73,39 +73,31 @@ namespace CustomRenderer.UWP
 
         async void SetupCamera()
         {
-            await SetupUIAsync();
+            _displayOrientation = _displayInformation.CurrentOrientation;
+            _displayInformation.OrientationChanged += OnOrientationChanged;
             await InitializeCameraAsync();
         }
 
         #region Event Handlers
 
+        async void OnOrientationChanged(DisplayInformation sender, object args)
+        {
+            _displayOrientation = sender.CurrentOrientation;
+            if (_isPreviewing)
+            {
+                await SetPreviewRotationAsync();
+            }
+        }
+
         async void OnCameraPreviewTapped(object sender, TappedRoutedEventArgs e)
         {
-            if (isPreviewing)
+            if (_isPreviewing)
             {
                 await StopPreviewAsync();
             }
-            else {
+            else
+            {
                 await StartPreviewAsync();
-            }
-        }
-
-        void OnOrientationSensorOrientationChanged(SimpleOrientationSensor sender, SimpleOrientationSensorOrientationChangedEventArgs args)
-        {
-            // Only update orientation if the device is not parallel to the ground
-            if (args.Orientation != SimpleOrientation.Faceup && args.Orientation != SimpleOrientation.Facedown)
-            {
-                deviceOrientation = args.Orientation;
-            }
-        }
-
-        async void OnDisplayInformationOrientationChanged(DisplayInformation sender, object args)
-        {
-            displayOrientation = sender.CurrentOrientation;
-
-            if (isPreviewing)
-            {
-                await SetPreviewRotationAsync();
             }
         }
 
@@ -115,37 +107,24 @@ namespace CustomRenderer.UWP
 
         async Task InitializeCameraAsync()
         {
-            if (mediaCapture == null)
+            await _mediaCaptureLifeLock.WaitAsync();
+
+            if (_mediaCapture == null)
             {
-                DeviceInformation cameraDevice = null;
-                var devices = await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture);
-                if (cameraOptions == CameraOptions.Rear)
-                {
-                    cameraDevice = devices.FirstOrDefault(c => c.EnclosureLocation != null && c.EnclosureLocation.Panel == Windows.Devices.Enumeration.Panel.Back);
-                }
-                else
-                {
-                    cameraDevice = devices.FirstOrDefault(c => c.EnclosureLocation != null && c.EnclosureLocation.Panel == Windows.Devices.Enumeration.Panel.Front);
-                }
-                
+                // Attempt to get the back camera, but use any camera if not
+                var cameraDevice = await FindCameraDeviceByPanelAsync(Windows.Devices.Enumeration.Panel.Back);
                 if (cameraDevice == null)
                 {
                     Debug.WriteLine("No camera found");
                     return;
                 }
 
-                mediaCapture = new MediaCapture();
-
+                _mediaCapture = new MediaCapture();
+                var settings = new MediaCaptureInitializationSettings { VideoDeviceId = cameraDevice.Id };
                 try
                 {
-                    await mediaCapture.InitializeAsync(new MediaCaptureInitializationSettings
-                    {
-                        VideoDeviceId = cameraDevice.Id,
-                        AudioDeviceId = string.Empty,
-                        StreamingCaptureMode = StreamingCaptureMode.Video,
-                        PhotoCaptureSource = PhotoCaptureSource.Photo
-                    });
-                    isInitialized = true;
+                    await _mediaCapture.InitializeAsync(settings);
+                    _isInitialized = true;
                 }
 
                 catch (UnauthorizedAccessException)
@@ -156,40 +135,48 @@ namespace CustomRenderer.UWP
                 {
                     Debug.WriteLine("Exception initializing MediaCapture - {0}: {1}", cameraDevice.Id, ex.ToString());
                 }
+                finally
+                {
+                    _mediaCaptureLifeLock.Release();
+                }
 
-                if (isInitialized)
+                if (_isInitialized)
                 {
                     if (cameraDevice.EnclosureLocation == null || cameraDevice.EnclosureLocation.Panel == Windows.Devices.Enumeration.Panel.Unknown)
                     {
-                        externalCamera = true;
+                        _externalCamera = true;
                     }
                     else
                     {
                         // Camera is on device
-                        externalCamera = false;
+                        _externalCamera = false;
 
                         // Mirror preview if camera is on front panel
-                        mirroringPreview = (cameraDevice.EnclosureLocation.Panel == Windows.Devices.Enumeration.Panel.Front);
+                        _mirroringPreview = (cameraDevice.EnclosureLocation.Panel == Windows.Devices.Enumeration.Panel.Front);
                     }
                     await StartPreviewAsync();
                 }
+            }
+            else
+            {
+                _mediaCaptureLifeLock.Release();
             }
         }
 
         async Task StartPreviewAsync()
         {
             // Prevent the device from sleeping while the preview is running
-            displayRequest.RequestActive();
+            _displayRequest.RequestActive();
 
             // Setup preview source in UI and mirror if required
-            captureElement.Source = mediaCapture;
-            captureElement.FlowDirection = mirroringPreview ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
+            _captureElement.Source = _mediaCapture;
+            _captureElement.FlowDirection = _mirroringPreview ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
 
             // Start preview
-            await mediaCapture.StartPreviewAsync();
-            isPreviewing = true;
+            await _mediaCapture.StartPreviewAsync();
+            _isPreviewing = true;
 
-            if (isPreviewing)
+            if (_isPreviewing)
             {
                 await SetPreviewRotationAsync();
             }
@@ -197,58 +184,59 @@ namespace CustomRenderer.UWP
 
         async Task StopPreviewAsync()
         {
-            isPreviewing = false;
-            await mediaCapture.StopPreviewAsync();
+            _isPreviewing = false;
+            await _mediaCapture.StopPreviewAsync();
 
-            // Use dispatcher because sometimes this method is called from non-UI threads
             await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
                 // Allow device screen to sleep now preview is stopped
-                displayRequest.RequestRelease();
+                _displayRequest.RequestRelease();
             });
         }
 
         async Task SetPreviewRotationAsync()
         {
             // Only update the orientation if the camera is mounted on the device
-            if (externalCamera)
+            if (_externalCamera)
             {
                 return;
             }
 
             // Derive the preview rotation
-            int rotation = ConvertDisplayOrientationToDegrees(displayOrientation);
+            int rotation = ConvertDisplayOrientationToDegrees(_displayOrientation);
 
             // Invert if mirroring
-            if (mirroringPreview)
+            if (_mirroringPreview)
             {
                 rotation = (360 - rotation) % 360;
             }
 
             // Add rotation metadata to preview stream
-            var props = mediaCapture.VideoDeviceController.GetMediaStreamProperties(MediaStreamType.VideoPreview);
+            var props = _mediaCapture.VideoDeviceController.GetMediaStreamProperties(MediaStreamType.VideoPreview);
             props.Properties.Add(RotationKey, rotation);
-            await mediaCapture.SetEncodingPropertiesAsync(MediaStreamType.VideoPreview, props, null);
+            await _mediaCapture.SetEncodingPropertiesAsync(MediaStreamType.VideoPreview, props, null);
         }
 
         async Task CleanupCameraAsync()
         {
-            if (isInitialized)
+            await _mediaCaptureLifeLock.WaitAsync();
+
+            if (_isInitialized)
             {
-                if (isPreviewing)
+                if (_isPreviewing)
                 {
                     await StopPreviewAsync();
                 }
-                isInitialized = false;
+                _isInitialized = false;
             }
-            if (captureElement != null)
+            if (_captureElement != null)
             {
-                captureElement.Source = null;
+                _captureElement.Source = null;
             }
-            if (mediaCapture != null)
+            if (_mediaCapture != null)
             {
-                mediaCapture.Dispose();
-                mediaCapture = null;
+                _mediaCapture.Dispose();
+                _mediaCapture = null;
             }
         }
 
@@ -256,60 +244,15 @@ namespace CustomRenderer.UWP
 
         #region Helpers
 
-        async Task SetupUIAsync()
+        async Task<DeviceInformation> FindCameraDeviceByPanelAsync(Windows.Devices.Enumeration.Panel desiredPanel)
         {
-            // Lock page to landscape to prevent the capture element from rotating
-            DisplayInformation.AutoRotationPreferences = DisplayOrientations.Landscape;
 
-            // Hide status bar
-            if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
-            {
-                await Windows.UI.ViewManagement.StatusBar.GetForCurrentView().HideAsync();
-            }
-
-            displayOrientation = displayInformation.CurrentOrientation;
-            if (orientationSensor != null)
-            {
-                deviceOrientation = orientationSensor.GetCurrentOrientation();
-            }
-
-            RegisterEventHandlers();
+            var allVideoDevices = await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture);
+            var desiredDevice = allVideoDevices.FirstOrDefault(d => d.EnclosureLocation != null && d.EnclosureLocation.Panel == desiredPanel);
+            return desiredDevice ?? allVideoDevices.FirstOrDefault();
         }
 
-        async Task CleanupUIAsync()
-        {
-            UnregisterEventHandlers();
-
-            if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
-            {
-                await Windows.UI.ViewManagement.StatusBar.GetForCurrentView().ShowAsync();
-            }
-
-            // Revert orientation preferences
-            DisplayInformation.AutoRotationPreferences = DisplayOrientations.None;
-        }
-
-        void RegisterEventHandlers()
-        {
-            if (orientationSensor != null)
-            {
-                orientationSensor.OrientationChanged += OnOrientationSensorOrientationChanged;
-            }
-
-            displayInformation.OrientationChanged += OnDisplayInformationOrientationChanged;
-        }
-
-        void UnregisterEventHandlers()
-        {
-            if (orientationSensor != null)
-            {
-                orientationSensor.OrientationChanged -= OnOrientationSensorOrientationChanged;
-            }
-
-            displayInformation.OrientationChanged -= OnDisplayInformationOrientationChanged;
-        }
-
-        static int ConvertDisplayOrientationToDegrees(DisplayOrientations orientation)
+        int ConvertDisplayOrientationToDegrees(DisplayOrientations orientation)
         {
             switch (orientation)
             {
@@ -333,14 +276,14 @@ namespace CustomRenderer.UWP
         {
             var deferral = e.SuspendingOperation.GetDeferral();
             await CleanupCameraAsync();
-            await CleanupUIAsync();
+            _displayInformation.OrientationChanged -= OnOrientationChanged;
             deferral.Complete();
         }
 
-        async void OnAppResuming(object sender, object o)
+        void OnAppResuming(object sender, object o)
         {
-            await SetupUIAsync();
-            await InitializeCameraAsync();
+            _displayOrientation = _displayInformation.CurrentOrientation;
+            _displayInformation.OrientationChanged += OnOrientationChanged;
         }
 
         #endregion
