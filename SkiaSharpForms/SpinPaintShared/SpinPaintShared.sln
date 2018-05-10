@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SpinPaintShared", "SpinPaintShared\SpinPaintShared\SpinPaintShared.shproj", "{7D3B0F86-C96C-4CC5-9F1A-10DB52C78484}"
 EndProject
@@ -13,6 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpinPaintShared.UWP", "Spin
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SpinPaintShared\SpinPaintShared\SpinPaintShared.projitems*{29624673-d03e-4edf-9174-ddeba6b14aa2}*SharedItemsImports = 4
 		SpinPaintShared\SpinPaintShared\SpinPaintShared.projitems*{4dc2b48d-e3bb-4830-a599-e8e0035a2524}*SharedItemsImports = 4
 		SpinPaintShared\SpinPaintShared\SpinPaintShared.projitems*{7d3b0f86-c96c-4cc5-9f1a-10db52c78484}*SharedItemsImports = 13
 		SpinPaintShared\SpinPaintShared\SpinPaintShared.projitems*{ff63993f-654f-4854-a3e3-1cec9af7c166}*SharedItemsImports = 4
@@ -211,5 +212,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {891A5DA0-6517-4F60-AC84-9654B108D6A1}
 	EndGlobalSection
 EndGlobal
