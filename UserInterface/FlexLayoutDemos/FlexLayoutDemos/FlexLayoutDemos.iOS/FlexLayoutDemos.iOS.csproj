@@ -119,12 +119,12 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\FlexLayoutDemos\FlexLayoutDemos.csproj">
-      <Project>{120C4753-F009-4EE6-B6CB-91AF353221E7}</Project>
+      <Project>{54CED88C-008B-44DC-B19C-B27A453F1E6B}</Project>
       <Name>FlexLayoutDemos</Name>
     </ProjectReference>
   </ItemGroup>
