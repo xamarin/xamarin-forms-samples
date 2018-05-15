@@ -10,7 +10,7 @@ namespace PlatformSpecifics
         public AndroidElevationPageCS()
         {
             var outputLabel = new Label();
-            var aboveButton = new Button { Text = "Button Above BoxView - Click Me" };
+            var aboveButton = new Xamarin.Forms.Button { Text = "Button Above BoxView - Click Me" };
             aboveButton.Clicked += (sender, e) => outputLabel.Text = "The bottom button can receive input, while the top button cannot.";
             aboveButton.On<Android>().SetElevation(10);
 
@@ -22,7 +22,7 @@ namespace PlatformSpecifics
                     new Grid
                     {
                         Children = {
-                            new Button { Text = "Button Beneath BoxView" },
+                            new Xamarin.Forms.Button { Text = "Button Beneath BoxView" },
                             new BoxView { Color = Color.Red, Opacity = 0.2, HeightRequest = 50 }
                         }
                     },

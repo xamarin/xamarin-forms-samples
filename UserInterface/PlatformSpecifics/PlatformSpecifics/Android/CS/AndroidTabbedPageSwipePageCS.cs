@@ -19,7 +19,7 @@ namespace PlatformSpecifics
 
             var firstPage = CreatePage(1);
 
-            var button = new Button
+            var button = new Xamarin.Forms.Button
             {
                 Text = "Toggle Swipe Paging"
             };
@@ -40,7 +40,7 @@ namespace PlatformSpecifics
 
         ContentPage CreatePage(int pageNumber)
         {
-            var returnButton = new Button { Text = "Return to Platform-Specifics List" };
+            var returnButton = new Xamarin.Forms.Button { Text = "Return to Platform-Specifics List" };
             returnButton.Clicked += (sender, e) => _returnToPlatformSpecificsPage.Execute(null);
 
             return new ContentPage

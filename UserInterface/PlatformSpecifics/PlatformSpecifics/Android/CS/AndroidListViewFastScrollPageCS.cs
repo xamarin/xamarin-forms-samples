@@ -31,7 +31,7 @@ namespace PlatformSpecifics
             listView.GroupDisplayBinding = new Binding("Key");
             listView.On<Android>().SetIsFastScrollEnabled(true);
 
-            var button = new Button { Text = "Toggle FastScroll" };
+            var button = new Xamarin.Forms.Button { Text = "Toggle FastScroll" };
             button.Clicked += (sender, e) => { listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScrollEnabled()); };
 
             Title = "ListView FastScroll";

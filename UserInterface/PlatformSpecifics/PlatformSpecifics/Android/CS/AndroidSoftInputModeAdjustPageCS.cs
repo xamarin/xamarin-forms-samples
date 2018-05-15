@@ -11,9 +11,9 @@ namespace PlatformSpecifics
 		{
 			Title = "Soft Input Mode Adjust";
 
-			var panButton = new Button { Text = "Pan" };
+			var panButton = new Xamarin.Forms.Button { Text = "Pan" };
 			panButton.Clicked += OnPanButtonClicked;
-			var resizeButton = new Button { Text = "Resize " };
+			var resizeButton = new Xamarin.Forms.Button { Text = "Resize " };
 			resizeButton.Clicked += OnResizeButtonClicked;
 
 			Content = new StackLayout
@@ -27,7 +27,7 @@ namespace PlatformSpecifics
 						HorizontalOptions = LayoutOptions.Center,
 						Children = { panButton, resizeButton }
 					},
-					new Entry { Placeholder = "Enter text here", VerticalOptions = LayoutOptions.EndAndExpand }
+					new Xamarin.Forms.Entry { Placeholder = "Enter text here", VerticalOptions = LayoutOptions.EndAndExpand }
 				}
 			};
 		}

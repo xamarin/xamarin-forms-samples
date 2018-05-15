@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -11,8 +11,8 @@
     <PackageReference Include="Microsoft.Identity.Client" Version="1.1.2-preview0008" />
     <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
     <PackageReference Include="Microsoft.NETCore.Platforms" Version="1.1.0" />
-    <PackageReference Include="Microsoft.NETCore.Targets" Version="1.1.0" />
-    <PackageReference Include="NETStandard.Library" Version="1.6.1" />
+    <PackageReference Include="Microsoft.NETCore.Targets" Version="2.0.0" />
+    <PackageReference Include="NETStandard.Library" Version="2.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
     <PackageReference Include="PCLCrypto" Version="2.0.147" />
     <PackageReference Include="PInvoke.BCrypt" Version="0.3.2" />

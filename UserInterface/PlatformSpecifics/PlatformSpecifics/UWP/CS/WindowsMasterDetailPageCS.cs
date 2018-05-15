@@ -44,16 +44,16 @@ namespace PlatformSpecifics
                     grid.ColumnDefinitions.Add(new ColumnDefinition { Width = 48 });
                     grid.ColumnDefinitions.Add(new ColumnDefinition { Width = 200 });
 
-                    var iconLabel = new Label
+                    var iconLabel = new Xamarin.Forms.Label
                     {
                         FontFamily = "Segoe MDL2 Assets",
                         FontSize = 24,
                         HorizontalTextAlignment = TextAlignment.Center
                     };
-                    iconLabel.SetBinding(Label.TextProperty, "Icon");
+                    iconLabel.SetBinding(Xamarin.Forms.Label.TextProperty, "Icon");
 
-                    var textLabel = new Label();
-                    textLabel.SetBinding(Label.TextProperty, "Text");
+                    var textLabel = new Xamarin.Forms.Label();
+                    textLabel.SetBinding(Xamarin.Forms.Label.TextProperty, "Text");
 
                     grid.Children.Add(iconLabel);
                     grid.Children.Add(textLabel);
@@ -91,7 +91,7 @@ namespace PlatformSpecifics
                     Margin = new Thickness(20),
                     Children =
                     {
-                        new Label { Text = "Toolbar Items", FontAttributes = FontAttributes.Bold, HorizontalOptions = LayoutOptions.Center },
+                        new Xamarin.Forms.Label { Text = "Toolbar Items", FontAttributes = FontAttributes.Bold, HorizontalOptions = LayoutOptions.Center },
                         WindowsPlatformSpecificsHelpers.CreateAddRemoveToolbarItemButtons(this),
                         WindowsPlatformSpecificsHelpers.CreateToolbarPlacementChanger(this),
                         CreateCollapseWidthAdjuster(this),
@@ -115,7 +115,7 @@ namespace PlatformSpecifics
                     Margin = new Thickness(20),
                     Children =
                     {
-                        new Label { Text = "Toolbar placement and number of items doesn't change", HorizontalOptions = LayoutOptions.Center },
+                        new Xamarin.Forms.Label { Text = "Toolbar placement and number of items doesn't change", HorizontalOptions = LayoutOptions.Center },
                         returnButton
                     }
                 }
@@ -134,7 +134,7 @@ namespace PlatformSpecifics
 
         static Layout CreateCollapseWidthAdjuster(Xamarin.Forms.MasterDetailPage page)
         {
-            var label = new Label
+            var label = new Xamarin.Forms.Label
             {
                 Text = "Adjust Collapsed Width",
                 VerticalTextAlignment = TextAlignment.Center,
