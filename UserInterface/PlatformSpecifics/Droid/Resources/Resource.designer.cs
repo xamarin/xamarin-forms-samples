@@ -2192,8 +2192,26 @@ namespace PlatformSpecifics.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
+			// aapt resource value: 0x7f020110
+			public const int avd_hide_password_1 = 2130837776;
+			
+			// aapt resource value: 0x7f020111
+			public const int avd_hide_password_2 = 2130837777;
+			
+			// aapt resource value: 0x7f020112
+			public const int avd_hide_password_3 = 2130837778;
+			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
+			
+			// aapt resource value: 0x7f020113
+			public const int avd_show_password_1 = 2130837779;
+			
+			// aapt resource value: 0x7f020114
+			public const int avd_show_password_2 = 2130837780;
+			
+			// aapt resource value: 0x7f020115
+			public const int avd_show_password_3 = 2130837781;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
