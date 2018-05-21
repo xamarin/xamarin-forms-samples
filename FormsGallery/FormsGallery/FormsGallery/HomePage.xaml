@@ -208,6 +208,11 @@
                               Detail="Arrange children relative to each other"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.RelativeLayoutDemoPage}" />
+
+                    <TextCell Text="FlexLayout"
+                              Detail="Arrange children in a stack or a wrapped stack"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.FlexLayoutDemoPage}" />
                 </TableSection>
 
                 <TableSection Title="Pages">

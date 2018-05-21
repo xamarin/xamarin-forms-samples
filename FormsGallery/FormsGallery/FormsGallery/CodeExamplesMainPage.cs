@@ -295,6 +295,13 @@ namespace FormsGallery
                             Detail = "Arrange children relative to each other",
                             Command = navigateCommand,
                             CommandParameter = typeof(CodeExamples.RelativeLayoutDemoPage)
+                        },
+                        new TextCell
+                        {
+                            Text = "FlexLayout",
+                            Detail = "Arrange children in a stack or a wrapped stack",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.FlexLayoutDemoPage)
                         }
                     },
 

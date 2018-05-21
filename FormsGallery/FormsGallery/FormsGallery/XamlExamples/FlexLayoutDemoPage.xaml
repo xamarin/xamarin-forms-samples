@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FormsGallery"
+             x:Class="FormsGallery.XamlExamples.FlexLayoutDemoPage"
+             Title="FlexLayout Demo">
+    <ContentPage.Resources>
+        <Style TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="LightYellow" />
+            <Setter Property="BorderColor" Value="Blue" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="CornerRadius" Value="15" />
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="0, 4" />
+        </Style>
+
+        <Style x:Key="headerLabel" TargetType="Label">
+            <Setter Property="Margin" Value="0, 8" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="Blue" />
+        </Style>
+
+        <Style TargetType="Image">
+            <Setter Property="FlexLayout.Order" Value="-1" />
+            <Setter Property="FlexLayout.AlignSelf" Value="Center" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Text" Value="LEARN MORE" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="Green" />
+            <Setter Property="BorderRadius" Value="20" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView Orientation="Both">
+        <FlexLayout>
+            <Frame WidthRequest="300"
+                   HeightRequest="480">
+
+                <FlexLayout Direction="Column">
+                    <Label Text="Seated Monkey"
+                           Style="{StaticResource headerLabel}" />
+                    <Label Text="This monkey is laid back and relaxed, and likes to watch the world go by." />
+                    <Label Text="  &#x2022; Doesn't make a lot of noise" />
+                    <Label Text="  &#x2022; Often smiles mysteriously" />
+                    <Label Text="  &#x2022; Sleeps sitting up" />
+                    <Image Source="{local:ImageResource FormsGallery.Images.SeatedMonkey.jpg}"
+                           WidthRequest="180"
+                           HeightRequest="180" />
+                    <Label FlexLayout.Grow="1" />
+                    <Button />
+                </FlexLayout>
+            </Frame>
+
+            <Frame WidthRequest="300"
+                   HeightRequest="480">
+
+                <FlexLayout Direction="Column">
+                    <Label Text="Banana Monkey"
+                           Style="{StaticResource headerLabel}" />
+                    <Label Text="Watch this monkey eat a giant banana." />
+                    <Label Text="  &#x2022; More fun than a barrel of monkeys" />
+                    <Label Text="  &#x2022; Banana not included" />
+                    <Image Source="{local:ImageResource FormsGallery.Images.Banana.jpg}"
+                           WidthRequest="240"
+                           HeightRequest="180" />
+                    <Label FlexLayout.Grow="1" />
+                    <Button />
+                </FlexLayout>
+            </Frame>
+
+            <Frame WidthRequest="300"
+                   HeightRequest="480">
+
+                <FlexLayout Direction="Column">
+                    <Label Text="Face-Palm Monkey"
+                           Style="{StaticResource headerLabel}" />
+                    <Label Text="This monkey reacts appropriately to ridiculous assertions and actions." />
+                    <Label Text="  &#x2022; Cynical but not unfriendly" />
+                    <Label Text="  &#x2022; Seven varieties of grimaces" />
+                    <Label Text="  &#x2022; Doesn't laugh at your jokes" />
+                    <Image Source="{local:ImageResource FormsGallery.Images.FacePalm.jpg}"
+                           WidthRequest="180"
+                           HeightRequest="180" />
+                    <Label FlexLayout.Grow="1" />
+                    <Button />
+                </FlexLayout>
+            </Frame>
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>
