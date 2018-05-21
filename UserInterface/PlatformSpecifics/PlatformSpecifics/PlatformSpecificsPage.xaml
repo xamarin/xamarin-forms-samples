@@ -1,24 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PlatformSpecifics.PlatformSpecificsPage" Title="Platform Specifics Demo">
-    <ScrollView>
-        <StackLayout Margin="20">
-            <Button Text="Blur Effect (iOS only)" Clicked="OnBlurEffectButtonClicked" />
-            <Button Text="Large Title Display (iOS only)" Clicked="OnLargeTitleDisplayButtonClicked" />
-            <Button Text="Safe Area Layout Guide (iOS only)" Clicked="OnSafeAreaButtonClicked" />
-            <Button Text="Translucent Navigation Bar (iOS only)" Clicked="OnTranslucentNavigationBarButtonClicked" />
-            <Button Text="Entry Font Size Adjusts to Text Width (iOS only)" Clicked="OnEntryFontSizeChangesButtonClicked" />
-            <Button Text="Hide Status Bar (iOS only)" Clicked="OnHideStatusBarButtonClicked" />
-            <Button Text="Picker UpdateMode (iOS only)" Clicked="OnPickerUpdateModeButtonClicked" />
-            <Button Text="ScrollView DelayContentTouches (iOS only)" Clicked="OnScrollViewButtonClicked" />
-            <Button Text="Navigation Page Status Bar Text Color Mode (iOS only)" Clicked="OnStatusBarTextColorModeClicked" />
-            <Button Text="Soft Input Mode Adjust (Android only)" Clicked="OnSoftInputModeAdjustButtonClicked" />
-            <Button Text="Pause and Resume Lifecycle Events (Android only)" Clicked="OnPageLifecycleEventsButtonClicked" />
-            <Button Text="Tabbed Page Swipe (Android only)" Clicked="OnTabbedPageSwipeButtonClicked" />
-            <Button Text="ListView FastScroll (Android only)" Clicked="OnListViewFastScrollButtonClicked" />
-            <Button Text="Elevation (Android only)" Clicked="OnElevationButtonClicked" />
-            <Button Text="Tabbed Page Toolbar Location Adjust (Windows only)" Clicked="OnTabbedPageButtonClicked" />
-            <Button Text="Navigation Page Toolbar Location Adjust (Windows only)" Clicked="OnNavigationPageButtonClicked" />
-            <Button Text="Master Detail Page Toolbar Location Adjust (Windows only)" Clicked="OnMasterDetailPageButtonClicked" />
-        </StackLayout>
-    </ScrollView>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:PlatformSpecifics" x:Class="PlatformSpecifics.PlatformSpecificsPage" Title="Platform Specifics Demo">
+    <TableView Intent="Menu">
+        <TableSection Title="iOS">
+            <TextCell Text="Blur Effect"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSBlurEffectPage}" />
+            <TextCell Text="Large Title Display"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSLargeTitlePage}" />
+            <TextCell Text="Safe Area Layout Guide"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSSafeAreaPage}" />
+            <TextCell Text="Translucent Navigation Bar"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSTranslucentNavigationBarPage}" />
+            <TextCell Text="Entry Font Size Adjusts to Text Width"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSEntryPage}" />
+            <TextCell Text="Hide Status Bar"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSStatusBarPage}" />
+            <TextCell Text="Picker UpdateMode"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSPickerPage}" />       
+            <TextCell Text="ScrollView DelayContentTouches"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSScrollViewPage}" /> 
+            <TextCell Text="NavigationPage Status Bar Text Color Mode"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSStatusBarTextColorModePage}" />            
+        </TableSection>
+        <TableSection Title="Android">
+            <TextCell Text="Soft Input Mode Adjust"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:AndroidSoftInputModeAdjustPage}" />
+            <TextCell Text="Pause and Resume Lifecycle Events"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:AndroidLifecycleEventsPage}" />
+            <TextCell Text="TabbedPage Swipe"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:AndroidTabbedPageSwipePage}" />
+            <TextCell Text="ListView FastScroll"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:AndroidListViewFastScrollPage}" />
+            <TextCell Text="Elevation"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:AndroidElevationPage}" />            
+        </TableSection>
+        <TableSection Title="UWP">
+            <TextCell Text="TabbedPage Toolbar Location Adjust"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:WindowsTabbedPage}" />
+            <TextCell Text="NavigationPage Toolbar Location Adjust"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:WindowsNavigationPage}" />            
+            <TextCell Text="MasterDetailPage Toolbar Location Adjust"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:WindowsMasterDetailPage}" />            
+        </TableSection>
+    </TableView>
 </ContentPage>

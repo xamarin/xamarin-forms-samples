@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Reflection;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace PlatformSpecifics
@@ -7,95 +10,35 @@ namespace PlatformSpecifics
     {
         Page _originalRoot;
 
+		public ICommand NavigateCommand { get; private set; }
+
         public PlatformSpecificsPage()
         {
             InitializeComponent();
+
+			NavigateCommand = new Command<Type>(async (pageType) => await NavigateToPage(pageType));
+			BindingContext = this;
         }
 
-        async void OnBlurEffectButtonClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new iOSBlurEffectPage());
-        }
-
-        void OnLargeTitleDisplayButtonClicked(object sender, EventArgs e)
-        {
-            SetRoot(new iOSNavigationPage(new iOSLargeTitlePage(new Command(RestoreOriginal))));
-        }
-
-        async void OnSafeAreaButtonClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new iOSSafeAreaPage());
-        }
-
-        void OnTranslucentNavigationBarButtonClicked(object sender, EventArgs e)
-        {
-            SetRoot(new iOSNavigationPage(new iOSTranslucentNavigationBarPage(new Command(RestoreOriginal))));
-        }
-
-        async void OnEntryFontSizeChangesButtonClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new iOSEntryPage());
-        }
-
-        async void OnHideStatusBarButtonClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new iOSStatusBarPage());
-        }
-
-        async void OnPickerUpdateModeButtonClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new iOSPickerPage());
-        }
-
-        void OnScrollViewButtonClicked(object sender, EventArgs e)
-        {
-            SetRoot(new iOSScrollViewPage(new Command(RestoreOriginal)));
-        }
-
-        void OnStatusBarTextColorModeClicked(object sender, EventArgs e)
-        {
-            SetRoot(new iOSStatusBarTextColorModePage(new Command(RestoreOriginal)));
-        }
-
-        async void OnSoftInputModeAdjustButtonClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new AndroidSoftInputModeAdjustPage());
-        }
-
-        async void OnPageLifecycleEventsButtonClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new AndroidLifecycleEventsPage());
-        }
-
-        void OnTabbedPageSwipeButtonClicked(object sender, EventArgs e)
-        {
-            SetRoot(new AndroidTabbedPageSwipePage(new Command(RestoreOriginal)));
-        }
-
-        async void OnListViewFastScrollButtonClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new AndroidListViewFastScrollPage());
-        }
-
-        async void OnElevationButtonClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new AndroidElevationPage());
-        }
-
-        void OnTabbedPageButtonClicked(object sender, EventArgs e)
-        {
-            SetRoot(new WindowsTabbedPage(new Command(RestoreOriginal)));
-        }
-
-        void OnNavigationPageButtonClicked(object sender, EventArgs e)
-        {
-            SetRoot(new WindowsNavigationPage(new Command(RestoreOriginal)));
-        }
-
-        void OnMasterDetailPageButtonClicked(object sender, EventArgs e)
-        {
-            SetRoot(new WindowsMasterDetailPage(new Command(RestoreOriginal)));
-        }
+		async Task NavigateToPage(Type pageType)
+		{
+			Type[] types = new Type[] { typeof(Command) };
+			ConstructorInfo info = pageType.GetConstructor(types);
+			if (info != null)
+			{
+				Page page = (Page)Activator.CreateInstance(pageType, new Command(RestoreOriginal));
+				if (page is iOSLargeTitlePage || page is iOSTranslucentNavigationBarPage)
+				{
+					page = new iOSNavigationPage(page);
+				}
+				SetRoot(page);
+			}
+			else
+			{
+				Page page = (Page)Activator.CreateInstance(pageType);
+				await Navigation.PushAsync(page);
+			}         
+		}
 
         void SetRoot(Page page)
         {
