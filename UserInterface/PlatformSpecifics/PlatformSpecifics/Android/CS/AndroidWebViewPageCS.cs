@@ -8,7 +8,7 @@ namespace PlatformSpecifics
     {
         public AndroidWebViewPageCS()
         {
-			var webView = new Xamarin.Forms.WebView { Source = "https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/PlatformSpecifics/HTML/mixed_content.html" };
+			var webView = new Xamarin.Forms.WebView { Source = "https://htmlpreview.github.io/?https://github.com/xamarin/xamarin-forms-samples/blob/master/UserInterface/PlatformSpecifics/HTML/mixed_content.html" };
 			webView.On<Android>().SetMixedContentMode(MixedContentHandling.AlwaysAllow);
 			Content = webView;
         }
