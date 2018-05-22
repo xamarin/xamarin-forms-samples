@@ -9,15 +9,24 @@ namespace PlatformSpecifics
 		public WindowsWebViewPageCS()
 		{
 			var webView = new Xamarin.Forms.WebView
-			{
+            {
+                HeightRequest = 50,
 				Source = new HtmlWebViewSource
 				{
-					Html = @"<html><head><link rel=""stylesheet"" href=""default.css""></head><body><button onclick=""window.alert('Hello World');"">Click Me</button></body></html"
+					Html = @"<html><head><link rel=""stylesheet"" href=""default.css""></head><body><button onclick=""window.alert('Hello World from JavaScript');"">Click Me</button></body></html"
 				}
 			};
 			webView.On<Windows>().SetIsJavaScriptAlertEnabled(true);
 
-			Content = webView;
+            var toggleButton = new Button { Text = "Toggle JavaScript alert" };
+            toggleButton.Clicked += (sender, e) => webView.On<Windows>().SetIsJavaScriptAlertEnabled(!webView.On<Windows>().IsJavaScriptAlertEnabled());
+
+            Title = "WebView JavaScript Alert";
+            Content = new StackLayout
+            {
+                Margin = new Thickness(20),
+                Children = { webView, toggleButton }
+            };
 		}
     }
 }
