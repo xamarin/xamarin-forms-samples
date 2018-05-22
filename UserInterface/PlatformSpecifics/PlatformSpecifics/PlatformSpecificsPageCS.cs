@@ -33,7 +33,8 @@ namespace PlatformSpecifics
                         new TextCell { Text="Hide Status Bar", Command = NavigateCommand, CommandParameter = typeof(iOSStatusBarPageCS) },
                         new TextCell { Text="Picker UpdateMode", Command = NavigateCommand, CommandParameter = typeof(iOSPickerPageCS) },
                         new TextCell { Text="ScrollView DelayContentTouches", Command = NavigateCommand, CommandParameter = typeof(iOSScrollViewPageCS) },
-                        new TextCell { Text="NavigationPage Status Bar Text Color Mode", Command = NavigateCommand, CommandParameter = typeof(iOSStatusBarTextColorModePageCS) }
+                        new TextCell { Text="NavigationPage Status Bar Text Color Mode", Command = NavigateCommand, CommandParameter = typeof(iOSStatusBarTextColorModePageCS) },
+						new TextCell { Text = "ListView FullWidth Separators", Command = NavigateCommand, CommandParameter = typeof(iOSListViewPageCS) }
                     },
                     new TableSection("Android")
                     {
@@ -41,18 +42,22 @@ namespace PlatformSpecifics
                         new TextCell { Text = "Pause and Resume Lifecyle Events", Command = NavigateCommand, CommandParameter = typeof(AndroidLifecycleEventsPageCS) },
                         new TextCell { Text = "TabbedPage Swipe", Command = NavigateCommand, CommandParameter = typeof(AndroidTabbedPageSwipePageCS) },
                         new TextCell { Text = "ListView Fast Scroll", Command = NavigateCommand, CommandParameter = typeof(AndroidListViewFastScrollPageCS) },
-                        new TextCell { Text = "Elevation", Command = NavigateCommand, CommandParameter = typeof(AndroidElevationPageCS) }                       
+                        new TextCell { Text = "Elevation", Command = NavigateCommand, CommandParameter = typeof(AndroidElevationPageCS) },
+						new TextCell { Text = "Entry ImeOptions", Command = NavigateCommand, CommandParameter = typeof(AndroidEntryPageCS) },
+						new TextCell { Text = "WebView Mixed Content", Command = NavigateCommand, CommandParameter = typeof(AndroidWebViewPageCS) }
                     },
                     new TableSection("UWP")
                     {
                         new TextCell { Text = "TabbedPage Toolbar Location Adjust", Command = NavigateCommand, CommandParameter = typeof(WindowsTabbedPageCS) },
                         new TextCell { Text = "NavigationPage Toolbar Location Adjust", Command = NavigateCommand, CommandParameter = typeof(WindowsNavigationPageCS) },
-                        new TextCell { Text = "MasterDetailPage Toolbar Location Adjust", Command = NavigateCommand, CommandParameter = typeof(WindowsMasterDetailPageCS) }
+                        new TextCell { Text = "MasterDetailPage Toolbar Location Adjust", Command = NavigateCommand, CommandParameter = typeof(WindowsMasterDetailPageCS) },
+						new TextCell { Text = "WebView JavaScript Alert", Command = NavigateCommand, CommandParameter = typeof(WindowsWebViewPageCS) },
+						new TextCell { Text = "Text Reading Order", Command = NavigateCommand, CommandParameter = typeof(WindowsReadingOrderPageCS) },
+						new TextCell { Text = "SearchBar Spell Check", Command = NavigateCommand, CommandParameter = typeof(WindowsSearchBarPageCS) }
                     }
                 }
-            };           
-
-        }
+            };         
+        }         
 
 		async Task NavigateToPage(Type pageType)
         {

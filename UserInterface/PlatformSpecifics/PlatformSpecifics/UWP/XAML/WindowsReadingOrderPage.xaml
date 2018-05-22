@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core" x:Class="PlatformSpecifics.WindowsReadingOrderPage" Title="Text Reading Order">
+    <ScrollView Margin="20">
+        <StackLayout>
+            <Entry x:Name="_entry1" Text="היסט?שכל !ורי !ה שכל ב" FlowDirection="LeftToRight" windows:InputView.DetectReadingOrderFromContent="true" />
+            <Label x:Name="_label1" />
+            <Entry x:Name="_entry2" Text="Hello Xamarin Forms! Hello World" FlowDirection="RightToLeft" windows:InputView.DetectReadingOrderFromContent="true" />
+            <Label x:Name="_label2" />
+            <Editor x:Name="_editor1" Text=" שכל, ניווט ומהימנה תאולוגיה היא ב, זכר או מדעי תרומה מבוקשים. של ויש טכנולוגיה סוציולוגיה, מה אנא ביולי בקלות למחיקה. על חשמל אקטואליה רבה, שדרות ערכים ננקטת שמו בה. או עוד ציור מיזמים טבלאות, ריקוד קולנוע היסטוריה שכל ב" FlowDirection="LeftToRight" windows:InputView.DetectReadingOrderFromContent="true" />
+            <Label x:Name="_label3" />
+            <Editor x:Name="_editor2" Text="Lorem ipsum dolor sit amet, qui eleifend adversarium ei, pro tamquam pertinax inimicus ut. Quis assentior ius no, ne vel modo tantas omnium, sint labitur id nec. Mel ad cetero repudiare definiebas, eos sint placerat cu" FlowDirection="LeftToRight" windows:InputView.DetectReadingOrderFromContent="true" />
+            <Label x:Name="_label4" />
+            <Label x:Name="_label5" Text="היסט?שכל !ורי !ה שכל ב" FlowDirection="LeftToRight" windows:Label.DetectReadingOrderFromContent="true"/>
+            <Label x:Name="_label6" />
+            <Button Text="Toggle detect from content" Clicked="OnToggleButtonClicked" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+
+  

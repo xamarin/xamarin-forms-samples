@@ -28,7 +28,10 @@
                       CommandParameter="{x:Type local:iOSScrollViewPage}" /> 
             <TextCell Text="NavigationPage Status Bar Text Color Mode"
                       Command="{Binding NavigateCommand}"
-                      CommandParameter="{x:Type local:iOSStatusBarTextColorModePage}" />            
+                      CommandParameter="{x:Type local:iOSStatusBarTextColorModePage}" />
+            <TextCell Text="ListView FullWidth Separators"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSListViewPage}" />
         </TableSection>
         <TableSection Title="Android">
             <TextCell Text="Soft Input Mode Adjust"
@@ -45,7 +48,13 @@
                       CommandParameter="{x:Type local:AndroidListViewFastScrollPage}" />
             <TextCell Text="Elevation"
                       Command="{Binding NavigateCommand}"
-                      CommandParameter="{x:Type local:AndroidElevationPage}" />            
+                      CommandParameter="{x:Type local:AndroidElevationPage}" />
+            <TextCell Text="Entry ImeOptions"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:AndroidEntryPage}" />
+            <TextCell Text="WebView Mixed Content"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:AndroidWebViewPage}" />
         </TableSection>
         <TableSection Title="UWP">
             <TextCell Text="TabbedPage Toolbar Location Adjust"
@@ -56,7 +65,16 @@
                       CommandParameter="{x:Type local:WindowsNavigationPage}" />            
             <TextCell Text="MasterDetailPage Toolbar Location Adjust"
                       Command="{Binding NavigateCommand}"
-                      CommandParameter="{x:Type local:WindowsMasterDetailPage}" />            
+                      CommandParameter="{x:Type local:WindowsMasterDetailPage}" />
+            <TextCell Text="WebView JavaScript Alert"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:WindowsWebViewPage}" />
+            <TextCell Text="Text Reading Order"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:WindowsReadingOrderPage}" />
+            <TextCell Text="SearchBar Spell Check"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:WindowsSearchBarPage}" />
         </TableSection>
     </TableView>
 </ContentPage>
