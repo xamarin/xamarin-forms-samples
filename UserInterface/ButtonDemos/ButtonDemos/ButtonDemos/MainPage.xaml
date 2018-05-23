@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ButtonDemos"
+             x:Class="ButtonDemos.MainPage"
+             Title="Button Demos">
+    <ScrollView>
+        <FlexLayout Direction="Column"
+                    
+                     JustifyContent="SpaceEvenly"
+                    
+                    AlignItems="Center">
+            <!--<FlexLayout.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                    <Setter Property="HorizontalOptions" Value="Center" />
+                </Style>
+            </FlexLayout.Resources>-->
+
+            <Button Text="Basic Button Click"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:BasicButtonClickPage}" />
+
+            <Button Text="Basic Button Command"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:BasicButtonCommandPage}" />
+
+            <Button Text="Press and Release Button"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:PressAndReleaseButtonPage}" />
+
+            <Button Text="Button Appearance"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:ButtonAppearancePage}" />
+
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>
