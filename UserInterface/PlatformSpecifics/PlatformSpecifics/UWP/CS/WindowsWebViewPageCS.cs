@@ -13,8 +13,8 @@ namespace PlatformSpecifics
                 HeightRequest = 50,
 				Source = new HtmlWebViewSource
 				{
-					Html = @"<html><head><link rel=""stylesheet"" href=""default.css""></head><body><button onclick=""window.alert('Hello World from JavaScript');"">Click Me</button></body></html"
-				}
+                    Html = @"<html><body><button onclick=""window.alert('Hello World from JavaScript');"">Click Me</button></body></html>"
+                }
 			};
 			webView.On<Windows>().SetIsJavaScriptAlertEnabled(true);
 
