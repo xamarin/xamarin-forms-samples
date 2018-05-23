@@ -12,7 +12,7 @@ namespace WeatherApp
             string queryString = "http://api.openweathermap.org/data/2.5/weather?zip="
                 + zipCode + ",us&appid=" + key + "&units=imperial";
 
-            dynamic results = await DataService.getDataFromService(queryString).ConfigureAwait(false);
+            dynamic results = await DataService.GetDataFromService(queryString).ConfigureAwait(false);
 
             if (results["weather"] != null)
             {
