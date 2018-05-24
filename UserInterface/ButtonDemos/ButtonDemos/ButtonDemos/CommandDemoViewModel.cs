@@ -13,15 +13,9 @@ namespace ButtonDemos
 
         public CommandDemoViewModel()
         {
-            MultiplyBy2Command = new Command(() =>
-            {
-                Number *= 2;
-            });
+            MultiplyBy2Command = new Command(() => Number *= 2);
 
-            DivideBy2Command = new Command(() =>
-            {
-                Number /= 2;
-            });
+            DivideBy2Command = new Command(() => Number /= 2);
         }
 
         public double Number

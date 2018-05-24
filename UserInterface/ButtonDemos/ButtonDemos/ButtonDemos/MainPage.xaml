@@ -33,6 +33,10 @@
                     Command="{Binding NavigateCommand}"
                     CommandParameter="{x:Type local:ButtonAppearancePage}" />
 
+            <Button Text="Toggle Button Demo"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:ToggleButtonDemoPage}" />
+
         </FlexLayout>
     </ScrollView>
 </ContentPage>
