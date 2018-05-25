@@ -156,4 +156,13 @@
       <Name>ButtonDemos</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MonkeyFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MonkeyFace%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MonkeyFace%403x.png" />
+  </ItemGroup>
 </Project>
