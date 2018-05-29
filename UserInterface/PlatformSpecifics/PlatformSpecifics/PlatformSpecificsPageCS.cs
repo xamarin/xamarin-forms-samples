@@ -34,7 +34,8 @@ namespace PlatformSpecifics
                         new TextCell { Text="Picker UpdateMode", Command = NavigateCommand, CommandParameter = typeof(iOSPickerPageCS) },
                         new TextCell { Text="ScrollView DelayContentTouches", Command = NavigateCommand, CommandParameter = typeof(iOSScrollViewPageCS) },
                         new TextCell { Text="NavigationPage Status Bar Text Color Mode", Command = NavigateCommand, CommandParameter = typeof(iOSStatusBarTextColorModePageCS) },
-						new TextCell { Text = "ListView FullWidth Separators", Command = NavigateCommand, CommandParameter = typeof(iOSListViewPageCS) }
+						new TextCell { Text = "ListView FullWidth Separators", Command = NavigateCommand, CommandParameter = typeof(iOSListViewPageCS) },
+						new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(LegacyColorModePageCS) }
                     },
                     new TableSection("Android")
                     {
@@ -44,7 +45,9 @@ namespace PlatformSpecifics
                         new TextCell { Text = "ListView Fast Scroll", Command = NavigateCommand, CommandParameter = typeof(AndroidListViewFastScrollPageCS) },
                         new TextCell { Text = "Elevation", Command = NavigateCommand, CommandParameter = typeof(AndroidElevationPageCS) },
 						new TextCell { Text = "Entry ImeOptions", Command = NavigateCommand, CommandParameter = typeof(AndroidEntryPageCS) },
-						new TextCell { Text = "WebView Mixed Content", Command = NavigateCommand, CommandParameter = typeof(AndroidWebViewPageCS) }
+						new TextCell { Text = "WebView Mixed Content", Command = NavigateCommand, CommandParameter = typeof(AndroidWebViewPageCS) },
+						new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(LegacyColorModePageCS) },
+						new TextCell { Text = "Button Default Padding/Shadow", Command = NavigateCommand, CommandParameter = typeof(AndroidButtonPageCS) }
                     },
                     new TableSection("UWP")
                     {
@@ -53,7 +56,8 @@ namespace PlatformSpecifics
                         new TextCell { Text = "MasterDetailPage Toolbar Location Adjust", Command = NavigateCommand, CommandParameter = typeof(WindowsMasterDetailPageCS) },
 						new TextCell { Text = "WebView JavaScript Alert", Command = NavigateCommand, CommandParameter = typeof(WindowsWebViewPageCS) },
 						new TextCell { Text = "Text Reading Order", Command = NavigateCommand, CommandParameter = typeof(WindowsReadingOrderPageCS) },
-						new TextCell { Text = "SearchBar Spell Check", Command = NavigateCommand, CommandParameter = typeof(WindowsSearchBarPageCS) }
+						new TextCell { Text = "SearchBar Spell Check", Command = NavigateCommand, CommandParameter = typeof(WindowsSearchBarPageCS) },
+						new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(LegacyColorModePageCS) }
                     }
                 }
             };         

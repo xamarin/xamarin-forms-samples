@@ -32,6 +32,9 @@
             <TextCell Text="ListView FullWidth Separators"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:iOSListViewPage}" />
+            <TextCell Text="VisualElement Legacy Color Mode"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:LegacyColorModePage}" />
         </TableSection>
         <TableSection Title="Android">
             <TextCell Text="Soft Input Mode Adjust"
@@ -55,6 +58,12 @@
             <TextCell Text="WebView Mixed Content"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:AndroidWebViewPage}" />
+            <TextCell Text="VisualElement Legacy Color Mode"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:LegacyColorModePage}" />
+            <TextCell Text="Button Default Padding/Shadow"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:AndroidButtonPage}" />
         </TableSection>
         <TableSection Title="UWP">
             <TextCell Text="TabbedPage Toolbar Location Adjust"
@@ -75,6 +84,9 @@
             <TextCell Text="SearchBar Spell Check"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:WindowsSearchBarPage}" />
+            <TextCell Text="VisualElement Legacy Color Mode"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:LegacyColorModePage}" />
         </TableSection>
     </TableView>
 </ContentPage>

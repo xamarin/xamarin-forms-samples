@@ -99,4 +99,9 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="MultiplePlatforms\" />
+    <Folder Include="MultiplePlatforms\XAML\" />
+    <Folder Include="MultiplePlatforms\CS\" />
+  </ItemGroup>
 </Project>

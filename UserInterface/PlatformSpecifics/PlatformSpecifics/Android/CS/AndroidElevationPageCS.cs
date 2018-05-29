@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
@@ -13,7 +12,7 @@ namespace PlatformSpecifics
             var aboveButton = new Xamarin.Forms.Button { Text = "Button Above BoxView - Click Me" };
             aboveButton.Clicked += (sender, e) => outputLabel.Text = "The bottom button can receive input, while the top button cannot.";
             aboveButton.On<Android>().SetElevation(10);
-
+            
             Title = "Elevation";
             Content = new StackLayout
             {
