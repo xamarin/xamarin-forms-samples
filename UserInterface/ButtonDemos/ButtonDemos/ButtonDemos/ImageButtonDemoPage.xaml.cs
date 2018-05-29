@@ -5,11 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace ButtonDemos
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ImageButtonDemoPage : ContentPage
 	{
 		public ImageButtonDemoPage ()

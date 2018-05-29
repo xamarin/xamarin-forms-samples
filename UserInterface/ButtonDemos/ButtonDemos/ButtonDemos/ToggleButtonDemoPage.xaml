@@ -2,31 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ButtonDemos"
-             x:Class="ButtonDemos.ToggleButtonDemoPage">
+             x:Class="ButtonDemos.ToggleButtonDemoPage"
+             Title="Toggle Button Demo">
     
     <ContentPage.Resources>
         <Style TargetType="local:ToggleButton">
             <Setter Property="VerticalOptions" Value="CenterAndExpand" />
             <Setter Property="HorizontalOptions" Value="Center" />
-            <!--<Setter Property="VisualStateManager.VisualStateGroups">
-                <VisualStateGroupList>
-                    <VisualStateGroup Name="ToggleStates">
-                        <VisualState Name="ToggledOff">
-                            <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="#404040" />
-                                <Setter Property="TextColor" Value="White" />
-                            </VisualState.Setters>
-                        </VisualState>
-                        
-                        <VisualState Name="ToggledOn">
-                            <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="#C0C0C0" />
-                                <Setter Property="TextColor" Value="Black" />
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateGroupList>
-            </Setter>-->        
         </Style>
     </ContentPage.Resources>
 
