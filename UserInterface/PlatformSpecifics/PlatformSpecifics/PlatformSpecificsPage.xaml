@@ -87,6 +87,9 @@
             <TextCell Text="VisualElement Legacy Color Mode"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:LegacyColorModePage}" />
+            <TextCell Text="ListView Selection Mode"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:WindowsListViewPage}" />
         </TableSection>
     </TableView>
 </ContentPage>
