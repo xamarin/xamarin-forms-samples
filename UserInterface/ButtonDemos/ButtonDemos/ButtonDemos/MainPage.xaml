@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ButtonDemos"
+             x:Class="ButtonDemos.MainPage"
+             Title="Button Demos">
+    <ScrollView>
+        <FlexLayout Direction="Column"
+                    JustifyContent="SpaceEvenly"
+                    AlignItems="Center">
+
+            <Button Text="Basic Button Click"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:BasicButtonClickPage}" />
+
+            <Button Text="Code Button Click"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:CodeButtonClickPage}" />
+
+            <Button Text="Basic Button Command"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:BasicButtonCommandPage}" />
+
+            <Button Text="Press and Release Button"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:PressAndReleaseButtonPage}" />
+
+            <Button Text="Button Appearance"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:ButtonAppearancePage}" />
+
+            <Button Text="Toggle Button Demo"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:ToggleButtonDemoPage}" />
+
+            <Button Text="Image Button Demo"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:ImageButtonDemoPage}" />
+
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ButtonDemos.ImageButtonDemoPage"
+             Title="Image Button Demo">
+
+    <FlexLayout Direction="Column"
+                JustifyContent="SpaceEvenly"
+                AlignItems="Center">
+        
+        <FlexLayout.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Image">
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="iOS, Android" Value="MonkeyFace.png" />
+                        <On Platform="UWP" Value="Assets/MonkeyFace.png" />
+                    </OnPlatform>
+                </Setter>
+            </Style>
+        </FlexLayout.Resources>
+
+        <Button>
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS, Android" Value="MonkeyFace.png" />
+                    <On Platform="UWP" Value="Assets/MonkeyFace.png" />
+                </OnPlatform>
+            </Button.Image>
+        </Button>
+
+        <Button Text="Default" />
+
+        <Button Text="Left - 10"
+                ContentLayout="Left, 10" />
+
+        <Button Text="Top - 10"
+                ContentLayout="Top, 10" />
+
+        <Button Text="Right - 20"
+                ContentLayout="Right, 20" />
+
+        <Button Text="Bottom - 20" 
+                ContentLayout="Bottom, 20" />
+    </FlexLayout>
+</ContentPage>
