@@ -3,10 +3,10 @@ using Xamarin.Forms;
 
 namespace ButtonDemos
 {
-	public class CodeButtonClickPage : ContentPage
-	{
-		public CodeButtonClickPage ()
-		{
+    public class CodeButtonClickPage : ContentPage
+    {
+        public CodeButtonClickPage ()
+        {
             Title = "Code Button Click";
 
             Label label = new Label
@@ -25,14 +25,14 @@ namespace ButtonDemos
             };
             button.Clicked += async (sender, args) => await label.RelRotateTo(360, 1000);
 
-			Content = new StackLayout
+            Content = new StackLayout
             {
-				Children =
+                Children =
                 {
-					label,
+                    label,
                     button
-				}
-			};
-		}
-	}
+                }
+            };
+        }
+    }
 }
