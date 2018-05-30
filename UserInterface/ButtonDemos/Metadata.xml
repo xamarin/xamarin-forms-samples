@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>7B2E3BF1-4AB0-4381-9AE1-9CA376EAE4A6</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Beginner</Level>
+	<Tags>User Interface, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>Demonstrates Button properties and events.</Brief>
+</SampleMetadata>
