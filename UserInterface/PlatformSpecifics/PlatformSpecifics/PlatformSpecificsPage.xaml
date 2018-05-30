@@ -86,7 +86,7 @@
                       CommandParameter="{x:Type local:WindowsSearchBarPage}" />
             <TextCell Text="VisualElement Legacy Color Mode"
                       Command="{Binding NavigateCommand}"
-                      CommandParameter="{x:Type local:LegacyColorModePage}" />
+                      CommandParameter="{x:Type local:WindowsLegacyColorModePage}" />
             <TextCell Text="ListView Selection Mode"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:WindowsListViewPage}" />

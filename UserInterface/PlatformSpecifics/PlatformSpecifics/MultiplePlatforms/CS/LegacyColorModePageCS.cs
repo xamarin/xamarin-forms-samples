@@ -2,7 +2,6 @@
 using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
-using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
 
 namespace PlatformSpecifics
 {
@@ -23,7 +22,6 @@ namespace PlatformSpecifics
 			_legacyColorModeDisabledButton = new Xamarin.Forms.Button { Text = "Button", TextColor = Color.Blue, BackgroundColor = Color.Bisque };
 			_legacyColorModeDisabledButton.On<iOS>().SetIsLegacyColorModeEnabled(false);
 			_legacyColorModeDisabledButton.On<Android>().SetIsLegacyColorModeEnabled(false);
-			_legacyColorModeDisabledButton.On<Windows>().SetIsLegacyColorModeEnabled(false);
 
 			var legacyColorModeDisabledIsEnabledButton = new Xamarin.Forms.Button { Text = "Toggle IsEnabled" };
 			legacyColorModeDisabledIsEnabledButton.Clicked += (sender, e) => 
