@@ -27,6 +27,10 @@
                           Detail="Discover how to draw curves and use path features"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.CurvesHomePage}" />
+
+                <TextCell Text="Porter-Duff Blend Modes"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.PorterDuffBlendModesPage}" />
             </TableSection>
         </TableRoot>
     </TableView>
