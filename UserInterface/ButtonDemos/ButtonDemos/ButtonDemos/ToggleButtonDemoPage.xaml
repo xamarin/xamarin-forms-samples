@@ -58,9 +58,7 @@
         </local:ToggleButton>
 
         <Label x:Name="label"
-               Text=
-"Just a little passage of some sample text that can be formatted
-in italic or boldface by toggling the two buttons."
+               Text="Just a little passage of some sample text that can be formatted in italic or boldface by toggling the two buttons."
                FontSize="Large"
                HorizontalTextAlignment="Center"
                VerticalOptions="CenterAndExpand" />
