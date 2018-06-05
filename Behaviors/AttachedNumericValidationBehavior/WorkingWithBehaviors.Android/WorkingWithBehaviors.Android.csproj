@@ -51,6 +51,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="WorkingWithBehaviors">
+      <HintPath>..\WorkingWithBehaviors\bin\Debug\netstandard2.0\WorkingWithBehaviors.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
