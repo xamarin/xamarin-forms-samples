@@ -1,11 +1,9 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-
 using Xamarin.Forms.Platform.Android;
 
-
-namespace Solitaire
+namespace Solitaire.Android
 {
     [Activity(Label = "Pontifex", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : FormsAppCompatActivity

@@ -51,6 +51,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="WorkingWithTriggers">
+      <HintPath>..\WorkingWithTriggers\bin\Debug\netstandard2.0\WorkingWithTriggers.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

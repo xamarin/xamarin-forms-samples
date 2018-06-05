@@ -101,6 +101,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="WorkingWithListviewNative">
+      <HintPath>..\WorkingWithListviewNative\bin\Debug\netstandard2.0\WorkingWithListviewNative.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WorkingWithListviewNative\WorkingWithListviewNative.csproj">

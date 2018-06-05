@@ -110,6 +110,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="WorkingWithTriggers">
+      <HintPath>..\WorkingWithTriggers\bin\Debug\netstandard2.0\WorkingWithTriggers.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Icon-60%402x.png" />
