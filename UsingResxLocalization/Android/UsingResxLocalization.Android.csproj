@@ -108,4 +108,10 @@
     <Folder Include="Resources\drawable-gsw-rCH\" />
     <Folder Include="Resources\values-gsw-rCH\" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+  </ItemGroup>
 </Project>

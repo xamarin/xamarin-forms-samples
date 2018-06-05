@@ -13,9 +13,9 @@ using Xamarin.Forms.Platform.Android;
 namespace WorkingWithStyles.Android
 {
 	[Activity (Label = "WorkingWithStyles.Android.Android", 
-		MainLauncher = true, 
+		Theme = "@style/MainTheme", MainLauncher = true, 
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : FormsApplicationActivity
+	public class MainActivity : FormsAppCompatActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{

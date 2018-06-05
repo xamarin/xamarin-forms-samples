@@ -32,14 +32,17 @@ at the bottom of the window to edit the XML directly.
 */
 namespace MobileCRMAndroid
 {
-    [Activity(Label = "MobileCRM", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : Xamarin.Forms.Platform.Android.FormsApplicationActivity
+    [Activity(Label = "MobileCRM", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    public class MainActivity : Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         const int RequestAccessFineLocation = 1;
         bool wasInitialized = false;
 
         protected override void OnCreate(Bundle bundle)
         {
+            TabLayoutResource = Resource.Layout.Tabbar;
+            ToolbarResource = Resource.Layout.Toolbar;
+
             base.OnCreate(bundle);
 
             // init Forms components
