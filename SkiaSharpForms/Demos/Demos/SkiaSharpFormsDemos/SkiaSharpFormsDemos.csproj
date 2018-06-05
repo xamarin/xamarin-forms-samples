@@ -30,6 +30,12 @@
     <EmbeddedResource Update="Basics\PulsatingEllipsePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Images\HelloBitmapPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Images\ImagesHomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Paths\MultipleLinesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -144,6 +150,12 @@
     <EmbeddedResource Include="Media\MountainClimbers.jpg" />
     <EmbeddedResource Include="Media\SeatedMonkey.jpg" />
     <EmbeddedResource Include="Media\PageOfCode.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Images\HelloBitmapPage.xaml.cs">
+      <DependentUpon>HelloBitmapPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

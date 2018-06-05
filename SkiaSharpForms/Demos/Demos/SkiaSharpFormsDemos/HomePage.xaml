@@ -28,6 +28,13 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.CurvesHomePage}" />
 
+                
+                <TextCell Text="SkiaSharp Bitmaps and Images"
+                          
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Images.ImagesHomePage}" />
+
+                
                 <TextCell Text="Porter-Duff Blend Modes"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.PorterDuffBlendModesPage}" />

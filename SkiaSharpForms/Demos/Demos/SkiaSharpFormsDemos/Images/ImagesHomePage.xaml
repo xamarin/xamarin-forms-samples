@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:HomeBasePage xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:local="clr-namespace:SkiaSharpFormsDemos"
+                    x:Class="SkiaSharpFormsDemos.Images.ImagesHomePage"
+                    Title="SkiaSharp Bitmaps and Images"
+                    Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Bitmap Creation and File Saving">
+                
+                <TextCell Text="Hello, Bitmap!"
+                          Detail="Create a bitmap, draw on it, and render it"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Images.HelloBitmapPage}" />
+
+                
+                
+                <!--<TextCell Text="Exploded Pie Chart"
+                          Detail="Display a pie chart using the angle arc"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ExplodedPieChartPage}" />
+
+                <TextCell Text="Tangent Arc"
+                          Detail="Experiment with creating a tangent arc"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.TangentArcPage}" />
+
+                <TextCell Text="Rounded Heptagon"
+                          Detail="Draw a heptagon with rounded corners"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.RoundedHeptagonPage}" />
+
+                <TextCell Text="Elliptical Arc"
+                          Detail="Experiment with creating an elliptical arc"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.EllipticalArcPage}" />
+
+                <TextCell Text="Arc Infinity"
+                          Detail="Draw an infinity sign with an elliptical arc"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.ArcInfinityPage}" />-->
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</local:HomeBasePage>
