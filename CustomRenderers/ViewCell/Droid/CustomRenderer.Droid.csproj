@@ -82,7 +82,6 @@
     <AndroidResource Include="Resources\layout\NativeAndroidCell.axml" />
     <AndroidResource Include="Resources\drawable\Vegetables.jpg" />
     <AndroidResource Include="Resources\drawable\CustomSelector.xml" />
-    <AndroidResource Include="Resources\values\Colors.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />

@@ -80,7 +80,6 @@
     <AndroidResource Include="Resources\drawable\Fruits.jpg" />
     <AndroidResource Include="Resources\drawable\Legumes.jpg" />
     <AndroidResource Include="Resources\drawable\Vegetables.jpg" />
-    <AndroidResource Include="Resources\values\Colors.xml" />
     <AndroidResource Include="Resources\layout\NativeAndroidListViewCell.axml" />
     <AndroidResource Include="Resources\drawable\CustomSelector.xml" />
   </ItemGroup>
