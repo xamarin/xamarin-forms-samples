@@ -30,10 +30,11 @@ AndroidManifest.xml file in the Properties folder. Open the file and click 'Sour
 at the bottom of the window to edit the XML directly.
 
 */
+using Xamarin.Forms.Platform.Android;
 namespace MobileCRMAndroid
 {
     [Activity(Label = "MobileCRM", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : Xamarin.Forms.Platform.Android.FormsApplicationActivity
+	public class MainActivity : FormsApplicationActivity
     {
         const int RequestAccessFineLocation = 1;
         bool wasInitialized = false;

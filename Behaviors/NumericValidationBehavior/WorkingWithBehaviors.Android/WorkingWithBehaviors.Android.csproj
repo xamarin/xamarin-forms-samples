@@ -51,6 +51,12 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="WorkingWithBehaviors">
+      <HintPath>..\WorkingWithBehaviors\bin\Debug\netstandard2.0\WorkingWithBehaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="WorkingWithBehaviors">
+      <HintPath>..\WorkingWithBehaviors\bin\Debug\netstandard2.0\WorkingWithBehaviors.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -86,5 +92,11 @@
       <Project>{E3BA1FC1-A02E-44B5-9982-3B78CAECFABE}</Project>
       <Name>WorkingWithBehaviors</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
   </ItemGroup>
 </Project>

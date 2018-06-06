@@ -74,4 +74,10 @@
   <Import Project="..\XamFormsImageResize\XamFormsImageResize.projitems" Label="Shared" Condition="Exists('..\XamFormsImageResize\XamFormsImageResize.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+  </ItemGroup>
 </Project>

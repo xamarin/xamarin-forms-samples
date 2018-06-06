@@ -1260,44 +1260,44 @@ namespace CustomRenderer.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f090052
-			public const int abc_background_cache_hint_selector_material_dark = 2131296338;
-			
-			// aapt resource value: 0x7f090053
-			public const int abc_background_cache_hint_selector_material_light = 2131296339;
-			
-			// aapt resource value: 0x7f090054
-			public const int abc_btn_colored_borderless_text_material = 2131296340;
-			
-			// aapt resource value: 0x7f090055
-			public const int abc_btn_colored_text_material = 2131296341;
-			
 			// aapt resource value: 0x7f090056
-			public const int abc_color_highlight_material = 2131296342;
+			public const int abc_background_cache_hint_selector_material_dark = 2131296342;
 			
 			// aapt resource value: 0x7f090057
-			public const int abc_hint_foreground_material_dark = 2131296343;
+			public const int abc_background_cache_hint_selector_material_light = 2131296343;
 			
 			// aapt resource value: 0x7f090058
-			public const int abc_hint_foreground_material_light = 2131296344;
+			public const int abc_btn_colored_borderless_text_material = 2131296344;
+			
+			// aapt resource value: 0x7f090059
+			public const int abc_btn_colored_text_material = 2131296345;
+			
+			// aapt resource value: 0x7f09005a
+			public const int abc_color_highlight_material = 2131296346;
+			
+			// aapt resource value: 0x7f09005b
+			public const int abc_hint_foreground_material_dark = 2131296347;
+			
+			// aapt resource value: 0x7f09005c
+			public const int abc_hint_foreground_material_light = 2131296348;
 			
 			// aapt resource value: 0x7f09000d
 			public const int abc_input_method_navigation_guard = 2131296269;
 			
-			// aapt resource value: 0x7f090059
-			public const int abc_primary_text_disable_only_material_dark = 2131296345;
-			
-			// aapt resource value: 0x7f09005a
-			public const int abc_primary_text_disable_only_material_light = 2131296346;
-			
-			// aapt resource value: 0x7f09005b
-			public const int abc_primary_text_material_dark = 2131296347;
-			
-			// aapt resource value: 0x7f09005c
-			public const int abc_primary_text_material_light = 2131296348;
-			
 			// aapt resource value: 0x7f09005d
-			public const int abc_search_url_text = 2131296349;
+			public const int abc_primary_text_disable_only_material_dark = 2131296349;
+			
+			// aapt resource value: 0x7f09005e
+			public const int abc_primary_text_disable_only_material_light = 2131296350;
+			
+			// aapt resource value: 0x7f09005f
+			public const int abc_primary_text_material_dark = 2131296351;
+			
+			// aapt resource value: 0x7f090060
+			public const int abc_primary_text_material_light = 2131296352;
+			
+			// aapt resource value: 0x7f090061
+			public const int abc_search_url_text = 2131296353;
 			
 			// aapt resource value: 0x7f09000e
 			public const int abc_search_url_text_normal = 2131296270;
@@ -1308,32 +1308,32 @@ namespace CustomRenderer.Droid
 			// aapt resource value: 0x7f090010
 			public const int abc_search_url_text_selected = 2131296272;
 			
-			// aapt resource value: 0x7f09005e
-			public const int abc_secondary_text_material_dark = 2131296350;
-			
-			// aapt resource value: 0x7f09005f
-			public const int abc_secondary_text_material_light = 2131296351;
-			
-			// aapt resource value: 0x7f090060
-			public const int abc_tint_btn_checkable = 2131296352;
-			
-			// aapt resource value: 0x7f090061
-			public const int abc_tint_default = 2131296353;
-			
 			// aapt resource value: 0x7f090062
-			public const int abc_tint_edittext = 2131296354;
+			public const int abc_secondary_text_material_dark = 2131296354;
 			
 			// aapt resource value: 0x7f090063
-			public const int abc_tint_seek_thumb = 2131296355;
+			public const int abc_secondary_text_material_light = 2131296355;
 			
 			// aapt resource value: 0x7f090064
-			public const int abc_tint_spinner = 2131296356;
+			public const int abc_tint_btn_checkable = 2131296356;
 			
 			// aapt resource value: 0x7f090065
-			public const int abc_tint_switch_thumb = 2131296357;
+			public const int abc_tint_default = 2131296357;
 			
 			// aapt resource value: 0x7f090066
-			public const int abc_tint_switch_track = 2131296358;
+			public const int abc_tint_edittext = 2131296358;
+			
+			// aapt resource value: 0x7f090067
+			public const int abc_tint_seek_thumb = 2131296359;
+			
+			// aapt resource value: 0x7f090068
+			public const int abc_tint_spinner = 2131296360;
+			
+			// aapt resource value: 0x7f090069
+			public const int abc_tint_switch_thumb = 2131296361;
+			
+			// aapt resource value: 0x7f09006a
+			public const int abc_tint_switch_track = 2131296362;
 			
 			// aapt resource value: 0x7f090011
 			public const int accent_material_dark = 2131296273;
@@ -1389,8 +1389,17 @@ namespace CustomRenderer.Droid
 			// aapt resource value: 0x7f09000b
 			public const int cardview_shadow_start_color = 2131296267;
 			
-			// aapt resource value: 0x7f090067
-			public const int common_google_signin_btn_text_dark = 2131296359;
+			// aapt resource value: 0x7f090055
+			public const int colorAccent = 2131296341;
+			
+			// aapt resource value: 0x7f090053
+			public const int colorPrimary = 2131296339;
+			
+			// aapt resource value: 0x7f090054
+			public const int colorPrimaryDark = 2131296340;
+			
+			// aapt resource value: 0x7f09006b
+			public const int common_google_signin_btn_text_dark = 2131296363;
 			
 			// aapt resource value: 0x7f090000
 			public const int common_google_signin_btn_text_dark_default = 2131296256;
@@ -1404,8 +1413,8 @@ namespace CustomRenderer.Droid
 			// aapt resource value: 0x7f090003
 			public const int common_google_signin_btn_text_dark_pressed = 2131296259;
 			
-			// aapt resource value: 0x7f090068
-			public const int common_google_signin_btn_text_light = 2131296360;
+			// aapt resource value: 0x7f09006c
+			public const int common_google_signin_btn_text_light = 2131296364;
 			
 			// aapt resource value: 0x7f090004
 			public const int common_google_signin_btn_text_light_default = 2131296260;
@@ -1419,14 +1428,14 @@ namespace CustomRenderer.Droid
 			// aapt resource value: 0x7f090007
 			public const int common_google_signin_btn_text_light_pressed = 2131296263;
 			
-			// aapt resource value: 0x7f090069
-			public const int common_google_signin_btn_tint = 2131296361;
+			// aapt resource value: 0x7f09006d
+			public const int common_google_signin_btn_tint = 2131296365;
 			
 			// aapt resource value: 0x7f090047
 			public const int design_bottom_navigation_shadow_color = 2131296327;
 			
-			// aapt resource value: 0x7f09006a
-			public const int design_error = 2131296362;
+			// aapt resource value: 0x7f09006e
+			public const int design_error = 2131296366;
 			
 			// aapt resource value: 0x7f090048
 			public const int design_fab_shadow_end_color = 2131296328;
@@ -1458,8 +1467,8 @@ namespace CustomRenderer.Droid
 			// aapt resource value: 0x7f090051
 			public const int design_textinput_error_color_light = 2131296337;
 			
-			// aapt resource value: 0x7f09006b
-			public const int design_tint_password_toggle = 2131296363;
+			// aapt resource value: 0x7f09006f
+			public const int design_tint_password_toggle = 2131296367;
 			
 			// aapt resource value: 0x7f09001f
 			public const int dim_foreground_disabled_material_dark = 2131296287;
@@ -1484,6 +1493,9 @@ namespace CustomRenderer.Droid
 			
 			// aapt resource value: 0x7f090026
 			public const int highlighted_text_material_light = 2131296294;
+			
+			// aapt resource value: 0x7f090052
+			public const int launcher_background = 2131296338;
 			
 			// aapt resource value: 0x7f090027
 			public const int material_blue_grey_800 = 2131296295;
@@ -1578,11 +1590,11 @@ namespace CustomRenderer.Droid
 			// aapt resource value: 0x7f090044
 			public const int switch_thumb_disabled_material_light = 2131296324;
 			
-			// aapt resource value: 0x7f09006c
-			public const int switch_thumb_material_dark = 2131296364;
+			// aapt resource value: 0x7f090070
+			public const int switch_thumb_material_dark = 2131296368;
 			
-			// aapt resource value: 0x7f09006d
-			public const int switch_thumb_material_light = 2131296365;
+			// aapt resource value: 0x7f090071
+			public const int switch_thumb_material_light = 2131296369;
 			
 			// aapt resource value: 0x7f090045
 			public const int switch_thumb_normal_material_dark = 2131296325;
@@ -3231,8 +3243,8 @@ namespace CustomRenderer.Droid
 			// aapt resource value: 0x7f0b0052
 			public const int list_item = 2131427410;
 			
-			// aapt resource value: 0x7f0b00c0
-			public const int masked = 2131427520;
+			// aapt resource value: 0x7f0b00c2
+			public const int masked = 2131427522;
 			
 			// aapt resource value: 0x7f0b00ae
 			public const int media_actions = 2131427502;
@@ -3435,6 +3447,9 @@ namespace CustomRenderer.Droid
 			// aapt resource value: 0x7f0b0022
 			public const int showTitle = 2131427362;
 			
+			// aapt resource value: 0x7f0b00bf
+			public const int sliding_tabs = 2131427519;
+			
 			// aapt resource value: 0x7f0b007d
 			public const int smallLabel = 2131427453;
 			
@@ -3516,6 +3531,9 @@ namespace CustomRenderer.Droid
 			// aapt resource value: 0x7f0b0061
 			public const int title_template = 2131427425;
 			
+			// aapt resource value: 0x7f0b00c0
+			public const int toolbar = 2131427520;
+			
 			// aapt resource value: 0x7f0b0034
 			public const int top = 2131427380;
 			
@@ -3540,8 +3558,8 @@ namespace CustomRenderer.Droid
 			// aapt resource value: 0x7f0b000e
 			public const int view_offset_helper = 2131427342;
 			
-			// aapt resource value: 0x7f0b00bf
-			public const int visible = 2131427519;
+			// aapt resource value: 0x7f0b00c1
+			public const int visible = 2131427521;
 			
 			// aapt resource value: 0x7f0b00a0
 			public const int volume_item_container = 2131427488;
@@ -3841,7 +3859,13 @@ namespace CustomRenderer.Droid
 			public const int support_simple_spinner_dropdown_item = 2130903106;
 			
 			// aapt resource value: 0x7f030043
-			public const int XamarinMapInfoWindow = 2130903107;
+			public const int Tabbar = 2130903107;
+			
+			// aapt resource value: 0x7f030044
+			public const int Toolbar = 2130903108;
+			
+			// aapt resource value: 0x7f030045
+			public const int XamarinMapInfoWindow = 2130903109;
 			
 			static Layout()
 			{
@@ -4120,6 +4144,9 @@ namespace CustomRenderer.Droid
 			
 			// aapt resource value: 0x7f0c0170
 			public const int Animation_Design_BottomSheetDialog = 2131493232;
+			
+			// aapt resource value: 0x7f0c018b
+			public const int AppCompatDialogStyle = 2131493259;
 			
 			// aapt resource value: 0x7f0c00b2
 			public const int Base_AlertDialog_AppCompat = 2131493042;
@@ -4594,6 +4621,12 @@ namespace CustomRenderer.Droid
 			
 			// aapt resource value: 0x7f0c000e
 			public const int CardView_Light = 2131492878;
+			
+			// aapt resource value: 0x7f0c0189
+			public const int MainTheme = 2131493257;
+			
+			// aapt resource value: 0x7f0c018a
+			public const int MainTheme_Base = 2131493258;
 			
 			// aapt resource value: 0x7f0c002d
 			public const int Platform_AppCompat = 2131492909;

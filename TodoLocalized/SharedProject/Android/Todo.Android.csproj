@@ -72,6 +72,12 @@
     <AndroidResource Include="Resources\drawable\check2x.png" />
     <AndroidResource Include="Resources\drawable\plus.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+  </ItemGroup>
   <Import Project="..\TodoShared\Todo.projitems" Label="Shared" Condition="Exists('..\TodoShared\Todo.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

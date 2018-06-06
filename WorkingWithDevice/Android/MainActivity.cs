@@ -14,8 +14,8 @@ using Xamarin.Forms.Platform.Android;
 namespace WorkingWithPlatformSpecifics.Android
 {
 
-	[Activity (Label = "WorkingWithPlatformSpecifics.Android.Android", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity // superclass new in 1.3
+	[Activity (Label = "WorkingWithPlatformSpecifics.Android.Android", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity // superclass new in 1.3
 	{
 		protected override void OnCreate (Bundle bundle)
 		{

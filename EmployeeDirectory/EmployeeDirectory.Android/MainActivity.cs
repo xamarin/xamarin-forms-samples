@@ -7,12 +7,13 @@ using Android.Content.PM;
 using Android.Support.V4.Content;
 using Android.Support.V4.App;
 using Android.Widget;
+using Xamarin.Forms.Platform.Android;
 
 namespace EmployeeDirectory.Android
 {
     [Activity(Label = "EmployeeDirectory", MainLauncher = true,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : Xamarin.Forms.Platform.Android.FormsApplicationActivity
+	public class MainActivity : FormsApplicationActivity
     {
         internal static MainActivity Instance { get; private set; }
 

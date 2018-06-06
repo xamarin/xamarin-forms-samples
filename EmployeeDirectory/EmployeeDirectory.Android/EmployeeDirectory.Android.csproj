@@ -108,4 +108,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\drawable-hdpi\Search.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+  </ItemGroup>
 </Project>
