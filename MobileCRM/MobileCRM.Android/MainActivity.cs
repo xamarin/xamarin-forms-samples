@@ -30,19 +30,17 @@ AndroidManifest.xml file in the Properties folder. Open the file and click 'Sour
 at the bottom of the window to edit the XML directly.
 
 */
+using Xamarin.Forms.Platform.Android;
 namespace MobileCRMAndroid
 {
     [Activity(Label = "MobileCRM", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+	public class MainActivity : FormsApplicationActivity
     {
         const int RequestAccessFineLocation = 1;
         bool wasInitialized = false;
 
         protected override void OnCreate(Bundle bundle)
         {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(bundle);
 
             // init Forms components
