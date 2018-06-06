@@ -167,6 +167,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="MobileCRM.Services">
+      <HintPath>..\MobileCRM.Services\bin\Debug\netstandard2.0\MobileCRM.Services.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
