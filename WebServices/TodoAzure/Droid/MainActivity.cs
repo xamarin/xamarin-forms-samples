@@ -7,8 +7,7 @@ namespace TodoAzure.Droid
     [Activity(Label = "TodoAzure.Droid",
         Icon = "@drawable/icon",
         Theme = "@style/MainTheme", MainLauncher = true,
-        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
-        Theme = "@android:style/Theme.Holo.Light")]
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
