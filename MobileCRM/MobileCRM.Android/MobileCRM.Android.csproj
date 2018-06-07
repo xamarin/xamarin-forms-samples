@@ -110,6 +110,12 @@
     <Reference Include="MobileCRM.Services">
       <HintPath>..\MobileCRM.Services\bin\Debug\netstandard2.0\MobileCRM.Services.dll</HintPath>
     </Reference>
+    <Reference Include="MobileCRM.Services">
+      <HintPath>..\MobileCRM.Services\bin\Debug\netstandard2.0\MobileCRM.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileCRM.Services">
+      <HintPath>..\MobileCRM.Services\bin\Debug\netstandard2.0\MobileCRM.Services.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -135,6 +141,10 @@
     <AndroidResource Include="Resources\drawable\zoom_out.png" />
     <AndroidResource Include="Resources\drawable\zoom_in.png" />
     <AndroidResource Include="Resources\drawable\settings.png" />
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\drawable\list.png" />
   </ItemGroup>
   <Import Project="..\MobileCRM.Shared\MobileCRM.Shared.projitems" Label="Shared" Condition="Exists('..\MobileCRM.Shared\MobileCRM.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
@@ -149,11 +159,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\filter.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values\styles_basetheme.xml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Colors.xml" />

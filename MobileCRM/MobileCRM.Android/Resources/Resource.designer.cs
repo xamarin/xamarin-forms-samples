@@ -1260,44 +1260,44 @@ namespace MobileCRMAndroid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f090053
-			public const int abc_background_cache_hint_selector_material_dark = 2131296339;
-			
-			// aapt resource value: 0x7f090054
-			public const int abc_background_cache_hint_selector_material_light = 2131296340;
-			
-			// aapt resource value: 0x7f090055
-			public const int abc_btn_colored_borderless_text_material = 2131296341;
-			
-			// aapt resource value: 0x7f090056
-			public const int abc_btn_colored_text_material = 2131296342;
-			
 			// aapt resource value: 0x7f090057
-			public const int abc_color_highlight_material = 2131296343;
+			public const int abc_background_cache_hint_selector_material_dark = 2131296343;
 			
 			// aapt resource value: 0x7f090058
-			public const int abc_hint_foreground_material_dark = 2131296344;
+			public const int abc_background_cache_hint_selector_material_light = 2131296344;
 			
 			// aapt resource value: 0x7f090059
-			public const int abc_hint_foreground_material_light = 2131296345;
+			public const int abc_btn_colored_borderless_text_material = 2131296345;
+			
+			// aapt resource value: 0x7f09005a
+			public const int abc_btn_colored_text_material = 2131296346;
+			
+			// aapt resource value: 0x7f09005b
+			public const int abc_color_highlight_material = 2131296347;
+			
+			// aapt resource value: 0x7f09005c
+			public const int abc_hint_foreground_material_dark = 2131296348;
+			
+			// aapt resource value: 0x7f09005d
+			public const int abc_hint_foreground_material_light = 2131296349;
 			
 			// aapt resource value: 0x7f09000d
 			public const int abc_input_method_navigation_guard = 2131296269;
 			
-			// aapt resource value: 0x7f09005a
-			public const int abc_primary_text_disable_only_material_dark = 2131296346;
-			
-			// aapt resource value: 0x7f09005b
-			public const int abc_primary_text_disable_only_material_light = 2131296347;
-			
-			// aapt resource value: 0x7f09005c
-			public const int abc_primary_text_material_dark = 2131296348;
-			
-			// aapt resource value: 0x7f09005d
-			public const int abc_primary_text_material_light = 2131296349;
-			
 			// aapt resource value: 0x7f09005e
-			public const int abc_search_url_text = 2131296350;
+			public const int abc_primary_text_disable_only_material_dark = 2131296350;
+			
+			// aapt resource value: 0x7f09005f
+			public const int abc_primary_text_disable_only_material_light = 2131296351;
+			
+			// aapt resource value: 0x7f090060
+			public const int abc_primary_text_material_dark = 2131296352;
+			
+			// aapt resource value: 0x7f090061
+			public const int abc_primary_text_material_light = 2131296353;
+			
+			// aapt resource value: 0x7f090062
+			public const int abc_search_url_text = 2131296354;
 			
 			// aapt resource value: 0x7f09000e
 			public const int abc_search_url_text_normal = 2131296270;
@@ -1308,32 +1308,32 @@ namespace MobileCRMAndroid
 			// aapt resource value: 0x7f090010
 			public const int abc_search_url_text_selected = 2131296272;
 			
-			// aapt resource value: 0x7f09005f
-			public const int abc_secondary_text_material_dark = 2131296351;
-			
-			// aapt resource value: 0x7f090060
-			public const int abc_secondary_text_material_light = 2131296352;
-			
-			// aapt resource value: 0x7f090061
-			public const int abc_tint_btn_checkable = 2131296353;
-			
-			// aapt resource value: 0x7f090062
-			public const int abc_tint_default = 2131296354;
-			
 			// aapt resource value: 0x7f090063
-			public const int abc_tint_edittext = 2131296355;
+			public const int abc_secondary_text_material_dark = 2131296355;
 			
 			// aapt resource value: 0x7f090064
-			public const int abc_tint_seek_thumb = 2131296356;
+			public const int abc_secondary_text_material_light = 2131296356;
 			
 			// aapt resource value: 0x7f090065
-			public const int abc_tint_spinner = 2131296357;
+			public const int abc_tint_btn_checkable = 2131296357;
 			
 			// aapt resource value: 0x7f090066
-			public const int abc_tint_switch_thumb = 2131296358;
+			public const int abc_tint_default = 2131296358;
 			
 			// aapt resource value: 0x7f090067
-			public const int abc_tint_switch_track = 2131296359;
+			public const int abc_tint_edittext = 2131296359;
+			
+			// aapt resource value: 0x7f090068
+			public const int abc_tint_seek_thumb = 2131296360;
+			
+			// aapt resource value: 0x7f090069
+			public const int abc_tint_spinner = 2131296361;
+			
+			// aapt resource value: 0x7f09006a
+			public const int abc_tint_switch_thumb = 2131296362;
+			
+			// aapt resource value: 0x7f09006b
+			public const int abc_tint_switch_track = 2131296363;
 			
 			// aapt resource value: 0x7f090011
 			public const int accent_material_dark = 2131296273;
@@ -1389,8 +1389,17 @@ namespace MobileCRMAndroid
 			// aapt resource value: 0x7f09000b
 			public const int cardview_shadow_start_color = 2131296267;
 			
-			// aapt resource value: 0x7f090068
-			public const int common_google_signin_btn_text_dark = 2131296360;
+			// aapt resource value: 0x7f090056
+			public const int colorAccent = 2131296342;
+			
+			// aapt resource value: 0x7f090054
+			public const int colorPrimary = 2131296340;
+			
+			// aapt resource value: 0x7f090055
+			public const int colorPrimaryDark = 2131296341;
+			
+			// aapt resource value: 0x7f09006c
+			public const int common_google_signin_btn_text_dark = 2131296364;
 			
 			// aapt resource value: 0x7f090000
 			public const int common_google_signin_btn_text_dark_default = 2131296256;
@@ -1404,8 +1413,8 @@ namespace MobileCRMAndroid
 			// aapt resource value: 0x7f090003
 			public const int common_google_signin_btn_text_dark_pressed = 2131296259;
 			
-			// aapt resource value: 0x7f090069
-			public const int common_google_signin_btn_text_light = 2131296361;
+			// aapt resource value: 0x7f09006d
+			public const int common_google_signin_btn_text_light = 2131296365;
 			
 			// aapt resource value: 0x7f090004
 			public const int common_google_signin_btn_text_light_default = 2131296260;
@@ -1419,14 +1428,14 @@ namespace MobileCRMAndroid
 			// aapt resource value: 0x7f090007
 			public const int common_google_signin_btn_text_light_pressed = 2131296263;
 			
-			// aapt resource value: 0x7f09006a
-			public const int common_google_signin_btn_tint = 2131296362;
+			// aapt resource value: 0x7f09006e
+			public const int common_google_signin_btn_tint = 2131296366;
 			
 			// aapt resource value: 0x7f090047
 			public const int design_bottom_navigation_shadow_color = 2131296327;
 			
-			// aapt resource value: 0x7f09006b
-			public const int design_error = 2131296363;
+			// aapt resource value: 0x7f09006f
+			public const int design_error = 2131296367;
 			
 			// aapt resource value: 0x7f090048
 			public const int design_fab_shadow_end_color = 2131296328;
@@ -1458,8 +1467,8 @@ namespace MobileCRMAndroid
 			// aapt resource value: 0x7f090051
 			public const int design_textinput_error_color_light = 2131296337;
 			
-			// aapt resource value: 0x7f09006c
-			public const int design_tint_password_toggle = 2131296364;
+			// aapt resource value: 0x7f090070
+			public const int design_tint_password_toggle = 2131296368;
 			
 			// aapt resource value: 0x7f09001f
 			public const int dim_foreground_disabled_material_dark = 2131296287;
@@ -1484,6 +1493,9 @@ namespace MobileCRMAndroid
 			
 			// aapt resource value: 0x7f090026
 			public const int highlighted_text_material_light = 2131296294;
+			
+			// aapt resource value: 0x7f090053
+			public const int launcher_background = 2131296339;
 			
 			// aapt resource value: 0x7f090027
 			public const int material_blue_grey_800 = 2131296295;
@@ -1578,11 +1590,11 @@ namespace MobileCRMAndroid
 			// aapt resource value: 0x7f090044
 			public const int switch_thumb_disabled_material_light = 2131296324;
 			
-			// aapt resource value: 0x7f09006d
-			public const int switch_thumb_material_dark = 2131296365;
+			// aapt resource value: 0x7f090071
+			public const int switch_thumb_material_dark = 2131296369;
 			
-			// aapt resource value: 0x7f09006e
-			public const int switch_thumb_material_light = 2131296366;
+			// aapt resource value: 0x7f090072
+			public const int switch_thumb_material_light = 2131296370;
 			
 			// aapt resource value: 0x7f090045
 			public const int switch_thumb_normal_material_dark = 2131296325;
@@ -2318,26 +2330,26 @@ namespace MobileCRMAndroid
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f02012c
-			public const int avd_hide_password_1 = 2130837804;
-			
 			// aapt resource value: 0x7f02012d
-			public const int avd_hide_password_2 = 2130837805;
+			public const int avd_hide_password_1 = 2130837805;
 			
 			// aapt resource value: 0x7f02012e
-			public const int avd_hide_password_3 = 2130837806;
+			public const int avd_hide_password_2 = 2130837806;
+			
+			// aapt resource value: 0x7f02012f
+			public const int avd_hide_password_3 = 2130837807;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f02012f
-			public const int avd_show_password_1 = 2130837807;
-			
 			// aapt resource value: 0x7f020130
-			public const int avd_show_password_2 = 2130837808;
+			public const int avd_show_password_1 = 2130837808;
 			
 			// aapt resource value: 0x7f020131
-			public const int avd_show_password_3 = 2130837809;
+			public const int avd_show_password_2 = 2130837809;
+			
+			// aapt resource value: 0x7f020132
+			public const int avd_show_password_3 = 2130837810;
 			
 			// aapt resource value: 0x7f020056
 			public const int common_full_open_on_phone = 2130837590;
@@ -2868,118 +2880,121 @@ namespace MobileCRMAndroid
 			public const int lead = 2130837765;
 			
 			// aapt resource value: 0x7f020106
-			public const int map = 2130837766;
+			public const int list = 2130837766;
 			
 			// aapt resource value: 0x7f020107
-			public const int mr_button_connected_dark = 2130837767;
+			public const int map = 2130837767;
 			
 			// aapt resource value: 0x7f020108
-			public const int mr_button_connected_light = 2130837768;
+			public const int mr_button_connected_dark = 2130837768;
 			
 			// aapt resource value: 0x7f020109
-			public const int mr_button_connecting_dark = 2130837769;
+			public const int mr_button_connected_light = 2130837769;
 			
 			// aapt resource value: 0x7f02010a
-			public const int mr_button_connecting_light = 2130837770;
+			public const int mr_button_connecting_dark = 2130837770;
 			
 			// aapt resource value: 0x7f02010b
-			public const int mr_button_dark = 2130837771;
+			public const int mr_button_connecting_light = 2130837771;
 			
 			// aapt resource value: 0x7f02010c
-			public const int mr_button_light = 2130837772;
+			public const int mr_button_dark = 2130837772;
 			
 			// aapt resource value: 0x7f02010d
-			public const int mr_dialog_close_dark = 2130837773;
+			public const int mr_button_light = 2130837773;
 			
 			// aapt resource value: 0x7f02010e
-			public const int mr_dialog_close_light = 2130837774;
+			public const int mr_dialog_close_dark = 2130837774;
 			
 			// aapt resource value: 0x7f02010f
-			public const int mr_dialog_material_background_dark = 2130837775;
+			public const int mr_dialog_close_light = 2130837775;
 			
 			// aapt resource value: 0x7f020110
-			public const int mr_dialog_material_background_light = 2130837776;
+			public const int mr_dialog_material_background_dark = 2130837776;
 			
 			// aapt resource value: 0x7f020111
-			public const int mr_group_collapse = 2130837777;
+			public const int mr_dialog_material_background_light = 2130837777;
 			
 			// aapt resource value: 0x7f020112
-			public const int mr_group_expand = 2130837778;
+			public const int mr_group_collapse = 2130837778;
 			
 			// aapt resource value: 0x7f020113
-			public const int mr_media_pause_dark = 2130837779;
+			public const int mr_group_expand = 2130837779;
 			
 			// aapt resource value: 0x7f020114
-			public const int mr_media_pause_light = 2130837780;
+			public const int mr_media_pause_dark = 2130837780;
 			
 			// aapt resource value: 0x7f020115
-			public const int mr_media_play_dark = 2130837781;
+			public const int mr_media_pause_light = 2130837781;
 			
 			// aapt resource value: 0x7f020116
-			public const int mr_media_play_light = 2130837782;
+			public const int mr_media_play_dark = 2130837782;
 			
 			// aapt resource value: 0x7f020117
-			public const int mr_media_stop_dark = 2130837783;
+			public const int mr_media_play_light = 2130837783;
 			
 			// aapt resource value: 0x7f020118
-			public const int mr_media_stop_light = 2130837784;
+			public const int mr_media_stop_dark = 2130837784;
 			
 			// aapt resource value: 0x7f020119
-			public const int mr_vol_type_audiotrack_dark = 2130837785;
+			public const int mr_media_stop_light = 2130837785;
 			
 			// aapt resource value: 0x7f02011a
-			public const int mr_vol_type_audiotrack_light = 2130837786;
+			public const int mr_vol_type_audiotrack_dark = 2130837786;
 			
 			// aapt resource value: 0x7f02011b
-			public const int navigation_empty_icon = 2130837787;
+			public const int mr_vol_type_audiotrack_light = 2130837787;
 			
 			// aapt resource value: 0x7f02011c
-			public const int notification_action_background = 2130837788;
+			public const int navigation_empty_icon = 2130837788;
 			
 			// aapt resource value: 0x7f02011d
-			public const int notification_bg = 2130837789;
+			public const int notification_action_background = 2130837789;
 			
 			// aapt resource value: 0x7f02011e
-			public const int notification_bg_low = 2130837790;
+			public const int notification_bg = 2130837790;
 			
 			// aapt resource value: 0x7f02011f
-			public const int notification_bg_low_normal = 2130837791;
+			public const int notification_bg_low = 2130837791;
 			
 			// aapt resource value: 0x7f020120
-			public const int notification_bg_low_pressed = 2130837792;
+			public const int notification_bg_low_normal = 2130837792;
 			
 			// aapt resource value: 0x7f020121
-			public const int notification_bg_normal = 2130837793;
+			public const int notification_bg_low_pressed = 2130837793;
 			
 			// aapt resource value: 0x7f020122
-			public const int notification_bg_normal_pressed = 2130837794;
+			public const int notification_bg_normal = 2130837794;
 			
 			// aapt resource value: 0x7f020123
-			public const int notification_icon_background = 2130837795;
-			
-			// aapt resource value: 0x7f02012a
-			public const int notification_template_icon_bg = 2130837802;
-			
-			// aapt resource value: 0x7f02012b
-			public const int notification_template_icon_low_bg = 2130837803;
+			public const int notification_bg_normal_pressed = 2130837795;
 			
 			// aapt resource value: 0x7f020124
-			public const int notification_tile_bg = 2130837796;
+			public const int notification_icon_background = 2130837796;
+			
+			// aapt resource value: 0x7f02012b
+			public const int notification_template_icon_bg = 2130837803;
+			
+			// aapt resource value: 0x7f02012c
+			public const int notification_template_icon_low_bg = 2130837804;
 			
 			// aapt resource value: 0x7f020125
-			public const int notify_panel_notification_icon_bg = 2130837797;
+			public const int notification_tile_bg = 2130837797;
 			
 			// aapt resource value: 0x7f020126
-			public const int opportunity = 2130837798;
+			public const int notify_panel_notification_icon_bg = 2130837798;
 			
 			// aapt resource value: 0x7f020127
-			public const int settings = 2130837799;
+			public const int opportunity = 2130837799;
 			
 			// aapt resource value: 0x7f020128
-			public const int zoom_in = 2130837800;
+			public const int settings = 2130837800;
 			
 			// aapt resource value: 0x7f020129
-			public const int zoom_out = 2130837801;
+			public const int zoom_in = 2130837801;
+			
+			// aapt resource value: 0x7f02012a
+			public const int zoom_out = 2130837802;
 			
 			static Drawable()
 			{
@@ -3240,8 +3255,8 @@ namespace MobileCRMAndroid
 			// aapt resource value: 0x7f0b0052
 			public const int list_item = 2131427410;
 			
-			// aapt resource value: 0x7f0b00be
-			public const int masked = 2131427518;
+			// aapt resource value: 0x7f0b00c0
+			public const int masked = 2131427520;
 			
 			// aapt resource value: 0x7f0b00ac
 			public const int media_actions = 2131427500;
@@ -3447,6 +3462,9 @@ namespace MobileCRMAndroid
 			// aapt resource value: 0x7f0b0022
 			public const int showTitle = 2131427362;
 			
+			// aapt resource value: 0x7f0b00bd
+			public const int sliding_tabs = 2131427517;
+			
 			// aapt resource value: 0x7f0b007d
 			public const int smallLabel = 2131427453;
 			
@@ -3528,6 +3546,9 @@ namespace MobileCRMAndroid
 			// aapt resource value: 0x7f0b0061
 			public const int title_template = 2131427425;
 			
+			// aapt resource value: 0x7f0b00be
+			public const int toolbar = 2131427518;
+			
 			// aapt resource value: 0x7f0b0034
 			public const int top = 2131427380;
 			
@@ -3552,8 +3573,8 @@ namespace MobileCRMAndroid
 			// aapt resource value: 0x7f0b000e
 			public const int view_offset_helper = 2131427342;
 			
-			// aapt resource value: 0x7f0b00bd
-			public const int visible = 2131427517;
+			// aapt resource value: 0x7f0b00bf
+			public const int visible = 2131427519;
 			
 			// aapt resource value: 0x7f0b009e
 			public const int volume_item_container = 2131427486;
@@ -3852,6 +3873,12 @@ namespace MobileCRMAndroid
 			// aapt resource value: 0x7f030042
 			public const int support_simple_spinner_dropdown_item = 2130903106;
 			
+			// aapt resource value: 0x7f030043
+			public const int Tabbar = 2130903107;
+			
+			// aapt resource value: 0x7f030044
+			public const int Toolbar = 2130903108;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -4135,6 +4162,9 @@ namespace MobileCRMAndroid
 			
 			// aapt resource value: 0x7f0c0170
 			public const int Animation_Design_BottomSheetDialog = 2131493232;
+			
+			// aapt resource value: 0x7f0c018b
+			public const int AppCompatDialogStyle = 2131493259;
 			
 			// aapt resource value: 0x7f0c00b2
 			public const int Base_AlertDialog_AppCompat = 2131493042;
@@ -4611,13 +4641,10 @@ namespace MobileCRMAndroid
 			public const int CardView_Light = 2131492878;
 			
 			// aapt resource value: 0x7f0c0189
-			public const int MyTheme = 2131493257;
-			
-			// aapt resource value: 0x7f0c018b
-			public const int MyTheme_ActionBar_TitleTextStyle = 2131493259;
+			public const int MainTheme = 2131493257;
 			
 			// aapt resource value: 0x7f0c018a
-			public const int MyTheme_ActionBarStyle = 2131493258;
+			public const int MainTheme_Base = 2131493258;
 			
 			// aapt resource value: 0x7f0c002d
 			public const int Platform_AppCompat = 2131492909;

@@ -11,9 +11,9 @@ using Xamarin.Forms.Platform.Android;
 
 namespace EmployeeDirectory.Android
 {
-    [Activity(Label = "EmployeeDirectory", MainLauncher = true,
+	[Activity(Label = "EmployeeDirectory", Theme = "@style/MainTheme", MainLauncher = true,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : FormsApplicationActivity
+	public class MainActivity : FormsAppCompatActivity
     {
         internal static MainActivity Instance { get; private set; }
 
@@ -28,6 +28,9 @@ namespace EmployeeDirectory.Android
 
         protected override void OnCreate(Bundle bundle)
         {
+			TabLayoutResource = Resource.Layout.Tabbar;
+			ToolbarResource = Resource.Layout.Toolbar;
+
             base.OnCreate(bundle);
             Instance = this;
 

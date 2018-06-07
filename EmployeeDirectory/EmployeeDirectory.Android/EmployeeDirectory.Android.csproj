@@ -97,6 +97,8 @@
     <AndroidResource Include="Resources\drawable-hdpi\login_box.png" />
     <AndroidResource Include="Resources\drawable-mdpi\login_box.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_search.png" />
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
