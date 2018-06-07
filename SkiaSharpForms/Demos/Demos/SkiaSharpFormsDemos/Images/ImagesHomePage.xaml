@@ -14,8 +14,26 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Images.HelloBitmapPage}" />
 
-                
-                
+                <TextCell Text="Color Types"
+                          Detail="Explore the bitmap color types, or pixel formats"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Images.ColorTypesPage}" />
+
+                <TextCell Text="Finger Paint with Save"
+                          
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Images.FingerPaintSavePage}" />
+
+                <TextCell Text="File Formats" />
+
+                <TextCell Text="Animated GIF"
+                          Detail="Show the animated Newton's Cradle"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Images.AnimatedGifPage}" />
+
+
+
+
                 <!--<TextCell Text="Exploded Pie Chart"
                           Detail="Display a pie chart using the angle arc"
                           Command="{Binding NavigateCommand}"

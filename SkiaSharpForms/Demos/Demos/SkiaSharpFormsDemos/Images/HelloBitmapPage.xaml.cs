@@ -5,29 +5,6 @@ using Xamarin.Forms;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 
-
-
-
-
-
-
-
-
-
-
-
-
-using System.IO;
-
-
-
-
-
-
-
-
-
-
 namespace SkiaSharpFormsDemos.Images
 {
     public partial class HelloBitmapPage : ContentPage
@@ -39,7 +16,7 @@ namespace SkiaSharpFormsDemos.Images
         {
             InitializeComponent();
 
-            using (SKPaint textPaint = new SKPaint { TextSize = 24 })
+            using (SKPaint textPaint = new SKPaint { TextSize = 48 })
             {
                 SKRect bounds = new SKRect();
                 textPaint.MeasureText(TEXT, ref bounds);
@@ -56,17 +33,21 @@ namespace SkiaSharpFormsDemos.Images
                 }
             }
 
-            return;
+            //     return;
 
             // iOS: Requires NSPhotoLibraryUsageDescription in Info.plist
             // Android: Requires android.permission.WRITE_EXTERNAL_STORAGE in AndroidManifest.xml
             // UWP: Requires Pictures Library capability in Package.appxmanifest
+            /*
+                        SKImage image = SKImage.FromBitmap(helloBitmap);
+                        SKData data = image.Encode();
+                        string picturesPath = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+                        string filename = "whatsit.png";
+                        File.WriteAllBytes(Path.Combine(picturesPath, filename), data.ToArray());
+            */
 
-            SKImage image = SKImage.FromBitmap(helloBitmap);
-            SKData data = image.Encode();
-            string picturesPath = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-            string filename = "whatsit.png";
-            File.WriteAllBytes(Path.Combine(picturesPath, filename), data.ToArray());
+       //     IPhotoLibrary photoLibrary = DependencyService.Get<IPhotoLibrary>();
+       //     photoLibrary.SavePhotoAsync()
 
            
 

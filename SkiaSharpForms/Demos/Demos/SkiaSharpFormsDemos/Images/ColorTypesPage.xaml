@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp;assembly=SkiaSharp"
+             xmlns:skiaforms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="SkiaSharpFormsDemos.Images.ColorTypesPage"
+             Title="Bitmap Color Types">
+    
+    <StackLayout Margin="10">
+        <Picker x:Name="colorTypePicker"
+                Title="Color Type"
+                SelectedIndexChanged="OnPickerSelectedIndexChanged">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type skia:SKColorType}">
+                    <x:Static Member="skia:SKColorType.Alpha8" />
+                    <x:Static Member="skia:SKColorType.Argb4444" />
+                    <x:Static Member="skia:SKColorType.Bgra8888" />
+                    <x:Static Member="skia:SKColorType.Gray8" />
+                    <x:Static Member="skia:SKColorType.Index8" />
+                    <x:Static Member="skia:SKColorType.Rgb565" />
+                    <x:Static Member="skia:SKColorType.Rgba8888" />
+                    <x:Static Member="skia:SKColorType.RgbaF16" />
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <skiaforms:SKCanvasView x:Name="canvasView"
+                                VerticalOptions="CenterAndExpand"
+                                PaintSurface="OnCanvasViewPaintSurface" />
+    </StackLayout>
+</ContentPage>

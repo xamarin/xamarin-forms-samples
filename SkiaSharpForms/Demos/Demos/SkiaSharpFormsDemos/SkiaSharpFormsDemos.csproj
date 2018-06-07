@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Media\Newtons_cradle_animation_book_2.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="SkiaSharp" Version="1.60.0" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="1.60.0" />
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
@@ -28,6 +32,15 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Basics\PulsatingEllipsePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Images\AnimatedGifPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Images\ColorTypesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Images\FingerPaintSavePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Images\HelloBitmapPage.xaml">
@@ -148,6 +161,7 @@
     <EmbeddedResource Include="Media\Banana.jpg" />
     <EmbeddedResource Include="Media\FacePalm.jpg" />
     <EmbeddedResource Include="Media\MountainClimbers.jpg" />
+    <EmbeddedResource Include="Media\Newtons_cradle_animation_book_2.gif" />
     <EmbeddedResource Include="Media\SeatedMonkey.jpg" />
     <EmbeddedResource Include="Media\PageOfCode.png" />
   </ItemGroup>
