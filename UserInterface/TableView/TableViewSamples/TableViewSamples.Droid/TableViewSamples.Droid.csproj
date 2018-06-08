@@ -53,6 +53,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="TableViewSamples">
+      <HintPath>..\TableViewSamples\bin\Debug\netstandard2.0\TableViewSamples.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
