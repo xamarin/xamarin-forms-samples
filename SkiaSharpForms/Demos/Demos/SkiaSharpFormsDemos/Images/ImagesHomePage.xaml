@@ -8,7 +8,31 @@
     <TableView Intent="Menu">
         <TableRoot>
             <TableSection Title="Bitmap Creation and File Saving">
-                
+
+                <TextCell Text="Uniform Scaling"
+                          Detail="Stretch a bitmap without losing the aspect ratio"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Images.UniformScalingPage}" />
+
+                <TextCell Text="Scaling Modes"
+                          Detail="Select how a bitmap is scaled and aligned"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Images.ScalingModesPage}" />
+
+
+
+
+
+
+                <TextCell Text="Draw Nine Patch"
+                          
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Images.NinePatchPage}" />
+
+
+
+
+
                 <TextCell Text="Hello, Bitmap!"
                           Detail="Create a bitmap, draw on it, and render it"
                           Command="{Binding NavigateCommand}"

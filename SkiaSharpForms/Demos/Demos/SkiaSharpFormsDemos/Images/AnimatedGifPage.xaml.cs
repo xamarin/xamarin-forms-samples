@@ -25,36 +25,6 @@ namespace SkiaSharpFormsDemos.Images
 		{
 			InitializeComponent ();
 
-
-
-
-            TapGestureRecognizer tap = new TapGestureRecognizer();
-            tap.Tapped += (sender, args) =>
-            {
-
-                currentFrame += 1;
-
-                canvasView.InvalidateSurface();
-
-            };
-          
-
-
-
-
-
-
-            /*
-                        string resourceID = "SkiaSharpFormsDemos.Media.monkey.png";
-                        Assembly assembly = GetType().GetTypeInfo().Assembly;
-
-                        using (Stream stream = assembly.GetManifestResourceStream(resourceID))
-                        using (SKManagedStream skStream = new SKManagedStream(stream))
-                        {
-                            resourceBitmap = SKBitmap.Decode(skStream);
-                        }
-            */
-
             string resourceID = "SkiaSharpFormsDemos.Media.Newtons_cradle_animation_book_2.gif";
             Assembly assembly = GetType().GetTypeInfo().Assembly;
 
@@ -69,46 +39,26 @@ namespace SkiaSharpFormsDemos.Images
                 durations = new int[frameCount];
                 accumulatedDurations = new int[frameCount];
 
+                // Note: There's also a RepetitionCount property of SKCodec not used here
 
-
-                int repetitionCount = codec.RepetitionCount;
-
-                System.Diagnostics.Debug.WriteLine("{0} {1}", frameCount, repetitionCount);
-
-
-
-
-                foreach (SKCodecFrameInfo frameInfo in codec.FrameInfo)
-                {
-                    System.Diagnostics.Debug.WriteLine("{0} {1} {2} {3}", frameInfo.AlphaType, frameInfo.Duration, frameInfo.FullyRecieved, frameInfo.RequiredFrame);
-
-                }
-
+                // Loop through the frames
                 for (int frame = 0; frame < frameCount; frame++)
                 {
+                    // From the FrameInfo collection, get the duration of each frame
                     durations[frame] = codec.FrameInfo[frame].Duration;
-                }
 
+                    // Create a full-color bitmap for each frame
+                    SKImageInfo imageInfo = new SKImageInfo(codec.Info.Width, codec.Info.Height);
+                    bitmaps[frame] = new SKBitmap(imageInfo);
 
-                for (int frame = 0; frame < frameCount; frame++)
-                {
+                    // Get the address of the pixels in that bitmap
+                    IntPtr pointer = bitmaps[frame].GetPixels();
+
+                    // Create an SKCodecOptions value to specify the frame
                     SKCodecOptions codecOptions = new SKCodecOptions(frame, false);
 
-                    SKImageInfo imageInfo = new SKImageInfo(codec.Info.Width, codec.Info.Height);
-
-                    bitmaps[frame] = new SKBitmap(imageInfo); //, imageInfo.ColorType); // , imageInfo.AlphaType);
-
-                    byte[] pixels = new byte[imageInfo.BytesSize];
-
-                    unsafe
-                    {
-                        fixed (byte* p = pixels)
-                        {
-                            codec.GetPixels(imageInfo, (IntPtr)p, codecOptions);
-                            bitmaps[frame].SetPixels((IntPtr)p);
-                        }
-                    }
-
+                    // Copy pixels from the frame into the bitmap
+                    codec.GetPixels(imageInfo, pointer, codecOptions);
                 }
 
                 for (int frame = 0; frame < durations.Length; frame++)
@@ -116,22 +66,21 @@ namespace SkiaSharpFormsDemos.Images
                     totalDuration += durations[frame];
                 }
 
-
                 for (int frame = 0; frame < durations.Length; frame++)
                 {
                     accumulatedDurations[frame] = durations[frame] + 
                         (frame == 0 ? 0 : accumulatedDurations[frame - 1]);
                 }
-
-
-//                bitmap = SKBitmap.Decode(codec); // skStream
             }
 
-
             stopwatch.Start();
-   //         Device.StartTimer(TimeSpan.FromMilliseconds(16), OnTimerTick);
+            Device.StartTimer(TimeSpan.FromMilliseconds(16), OnTimerTick);
 
         }
+
+
+        // TODO: Appearing and Disappearing !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
         bool OnTimerTick()
         {
@@ -146,11 +95,8 @@ namespace SkiaSharpFormsDemos.Images
                 }
             }
 
-            System.Diagnostics.Debug.WriteLine(frame);
-
             currentFrame = frame;
             canvasView.InvalidateSurface();
-
             return true;
         }
 
@@ -161,12 +107,34 @@ namespace SkiaSharpFormsDemos.Images
             SKCanvas canvas = surface.Canvas;
 
             canvas.Clear(SKColors.Black);
+            
+                        SKBitmap bitmap = bitmaps[currentFrame];
+                        int x = (info.Width - bitmap.Width) / 2;
+                        int y = (info.Height - bitmap.Height) / 2;
 
-            SKBitmap bitmap = bitmaps[currentFrame];
-            int x = (info.Width - bitmap.Width) / 2;
-            int y = (info.Height - bitmap.Height) / 2;
+                        canvas.DrawBitmap(bitmap, x, y);
+            
+/*
+            float width = info.Width / 6;
+            float height = info.Height / 6;
 
-            canvas.DrawBitmap(bitmap, x, y);
+            for (int frame = 0; frame < bitmaps.Length; frame++)
+            {
+                float x = (frame % 6) * width;
+                float y = (frame / 6) * height;
+
+                SKRect rect = new SKRect(x, y, x + width, y + height);
+
+                try
+                {
+                    canvas.DrawBitmap(bitmaps[frame], rect);
+                }
+                catch (Exception exc)
+                {
+                    Debug.WriteLine("frame {0} {1}", frame, exc);
+                }
+            }
+*/
         }
     }
 }

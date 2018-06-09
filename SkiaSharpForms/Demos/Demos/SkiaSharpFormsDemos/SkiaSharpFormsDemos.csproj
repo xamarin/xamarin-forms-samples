@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Media\MonkeyFace.png" />
     <None Remove="Media\Newtons_cradle_animation_book_2.gif" />
   </ItemGroup>
 
@@ -47,6 +48,15 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Images\ImagesHomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Images\NinePatchPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Images\ScalingModesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Images\UniformScalingPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Paths\MultipleLinesPage.xaml">
@@ -160,6 +170,7 @@
     <EmbeddedResource Include="Media\monkey.png" />
     <EmbeddedResource Include="Media\Banana.jpg" />
     <EmbeddedResource Include="Media\FacePalm.jpg" />
+    <EmbeddedResource Include="Media\MonkeyFace.png" />
     <EmbeddedResource Include="Media\MountainClimbers.jpg" />
     <EmbeddedResource Include="Media\Newtons_cradle_animation_book_2.gif" />
     <EmbeddedResource Include="Media\SeatedMonkey.jpg" />
