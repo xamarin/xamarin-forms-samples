@@ -9,14 +9,17 @@ using Xamarin.Forms;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 
-namespace SkiaSharpFormsDemos.Images
+namespace SkiaSharpFormsDemos.Bitmaps
 {
-    public partial class ScalingModesPage : ContentPage
-    {
+	public partial class RectangleSubsetPage : ContentPage
+	{
         SKBitmap bitmap =
-            BitmapExtensions.LoadBitmapResource(typeof(ScalingModesPage),
-                                                "SkiaSharpFormsDemos.Media.SeatedMonkey.jpg");
-        public ScalingModesPage()
+            BitmapExtensions.LoadBitmapResource(typeof(RectangleSubsetPage),
+                                                "SkiaSharpFormsDemos.Media.Banana.jpg");
+
+        static readonly SKRect SOURCE = new SKRect(94, 12, 212, 118);
+
+        public RectangleSubsetPage()
         {
             InitializeComponent();
         }
@@ -34,13 +37,13 @@ namespace SkiaSharpFormsDemos.Images
 
             canvas.Clear();
 
-            SKRect destRect = new SKRect(0, 0, info.Width, info.Height);
+            SKRect dest = new SKRect(0, 0, info.Width, info.Height);
 
             BitmapStretch stretch = (BitmapStretch)stretchPicker.SelectedItem;
             BitmapAlignment horizontal = (BitmapAlignment)horizontalPicker.SelectedItem;
             BitmapAlignment vertical = (BitmapAlignment)verticalPicker.SelectedItem;
 
-            canvas.DrawBitmap(bitmap, destRect, stretch, horizontal, vertical);
+            canvas.DrawBitmap(bitmap, SOURCE, dest, stretch, horizontal, vertical);
         }
     }
 }

@@ -1,28 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 
-namespace SkiaSharpFormsDemos.Images
+namespace SkiaSharpFormsDemos.Bitmaps
 {
-	public partial class UniformScalingPage : ContentPage
-	{
-        SKBitmap bitmap = 
-            BitmapExtensions.LoadBitmapResource(typeof(UniformScalingPage), 
-                                                "SkiaSharpFormsDemos.Media.Banana.jpg");
+    public partial class NinePatchPage : ContentPage
+    {
+        SKBitmap bitmap;
 
-		public UniformScalingPage ()
-		{
-			InitializeComponent ();
+        public NinePatchPage()
+        {
+            InitializeComponent();
 
-
-
-/*
-            string resourceID = "SkiaSharpFormsDemos.Media.Banana.jpg";
+            string resourceID = "SkiaSharpFormsDemos.Media.MonkeyFace.png";
             Assembly assembly = GetType().GetTypeInfo().Assembly;
 
             using (Stream stream = assembly.GetManifestResourceStream(resourceID))
@@ -30,7 +29,6 @@ namespace SkiaSharpFormsDemos.Images
             {
                 bitmap = SKBitmap.Decode(skStream);
             }
-*/
         }
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -46,7 +44,11 @@ namespace SkiaSharpFormsDemos.Images
             float y = (info.Height - scale * bitmap.Height) / 2;
             SKRect destRect = new SKRect(x, y, x + scale * bitmap.Width, y + scale * bitmap.Height);
 
-            canvas.DrawBitmap(bitmap, destRect);
+            SKRectI centerRect = new SKRectI(200, 190, 430, 270);
+
+            canvas.DrawBitmapNinePatch(bitmap, centerRect, destRect);
+
+      //      canvas.DrawBitmap(bitmap, destRect);
         }
     }
 }

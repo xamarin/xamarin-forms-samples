@@ -8,7 +8,7 @@ using Xamarin.Forms;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 
-namespace SkiaSharpFormsDemos.Images
+namespace SkiaSharpFormsDemos.Bitmaps
 {
 	public partial class AnimatedGifPage : ContentPage
 	{

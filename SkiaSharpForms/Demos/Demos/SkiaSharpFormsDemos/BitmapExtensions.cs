@@ -18,7 +18,7 @@ namespace SkiaSharpFormsDemos
             }
         }
 
-        public static void DrawBitmap(this SKCanvas canvas, SKBitmap bitmap, SKRect destRect, 
+        public static void DrawBitmap(this SKCanvas canvas, SKBitmap bitmap, SKRect dest, 
                                       BitmapStretch stretch, 
                                       BitmapAlignment horizontal = BitmapAlignment.Center, 
                                       BitmapAlignment vertical = BitmapAlignment.Center, 
@@ -26,7 +26,7 @@ namespace SkiaSharpFormsDemos
         {
             if (stretch == BitmapStretch.Fill)
             {
-                canvas.DrawBitmap(bitmap, destRect, paint);
+                canvas.DrawBitmap(bitmap, dest, paint);
             }
             else
             {
@@ -38,20 +38,55 @@ namespace SkiaSharpFormsDemos
                         break;
 
                     case BitmapStretch.Uniform:
-                        scale = Math.Min(destRect.Width / bitmap.Width, destRect.Height / bitmap.Height);
+                        scale = Math.Min(dest.Width / bitmap.Width, dest.Height / bitmap.Height);
                         break;
 
                     case BitmapStretch.UniformToFill:
-                        scale = Math.Max(destRect.Width / bitmap.Width, destRect.Height / bitmap.Height);
+                        scale = Math.Max(dest.Width / bitmap.Width, dest.Height / bitmap.Height);
                         break;
                 }
 
-                SKRect dispRect = CalculateDisplayRect(destRect, scale * bitmap.Width, scale * bitmap.Height, horizontal, vertical);
+                SKRect display = CalculateDisplayRect(dest, scale * bitmap.Width, scale * bitmap.Height, horizontal, vertical);
 
-                canvas.DrawBitmap(bitmap, dispRect, paint);
+                canvas.DrawBitmap(bitmap, display, paint);
             }
         }
-        static SKRect CalculateDisplayRect(SKRect destRect, float bmpWidth, float bmpHeight, BitmapAlignment horizontal, BitmapAlignment vertical)
+
+        public static void DrawBitmap(this SKCanvas canvas, SKBitmap bitmap, SKRect source, SKRect dest,
+                                      BitmapStretch stretch,
+                                      BitmapAlignment horizontal = BitmapAlignment.Center,
+                                      BitmapAlignment vertical = BitmapAlignment.Center,
+                                      SKPaint paint = null)
+        {
+            if (stretch == BitmapStretch.Fill)
+            {
+                canvas.DrawBitmap(bitmap, source, dest, paint);
+            }
+            else
+            {
+                float scale = 1;
+
+                switch (stretch)
+                {
+                    case BitmapStretch.None:
+                        break;
+
+                    case BitmapStretch.Uniform:
+                        scale = Math.Min(dest.Width / source.Width, dest.Height / source.Height);
+                        break;
+
+                    case BitmapStretch.UniformToFill:
+                        scale = Math.Max(dest.Width / source.Width, dest.Height / source.Height);
+                        break;
+                }
+
+                SKRect display = CalculateDisplayRect(dest, scale * source.Width, scale * source.Height, horizontal, vertical);
+
+                canvas.DrawBitmap(bitmap, source, display, paint);
+            }
+        }
+
+        static SKRect CalculateDisplayRect(SKRect dest, float bmpWidth, float bmpHeight, BitmapAlignment horizontal, BitmapAlignment vertical)
         {
             float x = 0;
             float y = 0;
@@ -59,33 +94,33 @@ namespace SkiaSharpFormsDemos
             switch (horizontal)
             {
                 case BitmapAlignment.Center:
-                    x = (destRect.Width - bmpWidth) / 2;
+                    x = (dest.Width - bmpWidth) / 2;
                     break;
 
                 case BitmapAlignment.Start:
                     break;
 
                 case BitmapAlignment.End:
-                    x = destRect.Width - bmpWidth;
+                    x = dest.Width - bmpWidth;
                     break;
             }
 
             switch (vertical)
             {
                 case BitmapAlignment.Center:
-                    y = (destRect.Height - bmpHeight) / 2;
+                    y = (dest.Height - bmpHeight) / 2;
                     break;
 
                 case BitmapAlignment.Start:
                     break;
 
                 case BitmapAlignment.End:
-                    y = destRect.Height - bmpHeight;
+                    y = dest.Height - bmpHeight;
                     break;
             }
 
-            x += destRect.Left;
-            y += destRect.Top;
+            x += dest.Left;
+            y += dest.Top;
 
             return new SKRect(x, y, x + bmpWidth, y + bmpHeight);
         }

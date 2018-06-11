@@ -32,7 +32,7 @@
                 <TextCell Text="SkiaSharp Bitmaps and Images"
                           
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Images.ImagesHomePage}" />
+                          CommandParameter="{x:Type local:Bitmaps.BitmapsHomePage}" />
 
                 
                 <TextCell Text="Porter-Duff Blend Modes"

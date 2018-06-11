@@ -20,6 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Bitmaps\RectangleSubsetPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Effects\PorterDuffBlendModesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -35,28 +38,25 @@
     <EmbeddedResource Update="Basics\PulsatingEllipsePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Images\AnimatedGifPage.xaml">
+    <EmbeddedResource Update="Bitmaps\AnimatedGifPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Images\ColorTypesPage.xaml">
+    <EmbeddedResource Update="Bitmaps\ColorTypesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Images\FingerPaintSavePage.xaml">
+    <EmbeddedResource Update="Bitmaps\FingerPaintSavePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Images\HelloBitmapPage.xaml">
+    <EmbeddedResource Update="Bitmaps\HelloBitmapPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Images\ImagesHomePage.xaml">
+    <EmbeddedResource Update="Bitmaps\BitmapsHomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Images\NinePatchPage.xaml">
+    <EmbeddedResource Update="Bitmaps\NinePatchPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Images\ScalingModesPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Images\UniformScalingPage.xaml">
+    <EmbeddedResource Update="Bitmaps\ScalingModesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Paths\MultipleLinesPage.xaml">
@@ -178,8 +178,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Images\HelloBitmapPage.xaml.cs">
+    <Compile Update="Bitmaps\HelloBitmapPage.xaml.cs">
       <DependentUpon>HelloBitmapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Bitmaps\BitmapsHomePage.xaml.cs">
+      <DependentUpon>BitmapsHomePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 

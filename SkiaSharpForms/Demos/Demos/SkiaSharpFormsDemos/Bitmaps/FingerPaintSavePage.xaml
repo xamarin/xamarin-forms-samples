@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              xmlns:tt="clr-namespace:TouchTracking"
-             x:Class="SkiaSharpFormsDemos.Images.FingerPaintSavePage"
+             x:Class="SkiaSharpFormsDemos.Bitmaps.FingerPaintSavePage"
              Title="Finger Paint Save">
 
     <StackLayout>

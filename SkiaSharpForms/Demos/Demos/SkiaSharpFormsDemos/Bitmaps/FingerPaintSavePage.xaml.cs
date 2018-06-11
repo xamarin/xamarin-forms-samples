@@ -8,7 +8,7 @@ using TouchTracking;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 
-namespace SkiaSharpFormsDemos.Images
+namespace SkiaSharpFormsDemos.Bitmaps
 {
 	public partial class FingerPaintSavePage : ContentPage
 	{

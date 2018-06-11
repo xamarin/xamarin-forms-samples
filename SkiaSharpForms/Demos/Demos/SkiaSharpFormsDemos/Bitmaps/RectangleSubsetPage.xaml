@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:SkiaSharpFormsDemos"
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
-             x:Class="SkiaSharpFormsDemos.Images.ScalingModesPage"
-             Title="Scaling Modes">
+             x:Class="SkiaSharpFormsDemos.Bitmaps.RectangleSubsetPage"
+             Title="Rectangle Subset">
 
     <Grid Padding="10">
         <Grid.RowDefinitions>

@@ -2,23 +2,42 @@
 <local:HomeBasePage xmlns="http://xamarin.com/schemas/2014/forms"
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                     xmlns:local="clr-namespace:SkiaSharpFormsDemos"
-                    x:Class="SkiaSharpFormsDemos.Images.ImagesHomePage"
+                    x:Class="SkiaSharpFormsDemos.Bitmaps.BitmapsHomePage"
                     Title="SkiaSharp Bitmaps and Images"
                     Padding="10">
     <TableView Intent="Menu">
         <TableRoot>
-            <TableSection Title="Bitmap Creation and File Saving">
+            <TableSection Title="Displaying Bitmaps">
+                <TextCell Text="Pixel Dimensions"
+                          Detail="Display a bitmap in its pixel dimensions"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.PixelDimensionsPage}" />
+
+                <TextCell Text="Fill Rectangle"
+                          Detail="Display a bitmap stretched to a rectangle"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.FillRectanglePage}" />
 
                 <TextCell Text="Uniform Scaling"
                           Detail="Stretch a bitmap without losing the aspect ratio"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Images.UniformScalingPage}" />
+                          CommandParameter="{x:Type local:Bitmaps.UniformScalingPage}" />
 
                 <TextCell Text="Scaling Modes"
                           Detail="Select how a bitmap is scaled and aligned"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Images.ScalingModesPage}" />
+                          CommandParameter="{x:Type local:Bitmaps.ScalingModesPage}" />
 
+                <TextCell Text="Rectangle Subset"
+                          Detail="Display a rectangular subset of a bitmap"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.RectangleSubsetPage}" />
+            </TableSection>
+            
+            
+            
+            
+            <TableSection Title="Bitmap Creation and File Saving">
 
 
 
@@ -27,7 +46,7 @@
                 <TextCell Text="Draw Nine Patch"
                           
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Images.NinePatchPage}" />
+                          CommandParameter="{x:Type local:Bitmaps.NinePatchPage}" />
 
 
 
@@ -36,24 +55,24 @@
                 <TextCell Text="Hello, Bitmap!"
                           Detail="Create a bitmap, draw on it, and render it"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Images.HelloBitmapPage}" />
+                          CommandParameter="{x:Type local:Bitmaps.HelloBitmapPage}" />
 
                 <TextCell Text="Color Types"
                           Detail="Explore the bitmap color types, or pixel formats"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Images.ColorTypesPage}" />
+                          CommandParameter="{x:Type local:Bitmaps.ColorTypesPage}" />
 
                 <TextCell Text="Finger Paint with Save"
                           
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Images.FingerPaintSavePage}" />
+                          CommandParameter="{x:Type local:Bitmaps.FingerPaintSavePage}" />
 
                 <TextCell Text="File Formats" />
 
                 <TextCell Text="Animated GIF"
                           Detail="Show the animated Newton's Cradle"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Images.AnimatedGifPage}" />
+                          CommandParameter="{x:Type local:Bitmaps.AnimatedGifPage}" />
 
 
 
