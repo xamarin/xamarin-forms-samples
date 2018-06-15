@@ -24,21 +24,21 @@
     <Folder Include="Properties\" />
     <Folder Include="res\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HelloXamarinFormsWorldXaml\HelloXamarinFormsWorldXaml.csproj" />
-  </ItemGroup>
 
   <!-- Include Nuget Package for Tizen Project building -->
   <ItemGroup>
     <PackageReference Include="Tizen.NET" Version="4.0.0">
       <ExcludeAssets>Runtime</ExcludeAssets>
     </PackageReference>
-    <PackageReference Include="Tizen.NET.Sdk" Version="1.0.0" />
-    <PackageReference Include="Xamarin.Forms.Platform.Tizen" Version="2.4.0.18342" />
+    <PackageReference Include="Tizen.NET.Sdk" Version="1.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HelloFormsXaml\HelloFormsXaml.csproj" />
   </ItemGroup>
 
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
-  <Import Project="$(TizenProjectExtensionsPath)Tizen.NET.ProjectType.targets" Condition="Exists('$(TizenProjectExtensionsPath)Tizen.NET.ProjectType.targets')" />
+  <!-- <Import Project="$(TizenProjectExtensionsPath)Tizen.NET.ProjectType.targets" Condition="Exists('$(TizenProjectExtensionsPath)Tizen.NET.ProjectType.targets')" />-->
 
   <!-- Install Check 'Visual Studio for Tizen' for developing on Visual Studio -->
   <Target Name="TizenVsixInstallCheck" BeforeTargets="CompileDesignTime">
