@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns="http://tizen.org/ns/packages" api-version="4.0" package="XamarinFormsSample.Tizen" version="1.0.7">
+<manifest xmlns="http://tizen.org/ns/packages" api-version="4" package="XamarinFormsSample.Tizen" version="1.0.7">
 	<profile name="common" />
 	<ui-application appid="org.tizen.example.XamarinFormsSample.Tizen"
 					exec="XamarinFormsSample.Tizen.dll"
