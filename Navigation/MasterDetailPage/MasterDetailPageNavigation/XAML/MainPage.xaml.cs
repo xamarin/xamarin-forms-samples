@@ -9,7 +9,7 @@ namespace MasterDetailPageNavigation
         {
             InitializeComponent();
 
-            masterPage.ListView.ItemSelected += OnItemSelected;
+            masterPage.listView.ItemSelected += OnItemSelected;
 
             if (Device.RuntimePlatform == Device.UWP)
             {
@@ -23,7 +23,7 @@ namespace MasterDetailPageNavigation
             if (item != null)
             {
                 Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
-                masterPage.ListView.SelectedItem = null;
+                masterPage.listView.SelectedItem = null;
                 IsPresented = false;
             }
         }
