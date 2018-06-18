@@ -26,6 +26,6 @@
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TabbedPageDemo\TabbedPageDemo\TabbedPageDemo.csproj" />
+    <ProjectReference Include="..\TabbedPageDemo\TabbedPageDemo.csproj" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2006
@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabbedPageDemo", "TabbedPag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabbedPageDemo.UWP", "TabbedPageDemo\TabbedPageDemo.UWP\TabbedPageDemo.UWP.csproj", "{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabbedPageDemo.Tizen", "Tizen\TabbedPageDemo.Tizen.csproj", "{014D3AC2-D1EE-48F4-9DF7-9CE11DF94475}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabbedPageDemo.Tizen", "TabbedPageDemo\TabbedPageDemo.Tizen\TabbedPageDemo.Tizen.csproj", "{014D3AC2-D1EE-48F4-9DF7-9CE11DF94475}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
