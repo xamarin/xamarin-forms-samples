@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{008358A4-C561-4ACE-A1B6-B215E3D5E008}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TodoRedux</RootNamespace>
+    <AssemblyName>TodoRedux</AssemblyName>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="State\ApplicationState.cs" />
+    <Compile Include="State\TodoItem.cs" />
+    <Compile Include="Reducers\Reducers.cs" />
+    <Compile Include="Reducers\TodoReducers.cs" />
+    <Compile Include="Actions\AddTodoAction.cs" />
+    <Compile Include="Actions\RemoveTodoAction.cs" />
+    <Compile Include="ViewModels\TodoItemViewModel.cs" />
+    <Compile Include="ViewModels\TodoListViewModel.cs" />
+    <Compile Include="ActionCreators\TodoActionCreators.cs" />
+    <Compile Include="Helpers\StoreExtensions.cs" />
+    <Compile Include="Helpers\PropertyChangedExtensions.cs" />
+    <Compile Include="Actions\UpdateTodoAction.cs" />
+    <Compile Include="Helpers\IFileHelper.cs" />
+    <Compile Include="Middleware\DatabaseMiddleware.cs" />
+    <Compile Include="Actions\FetchTodosAction.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+    <Compile Include="Views\TodoItemPage.xaml.cs">
+      <DependentUpon>TodoItemPage.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\TodoItemPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Views\TodoListPage.xaml.cs">
+      <DependentUpon>TodoListPage.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\TodoListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="State\" />
+    <Folder Include="Actions\" />
+    <Folder Include="Reducers\" />
+    <Folder Include="ActionCreators\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Middleware\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+</Project>
