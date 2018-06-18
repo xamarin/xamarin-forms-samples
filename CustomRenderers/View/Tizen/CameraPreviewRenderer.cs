@@ -21,15 +21,15 @@ namespace CustomRenderer
                 try
                 {
                     Camera = new Camera(SelectedCamera);
-                    var mediaView = new MediaView(Forms.Context.MainWindow);
+                    var mediaView = new MediaView(Forms.NativeParent);
                     Camera.Display = new Display(mediaView);
-                    SetNativeControl(mediaView);
+                    SetNativeView(mediaView);
                 }
                 catch (System.Exception ex)
                 {
                     Camera?.Dispose();
                     Camera = null;
-                    SetNativeControl(new ElmSharp.Label(Forms.Context.MainWindow)
+                    SetNativeView(new ElmSharp.Label(Forms.NativeParent)
                     {
                         Text = $"Camera preview is not available.<br><br>{ex}",
                         LineWrapType = ElmSharp.WrapType.Word

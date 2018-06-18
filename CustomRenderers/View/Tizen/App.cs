@@ -7,7 +7,7 @@ namespace CustomRenderer.Tizen
         protected override void OnCreate()
         {
             base.OnCreate();
-            Forms.Context.MainWindow.AvailableRotations = ElmSharp.DisplayRotation.Degree_0;
+            MainWindow.AvailableRotations = ElmSharp.DisplayRotation.Degree_0;
             LoadApplication(new App());
         }
 
