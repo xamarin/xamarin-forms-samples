@@ -235,7 +235,7 @@ Global
 		{9C9E6DD6-3CE5-4815-A85A-4953AD5509D2}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
 		{9C9E6DD6-3CE5-4815-A85A-4953AD5509D2}.AppStore|x64.ActiveCfg = AppStore|iPhone
 		{9C9E6DD6-3CE5-4815-A85A-4953AD5509D2}.AppStore|x86.ActiveCfg = AppStore|iPhone
-		{9C9E6DD6-3CE5-4815-A85A-4953AD5509D2}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{9C9E6DD6-3CE5-4815-A85A-4953AD5509D2}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
 		{9C9E6DD6-3CE5-4815-A85A-4953AD5509D2}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{9C9E6DD6-3CE5-4815-A85A-4953AD5509D2}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{9C9E6DD6-3CE5-4815-A85A-4953AD5509D2}.Debug|iPhone.Build.0 = Debug|iPhone
@@ -251,6 +251,7 @@ Global
 		{9C9E6DD6-3CE5-4815-A85A-4953AD5509D2}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{9C9E6DD6-3CE5-4815-A85A-4953AD5509D2}.Release|x64.ActiveCfg = Release|iPhone
 		{9C9E6DD6-3CE5-4815-A85A-4953AD5509D2}.Release|x86.ActiveCfg = Release|iPhone
+		{9C9E6DD6-3CE5-4815-A85A-4953AD5509D2}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

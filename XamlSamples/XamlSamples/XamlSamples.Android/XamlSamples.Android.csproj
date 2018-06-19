@@ -82,7 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XamlSamples\XamlSamples.csproj">
-      <Project>{decbc9ae-0d58-40b3-a26e-ef0a3412cb9e}</Project>
+      <Project>{46D21F2B-1F1C-4778-9DD2-999ACDAEFA46}</Project>
       <Name>XamlSamples</Name>
     </ProjectReference>
   </ItemGroup>
