@@ -8,7 +8,7 @@ namespace DependencyServiceSample.Tizen
 	{
 		public DeviceOrientations GetOrientation()
 		{
-            var rotation = Forms.Context.MainWindow.Rotation;
+            var rotation = Program.Instance.Rotation;
             bool isLandscape = rotation == 90 || rotation == 270;
 			return isLandscape ? DeviceOrientations.Landscape : DeviceOrientations.Portrait;
 		}

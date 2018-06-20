@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyServiceSample.Dro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyServiceSample.UWP", "UWP\DependencyServiceSample.UWP.csproj", "{505EE333-D78B-4122-89AD-5C13D9DE16A0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyServiceSample.Tizen", "Tizen\DependencyServiceSample.Tizen.csproj", "{C84A4121-B398-4DF7-B102-95408E6CF380}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyServiceSample.Tizen", "Tizen\DependencyServiceSample.Tizen.csproj", "{C84A4121-B398-4DF7-B102-95408E6CF380}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
