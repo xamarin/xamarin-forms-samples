@@ -8,7 +8,7 @@
 					taskmanage="true"
 					launch_mode="single">
 	<icon>BoxViewClock.Tizen.png</icon>
-	<label>BoxViewClock.Tizen</label>
+	<label>BoxViewClock</label>
 	<metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
 	</ui-application>
 </manifest>

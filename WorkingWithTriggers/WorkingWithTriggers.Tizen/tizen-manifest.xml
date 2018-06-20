@@ -8,7 +8,7 @@
 					taskmanage="true"
 					launch_mode="single">
 	<icon>WorkingWithTriggers.Tizen.png</icon>
-	<label>WorkingWithTriggers.Tizen</label>
+	<label>WorkingWithTriggers</label>
 	<metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
 	</ui-application>
 </manifest>

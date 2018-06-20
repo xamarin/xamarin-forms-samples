@@ -2,7 +2,7 @@
 <manifest package="org.tizen.example.TabbedPageDemo.Tizen" version="1.0.0" api-version="4" xmlns="http://tizen.org/ns/packages">
     <profile name="common" />
     <ui-application appid="org.tizen.example.TabbedPageDemo.Tizen" exec="TabbedPageDemo.Tizen.dll" multiple="false" nodisplay="false" taskmanage="true" splash-screen-display="true" type="dotnet" launch_mode="single">
-        <label>TabbedPageDemo.Tizen</label>
+        <label>TabbedPageDemo</label>
         <icon>TabbedPageDemo.Tizen.png</icon>
         <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
     </ui-application>

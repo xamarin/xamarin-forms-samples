@@ -8,7 +8,7 @@
 					taskmanage="true"
 					nodisplay="false"
 					launch_mode="single">
-    <label>EventToCommandBehavior.Tizen</label>
+    <label>EventToCommandBehavior</label>
     <icon>EventToCommandBehavior.Tizen.png</icon>
     <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
   </ui-application>

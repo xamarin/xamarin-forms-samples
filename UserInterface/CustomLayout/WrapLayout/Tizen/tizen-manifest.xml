@@ -9,7 +9,7 @@
 									splash-screen-display="true" 
 									type="dotnet" 
 									launch_mode="single">
-    <label>ImageWrapLayout.Tizen</label>
+    <label>ImageWrapLayout</label>
     <icon>ImageWrapLayout.Tizen.png</icon>
     <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
   </ui-application>

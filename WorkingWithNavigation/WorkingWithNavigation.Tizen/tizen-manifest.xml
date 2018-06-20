@@ -3,7 +3,7 @@
     <profile name="common" />
     <ui-application appid="org.tizen.example.WorkingWithNavigation.Tizen" exec="WorkingWithNavigation.Tizen.dll" multiple="false" taskmanage="true" splash-screen-display="true" type="dotnet" launch_mode="single">
         <icon>WorkingWithNavigation.Tizen.png</icon>
-        <label>WorkingWithNavigation.Tizen</label>
+        <label>WorkingWithNavigation</label>
         <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
     </ui-application>
     <shortcut-list />

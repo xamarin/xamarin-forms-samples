@@ -9,7 +9,7 @@
 									splash-screen-display="true" 
 									type="dotnet" 
 									launch_mode="single">
-    <label>MonkeyApp.Tizen</label>
+    <label>MonkeyApp</label>
     <icon>MonkeyApp.Tizen.png</icon>
     <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
   </ui-application>

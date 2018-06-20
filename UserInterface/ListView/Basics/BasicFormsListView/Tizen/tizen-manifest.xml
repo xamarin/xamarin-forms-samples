@@ -8,7 +8,7 @@
 					taskmanage="true"
 					nodisplay="false"
 					launch_mode="single">
-    <label>BasicFormsListView.Tizen</label>
+    <label>BasicFormsListView</label>
     <icon>BasicFormsListView.Tizen.png</icon>
     <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
   </ui-application>

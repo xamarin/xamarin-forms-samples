@@ -8,7 +8,7 @@
 					taskmanage="true"
 					launch_mode="single">
 	<icon>HelloXamarinFormsWorld.Tizen.png</icon>
-	<label>HelloXamarinFormsWorld.Tizen</label>
+	<label>HelloXamarinFormsWorld</label>
 	<metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
 	</ui-application>
 </manifest>

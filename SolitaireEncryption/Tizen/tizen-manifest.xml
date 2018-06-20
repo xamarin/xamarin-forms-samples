@@ -8,7 +8,7 @@
 					taskmanage="true"
 					launch_mode="single">
 	<icon>Solitaire.Tizen.png</icon>
-	<label>Solitaire.Tizen</label>
+	<label>Solitaire</label>
 	<metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
 	</ui-application>
 </manifest>

@@ -3,7 +3,7 @@
     <profile name="common" />
     <ui-application appid="org.tizen.example.CustomRenderer.Entry.Tizen" exec="CustomRenderer.Tizen.dll" multiple="false" taskmanage="true" splash-screen-display="true" type="dotnet" launch_mode="single">
         <icon>CustomRenderer.Tizen.png</icon>
-        <label>CustomRenderer.Entry.Tizen</label>
+        <label>CustomRenderer.Entry</label>
         <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
     </ui-application>
     <shortcut-list />

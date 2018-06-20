@@ -8,7 +8,7 @@
 					taskmanage="true"
 					nodisplay="false"
 					launch_mode="single">
-    <label>ModalNavigation.Tizen</label>
+    <label>ModalNavigation</label>
     <icon>ModalNavigation.Tizen.png</icon>
     <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
   </ui-application>
