@@ -42,12 +42,20 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.HelloBitmapPage}" />
 
-
+                <TextCell Text="Monkey Moustache"
+                          Detail="Draw a moustache on a monkey"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.MonkeyMoustachePage}" />
 
                 <TextCell Text="Color Types"
                           Detail="Explore the bitmap color types, or pixel formats"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.ColorTypesPage}" />
+
+                <TextCell Text="Photo Cropping"
+                          Detail="Interactively define a bitmap cropping rectangle"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.PhotoCroppingPage}" />
 
 
             </TableSection>

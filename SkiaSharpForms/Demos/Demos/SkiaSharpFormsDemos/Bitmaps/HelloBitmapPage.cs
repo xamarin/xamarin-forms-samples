@@ -14,8 +14,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
         public HelloBitmapPage()
         {
-            InitializeComponent();
-
+            // Create bitmap and draw on it
             using (SKPaint textPaint = new SKPaint { TextSize = 48 })
             {
                 SKRect bounds = new SKRect();
@@ -23,7 +22,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
                 System.Diagnostics.Debug.WriteLine(bounds);
 
-                helloBitmap = new SKBitmap((int)bounds.Right, 
+                helloBitmap = new SKBitmap((int)bounds.Right,
                                            (int)bounds.Height);
 
                 using (SKCanvas bitmapCanvas = new SKCanvas(helloBitmap))
@@ -32,6 +31,13 @@ namespace SkiaSharpFormsDemos.Bitmaps
                     bitmapCanvas.DrawText(TEXT, 0, -bounds.Top, textPaint);
                 }
             }
+
+            // Create CanvasView 
+            SKCanvasView canvasView = new SKCanvasView();
+            canvasView.PaintSurface += OnCanvasViewPaintSurface;
+            Content = canvasView;
+
+
 
             //     return;
 
@@ -46,10 +52,10 @@ namespace SkiaSharpFormsDemos.Bitmaps
                         File.WriteAllBytes(Path.Combine(picturesPath, filename), data.ToArray());
             */
 
-       //     IPhotoLibrary photoLibrary = DependencyService.Get<IPhotoLibrary>();
-       //     photoLibrary.SavePhotoAsync()
+            //     IPhotoLibrary photoLibrary = DependencyService.Get<IPhotoLibrary>();
+            //     photoLibrary.SavePhotoAsync()
 
-           
+
 
 
         }

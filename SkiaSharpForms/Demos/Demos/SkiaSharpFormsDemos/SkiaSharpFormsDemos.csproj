@@ -20,10 +20,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Bitmaps\PhotoCroppingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Bitmaps\RectangleSubsetPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Effects\PorterDuffBlendModesPage.xaml">
+    <EmbeddedResource Update="Curves\Effects\PorterDuffBlendModesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="HomePage.xaml">
@@ -45,9 +48,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Bitmaps\FingerPaintSavePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Bitmaps\HelloBitmapPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Bitmaps\BitmapsHomePage.xaml">
@@ -178,9 +178,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Bitmaps\HelloBitmapPage.xaml.cs">
-      <DependentUpon>HelloBitmapPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Bitmaps\BitmapsHomePage.xaml.cs">
       <DependentUpon>BitmapsHomePage.xaml</DependentUpon>
     </Compile>
