@@ -5,7 +5,7 @@
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SkiaSharpFormsDemos.Bitmaps.ScalingModesPage"
              Title="Scaling Modes">
-
+    
     <Grid Padding="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -24,7 +24,8 @@
                            PaintSurface="OnCanvasViewPaintSurface" />
 
         <Label Text="Stretch:"
-               Grid.Row="1" Grid.Column="0" />
+               Grid.Row="1" Grid.Column="0"
+               VerticalOptions="Center" />
 
         <Picker x:Name="stretchPicker"
                 Grid.Row="1" Grid.Column="1"
@@ -44,7 +45,8 @@
         </Picker>
 
         <Label Text="Horizontal Alignment:"
-               Grid.Row="2" Grid.Column="0" />
+               Grid.Row="2" Grid.Column="0"
+               VerticalOptions="Center" />
 
         <Picker x:Name="horizontalPicker" 
                 Grid.Row="2" Grid.Column="1"
@@ -63,7 +65,8 @@
         </Picker>
 
         <Label Text="Vertical Alignment:"
-               Grid.Row="3" Grid.Column="0" />
+               Grid.Row="3" Grid.Column="0"
+               VerticalOptions="Center" />
 
         <Picker x:Name="verticalPicker" 
                 Grid.Row="3" Grid.Column="1"

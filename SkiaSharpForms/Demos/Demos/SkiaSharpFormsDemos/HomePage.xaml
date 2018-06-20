@@ -28,16 +28,14 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.CurvesHomePage}" />
 
-                
                 <TextCell Text="SkiaSharp Bitmaps and Images"
-                          
+                          Detail="Create, draw on, save, and animate bitmaps"                          
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.BitmapsHomePage}" />
 
-                
-                <TextCell Text="Porter-Duff Blend Modes"
+                <!--<TextCell Text="Porter-Duff Blend Modes"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Effects.PorterDuffBlendModesPage}" />
+                          CommandParameter="{x:Type local:Effects.PorterDuffBlendModesPage}" />-->
             </TableSection>
         </TableRoot>
     </TableView>

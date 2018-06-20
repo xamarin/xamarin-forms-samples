@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using System.Net.Http;
 using System.Reflection;
 
 using Xamarin.Forms;
@@ -25,33 +26,6 @@ namespace SkiaSharpFormsDemos.Basics
             canvasView.PaintSurface += OnCanvasViewPaintSurface;
             Content = canvasView;
 
-            // Load web bitmap.
-            Uri uri = new Uri("http://developer.xamarin.com/demo/IMG_3256.JPG?width=480");
-            WebRequest request = WebRequest.Create(uri);
-            request.BeginGetResponse((IAsyncResult arg) =>
-            {
-                try
-                {
-                    using (Stream stream = request.EndGetResponse(arg).GetResponseStream())
-                    using (MemoryStream memStream = new MemoryStream())
-                    {
-                        stream.CopyTo(memStream);
-                        memStream.Seek(0, SeekOrigin.Begin);
-
-                        using (SKManagedStream skStream = new SKManagedStream(memStream))
-                        {
-                            webBitmap = SKBitmap.Decode(skStream);
-                        }
-                    }
-                }
-                catch
-                {
-                }
-
-                Device.BeginInvokeOnMainThread(() => canvasView.InvalidateSurface());
-
-            }, null);
-
             // Load resource bitmap
             string resourceID = "SkiaSharpFormsDemos.Media.monkey.png";
             Assembly assembly = GetType().GetTypeInfo().Assembly;
@@ -67,9 +41,9 @@ namespace SkiaSharpFormsDemos.Basics
             tapRecognizer.Tapped += async (sender, args) =>
             {
                 // Load bitmap from photo library
-                IPicturePicker picturePicker = DependencyService.Get<IPicturePicker>();
+                IPhotoLibrary photoLibrary = DependencyService.Get<IPhotoLibrary>();
 
-                using (Stream stream = await picturePicker.GetImageStreamAsync())
+                using (Stream stream = await photoLibrary.PickPhotoAsync())
                 {
                     if (stream != null)
                     {
@@ -90,6 +64,33 @@ namespace SkiaSharpFormsDemos.Basics
             canvasView.GestureRecognizers.Add(tapRecognizer);
         }
 
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            // Load web bitmap.
+            HttpClient httpClient = new HttpClient();
+            string url = "http://developer.xamarin.com/demo/IMG_3256.JPG?width=480";
+
+            try
+            {
+                using (Stream stream = await httpClient.GetStreamAsync(url))
+                using (MemoryStream memStream = new MemoryStream())
+                {
+                    stream.CopyTo(memStream);
+                    memStream.Seek(0, SeekOrigin.Begin);
+
+                    using (SKManagedStream skStream = new SKManagedStream(memStream))
+                    {
+                        webBitmap = SKBitmap.Decode(skStream);
+                        canvasView.InvalidateSurface();
+                    }
+                };
+            }
+            catch
+            {
+            }
+        }
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
             SKImageInfo info = args.Info;

@@ -8,6 +8,7 @@
     <TableView Intent="Menu">
         <TableRoot>
             <TableSection Title="Displaying Bitmaps">
+                
                 <TextCell Text="Pixel Dimensions"
                           Detail="Display a bitmap in its pixel dimensions"
                           Command="{Binding NavigateCommand}"
@@ -34,13 +35,24 @@
                           CommandParameter="{x:Type local:Bitmaps.RectangleSubsetPage}" />
             </TableSection>
             
-            
-            
-            
-            <TableSection Title="Bitmap Creation and File Saving">
+            <TableSection Title="Bitmap Creation and Drawing">
+
+                <TextCell Text="Hello, Bitmap!"
+                          Detail="Create a bitmap, draw on it, and render it"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.HelloBitmapPage}" />
 
 
 
+                <TextCell Text="Color Types"
+                          Detail="Explore the bitmap color types, or pixel formats"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.ColorTypesPage}" />
+
+
+            </TableSection>
+
+            <TableSection Title="Segmented Bitmap Rendering">
 
 
                 <TextCell Text="Draw Nine Patch"
@@ -51,56 +63,32 @@
 
 
 
+            </TableSection>
 
-                <TextCell Text="Hello, Bitmap!"
-                          Detail="Create a bitmap, draw on it, and render it"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Bitmaps.HelloBitmapPage}" />
 
-                <TextCell Text="Color Types"
-                          Detail="Explore the bitmap color types, or pixel formats"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Bitmaps.ColorTypesPage}" />
+
+
+            <TableSection Title="Bitmap File Saving">
+
+
+                <TextCell Text="File Formats" />
+
 
                 <TextCell Text="Finger Paint with Save"
                           
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.FingerPaintSavePage}" />
+            </TableSection>
 
-                <TextCell Text="File Formats" />
+
+
+
+            <TableSection Title="Animating GIF Bitmaps">
 
                 <TextCell Text="Animated GIF"
                           Detail="Show the animated Newton's Cradle"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.AnimatedGifPage}" />
-
-
-
-
-                <!--<TextCell Text="Exploded Pie Chart"
-                          Detail="Display a pie chart using the angle arc"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.ExplodedPieChartPage}" />
-
-                <TextCell Text="Tangent Arc"
-                          Detail="Experiment with creating a tangent arc"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.TangentArcPage}" />
-
-                <TextCell Text="Rounded Heptagon"
-                          Detail="Draw a heptagon with rounded corners"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.RoundedHeptagonPage}" />
-
-                <TextCell Text="Elliptical Arc"
-                          Detail="Experiment with creating an elliptical arc"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.EllipticalArcPage}" />
-
-                <TextCell Text="Arc Infinity"
-                          Detail="Draw an infinity sign with an elliptical arc"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Curves.ArcInfinityPage}" />-->
             </TableSection>
         </TableRoot>
     </TableView>
