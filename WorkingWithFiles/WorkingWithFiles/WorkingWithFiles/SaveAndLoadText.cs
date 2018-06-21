@@ -1,59 +1,55 @@
 ﻿using System;
+using System.IO;
 using Xamarin.Forms;
 
 namespace WorkingWithFiles
 {
 	/// <summary>
 	/// This page includes input boxes and buttons that allow the text to be
-	/// saved-to and loaded-from a file. The actual file operations are done 
-	/// against an interface, which must be implemented in each of the app
-	/// platform projects.
+	/// saved-to and loaded-from a file.
 	/// </summary>
 	public class SaveAndLoadText : ContentPage
 	{
-		const string fileName = "temp.txt";
+        string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "temp.txt");
 		Button loadButton, saveButton;
 
 		public SaveAndLoadText ()
 		{
-			var fileService = DependencyService.Get<ISaveAndLoad> ();
-
 			var input = new Entry { Text = "" };
 			var output = new Label { Text = "" };
 			saveButton = new Button {Text = "Save"};
 
-			saveButton.Clicked += async (sender, e) => {
+			saveButton.Clicked += (sender, e) => 
+            {
 				loadButton.IsEnabled = saveButton.IsEnabled = false;
-				// uses the Interface defined in this project, and the implementations that must
-				// be written in the iOS, Android and UWP app projects to do the actual file manipulation
-
-				await fileService.SaveTextAsync (fileName, input.Text);
+                File.WriteAllText(fileName, input.Text);
 				loadButton.IsEnabled = saveButton.IsEnabled = true;
 			};
 
 			loadButton = new Button {Text = "Load"};
-			loadButton.Clicked += async (sender, e) => {
+			loadButton.Clicked += (sender, e) => 
+            {
 				loadButton.IsEnabled = saveButton.IsEnabled = false;
-
-				// uses the Interface defined in this project, and the implementations that must
-				// be written in the iOS, Android and UWP app projects to do the actual file manipulation
-				output.Text = await fileService.LoadTextAsync(fileName);
+                output.Text = File.ReadAllText(fileName);
 				loadButton.IsEnabled = saveButton.IsEnabled = true;
 			};
-			loadButton.IsEnabled = fileService.FileExists (fileName);
+            loadButton.IsEnabled = File.Exists(fileName);
 
-			var buttonLayout = new StackLayout {
+			var buttonLayout = new StackLayout 
+            {
 				Orientation = StackOrientation.Horizontal,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 				Children = { saveButton, loadButton }
 			};
 
-			Content = new StackLayout {
-				Padding = new Thickness (0, 20, 0, 0),
-				VerticalOptions = LayoutOptions.StartAndExpand,
-				Children = {
-					new Label {
-						Text = "Save and Load Text (PCL)",
+			Content = new StackLayout 
+            {
+                Margin = new Thickness(20),
+				Children = 
+                {
+					new Label 
+                    {
+						Text = "Save and Load Text",
 						FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
 						FontAttributes = FontAttributes.Bold
 					},

@@ -1,7 +1,7 @@
 ﻿using System;
-using Xamarin.Forms;
 using System.Reflection;
 using System.IO;
+using Xamarin.Forms;
 
 namespace WorkingWithFiles
 {
@@ -13,7 +13,7 @@ namespace WorkingWithFiles
 
 			#region How to load a text file embedded resource
 			var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
-			Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLTextResource.txt");
+			Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.LibTextResource.txt");
 
 			string text = "";
 			using (var reader = new System.IO.StreamReader (stream)) {
@@ -24,10 +24,10 @@ namespace WorkingWithFiles
 			editor.Text = text;
 
 			Content = new StackLayout {
-				Padding = new Thickness (0, 20, 0, 0),
+                Margin = new Thickness(20),
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				Children = {
-					new Label { Text = "Embedded Resource Text File (PCL)", 
+					new Label { Text = "Embedded Resource Text File", 
 						FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
 						FontAttributes = FontAttributes.Bold
 					}, editor

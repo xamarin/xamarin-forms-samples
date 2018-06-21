@@ -10,13 +10,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="PCLJsonResource.json" />
-    <None Remove="PCLTextResource.txt" />
-    <None Remove="PCLXmlResource.xml" />
+    <EmbeddedResource Include="LibJsonResource.json" />
+    <EmbeddedResource Include="LibTextResource.txt" />
+    <EmbeddedResource Include="LibXmlResource.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="PCLJsonResource.json" />
-    <EmbeddedResource Include="PCLTextResource.txt" />
-    <EmbeddedResource Include="PCLXmlResource.xml" />
+    <None Remove="LibJsonResource.json" />
+    <None Remove="LibTextResource.txt" />
+    <None Remove="LibXmlResource.xml" />
   </ItemGroup>
 </Project>

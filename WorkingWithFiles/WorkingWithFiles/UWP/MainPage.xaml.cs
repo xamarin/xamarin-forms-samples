@@ -1,4 +1,4 @@
-﻿using PCL = WorkingWithFiles;
+﻿using NSL = WorkingWithFiles;
 
 namespace WorkingWithFiles.UWP
 {
@@ -10,7 +10,7 @@ namespace WorkingWithFiles.UWP
         public MainPage()
         {
             this.InitializeComponent();
-            this.LoadApplication(new PCL.App());
+            this.LoadApplication(new NSL.App());
         }
     }
 }

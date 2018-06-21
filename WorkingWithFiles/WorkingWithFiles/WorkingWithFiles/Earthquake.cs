@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace WorkingWithFiles
 {
 	public class Earthquake
@@ -27,4 +28,3 @@ namespace WorkingWithFiles
 		public Earthquake[] earthquakes { get; set; }
 	}
 }
-

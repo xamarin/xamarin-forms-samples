@@ -1,33 +1,21 @@
-﻿using System;
-
-using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using Android.App;
 using Android.OS;
-
-using Xamarin.Forms.Platform.Android;
 using Android.Content.PM;
-
 
 namespace WorkingWithFiles.Droid
 {
-
-		[Activity (Label = "WorkingWithFiles.Droid", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, 
-			ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-		public class MainActivity : 
-		global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity // superclass new in 1.3
+	[Activity (Label = "WorkingWithFiles.Droid", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, 
+		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+	{
+		protected override void OnCreate (Bundle bundle)
 		{
-			protected override void OnCreate (Bundle bundle)
-			{
-				base.OnCreate (bundle);
+            TabLayoutResource = Resource.Layout.Tabbar;
+            ToolbarResource = Resource.Layout.Toolbar;
 
-				global::Xamarin.Forms.Forms.Init (this, bundle);
-
-				LoadApplication (new App ()); // method is new in 1.3
-			}
+			base.OnCreate (bundle);
+			global::Xamarin.Forms.Forms.Init (this, bundle);
+			LoadApplication (new App ());
 		}
-
+	}
 }
-

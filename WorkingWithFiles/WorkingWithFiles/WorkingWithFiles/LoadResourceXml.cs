@@ -13,7 +13,7 @@ namespace WorkingWithFiles
 		{
 			#region How to load an XML file embedded resource
 			var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
-			Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLXmlResource.xml");
+			Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.LibXmlResource.xml");
 
 			List<Monkey> monkeys;
 			using (var reader = new System.IO.StreamReader (stream)) {
@@ -27,10 +27,10 @@ namespace WorkingWithFiles
 
 
 			Content = new StackLayout {
-				Padding = new Thickness (0, 20, 0, 0),
+                Margin = new Thickness(20),
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				Children = {
-					new Label { Text = "Embedded Resource XML File (PCL)", 
+					new Label { Text = "Embedded Resource XML File", 
 						FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
 						FontAttributes = FontAttributes.Bold
 					}, listView

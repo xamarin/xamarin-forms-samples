@@ -14,7 +14,7 @@ namespace WorkingWithFiles
 			#region How to load an Json file embedded resource
 			var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
 
-			Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLJsonResource.json");
+			Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.LibJsonResource.json");
 
 			Earthquake[] earthquakes;
 
@@ -35,10 +35,10 @@ namespace WorkingWithFiles
 
 			Content = new StackLayout
 			{
-				Padding = new Thickness(0, 20, 0, 0),
+				Margin = new Thickness(20),
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				Children = {
-					new Label { Text = "Embedded Resource JSON File (PCL)",
+					new Label { Text = "Embedded Resource JSON File",
 						FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
 						FontAttributes = FontAttributes.Bold
 					}, listView
