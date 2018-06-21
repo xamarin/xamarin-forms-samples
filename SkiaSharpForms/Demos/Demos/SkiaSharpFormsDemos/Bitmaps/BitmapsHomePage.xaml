@@ -57,6 +57,10 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.PhotoCroppingPage}" />
 
+                <TextCell Text="Photo Puzzle"
+                          Detail="Play the classic 14-15 game with a photo of your choice"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.PhotoPuzzlePage1}" />
 
             </TableSection>
 

@@ -21,12 +21,26 @@ namespace SkiaSharpFormsDemos.Bitmaps
                 "SkiaSharpFormsDemos.Media.MountainClimbers.jpg");
 
             photoCropper = new PhotoCropperCanvasView(bitmap);
-            grid.Children.Add(photoCropper);
+            canvasViewHost.Children.Add(photoCropper);
 		}
 
         void OnDoneButtonClicked(object sender, EventArgs args)
         {
             croppedBitmap = photoCropper.CroppedBitmap;
+
+            SKCanvasView canvasView = new SKCanvasView();
+            canvasView.PaintSurface += OnCanvasViewPaintSurface;
+            Content = canvasView;
+        }
+
+        void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
+        {
+            SKImageInfo info = args.Info;
+            SKSurface surface = args.Surface;
+            SKCanvas canvas = surface.Canvas;
+
+            canvas.Clear();
+            canvas.DrawBitmap(croppedBitmap, info.Rect, BitmapStretch.Uniform);
         }
     }
 }

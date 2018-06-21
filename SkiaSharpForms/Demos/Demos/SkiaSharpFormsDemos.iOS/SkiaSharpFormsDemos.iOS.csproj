@@ -101,7 +101,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="PIcturePickerImplementation.cs" />
+    <Compile Include="PhotoLibrary.cs" />
     <Compile Include="TouchEffect.cs" />
     <Compile Include="TouchRecognizer.cs" />
     <None Include="app.config" />

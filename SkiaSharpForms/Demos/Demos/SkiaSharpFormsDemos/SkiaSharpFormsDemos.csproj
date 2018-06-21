@@ -23,6 +23,18 @@
     <EmbeddedResource Update="Bitmaps\PhotoCroppingPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Bitmaps\PhotoPuzzlePage1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Bitmaps\PhotoPuzzlePage3.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Bitmaps\PhotoPuzzlePage2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Bitmaps\PhotoPuzzlePage4.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Bitmaps\RectangleSubsetPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -180,6 +192,18 @@
   <ItemGroup>
     <Compile Update="Bitmaps\BitmapsHomePage.xaml.cs">
       <DependentUpon>BitmapsHomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Bitmaps\PhotoPuzzlePage1.xaml.cs">
+      <DependentUpon>PhotoPuzzlePage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Bitmaps\PhotoPuzzlePage3.xaml.cs">
+      <DependentUpon>PhotoPuzzlePage3.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Bitmaps\PhotoPuzzlePage2.xaml.cs">
+      <DependentUpon>PhotoPuzzlePage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Bitmaps\PhotoPuzzlePage4.xaml.cs">
+      <DependentUpon>PhotoPuzzlePage4.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
