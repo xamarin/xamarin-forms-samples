@@ -10,7 +10,7 @@ namespace WorkingWithFiles
 	/// </summary>
 	public class SaveAndLoadText : ContentPage
 	{
-        string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "temp.txt");
+        string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "temp.txt");
 		Button loadButton, saveButton;
 
 		public SaveAndLoadText ()
