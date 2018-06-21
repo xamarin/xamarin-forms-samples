@@ -10,9 +10,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="PCLJsonResource.json" />
+    <None Remove="PCLTextResource.txt" />
+    <None Remove="PCLXmlResource.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PCLJsonResource.json" />
     <EmbeddedResource Include="PCLTextResource.txt" />
     <EmbeddedResource Include="PCLXmlResource.xml" />
-    <EmbeddedResource Include="PCLJsonResource.json" />
   </ItemGroup>
-
 </Project>
