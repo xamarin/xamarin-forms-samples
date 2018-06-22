@@ -34,9 +34,9 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
             using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
             {
+                canvas.Clear();
                 canvas.Translate(0, bitmap.Width);
                 canvas.RotateDegrees(-90);
-
                 canvas.DrawBitmap(bitmap, new SKPoint());
             }
 
@@ -50,14 +50,13 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
             using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
             {
+                canvas.Clear();
                 canvas.Translate(bitmap.Height, 0);
                 canvas.RotateDegrees(90);
-
                 canvas.DrawBitmap(bitmap, new SKPoint());
             }
 
             bitmap = rotatedBitmap;
-            canvasView.InvalidateSurface();
             canvasView.InvalidateSurface();
         }
 

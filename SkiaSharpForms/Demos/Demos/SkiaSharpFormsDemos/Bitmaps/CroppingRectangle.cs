@@ -65,9 +65,11 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
         public int HitTest(SKPoint point, float radius)
         {
-            for (int index = 0; index < Corners.Length; index++)
+            SKPoint[] corners = Corners;
+
+            for (int index = 0; index < corners.Length; index++)
             {
-                SKPoint diff = point - Corners[index];
+                SKPoint diff = point - corners[index];
                 
                 if ((float)Math.Sqrt(diff.X * diff.X + diff.Y * diff.Y) < radius)
                 {

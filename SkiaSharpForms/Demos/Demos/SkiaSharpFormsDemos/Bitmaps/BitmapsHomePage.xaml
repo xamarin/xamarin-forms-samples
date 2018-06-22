@@ -52,6 +52,11 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.ColorTypesPage}" />
 
+                <TextCell Text="Pixelized Image"
+                          Detail="Pixelize part of a bitmap"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.PixelizedImagePage}" />
+
                 <TextCell Text="Photo Cropping"
                           Detail="Interactively define a bitmap cropping rectangle"
                           Command="{Binding NavigateCommand}"

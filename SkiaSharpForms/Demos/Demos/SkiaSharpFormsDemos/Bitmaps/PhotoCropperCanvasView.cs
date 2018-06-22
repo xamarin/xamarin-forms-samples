@@ -11,7 +11,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
     class PhotoCropperCanvasView : SKCanvasView
     {
         const int CORNER = 50;      // pixel length of cropper corner
-        const int RADIUS = 100;      // pixel radius of touch hit-test
+        const int RADIUS = 100;     // pixel radius of touch hit-test
 
         SKBitmap bitmap;
         CroppingRectangle croppingRect;
@@ -96,9 +96,11 @@ namespace SkiaSharpFormsDemos.Bitmaps
             SKMatrix bitmapScaleMatrix = SKMatrix.MakeIdentity();
             bitmapScaleMatrix.SetScaleTranslate(scale, scale, x, y);
 
+            // Display rectangle
             SKRect scaledCropRect = bitmapScaleMatrix.MapRect(croppingRect.Rect);
             canvas.DrawRect(scaledCropRect, edgeStroke);
 
+            // Display heavier corners
             using (SKPath path = new SKPath())
             {
                 path.MoveTo(scaledCropRect.Left, scaledCropRect.Top + CORNER);
@@ -132,15 +134,19 @@ namespace SkiaSharpFormsDemos.Bitmaps
             switch (args.Type)
             {
                 case TouchActionType.Pressed:
+                    // Convert radius to bitmap/cropping scale
+                    float radius = inverseBitmapMatrix.ScaleX * RADIUS;
+
+                    // Find corner that the finger is touching
+                    int cornerIndex = croppingRect.HitTest(bitmapLocation, radius);
 
 
 
-                    System.Diagnostics.Debug.WriteLine("{0} --> {1} --> {2}", args.Location, pixelLocation, bitmapLocation);
+
+                    System.Diagnostics.Debug.WriteLine("{0} --> {1} --> {2} ({3})", args.Location, pixelLocation, bitmapLocation, croppingRect.Rect);
 
 
 
-
-                    int cornerIndex = croppingRect.HitTest(bitmapLocation, RADIUS);
 
                     if (cornerIndex != -1 && !touchPoints.ContainsKey(args.Id))
                     {

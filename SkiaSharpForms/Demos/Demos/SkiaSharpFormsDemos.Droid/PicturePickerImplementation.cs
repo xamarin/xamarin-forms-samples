@@ -12,7 +12,7 @@ using SkiaSharpFormsDemos.Droid;
 
 namespace SkiaSharpFormsDemos.Droid
 {
-    public class PicturePickerImplementation : IPicturePicker
+    public class PicturePickerImplementation : IPhotoLibrary
     {
         public Task<Stream> GetImageStreamAsync()
         {

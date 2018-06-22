@@ -34,11 +34,11 @@
                            Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
                            PaintSurface="OnCanvasViewPaintSurface" />
 
-        <Button Text="Rotate Left"
+        <Button Text="Rotate &#x2939; Left"
                 Grid.Row="2" Grid.Column="0" 
                 Clicked="OnRotateLeftButtonClicked" />
 
-        <Button Text="Rotate Right"
+        <Button Text="Rotate &#x2938; Right"
                 Grid.Row="2" Grid.Column="1" 
                 Clicked="OnRotateRightButtonClicked" />
 

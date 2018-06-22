@@ -39,7 +39,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
                 }
             }
 
-            // Create CanvasView 
+            // Create SKCanvasView to view result
             SKCanvasView canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;
             Content = canvasView;
@@ -52,7 +52,6 @@ namespace SkiaSharpFormsDemos.Bitmaps
             SKCanvas canvas = surface.Canvas;
 
             canvas.Clear();
-
             canvas.DrawBitmap(monkeyBitmap, info.Rect, BitmapStretch.Uniform);
         }
     }

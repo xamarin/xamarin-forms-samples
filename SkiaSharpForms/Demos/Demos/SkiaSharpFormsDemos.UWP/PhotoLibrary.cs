@@ -10,12 +10,12 @@ using Xamarin.Forms;
 
 using SkiaSharpFormsDemos.UWP;
 
-[assembly: Dependency(typeof(PicturePickerImplementation))]
+[assembly: Dependency(typeof(PhotoLibrary))]
 namespace SkiaSharpFormsDemos.UWP
 {
-    public class PicturePickerImplementation : IPicturePicker
+    public class PhotoLibrary : IPhotoLibrary
     {
-        public async Task<Stream> GetImageStreamAsync()
+        public async Task<Stream> PickPhotoAsync()
         {
             // Create and initialize the FileOpenPicker
             FileOpenPicker openPicker = new FileOpenPicker
@@ -38,6 +38,11 @@ namespace SkiaSharpFormsDemos.UWP
 
             IRandomAccessStreamWithContentType raStream = await storageFile.OpenReadAsync();
             return raStream.AsStreamForRead();
+        }
+
+        public Task<bool> SavePhotoAsync(byte[] data, string folder, string filename)
+        {
+            throw new NotImplementedException();
         }
     }
 }

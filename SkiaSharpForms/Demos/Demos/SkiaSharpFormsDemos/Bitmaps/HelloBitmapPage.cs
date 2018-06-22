@@ -20,10 +20,8 @@ namespace SkiaSharpFormsDemos.Bitmaps
                 SKRect bounds = new SKRect();
                 textPaint.MeasureText(TEXT, ref bounds);
 
-                System.Diagnostics.Debug.WriteLine(bounds);
-
                 helloBitmap = new SKBitmap((int)bounds.Right,
-                                           (int)bounds.Height);
+                                            (int)bounds.Height);
 
                 using (SKCanvas bitmapCanvas = new SKCanvas(helloBitmap))
                 {
@@ -32,32 +30,10 @@ namespace SkiaSharpFormsDemos.Bitmaps
                 }
             }
 
-            // Create CanvasView 
+            // Create SKCanvasView to view result
             SKCanvasView canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;
             Content = canvasView;
-
-
-
-            //     return;
-
-            // iOS: Requires NSPhotoLibraryUsageDescription in Info.plist
-            // Android: Requires android.permission.WRITE_EXTERNAL_STORAGE in AndroidManifest.xml
-            // UWP: Requires Pictures Library capability in Package.appxmanifest
-            /*
-                        SKImage image = SKImage.FromBitmap(helloBitmap);
-                        SKData data = image.Encode();
-                        string picturesPath = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-                        string filename = "whatsit.png";
-                        File.WriteAllBytes(Path.Combine(picturesPath, filename), data.ToArray());
-            */
-
-            //     IPhotoLibrary photoLibrary = DependencyService.Get<IPhotoLibrary>();
-            //     photoLibrary.SavePhotoAsync()
-
-
-
-
         }
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -66,7 +42,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
             SKSurface surface = args.Surface;
             SKCanvas canvas = surface.Canvas;
 
-            canvas.Clear();
+            canvas.Clear(SKColors.Aqua);
 
             for (float y = 0; y < info.Height; y += helloBitmap.Height)
                 for (float x = 0; x < info.Width; x += helloBitmap.Width)
