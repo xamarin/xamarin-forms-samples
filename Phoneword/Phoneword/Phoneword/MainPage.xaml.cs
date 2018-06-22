@@ -14,7 +14,7 @@ namespace Phoneword
 
         void OnTranslate(object sender, EventArgs e)
         {
-            translatedNumber = Core.PhonewordTranslator.ToNumber(phoneNumberText.Text);
+            translatedNumber = PhonewordTranslator.ToNumber(phoneNumberText.Text);
             if (!string.IsNullOrWhiteSpace(translatedNumber))
             {
                 callButton.IsEnabled = true;
