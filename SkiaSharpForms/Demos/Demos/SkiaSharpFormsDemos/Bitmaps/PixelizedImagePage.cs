@@ -16,6 +16,8 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
 		public PixelizedImagePage ()
 		{
+            Title = "Pixelize Image";
+
             SKBitmap originalBitmap = BitmapExtensions.LoadBitmapResource(GetType(),
                 "SkiaSharpFormsDemos.Media.MountainClimbers.jpg");
 

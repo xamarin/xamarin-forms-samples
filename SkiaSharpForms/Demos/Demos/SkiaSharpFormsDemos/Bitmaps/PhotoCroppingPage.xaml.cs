@@ -8,21 +8,21 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-	public partial class PhotoCroppingPage : ContentPage
-	{
+    public partial class PhotoCroppingPage : ContentPage
+    {
         PhotoCropperCanvasView photoCropper;
         SKBitmap croppedBitmap;
 
-		public PhotoCroppingPage ()
-		{
-			InitializeComponent ();
+	    public PhotoCroppingPage ()
+	    {
+		    InitializeComponent ();
 
             SKBitmap bitmap = BitmapExtensions.LoadBitmapResource(GetType(),
                 "SkiaSharpFormsDemos.Media.MountainClimbers.jpg");
 
             photoCropper = new PhotoCropperCanvasView(bitmap);
             canvasViewHost.Children.Add(photoCropper);
-		}
+	    }
 
         void OnDoneButtonClicked(object sender, EventArgs args)
         {

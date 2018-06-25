@@ -14,6 +14,8 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
         public HelloBitmapPage()
         {
+            Title = TEXT;
+
             // Create bitmap and draw on it
             using (SKPaint textPaint = new SKPaint { TextSize = 48 })
             {
@@ -21,7 +23,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
                 textPaint.MeasureText(TEXT, ref bounds);
 
                 helloBitmap = new SKBitmap((int)bounds.Right,
-                                            (int)bounds.Height);
+                                           (int)bounds.Height);
 
                 using (SKCanvas bitmapCanvas = new SKCanvas(helloBitmap))
                 {

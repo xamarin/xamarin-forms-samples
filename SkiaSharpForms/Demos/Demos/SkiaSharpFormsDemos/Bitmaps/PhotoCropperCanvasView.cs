@@ -46,17 +46,22 @@ namespace SkiaSharpFormsDemos.Bitmaps
         {
             this.bitmap = bitmap;
 
-            croppingRect = new CroppingRectangle(new SKRect(0, 0, bitmap.Width, bitmap.Height), aspectRatio);
+            SKRect bitmapRect = new SKRect(0, 0, bitmap.Width, bitmap.Height);
+            croppingRect = new CroppingRectangle(bitmapRect, aspectRatio);
 
             touchEffect.TouchAction += OnTouchEffectTouchAction;
         }
+
         public SKBitmap CroppedBitmap
         {
             get
             {
-                SKBitmap croppedBitmap = new SKBitmap((int)croppingRect.Rect.Width, (int)croppingRect.Rect.Height);
-                SKRect dest = new SKRect(0, 0, croppingRect.Rect.Width, croppingRect.Rect.Height);
-                SKRect source = new SKRect(croppingRect.Rect.Left, croppingRect.Rect.Top, croppingRect.Rect.Right, croppingRect.Rect.Bottom);
+                SKRect cropRect = croppingRect.Rect;
+                SKBitmap croppedBitmap = new SKBitmap((int)cropRect.Width, 
+                                                      (int)cropRect.Height);
+                SKRect dest = new SKRect(0, 0, cropRect.Width, cropRect.Height);
+                SKRect source = new SKRect(cropRect.Left, cropRect.Top, 
+                                           cropRect.Right, cropRect.Bottom);
 
                 using (SKCanvas canvas = new SKCanvas(croppedBitmap))
                 {
@@ -140,14 +145,6 @@ namespace SkiaSharpFormsDemos.Bitmaps
                     // Find corner that the finger is touching
                     int cornerIndex = croppingRect.HitTest(bitmapLocation, radius);
 
-
-
-
-                    System.Diagnostics.Debug.WriteLine("{0} --> {1} --> {2} ({3})", args.Location, pixelLocation, bitmapLocation, croppingRect.Rect);
-
-
-
-
                     if (cornerIndex != -1 && !touchPoints.ContainsKey(args.Id))
                     {
                         TouchPoint touchPoint = new TouchPoint
@@ -183,7 +180,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
         SKPoint ConvertToPixel(Xamarin.Forms.Point pt)
         {
             return new SKPoint((float)(CanvasSize.Width * pt.X / Width),
-                               (float)(CanvasSize.Height * pt.Y / Height));
+                                (float)(CanvasSize.Height * pt.Y / Height));
         }
     }
 }

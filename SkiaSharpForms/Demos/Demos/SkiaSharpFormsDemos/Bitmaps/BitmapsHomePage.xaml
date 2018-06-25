@@ -47,15 +47,24 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.MonkeyMoustachePage}" />
 
-                <TextCell Text="Color Types"
-                          Detail="Explore the bitmap color types, or pixel formats"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Bitmaps.ColorTypesPage}" />
-
                 <TextCell Text="Pixelized Image"
                           Detail="Pixelize part of a bitmap"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.PixelizedImagePage}" />
+
+                <TextCell Text="Bitmap Rotator"
+                          Detail="Rotate a bitmap by any angle"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.BitmapRotatorPage}" />
+
+                <TextCell Text="Bitmap Flipper"
+                          Detail="Flip a bitmap horizontally or vertically"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.BitmapFlipperPage}" />
+
+            </TableSection>
+
+            <TableSection Title="Bitmap Cropping">
 
                 <TextCell Text="Photo Cropping"
                           Detail="Interactively define a bitmap cropping rectangle"

@@ -13,6 +13,8 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
         public MonkeyMoustachePage()
         {
+            Title = "Monkey Moustache";
+
             monkeyBitmap = BitmapExtensions.LoadBitmapResource(GetType(),
                 "SkiaSharpFormsDemos.Media.MonkeyFace.png");
 

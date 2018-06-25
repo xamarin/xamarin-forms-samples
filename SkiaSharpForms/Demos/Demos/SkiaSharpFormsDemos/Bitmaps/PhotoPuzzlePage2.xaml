@@ -33,14 +33,14 @@
         <skia:SKCanvasView x:Name="canvasView"
                            Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
                            PaintSurface="OnCanvasViewPaintSurface" />
-
-        <Button Text="Rotate &#x2939; Left"
+        
+        <Button Text="90&#x00B0; Right"
                 Grid.Row="2" Grid.Column="0" 
-                Clicked="OnRotateLeftButtonClicked" />
-
-        <Button Text="Rotate &#x2938; Right"
-                Grid.Row="2" Grid.Column="1" 
                 Clicked="OnRotateRightButtonClicked" />
+
+        <Button Text="90&#x00B0; Left"
+                Grid.Row="2" Grid.Column="1" 
+                Clicked="OnRotateLeftButtonClicked" />
 
         <Button Text="Done"
                 Grid.Row="2" Grid.Column="2" 
