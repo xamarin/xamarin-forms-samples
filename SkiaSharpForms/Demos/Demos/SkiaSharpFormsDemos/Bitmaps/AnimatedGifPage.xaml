@@ -5,6 +5,18 @@
              x:Class="SkiaSharpFormsDemos.Bitmaps.AnimatedGifPage"
              Title="Animated GIF">
 
-    <skia:SKCanvasView x:Name="canvasView" 
-                       PaintSurface="OnCanvasViewPaintSurface" />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <skia:SKCanvasView x:Name="canvasView" 
+                           Grid.Row="0"
+                           PaintSurface="OnCanvasViewPaintSurface" />
+
+        <Label Text="GIF file by DemonDeLuxe from Wikipedia Newton's Cradle page"
+               Margin="0, 5"
+               HorizontalTextAlignment="Center" />
+    </Grid>
 </ContentPage>

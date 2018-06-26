@@ -80,21 +80,24 @@
 
             <TableSection Title="Segmented Bitmap Rendering">
 
-
-                <TextCell Text="Draw Nine Patch"
-                          
+                <TextCell Text="Nine Patch Display"
+                          Detail="Scale a bitmap interior without scaling the edges"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Bitmaps.NinePatchPage}" />
+                          CommandParameter="{x:Type local:Bitmaps.NinePatchDisplayPage}" />
 
+                <TextCell Text="Lattice Nine-Patch"
+                          Detail="Use the bitmap lattice feature to emulate nine-patch"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.LatticeNinePatchPage}" />
 
-
-
+                <TextCell Text="Lattice Display"
+                          Detail="Experiment with the bitmap lattice display"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.LatticeDisplayPage}" />
+                
             </TableSection>
 
-
-
-
-            <TableSection Title="Bitmap File Saving">
+            <TableSection Title="Saving Bitmap Files">
 
 
                 <TextCell Text="File Formats" />
@@ -106,15 +109,19 @@
                           CommandParameter="{x:Type local:Bitmaps.FingerPaintSavePage}" />
             </TableSection>
 
-
-
-
             <TableSection Title="Animating GIF Bitmaps">
 
                 <TextCell Text="Animated GIF"
                           Detail="Show the animated Newton's Cradle"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.AnimatedGifPage}" />
+                
+            </TableSection>
+
+            <TableSection Title="Accessing Bitmap Bits">
+                
+                
+                
             </TableSection>
         </TableRoot>
     </TableView>

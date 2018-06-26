@@ -5,7 +5,7 @@
              xmlns:skiaviews="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SkiaSharpFormsDemos.Effects.PorterDuffBlendModesPage"
              Title="Porter-Duff Blend Modes">
-    
+
     <Grid Padding="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />

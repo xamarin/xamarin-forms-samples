@@ -33,9 +33,6 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.BitmapsHomePage}" />
 
-                <!--<TextCell Text="Porter-Duff Blend Modes"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Effects.PorterDuffBlendModesPage}" />-->
             </TableSection>
         </TableRoot>
     </TableView>

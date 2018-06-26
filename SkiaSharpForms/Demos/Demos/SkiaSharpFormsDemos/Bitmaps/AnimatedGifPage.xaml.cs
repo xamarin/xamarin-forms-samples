@@ -18,6 +18,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
         int totalDuration;
 
         Stopwatch stopwatch = new Stopwatch();
+        bool isAnimating;
 
         int currentFrame;
 
@@ -33,8 +34,8 @@ namespace SkiaSharpFormsDemos.Bitmaps
             {
                 SKCodec codec = SKCodec.Create(skStream);
 
+                // Get frame count and allocate bitmaps
                 int frameCount = codec.FrameCount;
-
                 bitmaps = new SKBitmap[frameCount];
                 durations = new int[frameCount];
                 accumulatedDurations = new int[frameCount];
@@ -61,32 +62,44 @@ namespace SkiaSharpFormsDemos.Bitmaps
                     codec.GetPixels(imageInfo, pointer, codecOptions);
                 }
 
+                // Sum up the total duration
                 for (int frame = 0; frame < durations.Length; frame++)
                 {
                     totalDuration += durations[frame];
                 }
 
+                // Calculate the accumulated durations 
                 for (int frame = 0; frame < durations.Length; frame++)
                 {
                     accumulatedDurations[frame] = durations[frame] + 
                         (frame == 0 ? 0 : accumulatedDurations[frame - 1]);
                 }
             }
-
-            stopwatch.Start();
-            Device.StartTimer(TimeSpan.FromMilliseconds(16), OnTimerTick);
-
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
 
-        // TODO: Appearing and Disappearing !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            isAnimating = true;
+            stopwatch.Start();
+            Device.StartTimer(TimeSpan.FromMilliseconds(16), OnTimerTick);
+        }
 
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            stopwatch.Stop();
+            isAnimating = false;
+        }
 
         bool OnTimerTick()
         {
             int msec = (int)(stopwatch.ElapsedMilliseconds % totalDuration);
             int frame = 0;
 
+            // Find the frame based on the elapsed time
             for (frame = 0; frame < accumulatedDurations.Length; frame++)
             {
                 if (msec < accumulatedDurations[frame])
@@ -95,9 +108,10 @@ namespace SkiaSharpFormsDemos.Bitmaps
                 }
             }
 
+            // Save in a field nd invalidate the SKCanvasView.
             currentFrame = frame;
             canvasView.InvalidateSurface();
-            return true;
+            return isAnimating;
         }
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -108,33 +122,11 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
             canvas.Clear(SKColors.Black);
             
-                        SKBitmap bitmap = bitmaps[currentFrame];
-                        int x = (info.Width - bitmap.Width) / 2;
-                        int y = (info.Height - bitmap.Height) / 2;
-
-                        canvas.DrawBitmap(bitmap, x, y);
-            
-/*
-            float width = info.Width / 6;
-            float height = info.Height / 6;
-
-            for (int frame = 0; frame < bitmaps.Length; frame++)
-            {
-                float x = (frame % 6) * width;
-                float y = (frame / 6) * height;
-
-                SKRect rect = new SKRect(x, y, x + width, y + height);
-
-                try
-                {
-                    canvas.DrawBitmap(bitmaps[frame], rect);
-                }
-                catch (Exception exc)
-                {
-                    Debug.WriteLine("frame {0} {1}", frame, exc);
-                }
-            }
-*/
+            // Get the bitmap and center it
+            SKBitmap bitmap = bitmaps[currentFrame];
+            int x = (info.Width - bitmap.Width) / 2;
+            int y = (info.Height - bitmap.Height) / 2;
+            canvas.DrawBitmap(bitmap, x, y);
         }
     }
 }
