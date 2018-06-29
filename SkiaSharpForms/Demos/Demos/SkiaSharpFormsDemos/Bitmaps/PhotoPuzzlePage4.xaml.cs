@@ -8,8 +8,8 @@ using Xamarin.Forms;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-	public partial class PhotoPuzzlePage4 : ContentPage
-	{
+    public partial class PhotoPuzzlePage4 : ContentPage
+    {
         // Number of tiles horizontally and vertically.
         static readonly int NUM = 4;
 
@@ -22,8 +22,8 @@ namespace SkiaSharpFormsDemos.Bitmaps
         bool isBusy;
 
         public PhotoPuzzlePage4 (ImageSource[] imageSources)
-		{
-			InitializeComponent ();
+        {
+            InitializeComponent ();
 
             // Loop through the rows and columns.
             for (int row = 0; row < NUM; row++)

@@ -10,12 +10,12 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-	public class PixelizedImagePage : ContentPage
-	{
+    public class PixelizedImagePage : ContentPage
+    {
         SKBitmap pixelizedBitmap;
 
-		public PixelizedImagePage ()
-		{
+        public PixelizedImagePage ()
+        {
             Title = "Pixelize Image";
 
             SKBitmap originalBitmap = BitmapExtensions.LoadBitmapResource(GetType(),

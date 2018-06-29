@@ -7,12 +7,12 @@ using SkiaSharp;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-	public partial class PhotoPuzzlePage1 : ContentPage
-	{
-		public PhotoPuzzlePage1 ()
-		{
-			InitializeComponent ();
-		}
+    public partial class PhotoPuzzlePage1 : ContentPage
+    {
+        public PhotoPuzzlePage1 ()
+        {
+            InitializeComponent ();
+        }
 
         async void OnPickButtonClicked(object sender, EventArgs args)
         {

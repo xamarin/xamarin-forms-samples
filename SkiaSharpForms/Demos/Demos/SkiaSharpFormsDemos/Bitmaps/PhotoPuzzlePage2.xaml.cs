@@ -7,16 +7,16 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-	public partial class PhotoPuzzlePage2 : ContentPage
-	{
+    public partial class PhotoPuzzlePage2 : ContentPage
+    {
         SKBitmap bitmap;
 
-		public PhotoPuzzlePage2 (SKBitmap bitmap)
-		{
+        public PhotoPuzzlePage2 (SKBitmap bitmap)
+        {
             this.bitmap = bitmap;
 
-			InitializeComponent ();
-		}
+            InitializeComponent ();
+        }
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {

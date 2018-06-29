@@ -14,8 +14,8 @@ namespace SkiaSharpFormsDemos.Bitmaps
     // TODO: Need some margin between text and edges
 
 
-	public class NinePatchButton : ContentView
-	{
+    public class NinePatchButton : ContentView
+    {
         const int PATCH_SIZE = 20;
         const int BITMAP_SIZE = 3 * PATCH_SIZE;
         static readonly SKRectI centerRect =
@@ -40,8 +40,8 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
         SKPaint textPaint = new SKPaint();
 
-		public NinePatchButton ()
-		{
+        public NinePatchButton ()
+        {
             // Create two bitmaps
             bitmapReleased = new SKBitmap(BITMAP_SIZE, BITMAP_SIZE);
             bitmapPressed = new SKBitmap(BITMAP_SIZE, BITMAP_SIZE);
@@ -95,8 +95,8 @@ namespace SkiaSharpFormsDemos.Bitmaps
             // Create SKCanvasView
             canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;
-            Content = canvasView;	
-		}
+            Content = canvasView;    
+        }
 
         public string Text
         {

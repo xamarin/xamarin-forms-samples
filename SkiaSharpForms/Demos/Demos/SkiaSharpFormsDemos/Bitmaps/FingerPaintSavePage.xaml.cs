@@ -10,8 +10,8 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-	public partial class FingerPaintSavePage : ContentPage
-	{
+    public partial class FingerPaintSavePage : ContentPage
+    {
         Dictionary<long, SKPath> inProgressPaths = new Dictionary<long, SKPath>();
         List<SKPath> completedPaths = new List<SKPath>();
 
@@ -28,9 +28,9 @@ namespace SkiaSharpFormsDemos.Bitmaps
         SKCanvas bitmapCanvas;
 
         public FingerPaintSavePage ()
-		{
-			InitializeComponent ();
-		}
+        {
+            InitializeComponent ();
+        }
 
         void OnTouchEffectAction(object sender, TouchActionEventArgs args)
         {

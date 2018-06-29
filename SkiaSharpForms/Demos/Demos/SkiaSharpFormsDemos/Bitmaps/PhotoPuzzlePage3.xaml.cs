@@ -7,13 +7,13 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-	public partial class PhotoPuzzlePage3 : ContentPage
-	{
+    public partial class PhotoPuzzlePage3 : ContentPage
+    {
         PhotoCropperCanvasView photoCropper;
 
-		public PhotoPuzzlePage3(SKBitmap bitmap)
-		{
-			InitializeComponent ();
+        public PhotoPuzzlePage3(SKBitmap bitmap)
+        {
+            InitializeComponent ();
 
             photoCropper = new PhotoCropperCanvasView(bitmap, 1f);
             canvasViewHost.Children.Add(photoCropper);

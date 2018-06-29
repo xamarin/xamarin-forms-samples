@@ -5,8 +5,8 @@ namespace SkiaSharpFormsDemos.Bitmaps
 {
     class PhotoPuzzleTile : ContentView
     {
-	    public PhotoPuzzleTile (int row, int col, ImageSource imageSource)
-	    {
+        public PhotoPuzzleTile (int row, int col, ImageSource imageSource)
+        {
             Row = row;
             Col = col;
 
@@ -15,10 +15,10 @@ namespace SkiaSharpFormsDemos.Bitmaps
             {
                 Source = imageSource
             };
-	    }
+        }
 
-	    public int Row { set; get; }
+        public int Row { set; get; }
 
-	    public int Col { set; get; }
+        public int Col { set; get; }
     }
 }

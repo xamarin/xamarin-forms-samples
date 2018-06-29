@@ -115,7 +115,12 @@
                           Detail="Show the animated Newton's Cradle"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.AnimatedGifPage}" />
-                
+
+                <TextCell Text="Mandelbrot Animation"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.MandelbrotAnimationPage}" />
+
             </TableSection>
 
             <TableSection Title="Accessing Bitmap Bits">

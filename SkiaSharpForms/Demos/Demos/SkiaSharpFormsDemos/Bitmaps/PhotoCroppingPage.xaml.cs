@@ -13,16 +13,16 @@ namespace SkiaSharpFormsDemos.Bitmaps
         PhotoCropperCanvasView photoCropper;
         SKBitmap croppedBitmap;
 
-	    public PhotoCroppingPage ()
-	    {
-		    InitializeComponent ();
+        public PhotoCroppingPage ()
+        {
+            InitializeComponent ();
 
             SKBitmap bitmap = BitmapExtensions.LoadBitmapResource(GetType(),
                 "SkiaSharpFormsDemos.Media.MountainClimbers.jpg");
 
             photoCropper = new PhotoCropperCanvasView(bitmap);
             canvasViewHost.Children.Add(photoCropper);
-	    }
+        }
 
         void OnDoneButtonClicked(object sender, EventArgs args)
         {

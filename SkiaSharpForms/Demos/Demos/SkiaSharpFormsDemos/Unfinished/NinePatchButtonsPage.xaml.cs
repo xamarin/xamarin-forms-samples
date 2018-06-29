@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class NinePatchButtonsPage : ContentPage
-	{
-		public NinePatchButtonsPage ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class NinePatchButtonsPage : ContentPage
+    {
+        public NinePatchButtonsPage ()
+        {
+            InitializeComponent ();
+        }
+    }
 }

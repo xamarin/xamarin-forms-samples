@@ -7,18 +7,18 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-	public partial class BitmapRotatorPage : ContentPage
-	{
+    public partial class BitmapRotatorPage : ContentPage
+    {
         static readonly SKBitmap originalBitmap = 
             BitmapExtensions.LoadBitmapResource(typeof(BitmapRotatorPage),
                 "SkiaSharpFormsDemos.Media.Banana.jpg");
 
         SKBitmap rotatedBitmap = originalBitmap;
 
-		public BitmapRotatorPage ()
-		{
-			InitializeComponent ();
-		}
+        public BitmapRotatorPage ()
+        {
+            InitializeComponent ();
+        }
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {

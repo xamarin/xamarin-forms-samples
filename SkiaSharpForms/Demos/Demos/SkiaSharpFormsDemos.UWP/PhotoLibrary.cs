@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 
 using Windows.Storage;
@@ -40,9 +41,46 @@ namespace SkiaSharpFormsDemos.UWP
             return raStream.AsStreamForRead();
         }
 
-        public Task<bool> SavePhotoAsync(byte[] data, string folder, string filename)
+        public async Task<bool> SavePhotoAsync(byte[] data, string folder, string filename)
         {
-            throw new NotImplementedException();
+            StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
+            StorageFolder spinPaintFolder = null;
+
+            // Get the folder or create it if necessary
+            try
+            {
+                spinPaintFolder = await picturesFolder.GetFolderAsync(folder);
+            }
+            catch
+            { }
+
+            if (spinPaintFolder == null)
+            {
+                try
+                {
+                    spinPaintFolder = await picturesFolder.CreateFolderAsync(folder);
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+
+            try
+            {
+                // Create the file.
+                StorageFile storageFile = await spinPaintFolder.CreateFileAsync(filename);
+
+                // Convert byte[] to Windows buffer and write it out.
+                IBuffer buffer = WindowsRuntimeBuffer.Create(data, 0, data.Length, data.Length);
+                await FileIO.WriteBufferAsync(storageFile, buffer);
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

@@ -11,8 +11,8 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-	public partial class RectangleSubsetPage : ContentPage
-	{
+    public partial class RectangleSubsetPage : ContentPage
+    {
         SKBitmap bitmap =
             BitmapExtensions.LoadBitmapResource(typeof(RectangleSubsetPage),
                                                 "SkiaSharpFormsDemos.Media.Banana.jpg");

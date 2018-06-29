@@ -9,13 +9,13 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-	public class FillRectanglePage : ContentPage
-	{
+    public class FillRectanglePage : ContentPage
+    {
         SKBitmap bitmap =
             BitmapExtensions.LoadBitmapResource(typeof(FillRectanglePage),
                                                 "SkiaSharpFormsDemos.Media.Banana.jpg");
         public FillRectanglePage ()
-		{
+        {
             Title = "Fill Rectangle";
 
             SKCanvasView canvasView = new SKCanvasView();
@@ -31,9 +31,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
             canvas.Clear();
 
-            SKRect rect = new SKRect(0, 0, info.Width, info.Height);
-
-            canvas.DrawBitmap(bitmap, rect);
+            canvas.DrawBitmap(bitmap, info.Rect);
         }
     }
 }

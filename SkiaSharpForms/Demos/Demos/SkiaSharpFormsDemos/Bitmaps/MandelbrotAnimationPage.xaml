@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="SkiaSharpFormsDemos.Bitmaps.MandelbrotAnimationPage"
+             Title="Mandelbrot Animation">
+   
+    <StackLayout>
+        <Label x:Name="label"
+               HorizontalTextAlignment="Center" />
+        <ProgressBar x:Name="progressBar" />
+            
+                <skia:SKCanvasView x:Name="canvasView"
+                                   PaintSurface="OnCanvasViewPaintSurface" 
+            
+            
+        VerticalOptions="FillAndExpand"  />
+        </StackLayout>
+   
+</ContentPage>

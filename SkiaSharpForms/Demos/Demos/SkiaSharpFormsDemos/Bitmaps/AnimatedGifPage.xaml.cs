@@ -10,8 +10,8 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-	public partial class AnimatedGifPage : ContentPage
-	{
+    public partial class AnimatedGifPage : ContentPage
+    {
         SKBitmap[] bitmaps;
         int[] durations;
         int[] accumulatedDurations;
@@ -22,9 +22,9 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
         int currentFrame;
 
-		public AnimatedGifPage ()
-		{
-			InitializeComponent ();
+        public AnimatedGifPage ()
+        {
+            InitializeComponent ();
 
             string resourceID = "SkiaSharpFormsDemos.Media.Newtons_cradle_animation_book_2.gif";
             Assembly assembly = GetType().GetTypeInfo().Assembly;

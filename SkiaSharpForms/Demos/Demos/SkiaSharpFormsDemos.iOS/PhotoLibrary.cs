@@ -67,9 +67,18 @@ namespace SkiaSharpFormsDemos.iOS
             imagePicker.DismissModalViewController(true);
         }
 
-         public Task<bool> SavePhotoAsync(byte[] data, string folder, string filename)
+        public Task<bool> SavePhotoAsync(byte[] data, string folder, string filename)
         {
-            throw new NotImplementedException();
+            NSData nsData = NSData.FromArray(data);
+            UIImage image = new UIImage(nsData);
+            TaskCompletionSource<bool> taskCompletionSource = new TaskCompletionSource<bool>();
+
+            image.SaveToPhotosAlbum((UIImage img, NSError error) =>
+            {
+                taskCompletionSource.SetResult(error == null);
+            });
+
+            return taskCompletionSource.Task;
         }
     }
 }

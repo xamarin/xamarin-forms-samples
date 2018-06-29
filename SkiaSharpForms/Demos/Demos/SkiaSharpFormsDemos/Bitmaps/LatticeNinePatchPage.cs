@@ -7,16 +7,16 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-	public class LatticeNinePatchPage : ContentPage
-	{
-		public LatticeNinePatchPage ()
-		{
+    public class LatticeNinePatchPage : ContentPage
+    {
+        public LatticeNinePatchPage ()
+        {
             Title = "Lattice Nine-Patch";
 
             SKCanvasView canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;
             Content = canvasView;
-		}
+        }
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
@@ -34,7 +34,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
                 SKLatticeFlags.Default, SKLatticeFlags.Default, SKLatticeFlags.Default
             };
 
-            canvas.DrawBitmapLattice(NinePatchPage.FiveByFiveBitmap, lattice, info.Rect);
+            canvas.DrawBitmapLattice(NinePatchDisplayPage.FiveByFiveBitmap, lattice, info.Rect);
         }
     }
 }

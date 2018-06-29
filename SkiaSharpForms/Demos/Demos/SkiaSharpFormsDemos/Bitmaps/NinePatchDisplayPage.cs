@@ -7,9 +7,9 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-    public partial class NinePatchPage : ContentPage
+    public class NinePatchDisplayPage : ContentPage
     {
-        static NinePatchPage()
+        static NinePatchDisplayPage()
         {
             using (SKCanvas canvas = new SKCanvas(FiveByFiveBitmap))
             using (SKPaint paint = new SKPaint
@@ -29,7 +29,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
         public static SKBitmap FiveByFiveBitmap { get; } = new SKBitmap(500, 500);
 
-        public NinePatchPage()
+        public NinePatchDisplayPage()
         {
             Title = "Nine-Patch Display";
 

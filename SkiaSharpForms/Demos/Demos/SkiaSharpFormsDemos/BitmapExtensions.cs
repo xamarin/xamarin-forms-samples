@@ -46,7 +46,8 @@ namespace SkiaSharpFormsDemos
                         break;
                 }
 
-                SKRect display = CalculateDisplayRect(dest, scale * bitmap.Width, scale * bitmap.Height, horizontal, vertical);
+                SKRect display = CalculateDisplayRect(dest, scale * bitmap.Width, scale * bitmap.Height, 
+                                                      horizontal, vertical);
 
                 canvas.DrawBitmap(bitmap, display, paint);
             }
@@ -80,13 +81,15 @@ namespace SkiaSharpFormsDemos
                         break;
                 }
 
-                SKRect display = CalculateDisplayRect(dest, scale * source.Width, scale * source.Height, horizontal, vertical);
+                SKRect display = CalculateDisplayRect(dest, scale * source.Width, scale * source.Height, 
+                                                      horizontal, vertical);
 
                 canvas.DrawBitmap(bitmap, source, display, paint);
             }
         }
 
-        static SKRect CalculateDisplayRect(SKRect dest, float bmpWidth, float bmpHeight, BitmapAlignment horizontal, BitmapAlignment vertical)
+        static SKRect CalculateDisplayRect(SKRect dest, float bmpWidth, float bmpHeight, 
+                                           BitmapAlignment horizontal, BitmapAlignment vertical)
         {
             float x = 0;
             float y = 0;

@@ -7,10 +7,10 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-	public class LatticeDisplayPage : ContentPage
-	{
-		public LatticeDisplayPage ()
-		{
+    public class LatticeDisplayPage : ContentPage
+    {
+        public LatticeDisplayPage()
+        {
             Title = "Lattice Display";
 
             SKCanvasView canvasView = new SKCanvasView();
@@ -38,8 +38,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
                 lattice.Flags[i] = SKLatticeFlags.Default;
             }
 
-            canvas.DrawBitmapLattice(NinePatchPage.FiveByFiveBitmap, lattice, info.Rect);
-
-
+            canvas.DrawBitmapLattice(NinePatchDisplayPage.FiveByFiveBitmap, lattice, info.Rect);
         }
     }
+}
