@@ -162,15 +162,21 @@ namespace MandelAnima
 
                 // Make it sinusoidal, including bitmap index and gradation between bitmaps
                 double progress = COUNT * 0.5 * (1 + Math.Sin(2 * Math.PI * time / cycle - Math.PI / 2));
-                bitmapIndex = (int)Math.Min(COUNT, progress);
+
+                // These are the field values that the PaintSurface handler uses
+                bitmapIndex = (int)progress;
                 bitmapProgress = progress - bitmapIndex;
 
-                // Show progress in UI
-                statusLabel.Text = $"Displaying bitmap for zoom level {bitmapIndex}";
-                progressBar.Progress = bitmapProgress;
+                // It doesn't often happen that we get up to COUNT, but an exception would be raised
+                if (bitmapIndex < COUNT)
+                {
+                    // Show progress in UI
+                    statusLabel.Text = $"Displaying bitmap for zoom level {bitmapIndex}";
+                    progressBar.Progress = bitmapProgress;
 
-                // Update the canvas
-                canvasView.InvalidateSurface();
+                    // Update the canvas
+                    canvasView.InvalidateSurface();
+                }
 
                 // Wait 16 milliseconds
                 await Task.Delay(16);
