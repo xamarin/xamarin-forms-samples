@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+    <ID>1E72F587-5C67-4FF3-A264-9316B0B89367</ID>
+    <IsFullApplication>true</IsFullApplication>
+    <Level>Intermediate</Level>
+    <Tags>Xamarin.Forms, Graphics</Tags>
+    <SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+    <LicenseRequirement>Indie</LicenseRequirement>
+    <Brief>A demonstration of SkiaSharp bitmap animation based on the Mandelbrot Set.</Brief>
+    <Gallery>true</Gallery>
+</SampleMetadata>
