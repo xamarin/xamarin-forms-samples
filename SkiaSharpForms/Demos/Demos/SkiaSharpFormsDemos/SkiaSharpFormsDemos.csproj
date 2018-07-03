@@ -26,7 +26,7 @@
     <EmbeddedResource Update="Bitmaps\BitmapRotatorPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Bitmaps\MandelbrotAnimationPage.xaml">
+    <EmbeddedResource Update="Bitmaps\ColorAdjustmentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Unfinished\NinePatchButtonsPage.xaml">
@@ -198,6 +198,9 @@
   <ItemGroup>
     <Compile Update="Bitmaps\BitmapsHomePage.xaml.cs">
       <DependentUpon>BitmapsHomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Bitmaps\ColorAdjustmentPage.xaml.cs">
+      <DependentUpon>ColorAdjustmentPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Bitmaps\PhotoPuzzlePage1.xaml.cs">
       <DependentUpon>PhotoPuzzlePage1.xaml</DependentUpon>

@@ -98,8 +98,7 @@
             </TableSection>
 
             <TableSection Title="Saving Bitmap Files">
-
-
+                
                 <TextCell Text="File Formats" />
 
 
@@ -107,26 +106,50 @@
                           
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.FingerPaintSavePage}" />
+
+                <TextCell Text="SpinPaint" />
             </TableSection>
 
-            <TableSection Title="Animating GIF Bitmaps">
+            <TableSection Title="Accessing Pixel Bits">
+
+                <TextCell Text="Gradient Bitmap"
+                          Detail="Render a gradient by accessing the pixel bits"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.GradientBitmapPage}" />
+
+                <TextCell Text="Rainbow Sine"
+                          Detail="Render a rainbow in the form of a sine curve"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.RainbowSinePage}" />
+
+                <TextCell Text="Color Shift"
+                          Detail="Manipulate pixels in an existing bitmap"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.ColorShiftPage}" />
+
+                <TextCell Text="Color Adjustment"
+                          Detail="Interactively adjust hue, saturation, and luminosity"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.ColorAdjustmentPage}" />
+
+
+
+            </TableSection>
+            
+            
+            
+            <TableSection Title="Animating Bitmaps">
 
                 <TextCell Text="Animated GIF"
                           Detail="Show the animated Newton's Cradle"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.AnimatedGifPage}" />
 
-                <TextCell Text="Mandelbrot Animation"
+                <!--<TextCell Text="Mandelbrot Animation"
                           Detail="TK"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Bitmaps.MandelbrotAnimationPage}" />
+                          CommandParameter="{x:Type local:Bitmaps.MandelbrotAnimationPage}" />-->
 
-            </TableSection>
-
-            <TableSection Title="Accessing Bitmap Bits">
-                
-                
-                
             </TableSection>
         </TableRoot>
     </TableView>

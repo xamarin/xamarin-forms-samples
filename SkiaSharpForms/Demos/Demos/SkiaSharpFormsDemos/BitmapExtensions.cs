@@ -18,6 +18,32 @@ namespace SkiaSharpFormsDemos
             }
         }
 
+        public static uint RgbaMakePixel(byte red, byte green, byte blue, byte alpha = 255)
+        {
+            return (uint)((alpha << 24) | (blue << 16) | (green << 8) | red);
+        }
+
+        public static void RgbaGetBytes(this uint pixel, out byte red, out byte green, out byte blue, out byte alpha)
+        {
+            red = (byte)pixel;
+            green = (byte)(pixel >> 8);
+            blue = (byte)(pixel >> 16);
+            alpha = (byte)(pixel >> 24);
+        }
+
+        public static uint BgraMakePixel(byte blue, byte green, byte red, byte alpha = 255)
+        {
+            return (uint)((alpha << 24) | (red << 16) | (green << 8) | blue);
+        }
+
+        public static void BgraGetBytes(this uint pixel, out byte blue, out byte green, out byte red, out byte alpha)
+        {
+            blue = (byte)pixel;
+            green = (byte)(pixel >> 8);
+            red = (byte)(pixel >> 16);
+            alpha = (byte)(pixel >> 24);
+        }
+
         public static void DrawBitmap(this SKCanvas canvas, SKBitmap bitmap, SKRect dest, 
                                       BitmapStretch stretch, 
                                       BitmapAlignment horizontal = BitmapAlignment.Center, 
