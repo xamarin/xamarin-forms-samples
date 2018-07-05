@@ -53,14 +53,15 @@ namespace PlatformSpecifics
                     },
                     new TableSection("UWP")
                     {
-                        new TextCell { Text = "TabbedPage Toolbar Location Adjust", Command = NavigateCommand, CommandParameter = typeof(WindowsTabbedPageCS) },
-                        new TextCell { Text = "NavigationPage Toolbar Location Adjust", Command = NavigateCommand, CommandParameter = typeof(WindowsNavigationPageCS) },
-                        new TextCell { Text = "MasterDetailPage Toolbar Location Adjust", Command = NavigateCommand, CommandParameter = typeof(WindowsMasterDetailPageCS) },
+                        new TextCell { Text = "TabbedPage Toolbar Location", Command = NavigateCommand, CommandParameter = typeof(WindowsTabbedPageCS) },
+                        new TextCell { Text = "NavigationPage Toolbar Location", Command = NavigateCommand, CommandParameter = typeof(WindowsNavigationPageCS) },
+                        new TextCell { Text = "MasterDetailPage Toolbar Location", Command = NavigateCommand, CommandParameter = typeof(WindowsMasterDetailPageCS) },
 						new TextCell { Text = "WebView JavaScript Alert", Command = NavigateCommand, CommandParameter = typeof(WindowsWebViewPageCS) },
 						new TextCell { Text = "Text Reading Order", Command = NavigateCommand, CommandParameter = typeof(WindowsReadingOrderPageCS) },
 						new TextCell { Text = "SearchBar Spell Check", Command = NavigateCommand, CommandParameter = typeof(WindowsSearchBarPageCS) },
 						new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(WindowsLegacyColorModePageCS) },
-						new TextCell { Text = "ListView Selection Mode", Command = NavigateCommand, CommandParameter = typeof(WindowsListViewPageCS) }
+						new TextCell { Text = "ListView Selection Mode", Command = NavigateCommand, CommandParameter = typeof(WindowsListViewPageCS) },
+                        new TextCell { Text = "VisualElement Access Keys", Command = NavigateCommand, CommandParameter = typeof(WindowsVisualElementAccessKeysPageCS) }
                     }
                 }
             };         
