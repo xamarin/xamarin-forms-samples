@@ -5,7 +5,7 @@
         x:Class="PlatformSpecifics.AndroidTabbedPageSwipePage"
         android:TabbedPage.OffscreenPageLimit="2"
         android:TabbedPage.IsSwipePagingEnabled="true"
-        android:TabbedPage.ToolbarPlacement="Top"
+        android:TabbedPage.ToolbarPlacement="Bottom"
         android:TabbedPage.BarItemColor="Black"
         android:TabbedPage.BarSelectedItemColor="Red"
         Title="TabbedPage">
