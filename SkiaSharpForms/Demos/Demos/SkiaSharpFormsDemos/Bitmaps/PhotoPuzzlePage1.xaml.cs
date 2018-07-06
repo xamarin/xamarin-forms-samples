@@ -21,18 +21,9 @@ namespace SkiaSharpFormsDemos.Bitmaps
             {
                 if (stream != null)
                 {
-                    using (MemoryStream memStream = new MemoryStream())
-                    {
-                        stream.CopyTo(memStream);
-                        memStream.Seek(0, SeekOrigin.Begin);
+                    SKBitmap bitmap = SKBitmap.Decode(stream);
 
-                        using (SKManagedStream skStream = new SKManagedStream(memStream))
-                        {
-                            SKBitmap bitmap = SKBitmap.Decode(skStream);
-
-                            await Navigation.PushAsync(new PhotoPuzzlePage2(bitmap));
-                        }
-                    }
+                    await Navigation.PushAsync(new PhotoPuzzlePage2(bitmap));
                 }
             }
         }

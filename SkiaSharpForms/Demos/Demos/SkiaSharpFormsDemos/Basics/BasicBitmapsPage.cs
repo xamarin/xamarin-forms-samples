@@ -14,6 +14,9 @@ namespace SkiaSharpFormsDemos.Basics
     public class BasicBitmapsPage : ContentPage
     {
         SKCanvasView canvasView;
+
+        HttpClient httpClient = new HttpClient();
+
         SKBitmap webBitmap;
         SKBitmap resourceBitmap;
         SKBitmap libraryBitmap;
@@ -31,9 +34,8 @@ namespace SkiaSharpFormsDemos.Basics
             Assembly assembly = GetType().GetTypeInfo().Assembly;
 
             using (Stream stream = assembly.GetManifestResourceStream(resourceID))
-            using (SKManagedStream skStream = new SKManagedStream(stream))
             {
-                resourceBitmap = SKBitmap.Decode(skStream);
+                resourceBitmap = SKBitmap.Decode(stream);
             }
 
             // Add tap gesture recognizer
@@ -47,16 +49,7 @@ namespace SkiaSharpFormsDemos.Basics
                 {
                     if (stream != null)
                     {
-                        using (MemoryStream memStream = new MemoryStream())
-                        {
-                            stream.CopyTo(memStream);
-                            memStream.Seek(0, SeekOrigin.Begin);
-
-                            using (SKManagedStream skStream = new SKManagedStream(memStream))
-                            {
-                                libraryBitmap = SKBitmap.Decode(skStream);
-                            }
-                        }
+                        libraryBitmap = SKBitmap.Decode(stream);
                         canvasView.InvalidateSurface();
                     }
                 }
@@ -69,23 +62,19 @@ namespace SkiaSharpFormsDemos.Basics
             base.OnAppearing();
 
             // Load web bitmap.
-            HttpClient httpClient = new HttpClient();
-            string url = "http://developer.xamarin.com/demo/IMG_3256.JPG?width=480";
+            string url = "https://developer.xamarin.com/demo/IMG_3256.JPG?width=480";
 
             try
             {
                 using (Stream stream = await httpClient.GetStreamAsync(url))
                 using (MemoryStream memStream = new MemoryStream())
                 {
-                    stream.CopyTo(memStream);
+                    await stream.CopyToAsync(memStream);
                     memStream.Seek(0, SeekOrigin.Begin);
 
-                    using (SKManagedStream skStream = new SKManagedStream(memStream))
-                    {
-                        webBitmap = SKBitmap.Decode(skStream);
-                        canvasView.InvalidateSurface();
-                    }
-                };
+                    webBitmap = SKBitmap.Decode(memStream);
+                    canvasView.InvalidateSurface();
+                }
             }
             catch
             {

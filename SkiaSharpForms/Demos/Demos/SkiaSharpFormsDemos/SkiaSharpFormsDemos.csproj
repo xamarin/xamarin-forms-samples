@@ -29,6 +29,12 @@
     <EmbeddedResource Update="Bitmaps\ColorAdjustmentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Bitmaps\SaveFileFormatsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Bitmaps\SpinPaintPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Unfinished\NinePatchButtonsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -213,6 +219,9 @@
     </Compile>
     <Compile Update="Bitmaps\PhotoPuzzlePage4.xaml.cs">
       <DependentUpon>PhotoPuzzlePage4.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Bitmaps\SaveFileFormatsPage.xaml.cs">
+      <DependentUpon>SaveFileFormatsPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 

@@ -24,8 +24,8 @@ namespace SkiaSharpFormsDemos.Bitmaps
             StrokeJoin = SKStrokeJoin.Round
         };
 
-        SKBitmap bitmap;
-        SKCanvas bitmapCanvas;
+        SKBitmap bitmap = null;
+        SKCanvas bitmapCanvas = null;
 
         public FingerPaintSavePage ()
         {

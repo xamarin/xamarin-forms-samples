@@ -3,7 +3,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                     xmlns:local="clr-namespace:SkiaSharpFormsDemos"
                     x:Class="SkiaSharpFormsDemos.Bitmaps.BitmapsHomePage"
-                    Title="SkiaSharp Bitmaps and Images"
+                    Title="SkiaSharp Bitmaps"
                     Padding="10">
     <TableView Intent="Menu">
         <TableRoot>
@@ -99,15 +99,20 @@
 
             <TableSection Title="Saving Bitmap Files">
                 
-                <TextCell Text="File Formats" />
-
+                <TextCell Text="Save File Formats"
+                          Detail="Save a bitmap in various file formats"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.SaveFileFormatsPage}" />
 
                 <TextCell Text="Finger Paint with Save"
-                          
+                          Detail="Save your finger-painting artworks"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.FingerPaintSavePage}" />
 
-                <TextCell Text="SpinPaint" />
+                <TextCell Text="SpinPaint"
+                          Detail="Create designs and save them"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.SpinPaintPage}" />
             </TableSection>
 
             <TableSection Title="Accessing Pixel Bits">

@@ -9,6 +9,8 @@ namespace SkiaSharpFormsDemos.Bitmaps
 {
     public class LatticeDisplayPage : ContentPage
     {
+        SKBitmap bitmap = NinePatchDisplayPage.FiveByFiveBitmap;
+
         public LatticeDisplayPage()
         {
             Title = "Lattice Display";
@@ -33,12 +35,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
             int count = (lattice.XDivs.Length + 1) * (lattice.YDivs.Length + 1);
             lattice.Flags = new SKLatticeFlags[count];
 
-            for (int i = 0; i < count; i++)
-            {
-                lattice.Flags[i] = SKLatticeFlags.Default;
-            }
-
-            canvas.DrawBitmapLattice(NinePatchDisplayPage.FiveByFiveBitmap, lattice, info.Rect);
+            canvas.DrawBitmapLattice(bitmap, lattice, info.Rect);
         }
     }
 }

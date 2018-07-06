@@ -25,7 +25,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
         SKCanvasView canvasView;
         SKBitmap bitmapReleased;
         SKBitmap bitmapPressed;
-        bool buttonPressed;
+        bool buttonPressed = false;
 
         public static readonly BindableProperty TextProperty =
             BindableProperty.Create("Text", typeof(string), typeof(NinePatchButton), "",

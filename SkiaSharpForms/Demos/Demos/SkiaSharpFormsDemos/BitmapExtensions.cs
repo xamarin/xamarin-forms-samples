@@ -12,9 +12,8 @@ namespace SkiaSharpFormsDemos
             Assembly assembly = type.GetTypeInfo().Assembly;
 
             using (Stream stream = assembly.GetManifestResourceStream(resourceID))
-            using (SKManagedStream skStream = new SKManagedStream(stream))
             {
-                return SKBitmap.Decode(skStream);
+                return SKBitmap.Decode(stream);
             }
         }
 
