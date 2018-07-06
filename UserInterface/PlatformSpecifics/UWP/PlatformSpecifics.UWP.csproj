@@ -109,8 +109,8 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="contacts.png" />
     <Content Include="csharp.png">
-      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </Content>
     <Content Include="monkeyface.png" />
@@ -123,8 +123,8 @@
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="reminders.png" />
+    <Content Include="todo.png" />
     <Content Include="xaml.png">
-      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>

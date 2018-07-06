@@ -99,6 +99,9 @@
             <TextCell Text="VisualElement AccessKeys"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:WindowsVisualElementAccessKeysPage}" />
+            <TextCell Text="TabbedPage Icons"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:WindowsTabbedPageIcons}" />
         </TableSection>
     </TableView>
 </ContentPage>

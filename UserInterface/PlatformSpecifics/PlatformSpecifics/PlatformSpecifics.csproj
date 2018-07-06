@@ -76,6 +76,9 @@
     <EmbeddedResource Update="UWP\XAML\AddRemoveToolbarItemsContentView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="UWP\XAML\TabbedPage\WindowsTabbedPageIcons.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="UWP\XAML\ToolbarPlacementChangerContentView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
