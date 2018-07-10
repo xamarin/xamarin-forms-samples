@@ -5,9 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
+    <PackageReference Include="Xamarin.Forms" Version="3.1.0.583944" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Include="index.html" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="XAML Implementation\InAppBrowserXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -20,4 +23,7 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="index.html" />
+  </ItemGroup>
 </Project>

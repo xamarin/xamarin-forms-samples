@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="WebViewSample.EvaluateJavaScriptPage" Title="Evaluate JavaScript">
+    <StackLayout Margin="20">
+        <Label Text="JavaScript Factorial" FontAttributes="Bold" HorizontalOptions="Center" />
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Enter number: " />
+            <Entry x:Name="_numberEntry" Text="10" WidthRequest="40" />
+        </StackLayout>
+        <Button x:Name="_callJavaScriptButton" Text="Call JavaScript" Clicked="OnCallJavaScriptButtonClicked" />
+        <Label x:Name="_resultLabel" />
+        <WebView x:Name="_webView" />
+    </StackLayout>
+</ContentPage>

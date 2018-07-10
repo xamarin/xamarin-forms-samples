@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
-using Xamarin.Forms;
-
+[assembly:XamlCompilation(XamlCompilationOptions.Compile)]
 namespace WebViewSample
 {
     public class App : Application
@@ -12,15 +9,15 @@ namespace WebViewSample
         public App()
         {
 			var tabs = new TabbedPage ();
-			var navPage = new NavigationPage () {Title="App Content"};
+			var navPage = new NavigationPage { Title="App Content" };
 			tabs.Children.Add (navPage);
 
-			bool useXaml = false; //change this to use the code implementation
+			bool useXaml = true; //change this to use the code implementation
 
-			if (useXaml) {
-				
+			if (useXaml) {				
 				navPage.PushAsync (new LinkToInAppXaml ());
 				tabs.Children.Add (new LoadingLabelXaml ());
+                tabs.Children.Add (new EvaluateJavaScriptPage ());
 			} else {
 				navPage.PushAsync (new LinkToInAppCode ());
 				tabs.Children.Add (new LoadingLabelCode ());
