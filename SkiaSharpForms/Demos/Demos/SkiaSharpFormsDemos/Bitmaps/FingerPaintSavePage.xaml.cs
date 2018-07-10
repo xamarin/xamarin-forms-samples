@@ -24,12 +24,42 @@ namespace SkiaSharpFormsDemos.Bitmaps
             StrokeJoin = SKStrokeJoin.Round
         };
 
-        SKBitmap bitmap = null;
-        SKCanvas bitmapCanvas = null;
+        SKBitmap saveBitmap;
 
         public FingerPaintSavePage ()
         {
             InitializeComponent ();
+        }
+
+        void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
+        {
+            SKImageInfo info = args.Info;
+            SKSurface surface = args.Surface;
+            SKCanvas canvas = surface.Canvas;
+
+            // Create bitmap the size of the display surface
+            if (saveBitmap == null)
+            {
+                saveBitmap = new SKBitmap(info.Width, info.Height);
+            }
+            // Or create new bitmap for a new size of display surface
+            else if (saveBitmap.Width < info.Width || saveBitmap.Height < info.Height)
+            {
+                SKBitmap newBitmap = new SKBitmap(Math.Max(saveBitmap.Width, info.Width),
+                                                  Math.Max(saveBitmap.Height, info.Height));
+
+                using (SKCanvas newCanvas = new SKCanvas(newBitmap))
+                {
+                    newCanvas.Clear();
+                    newCanvas.DrawBitmap(saveBitmap, 0, 0);
+                }
+
+                saveBitmap = newBitmap;
+            }
+
+            // Render the bitmap
+            canvas.Clear();
+            canvas.DrawBitmap(saveBitmap, 0, 0);
         }
 
         void OnTouchEffectAction(object sender, TouchActionEventArgs args)
@@ -42,7 +72,6 @@ namespace SkiaSharpFormsDemos.Bitmaps
                         SKPath path = new SKPath();
                         path.MoveTo(ConvertToPixel(args.Location));
                         inProgressPaths.Add(args.Id, path);
-                        //      canvasView.InvalidateSurface();
                         UpdateBitmap();
                     }
                     break;
@@ -52,7 +81,6 @@ namespace SkiaSharpFormsDemos.Bitmaps
                     {
                         SKPath path = inProgressPaths[args.Id];
                         path.LineTo(ConvertToPixel(args.Location));
-    //                    canvasView.InvalidateSurface();
                         UpdateBitmap();
                     }
                     break;
@@ -62,7 +90,6 @@ namespace SkiaSharpFormsDemos.Bitmaps
                     {
                         completedPaths.Add(inProgressPaths[args.Id]);
                         inProgressPaths.Remove(args.Id);
-  //                      canvasView.InvalidateSurface();
                         UpdateBitmap();
                     }
                     break;
@@ -71,56 +98,10 @@ namespace SkiaSharpFormsDemos.Bitmaps
                     if (inProgressPaths.ContainsKey(args.Id))
                     {
                         inProgressPaths.Remove(args.Id);
-//                        canvasView.InvalidateSurface();
                         UpdateBitmap();
                     }
                     break;
             }
-        }
-
-        void UpdateBitmap()
-        {
-            bitmapCanvas.Clear();
-
-            foreach (SKPath path in completedPaths)
-            {
-                bitmapCanvas.DrawPath(path, paint);
-            }
-
-            foreach (SKPath path in inProgressPaths.Values)
-            {
-                bitmapCanvas.DrawPath(path, paint);
-            }
-
-            canvasView.InvalidateSurface();
-        }
-
-        void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
-        {
-            SKImageInfo info = args.Info;
-            SKSurface surface = args.Surface;
-            SKCanvas canvas = surface.Canvas;
-
-            if (bitmap == null)
-            {
-                bitmap = new SKBitmap(info.Width, info.Height);
-            }
-            else if (bitmap.Width < info.Width || bitmap.Height < info.Height)
-            {
-                SKBitmap newBitmap = new SKBitmap(Math.Max(bitmap.Width, info.Width),
-                                                  Math.Max(bitmap.Height, info.Height));
-
-                using (SKCanvas newCanvas = new SKCanvas(newBitmap))
-                {
-                    newCanvas.Clear();
-                    newCanvas.DrawBitmap(bitmap, 0, 0);
-                }
-
-                bitmap = newBitmap;
-            }
-
-            canvas.Clear();
-            canvas.DrawBitmap(bitmap, 0, 0);
         }
 
         SKPoint ConvertToPixel(Point pt)
@@ -129,25 +110,50 @@ namespace SkiaSharpFormsDemos.Bitmaps
                                (float)(canvasView.CanvasSize.Height * pt.Y / canvasView.Height));
         }
 
+        void UpdateBitmap()
+        {
+            using (SKCanvas saveBitmapCanvas = new SKCanvas(saveBitmap))
+            {
+                saveBitmapCanvas.Clear();
+
+                foreach (SKPath path in completedPaths)
+                {
+                    saveBitmapCanvas.DrawPath(path, paint);
+                }
+
+                foreach (SKPath path in inProgressPaths.Values)
+                {
+                    saveBitmapCanvas.DrawPath(path, paint);
+                }
+            }
+
+            canvasView.InvalidateSurface();
+        }
+
         void OnClearButtonClicked(object sender, EventArgs args)
         {
-            bitmapCanvas.Clear();
+            completedPaths.Clear();
+            inProgressPaths.Clear();
+            UpdateBitmap();
             canvasView.InvalidateSurface();
         }
 
         async void OnSaveButtonClicked(object sender, EventArgs args)
         {
-            SKData data = SKImage.FromBitmap(bitmap).Encode();
-            DateTime dt = DateTime.Now;
-            string filename = String.Format("FingerPaint-{0:D4}{1:D2}{2:D2}-{3:D2}{4:D2}{5:D2}{6:D3}.png",
-                                            dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second, dt.Millisecond);
-
-            IPhotoLibrary photoLibrary = DependencyService.Get<IPhotoLibrary>();
-            bool result = await photoLibrary.SavePhotoAsync(data.ToArray(), "FingerPaint", filename);
-
-            if (!result)
+            using (SKImage image = SKImage.FromBitmap(saveBitmap))
+            using (SKData data = image.Encode())
             {
-                await DisplayAlert("FingerPaint", "Artwork could not be saved. Sorry!", "OK");
+                DateTime dt = DateTime.Now;
+                string filename = String.Format("FingerPaint-{0:D4}{1:D2}{2:D2}-{3:D2}{4:D2}{5:D2}{6:D3}.png",
+                                                dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second, dt.Millisecond);
+
+                IPhotoLibrary photoLibrary = DependencyService.Get<IPhotoLibrary>();
+                bool result = await photoLibrary.SavePhotoAsync(data.ToArray(), "FingerPaint", filename);
+
+                if (!result)
+                {
+                    await DisplayAlert("FingerPaint", "Artwork could not be saved. Sorry!", "OK");
+                }
             }
         }
     }

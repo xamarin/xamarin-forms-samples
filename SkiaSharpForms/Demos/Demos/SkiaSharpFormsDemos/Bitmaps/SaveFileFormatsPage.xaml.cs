@@ -8,15 +8,15 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-	public partial class SaveFileFormatsPage : ContentPage
-	{
+    public partial class SaveFileFormatsPage : ContentPage
+    {
         SKBitmap bitmap = BitmapExtensions.LoadBitmapResource(typeof(SaveFileFormatsPage),
             "SkiaSharpFormsDemos.Media.MonkeyFace.png");
 
-		public SaveFileFormatsPage ()
-		{
-			InitializeComponent ();
-		}
+	    public SaveFileFormatsPage ()
+	    {
+		    InitializeComponent ();
+	    }
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
@@ -28,40 +28,34 @@ namespace SkiaSharpFormsDemos.Bitmaps
             if (formatPicker.SelectedIndex != -1)
             {
                 SKEncodedImageFormat imageFormat = (SKEncodedImageFormat)formatPicker.SelectedItem;
-
                 fileNameEntry.Text = Path.ChangeExtension(fileNameEntry.Text, imageFormat.ToString());
-
                 statusLabel.Text = "OK";
-
-
-          //      fileNameEntry.Text = "Sample." + formatPicker.SelectedItem;
             }
         }
 
         async void OnButtonClicked(object sender, EventArgs args)
         {
             SKEncodedImageFormat imageFormat = (SKEncodedImageFormat)formatPicker.SelectedItem;
+            int quality = (int)qualitySlider.Value;
 
-            System.Diagnostics.Debug.WriteLine(imageFormat);
-
-            //        SKPixmap pixmap = bitmap.PeekPixels();
-            //      SKData data = pixmap.Encode(imageFormat, 50);
-
-            using (SKImage image = SKImage.FromBitmap(bitmap))
-            using (SKData data = image.Encode(imageFormat, 50))
+            using (MemoryStream memStream = new MemoryStream())
+            using (SKManagedWStream wstream = new SKManagedWStream(memStream))
             {
+                bitmap.Encode(wstream, imageFormat, quality);
+                byte[] data = memStream.ToArray();
+
                 if (data == null)
                 {
                     statusLabel.Text = "Encode returned null";
                 }
-                else if (data.IsEmpty)
+                else if (data.Length == 0)
                 {
                     statusLabel.Text = "Encode returned empty array";
                 }
                 else
                 {
                     bool success = await DependencyService.Get<IPhotoLibrary>().
-                        SavePhotoAsync(data.ToArray(), folderNameEntry.Text, fileNameEntry.Text);
+                        SavePhotoAsync(data, folderNameEntry.Text, fileNameEntry.Text);
 
                     if (!success)
                     {

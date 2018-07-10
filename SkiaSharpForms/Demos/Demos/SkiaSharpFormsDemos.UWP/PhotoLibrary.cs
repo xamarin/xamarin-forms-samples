@@ -43,33 +43,37 @@ namespace SkiaSharpFormsDemos.UWP
 
         public async Task<bool> SavePhotoAsync(byte[] data, string folder, string filename)
         {
-            StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
-            StorageFolder spinPaintFolder = null;
+            StorageFolder picturesDirectory = KnownFolders.PicturesLibrary;
+            StorageFolder folderDirectory = picturesDirectory;
 
             // Get the folder or create it if necessary
-            try
-            {
-                spinPaintFolder = await picturesFolder.GetFolderAsync(folder);
-            }
-            catch
-            { }
-
-            if (spinPaintFolder == null)
+            if (!string.IsNullOrEmpty(folder))
             {
                 try
                 {
-                    spinPaintFolder = await picturesFolder.CreateFolderAsync(folder);
+                    folderDirectory = await picturesDirectory.GetFolderAsync(folder);
                 }
                 catch
+                { }
+
+                if (folderDirectory == null)
                 {
-                    return false;
+                    try
+                    {
+                        folderDirectory = await picturesDirectory.CreateFolderAsync(folder);
+                    }
+                    catch
+                    {
+                        return false;
+                    }
                 }
             }
 
             try
             {
                 // Create the file.
-                StorageFile storageFile = await spinPaintFolder.CreateFileAsync(filename);
+                StorageFile storageFile = await folderDirectory.CreateFileAsync(filename, 
+                                                    CreationCollisionOption.GenerateUniqueName);
 
                 // Convert byte[] to Windows buffer and write it out.
                 IBuffer buffer = WindowsRuntimeBuffer.Create(data, 0, data.Length, data.Length);

@@ -4,15 +4,14 @@
              xmlns:skia="clr-namespace:SkiaSharp;assembly=SkiaSharp"
              xmlns:skiaforms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SkiaSharpFormsDemos.Bitmaps.SaveFileFormatsPage"
-             Title="Save Bitmap Formats">
+             Title="Save File Formats">
 
-    <StackLayout>
+    <StackLayout Margin="10">
         <skiaforms:SKCanvasView PaintSurface="OnCanvasViewPaintSurface"
                                 VerticalOptions="FillAndExpand" />
 
         <Picker x:Name="formatPicker"
                 Title="image format"
-                Margin="10, 0"
                 SelectedIndexChanged="OnFormatPickerChanged">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type skia:SKEncodedImageFormat}">
@@ -31,8 +30,16 @@
             </Picker.ItemsSource>
         </Picker>
 
-        <StackLayout Orientation="Horizontal"
-                     Margin="10, 0">
+        <Slider x:Name="qualitySlider"
+                Maximum="100"
+                Value="50" />
+
+        <Label Text="{Binding Source={x:Reference qualitySlider},
+                              Path=Value,
+                              StringFormat='Quality = {0:F0}'}"
+               HorizontalTextAlignment="Center" />
+
+        <StackLayout Orientation="Horizontal">
             <Label Text="Folder Name: "
                    VerticalOptions="Center" />
 
@@ -41,8 +48,7 @@
                    HorizontalOptions="FillAndExpand" />
         </StackLayout>
 
-        <StackLayout Orientation="Horizontal"
-                     Margin="10, 0">
+        <StackLayout Orientation="Horizontal">
             <Label Text="File Name: "
                    VerticalOptions="Center" />
 
@@ -52,7 +58,6 @@
         </StackLayout>
 
         <Button Text="Save" 
-                Margin="5"
                 Clicked="OnButtonClicked">
             <Button.Triggers>
                 <DataTrigger TargetType="Button"
