@@ -8,17 +8,17 @@ using SkiaSharp.Views.Forms;
 namespace SkiaSharpFormsDemos.Bitmaps
 {
     public partial class ColorAdjustmentPage : ContentPage
-	{
-        SKBitmap originalBitmap =
+    {
+        SKBitmap srcBitmap =
             BitmapExtensions.LoadBitmapResource(typeof(FillRectanglePage),
                                                 "SkiaSharpFormsDemos.Media.Banana.jpg");
-        SKBitmap adjustedBitmap;
+        SKBitmap dstBitmap;
 
-        public ColorAdjustmentPage ()
-		{
+        public ColorAdjustmentPage()
+        {
             InitializeComponent();
 
-            adjustedBitmap = new SKBitmap(originalBitmap.Width, originalBitmap.Height);
+            dstBitmap = new SKBitmap(srcBitmap.Width, srcBitmap.Height);
             OnSliderValueChanged(null, null);
         }
 
@@ -37,24 +37,66 @@ namespace SkiaSharpFormsDemos.Bitmaps
             canvasView.InvalidateSurface();
         }
 
-        void TransferPixels(float hueAdjust, float saturationAdjust, float luminosityAdjust)
+        unsafe void TransferPixels(float hueAdjust, float saturationAdjust, float luminosityAdjust)
         {
-            SKColor[] originalPixels = originalBitmap.Pixels;
-            SKColor[] adjustedPixels = new SKColor[originalPixels.Length];
+            byte* srcPtr = (byte*)srcBitmap.GetPixels().ToPointer();
+            byte* dstPtr = (byte*)dstBitmap.GetPixels().ToPointer();
 
-            for (int i = 0; i < originalPixels.Length; i++)
+            int width = srcBitmap.Width;       // same for both bitmaps
+            int height = srcBitmap.Height;
+
+            SKColorType typeOrg = srcBitmap.ColorType;
+            SKColorType typeAdj = dstBitmap.ColorType;
+
+            for (int row = 0; row < height; row++)
             {
-                SKColor originalColor = originalPixels[i];
+                for (int col = 0; col < width; col++)
+                {
+                    // Get color from original bitmap
+                    byte byte1 = *srcPtr++;         // red or blue
+                    byte byte2 = *srcPtr++;         // green
+                    byte byte3 = *srcPtr++;         // blue or red
+                    byte byte4 = *srcPtr++;         // alpha
 
-                originalColor.ToHsl(out float hue, out float saturation, out float luminosity);
-                hue = (hue + hueAdjust) % 360;
-                saturation = Math.Max(0, Math.Min(100, saturationAdjust * saturation));
-                luminosity = Math.Max(0, Math.Min(100, luminosityAdjust * luminosity));
+                    SKColor color = new SKColor();
 
-                adjustedPixels[i] = SKColor.FromHsl(hue, saturation, luminosity);
+                    if (typeOrg == SKColorType.Rgba8888)
+                    {
+                        color = new SKColor(byte1, byte2, byte3, byte4);
+                    }
+                    else if (typeOrg == SKColorType.Bgra8888)
+                    {
+                        color = new SKColor(byte3, byte2, byte1, byte4);
+                    }
+
+                    // Get HSL components
+                    color.ToHsl(out float hue, out float saturation, out float luminosity);
+
+                    // Adjust HSL components based on adjustments
+                    hue = (hue + hueAdjust) % 360;
+                    saturation = Math.Max(0, Math.Min(100, saturationAdjust * saturation));
+                    luminosity = Math.Max(0, Math.Min(100, luminosityAdjust * luminosity));
+
+                    // Recreate color from HSL components
+                    color = SKColor.FromHsl(hue, saturation, luminosity);
+
+                    // Store the bytes in the adjusted bitmap
+                    if (typeAdj == SKColorType.Rgba8888)
+                    {
+                        *dstPtr++ = color.Red;
+                        *dstPtr++ = color.Green;
+                        *dstPtr++ = color.Blue;
+                        *dstPtr++ = color.Alpha;
+                    }
+                    else if (typeAdj == SKColorType.Bgra8888)
+                    {
+                        *dstPtr++ = color.Blue;
+                        *dstPtr++ = color.Green;
+                        *dstPtr++ = color.Red;
+                        *dstPtr++ = color.Alpha;
+                    }
+                }
             }
-
-            adjustedBitmap.Pixels = adjustedPixels;
         }
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -64,8 +106,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
             SKCanvas canvas = surface.Canvas;
 
             canvas.Clear();
-
-            canvas.DrawBitmap(adjustedBitmap, info.Rect, BitmapStretch.Uniform);
+            canvas.DrawBitmap(dstBitmap, info.Rect, BitmapStretch.Uniform);
         }
     }
 }

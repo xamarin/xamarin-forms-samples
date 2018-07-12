@@ -17,38 +17,34 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
             bitmap = new SKBitmap(360 * 3, 1024, SKColorType.Bgra8888, SKAlphaType.Unpremul);
 
-            // Create array for the pixel colors
-            uint[,] buffer = new uint[bitmap.Height, bitmap.Width];
-
-            // Loop through the rows
-            for (int row = 0; row < bitmap.Height; row++)
-            {
-                // Calculate the sine curve angle and the sine value
-                double angle = 2 * Math.PI * row / bitmap.Height;
-                double sine = Math.Sin(angle);
-
-                // Loop through the hues
-                for (int hue = 0; hue < 360; hue++)
-                {
-                    // Calculate the column
-                    int col = (int)(360 + 360 * sine + hue);
-
-                    // Get the color
-                    SKColor color = SKColor.FromHsl(hue, 100, 50);
-
-                    // Store the color value
-                    buffer[row, col] = (uint)color;
-                }
-            }
-
             unsafe
             {
-                fixed (uint* ptr = buffer)
+                // Pointer to first pixel of bitmap
+                uint* basePtr = (uint*)bitmap.GetPixels().ToPointer();
+
+                // Loop through the rows
+                for (int row = 0; row < bitmap.Height; row++)
                 {
-                    bitmap.SetPixels((IntPtr)ptr);
+                    // Calculate the sine curve angle and the sine value
+                    double angle = 2 * Math.PI * row / bitmap.Height;
+                    double sine = Math.Sin(angle);
+
+                    // Loop through the hues
+                    for (int hue = 0; hue < 360; hue++)
+                    {
+                        // Calculate the column
+                        int col = (int)(360 + 360 * sine + hue);
+
+                        // Calculate the address
+                        uint* ptr = basePtr + bitmap.Width * row + col;
+
+                        // Store the color value
+                        *ptr = (uint)SKColor.FromHsl(hue, 100, 50);
+                    }
                 }
             }
 
+            // Create the SKCanvasView
             SKCanvasView canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;
             Content = canvasView;

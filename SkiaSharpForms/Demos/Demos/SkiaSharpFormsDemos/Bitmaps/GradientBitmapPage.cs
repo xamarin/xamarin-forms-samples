@@ -11,7 +11,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
 {
 	public class GradientBitmapPage : ContentPage
 	{
-        const int REPS = 10;
+        const int REPS = 100;
 
         Stopwatch stopwatch = new Stopwatch();
 
@@ -277,7 +277,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
         void Display(SKCanvas canvas, int index, SKRect rect)
         {
-            string text = String.Format("{0}: {1:F1} msec", descriptions[index], 
+            string text = String.Format("{0}: {1:F2} msec", descriptions[index], 
                                         (double)elapsedTimes[index] / REPS);
 
             SKRect bounds = new SKRect();

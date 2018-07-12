@@ -22,18 +22,17 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
         int currentFrame;
 
-        public AnimatedGifPage ()
+        public AnimatedGifPage()
         {
-            InitializeComponent ();
+            InitializeComponent();
 
             string resourceID = "SkiaSharpFormsDemos.Media.Newtons_cradle_animation_book_2.gif";
             Assembly assembly = GetType().GetTypeInfo().Assembly;
 
             using (Stream stream = assembly.GetManifestResourceStream(resourceID))
             using (SKManagedStream skStream = new SKManagedStream(stream))
+            using (SKCodec codec = SKCodec.Create(skStream))
             {
-                SKCodec codec = SKCodec.Create(skStream);
-
                 // Get frame count and allocate bitmaps
                 int frameCount = codec.FrameCount;
                 bitmaps = new SKBitmap[frameCount];
@@ -71,7 +70,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
                 // Calculate the accumulated durations 
                 for (int frame = 0; frame < durations.Length; frame++)
                 {
-                    accumulatedDurations[frame] = durations[frame] + 
+                    accumulatedDurations[frame] = durations[frame] +
                         (frame == 0 ? 0 : accumulatedDurations[frame - 1]);
                 }
             }
@@ -108,9 +107,13 @@ namespace SkiaSharpFormsDemos.Bitmaps
                 }
             }
 
-            // Save in a field nd invalidate the SKCanvasView.
-            currentFrame = frame;
-            canvasView.InvalidateSurface();
+            // Save in a field and invalidate the SKCanvasView.
+            if (currentFrame != frame)
+            {
+                currentFrame = frame;
+                canvasView.InvalidateSurface();
+            }
+
             return isAnimating;
         }
 
@@ -121,7 +124,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
             SKCanvas canvas = surface.Canvas;
 
             canvas.Clear(SKColors.Black);
-            
+
             // Get the bitmap and center it
             SKBitmap bitmap = bitmaps[currentFrame];
             int x = (info.Width - bitmap.Width) / 2;
