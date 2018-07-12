@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "XamFormsImageResize", "XamFormsImageResize\XamFormsImageResize.shproj", "{1F341049-8945-4BCE-BE1C-7FBA9696F71A}"
 EndProject
@@ -11,12 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamFormsImageResize.Android
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamFormsImageResize.UWP", "UWP\XamFormsImageResize.UWP.csproj", "{E1C8C843-B8E2-48F8-80A8-881DC8633D19}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamFormsImageResize.Tizen", "Tizen\XamFormsImageResize.Tizen.csproj", "{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		XamFormsImageResize\XamFormsImageResize.projitems*{e1c8c843-b8e2-48f8-80a8-881dc8633d19}*SharedItemsImports = 4
 		XamFormsImageResize\XamFormsImageResize.projitems*{1f341049-8945-4bce-be1c-7fba9696f71a}*SharedItemsImports = 13
-		XamFormsImageResize\XamFormsImageResize.projitems*{6faf80cc-38b8-404f-8592-a20075f38a9f}*SharedItemsImports = 4
 		XamFormsImageResize\XamFormsImageResize.projitems*{52e3ffc7-a230-4678-b0ac-b73db955faa3}*SharedItemsImports = 4
+		XamFormsImageResize\XamFormsImageResize.projitems*{6faf80cc-38b8-404f-8592-a20075f38a9f}*SharedItemsImports = 4
+		XamFormsImageResize\XamFormsImageResize.projitems*{e1c8c843-b8e2-48f8-80a8-881dc8633d19}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -221,9 +223,68 @@ Global
 		{E1C8C843-B8E2-48F8-80A8-881DC8633D19}.Release|x86.ActiveCfg = Release|x86
 		{E1C8C843-B8E2-48F8-80A8-881DC8633D19}.Release|x86.Build.0 = Release|x86
 		{E1C8C843-B8E2-48F8-80A8-881DC8633D19}.Release|x86.Deploy.0 = Release|x86
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Ad-Hoc|Any CPU.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Ad-Hoc|Any CPU.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Ad-Hoc|ARM.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Ad-Hoc|ARM.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Ad-Hoc|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Ad-Hoc|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Ad-Hoc|Mixed Platforms.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Ad-Hoc|x64.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Ad-Hoc|x64.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Ad-Hoc|x86.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Ad-Hoc|x86.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.AppStore|ARM.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.AppStore|ARM.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.AppStore|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.AppStore|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.AppStore|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.AppStore|Mixed Platforms.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.AppStore|x64.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.AppStore|x64.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.AppStore|x86.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.AppStore|x86.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Debug|ARM.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Debug|x64.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Debug|x86.Build.0 = Debug|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Release|ARM.ActiveCfg = Release|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Release|ARM.Build.0 = Release|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Release|iPhone.Build.0 = Release|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Release|x64.ActiveCfg = Release|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Release|x64.Build.0 = Release|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Release|x86.ActiveCfg = Release|Any CPU
+		{31C0332B-D4C7-4A52-9F7A-E4DDBCCF3BE2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E99C9A6D-98A2-4D30-AC1C-362D52CD233B}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Android\XamFormsImageResize.Android.csproj

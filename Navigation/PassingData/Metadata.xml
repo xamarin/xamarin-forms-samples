@@ -4,7 +4,7 @@
 	<IsFullApplication>false</IsFullApplication>
 	<Level>Beginner</Level>
 	<Tags>Navigation, Xamarin.Forms</Tags>
-	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<SupportedPlatforms>iOS, Android, Windows, Tizen</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
 	<Brief>This sample demonstrates how to pass data between pages when navigating.</Brief>

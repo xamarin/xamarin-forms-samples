@@ -4,7 +4,7 @@
 	<IsFullApplication>true</IsFullApplication>
 	<Level>Intermediate</Level>
 	<Tags>User Interface</Tags>
-	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<SupportedPlatforms>Android, iOS, Windows, Tizen</SupportedPlatforms>
     <LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
     <Brief>This sample demonstrates a variety of layouts, including Grid, AbsoluteLayout, RelativeLayout, and StackLayout.</Brief>

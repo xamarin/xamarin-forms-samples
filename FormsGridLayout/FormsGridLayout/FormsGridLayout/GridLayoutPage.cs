@@ -19,10 +19,19 @@ namespace GridLayoutDemo
                 Padding = 20
             };
 
+            if(Device.RuntimePlatform == "Tizen")
+            {
+                if(Device.Idiom == TargetIdiom.Unsupported)
+                {
+                    layout.Padding = new Thickness(40,60,40,40);
+                }
+            }
+
             var grid = new Grid
             {
                 RowSpacing = 50
             };
+
 
             grid.Children.Add(new Label { Text = "This" }, 0, 0); // Left, First element
             grid.Children.Add(new Label { Text = "text is" }, 1, 0); // Right, First element

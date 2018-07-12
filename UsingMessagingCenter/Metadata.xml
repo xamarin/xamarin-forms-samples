@@ -4,7 +4,7 @@
 	<IsFullApplication>false</IsFullApplication>
 	<Level>Beginner</Level>
 	<Tags>Xamarin.Forms</Tags>
-	<SupportedPlatforms>iOS, Android, Windows, liveplayer</SupportedPlatforms>
+	<SupportedPlatforms>iOS, Android, Windows, liveplayer, Tizen</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
 	<Brief>This sample demonstrates Xamarin.Forms MessagingCenter, which  enables view models and other components to communicate with without having to know anything about each other besides a simple contract.</Brief>

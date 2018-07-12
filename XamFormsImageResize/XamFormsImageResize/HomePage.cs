@@ -16,8 +16,10 @@ namespace XamFormsImageResize
 #if WINDOWS_UWP
         public static string ResourcePrefix = "XamFormsImageResize.UWP.";
 #endif
-
-		protected StackLayout _mainLayout;
+#if __TIZEN__
+        public static string ResourcePrefix = "XamFormsImageResize.Tizen.";
+#endif
+        protected StackLayout _mainLayout;
 		protected Button _resizeImageButton;
 		protected Image _photo;
 

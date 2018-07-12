@@ -4,7 +4,7 @@
 	<IsFullApplication>false</IsFullApplication>
 	<Level>Beginner</Level>
 	<Tags>Behaviors, Xamarin.Forms</Tags>
-	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<SupportedPlatforms>iOS, Android, Windows, Tizen</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
 	<Brief>Xamarin.Forms behaviors can be consumed by an explicit or implicit style. This sample demonstrates how to consume a Xamarin.Forms behavior with an explicit style.</Brief>

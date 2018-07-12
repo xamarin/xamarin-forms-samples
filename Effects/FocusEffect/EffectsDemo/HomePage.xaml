@@ -10,6 +10,7 @@
 				<OnPlatform x:TypeArguments="x:Double">
         <On Platform="iOS, Android" Value="220" />
         <On Platform="UWP" Value="250" />
+        <On Platform="Tizen" Value="330" />
     </OnPlatform>
 			</Entry.WidthRequest>
 		</Entry>

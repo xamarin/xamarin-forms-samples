@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapOverlay", "MapOverlay\MapOverlay.csproj", "{5B19CDED-4814-4651-A6BD-4006C5FFAE34}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapOverlay.Droid", "Droid\MapOverlay.Droid.csproj", "{75AC2162-94A4-4B8F-8D3D-4ACBF9CE10FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapOverlay.UWP", "UWP\MapOverlay.UWP.csproj", "{5DC3B1E4-8C55-4B2A-BAAB-34EE8C5429C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapOverlay.Tizen", "Tizen\MapOverlay.Tizen.csproj", "{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,8 +127,35 @@ Global
 		{5DC3B1E4-8C55-4B2A-BAAB-34EE8C5429C5}.Release|x86.ActiveCfg = Release|x86
 		{5DC3B1E4-8C55-4B2A-BAAB-34EE8C5429C5}.Release|x86.Build.0 = Release|x86
 		{5DC3B1E4-8C55-4B2A-BAAB-34EE8C5429C5}.Release|x86.Deploy.0 = Release|x86
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Debug|ARM.Build.0 = Debug|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Debug|x64.Build.0 = Debug|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Debug|x86.Build.0 = Debug|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Release|ARM.ActiveCfg = Release|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Release|ARM.Build.0 = Release|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Release|iPhone.Build.0 = Release|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Release|x64.ActiveCfg = Release|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Release|x64.Build.0 = Release|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Release|x86.ActiveCfg = Release|Any CPU
+		{BC64FBB8-BB94-4295-AFD3-C258DBBFD36F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64187D4C-9FC3-48BE-908C-B9B84C45AC2B}
 	EndGlobalSection
 EndGlobal

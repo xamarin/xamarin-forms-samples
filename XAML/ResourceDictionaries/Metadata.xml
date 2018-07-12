@@ -6,6 +6,6 @@
 	<Level>Beginner</Level>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Tags>Xamarin.Forms, XAML</Tags>
-	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<SupportedPlatforms>Android, iOS, Windows, Tizen</SupportedPlatforms>
 	<Gallery>true</Gallery>
 </SampleMetadata>

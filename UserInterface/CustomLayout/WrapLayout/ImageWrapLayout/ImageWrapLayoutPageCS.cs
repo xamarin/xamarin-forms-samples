@@ -26,11 +26,12 @@ namespace ImageWrapLayout
 			base.OnAppearing();
 
 			var images = await GetImageListAsync();
+			int max = Device.RuntimePlatform == Device.UWP || Device.RuntimePlatform == "Tizen" ? 120 : 240;
 			foreach (var photo in images.Photos)
 			{
 				var image = new Image
 				{
-					Source = ImageSource.FromUri(new Uri(photo + string.Format("?width={0}&height={0}&mode=max", Device.RuntimePlatform == Device.UWP ? 120 : 240)))
+					Source = ImageSource.FromUri(new Uri(photo + string.Format("?width={0}&height={0}&mode=max", max)))
 				};
 				wrapLayout.Children.Add(image);
 			}

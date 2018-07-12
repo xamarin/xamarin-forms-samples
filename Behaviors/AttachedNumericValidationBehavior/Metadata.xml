@@ -4,7 +4,7 @@
 	<IsFullApplication>false</IsFullApplication>
 	<Level>Beginner</Level>
 	<Tags>Behaviors, Xamarin.Forms</Tags>
-	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<SupportedPlatforms>iOS, Android, Windows, Tizen</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
 	<Brief>A behavior that's attached to a control through attached properties is known as an attached behavior. This sample demonstrates creating and consuming an attached behavior.</Brief>
