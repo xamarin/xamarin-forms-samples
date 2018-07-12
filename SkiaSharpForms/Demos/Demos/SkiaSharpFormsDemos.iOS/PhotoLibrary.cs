@@ -9,16 +9,16 @@ using Xamarin.Forms;
 
 using SkiaSharpFormsDemos.iOS;
 
-[assembly: Dependency(typeof(PicturePickerImplementation))]
+[assembly: Dependency(typeof(PhotoLibrary))]
 
 namespace SkiaSharpFormsDemos.iOS
 {
-    public class PicturePickerImplementation : IPicturePicker
+    public class PhotoLibrary : IPhotoLibrary
     {
         TaskCompletionSource<Stream> taskCompletionSource;
         UIImagePickerController imagePicker;
 
-        public Task<Stream> GetImageStreamAsync()
+        public Task<Stream> PickPhotoAsync()
         {
             // Create and define UIImagePickerController
             imagePicker = new UIImagePickerController
@@ -65,6 +65,20 @@ namespace SkiaSharpFormsDemos.iOS
         {
             taskCompletionSource.SetResult(null);
             imagePicker.DismissModalViewController(true);
+        }
+
+        public Task<bool> SavePhotoAsync(byte[] data, string folder, string filename)
+        {
+            NSData nsData = NSData.FromArray(data);
+            UIImage image = new UIImage(nsData);
+            TaskCompletionSource<bool> taskCompletionSource = new TaskCompletionSource<bool>();
+
+            image.SaveToPhotosAlbum((UIImage img, NSError error) =>
+            {
+                taskCompletionSource.SetResult(error == null);
+            });
+
+            return taskCompletionSource.Task;
         }
     }
 }

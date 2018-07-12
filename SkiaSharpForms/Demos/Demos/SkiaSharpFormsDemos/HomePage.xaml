@@ -27,6 +27,12 @@
                           Detail="Discover how to draw curves and use path features"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Curves.CurvesHomePage}" />
+
+                <TextCell Text="SkiaSharp Bitmaps"
+                          Detail="Create, draw on, save, and animate bitmaps"                          
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.BitmapsHomePage}" />
+
             </TableSection>
         </TableRoot>
     </TableView>
