@@ -11,11 +11,14 @@ using Xamarin.Forms.Platform.Android;
 
 namespace HelloXamarinFormsWorldXaml.Droid
 {
-    [Activity(Label = "HelloXamarinFormsWorldXaml", MainLauncher = true)]
-	public class MainActivity : FormsApplicationActivity
+    [Activity(Label = "HelloXamarinFormsWorldXaml", Theme = "@style/MainTheme", MainLauncher = true)]
+	public class MainActivity : FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
+            TabLayoutResource = Resource.Layout.Tabbar;
+            ToolbarResource = Resource.Layout.Toolbar;
+
             base.OnCreate(bundle);
 
             Xamarin.Forms.Forms.Init(this, bundle);

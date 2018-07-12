@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 using Xamarin.Forms;
-using System.Reflection;
 
 namespace WorkingWithImages
 {
@@ -15,7 +10,7 @@ namespace WorkingWithImages
 			var embeddedImage = new Image { Aspect = Aspect.AspectFit };
 
 			// resource identifiers start with assembly-name DOT filename
-			embeddedImage.Source = ImageSource.FromResource ("WorkingWithImages.beach.jpg");
+			embeddedImage.Source = ImageSource.FromResource ("WorkingWithImages.beach.jpg", typeof(EmbeddedImages).GetTypeInfo().Assembly);
 
 			Content = new StackLayout {
 				Children = {

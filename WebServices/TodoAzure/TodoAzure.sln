@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoAzure", "TodoAzure\TodoAzure.csproj", "{3AFA591D-C115-4AC9-9519-F788373ECDE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoAzure", "TodoAzure\TodoAzure.csproj", "{3AFA591D-C115-4AC9-9519-F788373ECDE9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoAzure.iOS", "iOS\TodoAzure.iOS.csproj", "{5FA0219F-B063-4D07-800B-CC38BDB5B916}"
 EndProject
@@ -54,8 +54,8 @@ Global
 		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Debug|iPhone.Build.0 = Debug|iPhone
 		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Debug|Mixed Platforms.ActiveCfg = Debug|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Debug|Mixed Platforms.Build.0 = Debug|iPhone
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Debug|Mixed Platforms.ActiveCfg = Debug|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Debug|Mixed Platforms.Build.0 = Debug|iPhoneSimulator
 		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Debug|x64.ActiveCfg = Debug|iPhone
 		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Debug|x86.ActiveCfg = Debug|iPhone
 		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Release|Any CPU.ActiveCfg = Release|iPhone
@@ -127,5 +127,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76AD74B7-9F4F-42F2-AB77-C0A2CDCC6AA8}
 	EndGlobalSection
 EndGlobal

@@ -6,7 +6,7 @@ using Xamarin.Forms.Platform.Android.AppLinks;
 
 namespace DeepLinking.Droid
 {
-	[Activity (Label = "DeepLinking.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "DeepLinking.Droid", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	[IntentFilter (new[] { Intent.ActionView },
 		Categories = new[] {
 			Intent.ActionView,
@@ -17,7 +17,7 @@ namespace DeepLinking.Droid
 		DataHost = "DeepLinking",
 		DataPathPrefix = "/deeplinking/")
 	]
-	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
+	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{

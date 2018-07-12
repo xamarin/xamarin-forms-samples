@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:PlatformSpecifics" x:Class="PlatformSpecifics.PlatformSpecificsPage" Title="Platform Specifics Demo">
     <TableView Intent="Menu">
         <TableSection Title="iOS">
-            <TextCell Text="Blur Effect"
+            <TextCell Text="VisualElement Blur Effect"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:iOSBlurEffectPage}" />
             <TextCell Text="Large Title Display"
@@ -35,6 +35,12 @@
             <TextCell Text="VisualElement Legacy Color Mode"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:LegacyColorModePage}" />
+            <TextCell Text="VisualElement Shadow Effect"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSShadowEffectPage}" />
+            <TextCell Text="Application PanGestureRecognizer"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSPanGestureRecognizerPage}" />
         </TableSection>
         <TableSection Title="Android">
             <TextCell Text="Soft Input Mode Adjust"
@@ -43,7 +49,7 @@
             <TextCell Text="Pause and Resume Lifecycle Events"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:AndroidLifecycleEventsPage}" />
-            <TextCell Text="TabbedPage Swipe"
+            <TextCell Text="TabbedPage Swipe, Toolbar Placement"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:AndroidTabbedPageSwipePage}" />
             <TextCell Text="ListView FastScroll"
@@ -66,13 +72,13 @@
                       CommandParameter="{x:Type local:AndroidButtonPage}" />
         </TableSection>
         <TableSection Title="UWP">
-            <TextCell Text="TabbedPage Toolbar Location Adjust"
+            <TextCell Text="TabbedPage Toolbar Location"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:WindowsTabbedPage}" />
-            <TextCell Text="NavigationPage Toolbar Location Adjust"
+            <TextCell Text="NavigationPage Toolbar Location"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:WindowsNavigationPage}" />            
-            <TextCell Text="MasterDetailPage Toolbar Location Adjust"
+            <TextCell Text="MasterDetailPage Toolbar Location"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:WindowsMasterDetailPage}" />
             <TextCell Text="WebView JavaScript Alert"
@@ -90,6 +96,12 @@
             <TextCell Text="ListView Selection Mode"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:WindowsListViewPage}" />
+            <TextCell Text="VisualElement AccessKeys"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:WindowsVisualElementAccessKeysPage}" />
+            <TextCell Text="TabbedPage Icons"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:WindowsTabbedPageIcons}" />
         </TableSection>
     </TableView>
 </ContentPage>

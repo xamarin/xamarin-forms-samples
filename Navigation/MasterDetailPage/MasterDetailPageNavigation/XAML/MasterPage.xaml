@@ -7,7 +7,7 @@
 			 Icon="hamburger.png"
 			 Title="Personal Organiser">
     <StackLayout>
-        <ListView x:Name="listView">
+        <ListView x:Name="listView" x:FieldModifier="public">
            <ListView.ItemsSource>
                 <x:Array Type="{x:Type local:MasterPageItem}">
                     <local:MasterPageItem Title="Contacts" IconSource="contacts.png" TargetType="{x:Type local:ContactsPage}" />

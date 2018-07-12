@@ -94,13 +94,19 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
+    <PackageReference Include="Xamarin.Forms" Version="3.1.0.583944" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="WorkingWithListviewNative">
+      <HintPath>..\WorkingWithListviewNative\bin\Debug\netstandard2.0\WorkingWithListviewNative.dll</HintPath>
+    </Reference>
+    <Reference Include="WorkingWithListviewNative">
+      <HintPath>..\WorkingWithListviewNative\bin\Debug\netstandard2.0\WorkingWithListviewNative.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WorkingWithListviewNative\WorkingWithListviewNative.csproj">

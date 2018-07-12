@@ -18,7 +18,7 @@ namespace PlatformSpecifics
 
         void OnTranslucentNavigationBarButtonClicked(object sender, EventArgs e)
         {
-            (Application.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().SetIsNavigationBarTranslucent(!(Application.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().IsNavigationBarTranslucent());
+            (Xamarin.Forms.Application.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().SetIsNavigationBarTranslucent(!(Xamarin.Forms.Application.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().IsNavigationBarTranslucent());
         }
 
         void OnReturnButtonClicked(object sender, EventArgs e)

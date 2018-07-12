@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Xamarin.Forms" Version="3.1.0.583944" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="LibJsonResource.json" />
+    <EmbeddedResource Include="LibTextResource.txt" />
+    <EmbeddedResource Include="LibXmlResource.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="LibJsonResource.json" />
+    <None Remove="LibTextResource.txt" />
+    <None Remove="LibXmlResource.xml" />
+  </ItemGroup>
+</Project>

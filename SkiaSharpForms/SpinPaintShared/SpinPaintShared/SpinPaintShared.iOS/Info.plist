@@ -48,7 +48,7 @@
     </array>
     <key>UILaunchStoryboardName</key>
     <string>LaunchScreen.storyboard</string>
-    <key>NSPhotoLibraryUsageDescription</key>
+    <key>NSPhotoLibraryAddUsageDescription</key>
     <string>SpinPaint needs to save your image</string>
   </dict>
 </plist>

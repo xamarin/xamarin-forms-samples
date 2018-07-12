@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableViewSamples", "TableViewSamples\TableViewSamples\TableViewSamples.csproj", "{AB447E65-76CF-4732-B50A-75D5B413D966}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TableViewSamples", "TableViewSamples\TableViewSamples\TableViewSamples.csproj", "{AB447E65-76CF-4732-B50A-75D5B413D966}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableViewSamples.iOS", "TableViewSamples\TableViewSamples.iOS\TableViewSamples.iOS.csproj", "{240EA0C3-25B5-4EEE-8F10-2BE56D96816F}"
 EndProject
@@ -73,6 +73,7 @@ Global
 		{AB447E65-76CF-4732-B50A-75D5B413D966}.Debug|x64.ActiveCfg = Debug|Any CPU
 		{AB447E65-76CF-4732-B50A-75D5B413D966}.Debug|x64.Build.0 = Debug|Any CPU
 		{AB447E65-76CF-4732-B50A-75D5B413D966}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AB447E65-76CF-4732-B50A-75D5B413D966}.Debug|x86.Build.0 = Debug|Any CPU
 		{AB447E65-76CF-4732-B50A-75D5B413D966}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB447E65-76CF-4732-B50A-75D5B413D966}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AB447E65-76CF-4732-B50A-75D5B413D966}.Release|ARM.ActiveCfg = Release|Any CPU
@@ -103,7 +104,8 @@ Global
 		{240EA0C3-25B5-4EEE-8F10-2BE56D96816F}.AppStore|Mixed Platforms.Build.0 = AppStore|iPhone
 		{240EA0C3-25B5-4EEE-8F10-2BE56D96816F}.AppStore|x64.ActiveCfg = AppStore|iPhoneSimulator
 		{240EA0C3-25B5-4EEE-8F10-2BE56D96816F}.AppStore|x86.ActiveCfg = AppStore|iPhone
-		{240EA0C3-25B5-4EEE-8F10-2BE56D96816F}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{240EA0C3-25B5-4EEE-8F10-2BE56D96816F}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{240EA0C3-25B5-4EEE-8F10-2BE56D96816F}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{240EA0C3-25B5-4EEE-8F10-2BE56D96816F}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{240EA0C3-25B5-4EEE-8F10-2BE56D96816F}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{240EA0C3-25B5-4EEE-8F10-2BE56D96816F}.Debug|iPhone.Build.0 = Debug|iPhone
@@ -250,5 +252,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAEF155E-32C2-45BE-B1B6-C9ABE4DC3AC0}
 	EndGlobalSection
 EndGlobal

@@ -43,18 +43,18 @@ namespace PlatformSpecifics
             {
                 await DisplayAlert("Item Tapped", "ItemTapped event fired.", "OK");
             };
-			_listView.On<Windows>().SetSelectionMode(ListViewSelectionMode.Inaccessible);
+            _listView.On<Windows>().SetSelectionMode(Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode.Inaccessible);
 
             var button = new Button { Text = "Toggle SelectionMode" };
             button.Clicked += (sender, e) =>
             {
                 switch (_listView.On<Windows>().GetSelectionMode())
                 {
-                    case ListViewSelectionMode.Accessible:
-                        _listView.On<Windows>().SetSelectionMode(ListViewSelectionMode.Inaccessible);
+                    case Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode.Accessible:
+                        _listView.On<Windows>().SetSelectionMode(Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode.Inaccessible);
                         break;
-                    case ListViewSelectionMode.Inaccessible:
-                        _listView.On<Windows>().SetSelectionMode(ListViewSelectionMode.Accessible);
+                    case Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode.Inaccessible:
+                        _listView.On<Windows>().SetSelectionMode(Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode.Accessible);
                         break;
                 }
                 UpdateLabel();

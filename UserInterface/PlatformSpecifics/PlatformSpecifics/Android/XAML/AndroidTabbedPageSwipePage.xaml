@@ -5,33 +5,36 @@
         x:Class="PlatformSpecifics.AndroidTabbedPageSwipePage"
         android:TabbedPage.OffscreenPageLimit="2"
         android:TabbedPage.IsSwipePagingEnabled="true"
-        Title="Tabbed Page">
-    <ContentPage Title="Page 1">
+        android:TabbedPage.ToolbarPlacement="Bottom"
+        android:TabbedPage.BarItemColor="Black"
+        android:TabbedPage.BarSelectedItemColor="Red"
+        Title="TabbedPage">
+    <ContentPage Title="Page 1" Icon="xaml.png">
         <StackLayout Margin="20">
             <Label Text="Page 1" HorizontalOptions="Center" />
             <Button Text="Toggle Swipe Paging" Clicked="OnButtonClicked" />
             <Button Text="Return to Platform-Specifics List" Clicked="OnReturnButtonClicked" />
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="Page 2">
+    <ContentPage Title="Page 2" Icon="xaml.png">
         <StackLayout Margin="20">
             <Label Text="Page 2" HorizontalOptions="Center" />
             <Button Text="Return to Platform-Specifics List" Clicked="OnReturnButtonClicked" />
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="Page 3">
+    <ContentPage Title="Page 3" Icon="xaml.png">
         <StackLayout Margin="20">
             <Label Text="Page 3" HorizontalOptions="Center" />
             <Button Text="Return to Platform-Specifics List" Clicked="OnReturnButtonClicked" />
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="Page 4">
+    <ContentPage Title="Page 4" Icon="xaml.png">
         <StackLayout Margin="20">
             <Label Text="Page 4" HorizontalOptions="Center" />
             <Button Text="Return to Platform-Specifics List" Clicked="OnReturnButtonClicked" />
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="Page 5">
+    <ContentPage Title="Page 5" Icon="xaml.png">
         <StackLayout Margin="20">
             <Label Text="Page 5" HorizontalOptions="Center" />
             <Button Text="Return to Platform-Specifics List" Clicked="OnReturnButtonClicked" />

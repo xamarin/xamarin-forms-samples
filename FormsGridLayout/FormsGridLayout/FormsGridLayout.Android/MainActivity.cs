@@ -11,11 +11,14 @@ using Xamarin.Forms.Platform.Android;
 
 namespace GridLayoutDemo.Droid
 {
-    [Activity(Label = "GridLayoutDemo", MainLauncher = true)]
-	public class MainActivity : FormsApplicationActivity
+    [Activity(Label = "GridLayoutDemo", Theme = "@style/MainTheme", MainLauncher = true)]
+	public class MainActivity : FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
+            TabLayoutResource = Resource.Layout.Tabbar;
+            ToolbarResource = Resource.Layout.Toolbar;
+
             base.OnCreate(bundle);
 
             Xamarin.Forms.Forms.Init(this, bundle);
