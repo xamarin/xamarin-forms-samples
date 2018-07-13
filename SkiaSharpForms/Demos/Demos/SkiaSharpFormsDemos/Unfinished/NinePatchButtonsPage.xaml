@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SkiaSharpFormsDemos.Bitmaps"
+             x:Class="SkiaSharpFormsDemos.Bitmaps.NinePatchButtonsPage"
+             Title="Nine-Patch Buttons">
+    <ContentPage.Resources>
+        <Style TargetType="local:NinePatchButton">
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+        </Style>
+    </ContentPage.Resources>
+    
+    
+    <StackLayout>
+        <local:NinePatchButton Text="Button One" />
+
+        <local:NinePatchButton Text="Button Two"
+                               FontSize="48" />
+
+        <local:NinePatchButton Text="Button Three"
+                               FontSize="72" />
+
+        <local:NinePatchButton Text="Button Four"
+                               FontSize="96" />
+    </StackLayout>
+</ContentPage>

@@ -35,9 +35,8 @@ namespace SkiaSharpFormsDemos.Transforms
                     resourceID.EndsWith(".jpg"))
                 {
                     using (Stream stream = assembly.GetManifestResourceStream(resourceID))
-                    using (SKManagedStream skStream = new SKManagedStream(stream))
                     {
-                        SKBitmap bitmap = SKBitmap.Decode(skStream);
+                        SKBitmap bitmap = SKBitmap.Decode(stream);
                         bitmapCollection.Add(new TouchManipulationBitmap(bitmap)
                         {
                             Matrix = SKMatrix.MakeTranslation(position.X, position.Y),
