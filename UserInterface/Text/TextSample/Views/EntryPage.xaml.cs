@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-
 using Xamarin.Forms;
 
 namespace TextSample
@@ -10,7 +8,6 @@ namespace TextSample
 		public EntryPage ()
 		{
 			InitializeComponent ();
-
 		}
 
 		void Entry_TextChanged (object sender, TextChangedEventArgs e)
@@ -24,4 +21,3 @@ namespace TextSample
 		}
 	}
 }
-

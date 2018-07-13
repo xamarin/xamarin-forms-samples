@@ -1,13 +1,21 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-x:Class="TextSample.EditorPage"
-Title="Editor Demo - XAML">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="TextSample.EditorPage"
+             Title="Editor Demo - XAML">
 	<ContentPage.Content>
 		<StackLayout Padding="5,10">
-			<Label Text="This page demonstrates the Editor View. The Editor is used for collecting text that is expected to take more than one line." />
-			<Editor Text="Xamarin Blue" BackgroundColor="#2c3e50" HeightRequest="100" />
-			<Editor Text="Default starting text" />
+			<Label Text="This page demonstrates an auto-sizing Editor View. The Editor is used for collecting text that is expected to take more than one line." />
+			<Editor Text="Xamarin Blue" AutoSize="TextChanges" BackgroundColor="#2c3e50" />
+			<Editor Text="Default starting text">
+                <Editor.Keyboard>
+                    <Keyboard x:FactoryMethod="Create">
+                        <x:Arguments>
+                            <KeyboardFlags>Suggestions,CapitalizeCharacter</KeyboardFlags>
+                        </x:Arguments>
+                    </Keyboard>
+                </Editor.Keyboard>
+            </Editor>
 			<Editor IsEnabled="false" Text="This is a disabled editor" />
 		</StackLayout>
 	</ContentPage.Content>

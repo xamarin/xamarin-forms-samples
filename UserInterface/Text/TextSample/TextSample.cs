@@ -1,5 +1,7 @@
 ﻿using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly:XamlCompilation(XamlCompilationOptions.Compile)]
 namespace TextSample
 {
 	public class App : Application
@@ -7,8 +9,7 @@ namespace TextSample
 		public App ()
 		{
 			// The root page of your application
-			MainPage = new NavigationPage();
-			MainPage.Navigation.PushAsync (new ListPage ());
+            MainPage = new NavigationPage(new ListPage());
 		}
 
 		protected override void OnStart ()
