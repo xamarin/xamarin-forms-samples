@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Numerics;
 using System.Threading;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 using SkiaSharp;
@@ -23,8 +22,9 @@ namespace MandelAnima
         //   static readonly Complex center = new Complex(-0.774693089457127, 0.124226621261617);
         //   static readonly Complex center = new Complex(-0.556624880053304, 0.634696788141351);
 
-        Stopwatch stopwatch = new Stopwatch();      // for the animation
         SKBitmap[] bitmaps = new SKBitmap[COUNT];   // array of bitmaps
+
+        Stopwatch stopwatch = new Stopwatch();      // for the animation
         int bitmapIndex;
         double bitmapProgress = 0;
 
@@ -151,36 +151,37 @@ namespace MandelAnima
                 canvasView.InvalidateSurface();
             }
 
-            // Now do the animation
+            // Now start the animation
             stopwatch.Start();
+            Device.StartTimer(TimeSpan.FromMilliseconds(16), OnTimerTick);
+        }
+
+        bool OnTimerTick()
+        {
             int cycle = 6000 * COUNT;       // total cycle length in milliseconds
 
-            while (true)
+            // Time in milliseconds from 0 to cycle
+            int time = (int)(stopwatch.ElapsedMilliseconds % cycle);
+
+            // Make it sinusoidal, including bitmap index and gradation between bitmaps
+            double progress = COUNT * 0.5 * (1 + Math.Sin(2 * Math.PI * time / cycle - Math.PI / 2));
+
+            // These are the field values that the PaintSurface handler uses
+            bitmapIndex = (int)progress;
+            bitmapProgress = progress - bitmapIndex;
+
+            // It doesn't often happen that we get up to COUNT, but an exception would be raised
+            if (bitmapIndex < COUNT)
             {
-                // Time in milliseconds from 0 to cycle
-                int time = (int)(stopwatch.ElapsedMilliseconds % cycle);
+                // Show progress in UI
+                statusLabel.Text = $"Displaying bitmap for zoom level {bitmapIndex}";
+                progressBar.Progress = bitmapProgress;
 
-                // Make it sinusoidal, including bitmap index and gradation between bitmaps
-                double progress = COUNT * 0.5 * (1 + Math.Sin(2 * Math.PI * time / cycle - Math.PI / 2));
-
-                // These are the field values that the PaintSurface handler uses
-                bitmapIndex = (int)progress;
-                bitmapProgress = progress - bitmapIndex;
-
-                // It doesn't often happen that we get up to COUNT, but an exception would be raised
-                if (bitmapIndex < COUNT)
-                {
-                    // Show progress in UI
-                    statusLabel.Text = $"Displaying bitmap for zoom level {bitmapIndex}";
-                    progressBar.Progress = bitmapProgress;
-
-                    // Update the canvas
-                    canvasView.InvalidateSurface();
-                }
-
-                // Wait 16 milliseconds
-                await Task.Delay(16);
+                // Update the canvas
+                canvasView.InvalidateSurface();
             }
+
+            return true;
         }
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

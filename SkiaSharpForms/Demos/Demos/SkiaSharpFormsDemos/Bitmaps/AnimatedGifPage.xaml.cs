@@ -127,9 +127,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
 
             // Get the bitmap and center it
             SKBitmap bitmap = bitmaps[currentFrame];
-            int x = (info.Width - bitmap.Width) / 2;
-            int y = (info.Height - bitmap.Height) / 2;
-            canvas.DrawBitmap(bitmap, x, y);
+            canvas.DrawBitmap(bitmap,info.Rect, BitmapStretch.Uniform);
         }
     }
 }

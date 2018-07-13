@@ -16,6 +16,7 @@
                            PaintSurface="OnCanvasViewPaintSurface" />
 
         <Label Text="GIF file by DemonDeLuxe from Wikipedia Newton's Cradle page"
+               Grid.Row="1"
                Margin="0, 5"
                HorizontalTextAlignment="Center" />
     </Grid>
