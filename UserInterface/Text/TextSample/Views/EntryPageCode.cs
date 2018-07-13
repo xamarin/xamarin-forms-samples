@@ -1,5 +1,4 @@
-﻿ using System;
-
+﻿using System;
 using Xamarin.Forms;
 
 namespace TextSample
@@ -10,14 +9,19 @@ namespace TextSample
 		int currentStatus = 0;
 		int maxStatus = 4;
 		StackLayout layout;
+
 		public EntryPageCode ()
 		{
-			layout = new StackLayout{ Padding = new Thickness (5, 10) };
+			layout = new StackLayout { Margin = new Thickness (20) };
 			this.Title = "Entry Demo - Code";
 			styledEntry.Focused += StyledEntry_Focused;
 
+            var entry = new Entry { Placeholder = "Enter text here" };
+            entry.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
+
 			layout.Children.Add (new Entry ());
 			layout.Children.Add (styledEntry);
+            layout.Children.Add (entry);
 			this.Content = layout;
 		}
 
@@ -54,5 +58,3 @@ namespace TextSample
 		}
 	}
 }
-
-

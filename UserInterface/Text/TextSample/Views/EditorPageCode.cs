@@ -14,6 +14,7 @@ namespace TextSample
                 AutoSize = EditorAutoSizeOption.TextChanges,
 				BackgroundColor = Color.FromHex ("#2c3e50"),
 			};
+            editor.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
 
             layout.Children.Add (editor);
 			layout.Children.Add (new Editor { IsEnabled = false, Text = "This is a disabled editor" });
