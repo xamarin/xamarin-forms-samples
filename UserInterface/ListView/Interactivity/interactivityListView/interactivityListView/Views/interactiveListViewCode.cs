@@ -8,18 +8,30 @@ namespace interactivityListView
 	public class interactiveListViewCode : ContentPage
 	{
 		public static ObservableCollection<string> items { get; set; }
+
 		public interactiveListViewCode ()
 		{
-			items = new ObservableCollection<string> () { "speaker", "pen", "lamp", "monitor", "bag", "book", "cap", "tote", "floss", "phone"};
-			ListView lstView = new ListView ();
+			items = new ObservableCollection<string> () { "Speaker", "Pen", "Lamp", "Monitor", "Bag", "Book", "Cap", "Tote", "Floss", "Phone"};
+
+            ListView lstView = new ListView();
 			lstView.IsPullToRefreshEnabled = true;
 			lstView.Refreshing += OnRefresh;
 			lstView.ItemSelected += OnSelection;
 			lstView.ItemTapped += OnTap;
 			lstView.ItemsSource = items;
+            //lstView.SelectionMode = ListViewSelectionMode.None;
 			var temp = new DataTemplate (typeof(textViewCell));
 			lstView.ItemTemplate = temp;
-			Content = lstView;
+
+            Content = new StackLayout
+            {
+                Margin = new Thickness(20),
+                Children =
+                {
+                    new Label { Text = "ListView Interactivity", FontAttributes = FontAttributes.Bold, HorizontalOptions = LayoutOptions.Center },
+                    lstView
+                }
+            };
 		}
 
 		void OnTap (object sender, ItemTappedEventArgs e)
@@ -29,13 +41,11 @@ namespace interactivityListView
 
 		void OnSelection (object sender, SelectedItemChangedEventArgs e)
 		{
-			if (e.SelectedItem == null) {
-				return; //ItemSelected is called on deselection, which results in SelectedItem being set to null
+			if (e.SelectedItem == null)
+            {
+				return;
 			}
 			DisplayAlert ("Item Selected", e.SelectedItem.ToString (), "Ok");
-			//comment out if you want to keep selections
-			ListView lst = (ListView)sender;
-			lst.SelectedItem = null;
 		}
 
 		void OnRefresh (object sender, EventArgs e)
@@ -44,17 +54,17 @@ namespace interactivityListView
 			//put your refreshing logic here
 			var itemList = items.Reverse().ToList();
 			items.Clear ();
-			foreach (var s in itemList) {
+			foreach (var s in itemList) 
+            {
 				items.Add (s);
 			}
 			//make sure to end the refresh state
 			list.IsRefreshing = false;
 		}
-
-
 	}
 
-	public class textViewCell : ViewCell{
+	public class textViewCell : ViewCell
+    {
 		public textViewCell()
 		{
 			StackLayout layout = new StackLayout ();

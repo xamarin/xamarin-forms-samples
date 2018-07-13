@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Xamarin.Forms;
@@ -9,21 +8,20 @@ namespace interactivityListView
 	public partial class interactiveListViewXaml : ContentPage
 	{
 		public static ObservableCollection<string> items { get; set; }
+
 		public interactiveListViewXaml ()
 		{
-			items = new ObservableCollection<string> () { "speaker", "pen", "lamp", "monitor", "bag", "book", "cap", "tote", "floss", "phone"};
+            items = new ObservableCollection<string> () { "Speaker", "Pen", "Lamp", "Monitor", "Bag", "Book", "Cap", "Tote", "Floss", "Phone"};
 			InitializeComponent ();
 		}
 
 		void OnSelection (object sender, SelectedItemChangedEventArgs e)
 		{
-			if (e.SelectedItem == null) {
-				return; //ItemSelected is called on deselection, which results in SelectedItem being set to null
+			if (e.SelectedItem == null) 
+            {
+				return;
 			}
 			DisplayAlert ("Item Selected", e.SelectedItem.ToString (), "Ok");
-			//comment out if you want to keep selections
-			ListView lst = (ListView)sender;
-			lst.SelectedItem = null;
 		}
 
 		void OnRefresh (object sender, EventArgs e)

@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
-using Xamarin.Forms;
-
+[assembly:XamlCompilation(XamlCompilationOptions.Compile)]
 namespace interactivityListView
 {
 	public class App : Application
@@ -9,10 +9,7 @@ namespace interactivityListView
 		public App ()
 		{
 			// The root page of your application
-			//MainPage = new interactiveListViewXaml ();
-			MainPage = new NavigationPage();
-			MainPage.Navigation.PushAsync (new interactiveListViewXaml ());
-			MainPage.Navigation.PushAsync (new interactiveListViewCode ());
+			MainPage = new interactiveListViewXaml ();
 		}
 
 		protected override void OnStart ()
