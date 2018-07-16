@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace TextSample
@@ -10,6 +8,7 @@ namespace TextSample
 		public ListPage ()
 		{
 			InitializeComponent ();
+
 			List<Page> pages = new List<Page> ();
 			pages.Add (new EditorPage ());
 			pages.Add (new EditorPageCode ());
@@ -23,13 +22,15 @@ namespace TextSample
 			pages.Add (new OrderPageCode ());
 			pages.Add (new BuiltInStylesXaml ());
 			pages.Add (new CustomStylesXaml ());
-			ListOfPages.ItemsSource = pages;
 
+			ListOfPages.ItemsSource = pages;
 		}
 
-		private void itemSelected(object sender, SelectedItemChangedEventArgs e){
-			if (e.SelectedItem != null) {
-				this.Navigation.PushAsync ((Page)e.SelectedItem);
+		async void itemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+			if (e.SelectedItem != null) 
+            {
+				await this.Navigation.PushAsync ((Page)e.SelectedItem);
 			}
 			ListOfPages.SelectedItem = null;
 		}

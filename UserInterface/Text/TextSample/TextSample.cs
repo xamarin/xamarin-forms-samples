@@ -8,7 +8,7 @@ namespace TextSample
 	{
 		public App ()
 		{
-			// The root page of your application
+            // The root page of your application
             MainPage = new NavigationPage(new ListPage());
 		}
 
