@@ -16,7 +16,7 @@ namespace TextSample
 			this.Title = "Entry Demo - Code";
 			styledEntry.Focused += StyledEntry_Focused;
 
-            var entry = new Entry { Placeholder = "Enter text here" };
+            var entry = new Entry { Placeholder = "Enter text here", ReturnType = ReturnType.Send };
             entry.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
 
 			layout.Children.Add (new Entry ());
