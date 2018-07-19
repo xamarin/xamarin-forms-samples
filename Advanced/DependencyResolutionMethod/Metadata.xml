@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleMetadata>
+	<ID>b24255b8-27a0-485b-a4ef-346f4f16b82c</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Advanced</Level>
+	<Tags>Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>This sample demonstrates how to inject a dependency resolution method into Xamarin.Forms, so that an app's dependency injection container has control over the construction and lifetime of custom renderers, effects, and DependencyService implementations.</Brief>
+</SampleMetadata>
