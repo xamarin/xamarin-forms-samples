@@ -33,6 +33,11 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.BitmapsHomePage}" />
 
+                <TextCell Text="SkiaSharp Shaders and other Effects"
+                          Detail="Use gradients, bitmap tiling, blur, and shadow"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.EffectsHomePage}" />
+
             </TableSection>
         </TableRoot>
     </TableView>

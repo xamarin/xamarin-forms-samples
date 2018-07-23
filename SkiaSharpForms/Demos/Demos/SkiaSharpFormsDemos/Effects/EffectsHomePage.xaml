@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:HomeBasePage xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:local="clr-namespace:SkiaSharpFormsDemos"
+                    x:Class="SkiaSharpFormsDemos.Effects.EffectsHomePage"
+                    Title="Shaders and other Effects"
+                    Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Linear Gradients">
+
+                <TextCell Text="Corner-to-Corner Gradient"
+                          Detail="Render a gradient between opposite corners"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.CornerToCornerGradientPage}" />
+                
+                <TextCell Text="Gradient Animation"
+                          Detail="Animate a gradient around a circular axis"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.GradientAnimationPage}" />
+
+                <TextCell Text="Rainbow Gradient"
+                          Detail="Base a gradient on ROY G BIV colors"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.RainbowGradientPage}" />
+
+            </TableSection>
+
+            <TableSection Title="Other Gradients">
+
+
+
+
+                <TextCell Text="Sweep Gradient"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.SweepGradientPage}" />
+
+                <TextCell Text="Rainbow Arc"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.RainbowArcGradientPage}" />
+
+
+            </TableSection>
+
+            <TableSection Title="Bitmap Tiling">
+                
+                
+            </TableSection>
+
+            <TableSection Title="Noise and Composition">
+                
+                
+            </TableSection>
+
+            <TableSection Title="Mask Filters">
+
+
+                <TextCell Text="Shadow Experiment"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.ShadowExperimentPage}" />
+
+            </TableSection>
+
+            <TableSection Title="Blend Modes">
+
+
+
+
+                <TextCell Text="Porter-Duff Blend Modes"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.PorterDuffBlendModesPage}" />
+
+            </TableSection>
+
+        </TableRoot>
+
+    </TableView>
+</local:HomeBasePage>

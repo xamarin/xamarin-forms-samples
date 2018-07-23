@@ -42,6 +42,12 @@
     <EmbeddedResource Update="Bitmaps\SpinPaintPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Effects\EffectsHomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\ShadowExperimentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Unfinished\NinePatchButtonsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -192,7 +198,7 @@
     <EmbeddedResource Update="Transforms\SingleFingerCornerScalePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Unfinished\PorterDuffBlendModesPage.xaml">
+    <EmbeddedResource Update="Effects\PorterDuffBlendModesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -229,6 +235,9 @@
     </Compile>
     <Compile Update="Bitmaps\SaveFileFormatsPage.xaml.cs">
       <DependentUpon>SaveFileFormatsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Effects\EffectsHomePage.xaml.cs">
+      <DependentUpon>EffectsHomePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
