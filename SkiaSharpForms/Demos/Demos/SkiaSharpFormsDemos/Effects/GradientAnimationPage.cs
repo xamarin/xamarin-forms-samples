@@ -67,7 +67,7 @@ namespace SkiaSharpFormsDemos.Effects
                 SKPoint upperLeft = center - corner;
                 SKPoint lowerRight = center + corner;
                 /*
-                                // Create liner gradient from upper-left to lower-right
+                                // Create linear gradient from upper-left to lower-right
                                 paint.Shader = SKShader.CreateLinearGradient(upperLeft,
                                                                              lowerRight,
                                                                              new SKColor[] { SKColors.White, SKColors.Black },
@@ -79,13 +79,14 @@ namespace SkiaSharpFormsDemos.Effects
 
                 // Or this, using a transform:
 
-                paint.Shader = SKShader.CreateLinearGradient(new SKPoint(0, 0),
-                                                             info.Width < info.Height ? 
-                                                                new SKPoint(info.Width, 0) : new SKPoint(0, info.Height),
-                                                             new SKColor[] { SKColors.White, SKColors.Black },
-                                                             new float[] { 0, 1 },
-                                                             SKShaderTileMode.Mirror,
-                                                             SKMatrix.MakeRotation((float)angle, info.Rect.MidX, info.Rect.MidY));
+                paint.Shader = SKShader.CreateLinearGradient(
+                                    new SKPoint(0, 0),
+                                    info.Width < info.Height ? 
+                                    new SKPoint(info.Width, 0) : new SKPoint(0, info.Height),
+                                    new SKColor[] { SKColors.White, SKColors.Black },
+                                    new float[] { 0, 1 },
+                                    SKShaderTileMode.Mirror,
+                                    SKMatrix.MakeRotation((float)angle, info.Rect.MidX, info.Rect.MidY));
 
 
 

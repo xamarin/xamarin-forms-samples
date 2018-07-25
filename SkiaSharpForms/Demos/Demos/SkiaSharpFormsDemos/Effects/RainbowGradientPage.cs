@@ -91,6 +91,5 @@ namespace SkiaSharpFormsDemos.Effects
                 }
             }
         }
-
     }
 }

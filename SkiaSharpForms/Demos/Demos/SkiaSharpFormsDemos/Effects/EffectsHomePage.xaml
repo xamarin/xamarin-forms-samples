@@ -13,7 +13,17 @@
                           Detail="Render a gradient between opposite corners"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.CornerToCornerGradientPage}" />
-                
+
+                <TextCell Text="Interactive Linear Gradient"
+                          Detail="Experiment"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.InteractiveLinearGradientPage}" />
+
+                <TextCell Text="Gradient Text"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.GradientTextPage}" />
+
                 <TextCell Text="Gradient Animation"
                           Detail="Animate a gradient around a circular axis"
                           Command="{Binding NavigateCommand}"
@@ -28,19 +38,25 @@
 
             <TableSection Title="Other Gradients">
 
-
-
-
-                <TextCell Text="Sweep Gradient"
+                <TextCell Text="Radial Gradient"
                           Detail="TK"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Effects.SweepGradientPage}" />
+                          CommandParameter="{x:Type local:Effects.RadialGradientPage}" />
 
                 <TextCell Text="Rainbow Arc"
                           Detail="TK"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.RainbowArcGradientPage}" />
 
+                <TextCell Text="Sweep Gradient"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.SweepGradientPage}" />
+
+                <TextCell Text="Conical Gradient"
+                          Detail="Experiment with the Two-Point Conical Gradient"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.ConicalGradientPage}" />
 
             </TableSection>
 
