@@ -50,7 +50,7 @@ namespace SkiaSharpFormsDemos.Effects
             return isAnimating;
         }
 
-        private void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
+        void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
             SKImageInfo info = args.Info;
             SKSurface surface = args.Surface;

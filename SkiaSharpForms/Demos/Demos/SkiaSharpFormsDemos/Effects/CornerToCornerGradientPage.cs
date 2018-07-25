@@ -28,7 +28,7 @@ namespace SkiaSharpFormsDemos.Effects
             canvasView.GestureRecognizers.Add(tap);
 		}
 
-        private void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
+        void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
             SKImageInfo info = args.Info;
             SKSurface surface = args.Surface;
@@ -44,11 +44,13 @@ namespace SkiaSharpFormsDemos.Effects
                 SKRect rect = new SKRect(x, y, x + 300, y + 300);
 
                 // Create linear gradient from upper-left to lower-right
-                paint.Shader = SKShader.CreateLinearGradient(new SKPoint(rect.Left, rect.Top),
-                                                             new SKPoint(rect.Right, rect.Bottom),
-                                                             new SKColor[] { SKColors.Red, SKColors.Blue },
-                                                             new float[] { 0, 1 },
-                                                             SKShaderTileMode.Repeat);
+                paint.Shader = SKShader.CreateLinearGradient(
+                                    new SKPoint(rect.Left, rect.Top),
+                                    new SKPoint(rect.Right, rect.Bottom),
+                                    new SKColor[] { SKColors.Red, SKColors.Blue },
+                                    new float[] { 0, 1 },
+                                    SKShaderTileMode.Repeat);
+
                 // Draw the gradient on the rectangle
                 canvas.DrawRect(rect, paint);
 

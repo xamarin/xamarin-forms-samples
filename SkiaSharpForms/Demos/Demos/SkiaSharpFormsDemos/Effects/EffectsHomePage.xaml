@@ -30,20 +30,25 @@
                           CommandParameter="{x:Type local:Effects.GradientAnimationPage}" />
 
                 <TextCell Text="Rainbow Gradient"
-                          Detail="Base a gradient on ROY G BIV colors"
+                          Detail="Base a gradient on the circle of hues"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.RainbowGradientPage}" />
 
+                <TextCell Text="Infinity Colors"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.InfinityColorsPage}" />
+
             </TableSection>
 
-            <TableSection Title="Other Gradients">
+            <TableSection Title="Curved Gradients">
 
                 <TextCell Text="Radial Gradient"
                           Detail="TK"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.RadialGradientPage}" />
 
-                <TextCell Text="Rainbow Arc"
+                <TextCell Text="Rainbow Arc Gradient"
                           Detail="TK"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.RainbowArcGradientPage}" />

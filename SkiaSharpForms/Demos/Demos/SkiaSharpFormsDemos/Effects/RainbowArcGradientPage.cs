@@ -53,7 +53,7 @@ namespace SkiaSharpFormsDemos.Effects
                                                              outerRadius, 
                                                              colors, 
                                                              positions, 
-                                                             SKShaderTileMode.Repeat);
+                                                             SKShaderTileMode.Clamp);
                 // Draw a circle with a wide line
                 paint.Style = SKPaintStyle.Stroke;
                 paint.StrokeWidth = rainbowWidth;

@@ -5,11 +5,11 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Effects
 {
-	public partial class InteractiveLinearGradientPage : InteractivePage
-	{
-		public InteractiveLinearGradientPage ()
-		{
-			InitializeComponent ();
+    public partial class InteractiveLinearGradientPage : InteractivePage
+    {
+	    public InteractiveLinearGradientPage ()
+	    {
+		    InitializeComponent ();
 
             touchPoints = new TouchPoint[2];
 
