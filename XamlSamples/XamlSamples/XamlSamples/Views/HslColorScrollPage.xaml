@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:XamlSamples;assembly=XamlSamples"
-             x:Class="XamlSamples.HslColorScrollPage"
+             xmlns:views="clr-namespace:XamlSamples.Views;assembly=XamlSamples"
+             x:Class="XamlSamples.Views.HslColorScrollPage"
              Title="HSL Color Scroll Page">
     
     <ContentPage.BindingContext>
-        <local:HslViewModel Color="Aqua" />
+        <views:HslViewModel Color="Aqua" />
     </ContentPage.BindingContext>
 
     <StackLayout Padding="10, 0">

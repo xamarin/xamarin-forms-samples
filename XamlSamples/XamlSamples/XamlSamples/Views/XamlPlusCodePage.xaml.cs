@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace XamlSamples
+namespace XamlSamples.Views
 {
     public partial class XamlPlusCodePage
     {

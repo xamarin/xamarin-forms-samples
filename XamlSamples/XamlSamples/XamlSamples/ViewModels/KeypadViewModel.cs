@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace XamlSamples
+namespace XamlSamples.ViewModels
 {
     class KeypadViewModel : INotifyPropertyChanged
     {

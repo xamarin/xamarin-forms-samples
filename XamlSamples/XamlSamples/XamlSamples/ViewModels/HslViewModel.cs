@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using Xamarin.Forms;
 
-namespace XamlSamples
+namespace XamlSamples.ViewModels
 {
     public class HslViewModel : INotifyPropertyChanged
     {

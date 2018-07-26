@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace XamlSamples
+namespace XamlSamples.Misc
 {
     static class AppConstants
     {
