@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:views="clr-namespace:XamlSamples.Views;assembly=XamlSamples"
+             xmlns:viewmodels="clr-namespace:XamlSamples.ViewModels;assembly=XamlSamples"
              x:Class="XamlSamples.Views.KeypadPage"
              Title="Keypad Page">
 
     <Grid HorizontalOptions="Center"
           VerticalOptions="Center">
         <Grid.BindingContext>
-            <views:KeypadViewModel />
+            <viewmodels:KeypadViewModel />
         </Grid.BindingContext>
 
         <Grid.RowDefinitions>
