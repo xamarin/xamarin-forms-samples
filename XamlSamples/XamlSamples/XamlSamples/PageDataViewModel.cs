@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using XamlSamples.Views;
+using XamlSamples.ViewModels;
 
 namespace XamlSamples
 {
