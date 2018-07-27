@@ -11,7 +11,7 @@ namespace SkiaSharpFormsDemos.Effects
 	{
 		public RainbowArcGradientPage ()
 		{
-            Title = "Rainbow Arc";
+            Title = "Rainbow Arc Gradient";
 
             SKCanvasView canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;

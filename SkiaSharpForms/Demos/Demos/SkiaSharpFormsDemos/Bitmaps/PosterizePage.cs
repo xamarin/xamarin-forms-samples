@@ -39,7 +39,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
             SKCanvas canvas = surface.Canvas;
 
             canvas.Clear();
-            canvas.DrawBitmap(bitmap, info.Rect);
+            canvas.DrawBitmap(bitmap, info.Rect, BitmapStretch.Uniform);
         }
     }
 }

@@ -38,6 +38,7 @@ namespace SkiaSharpFormsDemos.Effects
 
             using (SKPaint paint = new SKPaint())
             {
+                // Define an array of rainbow colors
                 SKColor[] colors = new SKColor[8];
 
                 for (int i = 0; i < colors.Length; i++)
@@ -56,14 +57,12 @@ namespace SkiaSharpFormsDemos.Effects
                 paint.StrokeWidth = strokeWidth;
 
                 float radius = (Math.Min(info.Width, info.Height) - strokeWidth) / 2;
-
                 canvas.DrawCircle(center, radius, paint);
 
                 if (drawBackground)
                 {
-                    paint.Style = SKPaintStyle.Fill;
-
                     // Draw the gradient on the whole canvas
+                    paint.Style = SKPaintStyle.Fill;
                     canvas.DrawRect(info.Rect, paint);
                 }
             }

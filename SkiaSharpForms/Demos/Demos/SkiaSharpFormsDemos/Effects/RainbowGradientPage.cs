@@ -7,16 +7,16 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Effects
 {
-	public class RainbowGradientPage : ContentPage
-	{
-		public RainbowGradientPage ()
-		{
-            Title = "Corner-to-Corner Gradient";
+    public class RainbowGradientPage : ContentPage
+    {
+        public RainbowGradientPage()
+        {
+            Title = "Rainbow Gradient";
 
             SKCanvasView canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;
             Content = canvasView;
-		}
+        }
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
@@ -30,6 +30,7 @@ namespace SkiaSharpFormsDemos.Effects
             {
                 float rainbowWidth = Math.Min(info.Width, info.Height) / 2f;
 
+                // Create path from upper-left to lower-right corner
                 path.MoveTo(0, 0);
                 path.LineTo(rainbowWidth / 2, 0);
                 path.LineTo(info.Width, info.Height - rainbowWidth / 2);
@@ -41,29 +42,15 @@ namespace SkiaSharpFormsDemos.Effects
                 using (SKPaint paint = new SKPaint())
                 {
                     SKColor[] colors = new SKColor[8];
-                    float[] positions = new float[8];
 
                     for (int i = 0; i < colors.Length; i++)
                     {
-                        colors[i] = SKColor.FromHsl(i * 360f / 7, 100, 50);
-                        positions[i] = i / 7f;
+                        colors[i] = SKColor.FromHsl(i * 360f / (colors.Length - 1), 100, 50);
                     }
 
-                    // N.G:
-
-                    paint.Shader = SKShader.CreateLinearGradient(new SKPoint(0, rainbowWidth / 2), 
-                                                                 new SKPoint(rainbowWidth / 2, 0),
-                                                                 colors,
-                                                                 positions,
-                                                                 SKShaderTileMode.Repeat);
-
-
-
-
-
                     // Vector on lower-left edge, from top to bottom 
-                    SKPoint edgeVector = new SKPoint(info.Width - rainbowWidth / 2, info.Height) - 
-                                         new SKPoint(0, rainbowWidth / 2);
+                    SKPoint edgeVector = new SKPoint(info.Width - rainbowWidth / 2, info.Height) -
+                                            new SKPoint(0, rainbowWidth / 2);
 
                     // Rotate 90 degrees counter-clockwise:
                     SKPoint gradientVector = new SKPoint(edgeVector.Y, -edgeVector.X);
@@ -85,8 +72,9 @@ namespace SkiaSharpFormsDemos.Effects
                     paint.Shader = SKShader.CreateLinearGradient(point1,
                                                                  point2,
                                                                  colors,
-                                                                 positions,
+                                                                 null,
                                                                  SKShaderTileMode.Repeat);
+
                     canvas.DrawPath(path, paint);
                 }
             }

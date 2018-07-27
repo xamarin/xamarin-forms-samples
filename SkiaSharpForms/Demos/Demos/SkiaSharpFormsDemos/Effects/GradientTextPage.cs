@@ -13,7 +13,7 @@ namespace SkiaSharpFormsDemos.Effects
 
 		public GradientTextPage ()
 		{
-            Title = "Gradient Text Page";
+            Title = "Gradient Text";
 
             SKCanvasView canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;

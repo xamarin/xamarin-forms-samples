@@ -67,6 +67,8 @@
 
             <TableSection Title="Bitmap Tiling">
                 
+                <!-- Vector created brick, brick photo, stone wall photo, Cat Clock, animated tile -->
+                
                 
             </TableSection>
 
@@ -75,13 +77,26 @@
                 
             </TableSection>
 
-            <TableSection Title="Mask Filters">
+            <TableSection Title="Filter Effects">
 
+                <TextCell Text="Mask Blur Experiment"
+                          Detail="Use SKMaskFilter to blur edges of graphical objects"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.MaskBlurExperimentPage}" />
 
-                <TextCell Text="Shadow Experiment"
+                <TextCell Text="Image Blur Experiment"
+                          Detail="Use SKImageFilter to blur vector graphical objects and bitmaps"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.ImageBlurExperimentPage}" />
+
+                <TextCell Text="Drop Shadow Experiment"
                           Detail="TK"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Effects.ShadowExperimentPage}" />
+                          CommandParameter="{x:Type local:Effects.DropShadowExperimentPage}" />
+
+                <TextCell Text="Specular Light Experiment" />
+                
+                <!-- Color mapping???? -->
 
             </TableSection>
 
