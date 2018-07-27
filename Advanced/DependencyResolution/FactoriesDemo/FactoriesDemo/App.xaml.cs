@@ -14,13 +14,14 @@ namespace FactoriesDemo
         public App()
         {
             InitializeComponent();
+
             DependencyResolver.ResolveUsing((type, args) => factories.ContainsKey(type) ? factories[type].Invoke(args) : null);
             MainPage = new NavigationPage(new MainPage());
         }
 
         public static void Register(Type type, Func<object, object> factory)
         {
-            factories.Add(type, factory);
+            factories[type] = factory;
         }
 
         protected override void OnStart()
