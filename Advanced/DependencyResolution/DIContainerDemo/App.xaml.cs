@@ -44,6 +44,18 @@ namespace DIContainerDemo
             });
         }
 
+        public static void RegisterTypeWithParameters<TInterface, T>(Type param1Type, object param1Value, Type param2Type, string param2Name) where TInterface : class where T : class, TInterface
+        {
+            builder.RegisterType<T>()
+                   .WithParameters(new List<Parameter>()
+            {
+                new TypedParameter(param1Type, param1Value),
+                new ResolvedParameter(
+                    (pi, ctx) => pi.ParameterType == param2Type && pi.Name == param2Name,
+                    (pi, ctx) => ctx.Resolve(param2Type))
+            }).As<TInterface>();
+        }
+
         public static void BuildContainer()
         {
             container = builder.Build();

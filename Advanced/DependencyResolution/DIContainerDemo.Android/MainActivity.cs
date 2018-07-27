@@ -10,8 +10,6 @@ namespace DIContainerDemo.Droid
     [Activity(Label = "DIContainerDemo", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        internal static MainActivity Instance { get; private set; }
-
         public static readonly int PickImageId = 1000;
         public TaskCompletionSource<Stream> PickImageTaskCompletionSource { get; set; }
 
@@ -21,7 +19,6 @@ namespace DIContainerDemo.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-            Instance = this;
             global::Xamarin.Forms.Forms.Init(this, bundle);
             RegisterTypes();
             LoadApplication(new App());
@@ -32,7 +29,7 @@ namespace DIContainerDemo.Droid
             App.RegisterType<ILogger, Logger>();
             App.RegisterTypeWithParameters<FormsVideoLibrary.Droid.VideoPlayerRenderer>(typeof(Android.Content.Context), this, typeof(ILogger), "logger");
             App.RegisterType<TouchTracking.Droid.TouchEffect>();
-            App.RegisterType<IPhotoPicker, Services.Droid.PhotoPicker>();
+            App.RegisterTypeWithParameters<IPhotoPicker, Services.Droid.PhotoPicker>(typeof(Android.Content.Context), this, typeof(ILogger), "logger");
             App.BuildContainer();
         }
 

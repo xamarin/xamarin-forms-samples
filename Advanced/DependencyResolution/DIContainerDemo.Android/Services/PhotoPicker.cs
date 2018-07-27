@@ -12,10 +12,12 @@ namespace Services.Droid
 {
     public class PhotoPicker : IPhotoPicker
     {
+        Context _context;
         ILogger _logger;
 
-        public PhotoPicker(ILogger logger)
+        public PhotoPicker(Context context, ILogger logger)
         {
+            _context = context ?? throw new ArgumentNullException(nameof(context));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
@@ -29,7 +31,7 @@ namespace Services.Droid
             intent.SetAction(Intent.ActionGetContent);
 
             // Get the MainActivity instance
-            var activity = MainActivity.Instance;
+            var activity = (MainActivity)_context;
 
             // Start the picture-picker activity (resumes in MainActivity.cs)
             activity.StartActivityForResult(
