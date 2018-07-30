@@ -73,8 +73,13 @@
             </TableSection>
 
             <TableSection Title="Noise and Composition">
-                
-                
+
+                <TextCell Text="Perlin Noise"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.PerlinNoisePage}" />
+
+
             </TableSection>
 
             <TableSection Title="Filter Effects">
@@ -94,7 +99,12 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.DropShadowExperimentPage}" />
 
-                <TextCell Text="Specular Light Experiment" />
+                <TextCell Text="Distant Light Experiment"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.DistantLightExperimentPage}" />
+
+             
                 
                 <!-- Color mapping???? -->
 

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="SkiaSharpFormsDemos.Effects.PerlinNoisePage"
+             Title="Perlin Noise">
+    
+    <ContentPage.Resources>
+        <Style TargetType="Slider">
+            <Setter Property="Margin" Value="10, 0" />
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="VerticalOptions" Value="Center" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <skia:SKCanvasView x:Name="canvasView"
+                           VerticalOptions="FillAndExpand"
+                           PaintSurface="OnCanvasViewPaintSurface" />
+
+        <Slider x:Name="baseFrequencyXSlider"
+                Value="0.1"
+                ValueChanged="OnSliderValueChanged" />
+
+        <Label Text="{Binding Source={x:Reference baseFrequencyXSlider},
+                              Path=Value,
+                              StringFormat='Base Frequency X = {0:F1}'}" />
+
+        <Slider x:Name="baseFrequencyYSlider"
+                Value="0.1"
+                ValueChanged="OnSliderValueChanged" />
+
+        <Label Text="{Binding Source={x:Reference baseFrequencyYSlider},
+                              Path=Value,
+                              StringFormat='Base Frequency Y = {0:F1}'}" />
+
+        <StackLayout Orientation="Horizontal"
+                     Margin="10, 0">
+
+            <Label Text="{Binding Source={x:Reference octavesStepper},
+                                  Path=Value,
+                                  StringFormat='Number of Octaves: {0:F0}'}" />
+            
+            <Stepper x:Name="octavesStepper"
+                     Value="1"
+                     ValueChanged="OnStepperValueChanged" />
+
+            <Label Text="Use 100-pixel tiles:" />
+
+            <Switch x:Name="tileSwitch"
+                    Toggled="OnSwitchToggled" />
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

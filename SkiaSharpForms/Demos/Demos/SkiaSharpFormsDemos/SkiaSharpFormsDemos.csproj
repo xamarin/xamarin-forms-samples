@@ -42,6 +42,9 @@
     <EmbeddedResource Update="Bitmaps\SpinPaintPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Effects\DistantLightExperimentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Effects\DropShadowExperimentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -58,6 +61,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Effects\InteractiveLinearGradientPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\PerlinNoisePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Effects\RadialGradientPage.xaml">
@@ -253,6 +259,9 @@
     </Compile>
     <Compile Update="Bitmaps\SaveFileFormatsPage.xaml.cs">
       <DependentUpon>SaveFileFormatsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Effects\DistantLightExperimentPage.xaml.cs">
+      <DependentUpon>DistantLightExperimentPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Effects\MaskBlurExperimentPage.xaml.cs">
       <DependentUpon>MaskBlurExperimentPage.xaml</DependentUpon>

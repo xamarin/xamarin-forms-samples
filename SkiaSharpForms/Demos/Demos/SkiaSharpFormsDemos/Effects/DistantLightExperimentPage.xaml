@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:InteractivePage xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:local="clr-namespace:SkiaSharpFormsDemos"
+                       xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+                       xmlns:tt="clr-namespace:TouchTracking"
+                       x:Class="SkiaSharpFormsDemos.Effects.DistantLightExperimentPage"
+                       Title="Distant Light Experiment">
+    <ContentPage.Resources>
+        <Style TargetType="Slider">
+            <Setter Property="Margin" Value="10, 0" />
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="VerticalOptions" Value="Center" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Grid BackgroundColor="White"
+              VerticalOptions="FillAndExpand">
+            <skia:SKCanvasView x:Name="canvasView"
+                               PaintSurface="OnCanvasViewPaintSurface" />
+            <Grid.Effects>
+                <tt:TouchEffect Capture="True"
+                                TouchAction="OnTouchEffectAction" />
+            </Grid.Effects>
+        </Grid>
+
+        <StackLayout Orientation="Horizontal">
+            <Switch x:Name="backgroundSwitch"
+                    Toggled="OnSwitchToggled" />
+
+            <Label Text="White">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                 Binding="{Binding Source={x:Reference backgroundSwitch},
+                                                   Path=IsToggled}"
+                                 Value="True">
+                        <Setter Property="Text" Value="Black" />
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+
+            <Switch x:Name="specularSwitch"
+                    Toggled="OnSwitchToggled" />
+
+            <Label Text="Diffuse">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                 Binding="{Binding Source={x:Reference specularSwitch},
+                                                   Path=IsToggled}"
+                                 Value="True">
+                        <Setter Property="Text" Value="Specular" />
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+        </StackLayout>
+
+        <Slider x:Name="zSlider"
+                Minimum="-50"
+                Maximum="50"
+                ValueChanged="OnSliderValueChanged" />
+
+        <Label Text="{Binding Source={x:Reference zSlider},
+                              Path=Value,
+                              StringFormat='Z-Axis Direction = {0:F1}'}" />
+
+        <Slider x:Name="heightSlider"
+                Maximum="200"
+                ValueChanged="OnSliderValueChanged" />
+
+        <Label Text="{Binding Source={x:Reference heightSlider},
+                              Path=Value,
+                              StringFormat='Surface Height = {0:F1}'}" />
+
+        <Slider x:Name="constantSlider"
+                Maximum="10"
+                ValueChanged="OnSliderValueChanged" />
+
+        <Label Text="{Binding Source={x:Reference constantSlider},
+                              Path=Value,
+                              StringFormat='Lighting Constant = {0:F1}'}" />
+
+        <Slider x:Name="shininessSlider"
+                Maximum="10"
+                ValueChanged="OnSliderValueChanged"
+                IsEnabled="{Binding Source={x:Reference specularSwitch},
+                                    Path=IsToggled}" />
+
+        <Label Text="{Binding Source={x:Reference shininessSlider},
+                              Path=Value,
+                              StringFormat='Shininess = {0:F1}'}"
+               IsEnabled="{Binding Source={x:Reference specularSwitch},
+                                   Path=IsToggled}"/>
+    </StackLayout>
+</local:InteractivePage>
