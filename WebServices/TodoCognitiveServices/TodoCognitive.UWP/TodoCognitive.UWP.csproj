@@ -139,7 +139,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Todo\TodoCognitive.csproj">
+    <ProjectReference Include="..\TodoCognitive\TodoCognitive.csproj">
       <Project>{f7c968a1-ff14-46d8-bbb7-9000de028f75}</Project>
       <Name>TodoCognitive</Name>
     </ProjectReference>

@@ -131,7 +131,7 @@
     <BundleResource Include="Resources\rating.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Todo\TodoCognitive.csproj">
+    <ProjectReference Include="..\TodoCognitive\TodoCognitive.csproj">
       <Project>{F7C968A1-FF14-46D8-BBB7-9000DE028F75}</Project>
       <Name>TodoCognitive</Name>
     </ProjectReference>

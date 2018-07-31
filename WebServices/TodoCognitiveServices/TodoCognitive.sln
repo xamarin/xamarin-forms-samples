@@ -2,13 +2,13 @@
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoCognitive", "Todo\TodoCognitive.csproj", "{F7C968A1-FF14-46D8-BBB7-9000DE028F75}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoCognitive", "TodoCognitive\TodoCognitive.csproj", "{F7C968A1-FF14-46D8-BBB7-9000DE028F75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoCognitive.iOS", "iOS\TodoCognitive.iOS.csproj", "{85E22FED-077B-432B-833F-F425F64AE82B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoCognitive.iOS", "TodoCognitive.iOS\TodoCognitive.iOS.csproj", "{85E22FED-077B-432B-833F-F425F64AE82B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoCognitive.Droid", "Droid\TodoCognitive.Droid.csproj", "{39C58ECE-C2AE-4E1F-B993-C2BC1BCF27F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoCognitive.Droid", "TodoCognitive.Droid\TodoCognitive.Droid.csproj", "{39C58ECE-C2AE-4E1F-B993-C2BC1BCF27F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoCognitive.UWP", "UWP\TodoCognitive.UWP.csproj", "{719A8504-A7F2-4F92-81B2-0BC6328248B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoCognitive.UWP", "TodoCognitive.UWP\TodoCognitive.UWP.csproj", "{719A8504-A7F2-4F92-81B2-0BC6328248B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
