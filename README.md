@@ -1,7 +1,12 @@
 Xamarin.Forms Samples
 =====================
 
-The samples in this repository demonstrate how to use different aspects of Xamarin.Forms to build cross-platform apps. Please visit the Xamarin.Forms [sample gallery](https://developer.xamarin.com/samples/xamarin-forms/) to download individual samples.
+The samples in this repository demonstrate how to use different aspects of Xamarin.Forms to build cross-platform apps for iOS, Android, and the Universal Windows Platform (UWP). Please visit the Xamarin.Forms [sample gallery](https://developer.xamarin.com/samples/xamarin-forms/) to download individual samples.
+
+For additional platform support, visit the following forks:
+
+  * Tizen: https://github.com/Samsung/xamarin-forms-samples 
+  * GTK#: https://github.com/jsuarezruiz/xamarin-forms-samples/tree/gtk
 
 License
 -------
@@ -33,6 +38,7 @@ The Xamarin.Forms [sample gallery](https://developer.xamarin.com/samples/xamarin
 
     * **Tags**: a list of relevant tags for the app. These are:
 
+      * **Advanced**
       * **Animation**
       * **Behaviors**
       * **Custom Renderers**
