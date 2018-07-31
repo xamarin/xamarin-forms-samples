@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamlSamples"
-             xmlns:misc="clr-namespace:XamlSamples.Misc"
+             xmlns:common="using:XamlSamples.Common"
              x:Class="XamlSamples.Views.ListViewDemoPage"
              Title="ListView Demo Page">
 
@@ -18,12 +18,12 @@
                 <On Platform="iOS, Android, UWP" Value="60" />
             </OnPlatform>
 
-            <misc:DoubleToIntConverter x:Key="intConverter" />
+            <common:DoubleToIntConverter x:Key="intConverter" />
 
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <ListView ItemsSource="{x:Static misc:NamedColor.All}"
+    <ListView ItemsSource="{x:Static common:NamedColor.All}"
               RowHeight="{StaticResource rowHeight}">
         <ListView.ItemTemplate>
             <DataTemplate>

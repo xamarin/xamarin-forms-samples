@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Text;
 using Xamarin.Forms;
 
-namespace XamlSamples.Misc
+namespace XamlSamples.Common
 {
     public class NamedColor
     {

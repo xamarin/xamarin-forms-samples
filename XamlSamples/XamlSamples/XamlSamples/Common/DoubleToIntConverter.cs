@@ -2,7 +2,7 @@
 using System.Globalization;
 using Xamarin.Forms;
 
-namespace XamlSamples.Misc
+namespace XamlSamples.Common
 {
     class DoubleToIntConverter : IValueConverter
     {
