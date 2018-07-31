@@ -3,6 +3,10 @@ Xamarin.Forms Samples
 
 The samples in this repository demonstrate how to use different aspects of Xamarin.Forms to build cross-platform apps. Please visit the Xamarin.Forms [sample gallery](https://developer.xamarin.com/samples/xamarin-forms/) to download individual samples.
 
+This repository hosts samples for main Xamarin backends (iOS, Android, UWP). For other please see platform specific forks:
+
+  * Tizen: https://github.com/Samsung/xamarin-forms-samples 
+
 License
 -------
 
