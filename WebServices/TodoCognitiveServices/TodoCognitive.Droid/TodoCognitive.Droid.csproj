@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>TodoCognitive.Droid</RootNamespace>
     <AssemblyName>TodoCognitive.Droid</AssemblyName>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
