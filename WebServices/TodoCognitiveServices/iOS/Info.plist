@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>Todo</string>
+	<string>TodoCognitive</string>
 	<key>CFBundleName</key>
-	<string>Todo</string>
+	<string>TodoCognitive</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.xamarin.todo</string>
+	<string>com.xamarin.todo-cognitive-service</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>NSCameraUsageDescription</key>
