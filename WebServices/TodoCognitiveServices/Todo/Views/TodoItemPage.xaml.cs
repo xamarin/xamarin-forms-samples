@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using Xamarin.Forms;
 
-namespace Todo
+namespace TodoCognitive
 {
     public partial class TodoItemPage : ContentPage
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using Todo.UWP;
+using TodoCognitive.UWP;
 using Windows.Devices.Enumeration;
 using Windows.Media.Audio;
 using Windows.Media.Capture;
@@ -12,7 +12,7 @@ using Windows.Storage;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(AudioRecorderService))]
-namespace Todo.UWP
+namespace TodoCognitive.UWP
 {
     public class AudioRecorderService : IAudioRecorderService
     {

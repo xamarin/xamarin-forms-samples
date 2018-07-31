@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 
-namespace Todo
+namespace TodoCognitive
 {
     public class BingSpeechService : IBingSpeechService
     {

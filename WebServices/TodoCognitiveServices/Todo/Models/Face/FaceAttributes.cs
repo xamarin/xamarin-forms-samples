@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Todo.Models
+namespace TodoCognitive.Models
 {
 	public class FaceAttributes
 	{

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Todo
+namespace TodoCognitive
 {
 	public interface ITextTranslationService
 	{

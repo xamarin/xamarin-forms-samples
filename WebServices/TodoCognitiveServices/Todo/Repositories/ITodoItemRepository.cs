@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Todo
+namespace TodoCognitive
 {
 	public interface ITodoItemRepository
 	{

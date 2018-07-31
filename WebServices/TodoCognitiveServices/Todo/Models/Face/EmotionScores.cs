@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Todo.Models
+namespace TodoCognitive.Models
 {
     public class EmotionScores
     {

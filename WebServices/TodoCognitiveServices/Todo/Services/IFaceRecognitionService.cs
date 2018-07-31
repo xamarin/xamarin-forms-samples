@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using Todo.Models;
+using TodoCognitive.Models;
 
-namespace Todo.Services
+namespace TodoCognitive.Services
 {
     public interface IFaceRecognitionService
     {

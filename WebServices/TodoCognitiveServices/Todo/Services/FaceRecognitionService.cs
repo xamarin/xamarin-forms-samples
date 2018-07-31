@@ -8,11 +8,11 @@ using System.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json;
-using Todo.Models;
-using Todo.Utils;
-using Todo.Exceptions;
+using TodoCognitive.Models;
+using TodoCognitive.Utils;
+using TodoCognitive.Exceptions;
 
-namespace Todo.Services
+namespace TodoCognitive.Services
 {
 	public class FaceRecognitionService : IFaceRecognitionService, IDisposable
 	{

@@ -1,10 +1,10 @@
 ﻿using System.IO;
-using Todo.UWP;
+using TodoCognitive.UWP;
 using Windows.Storage;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(FileHelper))]
-namespace Todo.UWP
+namespace TodoCognitive.UWP
 {
     public class FileHelper : IFileHelper
     {

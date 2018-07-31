@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using SQLite;
 
-namespace Todo
+namespace TodoCognitive
 {
 	public class TodoItemRepository : ITodoItemRepository
 	{

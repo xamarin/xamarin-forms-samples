@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Todo.Utils
+namespace TodoCognitive.Utils
 {
 	[DataContract]
     public class ClientExceptionMessage

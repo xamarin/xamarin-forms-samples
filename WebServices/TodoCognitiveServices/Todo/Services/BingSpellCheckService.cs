@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace Todo
+namespace TodoCognitive
 {
     public class BingSpellCheckService : IBingSpellCheckService
     {

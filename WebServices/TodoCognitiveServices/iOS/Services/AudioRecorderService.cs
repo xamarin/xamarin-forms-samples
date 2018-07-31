@@ -2,10 +2,10 @@
 using AVFoundation;
 using Foundation;
 using Xamarin.Forms;
-using Todo.iOS;
+using TodoCognitive.iOS;
 
 [assembly: Dependency(typeof(AudioRecorderService))]
-namespace Todo.iOS
+namespace TodoCognitive.iOS
 {
 	public class AudioRecorderService : IAudioRecorderService
 	{

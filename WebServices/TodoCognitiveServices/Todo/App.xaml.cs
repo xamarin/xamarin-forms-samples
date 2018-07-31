@@ -2,7 +2,7 @@
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace Todo
+namespace TodoCognitive
 {
 	public partial class App : Application
 	{

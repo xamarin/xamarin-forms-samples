@@ -7,10 +7,10 @@ using Android.Content;
 using Android.Media;
 using Java.IO;
 using Xamarin.Forms;
-using Todo.Droid;
+using TodoCognitive.Droid;
 
 [assembly: Dependency(typeof(AudioRecorderService))]
-namespace Todo.Droid
+namespace TodoCognitive.Droid
 {
 	public class AudioRecorderService : IAudioRecorderService
 	{

@@ -4,7 +4,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace Todo
+namespace TodoCognitive
 {
     public class TextTranslationService : ITextTranslationService
     {

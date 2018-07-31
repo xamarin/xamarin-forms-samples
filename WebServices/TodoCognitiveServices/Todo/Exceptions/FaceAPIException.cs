@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace Todo.Exceptions
+namespace TodoCognitive.Exceptions
 {
 	public class FaceAPIException : Exception
     {

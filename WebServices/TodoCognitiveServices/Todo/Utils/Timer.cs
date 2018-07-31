@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Todo
+namespace TodoCognitive
 {
 	internal delegate Task TimerCallback(object state);
 

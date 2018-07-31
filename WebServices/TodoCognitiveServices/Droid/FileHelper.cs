@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
 using Xamarin.Forms;
-using Todo.Droid;
+using TodoCognitive.Droid;
 
 [assembly: Dependency(typeof(FileHelper))]
-namespace Todo.Droid
+namespace TodoCognitive.Droid
 {
 	public class FileHelper : IFileHelper
 	{

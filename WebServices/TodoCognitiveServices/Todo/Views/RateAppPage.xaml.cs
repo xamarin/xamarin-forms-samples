@@ -4,11 +4,11 @@ using System.Linq;
 using Xamarin.Forms;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
-using Todo.Exceptions;
-using Todo.Models;
-using Todo.Services;
+using TodoCognitive.Exceptions;
+using TodoCognitive.Models;
+using TodoCognitive.Services;
 
-namespace Todo
+namespace TodoCognitive
 {
     public partial class RateAppPage : ContentPage
     {

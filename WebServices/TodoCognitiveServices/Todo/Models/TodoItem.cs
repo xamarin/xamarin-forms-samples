@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace Todo
+namespace TodoCognitive
 {
 	[Table("todoitem")]
 	public class TodoItem

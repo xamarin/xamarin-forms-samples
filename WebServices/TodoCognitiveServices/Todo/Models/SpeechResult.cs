@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Todo
+namespace TodoCognitive
 {
     [JsonObject("result")]
     public class SpeechResult

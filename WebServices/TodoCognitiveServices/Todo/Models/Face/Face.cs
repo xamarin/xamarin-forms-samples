@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Todo.Models
+namespace TodoCognitive.Models
 {
 	public class Face
 	{

@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace Todo
+namespace TodoCognitive
 {
 	public partial class TodoListPage : ContentPage
 	{

@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Todo
+namespace TodoCognitive
 {
     public class AuthenticationService : IAuthenticationService
     {

@@ -1,6 +1,6 @@
 ﻿using UIKit;
 
-namespace Todo.iOS
+namespace TodoCognitive.iOS
 {
 	public class Application
 	{

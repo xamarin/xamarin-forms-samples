@@ -1,4 +1,4 @@
-﻿namespace Todo
+﻿namespace TodoCognitive
 {
 	public interface IFileHelper
 	{
