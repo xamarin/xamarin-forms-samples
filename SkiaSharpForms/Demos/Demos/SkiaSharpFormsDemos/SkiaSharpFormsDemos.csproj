@@ -13,8 +13,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Media\BrickWallTile.jpg" />
     <None Remove="Media\MonkeyFace.png" />
     <None Remove="Media\Newtons_cradle_animation_book_2.gif" />
+    <None Remove="Media\StoneWallTile.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,6 +42,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Bitmaps\SpinPaintPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\BitmapTileFlipModesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Effects\DistantLightExperimentPage.xaml">
@@ -69,7 +74,7 @@
     <EmbeddedResource Update="Effects\RadialGradientPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Effects\ShadowExperimentPage.xaml">
+    <EmbeddedResource Update="Effects\SeparableBlendModesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Unfinished\NinePatchButtonsPage.xaml">
@@ -228,6 +233,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Media\BrickWallTile.jpg" />
     <EmbeddedResource Include="Media\monkey.png" />
     <EmbeddedResource Include="Media\Banana.jpg" />
     <EmbeddedResource Include="Media\FacePalm.jpg" />
@@ -236,6 +242,7 @@
     <EmbeddedResource Include="Media\Newtons_cradle_animation_book_2.gif" />
     <EmbeddedResource Include="Media\SeatedMonkey.jpg" />
     <EmbeddedResource Include="Media\PageOfCode.png" />
+    <EmbeddedResource Include="Media\StoneWallTile.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -268,6 +275,9 @@
     </Compile>
     <Compile Update="Effects\EffectsHomePage.xaml.cs">
       <DependentUpon>EffectsHomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Effects\SeparableBlendModesPage.xaml.cs">
+      <DependentUpon>SeparableBlendModesPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 

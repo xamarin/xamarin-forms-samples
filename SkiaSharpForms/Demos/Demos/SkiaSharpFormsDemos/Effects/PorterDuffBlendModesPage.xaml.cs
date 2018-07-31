@@ -142,7 +142,7 @@ namespace SkiaSharpFormsDemos.Effects
 
             canvas.DrawBitmap(srcBitmap, new SKPoint(x, y), new SKPaint
             {
-                BlendMode = (SKBlendMode)modePicker.SelectedItem
+                BlendMode = (SKBlendMode)blendModePicker.SelectedItem
             });
 
 
@@ -167,12 +167,12 @@ namespace SkiaSharpFormsDemos.Effects
 
             canvas.DrawText("X", pt, new SKPaint { TextSize = TextSize, TextAlign = SKTextAlign.Center, Color = SKColors.Red /*, BlendMode = (SKBlendMode)modePicker.SelectedItem */ });
 
-            canvas.DrawText("0", pt, new SKPaint { TextSize = TextSize, TextAlign = SKTextAlign.Center, Color = SKColors.Blue, BlendMode = (SKBlendMode)modePicker.SelectedItem });
+            canvas.DrawText("0", pt, new SKPaint { TextSize = TextSize, TextAlign = SKTextAlign.Center, Color = SKColors.Blue, BlendMode = (SKBlendMode)blendModePicker.SelectedItem });
 
 
         }
 
-        void OnModePickerSelectedIndexChanged(object sender, EventArgs args)
+        void OnPickerSelectedIndexChanged(object sender, EventArgs args)
         {
             if (canvasView != null)
             {

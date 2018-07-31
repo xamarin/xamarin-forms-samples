@@ -6,28 +6,15 @@
              x:Class="SkiaSharpFormsDemos.Effects.PorterDuffBlendModesPage"
              Title="Porter-Duff Blend Modes">
 
-    <Grid Padding="10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-
+    <StackLayout>
         <skiaviews:SKCanvasView x:Name="canvasView"
-                                Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                                VerticalOptions="FillAndExpand"
                                 PaintSurface="OnCanvasViewPaintSurface" />
 
-        <Label Text="Blend Mode:" 
-               Grid.Row="1" Grid.Column="0"
-               VerticalOptions="Center" />
-
-        <Picker x:Name="modePicker"
-                Grid.Row="1" Grid.Column="1"
-                SelectedIndexChanged="OnModePickerSelectedIndexChanged">
+        <Picker x:Name="blendModePicker"
+                Title="Blend Mode"
+                Margin="10"
+                SelectedIndexChanged="OnPickerSelectedIndexChanged">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type skia:SKBlendMode}">
                     <x:Static Member="skia:SKBlendMode.Clear" />
@@ -50,5 +37,5 @@
                 0
             </Picker.SelectedIndex>
         </Picker>
-    </Grid>
+    </StackLayout>
 </ContentPage>
