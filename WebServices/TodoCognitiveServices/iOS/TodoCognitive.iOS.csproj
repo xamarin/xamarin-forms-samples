@@ -100,12 +100,6 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Todo\Todo.csproj">
-      <Project>{F7C968A1-FF14-46D8-BBB7-9000DE028F75}</Project>
-      <Name>Todo</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
@@ -136,6 +130,12 @@
     <BundleResource Include="Resources\translate.png" />
     <BundleResource Include="Resources\spellcheck.png" />
     <BundleResource Include="Resources\rating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Todo\TodoCognitive.csproj">
+      <Project>{F7C968A1-FF14-46D8-BBB7-9000DE028F75}</Project>
+      <Name>TodoCognitive</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
