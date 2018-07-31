@@ -8,7 +8,7 @@
         public MainPage()
         {
             this.InitializeComponent();
-            this.LoadApplication(new Todo.App());
+            this.LoadApplication(new TodoCognitive.App());
             Plugin.Media.CrossMedia.Current.Initialize().Wait();
         }
     }
