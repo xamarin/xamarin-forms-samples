@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 
 using Xamarin.Forms;
 
@@ -17,11 +14,11 @@ namespace SkiaSharpFormsDemos.Effects
 
         SKCanvasView canvasView;
         SKBitmap bitmap = new SKBitmap(SIZE, SIZE);
+        float angle;
 
         // For animation
         bool isAnimating;
         Stopwatch stopwatch = new Stopwatch();
-        float angle;
 
 		public AnimatedBitmapTilePage ()
 		{

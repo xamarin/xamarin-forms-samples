@@ -53,6 +53,8 @@ namespace SkiaSharpFormsDemos.Effects
             BrickWallTile = bitmap;
         }
 
+        public static SKBitmap BrickWallTile { private set; get; }
+
         public AlgorithmicBrickWallPage ()
 		{
             Title = "Algorithmic Brick Wall";
@@ -62,8 +64,6 @@ namespace SkiaSharpFormsDemos.Effects
             canvasView.PaintSurface += OnCanvasViewPaintSurface;
             Content = canvasView;
         }
-
-        public static SKBitmap BrickWallTile { private set; get; }
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {

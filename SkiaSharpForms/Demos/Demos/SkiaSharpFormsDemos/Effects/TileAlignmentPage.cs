@@ -7,8 +7,8 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Effects
 {
-	public class TileAlignmentPage : ContentPage
-	{
+    public class TileAlignmentPage : ContentPage
+    {
         bool isAligned;
 
         public TileAlignmentPage()
@@ -41,9 +41,9 @@ namespace SkiaSharpFormsDemos.Effects
             using (SKPaint paint = new SKPaint())
             {
                 SKRect rect = new SKRect(info.Width / 7,
-                                         info.Height / 7,
-                                         6 * info.Width / 7,
-                                         6 * info.Height / 7);
+                                            info.Height / 7,
+                                            6 * info.Width / 7,
+                                            6 * info.Height / 7);
 
                 // Get bitmap from other program
                 SKBitmap bitmap = AlgorithmicBrickWallPage.BrickWallTile;

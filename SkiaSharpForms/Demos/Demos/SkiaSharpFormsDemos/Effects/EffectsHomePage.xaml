@@ -77,10 +77,6 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.AlgorithmicBrickWallPage}" />
 
-                <TextCell Text="Tile Alignment"
-                          Detail="TK"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Effects.TileAlignmentPage}" />
 
                 <TextCell Text="Photographic Brick Wall"
                           Detail="TK"
@@ -92,13 +88,20 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.StoneWallPage}" />
 
-                <!-- Vector created brick, brick photo, stone wall photo, Cat Clock, animated tile -->
+                <TextCell Text="Tile Alignment"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.TileAlignmentPage}" />
+                
+                <TextCell Text="Centered Tiles"
+                          Detail="Center a tiled bitmap pattern within an area"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.CenteredTilesPage}" />
 
                 <TextCell Text="Animated Bitmap Tile"
                           Detail="TK"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.AnimatedBitmapTilePage}" />
-
 
             </TableSection>
 
