@@ -2,16 +2,45 @@
 using System.Collections.Generic;
 using XamlSamples.Views;
 using XamlSamples.ViewModels;
+using System.ComponentModel;
+using System.Linq;
+using System.Reflection;
 
 namespace XamlSamples
 {
     public class PageDataViewModel
     {
-        public PageDataViewModel(Type type, string title, string description)
+        static int mode = 3;
+        public PageDataViewModel(Type type) //, string title, string description)
         {
             Type = type;
-            Title = title;
-            Description = description;
+            //Originally, metainfo was parameters in the call to this class
+            //Title = title;
+            //Description = description
+
+            //Three ways to get it implicitly from the class
+            if (mode == 1)
+            {
+                //[1] Get from dummy properties' Descriptions
+                Title = GetPropDescription(type, "PTitle");
+                Description = GetPropDescription(type, "PInfo");
+            }
+            else if (mode == 2)
+            {
+                //[2] Use static properties
+                Title = GetStaticProperty(type, "StatPTitle");
+                Description = GetStaticProperty(type, "StatPInfo");
+            }
+            else
+            {
+                //[3] Get it from the Class Description Custom attribute
+                string[] infos = GetClassDescription(type);
+                if (infos != null)
+                {
+                    Title = infos[0];
+                    Description = infos[1];
+                }
+            }
         }
 
         public Type Type { private set; get; }
@@ -20,59 +49,91 @@ namespace XamlSamples
 
         public string Description { private set; get; }
 
+        private string GetPropDescription(Type type, string prop)
+        {
+            PropertyInfo propInfo = type.GetProperty(prop);
+
+            System.ComponentModel.DescriptionAttribute attrib =
+                (System.ComponentModel.DescriptionAttribute)propInfo.GetCustomAttributes(typeof(System.ComponentModel.DescriptionAttribute), false).FirstOrDefault();
+            return attrib.Description;
+        }
+
+        private string[] GetClassDescription(Type type)
+        {
+            string[] infos = null;
+            foreach (var cAttrib in type.CustomAttributes)
+            {
+                foreach (var constructorArg in cAttrib.ConstructorArguments)
+                {
+                    var val = constructorArg.Value;
+                    if (val is string)
+                    {
+                        string strn = (string)val;
+                        //One ConstructorArg is the relative path to the class file
+                        if (!strn.Contains("\\"))
+                        {
+                            //The class description is tilde separated class Title and Description
+                            if (strn.Contains("~"))
+                            {
+                                infos = strn.Split(new char[] { '~' });
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            return infos;
+        }
+
+        private string GetStaticProperty(Type type, string prop)
+        {
+            PropertyInfo propertyInfo = type
+                .GetProperty(prop, BindingFlags.Public | BindingFlags.Static);
+            if (propertyInfo == null)
+                return string.Empty;
+            // Use the PropertyInfo to retrieve the value from the type by not passing in an instance
+            return (string)propertyInfo.GetValue(null);
+        }
+
         static PageDataViewModel()
         {
             All = new List<PageDataViewModel>
             {
                 // Part 1. Getting Started with XAML
-                new PageDataViewModel(typeof(HelloXamlPage), "Hello, XAML",
-                                      "Display a Label with many properties set"),
+                new PageDataViewModel(typeof(HelloXamlPage)),
 
-                new PageDataViewModel(typeof(XamlPlusCodePage), "XAML + Code",
-                                      "Interact with a Slider and Button"),
+                new PageDataViewModel(typeof(XamlPlusCodePage)),
 
                 // Part 2. Essential XAML Syntax
-                new PageDataViewModel(typeof(GridDemoPage), "Grid Demo",
-                                      "Explore XAML syntax with the Grid"),
+                new PageDataViewModel(typeof(GridDemoPage)),
 
-                new PageDataViewModel(typeof(AbsoluteDemoPage), "Absolute Demo",
-                                      "Explore XAML syntax with AbsoluteLayout"),
+                new PageDataViewModel(typeof(AbsoluteDemoPage)),
 
                 // Part 3. XAML Markup Extensions
-                new PageDataViewModel(typeof(SharedResourcesPage), "Shared Resources",
-                                      "Using resource dictionaries to share resources"),
+                new PageDataViewModel(typeof(SharedResourcesPage)),
 
-                new PageDataViewModel(typeof(StaticConstantsPage), "Static Constants",
-                                      "Using the x:Static markup extensions"),
+                new PageDataViewModel(typeof(StaticConstantsPage)),
 
-                new PageDataViewModel(typeof(RelativeLayoutPage), "Relative Layout",
-                                      "Explore XAML markup extensions"),
+                new PageDataViewModel(typeof(RelativeLayoutPage)),
 
                 // Part 4. Data Binding Basics
-                new PageDataViewModel(typeof(SliderBindingsPage), "Slider Bindings",
-                                      "Bind properties of two views on the page"),
+                new PageDataViewModel(typeof(SliderBindingsPage)),
 
-                new PageDataViewModel(typeof(SliderTransformsPage), "Slider Transforms",
-                                      "Use Sliders with reverse bindings"),
+                new PageDataViewModel(typeof(SliderTransformsPage)),
 
-                new PageDataViewModel(typeof(ListViewDemoPage), "ListView Demo",
-                                      "Use a ListView with data bindings"),
+                new PageDataViewModel(typeof(ListViewDemoPage)),
 
                 // Part 5. From Data Bindings to MVVM
-                new PageDataViewModel(typeof(OneShotDateTimePage), "One-Shot DateTime",
-                                      "Obtain the current DateTime and display it"),
+                new PageDataViewModel(typeof(OneShotDateTimePage)),
 
-                new PageDataViewModel(typeof(ClockPage), "Clock",
-                                      "Dynamically display the current time"),
+                new PageDataViewModel(typeof(ClockPage)),
 
-                new PageDataViewModel(typeof(HslColorScrollPage), "HSL Color Scroll",
-                                      "Use a view model to select HSL colors"),
+                new PageDataViewModel(typeof(HslColorScrollPage)),
 
-                new PageDataViewModel(typeof(KeypadPage), "Keypad",
-                                      "Use a view model for numeric keypad logic")
+                new PageDataViewModel(typeof(KeypadPage))
             };
         }
 
-        public static IList<PageDataViewModel> All { private set; get; } 
+        public static IList<PageDataViewModel> All { private set; get; }
     }
 }
