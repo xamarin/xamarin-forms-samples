@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace XamlSamples.ViewModels
 {
-    class KeypadViewModel : INotifyPropertyChanged
+    public class KeypadViewModel : INotifyPropertyChanged
     {
         string inputString = "";
         string displayText = "";

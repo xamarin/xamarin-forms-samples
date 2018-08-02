@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace XamlSamples.ViewModels
 {
-    class ClockViewModel : INotifyPropertyChanged
+    public class ClockViewModel : INotifyPropertyChanged
     {
         DateTime dateTime;
 
