@@ -77,6 +77,10 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.AlgorithmicBrickWallPage}" />
 
+                <TextCell Text="Chain-Link Fence"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.ChainLinkFencePage}" />
 
                 <TextCell Text="Photographic Brick Wall"
                           Detail="TK"
