@@ -6,7 +6,7 @@
              Title="Keypad Page">
 
     <Grid HorizontalOptions="Center"
-          VerticalOptions="Center">
+          VerticalOptions="Center"> 
         <Grid.BindingContext>
             <viewmodels:KeypadViewModel />
         </Grid.BindingContext>
