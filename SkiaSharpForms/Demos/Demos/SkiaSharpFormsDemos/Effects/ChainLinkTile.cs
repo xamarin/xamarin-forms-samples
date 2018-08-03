@@ -4,7 +4,7 @@ using SkiaSharp;
 namespace SkiaSharpFormsDemos.Effects
 {
     // This class is not used. 
-    // It was replaced by much shorter code in ChainLinkFencePage.cs, but it
+    // It was replaced by much shorter code in ChainLinkFencePage.cs, but this file 
     //      demonstrates the more complex logic when the result is not rotated.
     class ChainLinkTile
     {
