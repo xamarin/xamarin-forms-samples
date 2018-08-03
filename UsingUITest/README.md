@@ -13,7 +13,7 @@ Important points:
 
 * In the Xamarin.Forms user interface, the `AutomationId` is set on controls that need to be referenced in tests.
 
-* In the **UITests** unit test project, there is a set of cross-platform tests in a virtual class (`CrossPlatformTests`). These tests will be run against both platforms. The cross-platform tests reference the `AuomationId` used in the UI code, eg. `c.Marked("MyLabel")`
+* In the **UITests** unit test project, there is a set of cross-platform tests in a virtual class (`CrossPlatformTests`). These tests will be run against both platforms. The cross-platform tests reference the `AutomationId` used in the UI code, eg. `c.Marked("MyLabel")`
 
 * In the **UITests** unit test project the iOS and Android subclasses of `CrossPlatformTests` do the platform-specific set-up.
 
