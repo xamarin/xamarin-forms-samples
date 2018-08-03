@@ -96,41 +96,22 @@ namespace XamlSamples
 
         static PageDataViewModel()
         {
-            All = new List<PageDataViewModel>
+            string @namespace = "XamlSamples.Views";
+            //Ref (Re:Refection): https://stackoverflow.com/questions/2742276/how-do-i-check-if-a-type-is-a-subtype-or-the-type-of-an-object
+            //Ref (Re:IsSubclassOf): https://stackoverflow.com/questions/2742276/how-do-i-check-if-a-type-is-a-subtype-or-the-type-of-an-object
+            IEnumerable<Type> types = Assembly.GetExecutingAssembly().GetTypes()
+                .Where(t => t.IsClass
+                && t.Namespace == @namespace
+                && t.IsSubclassOf(typeof(Xamarin.Forms.ContentPage)))
+                .ToList().OrderBy(cp => cp.Name);
+
+            //types.ForEach(t => System.Diagnostics.Debug.WriteLine(t.Name));
+
+            All = new List<PageDataViewModel>();
+            foreach (Type t in types)
             {
-                // Part 1. Getting Started with XAML
-                new PageDataViewModel(typeof(HelloXamlPage)),
-
-                new PageDataViewModel(typeof(XamlPlusCodePage)),
-
-                // Part 2. Essential XAML Syntax
-                new PageDataViewModel(typeof(GridDemoPage)),
-
-                new PageDataViewModel(typeof(AbsoluteDemoPage)),
-
-                // Part 3. XAML Markup Extensions
-                new PageDataViewModel(typeof(SharedResourcesPage)),
-
-                new PageDataViewModel(typeof(StaticConstantsPage)),
-
-                new PageDataViewModel(typeof(RelativeLayoutPage)),
-
-                // Part 4. Data Binding Basics
-                new PageDataViewModel(typeof(SliderBindingsPage)),
-
-                new PageDataViewModel(typeof(SliderTransformsPage)),
-
-                new PageDataViewModel(typeof(ListViewDemoPage)),
-
-                // Part 5. From Data Bindings to MVVM
-                new PageDataViewModel(typeof(OneShotDateTimePage)),
-
-                new PageDataViewModel(typeof(ClockPage)),
-
-                new PageDataViewModel(typeof(HslColorScrollPage)),
-
-                new PageDataViewModel(typeof(KeypadPage))
-            };
+                All.Add(new PageDataViewModel(t));
+            }
         }
 
         public static IList<PageDataViewModel> All { private set; get; }
