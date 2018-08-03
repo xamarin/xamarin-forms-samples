@@ -11,6 +11,11 @@ namespace XamlSamples
     public class PageDataViewModel
     {
         static int mode = 3;
+
+        public Type Type { private set; get; }
+        public string Title { private set; get; }
+        public string Description { private set; get; }
+
         public PageDataViewModel(Type type) //, string title, string description)
         {
             Type = type;
@@ -42,12 +47,6 @@ namespace XamlSamples
                 }
             }
         }
-
-        public Type Type { private set; get; }
-
-        public string Title { private set; get; }
-
-        public string Description { private set; get; }
 
         private string GetPropDescription(Type type, string prop)
         {
