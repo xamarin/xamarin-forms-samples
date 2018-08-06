@@ -22,6 +22,25 @@ namespace SkiaSharpFormsDemos.Effects
             dstBitmap = new SKBitmap(BitmapSize, BitmapSize);
             srcBitmap = new SKBitmap(BitmapSize, BitmapSize);
 
+            using (SKCanvas canvas = new SKCanvas(dstBitmap))
+            using (SKPaint paint = new SKPaint())
+            {
+                paint.Color = new SKColor(0xFF, 0xDC, 0x01);
+                SKRect rect = new SKRect(0, 0, 2 * BitmapSize / 3, 2 * BitmapSize / 3);
+                canvas.Clear();
+                canvas.DrawRect(rect, paint);
+            }
+
+            using (SKCanvas canvas = new SKCanvas(srcBitmap))
+            using (SKPaint paint = new SKPaint())
+            {
+                paint.Color = new SKColor(0x68, 0xC7, 0xE8);
+                SKRect rect = new SKRect(BitmapSize / 3, BitmapSize / 3, BitmapSize, BitmapSize);
+                canvas.Clear();
+                canvas.DrawRect(rect, paint);
+            }
+
+/*
             IntPtr dstPtr0 = dstBitmap.GetPixels();
             IntPtr srcPtr0 = srcBitmap.GetPixels();
 
@@ -40,6 +59,7 @@ namespace SkiaSharpFormsDemos.Effects
                         *(uint*)srcPtr.ToPointer() = isSrcOpaque ? 0xFF0000FF : 0; //  0xFF00FFFF : 0;
                     }
                 }
+*/
         }
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -133,10 +153,12 @@ namespace SkiaSharpFormsDemos.Effects
 
                         return;
             */
-            canvas.Clear(new SKColor(0, 0, 0, 0));                  // !!!!!!
+            canvas.Clear();                  // !!!!!!
 
-            int x = (info.Width - BitmapSize) / 2;
-            int y = 100;
+            int x = 10; //  (info.Width - BitmapSize) / 2;
+            int y = 10;
+
+            
 
             canvas.DrawBitmap(dstBitmap, new SKPoint(x, y));
 
@@ -145,6 +167,124 @@ namespace SkiaSharpFormsDemos.Effects
                 BlendMode = (SKBlendMode)blendModePicker.SelectedItem
             });
 
+            canvas.DrawRect(new SKRect(x, y, x + BitmapSize, y + BitmapSize), new SKPaint
+            {
+                Style = SKPaintStyle.Stroke,
+                Color = SKColors.Black,
+                StrokeWidth = 1
+            });
+
+            x = 320;
+            y = 10;
+
+            canvas.DrawBitmap(dstBitmap, new SKPoint(x, y));
+
+            canvas.DrawRect(new SKRect(x + 100, y + 100, x + BitmapSize, y + BitmapSize), new SKPaint
+            {
+                Color = SKColors.Cyan,
+                BlendMode = (SKBlendMode)blendModePicker.SelectedItem
+            });
+
+            canvas.DrawRect(new SKRect(x, y, x + BitmapSize, y + BitmapSize), new SKPaint
+            {
+                Style = SKPaintStyle.Stroke,
+                Color = SKColors.Black,
+                StrokeWidth = 1
+            });
+
+            x = 640;
+            y = 10;
+
+            canvas.DrawRect(new SKRect(x, y, x + 200, y + 200), new SKPaint
+            {
+                Color = SKColors.Yellow,
+            });
+
+            canvas.DrawBitmap(srcBitmap, new SKPoint(x, y), new SKPaint
+            {
+                BlendMode = (SKBlendMode)blendModePicker.SelectedItem
+            });
+
+            canvas.DrawRect(new SKRect(x, y, x + BitmapSize, y + BitmapSize), new SKPaint
+            {
+                Style = SKPaintStyle.Stroke,
+                Color = SKColors.Black,
+                StrokeWidth = 1
+            });
+
+            x = 960;
+            y = 100;
+       //     using (SKAutoCanvasRestore autoRestore = new SKAutoCanvasRestore(canvas))
+            {
+
+                SKRect rectX = new SKRect(x, y, x + 300, y + 300);
+                canvas.DrawRect(rectX, new SKPaint { Color = SKColors.Yellow });
+
+
+                SKPaint textPaint = new SKPaint { TextSize = 400, Color = SKColors.Cyan, BlendMode = (SKBlendMode)blendModePicker.SelectedItem };
+                SKRect textRect = new SKRect();
+                textPaint.MeasureText("PD", ref textRect);
+                textRect.Offset(x - 50, y + 350);           // need to union this with rectX ?
+
+                canvas.Save();
+                canvas.ClipRect(textRect);
+                canvas.SaveLayer(textRect, null);
+                canvas.Clear();
+                canvas.DrawText("PD", x - 50, y + 350, textPaint );
+                canvas.Restore();
+            }
+
+
+
+
+
+/*
+            x = 960;
+            y = 10;
+
+            using (SKAutoCanvasRestore autoRestore = new SKAutoCanvasRestore(canvas))
+            {
+                SKRect rectx = new SKRect(x, y, x + 300, y + 300);
+
+                canvas.ClipRect(rectx);
+
+                canvas.SaveLayer(null);
+
+                canvas.Clear();
+
+                canvas.DrawRect(new SKRect(x, y, x + 200, y + 200), new SKPaint
+                {
+                    Color = SKColors.Yellow,
+                });
+
+                canvas.DrawRect(new SKRect(x + 100, y + 100, x + BitmapSize, y + BitmapSize), new SKPaint           // Needs to be full rectangle!!!!!
+                {
+                    Color = SKColors.Cyan,
+                    BlendMode = (SKBlendMode)blendModePicker.SelectedItem
+                });
+
+                canvas.DrawRect(new SKRect(x, y, x + BitmapSize, y + BitmapSize), new SKPaint
+                {
+                    Style = SKPaintStyle.Stroke,
+                    Color = SKColors.Black,
+                    StrokeWidth = 1
+                });
+            }
+*/
+
+
+            return;
+
+            canvas.DrawText("PD", 320, 200, new SKPaint
+            {
+                TextSize = 200,
+                Color = SKColors.Cyan,
+                BlendMode = (SKBlendMode)blendModePicker.SelectedItem
+            });
+
+
+
+            return;
 
             canvas.DrawRect(x, y, BitmapSize, BitmapSize, new SKPaint
             {
