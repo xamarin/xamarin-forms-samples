@@ -119,6 +119,42 @@
 
             </TableSection>
 
+
+            <TableSection Title="Compositing and Blend Modes">
+
+                <TextCell Text="Code More Code Page"
+                          Detail="Animate the alpha channel to fade between text strings"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.CodeMoreCodePage}" />
+
+                <TextCell Text="Porter-Duff Array Page"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.PorterDuffArrayPage}" />
+
+                <TextCell Text="Porter-Duff Blend Modes"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.PorterDuffBlendModesPage}" />
+
+                <TextCell Text="Brick-Wall Compositing"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.BrickWallCompositingPage}" />
+
+                <TextCell Text="Separable Blend Modes"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.SeparableBlendModesPage}" />
+
+                <TextCell Text="Primary Colors"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.PrimaryColorsPage}" />
+
+            </TableSection>
+
+
             <TableSection Title="Filter Effects">
 
                 <TextCell Text="Mask Blur Experiment"
@@ -147,19 +183,6 @@
 
             </TableSection>
 
-            <TableSection Title="Blend Modes">
-
-                <TextCell Text="Porter-Duff Blend Modes"
-                          Detail="TK"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Effects.PorterDuffBlendModesPage}" />
-
-                <TextCell Text="Separable Blend Modes"
-                          Detail="TK"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Effects.SeparableBlendModesPage}" />
-
-            </TableSection>
         </TableRoot>
     </TableView>
 </local:HomeBasePage>

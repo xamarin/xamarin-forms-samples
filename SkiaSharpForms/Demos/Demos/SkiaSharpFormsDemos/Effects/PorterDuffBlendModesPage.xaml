@@ -30,11 +30,12 @@
                     <x:Static Member="skia:SKBlendMode.DstATop" />
                     <x:Static Member="skia:SKBlendMode.Xor" />
                     <x:Static Member="skia:SKBlendMode.Plus" />
+                    <x:Static Member="skia:SKBlendMode.Modulate" />
                 </x:Array>
             </Picker.ItemsSource>
 
             <Picker.SelectedIndex>
-                0
+                3
             </Picker.SelectedIndex>
         </Picker>
     </StackLayout>

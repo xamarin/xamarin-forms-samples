@@ -44,7 +44,13 @@
     <EmbeddedResource Update="Bitmaps\SpinPaintPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Effects\AlphaFadePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Effects\BitmapTileFlipModesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\BrickWallCompositingPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Effects\DistantLightExperimentPage.xaml">
@@ -266,6 +272,9 @@
     </Compile>
     <Compile Update="Bitmaps\SaveFileFormatsPage.xaml.cs">
       <DependentUpon>SaveFileFormatsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Effects\AlphaFadePage.xaml.cs">
+      <DependentUpon>AlphaFadePage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Effects\DistantLightExperimentPage.xaml.cs">
       <DependentUpon>DistantLightExperimentPage.xaml</DependentUpon>
