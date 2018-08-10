@@ -80,14 +80,30 @@ namespace SkiaSharpFormsDemos.Effects
                                                              0);
                 }
 
+                SKShader fractalShaderWithBackground =
+                    SKShader.CreateCompose(SKShader.CreateColor(SKColors.Blue),
+                                           fractalNoiseShader);
+
+                SKShader turbulenceShaderWithBackground =
+                    SKShader.CreateCompose(SKShader.CreateColor(SKColors.Blue),
+                                           turbulenceShader);
+
                 // Display fractal noise
                 paint.Shader = fractalNoiseShader;
-                SKRect rect = new SKRect(0, 0, info.Width, info.Height / 2);
+                SKRect rect = new SKRect(0, 0, info.Width / 2, info.Height / 2);
+                canvas.DrawRect(rect, paint);
+
+                paint.Shader = fractalShaderWithBackground;
+                rect = new SKRect(info.Width / 2, 0, info.Width, info.Height / 2);
                 canvas.DrawRect(rect, paint);
 
                 // Display turbulence
                 paint.Shader = turbulenceShader;
-                rect = new SKRect(0, info.Height / 2, info.Width, info.Height);
+                rect = new SKRect(0, info.Height / 2, info.Width / 2, info.Height);
+                canvas.DrawRect(rect, paint);
+
+                paint.Shader = turbulenceShaderWithBackground;
+                rect = new SKRect(info.Width / 2, info.Height / 2, info.Width, info.Height);
                 canvas.DrawRect(rect, paint);
             }
         }

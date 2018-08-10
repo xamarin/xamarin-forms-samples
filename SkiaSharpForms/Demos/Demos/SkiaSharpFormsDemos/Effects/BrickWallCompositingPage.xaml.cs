@@ -16,6 +16,9 @@ namespace SkiaSharpFormsDemos.Effects
         SKBitmap monkeyBitmap = BitmapExtensions.LoadBitmapResource(
             typeof(BrickWallCompositingPage), "SkiaSharpFormsDemos.Media.SeatedMonkey.jpg");
 
+        SKBitmap matteBitmap = BitmapExtensions.LoadBitmapResource(
+            typeof(BrickWallCompositingPage), "SkiaSharpFormsDemos.Media.SeatedMonkeyMatte.png");
+
 		public BrickWallCompositingPage ()
 		{
 			InitializeComponent ();
@@ -39,17 +42,31 @@ namespace SkiaSharpFormsDemos.Effects
             using (SKPaint paint = new SKPaint())
             {
                 paint.BlendMode = SKBlendMode.DstIn;
-
-
+                canvas.DrawBitmap(matteBitmap, x, y, paint);
             }
 
-            // Draw brick wall behind monkey
             using (SKPaint paint = new SKPaint())
             {
-                // Create bitmap tiling
-                paint.Shader = SKShader.CreateBitmap(AlgorithmicBrickWallPage.BrickWallTile,
+                const float gravelHeight = 80;
+
+                // Draw gravel ground to monkey to sit on
+                paint.Shader = SKShader.CreateCompose(
+                                    SKShader.CreateColor(SKColors.SandyBrown),
+                                    SKShader.CreatePerlinNoiseTurbulence(0.1f, 0.3f, 1, 9));
+
+                paint.BlendMode = SKBlendMode.DstOver;
+                SKRect rect = new SKRect(info.Rect.Left, info.Rect.Bottom - gravelHeight,
+                                         info.Rect.Right, info.Rect.Bottom);
+                canvas.DrawRect(rect, paint);
+
+                // Draw bitmap tiled brick wall behind monkey
+                SKBitmap bitmap = AlgorithmicBrickWallPage.BrickWallTile;
+                float yAdjust = (info.Height - gravelHeight) % bitmap.Height;
+
+                paint.Shader = SKShader.CreateBitmap(bitmap,
                                                      SKShaderTileMode.Repeat,
-                                                     SKShaderTileMode.Repeat);
+                                                     SKShaderTileMode.Repeat,
+                                                     SKMatrix.MakeTranslation(0, yAdjust));
                 paint.BlendMode = SKBlendMode.DstOver;
 
                 canvas.DrawRect(info.Rect, paint);

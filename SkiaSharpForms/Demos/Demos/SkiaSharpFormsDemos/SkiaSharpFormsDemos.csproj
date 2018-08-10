@@ -16,6 +16,7 @@
     <None Remove="Media\BrickWallTile.jpg" />
     <None Remove="Media\MonkeyFace.png" />
     <None Remove="Media\Newtons_cradle_animation_book_2.gif" />
+    <None Remove="Media\SeatedMonkeyMatte.png" />
     <None Remove="Media\StoneWallTile.jpg" />
   </ItemGroup>
 
@@ -248,6 +249,7 @@
     <EmbeddedResource Include="Media\Newtons_cradle_animation_book_2.gif" />
     <EmbeddedResource Include="Media\SeatedMonkey.jpg" />
     <EmbeddedResource Include="Media\PageOfCode.png" />
+    <EmbeddedResource Include="Media\SeatedMonkeyMatte.png" />
     <EmbeddedResource Include="Media\StoneWallTile.jpg" />
   </ItemGroup>
 
