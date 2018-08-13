@@ -24,6 +24,11 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.GradientTextPage}" />
 
+                <TextCell Text="Reflection Gradient"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.ReflectionGradientPage}" />
+
                 <TextCell Text="Gradient Animation"
                           Detail="Animate a gradient around a circular axis"
                           Command="{Binding NavigateCommand}"
@@ -47,11 +52,16 @@
                           Detail="TK"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.RadialGradientPage}" />
-
+                
                 <TextCell Text="Rainbow Arc Gradient"
                           Detail="TK"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.RainbowArcGradientPage}" />
+
+                <TextCell Text="Radial Gradient Mask"
+                          Detail="Highlight part of a bitmap with a circular gradient mask"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.RadialGradientMaskPage}" />
 
                 <TextCell Text="Sweep Gradient"
                           Detail="TK"
@@ -132,15 +142,25 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.PorterDuffArrayPage}" />
 
+                <TextCell Text="Brick-Wall Compositing"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.BrickWallCompositingPage}" />
+
                 <TextCell Text="Porter-Duff Blend Modes"
                           Detail="TK"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.PorterDuffBlendModesPage}" />
 
-                <TextCell Text="Brick-Wall Compositing"
-                          Detail="TK"
+                <TextCell Text="Compositing Mask"
+                          Detail="Highlight part of a bitmap with a circular compositing mask"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Effects.BrickWallCompositingPage}" />
+                          CommandParameter="{x:Type local:Effects.CompositingMaskPage}" />
+
+                <TextCell Text="Bitmap Transitions"
+                          Detail="Transition from one bitmap to another using blend modes"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.GradientTransitionsPage}" />
 
                 <TextCell Text="Separable Blend Modes"
                           Detail="TK"
