@@ -88,22 +88,39 @@ namespace SkiaSharpFormsDemos.Effects
                     SKShader.CreateCompose(SKShader.CreateColor(SKColors.Blue),
                                            turbulenceShader);
 
+                SKShader fractalShaderWithForeground =
+                    SKShader.CreateCompose(fractalNoiseShader, SKShader.CreateColor(SKColors.Blue),
+                                           SKBlendMode.SrcATop);                                            /// !!!!!!!
+
+                SKShader turbulenceShaderWithForeground =
+                    SKShader.CreateCompose(turbulenceShader, SKShader.CreateColor(SKColors.Blue),
+                                           SKBlendMode.SrcIn
+                                           );
+
                 // Display fractal noise
                 paint.Shader = fractalNoiseShader;
-                SKRect rect = new SKRect(0, 0, info.Width / 2, info.Height / 2);
+                SKRect rect = new SKRect(0, 0, info.Width / 3, info.Height / 2);
                 canvas.DrawRect(rect, paint);
 
                 paint.Shader = fractalShaderWithBackground;
-                rect = new SKRect(info.Width / 2, 0, info.Width, info.Height / 2);
+                rect = new SKRect(info.Width / 3, 0, 2 * info.Width / 3, info.Height / 2);
+                canvas.DrawRect(rect, paint);
+
+                paint.Shader = fractalShaderWithForeground;
+                rect = new SKRect(2 * info.Width / 3, 0, info.Width, info.Height / 2);
                 canvas.DrawRect(rect, paint);
 
                 // Display turbulence
                 paint.Shader = turbulenceShader;
-                rect = new SKRect(0, info.Height / 2, info.Width / 2, info.Height);
+                rect = new SKRect(0, info.Height / 2, info.Width / 3, info.Height);
                 canvas.DrawRect(rect, paint);
 
                 paint.Shader = turbulenceShaderWithBackground;
-                rect = new SKRect(info.Width / 2, info.Height / 2, info.Width, info.Height);
+                rect = new SKRect(info.Width / 3, info.Height / 2, 2 * info.Width / 3, info.Height);
+                canvas.DrawRect(rect, paint);
+
+                paint.Shader = turbulenceShaderWithForeground;
+                rect = new SKRect(2 * info.Width / 3, info.Height / 2, info.Width, info.Height);
                 canvas.DrawRect(rect, paint);
             }
         }

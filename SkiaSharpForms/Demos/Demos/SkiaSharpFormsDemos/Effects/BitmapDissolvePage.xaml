@@ -2,18 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
-             x:Class="SkiaSharpFormsDemos.Effects.BrickWallCompositingPage"
-             Title="Brick-Wall Compositing">
-
+             x:Class="SkiaSharpFormsDemos.Effects.BitmapDissolvePage"
+             Title="Bitmap Dissolve">
     <StackLayout>
         <skia:SKCanvasView x:Name="canvasView"
                            VerticalOptions="FillAndExpand"
                            PaintSurface="OnCanvasViewPaintSurface" />
 
-        <Button Text="Show sitting monkey"
-                HorizontalOptions="Center"
-                Margin="0, 10"
-                Clicked="OnButtonClicked" />
-
+        <Slider x:Name="progressSlider"
+                Margin="10"
+                ValueChanged="OnSliderValueChanged" />
     </StackLayout>
 </ContentPage>

@@ -46,7 +46,7 @@
 
             </TableSection>
 
-            <TableSection Title="Curved Gradients">
+            <TableSection Title="Cicular Gradients">
 
                 <TextCell Text="Radial Gradient"
                           Detail="TK"
@@ -132,18 +132,23 @@
 
             <TableSection Title="Compositing and Blend Modes">
 
-                <TextCell Text="Code More Code Page"
+                <TextCell Text="Code More Code"
                           Detail="Animate the alpha channel to fade between text strings"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.CodeMoreCodePage}" />
 
-                <TextCell Text="Porter-Duff Array Page"
-                          Detail="TK"
+                <TextCell Text="Bitmap Dissolve"
+                          Detail="Use a transparency to dissolve between one bitmap and another"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Effects.PorterDuffArrayPage}" />
+                          CommandParameter="{x:Type local:Effects.BitmapDissolvePage}" />
+
+                <TextCell Text="Porter-Duff Grid"
+                          Detail="See all the Porter-Duff blend modes on one screen"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.PorterDuffGridPage}" />
 
                 <TextCell Text="Brick-Wall Compositing"
-                          Detail="TK"
+                          Detail="Use Porter-Duff blend modes to combine several bitmaps"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.BrickWallCompositingPage}" />
 

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
@@ -11,18 +7,39 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Effects
 {
-	public partial class BrickWallCompositingPage : ContentPage
-	{
+    public partial class BrickWallCompositingPage : ContentPage
+    {
         SKBitmap monkeyBitmap = BitmapExtensions.LoadBitmapResource(
-            typeof(BrickWallCompositingPage), "SkiaSharpFormsDemos.Media.SeatedMonkey.jpg");
+            typeof(BrickWallCompositingPage),
+            "SkiaSharpFormsDemos.Media.SeatedMonkey.jpg");
 
         SKBitmap matteBitmap = BitmapExtensions.LoadBitmapResource(
-            typeof(BrickWallCompositingPage), "SkiaSharpFormsDemos.Media.SeatedMonkeyMatte.png");
+            typeof(BrickWallCompositingPage),
+            "SkiaSharpFormsDemos.Media.SeatedMonkeyMatte.png");
 
-		public BrickWallCompositingPage ()
-		{
-			InitializeComponent ();
-		}
+        int step = 0;
+
+        public BrickWallCompositingPage()
+        {
+            InitializeComponent();
+        }
+
+        void OnButtonClicked(object sender, EventArgs args)
+        {
+            Button btn = (Button)sender;
+            step = (step + 1) % 5;
+
+            switch (step)
+            {
+                case 0: btn.Text = "Show sitting monkey"; break;
+                case 1: btn.Text = "Draw matte with DstIn"; break;
+                case 2: btn.Text = "Draw sidewalk with DstOver"; break;
+                case 3: btn.Text = "Draw brick wall with DstOver"; break;
+                case 4: btn.Text = "Reset"; break;
+            }
+
+            canvasView.InvalidateSurface();
+        }
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
@@ -32,44 +49,58 @@ namespace SkiaSharpFormsDemos.Effects
 
             canvas.Clear();
 
-            // Draw monkey bitmap
             float x = (info.Width - monkeyBitmap.Width) / 2;
             float y = info.Height - monkeyBitmap.Height;
 
-            canvas.DrawBitmap(monkeyBitmap, x, y);
-
-            // Draw matte to exclude monkey's surroundings
-            using (SKPaint paint = new SKPaint())
+            // Draw monkey bitmap
+            if (step >= 1)
             {
-                paint.BlendMode = SKBlendMode.DstIn;
-                canvas.DrawBitmap(matteBitmap, x, y, paint);
+                canvas.DrawBitmap(monkeyBitmap, x, y);
             }
 
-            using (SKPaint paint = new SKPaint())
+            // Draw matte to exclude monkey's surroundings
+            if (step >= 2)
             {
-                const float gravelHeight = 80;
+                using (SKPaint paint = new SKPaint())
+                {
+                    paint.BlendMode = SKBlendMode.DstIn;
+                    canvas.DrawBitmap(matteBitmap, x, y, paint);
+                }
+            }
 
-                // Draw gravel ground to monkey to sit on
-                paint.Shader = SKShader.CreateCompose(
-                                    SKShader.CreateColor(SKColors.SandyBrown),
-                                    SKShader.CreatePerlinNoiseTurbulence(0.1f, 0.3f, 1, 9));
+            const float sidewalkHeight = 80;
+            SKRect rect = new SKRect(info.Rect.Left, info.Rect.Bottom - sidewalkHeight,
+                                     info.Rect.Right, info.Rect.Bottom);
 
-                paint.BlendMode = SKBlendMode.DstOver;
-                SKRect rect = new SKRect(info.Rect.Left, info.Rect.Bottom - gravelHeight,
-                                         info.Rect.Right, info.Rect.Bottom);
-                canvas.DrawRect(rect, paint);
+            // Draw gravel sidewalk for monkey to sit on
+            if (step >= 3)
+            {
+                using (SKPaint paint = new SKPaint())
+                {
+                    paint.Shader = SKShader.CreateCompose(
+                                        SKShader.CreateColor(SKColors.SandyBrown),
+                                        SKShader.CreatePerlinNoiseTurbulence(0.1f, 0.3f, 1, 9));
 
-                // Draw bitmap tiled brick wall behind monkey
-                SKBitmap bitmap = AlgorithmicBrickWallPage.BrickWallTile;
-                float yAdjust = (info.Height - gravelHeight) % bitmap.Height;
+                    paint.BlendMode = SKBlendMode.DstOver;
+                    canvas.DrawRect(rect, paint);
+                }
+            }
 
-                paint.Shader = SKShader.CreateBitmap(bitmap,
-                                                     SKShaderTileMode.Repeat,
-                                                     SKShaderTileMode.Repeat,
-                                                     SKMatrix.MakeTranslation(0, yAdjust));
-                paint.BlendMode = SKBlendMode.DstOver;
+            // Draw bitmap tiled brick wall behind monkey
+            if (step >= 4)
+            {
+                using (SKPaint paint = new SKPaint())
+                {
+                    SKBitmap bitmap = AlgorithmicBrickWallPage.BrickWallTile;
+                    float yAdjust = (info.Height - sidewalkHeight) % bitmap.Height;
 
-                canvas.DrawRect(info.Rect, paint);
+                    paint.Shader = SKShader.CreateBitmap(bitmap,
+                                                         SKShaderTileMode.Repeat,
+                                                         SKShaderTileMode.Repeat,
+                                                         SKMatrix.MakeTranslation(0, yAdjust));
+                    paint.BlendMode = SKBlendMode.DstOver;
+                    canvas.DrawRect(info.Rect, paint);
+                }
             }
         }
     }

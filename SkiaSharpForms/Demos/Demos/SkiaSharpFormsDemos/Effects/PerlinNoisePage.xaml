@@ -22,7 +22,7 @@
                            PaintSurface="OnCanvasViewPaintSurface" />
 
         <Slider x:Name="baseFrequencyXSlider"
-                Value="0.1"
+                Maximum="0.1"
                 ValueChanged="OnSliderValueChanged" />
 
         <Label Text="{Binding Source={x:Reference baseFrequencyXSlider},
@@ -30,7 +30,7 @@
                               StringFormat='Base Frequency X = {0:F1}'}" />
 
         <Slider x:Name="baseFrequencyYSlider"
-                Value="0.1"
+                Maximum="0.1"
                 ValueChanged="OnSliderValueChanged" />
 
         <Label Text="{Binding Source={x:Reference baseFrequencyYSlider},
