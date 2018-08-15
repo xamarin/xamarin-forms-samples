@@ -70,8 +70,8 @@ namespace SkiaSharpFormsDemos.Effects
 
                 float progress = (float)progressSlider.Value;
 
-                float[] positions = new float[]{ 1.2f * progress - 0.2f,
-                                                 1.2f * progress };
+                float[] positions = new float[]{ 1.1f * progress - 0.1f,
+                                                 1.1f * progress };
 
                 switch ((TransitionMode)transitionPicker.SelectedIndex)
                 {

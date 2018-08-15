@@ -7,12 +7,12 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Effects
 {
-	public partial class RadialGradientPage : ContentPage
-	{
-		public RadialGradientPage ()
-		{
-			InitializeComponent ();
-		}
+    public partial class RadialGradientPage : ContentPage
+    {
+        public RadialGradientPage ()
+        {
+            InitializeComponent ();
+        }
 
         void OnPickerSelectedIndexChanged(object sender, EventArgs args)
         {

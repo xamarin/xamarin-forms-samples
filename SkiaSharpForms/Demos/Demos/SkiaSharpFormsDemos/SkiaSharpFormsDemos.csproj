@@ -237,7 +237,7 @@
     <EmbeddedResource Update="Transforms\SingleFingerCornerScalePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Effects\PorterDuffBlendModesPage.xaml">
+    <EmbeddedResource Update="Effects\PorterDuffTransparencyPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -289,6 +289,9 @@
     </Compile>
     <Compile Update="Effects\EffectsHomePage.xaml.cs">
       <DependentUpon>EffectsHomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Effects\PorterDuffTransparencyPage.xaml.cs">
+      <DependentUpon>PorterDuffTransparencyPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Effects\SeparableBlendModesPage.xaml.cs">
       <DependentUpon>SeparableBlendModesPage.xaml</DependentUpon>

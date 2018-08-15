@@ -31,7 +31,7 @@ namespace SkiaSharpFormsDemos.Effects
             SKSurface surface = args.Surface;
             SKCanvas canvas = surface.Canvas;
 
-            canvas.Clear(SKColors.Pink);
+            canvas.Clear();
 
             // Find rectangle to display bitmap
             float scale = Math.Min((float)info.Width / bitmap.Width,
@@ -66,6 +66,8 @@ namespace SkiaSharpFormsDemos.Effects
                 // Display rectangle using that gradient and blend mode
                 canvas.DrawRect(rect, paint);
             }
+
+            canvas.DrawColor(SKColors.Pink, SKBlendMode.DstOver);
         }
     }
 }

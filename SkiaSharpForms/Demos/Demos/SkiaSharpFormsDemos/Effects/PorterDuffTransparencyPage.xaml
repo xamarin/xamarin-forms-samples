@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:skia="clr-namespace:SkiaSharp;assembly=SkiaSharp"
              xmlns:skiaviews="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
-             x:Class="SkiaSharpFormsDemos.Effects.PorterDuffBlendModesPage"
-             Title="Porter-Duff Blend Modes">
+             x:Class="SkiaSharpFormsDemos.Effects.PorterDuffTransparencyPage"
+             Title="Porter-Duff Transparency">
 
     <StackLayout>
         <skiaviews:SKCanvasView x:Name="canvasView"
