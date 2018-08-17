@@ -7,9 +7,9 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Effects
 {
-    public partial class PerlinNoisePage : ContentPage
+    public partial class ComposedPerlinNoisePage : ContentPage
     {
-        public PerlinNoisePage()
+        public ComposedPerlinNoisePage()
         {
             InitializeComponent();
         }
@@ -43,20 +43,22 @@ namespace SkiaSharpFormsDemos.Effects
 
             using (SKPaint paint = new SKPaint())
             {
-                paint.Shader = 
+                paint.Shader = SKShader.CreateCompose(
+                    SKShader.CreateColor(SKColors.Blue),
                     SKShader.CreatePerlinNoiseFractalNoise(baseFreqX,
                                                            baseFreqY,
                                                            numOctaves,
-                                                           0);
+                                                           0));
 
                 SKRect rect = new SKRect(0, 0, info.Width, info.Height / 2);
                 canvas.DrawRect(rect, paint);
 
-                paint.Shader = 
+                paint.Shader = SKShader.CreateCompose(
+                    SKShader.CreateColor(SKColors.Blue),
                     SKShader.CreatePerlinNoiseTurbulence(baseFreqX,
                                                          baseFreqY,
                                                          numOctaves,
-                                                         0);
+                                                         0));
 
                 rect = new SKRect(0, info.Height / 2, info.Width, info.Height);
                 canvas.DrawRect(rect, paint);

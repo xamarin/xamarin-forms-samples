@@ -122,10 +122,19 @@
             <TableSection Title="Noise and Composition">
 
                 <TextCell Text="Perlin Noise"
-                          Detail="TK"
+                          Detail="Display fractal and turbulence Perlin noise"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.PerlinNoisePage}" />
 
+                <TextCell Text="Tiled Perlin Noise"
+                          Detail="Display tiled Perlin noise"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.TiledPerlinNoisePage}" />
+
+                <TextCell Text="Composed Perlin Noise"
+                          Detail="Display Perlin noise with a blue background"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.ComposedPerlinNoisePage}" />
 
             </TableSection>
 
@@ -173,7 +182,7 @@
                           CommandParameter="{x:Type local:Effects.SeparableBlendModesPage}" />
 
                 <TextCell Text="Primary Colors"
-                          Detail="TK"
+                          Detail="Show additive and subtractive primary colors"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.PrimaryColorsPage}" />
 
