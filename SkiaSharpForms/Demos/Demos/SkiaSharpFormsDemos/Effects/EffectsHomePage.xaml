@@ -176,6 +176,21 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.GradientTransitionsPage}" />
 
+                <TextCell Text="Lighten and Darken"
+                          Detail="See the effects of two common separable blend modes"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.LightenAndDarkenPage}" />
+                
+                <TextCell Text="Dodge and Burn"
+                          Detail="See the effects of two other common separable blend modes"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.DodgeAndBurnPage}" />
+                
+                <TextCell Text="Interactive Dodge and Burn"
+                          Detail="Dodge and burn an image with your fingers"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.InteractiveDodgeAndBurnPage}" />
+
                 <TextCell Text="Separable Blend Modes"
                           Detail="TK"
                           Command="{Binding NavigateCommand}"

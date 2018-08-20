@@ -17,18 +17,19 @@
                 SelectedIndexChanged="OnPickerSelectedIndexChanged">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type skia:SKBlendMode}">
-                    <x:Static Member="skia:SKBlendMode.ColorBurn" />
-                    <x:Static Member="skia:SKBlendMode.ColorDodge" />
+                    <x:Static Member="skia:SKBlendMode.Plus" />
+                    <x:Static Member="skia:SKBlendMode.Modulate" />
+                    <x:Static Member="skia:SKBlendMode.Screen" />
+                    <x:Static Member="skia:SKBlendMode.Overlay" />
                     <x:Static Member="skia:SKBlendMode.Darken" />
+                    <x:Static Member="skia:SKBlendMode.Lighten" />
+                    <x:Static Member="skia:SKBlendMode.ColorDodge" />
+                    <x:Static Member="skia:SKBlendMode.ColorBurn" />
+                    <x:Static Member="skia:SKBlendMode.HardLight" />
+                    <x:Static Member="skia:SKBlendMode.SoftLight" />
                     <x:Static Member="skia:SKBlendMode.Difference" />
                     <x:Static Member="skia:SKBlendMode.Exclusion" />
-                    <x:Static Member="skia:SKBlendMode.HardLight" />
-                    <x:Static Member="skia:SKBlendMode.Lighten" />
-                    <x:Static Member="skia:SKBlendMode.Modulate" />
                     <x:Static Member="skia:SKBlendMode.Multiply" />
-                    <x:Static Member="skia:SKBlendMode.Overlay" />
-                    <x:Static Member="skia:SKBlendMode.Screen" />
-                    <x:Static Member="skia:SKBlendMode.SoftLight" />
                 </x:Array>
             </Picker.ItemsSource>
 
@@ -37,13 +38,32 @@
             </Picker.SelectedIndex>
         </Picker>
 
-        <Slider x:Name="grayShadeSlider"
+        <Slider x:Name="redSlider"
+                MinimumTrackColor="Red"
+                MaximumTrackColor="Red"
                 Margin="10, 0"
                 ValueChanged="OnSliderValueChanged" />
 
-        <Label Text="{Binding Source={x:Reference grayShadeSlider},
-                              Path=Value,
-                              StringFormat='Gray Shade = {0:F2}'}"
+        <Slider x:Name="greenSlider"
+                MinimumTrackColor="Green"
+                MaximumTrackColor="Green"
+                Margin="10, 0"
+                ValueChanged="OnSliderValueChanged" />
+
+        <Slider x:Name="blueSlider"
+                MinimumTrackColor="Blue"
+                MaximumTrackColor="Blue"
+                Margin="10, 0"
+                ValueChanged="OnSliderValueChanged" />
+
+        <Slider x:Name="graySlider"
+                MinimumTrackColor="Gray"
+                MaximumTrackColor="Gray"
+                Margin="10, 0"
+                ValueChanged="OnSliderValueChanged" />
+
+        <Label x:Name="colorLabel"
                HorizontalTextAlignment="Center" />
+
     </StackLayout>
 </ContentPage>

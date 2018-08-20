@@ -11,7 +11,7 @@ namespace SkiaSharpFormsDemos.Effects
     {
         SKBitmap bitmap = BitmapExtensions.LoadBitmapResource(
                             typeof(SeparableBlendModesPage),
-                            "SkiaSharpFormsDemos.Media.MountainClimbers.jpg");
+                            "SkiaSharpFormsDemos.Media.Banana.jpg"); //  MountainClimbers.jpg");
 
         public SeparableBlendModesPage()
         {
@@ -25,6 +25,16 @@ namespace SkiaSharpFormsDemos.Effects
 
         void OnSliderValueChanged(object sender, ValueChangedEventArgs e)
         {
+            if (sender == graySlider)
+            {
+                redSlider.Value = greenSlider.Value = blueSlider.Value = graySlider.Value;
+            }
+
+            colorLabel.Text = String.Format("Color = {0:X2} {1:X2} {2:X2}",
+                                            (byte)(255 * redSlider.Value),
+                                            (byte)(255 * greenSlider.Value),
+                                            (byte)(255 * blueSlider.Value));
+
             canvasView.InvalidateSurface();
         }
 
@@ -36,20 +46,29 @@ namespace SkiaSharpFormsDemos.Effects
 
             canvas.Clear();
 
-            canvas.DrawBitmap(bitmap, info.Rect, BitmapStretch.Uniform);
+            SKRect rect = new SKRect(0, 0, info.Width, info.Height / 2);
+            canvas.DrawBitmap(bitmap, rect, BitmapStretch.Uniform);
+
+            rect = new SKRect(0, info.Height / 2, info.Width, info.Height);
+           
+
+
+            canvas.DrawBitmap(bitmap, rect, BitmapStretch.Uniform);
 
             // Get values from XAML controls
             SKBlendMode blendMode =
                 (SKBlendMode)(blendModePicker.SelectedIndex == -1 ?
                                             0 : blendModePicker.SelectedItem);
 
-            float grayShade = (float)grayShadeSlider.Value;
+            SKColor color = new SKColor((byte)(255 * redSlider.Value),
+                                        (byte)(255 * greenSlider.Value),
+                                        (byte)(255 * blueSlider.Value));
 
             using (SKPaint paint = new SKPaint())
             {
-                paint.Color = SKColor.FromHsl(0, 0, 100 * grayShade);
+                paint.Color = color;
                 paint.BlendMode = blendMode;
-                canvas.DrawRect(info.Rect, paint);
+                canvas.DrawRect(rect, paint);
             }
         }
     }
