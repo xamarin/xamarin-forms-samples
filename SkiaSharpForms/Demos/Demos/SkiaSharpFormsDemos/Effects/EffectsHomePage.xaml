@@ -138,7 +138,6 @@
 
             </TableSection>
 
-
             <TableSection Title="Compositing and Blend Modes">
 
                 <TextCell Text="Code More Code"
@@ -201,8 +200,12 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.PrimaryColorsPage}" />
 
-            </TableSection>
+                <TextCell Text="Non-Separable Blend Modes"
+                          Detail="TK"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.NonSeparableBlendModesPage}" />
 
+            </TableSection>
 
             <TableSection Title="Filter Effects">
 
@@ -231,7 +234,6 @@
                 <!-- Color mapping???? -->
 
             </TableSection>
-
         </TableRoot>
     </TableView>
 </local:HomeBasePage>

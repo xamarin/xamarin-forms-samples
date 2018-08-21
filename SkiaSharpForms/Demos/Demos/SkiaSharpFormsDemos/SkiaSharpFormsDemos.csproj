@@ -13,6 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Media\BananaMatte.png" />
     <None Remove="Media\BrickWallTile.jpg" />
     <None Remove="Media\MonkeyFace.png" />
     <None Remove="Media\Newtons_cradle_animation_book_2.gif" />
@@ -88,6 +89,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Effects\InteractiveLinearGradientPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\NonSeparableBlendModesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Effects\PerlinNoisePage.xaml">
@@ -258,6 +262,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Media\BananaMatte.png" />
     <EmbeddedResource Include="Media\BrickWallTile.jpg" />
     <EmbeddedResource Include="Media\monkey.png" />
     <EmbeddedResource Include="Media\Banana.jpg" />

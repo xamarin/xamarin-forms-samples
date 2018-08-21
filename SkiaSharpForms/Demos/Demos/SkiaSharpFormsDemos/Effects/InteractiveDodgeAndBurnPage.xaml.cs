@@ -27,15 +27,6 @@ namespace SkiaSharpFormsDemos.Effects
 
         Dictionary<long, SKPoint> touchPoints = new Dictionary<long, SKPoint>();
 
-        SKPaint paint = new SKPaint
-        {
-            Style = SKPaintStyle.Stroke,
-            StrokeWidth = 10,
-            StrokeCap = SKStrokeCap.Round,
-            StrokeJoin = SKStrokeJoin.Round
-        };
-
-
         public InteractiveDodgeAndBurnPage ()
 		{
 			InitializeComponent ();
@@ -74,8 +65,6 @@ namespace SkiaSharpFormsDemos.Effects
             float y = (info.Height - bitmapRect.Height) / 2;
             bitmapRect.Offset(x, y);
 
-            System.Diagnostics.Debug.WriteLine("Bitmap Rect: {0}", bitmapRect);
-
             canvas.DrawBitmap(bitmap, bitmapRect);
 
             using (SKPaint paint = new SKPaint())
@@ -83,81 +72,134 @@ namespace SkiaSharpFormsDemos.Effects
                 paint.BlendMode = SKBlendMode.ColorDodge;
                 canvas.DrawBitmap(dodgeMaskBitmap, bitmapRect, paint);
 
-       //         paint.BlendMode = SKBlendMode.ColorBurn;
-        //        canvas.DrawBitmap(burnMaskBitmap, bitmapRect, paint);
+                paint.BlendMode = SKBlendMode.ColorBurn;
+                canvas.DrawBitmap(burnMaskBitmap, bitmapRect, paint);
             }
         }
 
         void OnTouchEffectAction(object sender, TouchActionEventArgs args)
         {
-            SKPoint point = ConvertToBitmapPixel(args.Location);
+            if (args.Type == TouchActionType.Pressed)
+            { 
+                SKPoint center = ConvertToBitmapPixel(args.Location);
+                const float radius = 100;
 
-            switch (args.Type)
-            {
-                case TouchActionType.Pressed:
-                    if (!touchPoints.ContainsKey(args.Id))
+                using (SKPaint paint = new SKPaint())
+                {
+                    if (!modeSwitch.IsToggled)
                     {
-                        touchPoints.Add(args.Id, point);
-                    }
-                    return;
+                        // Dodge: Add white to black bitmap
+                        using (SKCanvas canvas = new SKCanvas(dodgeMaskBitmap))
+                        {
+                            //     paint.Color = new SKColor(0xFF, 0xFF, 0xFF, 0x10);
 
-                    if (!inProgressPaths.ContainsKey(args.Id))
+                            paint.Shader = SKShader.CreateRadialGradient(
+                                                center,
+                                                radius,
+                                                new SKColor[] 
+                                                {
+                                                    new SKColor(0xFF, 0xFF, 0xFF, 0x10),
+                                                    new SKColor(0xFF, 0xFF, 0xFF, 0)
+                                                },
+                                                null,
+                                                SKShaderTileMode.Clamp);
+
+                            paint.BlendMode = SKBlendMode.Plus;
+                            canvas.DrawCircle(center, radius, paint);
+                        }
+                    }
+                    else
                     {
-                        SKPath path = new SKPath();
-                        path.MoveTo(ConvertToBitmapPixel(args.Location));
-                        inProgressPaths.Add(args.Id, path);
-                        UpdateBitmap();
+                        // Burn: Add black to white bitmap
+                        using (SKCanvas canvas = new SKCanvas(burnMaskBitmap))
+                        {
+                            paint.Shader = SKShader.CreateRadialGradient(
+                                                center,
+                                                radius,
+                                                new SKColor[]
+                                                {
+                                                    new SKColor(0, 0, 0, 0x10),
+                                                    new SKColor(0, 0, 0, 0)
+                                                },
+                                                null,
+                                                SKShaderTileMode.Clamp);
+
+                            canvas.DrawCircle(center, radius, paint);
+                        }
                     }
-                    break;
+                }
 
-                case TouchActionType.Moved:
-                    if (touchPoints.ContainsKey(args.Id))
-                    {
-                        DrawLine(touchPoints[args.Id], point);
-                        touchPoints[args.Id] = point;
-                    }
-                    return;
+                canvasView.InvalidateSurface();
 
 
-                    if (inProgressPaths.ContainsKey(args.Id))
-                    {
-                        SKPath path = inProgressPaths[args.Id];
-                        path.LineTo(ConvertToBitmapPixel(args.Location));
-                        UpdateBitmap();
-                    }
-                    break;
 
-                case TouchActionType.Released:
-                    if (touchPoints.ContainsKey(args.Id))
-                    {
-                        DrawLine(touchPoints[args.Id], point);
-                        touchPoints.Remove(args.Id);
-                    }
-                    return;
+                /*
+                            switch (args.Type)
+                            {
+                                case TouchActionType.Pressed:
+                                    if (!touchPoints.ContainsKey(args.Id))
+                                    {
+                             //           touchPoints.Add(args.Id, point);
+                                    }
+                                    return;
 
-
-                    if (inProgressPaths.ContainsKey(args.Id))
-                    {
-                        completedPaths.Add(inProgressPaths[args.Id]);
-                        inProgressPaths.Remove(args.Id);
-                        UpdateBitmap();
-                    }
-                    break;
-
-                case TouchActionType.Cancelled:
-                    if (touchPoints.ContainsKey(args.Id))
-                    {
-                        touchPoints.Remove(args.Id);
-                    }
-                    return;
+                                    if (!inProgressPaths.ContainsKey(args.Id))
+                                    {
+                                        SKPath path = new SKPath();
+                                        path.MoveTo(ConvertToBitmapPixel(args.Location));
+                                        inProgressPaths.Add(args.Id, path);
+                                        UpdateBitmap();
+                                    }
+                                    break;
+                                case TouchActionType.Moved:
+                                    if (touchPoints.ContainsKey(args.Id))
+                                    {
+                                        DrawLine(touchPoints[args.Id], point);
+                                        touchPoints[args.Id] = point;
+                                    }
+                                    return;
 
 
-                    if (inProgressPaths.ContainsKey(args.Id))
-                    {
-                        inProgressPaths.Remove(args.Id);
-                        UpdateBitmap();
-                    }
-                    break;
+                                    if (inProgressPaths.ContainsKey(args.Id))
+                                    {
+                                        SKPath path = inProgressPaths[args.Id];
+                                        path.LineTo(ConvertToBitmapPixel(args.Location));
+                                        UpdateBitmap();
+                                    }
+                                    break;
+
+                                case TouchActionType.Released:
+                                    if (touchPoints.ContainsKey(args.Id))
+                                    {
+                                        DrawLine(touchPoints[args.Id], point);
+                                        touchPoints.Remove(args.Id);
+                                    }
+                                    return;
+
+
+                                    if (inProgressPaths.ContainsKey(args.Id))
+                                    {
+                                        completedPaths.Add(inProgressPaths[args.Id]);
+                                        inProgressPaths.Remove(args.Id);
+                                        UpdateBitmap();
+                                    }
+                                    break;
+
+                                case TouchActionType.Cancelled:
+                                    if (touchPoints.ContainsKey(args.Id))
+                                    {
+                                        touchPoints.Remove(args.Id);
+                                    }
+                                    return;
+
+
+                                    if (inProgressPaths.ContainsKey(args.Id))
+                                    {
+                                        inProgressPaths.Remove(args.Id);
+                                        UpdateBitmap();
+                                    }
+                                    break;
+                */
             }
         }
 
@@ -177,7 +219,7 @@ namespace SkiaSharpFormsDemos.Effects
 
             return ptPixel - new SKPoint(bitmapRect.Left, bitmapRect.Top);
         }
-
+/*
         void DrawLine(SKPoint pt1, SKPoint pt2)
         {
             if (!modeSwitch.IsToggled)
@@ -200,7 +242,7 @@ namespace SkiaSharpFormsDemos.Effects
 
             canvasView.InvalidateSurface();
         }
-
+*/
         void UpdateBitmap()
         {
 
