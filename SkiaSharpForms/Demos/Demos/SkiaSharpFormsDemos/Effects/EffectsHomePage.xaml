@@ -185,13 +185,8 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.DodgeAndBurnPage}" />
                 
-                <TextCell Text="Interactive Dodge and Burn"
-                          Detail="Dodge and burn an image with your fingers"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Effects.InteractiveDodgeAndBurnPage}" />
-
                 <TextCell Text="Separable Blend Modes"
-                          Detail="TK"
+                          Detail="Experiment with the separable blend modes"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.SeparableBlendModesPage}" />
 
@@ -201,9 +196,14 @@
                           CommandParameter="{x:Type local:Effects.PrimaryColorsPage}" />
 
                 <TextCell Text="Non-Separable Blend Modes"
-                          Detail="TK"
+                          Detail="Experiment with the non-separable blend modes"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.NonSeparableBlendModesPage}" />
+
+                <TextCell Text="Blue Banana"
+                          Detail="Use a non-separable blend mode to alter colors"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.BlueBananaPage}" />
 
             </TableSection>
 

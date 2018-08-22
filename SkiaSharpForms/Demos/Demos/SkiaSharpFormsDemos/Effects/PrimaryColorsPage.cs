@@ -7,12 +7,12 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Effects
 {
-	public class PrimaryColorsPage : ContentPage
-	{
+    public class PrimaryColorsPage : ContentPage
+    {
         bool isSubtractive;
 
-		public PrimaryColorsPage ()
-		{
+	    public PrimaryColorsPage ()
+	    {
             Title = "Primary Colors";
 
             SKCanvasView canvasView = new SKCanvasView();
@@ -69,7 +69,7 @@ namespace SkiaSharpFormsDemos.Effects
                 }
                 else
                 {
-                    paint.BlendMode = SKBlendMode.Darken;
+                    paint.BlendMode = SKBlendMode.Multiply;
                     System.Diagnostics.Debug.WriteLine(paint.BlendMode);
 
                     paint.Color = SKColors.Cyan;

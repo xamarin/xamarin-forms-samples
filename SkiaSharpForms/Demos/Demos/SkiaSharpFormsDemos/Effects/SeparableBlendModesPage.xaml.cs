@@ -11,7 +11,7 @@ namespace SkiaSharpFormsDemos.Effects
     {
         SKBitmap bitmap = BitmapExtensions.LoadBitmapResource(
                             typeof(SeparableBlendModesPage),
-                            "SkiaSharpFormsDemos.Media.Banana.jpg"); //  MountainClimbers.jpg");
+                            "SkiaSharpFormsDemos.Media.Banana.jpg"); 
 
         public SeparableBlendModesPage()
         {
@@ -46,13 +46,12 @@ namespace SkiaSharpFormsDemos.Effects
 
             canvas.Clear();
 
+            // Draw bitmap in top half
             SKRect rect = new SKRect(0, 0, info.Width, info.Height / 2);
             canvas.DrawBitmap(bitmap, rect, BitmapStretch.Uniform);
 
+            // Draw bitmap in bottom halr
             rect = new SKRect(0, info.Height / 2, info.Width, info.Height);
-           
-
-
             canvas.DrawBitmap(bitmap, rect, BitmapStretch.Uniform);
 
             // Get values from XAML controls
@@ -64,6 +63,7 @@ namespace SkiaSharpFormsDemos.Effects
                                         (byte)(255 * greenSlider.Value),
                                         (byte)(255 * blueSlider.Value));
 
+            // Draw rectangle with blend mode in bottom half
             using (SKPaint paint = new SKPaint())
             {
                 paint.Color = color;

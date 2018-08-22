@@ -70,7 +70,7 @@
     <EmbeddedResource Update="Effects\DropShadowExperimentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Effects\InteractiveDodgeAndBurnPage.xaml">
+    <EmbeddedResource Update="Unfinished\InteractiveDodgeAndBurnPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Effects\LightenAndDarkenPage.xaml">
