@@ -34,31 +34,16 @@
                 Margin="10, 0"
                 ValueChanged="OnSliderValueChanged" />
 
-        <!--<Label Text="{Binding Source={x:Reference hueSlider},
-                              Path=Value,
-                              StringFormat='Hue = {0:F0}'}"
-               HorizontalTextAlignment="Center" />-->
-
         <Slider x:Name="satSlider"
                 Maximum="100"
                 Margin="10, 0"
                 ValueChanged="OnSliderValueChanged" />
-
-        <!--<Label Text="{Binding Source={x:Reference satSlider},
-                              Path=Value,
-                              StringFormat='Saturation = {0:F0}'}"
-               HorizontalTextAlignment="Center" />-->
 
         <Slider x:Name="lumSlider"
                 Maximum="100"
                 Margin="10, 0"
                 ValueChanged="OnSliderValueChanged" />
 
-        <!--<Label Text="{Binding Source={x:Reference lumSlider},
-                              Path=Value,
-                              StringFormat='Luminosity = {0:F0}'}"
-               HorizontalTextAlignment="Center" />-->
-        
         <StackLayout Orientation="Horizontal">
             <Label x:Name="hslLabel"
                    HorizontalOptions="CenterAndExpand" />

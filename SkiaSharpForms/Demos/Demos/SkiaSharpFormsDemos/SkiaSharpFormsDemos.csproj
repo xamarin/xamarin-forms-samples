@@ -46,7 +46,7 @@
     <EmbeddedResource Update="Bitmaps\SpinPaintPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Effects\BitmapDissolvePage.xaml">
+    <EmbeddedResource Update="Basics\BitmapDissolvePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Effects\BitmapTileFlipModesPage.xaml">
@@ -64,10 +64,13 @@
     <EmbeddedResource Update="Effects\BrickWallCompositingPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Effects\DistantLightExperimentPage.xaml">
+    <EmbeddedResource Update="Unfinished\DistantLightExperimentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Effects\DropShadowExperimentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\ImageMagnificationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Unfinished\InteractiveDodgeAndBurnPage.xaml">
@@ -301,7 +304,7 @@
     <Compile Update="Effects\GradientTransitionsPage.xaml.cs">
       <DependentUpon>GradientTransitionsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Effects\DistantLightExperimentPage.xaml.cs">
+    <Compile Update="Unfinished\DistantLightExperimentPage.xaml.cs">
       <DependentUpon>DistantLightExperimentPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Effects\MaskBlurExperimentPage.xaml.cs">

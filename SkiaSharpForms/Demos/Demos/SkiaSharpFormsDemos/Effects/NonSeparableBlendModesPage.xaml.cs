@@ -11,9 +11,7 @@ namespace SkiaSharpFormsDemos.Effects
     {
         SKBitmap bitmap = BitmapExtensions.LoadBitmapResource(
                             typeof(NonSeparableBlendModesPage),
-                          //  "SkiaSharpFormsDemos.Media.MountainClimbers.jpg");
-                             "SkiaSharpFormsDemos.Media.Banana.jpg");
-
+                            "SkiaSharpFormsDemos.Media.Banana.jpg");
         SKColor color;
 
         public NonSeparableBlendModesPage()
@@ -37,7 +35,7 @@ namespace SkiaSharpFormsDemos.Effects
             color.ToHsl(out float hue, out float sat, out float lum);
 
             hslLabel.Text = String.Format("HSL = {0:F0} {1:F0} {2:F0}",
-                                           hue, sat, lum);
+                                          hue, sat, lum);
 
             rgbLabel.Text = String.Format("RGB = {0:X2} {1:X2} {2:X2}",
                                           color.Red, color.Green, color.Blue);

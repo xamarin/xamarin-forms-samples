@@ -58,9 +58,9 @@ namespace SkiaSharpFormsDemos.Effects
             using (SKPaint paint = new SKPaint())
             {
                 paint.BlendMode = SKBlendMode.Color;
-                canvas.DrawBitmap(blueBananaBitmap, 
-                                  info.Rect, 
-                                  BitmapStretch.Uniform, 
+                canvas.DrawBitmap(blueBananaBitmap,
+                                  info.Rect,
+                                  BitmapStretch.Uniform,
                                   paint: paint);
             }
         }

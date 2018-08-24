@@ -3,7 +3,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                     xmlns:local="clr-namespace:SkiaSharpFormsDemos"
                     x:Class="SkiaSharpFormsDemos.Effects.EffectsHomePage"
-                    Title="Shaders and other Effects"
+                    Title="SkiaSharp Effects"
                     Padding="10">
     <TableView Intent="Menu">
         <TableRoot>
@@ -15,17 +15,17 @@
                           CommandParameter="{x:Type local:Effects.CornerToCornerGradientPage}" />
 
                 <TextCell Text="Interactive Linear Gradient"
-                          Detail="Experiment"
+                          Detail="Interactively experiment with linear gradient points and modes"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.InteractiveLinearGradientPage}" />
 
                 <TextCell Text="Gradient Text"
-                          Detail="TK"
+                          Detail="Displahy text with gradients based on different start and end points"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.GradientTextPage}" />
 
                 <TextCell Text="Reflection Gradient"
-                          Detail="TK"
+                          Detail="Use transforms and a gradient to show reflected text"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.ReflectionGradientPage}" />
 
@@ -40,7 +40,7 @@
                           CommandParameter="{x:Type local:Effects.RainbowGradientPage}" />
 
                 <TextCell Text="Infinity Colors"
-                          Detail="TK"
+                          Detail="Animate a rainbow gradient across an infinity sign"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.InfinityColorsPage}" />
 
@@ -49,12 +49,12 @@
             <TableSection Title="Cicular Gradients">
 
                 <TextCell Text="Radial Gradient"
-                          Detail="TK"
+                          Detail="Demonstrate the radial gradient tile modes"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.RadialGradientPage}" />
                 
                 <TextCell Text="Rainbow Arc Gradient"
-                          Detail="TK"
+                          Detail="Create an arc with a rainbow gradient"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.RainbowArcGradientPage}" />
 
@@ -64,7 +64,7 @@
                           CommandParameter="{x:Type local:Effects.RadialGradientMaskPage}" />
 
                 <TextCell Text="Sweep Gradient"
-                          Detail="TK"
+                          Detail="Demonstrate the sweep gradient"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.SweepGradientPage}" />
 
@@ -78,32 +78,32 @@
             <TableSection Title="Bitmap Tiling">
 
                 <TextCell Text="Bitmap Tile Flip Modes"
-                          Detail="TK"
+                          Detail="Demonstrate the bitmap tile modes"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.BitmapTileFlipModesPage}" />
 
                 <TextCell Text="Algorithmic Brick Wall"
-                          Detail="TK"
+                          Detail="Construct a brick wall from an algorithmically created bitmap"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.AlgorithmicBrickWallPage}" />
 
                 <TextCell Text="Chain-Link Fence"
-                          Detail="TK"
+                          Detail="Construct a chain-link fence from an algorithmically created bitmap"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.ChainLinkFencePage}" />
 
                 <TextCell Text="Photographic Brick Wall"
-                          Detail="TK"
+                          Detail="Construct a brick wall from a photograph of bricks"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.PhotographicBrickWallPage}" />
                 
                 <TextCell Text="Stone Wall"
-                          Detail="TK"
+                          Detail="Construct a stone wall from a photograph of stones"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.StoneWallPage}" />
 
                 <TextCell Text="Tile Alignment"
-                          Detail="TK"
+                          Detail="Demonstrate a technique to align bitmap tiles"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.TileAlignmentPage}" />
                 
@@ -113,7 +113,7 @@
                           CommandParameter="{x:Type local:Effects.CenteredTilesPage}" />
 
                 <TextCell Text="Animated Bitmap Tile"
-                          Detail="TK"
+                          Detail="Animate a bitmap tile and a whole bitmap tile pattern"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.AnimatedBitmapTilePage}" />
 
@@ -138,17 +138,7 @@
 
             </TableSection>
 
-            <TableSection Title="Compositing and Blend Modes">
-
-                <TextCell Text="Code More Code"
-                          Detail="Animate the alpha channel to fade between text strings"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Effects.CodeMoreCodePage}" />
-
-                <TextCell Text="Bitmap Dissolve"
-                          Detail="Use a transparency to dissolve between one bitmap and another"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Effects.BitmapDissolvePage}" />
+            <TableSection Title="Porter-Duff Blend Modes">
 
                 <TextCell Text="Porter-Duff Grid"
                           Detail="See all the Porter-Duff blend modes on one screen"
@@ -161,7 +151,7 @@
                           CommandParameter="{x:Type local:Effects.BrickWallCompositingPage}" />
 
                 <TextCell Text="Porter-Duff Transparency"
-                          Detail="TK"
+                          Detail="See the Porter-Duff modes with transparent areas"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.PorterDuffTransparencyPage}" />
 
@@ -174,6 +164,10 @@
                           Detail="Transition from one bitmap to another using blend modes"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.GradientTransitionsPage}" />
+                
+            </TableSection>
+
+            <TableSection Title="Separable Blend Modes">
 
                 <TextCell Text="Lighten and Darken"
                           Detail="See the effects of two common separable blend modes"
@@ -194,6 +188,10 @@
                           Detail="Show additive and subtractive primary colors"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.PrimaryColorsPage}" />
+                
+            </TableSection>
+
+            <TableSection Title="Non-Separable Blend Modes">
 
                 <TextCell Text="Non-Separable Blend Modes"
                           Detail="Experiment with the non-separable blend modes"
@@ -207,12 +205,21 @@
 
             </TableSection>
 
-            <TableSection Title="Filter Effects">
+            <TableSection Title="Mask Filters">
 
                 <TextCell Text="Mask Blur Experiment"
                           Detail="Use SKMaskFilter to blur edges of graphical objects"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.MaskBlurExperimentPage}" />
+
+                <TextCell Text="Blurry Reflection"
+                          Detail="Use a gradient and mask filter to blur reflected text"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.BlurryReflectionPage}" />
+
+            </TableSection>
+
+            <TableSection Title="Image Filters">
 
                 <TextCell Text="Image Blur Experiment"
                           Detail="Use SKImageFilter to blur vector graphical objects and bitmaps"
@@ -220,18 +227,21 @@
                           CommandParameter="{x:Type local:Effects.ImageBlurExperimentPage}" />
 
                 <TextCell Text="Drop Shadow Experiment"
-                          Detail="TK"
+                          Detail="Experiment with drop shadow parameters"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.DropShadowExperimentPage}" />
 
-                <TextCell Text="Distant Light Experiment"
-                          Detail="TK"
+                <TextCell Text="Image Magnification"
+                          Detail="Magnify a large image with touch"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Effects.DistantLightExperimentPage}" />
+                          CommandParameter="{x:Type local:Effects.ImageMagnificationPage}" />
 
-             
-                
-                <!-- Color mapping???? -->
+            </TableSection>
+
+            <TableSection Title="Color Filters">
+
+                <TextCell Text="Insert Cool SKColorFilter Demo Here"
+                          Detail="(magical thinking)" />
 
             </TableSection>
         </TableRoot>

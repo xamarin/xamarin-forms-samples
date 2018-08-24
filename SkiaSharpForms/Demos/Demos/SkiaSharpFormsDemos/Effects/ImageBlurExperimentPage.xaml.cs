@@ -56,7 +56,6 @@ namespace SkiaSharpFormsDemos.Effects
 
                 // Calculate rectangle for bitmap
                 SKRect bitmapRect = new SKRect(0, textRect.Bottom, info.Width, info.Height);
-
                 canvas.DrawBitmap(bitmap, bitmapRect, BitmapStretch.Uniform, paint: paint);
             }
         }

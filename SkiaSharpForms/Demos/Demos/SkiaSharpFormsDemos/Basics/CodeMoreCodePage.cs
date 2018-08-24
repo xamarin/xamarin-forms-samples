@@ -6,7 +6,7 @@ using Xamarin.Forms;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 
-namespace SkiaSharpFormsDemos.Effects
+namespace SkiaSharpFormsDemos.Basics
 {
     public class CodeMoreCodePage : ContentPage
     {
