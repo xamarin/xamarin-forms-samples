@@ -20,6 +20,7 @@
                            PaintSurface="OnCanvasViewPaintSurface" />
 
         <Slider x:Name="dxSlider"
+                Minimum="-20"
                 Maximum="20"
                 ValueChanged="OnSliderValueChanged" />
 
@@ -28,6 +29,7 @@
                               StringFormat='Horizontal offset = {0:F1}'}" />
 
         <Slider x:Name="dySlider"
+                Minimum="-20"
                 Maximum="20"
                 ValueChanged="OnSliderValueChanged" />
 

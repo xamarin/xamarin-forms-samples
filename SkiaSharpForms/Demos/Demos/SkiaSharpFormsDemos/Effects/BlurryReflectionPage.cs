@@ -63,7 +63,7 @@ namespace SkiaSharpFormsDemos.Effects
                                     SKShaderTileMode.Clamp);
 
                 // Create a blur mask filter
-                paint.MaskFilter = SKMaskFilter.CreateBlur(SKBlurStyle.Normal, 3);
+                paint.MaskFilter = SKMaskFilter.CreateBlur(SKBlurStyle.Normal, paint.TextSize / 36);
 
                 // Scale the canvas to flip upside-down around the vertical center
                 canvas.Scale(1, -1, 0, yText);

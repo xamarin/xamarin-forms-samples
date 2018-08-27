@@ -12,7 +12,7 @@
                                 PaintSurface="OnCanvasViewPaintSurface" />
 
         <Picker x:Name="blurStylePicker" 
-                Title="Filter Blue Style" 
+                Title="Filter Blur Style" 
                 Margin="10, 0"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged">
             <Picker.ItemsSource>

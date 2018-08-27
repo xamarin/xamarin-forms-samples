@@ -230,12 +230,7 @@
                           Detail="Experiment with drop shadow parameters"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.DropShadowExperimentPage}" />
-
-                <TextCell Text="Image Magnification"
-                          Detail="Magnify a large image with touch"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:Effects.ImageMagnificationPage}" />
-
+                
             </TableSection>
 
             <TableSection Title="Color Filters">

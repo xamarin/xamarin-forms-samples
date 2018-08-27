@@ -34,7 +34,7 @@
                           CommandParameter="{x:Type local:Bitmaps.BitmapsHomePage}" />
 
                 <TextCell Text="SkiaSharp Effects"
-                          Detail="Use gradients, bitmap tiling, blur, and shadow"
+                          Detail="Use gradients, bitmap tiling, blur, and drop-shadow"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.EffectsHomePage}" />
 

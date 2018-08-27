@@ -40,13 +40,13 @@ namespace SkiaSharpFormsDemos.Effects
             using (SKPaint paint = new SKPaint())
             {
                 // Set SKPaint properties
-                paint.TextSize = Math.Min(info.Width, info.Height) / (TEXT.Length / 2);
-                paint.ImageFilter = SKImageFilter.CreateBlur(sigmaX, sigmaY);
+                paint.TextSize = (info.Width - 100) / (TEXT.Length / 2);
+                paint.ImageFilter = SKImageFilter.CreateDilate((int)(sigmaX), (int)(sigmaY)); // .CreateBlur(sigmaX, sigmaY);
 
                 // Get text bounds and calculate display rectangle
                 SKRect textBounds = new SKRect();
                 paint.MeasureText(TEXT, ref textBounds);
-                SKRect textRect = new SKRect(0, 0, info.Width, textBounds.Height);
+                SKRect textRect = new SKRect(0, 0, info.Width, textBounds.Height + 50);
 
                 // Center the text in the display rectangle
                 float xText = textRect.Width / 2 - textBounds.MidX;
@@ -56,6 +56,8 @@ namespace SkiaSharpFormsDemos.Effects
 
                 // Calculate rectangle for bitmap
                 SKRect bitmapRect = new SKRect(0, textRect.Bottom, info.Width, info.Height);
+                bitmapRect.Inflate(-50, -50);
+
                 canvas.DrawBitmap(bitmap, bitmapRect, BitmapStretch.Uniform, paint: paint);
             }
         }
