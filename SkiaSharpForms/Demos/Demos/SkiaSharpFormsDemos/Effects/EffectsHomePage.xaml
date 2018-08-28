@@ -235,8 +235,20 @@
 
             <TableSection Title="Color Filters">
 
-                <TextCell Text="Insert Cool SKColorFilter Demo Here"
-                          Detail="(magical thinking)" />
+                <TextCell Text="Gray Scale Matrix"
+                          Detail="Use a color transform to convert colors to gray scales"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.GrayScaleMatrixPage}" />
+
+                <TextCell Text="Pastel Matrix"
+                          Detail="Use a color transform to mute color intensity"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.PastelMatrixPage}" />
+
+                <TextCell Text="Posterize Table"
+                          Detail="Use a color table to posterize an image"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.PosterizeTablePage}" />
 
             </TableSection>
         </TableRoot>
