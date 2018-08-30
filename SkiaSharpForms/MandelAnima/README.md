@@ -1,15 +1,13 @@
 Mandelbrot Animation
 ====================
 
-This program demonstrates bitmap animation using SkiaSharp. Running the program requires some patience because it first needs to create up to 50 bitmaps of various zoom levels of the famous Mandelbrot Set. After it's done, however, the program animates those bitmaps to simulate a continuous zoom.
-
-![Mandelbrot Animation](Screenshots/MandelbrotAnimation.png "Mandelbrot Animation")
+This program demonstrates bitmap animation using SkiaSharp. Running the program requires some patience because it first needs to create up to 50 bitmaps of various zoom levels of the famous Mandelbrot Set. After that's finished, however, the program animates those bitmaps to simulate a continuous zoom.
 
 As the program is creating the 50 bitmaps, it stores them in application local storage as PNG files. This allows the program to access those PNG files the next time that you run the program, so you don't have to wait for them to be created. However, these 50 bitmaps occupy over 20 megabytes of storage on your device.
 
 For background on the Mandelbrot Set and the algorithms used in this program see Chapter 20 of [_Creating Mobile Apps with Xamarin Forms_](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) starting on page 666.
 
-The **MainPage.xaml.cs** file begins with several constants that you can change:
+This program is described in the article [**Animating SkiaSharp bitmaps: Bitmap animation](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/animating#bitmap-animation). The **MainPage.xaml.cs** file begins with several constants that you can change:
 
 - The `COUNT` constant indicates the number of bitmaps in the animation. It is initially set to 10, but you can set it to any value up to 50. Setting it to values beyond 50 adds very little, however, because at that zoom level the algorithm runs into problems caused by the resolution of double-precision floating point numbers, as discussed on page 684 of the book.
 
