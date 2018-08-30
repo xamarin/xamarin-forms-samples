@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatClock.Android", "CatClock\CatClock.Android\CatClock.Android.csproj", "{25FB2468-D22A-41B0-BF2E-D987186127C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatClock", "CatClock\CatClock\CatClock.csproj", "{205E265F-281A-4ED3-BFC0-DF4D028E7324}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatClock", "CatClock\CatClock\CatClock.csproj", "{205E265F-281A-4ED3-BFC0-DF4D028E7324}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatClock.UWP", "CatClock\CatClock.UWP\CatClock.UWP.csproj", "{4F595B73-151B-473A-8690-612FD38CEE4D}"
 EndProject
@@ -243,6 +243,7 @@ Global
 		{EF499383-161C-4153-BD82-807CAFD0760E}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{EF499383-161C-4153-BD82-807CAFD0760E}.Debug|x64.ActiveCfg = Debug|iPhone
 		{EF499383-161C-4153-BD82-807CAFD0760E}.Debug|x86.ActiveCfg = Debug|iPhone
+		{EF499383-161C-4153-BD82-807CAFD0760E}.Debug|x86.Build.0 = Debug|iPhone
 		{EF499383-161C-4153-BD82-807CAFD0760E}.Release|Any CPU.ActiveCfg = Release|iPhone
 		{EF499383-161C-4153-BD82-807CAFD0760E}.Release|ARM.ActiveCfg = Release|iPhone
 		{EF499383-161C-4153-BD82-807CAFD0760E}.Release|iPhone.ActiveCfg = Release|iPhone
@@ -254,5 +255,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95512F3D-FF14-4B81-8B4B-996BCEC1022B}
 	EndGlobalSection
 EndGlobal

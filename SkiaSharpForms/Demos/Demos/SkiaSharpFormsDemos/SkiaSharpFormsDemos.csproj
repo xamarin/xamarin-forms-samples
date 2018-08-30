@@ -13,8 +13,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Media\BananaMatte.png" />
+    <None Remove="Media\BrickWallTile.jpg" />
     <None Remove="Media\MonkeyFace.png" />
     <None Remove="Media\Newtons_cradle_animation_book_2.gif" />
+    <None Remove="Media\SeatedMonkeyMatte.png" />
+    <None Remove="Media\StoneWallTile.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,7 +46,58 @@
     <EmbeddedResource Update="Bitmaps\SpinPaintPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Unfinished\NinePatchButtonsPage.xaml">
+    <EmbeddedResource Update="Basics\BitmapDissolvePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\BitmapTileFlipModesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\ComposedPerlinNoisePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\DodgeAndBurnPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\GradientTransitionsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\BrickWallCompositingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\DropShadowExperimentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\LightenAndDarkenPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\MaskBlurExperimentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\ConicalGradientPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\EffectsHomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\ImageBlurExperimentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\InteractiveLinearGradientPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\NonSeparableBlendModesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\PerlinNoisePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\RadialGradientPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\SeparableBlendModesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Effects\TiledPerlinNoisePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Bitmaps\PhotoCroppingPage.xaml">
@@ -192,12 +247,14 @@
     <EmbeddedResource Update="Transforms\SingleFingerCornerScalePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Unfinished\PorterDuffBlendModesPage.xaml">
+    <EmbeddedResource Update="Effects\PorterDuffTransparencyPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Media\BananaMatte.png" />
+    <EmbeddedResource Include="Media\BrickWallTile.jpg" />
     <EmbeddedResource Include="Media\monkey.png" />
     <EmbeddedResource Include="Media\Banana.jpg" />
     <EmbeddedResource Include="Media\FacePalm.jpg" />
@@ -206,6 +263,8 @@
     <EmbeddedResource Include="Media\Newtons_cradle_animation_book_2.gif" />
     <EmbeddedResource Include="Media\SeatedMonkey.jpg" />
     <EmbeddedResource Include="Media\PageOfCode.png" />
+    <EmbeddedResource Include="Media\SeatedMonkeyMatte.png" />
+    <EmbeddedResource Include="Media\StoneWallTile.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -229,6 +288,21 @@
     </Compile>
     <Compile Update="Bitmaps\SaveFileFormatsPage.xaml.cs">
       <DependentUpon>SaveFileFormatsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Effects\GradientTransitionsPage.xaml.cs">
+      <DependentUpon>GradientTransitionsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Effects\MaskBlurExperimentPage.xaml.cs">
+      <DependentUpon>MaskBlurExperimentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Effects\EffectsHomePage.xaml.cs">
+      <DependentUpon>EffectsHomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Effects\PorterDuffTransparencyPage.xaml.cs">
+      <DependentUpon>PorterDuffTransparencyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Effects\SeparableBlendModesPage.xaml.cs">
+      <DependentUpon>SeparableBlendModesPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 

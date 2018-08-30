@@ -128,6 +128,11 @@
                           Detail="Interactively adjust hue, saturation, and luminosity"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Bitmaps.ColorAdjustmentPage}" />
+
+                <TextCell Text="Posterize"
+                          Detail="Reduce the color depths of an image"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.PosterizePage}" />
             </TableSection>
             
             <TableSection Title="Animating Bitmaps">

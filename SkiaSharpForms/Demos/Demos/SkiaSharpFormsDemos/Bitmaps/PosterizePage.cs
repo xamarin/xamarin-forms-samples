@@ -7,14 +7,25 @@ using SkiaSharp.Views.Forms;
 
 namespace SkiaSharpFormsDemos.Bitmaps
 {
-    public class FillRectanglePage : ContentPage
+    public class PosterizePage : ContentPage
     {
         SKBitmap bitmap =
             BitmapExtensions.LoadBitmapResource(typeof(FillRectanglePage),
                                                 "SkiaSharpFormsDemos.Media.Banana.jpg");
-        public FillRectanglePage ()
+        public PosterizePage()
         {
-            Title = "Fill Rectangle";
+            Title = "Posterize";
+
+            unsafe
+            {
+                uint* ptr = (uint*)bitmap.GetPixels().ToPointer();
+                int pixelCount = bitmap.Width * bitmap.Height;
+
+                for (int i = 0; i < pixelCount; i++)
+                {
+                    *ptr++ &= 0xE0E0E0FF; 
+                }
+            }
 
             SKCanvasView canvasView = new SKCanvasView();
             canvasView.PaintSurface += OnCanvasViewPaintSurface;
@@ -28,8 +39,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
             SKCanvas canvas = surface.Canvas;
 
             canvas.Clear();
-
-            canvas.DrawBitmap(bitmap, info.Rect);
+            canvas.DrawBitmap(bitmap, info.Rect, BitmapStretch.Uniform);
         }
     }
 }
