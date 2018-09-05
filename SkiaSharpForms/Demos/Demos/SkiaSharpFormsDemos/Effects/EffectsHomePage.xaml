@@ -63,6 +63,11 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.RadialGradientMaskPage}" />
 
+                <TextCell Text="Radial Specular Highlight"
+                          Detail="Draw a ball with a specular highlight"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.RadialSpecularHighlightPage}" />
+
                 <TextCell Text="Sweep Gradient"
                           Detail="Demonstrate the sweep gradient"
                           Command="{Binding NavigateCommand}"
@@ -72,6 +77,11 @@
                           Detail="Experiment with the Two-Point Conical Gradient"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.ConicalGradientPage}" />
+
+                <TextCell Text="Conical Specular Highlight"
+                          Detail="Draw a ball with a specular highlight"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.ConicalSpecularHighlightPage}" />
 
             </TableSection>
 
@@ -230,7 +240,12 @@
                           Detail="Experiment with drop shadow parameters"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Effects.DropShadowExperimentPage}" />
-                
+
+                <TextCell Text="Distant Light Experiment"
+                          Detail="Create 3D light to engrave or emboss text"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.DistantLightExperimentPage}" />
+
             </TableSection>
 
             <TableSection Title="Color Filters">
