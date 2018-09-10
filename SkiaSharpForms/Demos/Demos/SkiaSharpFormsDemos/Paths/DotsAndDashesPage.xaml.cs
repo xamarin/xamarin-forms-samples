@@ -35,9 +35,7 @@ namespace SkiaSharpFormsDemos.Paths
                 Style = SKPaintStyle.Stroke,
                 Color = SKColors.Blue,
                 StrokeWidth = 10,
-                StrokeCap = (SKStrokeCap)Enum.Parse(typeof(SKStrokeCap), 
-                                strokeCapPicker.Items[strokeCapPicker.SelectedIndex]),
-
+                StrokeCap = (SKStrokeCap)strokeCapPicker.SelectedItem,
                 PathEffect = SKPathEffect.CreateDash(GetPickerArray(dashArrayPicker), 20)
             };
 
@@ -50,16 +48,6 @@ namespace SkiaSharpFormsDemos.Paths
             canvas.DrawPath(path, paint); 
         }
 
-        T GetPickerItem<T>(Picker picker)
-        {
-            if (picker.SelectedIndex == -1)
-            {
-                return default(T);
-            }
-
-            return (T)Enum.Parse(typeof(T), picker.Items[picker.SelectedIndex]);
-        }
-
         float[] GetPickerArray(Picker picker)
         {
             if (picker.SelectedIndex == -1)
@@ -67,8 +55,8 @@ namespace SkiaSharpFormsDemos.Paths
                 return new float[0];
             }
 
-            string[] strs = picker.Items[picker.SelectedIndex].Split(new char[] { ' ', ',' }, 
-                                                                     StringSplitOptions.RemoveEmptyEntries);
+            string str = (string)picker.SelectedItem;
+            string[] strs = str.Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
             float[] array = new float[strs.Length];
 
             for (int i = 0; i < strs.Length; i++)

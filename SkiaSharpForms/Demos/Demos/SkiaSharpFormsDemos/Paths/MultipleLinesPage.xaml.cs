@@ -49,21 +49,12 @@ namespace SkiaSharpFormsDemos.Paths
                 Style = SKPaintStyle.Stroke,
                 Color = SKColors.DarkOrchid,
                 StrokeWidth = 50,
-                StrokeCap = GetPickerItem<SKStrokeCap>(strokeCapPicker)
+                StrokeCap = (SKStrokeCap)strokeCapPicker.SelectedItem
             };
 
             // Render the points by calling DrawPoints
-            SKPointMode pointMode = GetPickerItem<SKPointMode>(pointModePicker);
+            SKPointMode pointMode = (SKPointMode)pointModePicker.SelectedItem;
             canvas.DrawPoints(pointMode, points, paint);
-        }
-
-        T GetPickerItem<T>(Picker picker)
-        {
-            if (picker.SelectedIndex == -1)
-            {
-                return default(T);
-            }
-            return (T)Enum.Parse(typeof(T), picker.Items[picker.SelectedIndex]);
         }
     }
 }

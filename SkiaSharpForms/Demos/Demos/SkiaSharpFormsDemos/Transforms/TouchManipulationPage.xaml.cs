@@ -38,9 +38,7 @@ namespace SkiaSharpFormsDemos.Transforms
             if (bitmap != null)
             {
                 Picker picker = (Picker)sender;
-                TouchManipulationMode mode;
-                Enum.TryParse(picker.Items[picker.SelectedIndex], out mode);
-                bitmap.TouchManager.Mode = mode;
+                bitmap.TouchManager.Mode = (TouchManipulationMode)picker.SelectedItem;
             }
         }
 
