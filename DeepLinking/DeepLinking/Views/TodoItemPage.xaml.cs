@@ -11,13 +11,24 @@ namespace DeepLinking
 
 		public TodoItemPage() : this(false)
 		{
-		}
+            //forms Xamarin previewer display
+            InitializeComponent();
+            if (DesignMode.IsDesignModeEnabled)
+            {
+                BindingContext = new TodoItem() {Name="name",ID="1",Done=false,Notes="test" };
+            }
+        }
 
 		public TodoItemPage(bool isNew = false)
 		{
-			InitializeComponent();
+            //forms Xamarin previewer display
+            InitializeComponent();
 			isNewItem = isNew;
-		}
+            if (DesignMode.IsDesignModeEnabled)
+            {
+                BindingContext = new TodoItem() { Name = "name", ID = "1", Done = false, Notes = "test" };
+            }
+        }
 
 		protected override void OnAppearing()
 		{
@@ -75,7 +86,7 @@ namespace DeepLinking
 			{
 				Title = item.Name,
 				Description = item.Notes,
-				AppLinkUri = new Uri(string.Format("http://{0}/{1}?id={2}", App.AppName, pageType, WebUtility.UrlEncode(item.ID)), UriKind.RelativeOrAbsolute),
+				AppLinkUri = new Uri(string.Format("http://{0}/{1}?id={2}", App.AppName.ToLower(), pageType, WebUtility.UrlEncode(item.ID)), UriKind.RelativeOrAbsolute),
 				IsLinkActive = true,
 				Thumbnail = ImageSource.FromFile("monkey.png")
 			};

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using SQLite;
 using Xamarin.Forms;
@@ -13,7 +14,17 @@ namespace DeepLinking
 		public TodoItemDatabase ()
 		{
 			database = DependencyService.Get<ISQLite> ().GetConnection ();
-			database.CreateTable<TodoItem> ();
+            try
+            {
+                //added CreateFlags.None to avoid exception
+                database.CreateTable<TodoItem>(CreateFlags.None);
+            }
+            catch (System.Exception exception)
+            {
+
+                Debug.WriteLine("Ex1234: "  + exception.Message);
+            }
+			
 		}
 
 		public IEnumerable<TodoItem> GetItems ()

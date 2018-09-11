@@ -14,10 +14,10 @@ namespace DeepLinking
 		public App()
 		{
 			Database = new TodoItemDatabase();
-			MainPage = new NavigationPage(new TodoListPage());
-		}
+            MainPage = new NavigationPage(new TodoListPage());
+        }
 
-		protected override void OnStart()
+        protected override void OnStart()
 		{
 			// Handle when your app starts
 		}
