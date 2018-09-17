@@ -6,6 +6,10 @@
     <RootNamespace>TodoLocalized</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="ViewsXaml\TodoItemXaml.xaml.cs" />
     <Compile Remove="Views\TodoItemPage_bad.cs" />

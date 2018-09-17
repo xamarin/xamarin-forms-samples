@@ -4,6 +4,10 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.583944" />
   </ItemGroup>
@@ -11,6 +15,7 @@
   <ItemGroup>
     <EmbeddedResource Include="index.html" />
   </ItemGroup>
+
   <ItemGroup>
     <EmbeddedResource Update="XAML Implementation\InAppBrowserXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -26,4 +31,5 @@
   <ItemGroup>
     <None Remove="index.html" />
   </ItemGroup>
+
 </Project>
