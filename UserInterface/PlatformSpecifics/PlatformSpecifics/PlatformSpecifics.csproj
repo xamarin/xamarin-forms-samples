@@ -4,6 +4,10 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Faker.Net.Portable" Version="2.5.0" />
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.583944" />
@@ -116,4 +120,5 @@
       <DependentUpon>WindowsVisualElementAccessKeysPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
+
 </Project>
