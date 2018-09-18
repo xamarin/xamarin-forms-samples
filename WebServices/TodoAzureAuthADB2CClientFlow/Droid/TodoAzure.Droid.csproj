@@ -66,11 +66,8 @@
     <Reference Include="Mono.Android" />
     <Reference Include="System.Net.Http" />
     <Reference Include="Java.Interop" />
-    <Reference Include="System.Collections" />
     <Reference Include="System.IdentityModel" />
-    <Reference Include="System.Runtime" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
