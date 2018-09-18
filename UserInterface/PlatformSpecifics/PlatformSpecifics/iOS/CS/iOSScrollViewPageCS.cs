@@ -19,7 +19,7 @@ namespace PlatformSpecifics
             scrollView.Content = new StackLayout
             {
                 Margin = new Thickness(0, 20),
-                Children = { new Slider(), button, returnButton }
+                Children = { new Xamarin.Forms.Slider(), button, returnButton }
             };
             scrollView.On<iOS>().SetShouldDelayContentTouches(false);
 
