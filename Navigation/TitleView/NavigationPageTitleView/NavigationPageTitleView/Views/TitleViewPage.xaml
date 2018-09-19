@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="NavigationPageTitleView.TitleViewPage"
+             Title="Page Title">
+<!--    <NavigationPage.TitleView>            
+        <Slider HeightRequest="44" WidthRequest="300" />
+    </NavigationPage.TitleView>-->
+    
+    <StackLayout Margin="20">
+        <Label Text="The button below will cycle through a series of size appropriate views that are suitable for setting as the TitleView on the NavigationPage." />
+        <Button Text="Cycle TitleView" Clicked="OnButtonClicked" />
+    </StackLayout>
+</ContentPage>

@@ -17,6 +17,7 @@
                 </Editor.Keyboard>
             </Editor>
 			<Editor IsEnabled="false" Text="This is a disabled editor" />
+            <Editor Placeholder="This is placeholder text" PlaceholderColor="Olive" />
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

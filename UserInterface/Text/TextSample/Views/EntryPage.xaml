@@ -23,6 +23,7 @@
                 </Entry>
 				<Entry IsEnabled="false" Text="This is a disabled entry" />
 				<Entry Text="This is an entry with a return type specified" ReturnType="Send" />
+                <Entry Text="Cursor position and selection length set" CursorPosition="5" SelectionLength="10" />
 			</StackLayout>
 		</ScrollView>
 	</StackLayout>

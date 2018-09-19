@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SwipeGesture" 
+             x:Class="SwipeGesture.SwipeContainerPage">
+    <StackLayout Margin="20">
+        <Label Text="Swipe inside the box with a single finger." />
+        <local:SwipeContainer Swipe="OnSwiped" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+            <BoxView Color="Teal" WidthRequest="300" HeightRequest="300" /> 
+        </local:SwipeContainer>
+        <Label x:Name="_label" Text="You swiped: "/>
+    </StackLayout>
+</ContentPage>

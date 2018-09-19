@@ -2,7 +2,7 @@
 
 namespace PlatformSpecifics
 {
-    public partial class iOSNavigationPage : Xamarin.Forms.NavigationPage
+    public partial class iOSNavigationPage : NavigationPage
     {
         public iOSNavigationPage(Page page)
         {

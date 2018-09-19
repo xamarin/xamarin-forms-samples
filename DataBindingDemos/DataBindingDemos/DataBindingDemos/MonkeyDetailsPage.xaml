@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DataBindingDemos.MonkeyDetailsPage"
+             Title="Monkey Details">
+    <ScrollView>
+        <StackLayout Margin="20">
+            <Label Text="{Binding Name}" 
+                   HorizontalOptions="Center" 
+                   Style="{DynamicResource TitleStyle}" />
+            <Label Text="{Binding Location, TargetNullValue={StaticResource locationUnknown}}" 
+                   FontAttributes="Italic" 
+                   HorizontalOptions="Center" />
+            <Label Text="{Binding Population, FallbackValue={StaticResource populationUnknown}}" 
+                   TextColor="Red" 
+                   HorizontalOptions="Center" />            
+            <Image Source="{Binding ImageUrl, TargetNullValue={StaticResource fallbackImageUrl}}" 
+                   HeightRequest="200" 
+                   WidthRequest="200" 
+                   HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Details}" 
+                   Style="{DynamicResource BodyStyle}" />
+            <Label TextColor="Red" 
+                   HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Mischievous monkey: "/>
+                        <Span Text="{Binding IsMischievous, TargetNullValue={StaticResource unknown}}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

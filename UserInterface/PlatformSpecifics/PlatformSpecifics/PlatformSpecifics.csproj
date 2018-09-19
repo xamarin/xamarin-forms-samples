@@ -120,5 +120,4 @@
       <DependentUpon>WindowsVisualElementAccessKeysPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
-
 </Project>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SwipeGesture" 
+             x:Class="SwipeGesture.MainPage"
+             Title="Swipe Gesture Recognizers">
+    <StackLayout Margin="20">
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Button">
+                    <Setter Property="HorizontalOptions" Value="Center" />
+                    <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                </Style>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+        <Button Text="Swipe Page (XAML)"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:SwipePage}"/>
+        <Button Text="Swipe Page (C#)"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:SwipePageCS}"/>
+        <Button Text="Swipe Page with Command (XAML)"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:SwipeCommandPage}"/>
+        <Button Text="Swipe Page with Command (C#)"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:SwipeCommandPageCS}"/>
+        <Button Text="Swipe Container Page (XAML)"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:SwipeContainerPage}"/>
+        <Button Text="Swipe Container Page (C#)"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:SwipeContainerPageCS}"/>       
+    </StackLayout>
+</ContentPage>

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace BasicBoxView
 {
@@ -12,6 +7,17 @@ namespace BasicBoxView
         public MainPage()
         {
             InitializeComponent();
+
+            //var boxView = new BoxView
+            //{
+            //    Color = Color.CornflowerBlue,
+            //    CornerRadius = 10,
+            //    WidthRequest = 160,
+            //    HeightRequest = 160,
+            //    HorizontalOptions = LayoutOptions.Center,
+            //    VerticalOptions = LayoutOptions.Center
+            //};
+            //Content = boxView;
         }
     }
 }
