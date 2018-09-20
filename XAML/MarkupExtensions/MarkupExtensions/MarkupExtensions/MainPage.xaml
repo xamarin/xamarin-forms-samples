@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MarkupExtensions"
@@ -32,6 +32,16 @@
                           Detail="Set a property equal to null"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:NullDemoPage}" />
+
+                <TextCell Text="OnPlatform Demo"
+                          Detail="Specifying values per platform"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:OnPlatformDemoPage}" />
+
+                <TextCell Text="OnIdiom Demo"
+                          Detail="Specifying values per idiom"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:OnIdiomDemoPage}" />
 
                 <TextCell Text="HSL Color Demo"
                           Detail="Specify a Color with HSL components"

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MarkupExtensions"
+             x:Class="MarkupExtensions.OnIdiomDemoPage"
+             Title="OnIdiom Demo">
+    <StackLayout Margin="20">
+        <BoxView x:Name="_boxView"
+                 Color="{OnIdiom Phone=Red, Tablet=Green, Desktop=Blue}"
+                 WidthRequest="{OnIdiom Phone=200, Tablet=300, Desktop=400}"
+                 HeightRequest="{OnIdiom Phone=200, Tablet=300, Desktop=400}"
+                 HorizontalOptions="Center" />
+        <Label BindingContext="{x:Reference _boxView}" HorizontalTextAlignment="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{Binding WidthRequest}" />
+                    <Span Text=" x " />
+                    <Span Text="{Binding HeightRequest}" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label HorizontalTextAlignment="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Idiom: " />
+                    <Span Text="{x:Static local:AppConstants.Idiom}" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentPage>

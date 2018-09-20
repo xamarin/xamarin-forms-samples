@@ -2,21 +2,19 @@
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-
 namespace DataBindingDemos
 {
     public partial class App : Application
     {
+        public SampleSettingsViewModel Settings { get; private set; }
+
         public App()
         {
             InitializeComponent();
 
             Settings = new SampleSettingsViewModel(Current.Properties);
-
             MainPage = new NavigationPage(new MainPage());
         }
-
-        public SampleSettingsViewModel Settings { private set; get; }
 
         protected override void OnStart()
         {

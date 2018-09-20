@@ -27,10 +27,18 @@ namespace PlatformSpecifics
 			if (info != null)
 			{
 				Page page = (Page)Activator.CreateInstance(pageType, new Command(RestoreOriginal));
-				if (page is iOSLargeTitlePage || page is iOSTranslucentNavigationBarPage)
+                if (page is iOSLargeTitlePage || page is iOSTranslucentNavigationBarPage)
 				{
 					page = new iOSNavigationPage(page);
 				}
+                else if (page is iOSTitleViewPage)
+                {
+                    page = new iOSTitleViewNavigationPage(page);
+                }
+                else if (page is AndroidTitleViewPage)
+                {
+                    page = new AndroidNavigationPage(page);
+                }
 				SetRoot(page);
 			}
 			else
