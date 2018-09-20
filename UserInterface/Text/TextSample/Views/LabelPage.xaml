@@ -8,17 +8,30 @@
         <Label Text="This is a default, non-customized label." />
         <Label FontSize="30" Text="This label has a font size of 30." />
         <Label FontAttributes="Bold" Text="This is bold text." />
-        <Label Text="This label has its line height set." LineHeight="2.5" />
-        <Label LineBreakMode="WordWrap">
+        <Entry Placeholder="Enter line height" TextChanged="OnLineHeightChanged"/>
+        <Label x:Name="_lineHeightLabel" 
+               Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
+               LineBreakMode="WordWrap" />
+        <Label>
             <Label.FormattedText>
                 <FormattedString>
-                    <Span Text="Red Bold, " TextColor="Red" FontAttributes="Bold" LineHeight="1.8" />
+                    <Span Text="Red Bold, " TextColor="Red" FontAttributes="Bold" />
                     <Span Text="default, " Style="{DynamicResource BodyStyle}">
                         <Span.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding TapCommand}" />
                         </Span.GestureRecognizers>
                     </Span>
                     <Span Text="italic small." FontAttributes="Italic" FontSize="Small" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label LineBreakMode="WordWrap">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a tincidunt sem. Phasellus mollis sit amet turpis in rutrum. Sed aliquam ac urna id scelerisque. "
+                          LineHeight="1.8"/>
+                    <Span Text="Nullam feugiat sodales elit, et maximus nibh vulputate id." 
+                          LineHeight="1.8" />
                 </FormattedString>
             </Label.FormattedText>
         </Label>

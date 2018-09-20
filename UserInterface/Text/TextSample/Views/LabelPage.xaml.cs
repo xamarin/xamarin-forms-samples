@@ -1,4 +1,6 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Diagnostics;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace TextSample
@@ -13,5 +15,18 @@ namespace TextSample
             TapCommand = new Command(async () => await DisplayAlert("Tapped", "This is a tapped Span.", "OK"));
             BindingContext = this;
 		}
+
+        void OnLineHeightChanged(object sender, TextChangedEventArgs args)
+        {
+            var lineHeight = ((Entry)sender).Text;
+            try
+            {
+                _lineHeightLabel.LineHeight = double.Parse(lineHeight);
+            }
+            catch (FormatException ex)
+            {
+                Debug.WriteLine($"Can't parse {lineHeight}. {ex.Message}");
+            }
+        }
 	}
 }
