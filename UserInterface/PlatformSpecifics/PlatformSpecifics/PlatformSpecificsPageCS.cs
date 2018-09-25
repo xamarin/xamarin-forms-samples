@@ -29,7 +29,7 @@ namespace PlatformSpecifics
                         new TextCell { Text="Large Title Display", Command = NavigateCommand, CommandParameter = typeof(iOSLargeTitlePageCS) },
                         new TextCell { Text="Safe Area Layout Guide", Command = NavigateCommand, CommandParameter = typeof(iOSSafeAreaPageCS) },
                         new TextCell { Text="Translucent Navigation Bar", Command = NavigateCommand, CommandParameter = typeof(iOSTranslucentNavigationBarPageCS) },
-                        new TextCell { Text="Entry Font Size Adjusts to Text Width", Command = NavigateCommand, CommandParameter = typeof(iOSEntryPageCS) },
+                        new TextCell { Text="Entry FontSize and CursorColor", Command = NavigateCommand, CommandParameter = typeof(iOSEntryPageCS) },
                         new TextCell { Text="Hide Status Bar", Command = NavigateCommand, CommandParameter = typeof(iOSStatusBarPageCS) },
                         new TextCell { Text="Picker UpdateMode", Command = NavigateCommand, CommandParameter = typeof(iOSPickerPageCS) },
                         new TextCell { Text="ScrollView DelayContentTouches", Command = NavigateCommand, CommandParameter = typeof(iOSScrollViewPageCS) },
@@ -37,7 +37,9 @@ namespace PlatformSpecifics
 						new TextCell { Text = "ListView FullWidth Separators", Command = NavigateCommand, CommandParameter = typeof(iOSListViewPageCS) },
 						new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(LegacyColorModePageCS) },
                         new TextCell { Text = "VisualElement Shadow Effect", Command = NavigateCommand, CommandParameter = typeof(iOSShadowEffectPageCS) },
-                        new TextCell { Text = "Application PanGestureRecognizer", Command = NavigateCommand, CommandParameter = typeof(iOSPanGestureRecognizerPageCS) }
+                        new TextCell { Text = "Application PanGestureRecognizer", Command = NavigateCommand, CommandParameter = typeof(iOSPanGestureRecognizerPageCS) },
+                        new TextCell { Text = "Slider Update on Tap", Command = NavigateCommand, CommandParameter = typeof(iOSSliderUpdateOnTapPageCS) },
+                        new TextCell { Text = "NavigationPage NavigationBarSeparator", Command = NavigateCommand, CommandParameter = typeof(iOSTitleViewPageCS) }
                     },
                     new TableSection("Android")
                     {
@@ -49,7 +51,8 @@ namespace PlatformSpecifics
 						new TextCell { Text = "Entry ImeOptions", Command = NavigateCommand, CommandParameter = typeof(AndroidEntryPageCS) },
 						new TextCell { Text = "WebView Mixed Content", Command = NavigateCommand, CommandParameter = typeof(AndroidWebViewPageCS) },
 						new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(LegacyColorModePageCS) },
-						new TextCell { Text = "Button Default Padding/Shadow", Command = NavigateCommand, CommandParameter = typeof(AndroidButtonPageCS) }
+						new TextCell { Text = "Button Default Padding/Shadow", Command = NavigateCommand, CommandParameter = typeof(AndroidButtonPageCS) },
+                        new TextCell { Text = "NavigationPage BarHeight", Command = NavigateCommand, CommandParameter = typeof(AndroidTitleViewPageCS) }
                     },
                     new TableSection("UWP")
                     {
@@ -66,7 +69,7 @@ namespace PlatformSpecifics
                     }
                 }
             };         
-        }         
+        }
 
 		async Task NavigateToPage(Type pageType)
         {
@@ -79,6 +82,14 @@ namespace PlatformSpecifics
                 {
                     page = new iOSNavigationPage(page);
                 }
+                else if (page is iOSTitleViewPageCS)
+                {
+                    page = new iOSTitleViewNavigationPage(page);
+                }
+                else if (page is AndroidTitleViewPageCS)
+                {
+                    page = new AndroidNavigationPageCS(page);
+                }
                 SetRoot(page);
             }
             else
@@ -86,7 +97,7 @@ namespace PlatformSpecifics
                 Page page = (Xamarin.Forms.Page)Activator.CreateInstance(pageType);
                 await Navigation.PushAsync(page);
             }
-        } 
+        }
 
         void SetRoot(Page page)
         {

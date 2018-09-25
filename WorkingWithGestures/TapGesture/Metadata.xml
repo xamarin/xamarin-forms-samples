@@ -7,5 +7,5 @@
 	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
-	<Brief>These samples demonstrate working with tap gestures using Xamarin Forms.</Brief>
+	<Brief>This sample demonstrates working with tap gestures using Xamarin Forms.</Brief>
 </SampleMetadata>

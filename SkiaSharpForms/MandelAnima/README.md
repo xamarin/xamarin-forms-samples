@@ -7,7 +7,7 @@ As the program is creating the 50 bitmaps, it stores them in application local s
 
 For background on the Mandelbrot Set and the algorithms used in this program see Chapter 20 of [_Creating Mobile Apps with Xamarin Forms_](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) starting on page 666.
 
-This program is described in the article [**Animating SkiaSharp bitmaps: Bitmap animation](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/animating#bitmap-animation). The **MainPage.xaml.cs** file begins with several constants that you can change:
+This program is described in the article [**Animating SkiaSharp bitmaps: Bitmap animation**](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/animating#bitmap-animation). The **MainPage.xaml.cs** file begins with several constants that you can change:
 
 - The `COUNT` constant indicates the number of bitmaps in the animation. It is initially set to 10, but you can set it to any value up to 50. Setting it to values beyond 50 adds very little, however, because at that zoom level the algorithm runs into problems caused by the resolution of double-precision floating point numbers, as discussed on page 684 of the book.
 

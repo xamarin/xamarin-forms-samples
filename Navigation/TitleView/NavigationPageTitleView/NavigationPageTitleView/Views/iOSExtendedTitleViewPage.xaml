@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="NavigationPageTitleView.iOSExtendedTitleViewPage"
+             Title="My Page Title">
+    <StackLayout>
+        <StackLayout BackgroundColor="CornSilk">
+            <SearchBar x:Name="_searchBar" />
+        </StackLayout>
+        <StackLayout Margin="20">
+            <Label Text="The separator at the bottom of the navigation bar has been removed." />
+            <Button Text="Return to Menu" Clicked="OnReturnButtonClicked" />    
+        </StackLayout>
+    </StackLayout>    
+</ContentPage>

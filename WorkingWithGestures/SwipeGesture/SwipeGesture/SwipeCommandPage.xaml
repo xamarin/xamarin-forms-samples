@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SwipeGesture.SwipeCommandPage">
+    <StackLayout Margin="20">
+        <Label Text="Swipe inside the box with a single finger." />
+        <BoxView Color="Teal" WidthRequest="300" HeightRequest="300" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+            <BoxView.GestureRecognizers>
+                <!-- Can also set a swipe threshold on each gesture recognizer -->
+                <SwipeGestureRecognizer Direction="Left" Command="{Binding SwipeCommand}" CommandParameter="Left" />
+                <SwipeGestureRecognizer Direction="Right" Command="{Binding SwipeCommand}" CommandParameter="Right" />
+                <SwipeGestureRecognizer Direction="Up" Command="{Binding SwipeCommand}" CommandParameter="Up" />
+                <SwipeGestureRecognizer Direction="Down" Command="{Binding SwipeCommand}" CommandParameter="Down" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+        <Label Text="{Binding SwipeDirection}" />
+    </StackLayout>
+</ContentPage>

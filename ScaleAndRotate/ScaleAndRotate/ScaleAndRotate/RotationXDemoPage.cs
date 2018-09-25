@@ -102,8 +102,8 @@ namespace ScaleAndRotate
 							new RowDefinition { Height = GridLength.Auto }
 						},
 						ColumnDefinitions = {
-							new ColumnDefinition { Width = GridLength.Auto },
-							new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star) }
+                            new ColumnDefinition { Width = new GridLength (0.5, GridUnitType.Star) },
+                            new ColumnDefinition { Width = new GridLength (0.5, GridUnitType.Star) }
 						},
 						Children = {
 							rotationSliderValue,

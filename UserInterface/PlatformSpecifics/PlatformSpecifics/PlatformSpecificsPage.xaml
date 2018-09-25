@@ -14,7 +14,7 @@
             <TextCell Text="Translucent Navigation Bar"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:iOSTranslucentNavigationBarPage}" />
-            <TextCell Text="Entry Font Size Adjusts to Text Width"
+            <TextCell Text="Entry FontSize and CursorColor"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:iOSEntryPage}" />
             <TextCell Text="Hide Status Bar"
@@ -41,6 +41,12 @@
             <TextCell Text="Application PanGestureRecognizer"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:iOSPanGestureRecognizerPage}" />
+            <TextCell Text="Slider Update on Tap"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSSliderUpdateOnTapPage}" />
+            <TextCell Text="NavigationPage NavigationBarSeparator"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSTitleViewPage}" />
         </TableSection>
         <TableSection Title="Android">
             <TextCell Text="Soft Input Mode Adjust"
@@ -70,6 +76,9 @@
             <TextCell Text="Button Default Padding/Shadow"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:AndroidButtonPage}" />
+            <TextCell Text="NavigationPage BarHeight"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:AndroidTitleViewPage}" />
         </TableSection>
         <TableSection Title="UWP">
             <TextCell Text="TabbedPage Toolbar Location"
