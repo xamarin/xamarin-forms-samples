@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace AwesomeApp
 {
@@ -12,6 +13,8 @@ namespace AwesomeApp
         public MainPage()
         {
             InitializeComponent();
+            // This is optional, but provides better layout for the iPhone X 
+            On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
         }
 
         int count = 0;
