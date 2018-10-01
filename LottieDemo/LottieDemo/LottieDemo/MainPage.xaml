@@ -1,0 +1,54 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LottieDemo"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" 
+             x:Class="LottieDemo.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout
+            Grid.Row="0"
+            Orientation="Horizontal"
+            HorizontalOptions="FillAndExpand"
+            Margin="5, 0">
+
+            <Button 
+                x:Name="playButton"
+                HorizontalOptions="FillAndExpand"
+                Text="Play" />
+
+            <Button 
+                x:Name="playSegmentsButton"
+                HorizontalOptions="FillAndExpand"
+                Text="Segment" />
+
+            <Button 
+                x:Name="playFramesButton"
+                HorizontalOptions="FillAndExpand"
+                Text="Frames" />
+
+        </StackLayout>
+
+        <forms:AnimationView 
+            x:Name="animationView" 
+            Grid.Row="1"
+            Animation="LottieLogo1.json" 
+            Loop="false" 
+            AutoPlay="false"
+            OnFinish="Handle_OnFinish"
+            ClickedCommand="{Binding ClickedCommand}"
+            VerticalOptions="FillAndExpand" 
+            HorizontalOptions="FillAndExpand" />
+
+        <Slider 
+            Grid.Row="2"
+            Margin="5, 0"
+            ValueChanged="Slider_OnValueChanged" />
+    </Grid>
+
+</ContentPage>
