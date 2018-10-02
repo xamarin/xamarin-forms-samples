@@ -1,4 +1,4 @@
 Introduction to Xamarin.Forms
 =============================
 
-Samples for the [Getting Started: Introduction to Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/introduction-to-xamarin-forms/) doc.
+Samples for the [Introduction to Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/get-started/introduction-to-xamarin-forms/) page.
