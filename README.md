@@ -43,7 +43,7 @@ The Xamarin.Forms [sample gallery](https://developer.xamarin.com/samples/xamarin
       * **Behaviors**
       * **Custom Renderers**
       * **Data**
-      * **Dependencey Service**
+      * **Dependency Service**
       * **Effects**
       * **Games**
       * **Getting Started**
