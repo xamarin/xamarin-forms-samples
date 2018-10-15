@@ -58,11 +58,6 @@ namespace UsingResxLocalization.Android
 			//certain languages need to be converted to CultureInfo equivalent
 			switch (androidLanguage)
 			{
-				case "ms-BN":   // "Malaysian (Brunei)" not supported .NET culture
-				case "ms-MY":   // "Malaysian (Malaysia)" not supported .NET culture
-				case "ms-SG":   // "Malaysian (Singapore)" not supported .NET culture
-					netLanguage = "ms"; // closest supported
-					break;
 				case "in-ID":  // "Indonesian (Indonesia)" has different code in  .NET 
 					netLanguage = "id-ID"; // correct code for .NET
 					break;
