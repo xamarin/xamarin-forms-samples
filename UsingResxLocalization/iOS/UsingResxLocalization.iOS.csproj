@@ -108,7 +108,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\csharp.png" />
     <BundleResource Include="Resources\xaml.png" />
     <BundleResource Include="Resources\es.lproj\InfoPlist.strings" />
@@ -165,6 +164,9 @@
     <Folder Include="Resources\id.lproj\" />
     <Folder Include="Resources\ms.lproj\" />
     <Folder Include="Resources\en.lproj\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
