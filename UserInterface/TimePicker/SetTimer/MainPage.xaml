@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:SetTimer" 
+             x:Class="SetTimer.MainPage">
+    <StackLayout Margin="20">
+        <Label Text="Timer" 
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <Entry x:Name="_entry"
+               Placeholder="Enter event to be reminded of" />
+        <Label Text="Select the time below to be reminded at." />
+        <TimePicker x:Name="_timePicker"
+                    Time="11:00:00"
+                    Format="T"
+                    PropertyChanged="OnTimePickerPropertyChanged" />
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Enable timer:" />
+            <Switch x:Name="_switch"
+                    HorizontalOptions="EndAndExpand"
+                    Toggled="OnSwitchToggled" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
