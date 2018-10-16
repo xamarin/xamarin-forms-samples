@@ -109,7 +109,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="add.png" />
+    <Content Include="plus.png" />
     <Content Include="check.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
