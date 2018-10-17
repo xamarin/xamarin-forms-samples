@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleMetadata>
+	<ID>5851e95c-4a85-477b-bff2-455488999334</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Beginner</Level>
+	<Tags>User Interface, Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>This sample demonstrates how to use a Stepper in code, XAML with code-behind, and XAML data-binding scenarios.</Brief>
+</SampleMetadata>
