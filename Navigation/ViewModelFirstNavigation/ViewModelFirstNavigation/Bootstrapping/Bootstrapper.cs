@@ -2,6 +2,8 @@
 using Autofac;
 using ViewModelFirstNavigation.Bootstrapping.Modules;
 using ViewModelFirstNavigation.Interfaces;
+using ViewModelFirstNavigation.ViewModels;
+using ViewModelFirstNavigation.Views;
 using Xamarin.Forms;
 
 namespace ViewModelFirstNavigation.Bootstrapping
@@ -32,7 +34,7 @@ namespace ViewModelFirstNavigation.Bootstrapping
         {
             var viewFactory = container.Resolve<IViewFactory>();
 
-            var mainPage = viewFactory.Resolve<HomeBaseViewModel>();
+            var mainPage = viewFactory.Resolve<FirstViewModel>();
             var navPage = new NavigationPage(mainPage);
 
             _app.MainPage = navPage;
@@ -46,8 +48,8 @@ namespace ViewModelFirstNavigation.Bootstrapping
 
         private void RegisterViews(IViewFactory viewFactory)
         {
-            //viewFactory.Register<HomeBaseViewModel, HomePage>();
-            //viewFactory.Register<SecondViewModel, SecondPage>();
+            viewFactory.Register<FirstViewModel, FirstView>();
+            viewFactory.Register<SecondViewModel, SecondView>();
         }
     }
 }

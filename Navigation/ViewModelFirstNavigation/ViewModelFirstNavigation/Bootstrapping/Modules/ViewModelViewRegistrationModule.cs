@@ -1,5 +1,7 @@
 ﻿using System;
 using Autofac;
+using ViewModelFirstNavigation.ViewModels;
+using ViewModelFirstNavigation.Views;
 
 namespace ViewModelFirstNavigation.Bootstrapping.Modules
 {
@@ -7,11 +9,11 @@ namespace ViewModelFirstNavigation.Bootstrapping.Modules
     {
         protected override void Load(ContainerBuilder builder)
         {
-            //builder.RegisterType<HomePage>().SingleInstance();
-            //builder.RegisterType<HomeBaseViewModel>().SingleInstance();
+            builder.RegisterType<FirstView>().SingleInstance();
+            builder.RegisterType<FirstViewModel>().SingleInstance();
 
-            //builder.RegisterType<SecondPage>();
-            //builder.RegisterType<SecondViewModel>();
+            builder.RegisterType<SecondView>();
+            builder.RegisterType<SecondViewModel>();
         }
     }
 }
