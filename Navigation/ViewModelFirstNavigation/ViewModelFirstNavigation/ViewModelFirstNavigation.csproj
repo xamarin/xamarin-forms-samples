@@ -22,4 +22,7 @@
     <Folder Include="Bootstrapping\" />
     <Folder Include="Bootstrapping\Modules\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="MainPage.xaml.cs" />
+  </ItemGroup>
 </Project>
