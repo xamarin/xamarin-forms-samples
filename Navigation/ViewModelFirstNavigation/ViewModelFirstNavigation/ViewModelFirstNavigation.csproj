@@ -20,5 +20,6 @@
     <Folder Include="Interfaces\" />
     <Folder Include="Services\" />
     <Folder Include="Bootstrapping\" />
+    <Folder Include="Bootstrapping\Modules\" />
   </ItemGroup>
 </Project>
