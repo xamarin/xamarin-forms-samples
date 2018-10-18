@@ -1,4 +1,5 @@
 ﻿using System;
+using ViewModelFirstNavigation.Bootstrapping;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,8 +11,13 @@ namespace ViewModelFirstNavigation
         public App()
         {
             InitializeComponent();
+            LoadTypes();
+        }
 
-            MainPage = new MainPage();
+        private void LoadTypes()
+        {
+            var bootstrapper = new Bootstrapper(this);
+            bootstrapper.Run();
         }
 
         protected override void OnStart()
