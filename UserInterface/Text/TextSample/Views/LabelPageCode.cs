@@ -10,13 +10,16 @@ namespace TextSample
         {
             var layout = new StackLayout{ Padding = new Thickness (5, 10) };
 
-            layout.Children.Add (new Label{ TextColor = Color.FromHex ("#77d065"), Text = "This is a green label." });
-            layout.Children.Add (new Label{ Text = "This is a default, non-customized label." });
-            layout.Children.Add (new Label{ Text = "This label has a font size of 30.", FontSize = 30 });
-            layout.Children.Add (new Label{ Text = "This is bold text.", FontAttributes = FontAttributes.Bold });
+            layout.Children.Add (new Label { TextColor = Color.FromHex ("#77d065"), Text = "This is a green label." });
+            layout.Children.Add (new Label { Text = "This is a default, non-customized label." });
+            layout.Children.Add (new Label { Text = "This label has a font size of 30.", FontSize = 30 });
+            layout.Children.Add (new Label { Text = "This is bold text.", FontAttributes = FontAttributes.Bold });
+            layout.Children.Add (new Label { Text = "This is underlined text.", TextDecorations = TextDecorations.Underline });
+            layout.Children.Add (new Label { Text = "This is text with strikethrough.", TextDecorations = TextDecorations.Strikethrough });
+            layout.Children.Add (new Label { Text = "This is underlined text with strikethrough.", TextDecorations = TextDecorations.Underline | TextDecorations.Strikethrough });
 
             // Line height
-            var lineHeightLabel = new Label { Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus.", LineBreakMode = LineBreakMode.WordWrap };
+            var lineHeightLabel = new Label { Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus.", LineBreakMode = LineBreakMode.WordWrap, MaxLines=2 };
             var entry = new Entry { Placeholder = "Enter line height" };
             entry.TextChanged += (sender, e) => 
             {

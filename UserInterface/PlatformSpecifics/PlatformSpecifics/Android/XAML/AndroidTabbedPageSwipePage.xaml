@@ -5,6 +5,7 @@
         x:Class="PlatformSpecifics.AndroidTabbedPageSwipePage"
         android:TabbedPage.OffscreenPageLimit="2"
         android:TabbedPage.IsSwipePagingEnabled="true"
+        android:TabbedPage.IsSmoothScrollEnabled="false"
         android:TabbedPage.ToolbarPlacement="Bottom"
         android:TabbedPage.BarItemColor="Black"
         android:TabbedPage.BarSelectedItemColor="Red"
@@ -12,7 +13,8 @@
     <ContentPage Title="Page 1" Icon="xaml.png">
         <StackLayout Margin="20">
             <Label Text="Page 1" HorizontalOptions="Center" />
-            <Button Text="Toggle Swipe Paging" Clicked="OnButtonClicked" />
+            <Button Text="Toggle Swipe Paging" Clicked="OnSwipePagingButtonClicked" />
+            <Button Text="Toggle Smooth Scroll" Clicked="OnSmoothScrollButtonClicked" />
             <Button Text="Return to Platform-Specifics List" Clicked="OnReturnButtonClicked" />
         </StackLayout>
     </ContentPage>

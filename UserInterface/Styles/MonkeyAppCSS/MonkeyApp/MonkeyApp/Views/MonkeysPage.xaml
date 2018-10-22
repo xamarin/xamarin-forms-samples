@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MonkeyApp.Views.MonkeysPage" Title="Monkeys">
-    <ContentPage.Resources>
-        <StyleSheet Source="/Assets/styles.css" />
-    </ContentPage.Resources>
     <StackLayout>
         <ListView x:Name="listView" ItemsSource="{Binding Monkeys}" HasUnevenRows="true" ItemTapped="OnListViewItemTapped" ItemSelected="OnListViewItemSelected">
             <ListView.ItemTemplate>

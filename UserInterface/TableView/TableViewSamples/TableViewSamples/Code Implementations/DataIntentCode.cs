@@ -1,6 +1,4 @@
-﻿using System;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace TableViewSamples
 {
@@ -35,5 +33,3 @@ namespace TableViewSamples
 		}
 	}
 }
-
-

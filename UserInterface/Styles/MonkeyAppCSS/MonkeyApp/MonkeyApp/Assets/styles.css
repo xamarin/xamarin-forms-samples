@@ -1,4 +1,8 @@
-﻿^contentpage {
+﻿navigationpage {
+    -xf-bar-background-color: lightgray;
+}
+
+^contentpage {
     background-color: lightgray;
 }
 

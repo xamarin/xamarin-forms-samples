@@ -15,9 +15,14 @@ namespace PlatformSpecifics
             _returnToPlatformSpecificsPage = restore;
         }
 
-        void OnButtonClicked(object sender, EventArgs e)
+        void OnSwipePagingButtonClicked(object sender, EventArgs e)
         {
             On<Android>().SetIsSwipePagingEnabled(!On<Android>().IsSwipePagingEnabled());
+        }
+
+        void OnSmoothScrollButtonClicked(object sender, EventArgs e)
+        {
+            On<Android>().SetIsSmoothScrollEnabled(!On<Android>().IsSmoothScrollEnabled());
         }
 
         void OnReturnButtonClicked(object sender, EventArgs e)

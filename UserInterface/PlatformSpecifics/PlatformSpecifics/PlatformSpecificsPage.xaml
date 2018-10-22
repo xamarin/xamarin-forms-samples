@@ -47,6 +47,9 @@
             <TextCell Text="NavigationPage NavigationBarSeparator"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:iOSTitleViewPage}" />
+            <TextCell Text="iPad Page Modal FormSheet Page"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSModalFormSheetPage}" />
         </TableSection>
         <TableSection Title="Android">
             <TextCell Text="Soft Input Mode Adjust"
@@ -55,7 +58,7 @@
             <TextCell Text="Pause and Resume Lifecycle Events"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:AndroidLifecycleEventsPage}" />
-            <TextCell Text="TabbedPage Swipe, Toolbar Placement"
+            <TextCell Text="TabbedPage Swipe, Smooth Scroll, Toolbar Placement"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:AndroidTabbedPageSwipePage}" />
             <TextCell Text="ListView FastScroll"
