@@ -36,9 +36,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.2.0.839982" />
+    <Compile Remove="Dave.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="Dave.cs" />
+    <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
   </ItemGroup>
 </Project>

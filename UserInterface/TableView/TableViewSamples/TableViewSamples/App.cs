@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
-using Xamarin.Forms;
-
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace TableViewSamples
 {
     public class App : Application
@@ -14,7 +11,7 @@ namespace TableViewSamples
 			bool useXaml = true; //set to your desired preference
 			var tabs = new TabbedPage();
 
-			if(useXaml)
+			if (useXaml)
 			{
 				tabs.Children.Add(new DataIntentXaml());
 				tabs.Children.Add(new FormIntentXaml());
@@ -22,7 +19,9 @@ namespace TableViewSamples
 				tabs.Children.Add(new SettingsIntentXaml());
 				tabs.Children.Add(new SwitchCellDemoXaml());
 				tabs.Children.Add(new EntryCellDemoXaml());
-			} else{
+			}
+            else
+            {
 				tabs.Children.Add(new DataIntentCode());
 				tabs.Children.Add(new FormIntentCode());
 				tabs.Children.Add(new MenuIntentCode());

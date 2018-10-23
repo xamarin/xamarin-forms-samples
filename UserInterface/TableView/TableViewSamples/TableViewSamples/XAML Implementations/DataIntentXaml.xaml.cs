@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-
 using Xamarin.Forms;
 
 namespace TableViewSamples
@@ -11,6 +9,11 @@ namespace TableViewSamples
 		{
 			InitializeComponent ();
 		}
+
+        void OnViewCellTapped(object sender, EventArgs e)
+        {
+            _target.IsVisible = !_target.IsVisible;
+            _viewCell.ForceUpdateSize();
+        }
 	}
 }
-

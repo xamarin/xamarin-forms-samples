@@ -3,9 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MonkeyApp.Views.MonkeyDetailPage"
              Title="Monkey Details">
-    <ContentPage.Resources>
-        <StyleSheet Source="/Assets/styles.css" />
-    </ContentPage.Resources>
     <ScrollView>
         <StackLayout>
             <Label Text="{Binding Name}" StyleClass="detailPageTitle" />

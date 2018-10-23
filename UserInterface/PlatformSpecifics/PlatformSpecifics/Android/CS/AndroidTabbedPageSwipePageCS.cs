@@ -15,21 +15,32 @@ namespace PlatformSpecifics
 
             On<Android>().SetOffscreenPageLimit(2)
                          .SetIsSwipePagingEnabled(true)
+                         .SetIsSmoothScrollEnabled(false)
                          .SetToolbarPlacement(ToolbarPlacement.Bottom)
                          .SetBarItemColor(Color.Black)
                          .SetBarSelectedItemColor(Color.Red);
 
             var firstPage = CreatePage(1);
             var stackLayout = firstPage.Content as StackLayout;
-            var button = new Xamarin.Forms.Button
+            var swipePagingButton = new Xamarin.Forms.Button
             {
                 Text = "Toggle Swipe Paging"
             };
-            button.Clicked += (sender, e) =>
+            swipePagingButton.Clicked += (sender, e) =>
             {
                 On<Android>().SetIsSwipePagingEnabled(!On<Android>().IsSwipePagingEnabled());
             };
-            stackLayout.Children.Add(button);
+            var smoothScrollButton = new Xamarin.Forms.Button
+            {
+                Text = "Toggle Smooth Scroll"
+            };
+            smoothScrollButton.Clicked += (sender, e) =>
+            {
+                On<Android>().SetIsSmoothScrollEnabled(!On<Android>().IsSmoothScrollEnabled());
+            };
+
+            stackLayout.Children.Add(swipePagingButton);
+            stackLayout.Children.Add(smoothScrollButton);
 
             Title = "TabbedPage";
             Children.Add(firstPage);

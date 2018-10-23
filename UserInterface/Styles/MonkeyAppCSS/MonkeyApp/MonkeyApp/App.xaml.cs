@@ -12,7 +12,6 @@ namespace MonkeyApp
             InitializeComponent();
 
             var navigationPage = new NavigationPage(new MonkeysPage());
-            navigationPage.BarBackgroundColor = Color.LightGray;
             MainPage = navigationPage;
 		}
 

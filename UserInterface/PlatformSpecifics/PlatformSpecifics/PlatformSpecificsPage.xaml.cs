@@ -44,8 +44,15 @@ namespace PlatformSpecifics
 			else
 			{
 				Page page = (Page)Activator.CreateInstance(pageType);
-				await Navigation.PushAsync(page);
-			}         
+                if (page is iOSModalFormSheetPage)
+                {
+                    await Navigation.PushModalAsync(page);
+                }
+                else
+                {
+                    await Navigation.PushAsync(page);
+                }
+            }         
 		}
 
         void SetRoot(Page page)
