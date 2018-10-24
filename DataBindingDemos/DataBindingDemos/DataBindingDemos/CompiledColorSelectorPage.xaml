@@ -14,7 +14,7 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <StackLayout x:DataType="local:local:HslColorViewModel">
+    <StackLayout x:DataType="local:HslColorViewModel">
         <StackLayout.BindingContext>
             <local:HslColorViewModel Color="Sienna" />
         </StackLayout.BindingContext>
