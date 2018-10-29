@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinFirebase"
+             x:Class="XamarinFirebase.MainPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+            <Image x:Name="imgBanner"></Image>
+            <Image x:Name="imgChoosed" HeightRequest="200"></Image>
+            <Button x:Name="btnPick" Text="Pick" Clicked="btnPick_Clicked"></Button>
+            <Button x:Name="btnStore" Text="Store" Clicked="btnStore_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
