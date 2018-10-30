@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinFormsRelam"
+             x:Class="XamarinFormsRelam.MainPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <ContentView AbsoluteLayout.LayoutFlags="All"  AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+                <StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                        <Image x:Name="imgBanner" WidthRequest="300"></Image>
+                        <Entry x:Name="txtStudentName" Placeholder="Enter Name..."></Entry>
+                        <Button Text="Add Student" WidthRequest="100" x:Name="btnAdd" Clicked="btnAdd_Clicked"></Button>
+                        <ListView x:Name="listStudent" ItemSelected="listStudent_ItemSelected">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout>
+                                            <Label Text="{Binding StudentName}"></Label>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </StackLayout>
+            </ContentView>
+            <ContentView x:Name="popupEditView" BackgroundColor="#C0808080" Padding="10, 0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout Orientation="Vertical" HeightRequest="200" WidthRequest="300" BackgroundColor="White">
+                        <Entry Margin="20,20,20,10" x:Name="txtEditStudentName" Placeholder="Edit Studentname"></Entry>
+                        <Button Margin="20,0,20,0" Text="Edit" Clicked="Button_Clicked_1"></Button>
+                        <Button Margin="20,0,20,0" Text="Cancel" Clicked="Button_Clicked"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </ContentView>
+            <ContentView x:Name="popupOptionView" BackgroundColor="#C0808080" Padding="10, 0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout Orientation="Vertical" HeightRequest="150" WidthRequest="150" BackgroundColor="White">
+                        <ListView x:Name="optionList" ItemSelected="listOptions_ItemSelected" >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout>
+                                            <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding OptionText}"></Label>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </StackLayout>
+            </ContentView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+    
+    
+</ContentPage>
