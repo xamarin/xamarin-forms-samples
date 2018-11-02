@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamlSamples.SliderBindingsPage"
@@ -15,7 +15,8 @@
 
         <Slider x:Name="slider"
                 Maximum="360"
-                VerticalOptions="CenterAndExpand" />
+                VerticalOptions="CenterAndExpand"
+                Margin="20,0,20,0" />
 
         <Label BindingContext="{x:Reference slider}"
                Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"

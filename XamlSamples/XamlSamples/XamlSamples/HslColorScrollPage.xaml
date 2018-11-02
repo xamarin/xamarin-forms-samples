@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamlSamples;assembly=XamlSamples"
@@ -9,23 +9,26 @@
         <local:HslViewModel Color="Aqua" />
     </ContentPage.BindingContext>
 
-    <StackLayout Padding="10, 0">
+    <StackLayout Padding="10, 0, 10, 30">
         <BoxView Color="{Binding Color}"
                  VerticalOptions="FillAndExpand" />
 
         <Label Text="{Binding Hue, StringFormat='Hue = {0:F2}'}"
                HorizontalOptions="Center" />
 
-        <Slider Value="{Binding Hue, Mode=TwoWay}" />
+        <Slider Value="{Binding Hue, Mode=TwoWay}"
+                Margin="20,0,20,0" />
 
         <Label Text="{Binding Saturation, StringFormat='Saturation = {0:F2}'}"
                HorizontalOptions="Center" />
 
-        <Slider Value="{Binding Saturation, Mode=TwoWay}" />
+        <Slider Value="{Binding Saturation, Mode=TwoWay}" 
+                Margin="20,0,20,0" />
 
         <Label Text="{Binding Luminosity, StringFormat='Luminosity = {0:F2}'}"
                HorizontalOptions="Center" />
 
-        <Slider Value="{Binding Luminosity, Mode=TwoWay}" />
+        <Slider Value="{Binding Luminosity, Mode=TwoWay}" 
+                Margin="20,0,20,0" />
     </StackLayout>
 </ContentPage>
