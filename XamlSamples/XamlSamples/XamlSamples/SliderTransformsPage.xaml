@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamlSamples.SliderTransformsPage"
@@ -30,7 +30,8 @@
                 BindingContext="{x:Reference label}"
                 Grid.Row="1" Grid.Column="0"
                 Maximum="10"
-                Value="{Binding Scale, Mode=TwoWay}" />
+                Value="{Binding Scale, Mode=TwoWay}" 
+                Margin="20,0,0,0" />
 
         <Label BindingContext="{x:Reference scaleSlider}"
                Text="{Binding Value, StringFormat='Scale = {0:F1}'}"
@@ -42,7 +43,8 @@
                 BindingContext="{x:Reference label}"
                 Grid.Row="2" Grid.Column="0"
                 Maximum="360"
-                Value="{Binding Rotation, Mode=OneWayToSource}" />
+                Value="{Binding Rotation, Mode=OneWayToSource}" 
+                Margin="20,0,0,0" />
 
         <Label BindingContext="{x:Reference rotationSlider}"
                Text="{Binding Value, StringFormat='Rotation = {0:F0}'}"
@@ -54,7 +56,8 @@
                 BindingContext="{x:Reference label}"
                 Grid.Row="3" Grid.Column="0"
                 Maximum="360"
-                Value="{Binding RotationX, Mode=OneWayToSource}" />
+                Value="{Binding RotationX, Mode=OneWayToSource}"
+                Margin="20,0,0,0" />
 
         <Label BindingContext="{x:Reference rotationXSlider}"
                Text="{Binding Value, StringFormat='RotationX = {0:F0}'}"
@@ -66,7 +69,8 @@
                 BindingContext="{x:Reference label}"
                 Grid.Row="4" Grid.Column="0"
                 Maximum="360"
-                Value="{Binding RotationY, Mode=OneWayToSource}" />
+                Value="{Binding RotationY, Mode=OneWayToSource}"
+                Margin="20,0,0,0" />
 
         <Label BindingContext="{x:Reference rotationYSlider}"
                Text="{Binding Value, StringFormat='RotationY = {0:F0}'}"
