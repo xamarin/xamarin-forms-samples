@@ -1,0 +1,14 @@
+### YamlMime:Sample
+sample:
+- name: First App
+  description: Two lines of code beginner app.
+  readme: README.md
+  image: /xamarin-forms-samples/GetStarted/FirstApp/Screenshots/all.png
+  generateZip: true
+  preserveParentHierarchy: false
+  author: charlespetzold
+  languages:
+  - csharp
+  technologies:
+  - xamarin-forms
+  vssolution: /xamarin-forms-samples/GetStarted/FirstApp/AwesomeApp.sln

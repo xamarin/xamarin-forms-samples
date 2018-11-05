@@ -1,0 +1,14 @@
+### YamlMime:Sample
+sample:
+- name: BugSweeper
+  description: A familiar game with a new twist.
+  readme: README.md
+  image: /xamarin-forms-samples/BugSweeper/Screenshots/01iOS.png
+  generateZip: true
+  preserveParentHierarchy: false
+  author: charlespetzold
+  languages:
+  - csharp
+  technologies:
+  - xamarin-forms
+  vssolution: /xamarin-forms-samples/BugSweeper/BugSweeper.sln

@@ -1,0 +1,14 @@
+### YamlMime:Sample
+sample:
+- name: Class Hierarchy
+  description: Demonstrates a scrollable hierarchy of all Xamarin.Forms classes, structures, and enumerations.
+  readme: README.md
+  image: /xamarin-forms-samples/ClassHierarchy/Screenshots/01CatClock.png
+  generateZip: true
+  preserveParentHierarchy: false
+  author: charlespetzold
+  languages:
+  - csharp
+  technologies:
+  - xamarin-forms
+  vssolution: /xamarin-forms-samples/ClassHierarchy/ClassHierarchy.sln

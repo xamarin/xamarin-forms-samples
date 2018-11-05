@@ -1,0 +1,14 @@
+### YamlMime:Sample
+sample:
+- name: Game of Life
+  description: John Conway's Game of Life.
+  readme: README.md
+  image: /xamarin-forms-samples/BoxView/GameOfLife/Screenshots/01Triple.png
+  generateZip: true
+  preserveParentHierarchy: false
+  author: charlespetzold
+  languages:
+  - csharp
+  technologies:
+  - xamarin-forms
+  vssolution: /xamarin-forms-samples/BoxView/GameOfLife/GameOfLife.sln

@@ -1,0 +1,14 @@
+### YamlMime:Sample
+sample:
+- name: Basic BoxView
+  description: Basic BoxView display.
+  readme: README.md
+  image: /xamarin-forms-samples/BoxView/BasicBoxView/Screenshots/01Triple.png
+  generateZip: true
+  preserveParentHierarchy: false
+  author: charlespetzold
+  languages:
+  - csharp
+  technologies:
+  - xamarin
+  vssolution: /xamarin-forms-samples/BoxView/BasicBoxView/BasicBoxView.sln

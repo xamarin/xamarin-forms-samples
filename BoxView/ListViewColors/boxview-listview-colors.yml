@@ -1,0 +1,14 @@
+### YamlMime:Sample
+sample:
+- name: ListView Colors
+  description: ListView Displaying System Colors using BoxView.
+  readme: README.md
+  image: /xamarin-forms-samples/BoxView/ListViewColors/Screenshots/01Triple.png
+  generateZip: true
+  preserveParentHierarchy: false
+  author: charlespetzold
+  languages:
+  - csharp
+  technologies:
+  - xamarin-forms
+  vssolution: /xamarin-forms-samples/BoxView/ListViewColors/ListViewColors.sln

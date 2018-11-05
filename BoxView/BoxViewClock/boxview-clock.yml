@@ -1,0 +1,14 @@
+### YamlMime:Sample
+sample:
+- name: BoxView Clock
+  description: Analog Clock built using BoxView.
+  readme: README.md
+  image: /xamarin-forms-samples/BoxView/BoxViewClock/Screenshots/01Triple.png
+  generateZip: true
+  preserveParentHierarchy: false
+  author: charlespetzold
+  languages:
+  - csharp
+  technologies:
+  - xamarin-forms
+  vssolution: /xamarin-forms-samples/BoxView/BoxViewClock/BoxViewClock.sln

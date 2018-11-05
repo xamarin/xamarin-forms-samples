@@ -1,0 +1,14 @@
+### YamlMime:Sample
+sample:
+- name: Cat Clock
+  description: A cat with a clock in its belly.
+  readme: README.md
+  image: /xamarin-forms-samples/CatClock/Screenshots/01CatClock.png
+  generateZip: true
+  preserveParentHierarchy: false
+  author: charlespetzold
+  languages:
+  - csharp
+  technologies:
+  - xamarin-forms
+  vssolution: /xamarin-forms-samples/CatClock/CatClock.sln
