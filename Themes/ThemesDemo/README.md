@@ -1,3 +1,12 @@
+---
+topic: sample
+languages:
+- csharp
+technologies:
+  - xamarin-forms
+name: Themes Demo
+urlFragment: themes-themesdemo
+---
 ThemesDemo
 =========
 
