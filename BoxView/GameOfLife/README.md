@@ -1,3 +1,12 @@
+---
+topic: sample
+languages:
+- csharp
+technologies:
+  - xamarin-forms
+name: Game of Life
+urlFragment: gameoflife
+---
 Game of Life
 ======
 
@@ -10,7 +19,7 @@ A population might grow, or shrink, or stagnate, or disappear.
 
 For more information about the Game of Life, see the Wikipedia article [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway's_Game_of_Life).
 
-This sample is described in more detail in the article on [BoxView](/guides/xamarin-forms/user-interface/boxview/).
+This sample is described in more detail in the article on [BoxView](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/boxview/).
 
 Author
 ------

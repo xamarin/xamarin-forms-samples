@@ -1,3 +1,12 @@
+---
+topic: sample
+languages:
+- csharp
+technologies:
+  - xamarin-forms
+name: "Get Started: First app with Xamarin.Forms"
+urlFragment: firstapp
+---
 Get Started: First app with Xamarin.Forms
 ======
 

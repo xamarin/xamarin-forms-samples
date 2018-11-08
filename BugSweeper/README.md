@@ -1,3 +1,12 @@
+---
+topic: sample
+languages:
+- csharp
+technologies:
+  - xamarin-forms
+name: BugSweeper
+urlFragment: bugsweeper
+---
 BugSweeper
 ======
 
@@ -8,7 +17,6 @@ Begin playing by double tapping any tile. That first double tap is always safe.
 Thereafter, numbers indicate the number of surrounding tiles with bugs. 
 If you know that a tile has a bug, flag it (or unflag it) with a single tap.
 Avoid double-tapping a tile with a bug!
-
 
 Author
 ------
