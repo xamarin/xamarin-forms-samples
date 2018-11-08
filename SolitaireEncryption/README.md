@@ -1,3 +1,12 @@
+---
+topic: sample
+languages:
+- csharp
+technologies:
+- xamarin-forms
+name: "Solitaire Encryption (Xamarin.Forms)"
+urlFragment: solitaireencryption
+---
 Solitaire Encryption (Xamarin.Forms)
 ==============
 
