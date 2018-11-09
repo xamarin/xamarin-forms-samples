@@ -31,15 +31,15 @@ namespace Phoneword.Droid
             SetSupportActionBar(toolbar);
             SupportActionBar.Title = "Phoneword";
 
-            var mainPage = new PhonewordPage().CreateFragment(this);
-            FragmentManager
+            var mainPage = new PhonewordPage().CreateSupportFragment(this);
+            SupportFragmentManager
                 .BeginTransaction()
                 .Replace(Resource.Id.fragment_frame_layout, mainPage)
                 .Commit();
 
-            FragmentManager.BackStackChanged += (sender, e) =>
+            SupportFragmentManager.BackStackChanged += (sender, e) =>
             {
-                bool hasBack = FragmentManager.BackStackEntryCount > 0;
+                bool hasBack = SupportFragmentManager.BackStackEntryCount > 0;
                 SupportActionBar.SetHomeButtonEnabled(hasBack);
                 SupportActionBar.SetDisplayHomeAsUpEnabled(hasBack);
                 SupportActionBar.Title = hasBack ? "Call History" : "Phoneword";
@@ -48,9 +48,9 @@ namespace Phoneword.Droid
 
         public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
         {
-            if (item.ItemId == global::Android.Resource.Id.Home && FragmentManager.BackStackEntryCount > 0)
+            if (item.ItemId == global::Android.Resource.Id.Home && SupportFragmentManager.BackStackEntryCount > 0)
             {
-                FragmentManager.PopBackStack();
+                SupportFragmentManager.PopBackStack();
                 return true;
             }
             return base.OnOptionsItemSelected(item);
@@ -58,8 +58,8 @@ namespace Phoneword.Droid
 
         public void NavigateToCallHistoryPage()
         {
-            var callHistoryPage = new CallHistoryPage().CreateFragment(this);
-            FragmentManager
+            var callHistoryPage = new CallHistoryPage().CreateSupportFragment(this);
+            SupportFragmentManager
                 .BeginTransaction()
                 .AddToBackStack(null)
                 .Replace(Resource.Id.fragment_frame_layout, callHistoryPage)
