@@ -11,11 +11,6 @@
 			Name = name;
 			Age = age;
 		}
-
-		public override string ToString ()
-		{
-			return Name;
-		}
 	}
 }
 

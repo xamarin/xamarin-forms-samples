@@ -6,7 +6,7 @@ namespace EventToCommandBehavior
 	{
 		public HomePage ()
 		{
-			InitializeComponent ();
+            InitializeComponent ();
 		}
 	}
 }

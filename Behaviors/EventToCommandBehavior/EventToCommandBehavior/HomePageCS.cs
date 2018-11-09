@@ -10,6 +10,12 @@ namespace EventToCommandBehavior
 
 			var listView = new ListView ();
 			listView.SetBinding (ItemsView<Cell>.ItemsSourceProperty, "People");
+            listView.ItemTemplate = new DataTemplate(() =>
+            {
+                var textCell = new TextCell();
+                textCell.SetBinding(TextCell.TextProperty, "Name");
+                return textCell;
+            });
 			listView.Behaviors.Add (new EventToCommandBehavior {
 				EventName = "ItemSelected",
 				Command = ((HomePageViewModel)BindingContext).OutputAgeCommand,
@@ -20,7 +26,7 @@ namespace EventToCommandBehavior
 			selectedItemLabel.SetBinding (Label.TextProperty, "SelectedItemText");
 
 			Content = new StackLayout { 
-				Padding = new Thickness (0, 20, 0, 0),
+                Margin = new Thickness(20),
 				Children = {
 					new Label {
 						Text = "Behaviors Demo",
