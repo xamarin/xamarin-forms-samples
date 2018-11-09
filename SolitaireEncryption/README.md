@@ -1,3 +1,12 @@
+---
+topic: sample
+languages:
+- csharp
+technologies:
+- xamarin-forms
+name: "Solitaire Encryption (Xamarin.Forms)"
+urlFragment: solitaireencryption
+---
 Solitaire Encryption (Xamarin.Forms)
 ==============
 
@@ -12,4 +21,4 @@ Author
 
 Craig Dunn
 
-*^ The original port of this algorithm was done (by me) in 2002, and I've used that 2002-era code *unchanged* in this mobile app. It's kinda cool that 12-year-old C# code can just be dropped into an app that runs on iOS, Android, and the Universal Windows Platform.*
+*^ The original port of this algorithm was done (by me) in 2002, and I've used that 2002-era code unchanged in this mobile app. It's kinda cool that 12-year-old C# code can just be dropped into an app that runs on iOS, Android, and the Universal Windows Platform.*
