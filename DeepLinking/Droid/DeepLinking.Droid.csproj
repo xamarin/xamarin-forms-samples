@@ -48,10 +48,10 @@
     <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.android" Version="1.1.0" />
     <PackageReference Include="SQLitePCLRaw.provider.e_sqlite3.android" Version="1.1.0" />
     <PackageReference Include="Xamarin.Forms">
-      <Version>3.3.0.912540</Version>
+      <Version>3.4.0.1008975</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms.AppLinks">
-      <Version>3.3.0.912540</Version>
+      <Version>3.4.0.1008975</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
