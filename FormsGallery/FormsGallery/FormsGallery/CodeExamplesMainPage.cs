@@ -83,6 +83,14 @@ namespace FormsGallery
 
                         new TextCell
                         {
+                            Text = "ImageButton",
+                            Detail = "Initiate a command",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.ImageButtonDemoPage)
+                        },
+
+                        new TextCell
+                        {
                             Text = "SearchBar",
                             Detail = "Initiate a search",
                             Command = navigateCommand,

@@ -9,9 +9,7 @@ namespace WebViewSample
 		public LinkToInAppCode ()
 		{
 			this.Title = "In-App Browser Demo";
-			this.Padding = new Thickness (10);
-
-			var layout = new StackLayout ();
+            var layout = new StackLayout { Margin = new Thickness(20) };
 
 			var label = new Label () {
 				Text = "This demonstrates how you would open a link without leaving your app, while giving users a good experience."

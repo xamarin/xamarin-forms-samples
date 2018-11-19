@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-
 using Xamarin.Forms;
 
 namespace WebViewSample
@@ -17,9 +15,9 @@ namespace WebViewSample
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		/// <param name="e">E.</param>
-		void navButtonClicked(object sender, EventArgs e)
+		async void navButtonClicked(object sender, EventArgs e)
 		{
-			this.Navigation.PushAsync (new InAppBrowserXaml ("http://www.xamarin.com/"));
+			await Navigation.PushAsync (new InAppBrowserXaml ("http://www.xamarin.com/"));
 		}
 	}
 }

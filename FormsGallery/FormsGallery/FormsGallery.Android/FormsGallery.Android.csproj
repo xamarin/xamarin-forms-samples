@@ -48,9 +48,13 @@
     <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
-    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="3.4.0.1008975" />
     <PackageReference Include="Xamarin.GooglePlayServices.Maps" Version="60.1142.1" />
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.4.0.1008975</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms.Maps">
+      <Version>3.4.0.1008975</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -75,6 +79,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\XamarinLogo.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -86,7 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FormsGallery\FormsGallery.csproj">
-      <Project>{9876e983-d7b4-45e2-b00e-160c3aed2862}</Project>
+      <Project>{AD67CD9C-6F46-47F0-957A-AEA55BFC143F}</Project>
       <Name>FormsGallery</Name>
     </ProjectReference>
   </ItemGroup>
