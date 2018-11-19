@@ -10,6 +10,11 @@
              androidAppCompat:Application.SendAppearingEventOnResume="false" 
              androidAppCompat:Application.ShouldPreserveKeyboardOnResume="false"
              ios:Application.PanGestureRecognizerShouldRecognizeSimultaneously="true">
+    <!-- Add the following to direct control layout/rendering updates to the main thread on iOS:
+            
+            ios:Application.HandleControlUpdatesOnMainThread="true"
+    
+         This should rarely be needed, but in some cases may prevent crashes. -->
 	<Application.Resources>
 		<!-- Application resource dictionary -->
 	</Application.Resources>

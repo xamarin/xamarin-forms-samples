@@ -14,11 +14,14 @@ namespace WebViewSample
 
 			bool useXaml = true; //change this to use the code implementation
 
-			if (useXaml) {				
+			if (useXaml) 
+            {				
 				navPage.PushAsync (new LinkToInAppXaml ());
 				tabs.Children.Add (new LoadingLabelXaml ());
                 tabs.Children.Add (new EvaluateJavaScriptPage ());
-			} else {
+			} 
+            else 
+            {
 				navPage.PushAsync (new LinkToInAppCode ());
 				tabs.Children.Add (new LoadingLabelCode ());
 			}

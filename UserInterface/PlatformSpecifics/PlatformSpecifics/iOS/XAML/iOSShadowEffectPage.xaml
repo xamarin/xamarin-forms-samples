@@ -5,7 +5,11 @@
              x:Class="PlatformSpecifics.iOSShadowEffectPage" 
              Title="Shadow Effect">
     <StackLayout Margin="20">
-        <BoxView x:Name="_boxView" Color="Aqua" WidthRequest="100" HeightRequest="100" ios:VisualElement.IsShadowEnabled="true" 
+        <BoxView x:Name="_boxView" 
+                 Color="Aqua" 
+                 WidthRequest="100" 
+                 HeightRequest="100" 
+                 ios:VisualElement.IsShadowEnabled="true" 
                  ios:VisualElement.ShadowColor="Purple" 
                  ios:VisualElement.ShadowOpacity="0.7" 
                  ios:VisualElement.ShadowRadius="12">
