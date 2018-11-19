@@ -82,6 +82,9 @@
             <TextCell Text="NavigationPage BarHeight"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:AndroidTitleViewPage}" />
+            <TextCell Text="ImageButton Shadow Effect"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:AndroidImageButtonPage}" />
         </TableSection>
         <TableSection Title="UWP">
             <TextCell Text="TabbedPage Toolbar Location"

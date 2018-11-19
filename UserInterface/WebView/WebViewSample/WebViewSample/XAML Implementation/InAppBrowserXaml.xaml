@@ -1,16 +1,15 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-x:Class="WebViewSample.InAppBrowserXaml"
-Title="Browser">
-	<ContentPage.Content>
-		<StackLayout>
-			<StackLayout Orientation="Horizontal">
-				<Button Text="Back" HorizontalOptions="Start" Clicked="backButtonClicked" />
-				<Button Text="Forward" HorizontalOptions="EndAndExpand" Clicked="forwardButtonClicked" />
-			</StackLayout>
-			<!-- WebView needs to be given height and width request within layouts to render. -->
-			<WebView x:Name="webView" WidthRequest="1000" HeightRequest="1000" /> 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="WebViewSample.InAppBrowserXaml"
+             Title="Browser">
+	<StackLayout Margin="20">
+		<StackLayout Orientation="Horizontal">
+			<Button Text="Back" HorizontalOptions="StartAndExpand" Clicked="OnBackButtonClicked" />
+            <Button Text="Reload" HorizontalOptions="CenterAndExpand" Clicked="OnReloadButtonClicked" />
+			<Button Text="Forward" HorizontalOptions="EndAndExpand" Clicked="OnForwardButtonClicked" />
 		</StackLayout>
-	</ContentPage.Content>
+		<!-- WebView needs to be given height and width request within layouts to render. -->
+		<WebView x:Name="webView" WidthRequest="1000" HeightRequest="1000" /> 
+	</StackLayout>
 </ContentPage>

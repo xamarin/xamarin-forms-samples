@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="PlatformSpecifics.AndroidImageButtonPage"
+             Title="Android ImageButton">
+    <StackLayout Margin="20">
+       <ImageButton Source="XamarinLogo.png"
+                    Clicked="OnImageButtonClicked"
+                    BackgroundColor="GhostWhite"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    android:ImageButton.IsShadowEnabled="true"
+                    android:ImageButton.ShadowColor="Gray"
+                    android:ImageButton.ShadowRadius="12">
+            <android:ImageButton.ShadowOffset>
+                <Size>
+                    <x:Arguments>
+                        <x:Double>10</x:Double>
+                        <x:Double>10</x:Double>
+                    </x:Arguments>
+                </Size>
+            </android:ImageButton.ShadowOffset>
+        </ImageButton>
+        <Label Text="Tap the ImageButton to toggle the shadow effect."
+               FontSize="Medium"
+               HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>

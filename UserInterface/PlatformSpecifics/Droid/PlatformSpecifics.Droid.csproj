@@ -80,6 +80,7 @@
     <AndroidResource Include="Resources\drawable\monkeyface.png" />
     <AndroidResource Include="Resources\drawable\csharp.png" />
     <AndroidResource Include="Resources\drawable\xaml.png" />
+    <AndroidResource Include="Resources\drawable\XamarinLogo.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\reminders.png" />
