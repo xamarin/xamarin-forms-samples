@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace WorkingWithFiles
+﻿namespace WorkingWithFiles
 {
 	/// <summary>
 	/// This Monkey class is used to deserialize an XML file and display the resulting data in a list.
@@ -20,11 +18,6 @@ namespace WorkingWithFiles
 		public string Name {get;set;}
 		public string Location { get; set; }
 		public string Details { get; set; }
-
-		public override string ToString ()
-		{
-			return Name;
-		}
 	}
 }
 

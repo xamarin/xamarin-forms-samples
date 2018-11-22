@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using System.Reflection;
 using System.IO;
 using System.Xml.Serialization;
@@ -15,21 +14,30 @@ namespace WorkingWithFiles
 			var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
 			Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.LibXmlResource.xml");
 
-			List<Monkey> monkeys;
-			using (var reader = new System.IO.StreamReader (stream)) {
+            List<Monkey> monkeys;
+			using (var reader = new StreamReader (stream)) 
+            {
 				var serializer = new XmlSerializer(typeof(List<Monkey>));
-				monkeys = (List<Monkey>)serializer.Deserialize(reader);
+                monkeys = (List<Monkey>)serializer.Deserialize(reader);
 			}
 			#endregion
 
 			var listView = new ListView ();
+            listView.ItemTemplate = new DataTemplate(() =>
+            {
+                var textCell = new TextCell();
+                textCell.SetBinding(TextCell.TextProperty, "Name");
+                textCell.SetBinding(TextCell.DetailProperty, "Location");
+                return textCell;
+            });
 			listView.ItemsSource = monkeys;
 
-
-			Content = new StackLayout {
+			Content = new StackLayout 
+            {
                 Margin = new Thickness(20),
 				VerticalOptions = LayoutOptions.StartAndExpand,
-				Children = {
+				Children = 
+                {
 					new Label { Text = "Embedded Resource XML File", 
 						FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
 						FontAttributes = FontAttributes.Bold

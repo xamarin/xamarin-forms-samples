@@ -1,5 +1,4 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 using System.IO;
 using Xamarin.Forms;
 
@@ -16,17 +15,20 @@ namespace WorkingWithFiles
 			Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.LibTextResource.txt");
 
 			string text = "";
-			using (var reader = new System.IO.StreamReader (stream)) {
+			using (var reader = new StreamReader (stream))
+            {
 				text = reader.ReadToEnd ();
 			}
 			#endregion
 
 			editor.Text = text;
 
-			Content = new StackLayout {
+			Content = new StackLayout 
+            {
                 Margin = new Thickness(20),
 				VerticalOptions = LayoutOptions.StartAndExpand,
-				Children = {
+				Children = 
+                {
 					new Label { Text = "Embedded Resource Text File", 
 						FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
 						FontAttributes = FontAttributes.Bold

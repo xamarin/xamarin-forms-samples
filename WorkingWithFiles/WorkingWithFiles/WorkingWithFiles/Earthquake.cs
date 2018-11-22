@@ -12,16 +12,16 @@ namespace WorkingWithFiles
 		public float depth { get; set; }
 		public float lat { get; set; }
 
-		public string Summary
+		public string Data
 		{
-			get { return String.Format("Date: {0}, Magnitude: {1}", datetime.Substring(0, 10), magnitude); }
+            get { return string.Format("{0}, {1}, {2}, {3}", lat, lng, magnitude, depth); }
 		}
 
-		public override string ToString()
-		{
-			return String.Format("{0}, {1}, {2}, {3}", lat, lng, magnitude, depth);
-		}
-	}
+        public override string ToString()
+        {
+            return string.Format("Date: {0}, Magnitude: {1}", datetime.Substring(0, 10), magnitude);
+        }
+    }
 
 	public class Rootobject
 	{
