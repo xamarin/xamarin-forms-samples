@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
+﻿using Foundation;
 using UIKit;
 
 namespace NativeSwitch.iOS
@@ -16,7 +12,13 @@ namespace NativeSwitch.iOS
 
 			LoadApplication(new App());
 
-			return base.FinishedLaunching(app, options);
+            // HACK: Stop the linker removing the below types for device builds
+            var color = UIColor.Red;
+            color = UIColor.Blue;
+            var uiSwitch = new UISwitch();
+            uiSwitch.ThumbTintColor = color;
+
+            return base.FinishedLaunching(app, options);
 		}
 	}
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
+﻿using Foundation;
 using UIKit;
 
 namespace NativeViewInsideContentView.iOS
@@ -15,6 +11,10 @@ namespace NativeViewInsideContentView.iOS
 			global::Xamarin.Forms.Forms.Init();
 
 			LoadApplication(new App());
+
+            // HACK: Stop the linker removing the below types for device builds
+            var color = UIColor.Red;
+            var uiButton = new UIButton();
 
 			return base.FinishedLaunching(app, options);
 		}

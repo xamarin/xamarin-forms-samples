@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
+﻿using Foundation;
 using UIKit;
 
 namespace SimpleColorPicker.iOS
@@ -16,7 +12,13 @@ namespace SimpleColorPicker.iOS
 
 			LoadApplication(new App());
 
-			return base.FinishedLaunching(app, options);
+            // HACK: Stop the linker removing the below types for device builds
+            var color = UIColor.Red;
+            color = UIColor.Green;
+            color = UIColor.Blue;
+            color = UIColor.Black;
+
+            return base.FinishedLaunching(app, options);
 		}
 	}
 }

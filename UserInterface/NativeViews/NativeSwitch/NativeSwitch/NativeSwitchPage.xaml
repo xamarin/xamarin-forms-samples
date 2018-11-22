@@ -5,7 +5,6 @@
 		xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
         xmlns:androidLocal="clr-namespace:NativeSwitch.Droid;assembly=NativeSwitch.Droid;targetPlatform=Android"
 		xmlns:win="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
-		xmlns:local="clr-namespace:NativeSwitch"
 		x:Class="NativeSwitch.NativeSwitchPage">
 	<StackLayout Margin="20">
 		<Label Text="Native Views Demo" FontAttributes="Bold" HorizontalOptions="Center" />
