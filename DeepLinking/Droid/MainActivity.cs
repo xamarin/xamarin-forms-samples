@@ -33,6 +33,7 @@ namespace DeepLinking.Droid
             //var apps = FirebaseApp.GetApps(this);
 
             Xamarin.Forms.Forms.Init(this, bundle);
+            FirebaseApp.InitializeApp(this);
             AndroidAppLinks.Init(this);
             LoadApplication (new App ());
 		}
