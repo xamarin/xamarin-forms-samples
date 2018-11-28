@@ -39,14 +39,6 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="sqlite-net-pcl" Version="1.2.1" />
-    <PackageReference Include="SQLitePCL.bundle_green" Version="0.9.3" />
-    <PackageReference Include="SQLitePCL.plugin.sqlite3.android" Version="0.9.3" />
-    <PackageReference Include="SQLitePCL.raw" Version="0.9.3" />
-    <PackageReference Include="SQLitePCLRaw.bundle_green" Version="1.1.0" />
-    <PackageReference Include="SQLitePCLRaw.core" Version="1.1.0" />
-    <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.android" Version="1.1.0" />
-    <PackageReference Include="SQLitePCLRaw.provider.e_sqlite3.android" Version="1.1.0" />
     <PackageReference Include="Xamarin.Forms">
       <Version>3.4.0.1008975</Version>
     </PackageReference>
@@ -55,15 +47,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="SQLitePCL.batteries">
-      <HintPath>..\packages\SQLitePCL.bundle_green.0.9.3\lib\MonoAndroid\SQLitePCL.batteries.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCL.raw">
-      <HintPath>..\packages\SQLitePCL.raw.0.9.3\lib\MonoAndroid\SQLitePCL.raw.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLPlugin_esqlite3">
-      <HintPath>..\packages\SQLitePCL.plugin.sqlite3.android.0.9.3\lib\MonoAndroid\SQLitePCLPlugin_esqlite3.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -79,7 +62,6 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SQLite.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -105,6 +87,9 @@
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values\colors.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <GoogleServicesJson Include="google-services.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

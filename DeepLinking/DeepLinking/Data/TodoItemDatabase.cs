@@ -1,55 +1,49 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
 using SQLite;
-using Xamarin.Forms;
 
 namespace DeepLinking
 {
-	public class TodoItemDatabase
-	{
-		static readonly object locker = new object ();
-		readonly SQLiteConnection database;
+    public class TodoItemDatabase
+    {
+        readonly SQLiteAsyncConnection database;
 
-		public TodoItemDatabase ()
-		{
-			database = DependencyService.Get<ISQLite> ().GetConnection ();
-			database.CreateTable<TodoItem> ();
-		}
+        public TodoItemDatabase(string dbPath)
+        {
+            database = new SQLiteAsyncConnection(dbPath);
+            database.CreateTableAsync<TodoItem>().Wait();
+        }
 
-		public IEnumerable<TodoItem> GetItems ()
-		{
-			lock (locker) {
-				return database.Table<TodoItem> ().ToList ();
-			}
-		}
+        public Task<List<TodoItem>> GetItemsAsync()
+        {
+            return database.Table<TodoItem>().ToListAsync();
+        }
 
-		public TodoItem Find (string id)
-		{
-			lock (locker) {
-				return database.Table<TodoItem> ().FirstOrDefault (i => i.ID == id);
-			}
-		}
+        public Task<List<TodoItem>> GetItemsNotDoneAsync()
+        {
+            return database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
+        }
 
-		public int Insert (TodoItem item)
-		{
-			lock (locker) {
-				return database.Insert (item);
-			}
-		}
+        public Task<TodoItem> GetItemAsync(int id)
+        {
+            return database.Table<TodoItem>().Where(i => i.ID == id).FirstOrDefaultAsync();
+        }
 
-		public int Update (TodoItem item)
-		{
-			lock (locker) {
-				return database.Update (item);
-			}
-		}
+        public Task<int> SaveItemAsync(TodoItem item)
+        {
+            if (item.ID != 0)
+            {
+                return database.UpdateAsync(item);
+            }
+            else
+            {
+                return database.InsertAsync(item);
+            }
+        }
 
-		public int Delete (string id)
-		{
-			lock (locker) {
-				return database.Delete<TodoItem> (id);
-			}
-		}
-	}
+        public Task<int> DeleteItemAsync(TodoItem item)
+        {
+            return database.DeleteAsync(item);
+        }
+    }
 }
-
