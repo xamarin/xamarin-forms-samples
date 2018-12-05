@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiltMaze.iOS", "TiltMaze\Ti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiltMaze.UWP", "TiltMaze\TiltMaze.UWP\TiltMaze.UWP.csproj", "{DFBB5ECC-DA29-456B-9344-9A593F49138E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiltMaze", "TiltMaze\TiltMaze\TiltMaze.csproj", "{01535EC3-3968-4EC8-8168-9EBCDA03F803}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TiltMaze", "TiltMaze\TiltMaze\TiltMaze.csproj", "{01535EC3-3968-4EC8-8168-9EBCDA03F803}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

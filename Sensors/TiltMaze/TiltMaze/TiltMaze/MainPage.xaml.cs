@@ -72,7 +72,7 @@ namespace TiltMaze
             base.OnAppearing();
             try
             {
-                Accelerometer.Start(SensorSpeed.Normal);
+                Accelerometer.Start(SensorSpeed.Default);
             }
             catch
             {

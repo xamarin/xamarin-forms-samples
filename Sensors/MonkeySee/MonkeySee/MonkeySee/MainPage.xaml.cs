@@ -32,7 +32,7 @@ namespace MonkeySee
 
             try
             {
-                OrientationSensor.Start(SensorSpeed.Normal);
+                OrientationSensor.Start(SensorSpeed.Default);
             }
             catch
             {
