@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+    <ID>8144867D-F6D0-425B-B8EB-520A45930F17</ID>
+    <IsFullApplication>true</IsFullApplication>
+    <Level>Advanced</Level>
+    <Tags>Xamarin.Forms, Sensors, Graphics, Animation</Tags>
+    <SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+    <LicenseRequirement>Indie</LicenseRequirement>
+    <Brief>A demonstration of the Xamarin.Essentials OrientationSensor using UrhoSharp 3D graphics</Brief>
+    <Gallery>true</Gallery>
+</SampleMetadata>
