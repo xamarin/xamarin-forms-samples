@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+    <ID>1FB7ACBC-2BDE-4BAA-9908-3DBE38EA3394</ID>
+    <IsFullApplication>true</IsFullApplication>
+    <Level>Intermediate</Level>
+    <Tags>Xamarin.Forms, Sensors, Animation</Tags>
+    <SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+    <LicenseRequirement>Indie</LicenseRequirement>
+    <Brief>A game for rolling a ball through a maze using the Xamarin.Essentials Accelerometer</Brief>
+    <Gallery>true</Gallery>
+</SampleMetadata>
