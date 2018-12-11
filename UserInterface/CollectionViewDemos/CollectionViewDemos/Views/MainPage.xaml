@@ -24,6 +24,22 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:HorizontalGridPage}" />
             </TableSection>
+            <TableSection Title="Scrolling">
+                <TextCell Text="Scroll by index"
+                          Detail="ScrollTo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ScrollToByIndexPage}" />
+                <TextCell Text="Scroll by object"
+                          Detail="ScrollTo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ScrollToByObjectPage}" />
+            </TableSection>
+            <TableSection Title="Empty view">
+                <TextCell Text="Empty list"
+                          Detail="EmptyView"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:EmptyViewPage}" />
+            </TableSection>
         </TableRoot>
     </TableView>
 </ContentPage>

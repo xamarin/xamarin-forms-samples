@@ -6,6 +6,7 @@ namespace CollectionViewDemos.ViewModels
     public class MonkeysViewModel
     {
         public IList<Monkey> Monkeys { get; private set; }
+        public IList<Monkey> EmptyMonkeys { get; private set; }
 
         public MonkeysViewModel()
         {
