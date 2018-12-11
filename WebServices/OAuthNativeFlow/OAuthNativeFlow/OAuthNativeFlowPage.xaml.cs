@@ -17,12 +17,11 @@ namespace OAuthNativeFlow
             InitializeComponent();
 
             store = AccountStore.Create();
-            account = store.FindAccountsForService(Constants.AppName).FirstOrDefault();
         }
 
         void OnLoginClicked(object sender, EventArgs e)
         {
-			string clientId = null;
+            string clientId = null;
 			string redirectUri = null;
 
 			switch (Device.RuntimePlatform)
@@ -38,7 +37,9 @@ namespace OAuthNativeFlow
 					break;
 			}
 
-			var authenticator = new OAuth2Authenticator(
+            account = store.FindAccountsForService(Constants.AppName).FirstOrDefault();
+
+            var authenticator = new OAuth2Authenticator(
 				clientId,
 				null,
 				Constants.Scope,
