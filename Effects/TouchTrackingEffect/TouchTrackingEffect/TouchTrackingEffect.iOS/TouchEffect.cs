@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 
 using Xamarin.Forms;
@@ -20,6 +19,9 @@ namespace TouchTracking.iOS
         {
             // Get the iOS UIView corresponding to the Element that the effect is attached to
             view = Control == null ? Container : Control;
+
+            // Uncomment this line if the UIView does not have touch enabled by default
+            //view.UserInteractionEnabled = true;
 
             // Get access to the TouchEffect class in the .NET Standard library
             TouchTracking.TouchEffect effect = (TouchTracking.TouchEffect)Element.Effects.FirstOrDefault(e => e is TouchTracking.TouchEffect);
