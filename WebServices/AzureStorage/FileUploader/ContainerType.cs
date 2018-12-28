@@ -1,8 +1,8 @@
 ﻿namespace FileUploader
 {
-	public enum ContainerType
-	{
-		Image,
-		Text
-	}
+    public enum ContainerType
+    {
+        Image,
+        Text
+    }
 }
