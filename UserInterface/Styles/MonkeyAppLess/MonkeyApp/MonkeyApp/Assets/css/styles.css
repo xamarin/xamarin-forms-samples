@@ -1,7 +1,10 @@
 navigationpage {
   -xf-bar-background-color: lightgray;
 }
- ^ contentpage {
+scrollView {
+  background-color: lightgray;
+}
+stackLayout {
   background-color: lightgray;
 }
 #listView {
