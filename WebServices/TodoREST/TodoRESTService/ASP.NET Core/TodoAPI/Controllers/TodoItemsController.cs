@@ -1,29 +1,39 @@
 ﻿using System;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ToDoApi.Interfaces;
-using ToDoApi.Models;
+using TodoAPI.Interfaces;
+using TodoAPI.Models;
 
-namespace ToDoApi.Controllers
+namespace TodoAPI.Controllers
 {
-    [Route("api/[controller]")]
-    public class ToDoItemsController : Controller
+    public enum ErrorCode
     {
-        private readonly IToDoRepository _toDoRepository;
+        TodoItemNameAndNotesRequired,
+        TodoItemIDInUse,
+        RecordNotFound,
+        CouldNotCreateItem,
+        CouldNotUpdateItem,
+        CouldNotDeleteItem
+    }
 
-        public ToDoItemsController(IToDoRepository toDoRepository)
+    [Route("api/[controller]")]
+    public class TodoItemsController : Controller
+    {
+        private readonly ITodoRepository _todoRepository;
+
+        public TodoItemsController(ITodoRepository todoRepository)
         {
-            _toDoRepository = toDoRepository;
+            _todoRepository = todoRepository;
         }
 
         [HttpGet]
         public IActionResult List()
         {
-            return Ok(_toDoRepository.All);
+            return Ok(_todoRepository.All);
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody]ToDoItem item)
+        public IActionResult Create([FromBody]TodoItem item)
         {
             try
             {
@@ -31,12 +41,12 @@ namespace ToDoApi.Controllers
                 {
                     return BadRequest(ErrorCode.TodoItemNameAndNotesRequired.ToString());
                 }
-                bool itemExists = _toDoRepository.DoesItemExist(item.ID);
+                bool itemExists = _todoRepository.DoesItemExist(item.ID);
                 if (itemExists)
                 {
                     return StatusCode(StatusCodes.Status409Conflict, ErrorCode.TodoItemIDInUse.ToString());
                 }
-                _toDoRepository.Insert(item);
+                _todoRepository.Insert(item);
             }
             catch (Exception)
             {
@@ -46,7 +56,7 @@ namespace ToDoApi.Controllers
         }
 
         [HttpPut]
-        public IActionResult Edit([FromBody] ToDoItem item)
+        public IActionResult Edit([FromBody] TodoItem item)
         {
             try
             {
@@ -54,12 +64,12 @@ namespace ToDoApi.Controllers
                 {
                     return BadRequest(ErrorCode.TodoItemNameAndNotesRequired.ToString());
                 }
-                var existingItem = _toDoRepository.Find(item.ID);
+                var existingItem = _todoRepository.Find(item.ID);
                 if (existingItem == null)
                 {
                     return NotFound(ErrorCode.RecordNotFound.ToString());
                 }
-                _toDoRepository.Update(item);
+                _todoRepository.Update(item);
             }
             catch (Exception)
             {
@@ -73,12 +83,12 @@ namespace ToDoApi.Controllers
         {
             try
             {
-                var item = _toDoRepository.Find(id);
+                var item = _todoRepository.Find(id);
                 if (item == null)
                 {
                     return NotFound(ErrorCode.RecordNotFound.ToString());
                 }
-                _toDoRepository.Delete(id);
+                _todoRepository.Delete(id);
             }
             catch (Exception)
             {
@@ -87,15 +97,4 @@ namespace ToDoApi.Controllers
             return NoContent();
         }
     }
-
-    public enum ErrorCode
-    {
-        TodoItemNameAndNotesRequired,
-        TodoItemIDInUse,
-        RecordNotFound,
-        CouldNotCreateItem,
-        CouldNotUpdateItem,
-        CouldNotDeleteItem
-    }
-
 }
