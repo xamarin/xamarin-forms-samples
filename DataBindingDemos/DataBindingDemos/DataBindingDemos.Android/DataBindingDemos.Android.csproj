@@ -18,6 +18,7 @@
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <JavaMaximumHeapSize />
     <NuGetPackageImportStamp />
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
