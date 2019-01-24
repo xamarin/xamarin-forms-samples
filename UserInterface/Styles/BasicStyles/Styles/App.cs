@@ -44,7 +44,7 @@
 //			Resources = new ResourceDictionary ();
 //			Resources.Add ("buttonStyle", buttonStyle);
 //
-//			MainPage = new HomePageCS ();
+//			MainPage = new NavigationPage(new HomePageCS());
 //		}
 //
 //		protected override void OnStart ()

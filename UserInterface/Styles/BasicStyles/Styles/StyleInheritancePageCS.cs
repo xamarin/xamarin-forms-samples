@@ -45,7 +45,7 @@ namespace Styles
 						Value =	Color.Lime
 					},
 					new Setter {
-						Property = Button.BorderRadiusProperty,
+						Property = Button.CornerRadiusProperty,
 						Value =	5
 					},
 					new Setter {
