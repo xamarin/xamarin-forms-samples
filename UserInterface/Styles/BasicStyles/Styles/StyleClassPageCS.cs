@@ -6,20 +6,6 @@ namespace Styles
     {
         public StyleClassPageCS()
         {
-            // ContentPage styles
-            var contentPageStyle = new Style(typeof(ContentPage))
-            {
-                ApplyToDerivedTypes = true,
-                Setters =
-                {
-                    new Setter
-                    {
-                        Property = VisualElement.BackgroundColorProperty,
-                        Value = Color.WhiteSmoke
-                    }
-                }
-            };
-
             // Button styles
             var baseButtonStyle = new Style(typeof(Button))
             {
@@ -202,7 +188,6 @@ namespace Styles
 
             Resources = new ResourceDictionary
             {
-                contentPageStyle,
                 successButtonStyle,
                 infoButtonStyle,
                 warningButtonStyle,

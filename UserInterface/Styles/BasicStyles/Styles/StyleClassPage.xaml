@@ -4,13 +4,6 @@
              x:Class="Styles.StyleClassPage"
              Title="Additional style properties">
     <ContentPage.Resources>
-        <!-- ContentPage -->
-        <Style TargetType="ContentPage"
-               ApplyToDerivedTypes="True">
-            <Setter Property="BackgroundColor"
-                    Value="WhiteSmoke" />
-        </Style>
-        
         <!-- Button -->
         <Style TargetType="Button" 
                x:Key="BaseButtonClass">
