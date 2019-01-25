@@ -28,9 +28,9 @@ namespace Styles
                         new TextCell { Text = "No styles", Command = NavigateCommand, CommandParameter = typeof(NoStylesPageCS) },
                         new TextCell { Text = "Explicit styles", Command = NavigateCommand, CommandParameter = typeof(ExplicitStylesPageCS) },
                         new TextCell { Text = "Implicit styles", Command = NavigateCommand, CommandParameter = typeof(ImplicitStylesPageCS) },
-                        new TextCell { Text = "Additional style properties", Command = NavigateCommand, CommandParameter = typeof(StyleClassPageCS) },
                         new TextCell { Text = "Application styles", Command = NavigateCommand, CommandParameter = typeof(ApplicationStylesPageCS) },
-                        new TextCell { Text = "Style inheritance", Command = NavigateCommand, CommandParameter = typeof(StyleInheritancePageCS) }
+                        new TextCell { Text = "Style inheritance", Command = NavigateCommand, CommandParameter = typeof(StyleInheritancePageCS) },
+                        new TextCell { Text = "Style classes", Command = NavigateCommand, CommandParameter = typeof(StyleClassPageCS) }
                     }
                 }
             };

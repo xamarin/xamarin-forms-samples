@@ -141,6 +141,7 @@ namespace Styles
                 }
             };
 
+            // VisualElement styles
             var rotatedVisualElementStyle = new Style(typeof(VisualElement))
             {
                 Class = "Rotated",

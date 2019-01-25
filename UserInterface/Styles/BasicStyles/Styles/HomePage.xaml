@@ -16,15 +16,15 @@
                 <TextCell Text="Implicit styles"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:ImplicitStylesPage}" />
-                <TextCell Text="Additional style properties"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:StyleClassPage}" />
                 <TextCell Text="Application styles"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:ApplicationStylesPage}" />
                 <TextCell Text="Style inheritance"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:StyleInheritancePage}" />
+                <TextCell Text="Style classes"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:StyleClassPage}" />
             </TableSection>
         </TableRoot>
     </TableView>

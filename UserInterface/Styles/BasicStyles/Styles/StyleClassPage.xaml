@@ -67,6 +67,7 @@
                     Value="50" />
         </Style>
         
+        <!-- VisualElement -->
         <Style TargetType="VisualElement"
                Class="Rotated"
                ApplyToDerivedTypes="true">
