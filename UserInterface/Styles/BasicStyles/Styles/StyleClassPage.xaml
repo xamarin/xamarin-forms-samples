@@ -21,13 +21,6 @@
         </Style>
 
         <Style TargetType="Button" 
-               Class="Info" 
-               BasedOn="{ StaticResource BaseButtonClass }">
-            <Setter Property="BackgroundColor" 
-                    Value="#31B0D5" />
-        </Style>
-
-        <Style TargetType="Button" 
                Class="Warning" 
                BasedOn="{ StaticResource BaseButtonClass }">
             <Setter Property="BackgroundColor"
@@ -74,6 +67,13 @@
                     Value="50" />
         </Style>
         
+        <Style TargetType="VisualElement"
+               Class="Rotated"
+               ApplyToDerivedTypes="true">
+            <Setter Property="Rotation"
+                    Value="45" />
+        </Style>
+        
         <!-- Label -->
         <Style TargetType="Label">
             <Setter Property="FontSize"
@@ -98,19 +98,19 @@
                Style="{StaticResource body}" />
         <Button Text="Success Button"
                 StyleClass="Success" />
-        <Button Text="Info Button"
-                StyleClass="Info" />
         <Button Text="Warning Button"
                 StyleClass="Warning" />
         <Button Text="Danger Button"
                 StyleClass="Danger" />
         
         <BoxView StyleClass="Separator" />       
-        <BoxView WidthRequest="100"
+        <BoxView Margin="0,20,0,0"
+                 WidthRequest="100" 
                  HeightRequest="100"
                  HorizontalOptions="Center"
-                 StyleClass="Rounded" />
-        <BoxView HorizontalOptions="Center"
+                 StyleClass="Rounded, Rotated" />
+        <BoxView Margin="0,20,0,0"
+                 HorizontalOptions="Center"
                  StyleClass="Circle" />
     </StackLayout>
 </ContentPage>

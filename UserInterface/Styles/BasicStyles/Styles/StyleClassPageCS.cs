@@ -38,20 +38,6 @@ namespace Styles
                 }
             };
 
-            var infoButtonStyle = new Style(typeof(Button))
-            {
-                BasedOn = baseButtonStyle,
-                Class = "Info",
-                Setters =
-                {
-                    new Setter
-                    {
-                        Property = VisualElement.BackgroundColorProperty,
-                        Value = Color.FromHex("#31B0D5")
-                    }
-                }
-            };
-
             var warningButtonStyle = new Style(typeof(Button))
             {
                 BasedOn = baseButtonStyle,
@@ -155,6 +141,20 @@ namespace Styles
                 }
             };
 
+            var rotatedVisualElementStyle = new Style(typeof(VisualElement))
+            {
+                Class = "Rotated",
+                ApplyToDerivedTypes = true,
+                Setters =
+                {
+                    new Setter
+                    {
+                        Property = VisualElement.RotationProperty,
+                        Value = 45
+                    }
+                }
+            };
+
             // Label styles
             var labelStyle = new Style(typeof(Label))
             {
@@ -189,12 +189,12 @@ namespace Styles
             Resources = new ResourceDictionary
             {
                 successButtonStyle,
-                infoButtonStyle,
                 warningButtonStyle,
                 dangerButtonStyle,
                 separatorBoxViewStyle,
                 roundedBoxViewStyle,
                 circleBoxViewStyle,
+                rotatedVisualElementStyle,
                 labelStyle
             };
 
@@ -207,12 +207,11 @@ namespace Styles
                     new Label { Text = "Style class demos", HorizontalOptions = LayoutOptions.Center, FontAttributes = FontAttributes.Bold },
                     new Label { Text = "The following controls are styled using a style class.", Style = bodyStyle },
                     new Button { Text = "Success Button", StyleClass = new [] {"Success"} },
-                    new Button { Text = "Info Button", StyleClass = new [] {"Info"} },
                     new Button { Text = "Warning Button", StyleClass = new [] {"Warning"} },
                     new Button { Text = "Danger Button", StyleClass = new [] {"Danger"} },
-                    new BoxView { StyleClass = new [] {"Separator"} },
-                    new BoxView { WidthRequest = 100, HeightRequest = 100, HorizontalOptions = LayoutOptions.Center, StyleClass = new [] {"Rounded"} },
-                    new BoxView { HorizontalOptions = LayoutOptions.Center, StyleClass = new [] {"Circle"} }
+                    new BoxView { StyleClass = new [] { "Separator" } },
+                    new BoxView { Margin = new Thickness(0,20,0,0), WidthRequest = 100, HeightRequest = 100, HorizontalOptions = LayoutOptions.Center, StyleClass = new [] { "Rounded", "Rotated" } },
+                    new BoxView { Margin = new Thickness(0,20,0,0), HorizontalOptions = LayoutOptions.Center, StyleClass = new [] { "Circle" } }
                 }
             };
         }
