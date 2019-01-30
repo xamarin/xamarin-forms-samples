@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SampleMetadata>
-	<ID>98E3F75F-DD7C-4BC7-BD4B-9D57F8F8FECC</ID>
+	<ID>8C6412E9-25F6-4301-8DE4-AC7B65A2F9F1</ID>
 	<IsFullApplication>false</IsFullApplication>
-  <Brief>This sample demonstrates a simple cross-platform Notes application that allows you to enter a note and persist it to device storage.</Brief>
+  <Brief>This sample demonstrates a multi-page Xamarin.Forms application that's capable of storing multiple notes in device storage.</Brief>
 	<Level>Beginner</Level>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Tags>Get Started, Xamarin.Forms</Tags>
