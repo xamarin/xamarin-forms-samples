@@ -28,7 +28,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
             canvas.DrawBitmap(bitmap, info.Rect, BitmapStretch.Uniform);
         }
 
-        void OnFlipVerticalClicked(object sender, ValueChangedEventArgs args)
+        void OnFlipVerticalClicked(object sender, EventArgs args)
         {
             SKBitmap flippedBitmap = new SKBitmap(bitmap.Width, bitmap.Height);
 
@@ -43,7 +43,7 @@ namespace SkiaSharpFormsDemos.Bitmaps
             canvasView.InvalidateSurface();
         }
 
-        void OnFlipHorizontalClicked(object sender, ValueChangedEventArgs args)
+        void OnFlipHorizontalClicked(object sender, EventArgs args)
         {
             SKBitmap flippedBitmap = new SKBitmap(bitmap.Width, bitmap.Height);
 
