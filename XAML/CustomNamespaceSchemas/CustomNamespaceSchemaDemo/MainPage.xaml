@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:controls="http://mycompany.com/schemas/controls"
+             x:Class="CustomNamespaceSchemaDemo.MainPage">
+    <StackLayout Margin="20,35,20,20">
+        <controls:HeadingLabel Text="Custom Namespace Schemas" />
+        <Label Text="This page demos using controls from a simple control library. The controls are consumed through a custom namespace schema, which is defined in the library via the XmlnsDefinition attribute." />
+        <controls:Separator />
+        <controls:CircleButton Text="+"
+                               BackgroundColor="Fuchsia"
+                               BorderColor="Black"
+                               CircleDiameter="100" />
+        <controls:CircleButton Text="-" 
+                               BackgroundColor="Teal"
+                               BorderColor="Silver"
+                               CircleDiameter="70" />
+        <controls:Separator />
+        <Label Text="Click the Label below to view Xamarin documentation." />
+        <controls:HyperlinkLabel Text="Xamarin documentation"
+                                 Url="https://docs.microsoft.com/xamarin/"
+                                 HorizontalOptions="Center" />
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Alternatively, click " />
+                    <controls:HyperlinkSpan Text="here"
+                                            Url="https://docs.microsoft.com/appcenter/" />
+                    <Span Text=" to view AppCenter documentation." />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentPage>

@@ -11,7 +11,7 @@
   <ItemGroup>
     <PackageReference Include="CocosSharp" Version="1.7.1.0" />
     <PackageReference Include="CocosSharp.Forms" Version="1.7.1.0" />
-    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="Xamarin.Forms" Version="3.5.0.129452" />
   </ItemGroup>
 
 </Project>
