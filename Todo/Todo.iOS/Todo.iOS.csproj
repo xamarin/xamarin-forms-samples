@@ -113,9 +113,6 @@
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Net.Http" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="Todo">
-      <HintPath>..\Todo\bin\Debug\netstandard2.0\Todo.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -144,6 +141,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Todo\Todo.csproj">
       <Project>{5F610EA1-9E35-4870-AE9B-5E18B4B4D5B8}</Project>
+      <Name>Todo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Todo\Todo.csproj">
+      <Project>{5f610ea1-9e35-4870-ae9b-5e18b4b4d5b8}</Project>
       <Name>Todo</Name>
     </ProjectReference>
   </ItemGroup>
