@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleMetadata>
+	<ID>D2A29B92-2112-4F19-BA08-7DC8BCDA4014</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Beginner</Level>
+	<Tags>Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>false</Gallery>
+	<Brief>This sample demonstrates how to display alerts and action sheets with Xamarin.Forms, to ask users simple questions, and to guide users through tasks.</Brief>
+</SampleMetadata>

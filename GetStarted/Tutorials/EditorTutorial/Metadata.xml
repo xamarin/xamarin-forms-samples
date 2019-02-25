@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleMetadata>
+	<ID>C1B88963-AB7C-48F1-8382-7A02E8E7E7F2</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Beginner</Level>
+	<Tags>Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>false</Gallery>
+	<Brief>This sample demonstrates how to accept multi-line text input, using the Xamarin.Forms Editor view.</Brief>
+</SampleMetadata>
