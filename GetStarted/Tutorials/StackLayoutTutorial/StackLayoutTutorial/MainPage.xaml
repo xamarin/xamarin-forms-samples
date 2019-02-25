@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="StackLayoutTutorial.MainPage">
+<!--    <StackLayout Margin="20,35,20,25">
+        <Label Text="The StackLayout has its Margin property set, to control the rendering position of the StackLayout." />
+        <Label Text="The Padding property can be set to specify the distance between the StackLayout and its children." />
+        <Label Text="The Spacing property can be set to specify the distance between views in the StackLayout." />
+    </StackLayout>-->
+    
+    <StackLayout Margin="20,35,20,25">
+        <Label Text="Start"
+               HorizontalOptions="Start"
+               BackgroundColor="Gray" />
+        <Label Text="Center"
+               HorizontalOptions="Center"
+               BackgroundColor="Gray" />
+        <Label Text="End"
+               HorizontalOptions="End"
+               BackgroundColor="Gray" />
+        <Label Text="Fill"
+               HorizontalOptions="Fill"
+               BackgroundColor="Gray" />
+        <Label Text="StartAndExpand"
+               VerticalOptions="StartAndExpand"
+               BackgroundColor="Gray" />
+        <Label Text="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"
+               BackgroundColor="Gray" />
+        <Label Text="EndAndExpand"
+               VerticalOptions="EndAndExpand"
+               BackgroundColor="Gray" />
+        <Label Text="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               BackgroundColor="Gray" />
+    </StackLayout>
+    
+</ContentPage>

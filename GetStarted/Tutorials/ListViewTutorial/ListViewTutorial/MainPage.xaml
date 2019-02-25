@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="ListViewTutorial.MainPage">
+    <StackLayout Margin="20,35,20,20">
+<!--        <ListView>
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                  <x:String>Baboon</x:String>
+                  <x:String>Capuchin Monkey</x:String>
+                  <x:String>Blue Monkey</x:String>
+                  <x:String>Squirrel Monkey</x:String>
+                  <x:String>Golden Lion Tamarin</x:String>
+                  <x:String>Howler Monkey</x:String>
+                  <x:String>Japanese Macaque</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>-->
+        
+<!--       <ListView ItemsSource="{Binding Monkeys}"
+                 ItemSelected="OnListViewItemSelected"
+                 ItemTapped="OnListViewItemTapped" />-->
+        
+       <ListView ItemsSource="{Binding Monkeys}"
+                  HasUnevenRows="true"
+                  ItemSelected="OnListViewItemSelected"
+                  ItemTapped="OnListViewItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.RowSpan="2" 
+                                   Source="{Binding ImageUrl}" 
+                                   Aspect="AspectFill"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                            <Label Grid.Column="1" 
+                                   Text="{Binding Name}"
+                                   FontAttributes="Bold" />
+                            <Label Grid.Row="1" 
+                                   Grid.Column="1" 
+                                   Text="{Binding Location}"
+                                   VerticalOptions="End" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </StackLayout>
+</ContentPage>
