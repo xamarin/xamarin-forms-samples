@@ -8,5 +8,6 @@ namespace BindableLayoutDemo.Models
         public string Email { get; set; }
         public IEnumerable<string> TopFollowers { get; set; }
         public IEnumerable<string> FavoriteTech { get; set; }
+        public IEnumerable<string> Achievements { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace PickerDemo
 		{
 			InitializeComponent();
 
-			MainPage = new PickerDemoPage();
+            MainPage = new PickerDemoPage();
 		}
 
 		protected override void OnStart()

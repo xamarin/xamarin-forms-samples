@@ -38,7 +38,7 @@ namespace PlatformSpecifics
             });
 
             var listView = new Xamarin.Forms.ListView { IsGroupingEnabled = true, ItemTemplate = personDataTemplate };
-            listView.SetBinding(ItemsView<Cell>.ItemsSourceProperty, "GroupedEmployees");
+            listView.SetBinding(ItemsView<Xamarin.Forms.Cell>.ItemsSourceProperty, "GroupedEmployees");
             listView.GroupDisplayBinding = new Binding("Key");
 
             Title = "Pan Gesture Recognizer";

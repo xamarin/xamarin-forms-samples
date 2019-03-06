@@ -166,5 +166,6 @@
     <BundleResource Include="Resources\david.jpg" />
     <BundleResource Include="Resources\microsoft_gray.png" />
     <BundleResource Include="Resources\fa-solid-900.ttf" />
+    <BundleResource Include="Resources\ionicons.ttf" />
   </ItemGroup>
 </Project>

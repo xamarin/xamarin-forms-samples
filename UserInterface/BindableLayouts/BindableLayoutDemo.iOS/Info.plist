@@ -37,6 +37,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>fa-solid-900.ttf</string>
+		<string>ionicons.ttf</string>
 	</array>
 </dict>
 </plist>

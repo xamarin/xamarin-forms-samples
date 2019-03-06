@@ -23,7 +23,7 @@
 
         <!-- Explicit Styles -->
         <Style x:Key="labelHeading" TargetType="Label">
-            <Setter Property="TextColor" Value="#303030" />
+            <Setter Property="TextColor" Value="{StaticResource primaryColor}" />
             <Setter Property="FontSize" Value="{StaticResource mediumTextSize}" />
         </Style>
 
@@ -67,7 +67,7 @@
                                         XamarinFormsTemplate="{StaticResource formsTemplate}" />        
     </ContentPage.Resources>
     
-    <StackLayout>
+    <StackLayout> 
         <AbsoluteLayout BackgroundColor="#909090"
                         HeightRequest="60">
             <AbsoluteLayout.Padding>
@@ -146,6 +146,26 @@
                         Wrap="Wrap"
                         JustifyContent="Start"
                         Margin="0,10,0,0" />
+             
+            <Label Text="Achievements"
+                   Margin="0,10,0,0"
+                   Style="{StaticResource labelHeading}" />
+            <StackLayout BindableLayout.ItemsSource="{Binding User.Achievements}"
+                         Orientation="Horizontal"
+                         Margin="0,10,0,0"
+                         Spacing="20">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Image BackgroundColor="#D1D1D1">
+                            <Image.Source>
+                                <FontImageSource Glyph="{Binding}"
+                                                 FontFamily="{OnPlatform iOS=Ionicons, Android=ionicons.ttf#}"
+                                                 Size="44" />
+                            </Image.Source>
+                        </Image>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
         </StackLayout>
     </StackLayout>
 </ContentPage>

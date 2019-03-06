@@ -18,6 +18,8 @@
             </Editor>
 			<Editor IsEnabled="false" Text="This is a disabled editor" />
             <Editor Placeholder="This is placeholder text" PlaceholderColor="Olive" />
+            <Editor Text="This is a read-only Editor"
+                    IsReadOnly="true" />
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
