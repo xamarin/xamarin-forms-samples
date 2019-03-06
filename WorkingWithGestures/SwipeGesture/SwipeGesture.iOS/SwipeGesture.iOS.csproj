@@ -155,7 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
-      <Version>3.5.0.129452</Version>
+      <Version>3.6.0.220655</Version>
     </PackageReference>
   </ItemGroup>
 </Project>

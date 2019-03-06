@@ -27,11 +27,14 @@ namespace PlatformSpecifics
             });
 
             var listView = new Xamarin.Forms.ListView { IsGroupingEnabled = true, ItemTemplate = personDataTemplate };
-            listView.SetBinding(ItemsView<Cell>.ItemsSourceProperty, "GroupedEmployees");
+            listView.SetBinding(ItemsView<Xamarin.Forms.Cell>.ItemsSourceProperty, "GroupedEmployees");
             listView.GroupDisplayBinding = new Binding("Key");
-			listView.On<iOS>().SetSeparatorStyle(SeparatorStyle.FullWidth);
+            listView.On<iOS>()
+                .SetSeparatorStyle(SeparatorStyle.FullWidth)
+                .SetRowAnimationsEnabled(false)
+                .SetGroupHeaderStyle(GroupHeaderStyle.Plain);
 
-			Title = "ListView FullWidth Separators";
+			Title = "ListView Platform-Specifics";
             Content = new StackLayout
             {
                 Margin = new Thickness(20),

@@ -29,9 +29,12 @@
             <TextCell Text="NavigationPage Status Bar Text Color Mode"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:iOSStatusBarTextColorModePage}" />
-            <TextCell Text="ListView FullWidth Separators"
+            <TextCell Text="ListView Platform-Specifics"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:iOSListViewPage}" />
+            <TextCell Text="ListView/Cell Platform-Specifics"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSListViewWithCellPage}" />
             <TextCell Text="VisualElement Legacy Color Mode"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:LegacyColorModePage}" />

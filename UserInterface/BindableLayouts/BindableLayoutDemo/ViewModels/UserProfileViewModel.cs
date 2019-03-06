@@ -24,6 +24,10 @@ namespace BindableLayoutDemo.ViewModels
                 FavoriteTech = new string[]
                 {
                     ".NET", "C#", "Xamarin.Forms", "XAML", "SkiaSharp", "Azure"
+                },
+                Achievements = new string[]
+                {
+                    "\uf2d2", "\uf2ba", "\uf30c"
                 }
             };
         }
