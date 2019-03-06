@@ -78,7 +78,7 @@
     <PackageReference Include="SQLitePCLRaw.core" Version="1.1.2" />
     <PackageReference Include="SQLitePCLRaw.provider.sqlite3.ios_unified" Version="1.1.2" />
     <PackageReference Include="Validation" Version="2.2.8" />
-    <PackageReference Include="Xamarin.Forms" Version="3.5.0.129452" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

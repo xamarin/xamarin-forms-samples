@@ -14,7 +14,7 @@
     <PackageReference Include="SQLitePCL.raw" Version="0.9.3" />
     <PackageReference Include="SQLitePCLRaw.bundle_green" Version="1.1.0" />
     <PackageReference Include="SQLitePCLRaw.core" Version="1.1.0" />
-    <PackageReference Include="Xamarin.Forms" Version="3.5.0.129452" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
   </ItemGroup>
 
 </Project>
