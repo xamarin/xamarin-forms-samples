@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="VisualDemos.ProgressBarPage"
+             Title="ProgressBars"
+             Visual="Material">
+    <StackLayout Spacing="20" 
+                 Padding="10"  
+                 BackgroundColor="White">
+        <Label Text="Animating"
+               Margin="0,0,0,-10" />
+        <ProgressBar Progress="{Binding PercentageCounter}" />
+        
+        <Label Text="Animating and HeightRequest" 
+               Margin="0,0,0,-10" />
+        <ProgressBar HeightRequest="30" 
+                     Progress="{Binding PercentageCounter}" />
+                     
+        <Label Text="0%" 
+               Margin="0,0,0,-10" />
+        <ProgressBar />
+        
+        <Label Text="50%"
+               Margin="0,0,0,-10" />
+        <ProgressBar Progress="0.5" />
+
+        <Label Text="ProgressColor" 
+               Margin="0,0,0,-10" />
+        <ProgressBar Progress="0.5" 
+                     ProgressColor="{StaticResource PrimaryColor}" />
+
+        <Label Text="BackgroundColor"
+               Margin="0,0,0,-10" />
+        <ProgressBar Progress="0.5" 
+                     BackgroundColor="{StaticResource SecondaryColor}" />
+
+        <Label Text="BackgroundColor and ProgressColor" 
+               Margin="0,0,0,-10" />
+        <ProgressBar Progress="0.5" 
+                     ProgressColor="{StaticResource PrimaryColor}" 
+                     BackgroundColor="{StaticResource SecondaryColor}" />
+    </StackLayout>
+</ContentPage>

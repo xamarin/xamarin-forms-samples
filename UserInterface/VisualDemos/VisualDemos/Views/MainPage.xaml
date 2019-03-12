@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:VisualDemos" 
+             x:Class="VisualDemos.MainPage"
+             Title="Visual Demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Material Visual">
+                <TextCell Text="Activity Indicators"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ActivityIndicatorPage}" />
+                <TextCell Text="Buttons"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ButtonPage}" />
+                <TextCell Text="Cards"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CardPage}" />
+                <TextCell Text="Editors"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:EditorPage}" />                
+                <TextCell Text="Entries"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:EntryPage}" />
+                <TextCell Text="Pickers"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PickerPage}" />               
+                <TextCell Text="ProgressBar"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ProgressBarPage}" />              
+                <TextCell Text="Sliders"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SliderPage}" />
+                <TextCell Text="Steppers"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:StepperPage}" />               
+            </TableSection>
+            
+            <TableSection Title="Visual">
+                <TextCell Text="Custom Visual"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CustomVisualPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="VisualDemos.EditorPage"
+             Title="Editors"
+             Visual="Material">
+    <ScrollView>
+        <StackLayout Spacing="20" 
+                     Padding="10"
+                     BackgroundColor="White">
+            <Label Text="Default" 
+                   Margin="0,0,0,-10" />       
+            <Editor AutoSize="TextChanges"
+                    Placeholder="Enter notes here" />
+ 
+            <Label Text="Disabled" 
+                   Margin="0,0,0,-10" />       
+            <Editor AutoSize="TextChanges"
+                    Placeholder="Enter notes here"
+                    IsEnabled="false"/>            
+            
+            <Label Text="PlaceholderColor" 
+                   Margin="0,0,0,-10" />        
+            <Editor AutoSize="TextChanges" 
+                    Placeholder="Enter notes here"
+                    PlaceholderColor="{StaticResource SecondaryColor}" />
+            
+            <Label Text="PlaceholderColor and TextColor" 
+                   Margin="0,0,0,-10" />        
+            <Editor AutoSize="TextChanges" 
+                    Placeholder="Enter notes here"
+                    PlaceholderColor="{StaticResource SecondaryColor}"
+                    TextColor="{StaticResource PrimaryColor}" />
+            
+            <Label Text="PlaceholderColor, TextColor, BackgroundColor" 
+                   Margin="0,0,0,-10" />        
+            <Editor AutoSize="TextChanges" 
+                    Placeholder="Enter notes here"
+                    PlaceholderColor="{StaticResource SecondaryColor}"
+                    TextColor="{StaticResource TextColor}"
+                    BackgroundColor="{StaticResource PrimaryColor}" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

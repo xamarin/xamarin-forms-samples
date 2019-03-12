@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="VisualDemos.StepperPage"
+             Title="Steppers"
+             Visual="Material">
+    <StackLayout Spacing="20"
+                 Padding="10"
+                 BackgroundColor="White">
+        <Label Text="Default"
+               Margin="0,0,0,-10" />
+        <Stepper />
+        <Label Text="Disabled"
+               Margin="0,0,0,-10" />
+        <Stepper IsEnabled="false" />
+        <Label Text="Width"
+               Margin="0,0,0,-10" />
+        <Stepper WidthRequest="100"
+                 HorizontalOptions="Center" />
+        <Label Text="Height"
+               Margin="0,0,0,-10" />           
+        <Stepper HeightRequest="100" />
+        <Label Text="Width and Height"
+               Margin="0,0,0,-10" />
+        <Stepper HeightRequest="100" 
+                 WidthRequest="100"
+                 HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>

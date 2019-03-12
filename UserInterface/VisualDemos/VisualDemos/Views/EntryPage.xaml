@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="VisualDemos.EntryPage"
+             Title="Entries"
+             Visual="Material">
+        <StackLayout Spacing="20" 
+                     Padding="10"
+                     BackgroundColor="White">
+            <FlexLayout Direction="Row" 
+                        Wrap="Wrap" 
+                        JustifyContent="SpaceBetween" 
+                        AlignItems="Start">
+                <Entry Placeholder="Item" 
+                       Text="Vintage Dress"
+                       PlaceholderColor="{StaticResource QuinaryColor}" 
+                       TextColor="{StaticResource PrimaryColor}" 
+                       BackgroundColor="#ddd"
+                       FlexLayout.Basis="100%"
+                       Margin="0,0,0,10" />
+                <Entry Placeholder="Price" 
+                       Text="$20"
+                       PlaceholderColor="{StaticResource QuinaryColor}" 
+                       TextColor="{StaticResource PrimaryColor}" 
+                       BackgroundColor="#ddd"
+                       FlexLayout.Basis="30%" />
+                <Entry Placeholder="Size"
+                       PlaceholderColor="{StaticResource QuinaryColor}" 
+                       TextColor="{StaticResource PrimaryColor}" 
+                       BackgroundColor="#ddd"
+                       FlexLayout.Basis="60%" />
+            </FlexLayout>
+        </StackLayout>
+</ContentPage>
