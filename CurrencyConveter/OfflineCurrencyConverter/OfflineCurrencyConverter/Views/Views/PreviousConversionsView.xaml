@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="OfflineCurrencyConverter.Views.Views.PreviousConversionsView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="PrevConversionsView">
+    <ContentView.Content>
+        <Grid>
+            <ListView
+                x:Name="ConversionsList"
+                ItemsSource="{Binding BindingContext, Source={x:Reference PrevConversionsView}, Mode=TwoWay}"
+                SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Grid HorizontalOptions="FillAndExpand">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0" Orientation="Horizontal">
+                                        <Label
+                                            Opacity="0.8"
+                                            Style="{StaticResource HeadingLabelStyle}"
+                                            Text="{Binding FromAmount}" />
+                                        <Label Style="{StaticResource HeadingLabelStyle}" Text="{Binding CurrencyFromSymbol}" />
+                                    </StackLayout>
+                                    <Label
+                                        Grid.Column="1"
+                                        Style="{StaticResource FontAzesomeLabel}"
+                                        Text="&#xf061;"
+                                        VerticalOptions="Center">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                                <On Platform="UWP" Value="{StaticResource LargerSize}" />
+                                                <On Platform="Android, iOS" Value="{StaticResource LargerSize}" />
+                                            </OnPlatform>
+                                        </Label.FontSize>
+                                    </Label>
+                                    <StackLayout
+                                        Grid.Column="2"
+                                        HorizontalOptions="End"
+                                        Orientation="Horizontal">
+                                        <Label
+                                            Opacity="0.8"
+                                            Style="{StaticResource BoldHeadingLabelStyle}"
+                                            Text="{Binding ToAmount}" />
+                                        <Label
+                                            Opacity="0.8"
+                                            Style="{StaticResource BoldHeadingLabelStyle}"
+                                            Text="{Binding CurrencyToSymbol}" />
+                                    </StackLayout>
+                                </Grid>
+                                <Label
+                                    Grid.Row="1"
+                                    HorizontalOptions="FillAndExpand"
+                                    Style="{StaticResource SubheadingLabelStyle}"
+                                    Text="{Binding ToStringText}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

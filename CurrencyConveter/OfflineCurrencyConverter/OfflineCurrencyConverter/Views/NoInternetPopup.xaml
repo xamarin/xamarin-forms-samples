@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popupPages:PopupPage
+    x:Class="OfflineCurrencyConverter.Views.NoInternetPopup"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:markupExtensions="clr-namespace:OfflineCurrencyConverter.Views.MarkupExtensions"
+    xmlns:popupPages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    x:Name="WarningPopup">
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid
+                Grid.Row="1"
+                Grid.Column="1"
+                HeightRequest="210"
+                WidthRequest="300">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Button
+                    BackgroundColor="Transparent"
+                    Clicked="Button_Clicked"
+                    FontFamily="{StaticResource FontAwesomeBold}"
+                    FontSize="{StaticResource LargerSize}"
+                    HorizontalOptions="End"
+                    Text="&#xf00d;"
+                    TextColor="White"
+                    VerticalOptions="Center">
+                    <Button.Margin>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="iOS, Android" Value="0,0,-30,-15" />
+                            <On Platform="UWP" Value="0" />
+                        </OnPlatform>
+                    </Button.Margin>
+                </Button>
+
+                <BoxView Grid.Row="1" BackgroundColor="White" />
+
+                <StackLayout Grid.Row="1" Margin="20">
+                    <Label
+                        Style="{StaticResource BoldHeadingLabelStyle}"
+                        Text="{markupExtensions:Translate InternetWarning}"
+                        TextColor="{StaticResource DolarBillGreen}" />
+                    <Label Text="{Binding WarningExplanation, Source={x:Reference WarningPopup}}" />
+                </StackLayout>
+
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</popupPages:PopupPage>

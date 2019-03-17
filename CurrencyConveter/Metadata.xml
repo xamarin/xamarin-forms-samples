@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleMetadata>
+	<ID>59ecc2c7-c91e-48cb-aba3-7190198d45cc</ID>
+	<IsFullApplication>true</IsFullApplication>
+	<Level>Intermediate</Level>
+	<Tags>XAML, User Interface, Multillingual, Xamarin.Forms, Responsive Layout, Offline Sync, Rest API consumption, Ads, Share, Appcenter Analytics</Tags>
+	<SupportedPlatforms>iOS, Android, UWP</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>This is a simple currency converter which functions offline and regularly updates exchange rates and leverages some usefull Xamarin.Forms Features.</Brief>
+</SampleMetadata>

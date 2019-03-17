@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="OfflineCurrencyConverter.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:OfflineCurrencyConverter.Views.Converters">
+    <Application.Resources>
+
+        <!--  Black Text Color  -->
+
+        <Color x:Key="BlackTextColor">#012601</Color>
+        <Color x:Key="DolarBillGreen">#85bb65</Color>
+        <Color x:Key="Golden">#FFDF00</Color>
+
+
+        <converters:RoundDoubleConverter x:Key="RoundDblConverter" />
+
+        <OnPlatform x:Key="BaseContainerPadding" x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                10, 10, 10, 10
+            </OnPlatform.iOS>
+            <OnPlatform.Android>
+                8, 8, 8, 8
+            </OnPlatform.Android>
+            <OnPlatform.WinPhone>
+                10, 10, 10, 10
+            </OnPlatform.WinPhone>
+        </OnPlatform>
+
+
+        <Style TargetType="{x:Type ActivityIndicator}">
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="WidthRequest">
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android, iOS" Value="100" />
+                        <On Platform="UWP" Value="300" />
+                    </OnPlatform>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <!--  FONTS  -->
+
+        <OnPlatform
+            x:Key="FontAwesomeBold"
+            x:TypeArguments="x:String"
+            Android="Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid"
+            WinPhone="Assets/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free"
+            iOS="Font Awesome 5 Free" />
+        <OnPlatform
+            x:Key="FontAwesomeRegular"
+            x:TypeArguments="x:String"
+            Android="Font Awesome 5 Free-Regular-400.otf#Font Awesome 5 Free Solid"
+            WinPhone="Assets/Font Awesome 5 Free-Regular-400.otf#Font Awesome 5 Free"
+            iOS="Font Awesome 5 Free" />
+
+        <OnPlatform
+            x:Key="GloriaHallelujah"
+            x:TypeArguments="x:String"
+            Android="GloriaHallelujah.ttf#GloriaHallelujah"
+            WinPhone="/Assets/GloriaHallelujah.ttf#GloriaHallelujah"
+            iOS="GloriaHallelujah.ttf" />
+
+        <OnPlatform
+            x:Key="PoppinsBold"
+            x:TypeArguments="x:String"
+            Android="Poppins-Bold.ttf#Poppins"
+            WinPhone="/Assets/Poppins-Bold.ttf#Poppins"
+            iOS="Poppins-Bold" />
+
+        <OnPlatform
+            x:Key="PoppinsLight"
+            x:TypeArguments="x:String"
+            Android="Poppins-Light.ttf#Poppins"
+            WinPhone="/Assets/Poppins-Light.ttf#Poppins"
+            iOS="Poppins-Light" />
+
+        <OnPlatform
+            x:Key="PoppinsMedium"
+            x:TypeArguments="x:String"
+            Android="Poppins-Medium.ttf#Poppins"
+            WinPhone="/Assets/Poppins-Medium.ttf#Poppins"
+            iOS="Poppins-Medium" />
+
+        <OnPlatform
+            x:Key="PoppinsRegular"
+            x:TypeArguments="x:String"
+            Android="Poppins-Regular.ttf#Poppins"
+            WinPhone="/Assets/Poppins-Regular.ttf#Poppins"
+            iOS="Poppins-Regular" />
+
+        <OnPlatform
+            x:Key="PoppinsSemiBold"
+            x:TypeArguments="x:String"
+            Android="Poppins-SemiBold.ttf#Poppins"
+            WinPhone="/Assets/Poppins-SemiBold.ttf#Poppins"
+            iOS="Poppins-SemiBold" />
+
+        <OnPlatform
+            x:Key="FiraSansBold"
+            x:TypeArguments="x:String"
+            Android="FiraSans-Bold.ttf#Fira Sans"
+            WinPhone="/Assets/FiraSans-Bold.ttf#Fira Sans"
+            iOS="FiraSans-Bold" />
+
+        <OnPlatform
+            x:Key="FiraSansSemiBold"
+            x:TypeArguments="x:String"
+            Android="FiraSans-SemiBold.ttf#Fira Sans"
+            WinPhone="/Assets/FiraSans-SemiBold.ttf#Fira Sans"
+            iOS="FiraSans-SemiBold" />
+
+        <OnPlatform
+            x:Key="FiraSansRegular"
+            x:TypeArguments="x:String"
+            Android="FiraSans-Regular.ttf#Fira Sans"
+            WinPhone="/Assets/FiraSans-Regular.ttf#Fira Sans"
+            iOS="FiraSans-Regular" />
+
+        <OnPlatform
+            x:Key="LittleSize"
+            x:TypeArguments="x:Double"
+            Android="13"
+            WinPhone="12"
+            iOS="11" />
+
+        <OnPlatform
+            x:Key="MidMediumSize"
+            x:TypeArguments="x:Double"
+            Android="15"
+            WinPhone="14"
+            iOS="12" />
+
+        <OnPlatform
+            x:Key="MediumSize"
+            x:TypeArguments="x:Double"
+            Android="16"
+            WinPhone="16"
+            iOS="14" />
+
+        <OnPlatform
+            x:Key="LargeSize"
+            x:TypeArguments="x:Double"
+            Android="18"
+            WinPhone="18"
+            iOS="16" />
+
+        <OnPlatform
+            x:Key="LargerSize"
+            x:TypeArguments="x:Double"
+            Android="20"
+            WinPhone="20"
+            iOS="18" />
+
+        <OnPlatform
+            x:Key="BigSize"
+            x:TypeArguments="x:Double"
+            Android="24"
+            WinPhone="24"
+            iOS="20" />
+
+        <OnPlatform
+            x:Key="ExtraBigSize"
+            x:TypeArguments="x:Double"
+            Android="32"
+            WinPhone="32"
+            iOS="24" />
+
+        <OnPlatform
+            x:Key="HugeSize"
+            x:TypeArguments="x:Double"
+            Android="48"
+            WinPhone="48"
+            iOS="32" />
+
+        <OnPlatform
+            x:Key="ExtraHugeSize"
+            x:TypeArguments="x:Double"
+            Android="65"
+            WinPhone="65"
+            iOS="50" />
+
+
+        <!--  Labels  -->
+        <Style x:Key="BaseLabelStyle" TargetType="{x:Type Label}">
+            <Setter Property="FontFamily" Value="{StaticResource FiraSansRegular}" />
+            <Setter Property="FontSize" Value="{StaticResource MediumSize}" />
+            <Setter Property="LineBreakMode" Value="WordWrap" />
+            <Setter Property="TextColor" Value="{StaticResource BlackTextColor}" />
+        </Style>
+
+        <Style BasedOn="{StaticResource BaseLabelStyle}" TargetType="{x:Type Label}" />
+
+        <Style
+            x:Key="SubheadingLabelStyle"
+            BasedOn="{StaticResource BaseLabelStyle}"
+            TargetType="{x:Type Label}">
+            <Setter Property="Opacity" Value="0.7" />
+            <Setter Property="FontSize" Value="{OnPlatform Default={StaticResource LittleSize}, iOS={StaticResource MidMediumSize}}" />
+        </Style>
+
+        <Style
+            x:Key="HeadingLabelStyle"
+            BasedOn="{StaticResource BaseLabelStyle}"
+            TargetType="{x:Type Label}">
+            <Setter Property="FontSize" Value="{StaticResource LargerSize}" />
+        </Style>
+        <Style
+            x:Key="BoldHeadingLabelStyle"
+            BasedOn="{StaticResource HeadingLabelStyle}"
+            TargetType="{x:Type Label}">
+            <Setter Property="FontFamily" Value="{StaticResource FiraSansSemiBold}" />
+        </Style>
+
+        <Style x:Key="FontAzesomeLabel" TargetType="{x:Type Label}">
+            <Setter Property="FontAttributes" Value="{OnPlatform iOS=Bold}"/>
+            <Setter Property="FontFamily" Value="{StaticResource FontAwesomeBold}" />
+            <Setter Property="FontSize" Value="{StaticResource LargerSize}" />
+            <Setter Property="TextColor" Value="{StaticResource DolarBillGreen}" />
+        </Style>
+
+        <!--  Buttons  -->
+
+        <Style x:Key="BasicButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FontFamily" Value="{StaticResource FiraSansRegular}" />
+            <Setter Property="TextColor" Value="{StaticResource BlackTextColor}" />
+            <Setter Property="Opacity" Value="0.8" />
+        </Style>
+        <Style
+            x:Key="EmphasisButtonStyle"
+            BasedOn="{StaticResource BasicButtonStyle}"
+            TargetType="{x:Type Button}">
+            <Setter Property="Opacity" Value="1" />
+            <Setter Property="BackgroundColor" Value="{StaticResource DolarBillGreen}" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontFamily" Value="{StaticResource FiraSansBold}" />
+        </Style>
+
+        <Style x:Key="ActionButtonStyle" TargetType="Button">
+            <Setter Property="Opacity" Value="0.85" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="FontFamily" Value="{StaticResource FontAwesomeBold}" />
+            <Setter Property="FontSize" Value="{StaticResource BigSize}" />
+        </Style>
+
+        <Style
+                x:Key="DoneButtonStyle"
+                BasedOn="{StaticResource ActionButtonStyle}"
+                TargetType="{x:Type Button}">
+            <Setter Property="Text" Value="&#xf00c;" />
+        </Style>
+
+        <Style
+                x:Key="CancelButtonStyle"
+                BasedOn="{StaticResource ActionButtonStyle}"
+                TargetType="{x:Type Button}">
+            <Setter Property="Text" Value="&#xf00d;" />
+        </Style>
+        
+        <Style BasedOn="{StaticResource BasicButtonStyle}" TargetType="{x:Type Button}" />
+
+    </Application.Resources>
+</Application>

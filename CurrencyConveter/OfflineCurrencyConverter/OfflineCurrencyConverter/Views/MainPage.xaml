@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="OfflineCurrencyConverter.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:base="clr-namespace:OfflineCurrencyConverter"
+    xmlns:behaviors="clr-namespace:OfflineCurrencyConverter.Views.Behaviors"
+    xmlns:markupExtensions="clr-namespace:OfflineCurrencyConverter.Views.MarkupExtensions"
+    xmlns:renderers="clr-namespace:OfflineCurrencyConverter.Views.CustomRenderers"
+    xmlns:views="clr-namespace:OfflineCurrencyConverter.Views.Views"
+    BindingContext="{x:Static base:AppLocator.MainViewModel}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary />
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" />
+                <RowDefinition />
+                <RowDefinition Height="90" />
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Image
+                    x:Name="HeaderImage"
+                    Grid.ColumnSpan="3"
+                    Margin="0,0,0,40"
+                    Aspect="AspectFill"
+                    HorizontalOptions="FillAndExpand"
+                    Source="{markupExtensions:ImageSource Source=AllCurrencies_Faded.PNG}"
+                    VerticalOptions="FillAndExpand" />
+
+                <Image
+                    Grid.Column="1"
+                    Margin="0,40,0,0"
+                    HorizontalOptions="Center"
+                    HeightRequest="{OnPlatform iOS=100, Default=90}"
+                    WidthRequest="{OnPlatform iOS=100, Default=90}"
+                    Source="{markupExtensions:ImageSource Source=app_icon.png}"
+                    VerticalOptions="End" />
+
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid
+                    x:Name="MainGrid"
+                    Grid.Column="0"
+                    Padding="{StaticResource BaseContainerPadding}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <ScrollView>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <StackLayout
+                                Margin="0,10,0,20"
+                                HorizontalOptions="Center"
+                                IsVisible="{Binding CanShowResultLabel, Mode=TwoWay}"
+                                VerticalOptions="Center">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Style="{StaticResource BoldHeadingLabelStyle}" Text="{Binding ConvertedAmount, Mode=TwoWay, Converter={StaticResource RoundDblConverter}}" />
+                                    <Label Style="{StaticResource BoldHeadingLabelStyle}" Text="{Binding ToCurrencySymbol}" />
+                                </StackLayout>
+                                <Label
+                                    HorizontalOptions="Center"
+                                    Style="{StaticResource SubheadingLabelStyle}"
+                                    Text="{markupExtensions:Translate Result}" />
+                            </StackLayout>
+
+                            <StackLayout
+                                Grid.Row="1"
+                                Margin="0,-5,0,10"
+                                HorizontalOptions="Center">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Style="{StaticResource HeadingLabelStyle}" Text="{Binding AmountToConvert}" />
+                                    <Label Style="{StaticResource HeadingLabelStyle}" Text="{Binding FromCurrencySymbol, Mode=TwoWay}" />
+                                    <Label
+                                        Style="{StaticResource FontAzesomeLabel}"
+                                        Text="&#xf061;"
+                                        FontAttributes="Bold"
+                                        VerticalOptions="Center">
+                                        <Label.FontSize>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                                <On Platform="UWP" Value="{StaticResource LargerSize}" />
+                                                <On Platform="Android, iOS" Value="{StaticResource LargerSize}" />
+                                            </OnPlatform>
+                                        </Label.FontSize>
+                                    </Label>
+                                    <Label
+                                        Style="{StaticResource HeadingLabelStyle}"
+                                        Text="{Binding ToCurrencySymbol, Mode=TwoWay}"
+                                        VerticalOptions="Center" />
+                                </StackLayout>
+                            </StackLayout>
+
+
+                            <Grid Grid.Row="2" Margin="0,0,0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <renderers:ExtendedEntry
+                                    Keyboard="Numeric"
+                                    LineColor="{StaticResource DolarBillGreen}"
+                                    Placeholder="{markupExtensions:Translate Amount}"
+                                    Text="{Binding AmountToConvert, Mode=TwoWay}">
+                                    <Entry.Behaviors>
+                                        <behaviors:PlainNumericEntryBehavior />
+                                    </Entry.Behaviors>
+                                </renderers:ExtendedEntry>
+                                <Label
+                                    Grid.Column="1"
+                                    FontFamily="{StaticResource FiraSansBold}"
+                                    HorizontalOptions="Center"
+                                    Style="{StaticResource HeadingLabelStyle}"
+                                    Text="{Binding FromCurrencySymbol, Mode=TwoWay}"
+                                    VerticalOptions="Center" />
+                            </Grid>
+
+                            <Grid Grid.Row="3" Margin="0,10,0,10">
+                                <Grid.Resources>
+                                    <ResourceDictionary>
+                                        <OnPlatform x:Key="PickerLabelMargin" x:TypeArguments="Thickness">
+                                            <On Platform="Android">
+                                                <On.Value>
+                                                    0,0,0,-15
+                                                </On.Value>
+                                            </On>
+                                            <On Platform="UWP, iOS">
+                                                <On.Value>
+                                                    0,0,0,0
+                                                </On.Value>
+                                            </On>
+                                        </OnPlatform>
+                                    </ResourceDictionary>
+                                </Grid.Resources>
+                                <StackLayout>
+                                    <StackLayout HorizontalOptions="FillAndExpand">
+                                        <Label
+                                            Margin="{StaticResource PickerLabelMargin}"
+                                            Style="{StaticResource SubheadingLabelStyle}"
+                                            Text="{markupExtensions:Translate From}" />
+                                        <Picker
+                                            ItemsSource="{Binding StringCurrencies}"
+                                            SelectedIndex="{Binding FromCurrencyIndex, Mode=TwoWay}"
+                                            SelectedItem="{Binding SelectedFromCurrency, Mode=TwoWay}" />
+                                    </StackLayout>
+                                    <StackLayout HorizontalOptions="FillAndExpand">
+                                        <Label
+                                            Margin="{StaticResource PickerLabelMargin}"
+                                            Style="{StaticResource SubheadingLabelStyle}"
+                                            Text="{markupExtensions:Translate To}" />
+                                        <Picker
+                                            ItemsSource="{Binding StringCurrencies}"
+                                            SelectedIndex="{Binding ToCurrencyIndex, Mode=TwoWay}"
+                                            SelectedItem="{Binding SelectedToCurrency, Mode=TwoWay}" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+
+                        </Grid>
+                    </ScrollView>
+
+                    <ActivityIndicator IsRunning="{Binding IsBusy}" />
+
+                    <Grid
+                        x:Name="ButtonGrid"
+                        Grid.Row="1"
+                        Margin="0,10,0,0">
+
+                        <Grid.Resources>
+                            <ResourceDictionary>
+                                <OnPlatform x:Key="ButtonHeight" x:TypeArguments="x:Double">
+                                    <On Platform="Android, iOS">
+                                        55
+                                    </On>
+                                    <On Platform="UWP">
+                                        35
+                                    </On>
+                                </OnPlatform>
+                            </ResourceDictionary>
+                        </Grid.Resources>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Button
+                            x:Name="ConvertButton"
+                            Grid.Column="0"
+                            Command="{Binding ConvertCommand}"
+                            HeightRequest="{StaticResource ButtonHeight}"
+                            HorizontalOptions="FillAndExpand"
+                            Style="{StaticResource EmphasisButtonStyle}"
+                            TextColor="White"
+                            Text="{markupExtensions:Translate Convert}"
+                            VerticalOptions="End" />
+                        <Button
+                            x:Name="ShareButton"
+                            Grid.Column="1"
+                            Command="{Binding ShareCommand}"
+                            HeightRequest="{StaticResource ButtonHeight}"
+                            HorizontalOptions="FillAndExpand"
+                            Text="{markupExtensions:Translate Share}"
+                            VerticalOptions="End" />
+                        <Button
+                            x:Name="PreviousConversionsButton"
+                            Grid.Column="2"
+                            Command="{Binding PreviousConversionsCommand}"
+                            HeightRequest="{StaticResource ButtonHeight}"
+                            HorizontalOptions="FillAndExpand"
+                            Text="{OnPlatform Default={markupExtensions:Translate ConversionHistory}, iOS={markupExtensions:Translate Previous}}"
+                            VerticalOptions="End" />
+                    </Grid>
+                </Grid>
+
+                <views:PreviousConversionsView
+                    x:Name="PreviousConversionsView"
+                    Grid.Column="1"
+                    BindingContext="{Binding Conversions, Mode=TwoWay}">
+                    <views:PreviousConversionsView.Margin>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="UWP">
+                                -8,-45,0,0
+                            </On>
+                            <On Platform="iOS">
+                                -8,-9.5,0,0
+                            </On>
+                            <On Platform="Android">
+                                -7,-7.5,0,0
+                            </On>
+                        </OnPlatform>
+                    </views:PreviousConversionsView.Margin>
+                </views:PreviousConversionsView>
+            </Grid>
+
+            <views:MyAdControl Grid.Row="2" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

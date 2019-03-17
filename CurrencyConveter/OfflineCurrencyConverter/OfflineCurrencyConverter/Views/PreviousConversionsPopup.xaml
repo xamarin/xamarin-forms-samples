@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popupPages:PopupPage
+    x:Class="OfflineCurrencyConverter.Views.PreviousConversionsPopup"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:popupPages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:views="clr-namespace:OfflineCurrencyConverter.Views.Views"
+    x:Name="PrevPopup">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid
+                Grid.Row="1"
+                Grid.Column="1"
+                HeightRequest="350">
+
+                <Grid.WidthRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android,iOS" Value="350" />
+                        <On Platform="UWP" Value="400" />
+                    </OnPlatform>
+                </Grid.WidthRequest>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Button
+                    BackgroundColor="Transparent"
+                    Clicked="Button_Clicked"
+                    FontAttributes="Bold"
+                    HeightRequest="50"
+                    WidthRequest="70"
+                    FontFamily="{StaticResource FontAwesomeBold}"
+                    FontSize="{StaticResource LargerSize}"
+                    HorizontalOptions="End"
+                    Text="&#xf00d;"
+                    TextColor="White"
+                    VerticalOptions="Center">
+                    <Button.Margin>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android" Value="0,0,-9,-30" />
+                            <On Platform="iOS" Value="0,0,-5,-30"/>
+                            <On Platform="UWP" Value="0,0,-5,-30" />
+                        </OnPlatform>
+                    </Button.Margin>
+                </Button>
+
+                <Grid Grid.Row="1">
+                    <views:PreviousConversionsView
+                        Margin="20"
+                        BackgroundColor="White"
+                        BindingContext="{Binding BindingContext, Source={x:Reference PrevPopup}}"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                </Grid>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</popupPages:PopupPage>

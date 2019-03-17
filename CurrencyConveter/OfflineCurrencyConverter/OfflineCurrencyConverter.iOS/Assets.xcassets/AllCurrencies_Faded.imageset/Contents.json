@@ -1,0 +1,27 @@
+{
+  "images": [
+    {
+      "scale": "1x",
+      "idiom": "universal"
+    },
+    {
+      "scale": "2x",
+      "idiom": "universal"
+    },
+    {
+      "scale": "3x",
+      "idiom": "universal",
+      "filename": "AllCurrencies_Faded1.PNG"
+    },
+    {
+      "idiom": "universal"
+    }
+  ],
+  "properties": {
+    "template-rendering-intent": ""
+  },
+  "info": {
+    "version": 1,
+    "author": ""
+  }
+}

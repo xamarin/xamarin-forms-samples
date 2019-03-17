@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="53682DamienDoumer.ACurrencyConverter" Publisher="CN=BA1C207B-0C08-4F23-B065-CFB1AA4ED664" Version="1.5.1.0" />
+  <mp:PhoneIdentity PhoneProductId="ac8c1f08-f4e3-4ed7-acba-e5a7ca21eab5" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>A Currency Converter</DisplayName>
+    <PublisherDisplayName>Damien Doumer</PublisherDisplayName>
+    <Logo>assets\Store\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="OfflineCurrencyConverter.UWP.App">
+      <uap:VisualElements DisplayName="A Currency Converter" Square150x150Logo="assets\Medium\Medium150x150Logo.png" Square44x44Logo="assets\AppList\AppList.png" Description="A realtime offline currency converter for Windows 10 devices. Fast and easy to use." BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="assets\Wide\Wide310x150Logo.png" Square310x310Logo="assets\Large\Large310x310Logo.png" Square71x71Logo="assets\Small\Small71x71Logo.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="assets\SplashScreen\SplashScreen.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

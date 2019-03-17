@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popupPages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:popupPages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                      xmlns:markupExtensions="clr-namespace:OfflineCurrencyConverter.Views.MarkupExtensions"
+             x:Class="OfflineCurrencyConverter.Views.ShareAppPopup"
+                      xmlns:base="clr-namespace:OfflineCurrencyConverter"
+                      BindingContext="{x:Static base:AppLocator.ShareAppPopupViewModel}">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid
+            Grid.Row="1"
+            Grid.Column="1"
+            BackgroundColor="White"
+            HeightRequest="300"
+            WidthRequest="300">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <BoxView BackgroundColor="{StaticResource DolarBillGreen}" />
+            <Label
+                Margin="10"
+                Style="{StaticResource BoldHeadingLabelStyle}"
+                Text="{markupExtensions:Translate Text=ShareTitle}"
+                TextColor="White" />
+
+            <Grid Grid.Row="1" Margin="10">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Editor
+                    Grid.ColumnSpan="2"
+                    Text="{Binding ShareMessage, Mode=TwoWay}"
+                    VerticalOptions="FillAndExpand" />
+
+                <Button
+                    Grid.Row="1"
+                    Margin="5,0,0,0"
+                    Command="{Binding ShareCommand}"
+                    Style="{StaticResource EmphasisButtonStyle}"
+                    Text="{markupExtensions:Translate Share}" />
+
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="0,0,5,0"
+                    BackgroundColor="White"
+                    Command="{Binding CancelCommand}"
+                    Style="{StaticResource BasicButtonStyle}" 
+                    Text="{markupExtensions:Translate Cancel}"/>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</popupPages:PopupPage>

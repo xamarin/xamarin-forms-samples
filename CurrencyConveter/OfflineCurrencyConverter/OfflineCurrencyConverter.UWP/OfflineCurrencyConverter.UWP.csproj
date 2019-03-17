@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{18301082-621F-4575-A71F-EC20AC4BE2E3}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OfflineCurrencyConverter.UWP</RootNamespace>
+    <AssemblyName>OfflineCurrencyConverter.UWP</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.17763.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>OfflineCurrencyConverter.UWP_StoreKey.pfx</PackageCertificateKeyFile>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>C9239DEC26FDEC355DD2E0ED73326774E13829C3</PackageCertificateThumbprint>
+    <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>
+    <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>false</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ColorExtensions.cs" />
+    <Compile Include="Extensions\DependencyObjectExtensions.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers\AdControlRenderer.cs" />
+    <Compile Include="Renderers\ExtendedEntryRenderer.cs" />
+    <Compile Include="Services\PlatformUtilityActions.cs" />
+    <Compile Include="Services\UWPDataStore.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AllCurrencies.PNG" />
+    <Content Include="Assets\AllCurrencies_Faded.PNG" />
+    <Content Include="Assets\AppList\AppList.scale-100.png" />
+    <Content Include="Assets\AppList\AppList.scale-125.png" />
+    <Content Include="Assets\AppList\AppList.scale-150.png" />
+    <Content Include="Assets\AppList\AppList.scale-200.png" />
+    <Content Include="Assets\AppList\AppList.scale-400.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-16.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-16_altform-unplated.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-20.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-20_altform-unplated.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-24.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-256.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-256_altform-unplated.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-30.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-30_altform-unplated.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-32.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-32_altform-unplated.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-36.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-36_altform-unplated.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-40.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-40_altform-unplated.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-48.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-48_altform-unplated.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-60.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-60_altform-unplated.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-64.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-64_altform-unplated.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-72.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-72_altform-unplated.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-80.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-80_altform-unplated.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-96.png" />
+    <Content Include="Assets\AppList\AppList.targetsize-96_altform-unplated.png" />
+    <Content Include="Assets\app_icon.png" />
+    <Content Include="Assets\Large\Large310x310Logo.scale-100.png" />
+    <Content Include="Assets\Large\Large310x310Logo.scale-125.png" />
+    <Content Include="Assets\Large\Large310x310Logo.scale-150.png" />
+    <Content Include="Assets\Large\Large310x310Logo.scale-200.png" />
+    <Content Include="Assets\Large\Large310x310Logo.scale-400.png" />
+    <Content Include="Assets\Medium\Medium150x150Logo.scale-100.png" />
+    <Content Include="Assets\Medium\Medium150x150Logo.scale-125.png" />
+    <Content Include="Assets\Medium\Medium150x150Logo.scale-150.png" />
+    <Content Include="Assets\Medium\Medium150x150Logo.scale-200.png" />
+    <Content Include="Assets\Medium\Medium150x150Logo.scale-400.png" />
+    <Content Include="Assets\Small\Small71x71Logo.scale-100.png" />
+    <Content Include="Assets\Small\Small71x71Logo.scale-125.png" />
+    <Content Include="Assets\Small\Small71x71Logo.scale-150.png" />
+    <Content Include="Assets\Small\Small71x71Logo.scale-200.png" />
+    <Content Include="Assets\Small\Small71x71Logo.scale-400.png" />
+    <Content Include="Assets\SplashScreen\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen\SplashScreen.scale-200.png" />
+    <Content Include="Assets\SplashScreen\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Store\StoreLogo.scale-100.png" />
+    <Content Include="Assets\Store\StoreLogo.scale-125.png" />
+    <Content Include="Assets\Store\StoreLogo.scale-150.png" />
+    <Content Include="Assets\Store\StoreLogo.scale-200.png" />
+    <Content Include="Assets\Store\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Wide\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\Wide\Wide310x150Logo.scale-400.png" />
+    <None Include="OfflineCurrencyConverter.UWP_StoreKey.pfx" />
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Properties\Default.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="LiteDB">
+      <Version>4.1.4</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>11.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.Share">
+      <Version>7.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Rg.Plugins.Popup">
+      <Version>1.1.4.168</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.9" />
+    <PackageReference Include="Xam.Plugins.Settings">
+      <Version>4.0.0.10-beta</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.6.0.220655</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OfflineCurrencyConverter\OfflineCurrencyConverter.csproj">
+      <Project>{AA740DCF-A139-4846-AEB6-62E36A3E7821}</Project>
+      <Name>OfflineCurrencyConverter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\GloriaHallelujah.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Poppins-Bold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Poppins-Light.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Poppins-Medium.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Poppins-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Poppins-SemiBold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\FiraSans-Bold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\FiraSans-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\FiraSans-SemiBold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Font Awesome 5 Brands-Regular-400.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Font Awesome 5 Free-Regular-400.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Font Awesome 5 Free-Solid-900.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.Advertising.Xaml, Version=10.0">
+      <Name>Microsoft Advertising SDK for XAML</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, Version=14.0">
+      <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
+    </SDKReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+</Project>
