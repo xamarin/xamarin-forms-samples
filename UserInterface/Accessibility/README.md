@@ -1,3 +1,15 @@
+---
+name: Accessibility
+description: This sample demonstrates how to use the `AutomationProperties` class, so that a screen reader can speak about the user interface elements on the pa...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: userinterface-accessibility
+---
 Accessibility
 =============
 

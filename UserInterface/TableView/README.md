@@ -1,3 +1,15 @@
+---
+name: Xamarin.Forms TableView
+description: This sample relates to the [TableView in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/tableview/) doc.  The app c...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: userinterface-tableview
+---
 Xamarin.Forms TableView
 ==============
 

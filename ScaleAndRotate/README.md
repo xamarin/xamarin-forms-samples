@@ -1,3 +1,15 @@
+---
+name: ScaleAndRotate
+description: The Xamarin.Forms *Scale* and *Rotation* properties allow a program to scale and rotate Xamarin.Forms visual elements. In addition, the *ScaleX* an...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: scaleandrotate
+---
 ScaleAndRotate
 ==============
 

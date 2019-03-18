@@ -1,3 +1,15 @@
+---
+name: Picker
+description: This sample demonstrates how to use a `Picker` to select a text item from a list of data.  For more information about this sample see [Adding Data ...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: userinterface-pickerdemo
+---
 Picker
 ======
 

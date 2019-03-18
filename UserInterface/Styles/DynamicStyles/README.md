@@ -1,3 +1,15 @@
+---
+name: DynamicStyles
+description: This sample demonstrates how to use dynamic resources to make applications respond to style changes dynamically at runtime.  For more information a...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: userinterface-styles-dynamicstyles
+---
 DynamicStyles
 =============
 

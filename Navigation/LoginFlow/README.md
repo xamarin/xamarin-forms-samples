@@ -1,3 +1,15 @@
+---
+name: LoginFlow
+description: This sample demonstrates how to manipulate the navigation stack in order to only display the main page of the application once the user has success...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: navigation-loginflow
+---
 LoginFlow
 =========
 

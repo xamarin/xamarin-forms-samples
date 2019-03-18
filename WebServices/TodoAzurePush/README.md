@@ -1,3 +1,15 @@
+---
+name: TodoAzurePush
+description: This sample demonstrates how to use Azure Notification Hubs to send push notifications from an Azure Mobile Apps instance to a Xamarin.Forms applic...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: webservices-todoazurepush
+---
 TodoAzurePush
 =============
 

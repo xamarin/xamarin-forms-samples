@@ -1,3 +1,15 @@
+---
+name: TodoAzureAuth
+description: This sample demonstrates a Todo list application where the data is stored, accessed, and authenticated from an Azure Mobile App instance.  The app ...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: webservices-todoazureauth
+---
 TodoAzureAuth
 =============
 

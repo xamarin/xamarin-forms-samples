@@ -1,3 +1,15 @@
+---
+name: TipCalc
+description: TipCalc is based on an existing iOS and Android sample but has been completely rewritten for Xamarin.Forms using XAML and data-binding. This new ve...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: tipcalc
+---
 TipCalc
 =======
 

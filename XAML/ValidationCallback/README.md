@@ -1,3 +1,15 @@
+---
+name: Validation Callback
+description: A bindable property is a special type of property, where the property's value is tracked by the Xamarin.Forms property system. This sample demonstr...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: xaml-validationcallback
+---
 Validation Callback
 ===================
 
