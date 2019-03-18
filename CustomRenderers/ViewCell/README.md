@@ -1,3 +1,15 @@
+---
+name: ViewCell Custom Renderer
+description: This sample demonstrates a custom renderer for a `ViewCell` that's hosted inside a Xamarin.Forms `ListView` control, enabling developers to overrid...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: customrenderers-viewcell
+---
 ViewCell Custom Renderer
 ========================
 

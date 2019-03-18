@@ -1,3 +1,15 @@
+---
+name: Xamarin.Forms WebView
+description: This sample relates to the [ WebView in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/webview) doc.  The app consi...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: userinterface-webview
+---
 Xamarin.Forms WebView
 ==============
 

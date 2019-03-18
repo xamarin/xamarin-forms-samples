@@ -1,3 +1,15 @@
+---
+name: Effect Behavior
+description: Behaviors are a useful approach for adding an effect to a control, removing boiler-plate effect handling code from code-behind files. This sample d...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: behaviors-effectbehavior
+---
 Effect Behavior
 ===============
 

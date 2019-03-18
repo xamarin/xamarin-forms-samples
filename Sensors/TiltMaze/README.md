@@ -1,3 +1,15 @@
+---
+name: Tilt Maze
+description: '**Tilt Maze** is a game for Xamarin.Forms that uses the cross-platform [`Accelerometer`](https://docs.microsoft.com/xamarin/essentials/acceleromete...'
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: sensors-tiltmaze
+---
 Tilt Maze
 =========
 

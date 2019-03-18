@@ -1,3 +1,15 @@
+---
+name: BasicStyles
+description: Xamarin.Forms applications often contain multiple controls that have an identical appearance. Setting the appearance of each individual control can...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: userinterface-styles-basicstyles
+---
 BasicStyles
 ===========
 

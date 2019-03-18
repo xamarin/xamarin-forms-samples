@@ -1,3 +1,15 @@
+---
+name: Bindable Layouts
+description: This sample demonstrates binding a layout class to a collection of items, and setting the appearance of each item with a `DataTemplate`.  For more ...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: userinterface-bindablelayouts
+---
 Bindable Layouts
 ================
 

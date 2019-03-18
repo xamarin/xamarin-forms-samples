@@ -1,3 +1,15 @@
+---
+name: TimePicker
+description: This sample demonstrates how to use a `TimePicker` view to select a time, and respond to a time being selected.  For more information about this sa...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: userinterface-timepicker
+---
 TimePicker
 ==========
 

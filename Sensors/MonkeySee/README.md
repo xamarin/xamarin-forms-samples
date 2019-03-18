@@ -1,3 +1,15 @@
+---
+name: Monkey See
+description: '**Monkey See** is a program for Xamarin.Forms that uses the cross-platform [`OrientationSensor`](https://docs.microsoft.com/xamarin/essentials/orie...'
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: sensors-monkeysee
+---
 Monkey See
 =========
 

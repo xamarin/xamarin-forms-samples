@@ -1,10 +1,13 @@
 ---
+name: Solitaire Encryption (Xamarin.Forms)
+description: A C# port of the [Solitaire encryption algorithm](https://www.schneier.com/solitaire.html) featured in Neal Stephenson's novel [Cryptonomicon](http...
 topic: sample
 languages:
 - csharp
+products:
+- xamarin
 technologies:
 - xamarin-forms
-name: "Solitaire Encryption (Xamarin.Forms)"
 urlFragment: solitaireencryption
 ---
 Solitaire Encryption (Xamarin.Forms)

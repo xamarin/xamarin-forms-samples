@@ -1,3 +1,15 @@
+---
+name: Native Forms
+description: This sample demonstrates how to consume Xamarin.Forms `ContentPage`s in native Xamarin.iOS, Xamarin.Android, and Universal Windows Platform project...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: native2forms
+---
 Native Forms
 ==========
 

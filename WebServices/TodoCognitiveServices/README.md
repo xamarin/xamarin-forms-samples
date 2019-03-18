@@ -1,3 +1,15 @@
+---
+name: Todo Cognitive Services
+description: This sample demonstrates how to use some of the Microsoft Cognitive Services APIs in a Xamarin.Forms application. Note that `Constants.cs` should b...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: webservices-todocognitiveservices
+---
 Todo Cognitive Services
 =======================
 

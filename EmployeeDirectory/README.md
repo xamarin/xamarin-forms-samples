@@ -1,3 +1,15 @@
+---
+name: Employee Directory
+description: This contacts application is Xamarin.Forms port of the [existing pre-build app](http://xamarin.com/prebuilt/employeedirectory).  With Xamarin.Forms...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: employeedirectory
+---
 Employee Directory
 ==========
 

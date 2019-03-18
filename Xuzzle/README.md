@@ -1,3 +1,15 @@
+---
+name: Xuzzle
+description: This is a variation of the classic 14-15 puzzle. On the early Mac, the 14-15 program was called PUZZLE. In early Windows, it was the only sample ap...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: xuzzle
+---
 Xuzzle
 ======
 

@@ -1,3 +1,15 @@
+---
+name: Working with Fonts
+description: These samples relate to the [Working with Fonts in Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/fon...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: workingwithfonts
+---
 Working with Fonts
 ==============
 

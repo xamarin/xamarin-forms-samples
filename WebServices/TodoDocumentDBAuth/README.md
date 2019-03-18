@@ -1,3 +1,15 @@
+---
+name: Todo Azure Cosmos DB Auth
+description: This sample demonstrates how to combine access control with partitioned collections, so that a user can only access their own Azure Cosmos DB docum...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: webservices-tododocumentdbauth
+---
 Todo Azure Cosmos DB Auth
 ====================
 

@@ -1,3 +1,15 @@
+---
+name: CarouselPage
+description: This sample demonstrates how to use a `CarouselPage` to navigate through a collection of pages. The `CarouselPage` is constructed by populating it ...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: navigation-carouselpage
+---
 CarouselPage
 ============
 

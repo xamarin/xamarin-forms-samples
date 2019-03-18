@@ -1,3 +1,15 @@
+---
+name: Grid Tutorial
+description: This sample demonstrates how to organize views into rows and columns, with the Xamarin.Forms `Grid`, which can have proportional or absolute sizes....
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: getstarted-tutorials-gridtutorial
+---
 Grid Tutorial
 ==============
 

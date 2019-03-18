@@ -1,3 +1,15 @@
+---
+name: Xamarin.Forms DependencyService
+description: Sample code for the [Xamarin.Forms DependencyService](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/dependency-service/) doc.  T...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: usingdependencyservice
+---
 Xamarin.Forms DependencyService
 ==============
 

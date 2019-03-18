@@ -1,3 +1,15 @@
+---
+name: Monkey Picker
+description: This sample demonstrates how to populate a `Picker` with data by setting the ItemsSource property, and how to respond to item selection by the user...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: userinterface-monkeyapppicker
+---
 Monkey Picker
 ==============
 
