@@ -1,3 +1,15 @@
+---
+name: Passing Constructor Arguments
+description: This sample demonstrates specifying constructor arguments for a non-default constructor in XAML.  For more information about this sample, see [Pass...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: xaml-passingconstructorarguments
+---
 Passing Constructor Arguments
 =============================
 

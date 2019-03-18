@@ -1,3 +1,14 @@
+---
+name: Introduction to Xamarin.Forms
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: gettingstarted
+---
 Introduction to Xamarin.Forms
 =============================
 

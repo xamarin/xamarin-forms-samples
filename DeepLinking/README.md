@@ -1,3 +1,15 @@
+---
+name: Deep Linking
+description: Application indexing allows applications that would otherwise be forgotten after a few uses to stay relevant by appearing in search results. Deep l...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: deeplinking
+---
 Deep Linking
 ============
 

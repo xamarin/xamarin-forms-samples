@@ -1,3 +1,15 @@
+---
+name: TodoREST
+description: This sample demonstrates a Todo list application where the data is stored and accessed from a RESTful web service. The web service is hosted by Xam...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: webservices-todorest
+---
 TodoREST
 ========
 

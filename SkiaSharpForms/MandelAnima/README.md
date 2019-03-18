@@ -1,3 +1,15 @@
+---
+name: Mandelbrot Animation
+description: This program demonstrates bitmap animation using SkiaSharp. Running the program requires some patience because it first needs to create up to 50 bi...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: skiasharpforms-mandelanima
+---
 Mandelbrot Animation
 ====================
 

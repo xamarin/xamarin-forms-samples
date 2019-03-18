@@ -1,11 +1,14 @@
 ---
+name: 'Get Started: First app with Xamarin.Forms'
+description: Sample code for the [get started page and video](https://docs.microsoft.com/xamarin/xamarin-forms/get-started/first-app/), that shows how to build ...
 topic: sample
 languages:
 - csharp
+products:
+- xamarin
 technologies:
-  - xamarin-forms
-name: "Get Started: First app with Xamarin.Forms"
-urlFragment: firstapp
+- xamarin-forms
+urlFragment: getstarted-firstapp
 ---
 Get Started: First app with Xamarin.Forms
 ======

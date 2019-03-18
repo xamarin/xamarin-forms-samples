@@ -1,11 +1,14 @@
 ---
+name: BoxView Clock
+description: A classic analog clock realized entirely with `BoxView`.  Although Xamarin.Forms doesn't have a vector graphics programming interface, it does have...
 topic: sample
 languages:
 - csharp
+products:
+- xamarin
 technologies:
-  - xamarin-forms
-name: BoxView Clock
-urlFragment: boxviewclock
+- xamarin-forms
+urlFragment: boxview-boxviewclock
 ---
 BoxView Clock
 ======

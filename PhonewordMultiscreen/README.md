@@ -1,3 +1,15 @@
+---
+name: Phoneword Multiscreen
+description: This sample demonstrates adding simple page navigation to the Phoneword app using Xamarin.Forms.  The app functionality is to convert telephone num...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: phonewordmultiscreen
+---
 Phoneword Multiscreen
 =====================
 

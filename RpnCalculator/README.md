@@ -1,3 +1,15 @@
+---
+name: RPN Calculator
+description: An RPN (Reverse Polish Notation) calculator allows numbers and operations to be entered without parentheses or an equal key. RPN (also called postf...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: rpncalculator
+---
 RPN Calculator
 ==============
 

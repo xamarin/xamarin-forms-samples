@@ -1,10 +1,13 @@
 ---
+name: BugSweeper
+description: This is a familiar game with a new twist. Ten bugs are hidden in a 9-by-9 grid of tiles. To win, you must find and flag all ten bugs.  Begin playin...
 topic: sample
 languages:
 - csharp
+products:
+- xamarin
 technologies:
-  - xamarin-forms
-name: BugSweeper
+- xamarin-forms
 urlFragment: bugsweeper
 ---
 BugSweeper

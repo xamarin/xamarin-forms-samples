@@ -1,11 +1,14 @@
 ---
+name: Game of Life
+description: This is an implementation of the Game of Life for Xamarin.Forms.  Life is a cellular automaton invented by mathematician John Conway in 1970 and po...
 topic: sample
 languages:
 - csharp
+products:
+- xamarin
 technologies:
-  - xamarin-forms
-name: Game of Life
-urlFragment: gameoflife
+- xamarin-forms
+urlFragment: boxview-gameoflife
 ---
 Game of Life
 ======

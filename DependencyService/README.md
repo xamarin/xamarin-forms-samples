@@ -1,3 +1,15 @@
+---
+name: Dependency Service
+description: This sample demonstrates how to use the `DependencyService` to implement text-to-speech, check device orientation, battery status, and select a pho...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: dependencyservice
+---
 Dependency Service
 ==================
 

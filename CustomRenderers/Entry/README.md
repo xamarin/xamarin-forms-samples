@@ -1,3 +1,15 @@
+---
+name: Entry Custom Renderer
+description: This sample demonstrates a custom renderer for the `Entry` control, enabling developers to override the default native rendering with their own pla...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: customrenderers-entry
+---
 Entry Custom Renderer
 =====================
 

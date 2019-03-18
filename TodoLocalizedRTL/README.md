@@ -1,3 +1,14 @@
+---
+name: TodoLocalized RTL (Xamarin.Forms)
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: todolocalizedrtl
+---
 TodoLocalized RTL (Xamarin.Forms)
 =============
 

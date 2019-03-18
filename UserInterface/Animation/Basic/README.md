@@ -1,3 +1,15 @@
+---
+name: Basic Animation
+description: The `ViewExtensions` class provides extension methods that can be used to construct simple animations. This sample demonstrates creating and cancel...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: userinterface-animation-basic
+---
 Basic Animation
 ===============
 

@@ -1,10 +1,13 @@
 ---
+name: ClassHierarchy
+description: This program uses .NET reflection to display a scrollable hierarchy of all Xamarin.Forms classes, structures, and enumerations. Non-instantiable cl...
 topic: sample
 languages:
 - csharp
+products:
+- xamarin
 technologies:
-  - xamarin-forms
-name: ClassHierarchy
+- xamarin-forms
 urlFragment: classhierarchy
 ---
 ClassHierarchy

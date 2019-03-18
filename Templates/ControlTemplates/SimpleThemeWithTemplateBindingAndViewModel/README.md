@@ -1,3 +1,15 @@
+---
+name: Simple Theme with Template Binding and ViewModel
+description: This sample demonstrates using a `ControlTemplate` with a `TemplateBinding`, that in turn binds to a ViewModel, to theme a `ContentPage` and change...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: templates-controltemplates-simplethemewithtemplatebindingandviewmodel
+---
 Simple Theme with Template Binding and ViewModel
 ================================================
 

@@ -1,3 +1,15 @@
+---
+name: Working with ListView
+description: These samples relate to the [Working with ListView in Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: workingwithlistview
+---
 Working with ListView
 ==============
 

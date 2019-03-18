@@ -1,3 +1,15 @@
+---
+name: SpinPaintShared
+description: This is the Shared Project version of [SpinPaint](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/).  SpinPaint is a X...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: skiasharpforms-spinpaintshared
+---
 SpinPaintShared
 ===============
 

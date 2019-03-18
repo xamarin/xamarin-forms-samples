@@ -1,3 +1,15 @@
+---
+name: TodoWCF
+description: This sample demonstrates a Todo list application where the data is stored and accessed from a WCF web service. The web service is hosted by Xamarin...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: webservices-todowcf
+---
 TodoWCF
 =======
 

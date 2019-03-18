@@ -1,3 +1,14 @@
+---
+name: Xamarin Insights with Xamarin.Forms
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: usingxamarininsights
+---
 Xamarin Insights with Xamarin.Forms
 ================
 

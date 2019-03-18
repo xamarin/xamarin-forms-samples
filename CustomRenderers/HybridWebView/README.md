@@ -1,3 +1,15 @@
+---
+name: HybridWebView Custom Renderer
+description: This sample demonstrates a custom renderer for a `HybridWebView` custom control, that demonstrates how to enhance the platform-specific web control...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: customrenderers-hybridwebview
+---
 HybridWebView Custom Renderer
 =============================
 
