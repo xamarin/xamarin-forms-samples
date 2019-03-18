@@ -1,4 +1,4 @@
-﻿---
+---
 name: Dependency Resolution (Container)
 description: This sample demonstrates how to inject a dependency resolution method into Xamarin.Forms, so that an app's dependency injection container has contr...
 topic: sample
