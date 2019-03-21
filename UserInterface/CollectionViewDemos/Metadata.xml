@@ -4,8 +4,8 @@
 	<IsFullApplication>false</IsFullApplication>
 	<Level>Beginner</Level>
 	<Tags>User Interface, Xamarin.Forms</Tags>
-	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<SupportedPlatforms>iOS, Android</SupportedPlatforms>
 	<LicenseRequirement>Indie</LicenseRequirement>
 	<Gallery>true</Gallery>
-	<Brief>This sample demonstrates how to use different CollectionView layout specifications.</Brief>
+	<Brief>This sample demonstrates how to use the Xamarin.Forms CollectionView.</Brief>
 </SampleMetadata>

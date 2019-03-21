@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="CollectionViewDemos.Views.ScrollToByObjectPage"
-             Title="Scroll to object">
-    <StackLayout Margin="20,35,20,20">
-        <Button Text="Scroll to Proboscis Monkey"
-                Clicked="OnButtonClicked" />
-        <CollectionView x:Name="_collectionView" 
-                        ItemsSource="{Binding Monkeys}">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionViewDemos.Views.VerticalListSingleSelectionPage"
+             Title="Vertical list (single selection)">
+    <StackLayout Margin="20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Previous selected item:" />
+            <Label x:Name="previousSelectedItemLabel"
+                   Grid.Column="1" />
+            <Label Grid.Row="1"
+                   Text="Current selected item:" />
+            <Label x:Name="currentSelectedItemLabel"
+                   Grid.Row="1"
+                   Grid.Column="1" />
+        </Grid>
+        <CollectionView ItemsSource="{Binding Monkeys}"
+                        SelectionMode="Single"
+                        SelectionChanged="OnCollectionViewSelectionChanged">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">

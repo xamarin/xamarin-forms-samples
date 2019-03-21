@@ -14,7 +14,7 @@ namespace CollectionViewDemos.Views
 
         void OnButtonClicked(object sender, EventArgs e)
         {
-            _collectionView.ScrollTo(12);
+            collectionView.ScrollTo(12, position: (ScrollToPosition)enumPicker.SelectedItem, animate: animateSwitch.IsToggled);
         }
     }
 }

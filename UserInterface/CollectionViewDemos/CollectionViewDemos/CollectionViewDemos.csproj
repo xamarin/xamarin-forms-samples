@@ -13,14 +13,47 @@
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
+    <Folder Include="Views\EmptyView\" />
+    <Folder Include="Views\Layout\" />
+    <Folder Include="Views\Selection\" />
+    <Folder Include="Views\ScrollTo\" />
+    <Folder Include="Views\SnapPoints\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\EmptyView\EmptyViewNullPage.xaml.cs">
+      <DependentUpon>EmptyViewNullPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Layout\HorizontalGridPage.xaml.cs">
+      <DependentUpon>HorizontalGridPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Layout\HorizontalListPage.xaml.cs">
+      <DependentUpon>HorizontalListPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Layout\VerticalGridPage.xaml.cs">
+      <DependentUpon>VerticalGridPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Layout\VerticalListPage.xaml.cs">
+      <DependentUpon>VerticalListPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\ScrollTo\ScrollToByIndexPage.xaml.cs">
+      <DependentUpon>ScrollToByIndexPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\ScrollTo\ScrollToByObjectPage.xaml.cs">
+      <DependentUpon>ScrollToByObjectPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.8055-pre1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.232914-pre6" />
   </ItemGroup>
 </Project>

@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CollectionViewDemos"
              x:Class="CollectionViewDemos.Views.ScrollToByIndexPage"
              Title="Scroll to index">
-    <StackLayout Margin="20,35,20,20">
+    <StackLayout Margin="20">
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center">
+            <Label Text="ScrollToPosition: "
+                   VerticalTextAlignment="Center" />
+            <local:EnumPicker x:Name="enumPicker"
+                              EnumType="{x:Type ScrollToPosition}"
+                              SelectedIndex="0" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center">
+            <Label Text="Animate scroll: "
+                   VerticalTextAlignment="Center" />
+            <Switch x:Name="animateSwitch"
+                    IsToggled="true" />
+        </StackLayout>
         <Button Text="Scroll to item 12"
                 Clicked="OnButtonClicked" />
-        <CollectionView x:Name="_collectionView" 
+        <CollectionView x:Name="collectionView"
                         ItemsSource="{Binding Monkeys}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>

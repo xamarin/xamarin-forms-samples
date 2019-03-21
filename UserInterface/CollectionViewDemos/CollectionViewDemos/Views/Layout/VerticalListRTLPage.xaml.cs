@@ -1,11 +1,11 @@
-﻿using Xamarin.Forms;
-using CollectionViewDemos.ViewModels;
+﻿using CollectionViewDemos.ViewModels;
+using Xamarin.Forms;
 
 namespace CollectionViewDemos.Views
 {
-    public partial class EmptyViewPage : ContentPage
+    public partial class VerticalListRTLPage : ContentPage
     {
-        public EmptyViewPage()
+        public VerticalListRTLPage()
         {
             InitializeComponent();
             BindingContext = new MonkeysViewModel();
