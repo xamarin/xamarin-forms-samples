@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace FormsGallery
 {
-    // Used in ListViewDemoPage
+    // Used in CollectionViewDemoPage and ListViewDemoPage
     public class Person
     {
         public Person()

@@ -183,10 +183,10 @@ namespace FormsGallery
                     {
                         new TextCell
                         {
-                            Text = "Picker",
-                            Detail = "Select from a list of text items",
+                            Text = "CollectionView",
+                            Detail = "Select from a list of data items",
                             Command = navigateCommand,
-                            CommandParameter = typeof(CodeExamples.PickerDemoPage)
+                            CommandParameter = typeof(CodeExamples.CollectionViewDemoPage)
                         },
 
                         new TextCell
@@ -195,6 +195,14 @@ namespace FormsGallery
                             Detail = "Select from a list of data items",
                             Command = navigateCommand,
                             CommandParameter = typeof(CodeExamples.ListViewDemoPage)
+                        },
+
+                        new TextCell
+                        {
+                            Text = "Picker",
+                            Detail = "Select from a list of text items",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.PickerDemoPage)
                         },
 
                         new TextCell
