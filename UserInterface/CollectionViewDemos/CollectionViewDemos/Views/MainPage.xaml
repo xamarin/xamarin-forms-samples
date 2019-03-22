@@ -101,8 +101,6 @@
                           Detail="ScrollTo"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:ScrollToByObjectPage}" />
-            </TableSection>
-            <TableSection Title="Snap Points">
                 <TextCell Text="Snap points"
                           Detail="Type and alignment"
                           Command="{Binding NavigateCommand}"
