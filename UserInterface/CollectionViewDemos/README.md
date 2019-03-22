@@ -1,3 +1,15 @@
+---
+name: CollectionView
+description: This sample demonstrates how to use the Xamarin.Forms CollectionView.
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: userinterface-collectionviewdemos
+---
 CollectionView
 ==============
 
