@@ -52,7 +52,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Constants.cs" />
     <Compile Include="Data\ISoapService.cs" />
     <Compile Include="Data\SoapService.cs" />
     <Compile Include="Data\TodoItemManager.cs" />
