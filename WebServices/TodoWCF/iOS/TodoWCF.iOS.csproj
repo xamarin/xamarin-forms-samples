@@ -80,12 +80,6 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TodoWCF\TodoWCF.csproj">
-      <Project>{BCEDCBC9-29AE-4CEE-8A56-D79AFF8D6EFE}</Project>
-      <Name>TodoWCF</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\Default%402x.png" />
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -120,6 +114,12 @@
   <ItemGroup>
     <ITunesArtwork Include="ITunesArtwork" />
     <ITunesArtwork Include="ITunesArtwork%402x" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TodoWCF\TodoWCF.csproj">
+      <Project>{284b4c30-2702-4ff2-b637-ef98a7f1e3f8}</Project>
+      <Name>TodoWCF</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
