@@ -1,11 +1,11 @@
-﻿namespace TodoREST
+﻿using Xamarin.Forms;
+
+namespace TodoREST
 {
 	public static class Constants
 	{
-		// URL of REST service
-		public static string RestUrl = "https://developer.xamarin.com:8081/api/todoitems/{0}";
-		// Credentials that are hard coded into the REST service
-		public static string Username = "Xamarin";
-		public static string Password = "Pa$$w0rd";
-	}
+        // The iOS simulator can connect to localhost. However, Android emulators must use the 10.0.2.2 special alias to your host loopback interface.
+        public static string BaseAddress = Device.RuntimePlatform == Device.Android ? "https://10.0.2.2:5001" : "https://localhost:5001";
+        public static string TodoItemsUrl = BaseAddress + "/api/todoitems/{0}";
+    }
 }
