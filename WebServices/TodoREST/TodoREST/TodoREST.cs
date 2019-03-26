@@ -8,8 +8,6 @@ namespace TodoREST
 	{
 		public static TodoItemManager TodoManager { get; private set; }
 
-		public static ITextToSpeech Speech { get; set; }
-
 		public App ()
 		{
 			TodoManager = new TodoItemManager (new RestService ());

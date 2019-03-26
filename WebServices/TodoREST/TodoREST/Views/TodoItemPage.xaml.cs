@@ -13,29 +13,23 @@ namespace TodoREST
 			isNewItem = isNew;
 		}
 
-		async void OnSaveActivated (object sender, EventArgs e)
+		async void OnSaveButtonClicked (object sender, EventArgs e)
 		{
 			var todoItem = (TodoItem)BindingContext;
 			await App.TodoManager.SaveTaskAsync (todoItem, isNewItem);
 			await Navigation.PopAsync ();
 		}
 
-		async void OnDeleteActivated (object sender, EventArgs e)
+		async void OnDeleteButtonClicked (object sender, EventArgs e)
 		{
 			var todoItem = (TodoItem)BindingContext;
 			await App.TodoManager.DeleteTaskAsync (todoItem);
 			await Navigation.PopAsync ();
 		}
 
-		void OnCancelActivated (object sender, EventArgs e)
+		async void OnCancelButtonClicked (object sender, EventArgs e)
 		{
-			Navigation.PopAsync ();
-		}
-
-		void OnSpeakActivated (object sender, EventArgs e)
-		{
-			var todoItem = (TodoItem)BindingContext;
-			App.Speech.Speak (todoItem.Name + " " + todoItem.Notes);
+			await Navigation.PopAsync ();
 		}
 	}
 }
