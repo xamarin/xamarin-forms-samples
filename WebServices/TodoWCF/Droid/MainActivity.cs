@@ -19,11 +19,6 @@ namespace TodoWCF.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             App.Speech = new Speech();
-            
-            // NOTE: Android emulator cannot access localhost but must
-            // use a local proxy. You may need to change this if testing
-            // on a device.
-            App.SoapUrl = "http://10.0.2.2:49393/TodoService.svc";
 
             LoadApplication(new App());
         }

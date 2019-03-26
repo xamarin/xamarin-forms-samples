@@ -18,7 +18,7 @@ namespace TodoWCF
 		{
 			todoService = new TodoServiceClient (
 				new BasicHttpBinding (),
-				new EndpointAddress (App.SoapUrl));
+				new EndpointAddress (Constants.SoapUrl));
 		}
 
 		TodoWCFService.TodoItem ToWCFServiceTodoItem (TodoItem item)

@@ -9,8 +9,6 @@ namespace TodoWCF
 
 		public static ITextToSpeech Speech { get; set; }
 
-        public static string SoapUrl { get; set; } = "http://localhost:49393/TodoService.svc";
-
         public App ()
 		{
 			TodoManager = new TodoItemManager (new SoapService ());
