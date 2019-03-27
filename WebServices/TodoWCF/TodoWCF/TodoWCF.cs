@@ -7,8 +7,6 @@ namespace TodoWCF
 	{
 		public static TodoItemManager TodoManager { get; set; }
 
-		public static ITextToSpeech Speech { get; set; }
-
         public App ()
 		{
 			TodoManager = new TodoItemManager (new SoapService ());

@@ -56,7 +56,6 @@
     <Compile Include="Data\ISoapService.cs" />
     <Compile Include="Data\SoapService.cs" />
     <Compile Include="Data\TodoItemManager.cs" />
-    <Compile Include="ITextToSpeech.cs" />
     <Compile Include="Models\TodoItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TodoWCF.cs" />
