@@ -10,15 +10,25 @@ namespace TodoASMX.Droid
 	public class SoapService : ISoapService
 	{
 		ASMXService.TodoService todoService;
+        TaskCompletionSource<bool> getRequestComplete = null;
+        TaskCompletionSource<bool> saveRequestComplete = null;
+        TaskCompletionSource<bool> deleteRequestComplete = null;
 
-		public List<TodoItem> Items { get; private set; }
+        public List<TodoItem> Items { get; private set; } = new List<TodoItem>();
 
 		public SoapService ()
 		{
-			todoService = new ASMXService.TodoService (Constants.SoapUrl);
-		}
+			todoService = new ASMXService.TodoService ();
+            todoService.Url = Constants.SoapUrl;
 
-		ASMXService.TodoItem ToASMXServiceTodoItem (TodoItem item)
+            todoService.GetTodoItemsCompleted += TodoService_GetTodoItemsCompleted;
+            todoService.CreateTodoItemCompleted += TodoService_SaveTodoItemCompleted;
+            todoService.EditTodoItemCompleted += TodoService_SaveTodoItemCompleted;
+            todoService.DeleteTodoItemCompleted += TodoService_DeleteTodoItemCompleted;
+            
+        }
+
+        ASMXService.TodoItem ToASMXServiceTodoItem (TodoItem item)
 		{
 			return new ASMXService.TodoItem {
 				ID = item.ID,
@@ -38,48 +48,86 @@ namespace TodoASMX.Droid
 			};
 		}
 
-		public async Task<List<TodoItem>> RefreshDataAsync ()
+        private void TodoService_GetTodoItemsCompleted(object sender, ASMXService.GetTodoItemsCompletedEventArgs e)
+        {
+            try
+            {
+                getRequestComplete = getRequestComplete ?? new TaskCompletionSource<bool>();
+
+                Items.Clear();
+                foreach (var item in e.Result)
+                {
+                    Items.Add(FromASMXServiceTodoItem(item));
+                }
+                getRequestComplete?.TrySetResult(true);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+        }
+
+        private void TodoService_SaveTodoItemCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
+        {
+            saveRequestComplete?.TrySetResult(true);
+        }
+
+
+        private void TodoService_DeleteTodoItemCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
+        {
+            deleteRequestComplete?.TrySetResult(true);
+        }
+
+        public async Task<List<TodoItem>> RefreshDataAsync()
+        {
+            getRequestComplete = new TaskCompletionSource<bool>();
+            todoService.GetTodoItemsAsync();
+            await getRequestComplete.Task;
+            return Items;
+        }
+
+        public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 		{
-			Items = new List<TodoItem> ();
+            try
+            {
+                var todoItem = ToASMXServiceTodoItem(item);
+                saveRequestComplete = new TaskCompletionSource<bool>();
+                if (isNewItem)
+                {
+                    todoService.CreateTodoItemAsync(todoItem);
+                }
+                else
+                {
+                    todoService.EditTodoItemAsync(todoItem);
+                }
+                await saveRequestComplete.Task;
+            }
+            catch (SoapException se)
+            {
+                Debug.WriteLine(@"				{0}", se.Message);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+        }
 
-			try {
-				var todoItems = await Task.Factory.FromAsync<ASMXService.TodoItem[]> (todoService.BeginGetTodoItems, todoService.EndGetTodoItems, null, TaskCreationOptions.None);
-
-				foreach (var item in todoItems) {
-					Items.Add (FromASMXServiceTodoItem (item));
-				}
-			} catch (Exception ex) {
-				Debug.WriteLine (@"				ERROR {0}", ex.Message);
-			}
-
-			return Items;
-		}
-
-		public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
+        public async Task DeleteTodoItemAsync (string id)
 		{
-			try {
-				var todoItem = ToASMXServiceTodoItem (item);
-				if (isNewItem) {
-					await Task.Factory.FromAsync (todoService.BeginCreateTodoItem, todoService.EndCreateTodoItem, todoItem, TaskCreationOptions.None);
-				} else {
-					await Task.Factory.FromAsync (todoService.BeginEditTodoItem, todoService.EndEditTodoItem, todoItem, TaskCreationOptions.None);
-				}
-			} catch (SoapException se) {
-				Debug.WriteLine (@"				{0}", se.Message);
-			} catch (Exception ex) {
-				Debug.WriteLine (@"				ERROR {0}", ex.Message);
-			}
-		}
-
-		public async Task DeleteTodoItemAsync (string id)
-		{
-			try {
-				await Task.Factory.FromAsync (todoService.BeginDeleteTodoItem, todoService.EndDeleteTodoItem, id, TaskCreationOptions.None);
-			} catch (SoapException se) {
-				Debug.WriteLine (@"				{0}", se.Message);
-			} catch (Exception ex) {
-				Debug.WriteLine (@"				ERROR {0}", ex.Message);
-			}
-		}
+            try
+            {
+                deleteRequestComplete = new TaskCompletionSource<bool>();
+                todoService.DeleteTodoItemAsync(id);
+                await deleteRequestComplete.Task;
+            }
+            catch (SoapException se)
+            {
+                Debug.WriteLine(@"				{0}", se.Message);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+            }
+        }
 	}
 }
