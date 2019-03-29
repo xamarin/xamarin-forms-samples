@@ -51,6 +51,9 @@
     <PackageReference Include="Xamarin.Auth">
       <Version>1.6.0.2</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Compat">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
