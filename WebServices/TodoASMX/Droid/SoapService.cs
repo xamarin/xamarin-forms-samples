@@ -54,7 +54,7 @@ namespace TodoASMX.Droid
             {
                 getRequestComplete = getRequestComplete ?? new TaskCompletionSource<bool>();
 
-                Items.Clear();
+                Items = new List<TodoItem>();
                 foreach (var item in e.Result)
                 {
                     Items.Add(FromASMXServiceTodoItem(item));
