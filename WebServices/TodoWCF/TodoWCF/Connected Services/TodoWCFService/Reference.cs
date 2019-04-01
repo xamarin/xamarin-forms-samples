@@ -14,7 +14,7 @@ namespace TodoWCF.TodoWCFService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="TodoItem", Namespace="http://schemas.datacontract.org/2004/07/TodoServices.Models")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TodoItem", Namespace="http://schemas.datacontract.org/2004/07/TodoWCFService.Models")]
     public partial class TodoItem : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool DoneField;
@@ -490,7 +490,7 @@ namespace TodoWCF.TodoWCFService {
         
         private static System.ServiceModel.EndpointAddress GetEndpointAddress(EndpointConfiguration endpointConfiguration) {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_ITodoService)) {
-                return new System.ServiceModel.EndpointAddress("http://developer.xamarin.com:8081/TodoService.svc");
+                return new System.ServiceModel.EndpointAddress("http://localhost:49393/TodoService.svc");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

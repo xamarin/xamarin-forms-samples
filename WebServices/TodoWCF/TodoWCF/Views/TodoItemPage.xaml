@@ -13,8 +13,7 @@
 			<Switch x:Name="doneSwitch" IsToggled="{Binding Path=Done}" />
 			<Button Text="Save" Clicked="OnSaveActivated" />
 			<Button Text="Delete" Clicked="OnDeleteActivated" />
-			<Button Text="Cancel" Clicked="OnCancelActivated" />
-			<Button Text="Speak" Clicked="OnSpeakActivated" />
-		</StackLayout>
+            <Button Text="Cancel" Clicked="OnCancelActivated" />
+        </StackLayout>
 	</ContentPage.Content>
 </ContentPage>

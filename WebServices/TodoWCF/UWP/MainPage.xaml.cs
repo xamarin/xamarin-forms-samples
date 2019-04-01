@@ -8,7 +8,6 @@
         public MainPage()
         {
             this.InitializeComponent();
-            TodoWCF.App.Speech = new Speech();
             this.LoadApplication(new TodoWCF.App());
         }
     }
