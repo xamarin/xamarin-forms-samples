@@ -7,8 +7,6 @@ namespace TodoASMX
 	{
 		public static TodoItemManager TodoManager { get; set; }
 
-		public static ITextToSpeech Speech { get; set; }
-
 		public App ()
 		{
 			MainPage = new NavigationPage (new TodoListPage ());

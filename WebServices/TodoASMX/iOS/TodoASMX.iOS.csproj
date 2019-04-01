@@ -124,7 +124,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Speech.cs" />
     <Compile Include="SoapService.cs" />
     <Compile Include="Web References\ASMXService\Reference.cs">
       <AutoGen>True</AutoGen>

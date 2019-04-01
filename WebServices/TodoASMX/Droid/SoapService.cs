@@ -25,7 +25,6 @@ namespace TodoASMX.Droid
             todoService.CreateTodoItemCompleted += TodoService_SaveTodoItemCompleted;
             todoService.EditTodoItemCompleted += TodoService_SaveTodoItemCompleted;
             todoService.DeleteTodoItemCompleted += TodoService_DeleteTodoItemCompleted;
-            
         }
 
         ASMXService.TodoItem ToASMXServiceTodoItem (TodoItem item)

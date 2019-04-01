@@ -20,7 +20,6 @@ namespace TodoASMX.iOS
 			#endif
 
 			App.TodoManager = new TodoItemManager (new SoapService ());
-			App.Speech = new Speech ();
 			LoadApplication (new App ());
 
 			return base.FinishedLaunching (app, options);

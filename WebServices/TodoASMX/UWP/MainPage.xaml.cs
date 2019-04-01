@@ -8,10 +8,7 @@
         public MainPage()
         {
             this.InitializeComponent();
-
-            TodoASMX.App.Speech = new Speech();
             TodoASMX.App.TodoManager = new TodoItemManager(new SoapService());
-
             this.LoadApplication(new TodoASMX.App());
         }
     }

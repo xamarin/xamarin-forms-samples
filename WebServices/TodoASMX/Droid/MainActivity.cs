@@ -19,7 +19,6 @@ namespace TodoASMX.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             App.TodoManager = new TodoItemManager(new SoapService());
-            App.Speech = new Speech();
             LoadApplication(new App());
         }
     }
