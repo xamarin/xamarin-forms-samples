@@ -73,6 +73,8 @@
       <HintPath>..\packages\Xamarin.TestCloud.Agent.0.17.1\lib\Xamarin.iOS10\Calabash.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.EnterpriseServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
@@ -110,21 +112,25 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
-    <None Include="Web References\ASMXService\TodoService.disco" />
-    <None Include="Web References\ASMXService\TodoService.wsdl" />
     <None Include="Web References\ASMXService\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Web References\ASMXService\TodoItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ASMXService\TodoService.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Speech.cs" />
+    <Compile Include="SoapService.cs" />
     <Compile Include="Web References\ASMXService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <Compile Include="SoapService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="ITunesArtwork" />
@@ -135,11 +141,22 @@
     <WebReferences Include="Web References" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://todoasmxservice.azurewebsites.net/TodoService.asmx">
+    <WebReferenceUrl Include="http://localhost:49178/TodoService.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\ASMXService</RelPath>
-      <UpdateFromURL>http://todoasmxservice.azurewebsites.net/TodoService.asmx</UpdateFromURL>
+      <RelPath>Web References\ASMXService\</RelPath>
+      <UpdateFromURL>http://localhost:49178/TodoService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
     </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ASMXService\TodoService.disco" />
   </ItemGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup />
