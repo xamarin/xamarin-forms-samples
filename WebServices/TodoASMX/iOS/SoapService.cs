@@ -64,7 +64,7 @@ namespace TodoASMX.iOS
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+                Debug.WriteLine("\t\tERROR {0}", ex.Message);
             }
         }
 
@@ -105,11 +105,11 @@ namespace TodoASMX.iOS
             }
             catch (SoapException se)
             {
-                Debug.WriteLine(@"				{0}", se.Message);
+                Debug.WriteLine("\t\t{0}", se.Message);
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+                Debug.WriteLine("\t\tERROR {0}", ex.Message);
             }
         }
 
@@ -123,11 +123,11 @@ namespace TodoASMX.iOS
             }
             catch (SoapException se)
             {
-                Debug.WriteLine(@"				{0}", se.Message);
+                Debug.WriteLine("\t\t{0}", se.Message);
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(@"				ERROR {0}", ex.Message);
+                Debug.WriteLine("\t\tERROR {0}", ex.Message);
             }
         }
     }
