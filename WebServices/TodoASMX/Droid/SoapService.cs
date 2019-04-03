@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Web.Services.Protocols;
 
 namespace TodoASMX.Droid
 {
-	public class SoapService : ISoapService
-	{
-		ASMXService.TodoService todoService;
+    public class SoapService : ISoapService
+    {
+        ASMXService.TodoService todoService;
         TaskCompletionSource<bool> getRequestComplete = null;
         TaskCompletionSource<bool> saveRequestComplete = null;
         TaskCompletionSource<bool> deleteRequestComplete = null;
 
         public List<TodoItem> Items { get; private set; } = new List<TodoItem>();
 
-		public SoapService ()
-		{
-			todoService = new ASMXService.TodoService ();
+        public SoapService()
+        {
+            todoService = new ASMXService.TodoService();
             todoService.Url = Constants.SoapUrl;
 
             todoService.GetTodoItemsCompleted += TodoService_GetTodoItemsCompleted;
@@ -27,25 +26,27 @@ namespace TodoASMX.Droid
             todoService.DeleteTodoItemCompleted += TodoService_DeleteTodoItemCompleted;
         }
 
-        ASMXService.TodoItem ToASMXServiceTodoItem (TodoItem item)
-		{
-			return new ASMXService.TodoItem {
-				ID = item.ID,
-				Name = item.Name,
-				Notes = item.Notes,
-				Done = item.Done
-			};
-		}
+        ASMXService.TodoItem ToASMXServiceTodoItem(TodoItem item)
+        {
+            return new ASMXService.TodoItem
+            {
+                ID = item.ID,
+                Name = item.Name,
+                Notes = item.Notes,
+                Done = item.Done
+            };
+        }
 
-		static TodoItem FromASMXServiceTodoItem (ASMXService.TodoItem item)
-		{
-			return new TodoItem {
-				ID = item.ID,
-				Name = item.Name,
-				Notes = item.Notes,
-				Done = item.Done
-			};
-		}
+        static TodoItem FromASMXServiceTodoItem(ASMXService.TodoItem item)
+        {
+            return new TodoItem
+            {
+                ID = item.ID,
+                Name = item.Name,
+                Notes = item.Notes,
+                Done = item.Done
+            };
+        }
 
         private void TodoService_GetTodoItemsCompleted(object sender, ASMXService.GetTodoItemsCompletedEventArgs e)
         {
@@ -85,8 +86,8 @@ namespace TodoASMX.Droid
             return Items;
         }
 
-        public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
-		{
+        public async Task SaveTodoItemAsync(TodoItem item, bool isNewItem = false)
+        {
             try
             {
                 var todoItem = ToASMXServiceTodoItem(item);
@@ -111,8 +112,8 @@ namespace TodoASMX.Droid
             }
         }
 
-        public async Task DeleteTodoItemAsync (string id)
-		{
+        public async Task DeleteTodoItemAsync(string id)
+        {
             try
             {
                 deleteRequestComplete = new TaskCompletionSource<bool>();
@@ -128,5 +129,5 @@ namespace TodoASMX.Droid
                 Debug.WriteLine(@"				ERROR {0}", ex.Message);
             }
         }
-	}
+    }
 }
