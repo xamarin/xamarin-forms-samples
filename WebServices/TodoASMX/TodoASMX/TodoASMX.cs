@@ -1,13 +1,12 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly:XamlCompilation(XamlCompilationOptions.Compile)]
 namespace TodoASMX
 {
 	public class App : Application
 	{
 		public static TodoItemManager TodoManager { get; set; }
-
-		public static ITextToSpeech Speech { get; set; }
 
 		public App ()
 		{

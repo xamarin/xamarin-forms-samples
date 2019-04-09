@@ -1,188 +1,188 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s0="http://www.xamarin.com/webservices/" xmlns:tns="http://www.xamarin.com/webservices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.xamarin.com/webservices/" xmlns="http://schemas.xmlsoap.org/wsdl/">
-  <types>
-    <xs:schema elementFormDefault="qualified" targetNamespace="http://www.xamarin.com/webservices/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-      <xs:element name="GetTodoItems">
-        <xs:complexType />
-      </xs:element>
-      <xs:element name="GetTodoItemsResponse">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element minOccurs="0" maxOccurs="1" name="GetTodoItemsResult" type="tns:ArrayOfTodoItem" />
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-      <xs:complexType name="ArrayOfTodoItem">
-        <xs:sequence>
-          <xs:element minOccurs="0" maxOccurs="unbounded" name="TodoItem" nillable="true" type="tns:TodoItem" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="TodoItem">
-        <xs:sequence>
-          <xs:element minOccurs="0" maxOccurs="1" name="ID" type="xs:string" />
-          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
-          <xs:element minOccurs="0" maxOccurs="1" name="Notes" type="xs:string" />
-          <xs:element minOccurs="1" maxOccurs="1" name="Done" type="xs:boolean" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:element name="CreateTodoItem">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element minOccurs="0" maxOccurs="1" name="item" type="tns:TodoItem" />
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name="CreateTodoItemResponse">
-        <xs:complexType />
-      </xs:element>
-      <xs:element name="EditTodoItem">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element minOccurs="0" maxOccurs="1" name="item" type="tns:TodoItem" />
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name="EditTodoItemResponse">
-        <xs:complexType />
-      </xs:element>
-      <xs:element name="DeleteTodoItem">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element minOccurs="0" maxOccurs="1" name="id" type="xs:string" />
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name="DeleteTodoItemResponse">
-        <xs:complexType />
-      </xs:element>
-    </xs:schema>
-  </types>
-  <message name="GetTodoItemsSoapIn">
-    <part name="parameters" element="tns:GetTodoItems" />
-  </message>
-  <message name="GetTodoItemsSoapOut">
-    <part name="parameters" element="tns:GetTodoItemsResponse" />
-  </message>
-  <message name="CreateTodoItemSoapIn">
-    <part name="parameters" element="tns:CreateTodoItem" />
-  </message>
-  <message name="CreateTodoItemSoapOut">
-    <part name="parameters" element="tns:CreateTodoItemResponse" />
-  </message>
-  <message name="EditTodoItemSoapIn">
-    <part name="parameters" element="tns:EditTodoItem" />
-  </message>
-  <message name="EditTodoItemSoapOut">
-    <part name="parameters" element="tns:EditTodoItemResponse" />
-  </message>
-  <message name="DeleteTodoItemSoapIn">
-    <part name="parameters" element="tns:DeleteTodoItem" />
-  </message>
-  <message name="DeleteTodoItemSoapOut">
-    <part name="parameters" element="tns:DeleteTodoItemResponse" />
-  </message>
-  <portType name="TodoServiceSoap">
-    <operation name="GetTodoItems">
-      <input message="tns:GetTodoItemsSoapIn" />
-      <output message="tns:GetTodoItemsSoapOut" />
-    </operation>
-    <operation name="CreateTodoItem">
-      <input message="tns:CreateTodoItemSoapIn" />
-      <output message="tns:CreateTodoItemSoapOut" />
-    </operation>
-    <operation name="EditTodoItem">
-      <input message="tns:EditTodoItemSoapIn" />
-      <output message="tns:EditTodoItemSoapOut" />
-    </operation>
-    <operation name="DeleteTodoItem">
-      <input message="tns:DeleteTodoItemSoapIn" />
-      <output message="tns:DeleteTodoItemSoapOut" />
-    </operation>
-  </portType>
-  <binding name="TodoServiceSoap" type="tns:TodoServiceSoap">
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.xamarin.com/webservices/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.xamarin.com/webservices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.xamarin.com/webservices/">
+      <s:element name="GetTodoItems">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTodoItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTodoItemsResult" type="tns:ArrayOfTodoItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTodoItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TodoItem" nillable="true" type="tns:TodoItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TodoItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Done" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateTodoItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="item" type="tns:TodoItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTodoItemResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EditTodoItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="item" type="tns:TodoItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditTodoItemResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteTodoItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteTodoItemResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetTodoItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTodoItems" />
+  </wsdl:message>
+  <wsdl:message name="GetTodoItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTodoItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateTodoItemSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateTodoItem" />
+  </wsdl:message>
+  <wsdl:message name="CreateTodoItemSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateTodoItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditTodoItemSoapIn">
+    <wsdl:part name="parameters" element="tns:EditTodoItem" />
+  </wsdl:message>
+  <wsdl:message name="EditTodoItemSoapOut">
+    <wsdl:part name="parameters" element="tns:EditTodoItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTodoItemSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteTodoItem" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTodoItemSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteTodoItemResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TodoServiceSoap">
+    <wsdl:operation name="GetTodoItems">
+      <wsdl:input message="tns:GetTodoItemsSoapIn" />
+      <wsdl:output message="tns:GetTodoItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTodoItem">
+      <wsdl:input message="tns:CreateTodoItemSoapIn" />
+      <wsdl:output message="tns:CreateTodoItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditTodoItem">
+      <wsdl:input message="tns:EditTodoItemSoapIn" />
+      <wsdl:output message="tns:EditTodoItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTodoItem">
+      <wsdl:input message="tns:DeleteTodoItemSoapIn" />
+      <wsdl:output message="tns:DeleteTodoItemSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TodoServiceSoap" type="tns:TodoServiceSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="GetTodoItems">
+    <wsdl:operation name="GetTodoItems">
       <soap:operation soapAction="http://www.xamarin.com/webservices/GetTodoItems" style="document" />
-      <input>
+      <wsdl:input>
         <soap:body use="literal" />
-      </input>
-      <output>
+      </wsdl:input>
+      <wsdl:output>
         <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="CreateTodoItem">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTodoItem">
       <soap:operation soapAction="http://www.xamarin.com/webservices/CreateTodoItem" style="document" />
-      <input>
+      <wsdl:input>
         <soap:body use="literal" />
-      </input>
-      <output>
+      </wsdl:input>
+      <wsdl:output>
         <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="EditTodoItem">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditTodoItem">
       <soap:operation soapAction="http://www.xamarin.com/webservices/EditTodoItem" style="document" />
-      <input>
+      <wsdl:input>
         <soap:body use="literal" />
-      </input>
-      <output>
+      </wsdl:input>
+      <wsdl:output>
         <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="DeleteTodoItem">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTodoItem">
       <soap:operation soapAction="http://www.xamarin.com/webservices/DeleteTodoItem" style="document" />
-      <input>
+      <wsdl:input>
         <soap:body use="literal" />
-      </input>
-      <output>
+      </wsdl:input>
+      <wsdl:output>
         <soap:body use="literal" />
-      </output>
-    </operation>
-  </binding>
-  <binding name="TodoServiceSoap12" type="tns:TodoServiceSoap">
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TodoServiceSoap12" type="tns:TodoServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="GetTodoItems">
+    <wsdl:operation name="GetTodoItems">
       <soap12:operation soapAction="http://www.xamarin.com/webservices/GetTodoItems" style="document" />
-      <input>
+      <wsdl:input>
         <soap12:body use="literal" />
-      </input>
-      <output>
+      </wsdl:input>
+      <wsdl:output>
         <soap12:body use="literal" />
-      </output>
-    </operation>
-    <operation name="CreateTodoItem">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTodoItem">
       <soap12:operation soapAction="http://www.xamarin.com/webservices/CreateTodoItem" style="document" />
-      <input>
+      <wsdl:input>
         <soap12:body use="literal" />
-      </input>
-      <output>
+      </wsdl:input>
+      <wsdl:output>
         <soap12:body use="literal" />
-      </output>
-    </operation>
-    <operation name="EditTodoItem">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditTodoItem">
       <soap12:operation soapAction="http://www.xamarin.com/webservices/EditTodoItem" style="document" />
-      <input>
+      <wsdl:input>
         <soap12:body use="literal" />
-      </input>
-      <output>
+      </wsdl:input>
+      <wsdl:output>
         <soap12:body use="literal" />
-      </output>
-    </operation>
-    <operation name="DeleteTodoItem">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTodoItem">
       <soap12:operation soapAction="http://www.xamarin.com/webservices/DeleteTodoItem" style="document" />
-      <input>
+      <wsdl:input>
         <soap12:body use="literal" />
-      </input>
-      <output>
+      </wsdl:input>
+      <wsdl:output>
         <soap12:body use="literal" />
-      </output>
-    </operation>
-  </binding>
-  <service name="TodoService">
-    <port name="TodoServiceSoap" binding="tns:TodoServiceSoap">
-      <soap:address location="http://todoasmxservice.azurewebsites.net/TodoService.asmx" />
-    </port>
-    <port name="TodoServiceSoap12" binding="tns:TodoServiceSoap12">
-      <soap12:address location="http://todoasmxservice.azurewebsites.net/TodoService.asmx" />
-    </port>
-  </service>
-</definitions>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TodoService">
+    <wsdl:port name="TodoServiceSoap" binding="tns:TodoServiceSoap">
+      <soap:address location="http://localhost:49178/TodoService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TodoServiceSoap12" binding="tns:TodoServiceSoap12">
+      <soap12:address location="http://localhost:49178/TodoService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
