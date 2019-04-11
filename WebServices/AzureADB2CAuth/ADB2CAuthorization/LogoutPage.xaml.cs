@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Identity.Client;
 using Xamarin.Forms;
 
@@ -18,13 +20,13 @@ namespace ADB2CAuthorization
 		{
 			if (authenticationResult != null)
 			{
-				if (authenticationResult.User.Name != "unknown")
+				if (authenticationResult.Account.Username != "unknown")
 				{
-					messageLabel.Text = string.Format("Welcome {0}", authenticationResult.User.Name);
+					messageLabel.Text = string.Format("Welcome {0}", authenticationResult.Account.Username);
 				}
 				else
 				{
-					messageLabel.Text = string.Format("UserId: {0}", authenticationResult.User.UniqueId);
+					messageLabel.Text = string.Format("UserId: {0}", authenticationResult.Account.Username);
 				}
 			}
 
@@ -33,7 +35,14 @@ namespace ADB2CAuthorization
 
 		async void OnLogoutButtonClicked(object sender, EventArgs e)
 		{
-			App.AuthenticationClient.UserTokenCache.Clear(Constants.ApplicationID);
+            IEnumerable<IAccount> accounts = await App.AuthenticationClient.GetAccountsAsync();
+
+            while(accounts.Any())
+            {
+                await App.AuthenticationClient.RemoveAsync(accounts.First());
+                accounts = await App.AuthenticationClient.GetAccountsAsync();
+            }
+
 			await Navigation.PopAsync();
 		}
 	}

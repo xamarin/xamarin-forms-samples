@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Identity.Client;
@@ -18,8 +20,10 @@ namespace ADB2CAuthorization
 			try
 			{
                 // Look for existing user
-                var accounts = await App.AuthenticationClient.GetAccountsAsync();
-				var result = await App.AuthenticationClient.AcquireTokenSilentAsync(Constants.Scopes, accounts.FirstOrDefault());
+                IEnumerable<IAccount> accounts = await App.AuthenticationClient.GetAccountsAsync();
+				AuthenticationResult result = await App.AuthenticationClient.AcquireTokenSilentAsync(
+                    Constants.Scopes,
+                    accounts.FirstOrDefault());
 				await Navigation.PushAsync(new LogoutPage(result));
 			}
 			catch
@@ -33,14 +37,14 @@ namespace ADB2CAuthorization
 		{
 			try
 			{
-				var result = await App.AuthenticationClient.AcquireTokenAsync(
-					Constants.Scopes,
-					string.Empty,
-					UiOptions.SelectAccount,
-					string.Empty,
-					null,
-					Constants.Authority,
-					Constants.SignUpSignInPolicy);
+
+                AuthenticationResult result = await App.AuthenticationClient.AcquireTokenAsync(
+                    Constants.Scopes,
+                    string.Empty,
+                    UIBehavior.SelectAccount,
+                    string.Empty,
+                    App.UiParent);
+
 				await Navigation.PushAsync(new LogoutPage(result));
 			}
 			catch (MsalException ex)
@@ -60,14 +64,15 @@ namespace ADB2CAuthorization
 		{
 			try
 			{
-				await App.AuthenticationClient.AcquireTokenAsync(
-					Constants.Scopes,
-					string.Empty,
-					UiOptions.SelectAccount,
-					string.Empty,
-					null,
-					Constants.Authority,
-					Constants.ResetPasswordPolicy);
+                throw new NotImplementedException();
+				//await App.AuthenticationClient.AcquireTokenAsync(
+				//	Constants.Scopes,
+				//	string.Empty,
+				//	UIBehavior.SelectAccount,
+				//	string.Empty,
+				//	null,
+				//	Constants.Authority,
+				//	Constants.ResetPasswordPolicy);
 			}
 			catch (MsalException)
 			{

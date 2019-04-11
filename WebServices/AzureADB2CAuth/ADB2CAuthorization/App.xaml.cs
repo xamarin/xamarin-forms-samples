@@ -5,16 +5,19 @@ using Microsoft.Identity.Client;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace ADB2CAuthorization
 {
-	public partial class App : Application
-	{
-		public static PublicClientApplication AuthenticationClient { get; private set; }
+    public partial class App : Application
+    {
+        public static PublicClientApplication AuthenticationClient { get; private set; }
+
+        public static UIParent UiParent {get; set;} = null;
 
 		public App()
 		{
 			InitializeComponent();
 
-			AuthenticationClient = new PublicClientApplication(Constants.ApplicationID);
-			MainPage = new NavigationPage(new LoginPage());
+            AuthenticationClient = new PublicClientApplication(Constants.ClientId, Constants.Authority);
+
+            MainPage = new NavigationPage(new LoginPage());
 		}
 
 		protected override void OnStart()
