@@ -58,12 +58,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ADB2CAuthorization\ADB2CAuthorization.csproj">
-      <Project>{9132BCDE-0739-4B0B-9DA7-BD37A9D410B3}</Project>
-      <Name>ADB2CAuthorization</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
