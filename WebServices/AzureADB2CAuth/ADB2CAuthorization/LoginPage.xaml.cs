@@ -35,48 +35,50 @@ namespace ADB2CAuthorization
 
 		async void OnLoginButtonClicked(object sender, EventArgs e)
 		{
+            AuthenticationResult result;
 			try
 			{
 
-                AuthenticationResult result = await App.AuthenticationClient.AcquireTokenAsync(
+                result = await App.AuthenticationClient.AcquireTokenAsync(
                     Constants.Scopes,
                     string.Empty,
                     UIBehavior.SelectAccount,
                     string.Empty,
                     App.UiParent);
-
-				await Navigation.PushAsync(new LogoutPage(result));
-			}
+                    await Navigation.PushAsync(new LogoutPage(result));
+            }
 			catch (MsalException ex)
 			{
 				if (ex.Message != null && ex.Message.Contains("AADB2C90118"))
 				{
-					await OnForgotPassword();
-				}
-				if (ex.ErrorCode != "authentication_canceled")
+					result = await OnForgotPassword();
+                    await Navigation.PushAsync(new LogoutPage(result));
+                }
+				else if (ex.ErrorCode != "authentication_canceled")
 				{
 					await DisplayAlert("An error has occurred", "Exception message: " + ex.Message, "Dismiss");
 				}
 			}
 		}
 
-		async Task OnForgotPassword()
+		async Task<AuthenticationResult> OnForgotPassword()
 		{
 			try
 			{
-                throw new NotImplementedException();
-				//await App.AuthenticationClient.AcquireTokenAsync(
-				//	Constants.Scopes,
-				//	string.Empty,
-				//	UIBehavior.SelectAccount,
-				//	string.Empty,
-				//	null,
-				//	Constants.Authority,
-				//	Constants.ResetPasswordPolicy);
+                return await App.AuthenticationClient.AcquireTokenAsync(
+                    Constants.Scopes,
+                    string.Empty,
+                    UIBehavior.SelectAccount,
+                    string.Empty,
+                    null,
+                    Constants.AuthorityPasswordReset,
+                    App.UiParent
+                    );
 			}
 			catch (MsalException)
 			{
-				// Do nothing - ErrorCode will be displayed in OnLoginButtonClicked
+                // Do nothing - ErrorCode will be displayed in OnLoginButtonClicked
+                return null;
 			}
 		}
 	}

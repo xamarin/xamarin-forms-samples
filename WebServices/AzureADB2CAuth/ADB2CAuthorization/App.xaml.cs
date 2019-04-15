@@ -15,7 +15,7 @@ namespace ADB2CAuthorization
 		{
 			InitializeComponent();
 
-            AuthenticationClient = new PublicClientApplication(Constants.ClientId, Constants.Authority);
+            AuthenticationClient = new PublicClientApplication(Constants.ClientId, Constants.AuthoritySignin);
 
             MainPage = new NavigationPage(new LoginPage());
 		}
