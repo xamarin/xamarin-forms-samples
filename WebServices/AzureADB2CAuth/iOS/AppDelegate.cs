@@ -13,9 +13,16 @@ namespace ADB2CAuthorization.iOS
 			LoadApplication(new App());
 
 			var result = base.FinishedLaunching(app, options);
-			App.AuthenticationClient.PlatformParameters = new PlatformParameters(UIApplication.SharedApplication.KeyWindow.RootViewController);
+            App.AuthenticationClient.iOSKeychainSecurityGroup = "com.xamarin.adb2cauthorization";
+			//App.AuthenticationClient.PlatformParameters = new PlatformParameters(UIApplication.SharedApplication.KeyWindow.RootViewController);
 			return result;
 		}
-	}
+
+        public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
+        {
+            AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(url);
+            return base.OpenUrl(app, url, options);
+        }
+    }
 }
 
