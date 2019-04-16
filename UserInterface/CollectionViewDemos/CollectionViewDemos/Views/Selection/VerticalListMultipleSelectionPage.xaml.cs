@@ -35,7 +35,7 @@ namespace CollectionViewDemos.Views
                 return string.Empty;
             }
 
-            return items.Aggregate(string.Empty, (sender, obj) => sender + (sender.Length == 0 ? "" : ",") + ((Monkey)obj).Name);
+            return items.Aggregate(string.Empty, (sender, obj) => sender + (sender.Length == 0 ? "" : ", ") + ((Monkey)obj).Name);
         }
     }
 }

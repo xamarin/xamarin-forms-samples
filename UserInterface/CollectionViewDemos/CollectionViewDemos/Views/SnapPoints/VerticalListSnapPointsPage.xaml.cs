@@ -1,5 +1,6 @@
-﻿using CollectionViewDemos.ViewModels;
-using System;
+﻿using System;
+using CollectionViewDemos.Controls;
+using CollectionViewDemos.ViewModels;
 using Xamarin.Forms;
 
 namespace CollectionViewDemos.Views

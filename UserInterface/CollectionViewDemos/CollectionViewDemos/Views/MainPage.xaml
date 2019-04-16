@@ -40,13 +40,17 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:HorizontalGridPage}" />
                 <TextCell Text="Vertical list"
-                          Detail="RTL FlowDirection"
+                          Detail="Data template selector"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type views:VerticalListRTLPage}" />
+                          CommandParameter="{x:Type views:VerticalListDataTemplateSelectorPage}" />
                 <TextCell Text="Vertical list"
                           Detail="Variable size items"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:VerticalListVariableSizeItemsPage}" />
+                <TextCell Text="Vertical list"
+                          Detail="RTL FlowDirection"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VerticalListRTLPage}" />
             </TableSection>
             <TableSection Title="Selection">
                 <TextCell Text="Single"
@@ -57,10 +61,14 @@
                           Detail="Vertical list"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:VerticalListMultipleSelectionPage}" />
-                <TextCell Text="Pre-selection"
+                <TextCell Text="Single pre-selection"
                           Detail="Vertical list"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type views:VerticalListPreSelectionPage}" />
+                          CommandParameter="{x:Type views:VerticalListSinglePreSelectionPage}" />
+                <TextCell Text="Multiple pre-selection"
+                          Detail="Vertical list"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VerticalListMultiplePreSelectionPage}" />
                 <TextCell Text="Selection color"
                           Detail="Vertical list"
                           Command="{Binding NavigateCommand}"
@@ -87,6 +95,10 @@
                           Detail="Filtering"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:EmptyViewTemplatePage}" />
+                <TextCell Text="EmptyView with EmptyViewTemplate"
+                          Detail="Data template selector"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:EmptyViewDataTemplateSelectorPage}" />
                 <TextCell Text="EmptyView swap"
                           Detail="Filtering"
                           Command="{Binding NavigateCommand}"

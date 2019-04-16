@@ -2,14 +2,47 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:CollectionViewDemos.Controls"
-             x:Class="CollectionViewDemos.Views.EmptyViewTemplatePage"
-             Title="EmptyView (template)">
+             x:Class="CollectionViewDemos.Views.EmptyViewDataTemplateSelectorPage"
+             Title="EmptyView (DataTemplateSelector)">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="AdvancedTemplate">
+            <StackLayout>
+                <Label Text="No results matched your filter."
+                       Margin="10,25,10,10"
+                       FontAttributes="Bold"
+                       FontSize="18"
+                       HorizontalOptions="Fill"
+                       HorizontalTextAlignment="Center" />
+                <Label Text="Try a broader filter?"
+                       FontAttributes="Italic"
+                       FontSize="12"
+                       HorizontalOptions="Fill"
+                       HorizontalTextAlignment="Center" />
+            </StackLayout>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="BasicTemplate">
+            <Label Text="No items to display."
+                   Margin="10,25,10,10"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   HorizontalOptions="Fill"
+                   HorizontalTextAlignment="Center" />
+        </DataTemplate>
+        
+        <controls:SearchTermDataTemplateSelector x:Key="SearchSelector"
+                                                 DefaultTemplate="{StaticResource AdvancedTemplate}"
+                                                 OtherTemplate="{StaticResource BasicTemplate}" />
+    </ContentPage.Resources>
+    
     <StackLayout Margin="20">
         <SearchBar x:Name="searchBar"
                    SearchCommand="{Binding FilterCommand}"
                    SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
                    Placeholder="Filter" />
-        <CollectionView ItemsSource="{Binding Monkeys}">
+        <CollectionView ItemsSource="{Binding Monkeys}"
+                        EmptyView="{Binding Source={x:Reference searchBar}, Path=Text}"
+                        EmptyViewTemplate="{StaticResource SearchSelector}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">
@@ -37,19 +70,6 @@
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-            <CollectionView.EmptyView>
-                <controls:FilterData Filter="{Binding Source={x:Reference searchBar}, Path=Text}" />
-            </CollectionView.EmptyView>
-            <CollectionView.EmptyViewTemplate>
-                <DataTemplate>
-                    <Label Text="{Binding Filter, StringFormat='Your filter term of {0} did not match any records.'}"
-                           Margin="10,25,10,10"
-                           FontAttributes="Bold"
-                           FontSize="18"
-                           HorizontalOptions="Fill"
-                           HorizontalTextAlignment="Center" />
-                </DataTemplate>
-            </CollectionView.EmptyViewTemplate>
         </CollectionView>
     </StackLayout>
 </ContentPage>

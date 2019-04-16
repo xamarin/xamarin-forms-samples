@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:CollectionViewDemos"
+             xmlns:controls="clr-namespace:CollectionViewDemos.Controls"
              x:Class="CollectionViewDemos.Views.VerticalListSnapPointsPage"
              Title="Vertical list (snap points)">
     <StackLayout Margin="20">
@@ -9,7 +9,7 @@
                      HorizontalOptions="Center">
             <Label Text="SnapPointsType: "
                    VerticalTextAlignment="Center" />
-            <local:EnumPicker x:Name="snapPointsTypeEnumPicker"
+            <controls:EnumPicker x:Name="snapPointsTypeEnumPicker"
                               EnumType="{x:Type SnapPointsType}"
                               SelectedIndex="0"
                               SelectedIndexChanged="OnSnapPointsTypeSelectedIndexChanged" />
@@ -19,7 +19,7 @@
             <Label Grid.Row="1" 
                    Text="SnapPointsAlignment: "
                    VerticalTextAlignment="Center" />
-           <local:EnumPicker x:Name="snapPointsAlignmentEnumPicker"
+            <controls:EnumPicker x:Name="snapPointsAlignmentEnumPicker"
                              EnumType="{x:Type SnapPointsAlignment}"
                              SelectedIndex="0"
                              SelectedIndexChanged="OnSnapPointsAlignmentSelectedIndexChanged" />

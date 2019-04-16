@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:CollectionViewDemos"
+             xmlns:controls="clr-namespace:CollectionViewDemos.Controls"
              x:Class="CollectionViewDemos.Views.ScrollToByIndexPage"
              Title="Scroll to index">
     <StackLayout Margin="20">
@@ -9,7 +9,7 @@
                      HorizontalOptions="Center">
             <Label Text="ScrollToPosition: "
                    VerticalTextAlignment="Center" />
-            <local:EnumPicker x:Name="enumPicker"
+            <controls:EnumPicker x:Name="enumPicker"
                               EnumType="{x:Type ScrollToPosition}"
                               SelectedIndex="0" />
         </StackLayout>

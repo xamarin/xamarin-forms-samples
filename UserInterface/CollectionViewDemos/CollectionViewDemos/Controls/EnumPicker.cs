@@ -2,7 +2,7 @@
 using System.Reflection;
 using Xamarin.Forms;
 
-namespace CollectionViewDemos
+namespace CollectionViewDemos.Controls
 {
     class EnumPicker : Picker
     {

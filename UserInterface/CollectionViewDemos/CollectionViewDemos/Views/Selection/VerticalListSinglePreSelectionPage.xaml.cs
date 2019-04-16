@@ -3,9 +3,9 @@ using CollectionViewDemos.ViewModels;
 
 namespace CollectionViewDemos.Views
 {
-    public partial class VerticalListPreSelectionPage : ContentPage
+    public partial class VerticalListSinglePreSelectionPage : ContentPage
     {
-        public VerticalListPreSelectionPage()
+        public VerticalListSinglePreSelectionPage()
         {
             InitializeComponent();
             BindingContext = new MonkeysViewModel();

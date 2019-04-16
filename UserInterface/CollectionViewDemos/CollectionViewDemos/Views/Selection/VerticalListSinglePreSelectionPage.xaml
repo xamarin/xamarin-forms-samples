@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="CollectionViewDemos.Views.VerticalListPreSelectionPage"
-             Title="Vertical list (pre-selection)">
+             x:Class="CollectionViewDemos.Views.VerticalListSinglePreSelectionPage"
+             Title="Vertical list (single pre-selection)">
 <StackLayout Margin="20">
         <Label Text="{Binding SelectedMonkeyMessage}" />
-        <CollectionView x:Name="collectionView"
-                        ItemsSource="{Binding Monkeys}"
+        <CollectionView ItemsSource="{Binding Monkeys}"
                         SelectionMode="Single"
                         SelectedItem="{Binding SelectedMonkey, Mode=TwoWay}"
                         SelectionChangedCommand="{Binding MonkeySelectionChangedCommand}">

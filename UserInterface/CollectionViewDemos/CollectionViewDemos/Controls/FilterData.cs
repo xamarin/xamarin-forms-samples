@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace CollectionViewDemos.Views
+namespace CollectionViewDemos.Controls
 {
     public class FilterData : BindableObject
     {
