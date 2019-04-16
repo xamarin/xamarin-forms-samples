@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:controls="clr-namespace:Xaminals.Controls"
+             xmlns:data="clr-namespace:Xaminals.Data"
+             x:Class="Xaminals.Views.MonkeysPage"
+             Title="Monkeys">
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" 
+                                        Value="#689F39" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+    
+    <Shell.SearchHandler>
+        <controls:MonkeySearchHandler Placeholder="Enter search term"
+                                      ShowsResults="true"
+                                      DisplayMemberName="Name" />
+    </Shell.SearchHandler>
+    
+    <CollectionView Margin="20"
+                    ItemsSource="{x:Static data:MonkeyData.Monkeys}"
+                    ItemTemplate="{StaticResource AnimalTemplate}"
+                    SelectionMode="Single"
+                    SelectionChanged="OnCollectionViewSelectionChanged" />
+</ContentPage>
