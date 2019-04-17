@@ -51,9 +51,6 @@
     <PackageReference Include="Xamarin.Forms.Theme.Base">
       <Version>1.0.0.43-pre1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.v4">
-      <Version>27.0.2</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
