@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VisualDemos.PickerPage"
+             Title="Pickers"
+             Visual="Material">
+     <StackLayout Spacing="20"
+                  Padding="10"
+                  BackgroundColor="White">
+        <Label Text="DatePicker with TextColor" 
+               Margin="0,0,0,-10" />       
+        <DatePicker MinimumDate="01/01/2019"
+                    MaximumDate="12/31/2019"
+                    Date="03/11/2019"
+                    TextColor="{StaticResource PrimaryColor}" />
+        
+        <Label Text="TimePicker with TextColor" 
+               Margin="0,0,0,-10" />       
+        <TimePicker Time="4:15:26"
+                    TextColor="{StaticResource PrimaryColor}"/>
+        
+        <Label Text="Picker with TitleColor and TextColor" 
+               Margin="0,0,0,-10" />        
+        <Picker Title="Select a monkey"
+                TitleColor="{StaticResource PrimaryColor}"
+                TextColor="{StaticResource SecondaryColor}">
+          <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+              <x:String>Baboon</x:String>
+              <x:String>Capuchin Monkey</x:String>
+              <x:String>Blue Monkey</x:String>
+              <x:String>Squirrel Monkey</x:String>
+              <x:String>Golden Lion Tamarin</x:String>
+              <x:String>Howler Monkey</x:String>
+              <x:String>Japanese Macaque</x:String>
+            </x:Array>
+          </Picker.ItemsSource>
+        </Picker>
+    </StackLayout>
+</ContentPage>

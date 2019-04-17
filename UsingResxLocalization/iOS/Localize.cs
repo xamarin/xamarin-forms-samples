@@ -57,7 +57,8 @@ namespace UsingResxLocalization.iOS
 		string iOSToDotnetLanguage(string iOSLanguage)
 		{
 			Console.WriteLine("iOS Language:" + iOSLanguage);
-			var netLanguage = iOSLanguage; 
+            // .NET cultures don't support underscores
+            string netLanguage = iOSLanguage.Replace("_", "-");
 
 			// certain languages need to be converted to CultureInfo equivalent
 			switch (iOSLanguage)

@@ -1,3 +1,15 @@
+---
+name: TodoAzureAuthOfflineSync
+description: 'This sample demonstrates synchronizing offline data in a Xamarin.Forms application to an Azure Mobile Apps instance.  The app functionality is:  - ...'
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: webservices-todoazureauthofflinesync
+---
 TodoAzureAuthOfflineSync
 ========================
 

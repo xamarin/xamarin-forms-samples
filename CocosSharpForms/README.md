@@ -1,3 +1,15 @@
+---
+name: CocosSharp and Xamarin Forms
+description: This solution contains an iOS and Android project which combines CocosSharp with Xamarin Forms. All code (aside from initial template code) is cont...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: cocossharpforms
+---
 CocosSharp and Xamarin Forms
 ================
 

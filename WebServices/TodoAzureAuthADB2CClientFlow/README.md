@@ -1,3 +1,15 @@
+---
+name: TodoAzureAuthADB2CClientFlow
+description: This sample demonstrates how to use Azure Active Directory B2C to provide a client-side authentication and authorization flow to an Azure Mobile Ap...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: webservices-todoazureauthadb2cclientflow
+---
 TodoAzureAuthADB2CClientFlow
 ============================
 

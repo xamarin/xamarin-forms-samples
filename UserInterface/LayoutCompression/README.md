@@ -1,3 +1,15 @@
+---
+name: Layout Compression
+description: Layout compression removes specified layouts from the visual tree in an attempt to improve page rendering performance. This sample demonstrates how...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: userinterface-layoutcompression
+---
 Layout Compression
 ===============
 

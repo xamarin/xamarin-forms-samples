@@ -1,3 +1,15 @@
+---
+name: Simple Theme with Template Binding
+description: This sample demonstrates using a `ControlTemplate` with a `TemplateBinding` to theme a `ContentPage` and change the theme at runtime  For more info...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: templates-controltemplates-simplethemewithtemplatebinding
+---
 Simple Theme with Template Binding
 ==================================
 

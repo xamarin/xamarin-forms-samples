@@ -1,3 +1,15 @@
+---
+name: LayoutOptions
+description: Every Xamarin.Forms view has `HorizontalOptions` and `VerticalOptions` properties, of type `LayoutOptions`. This article demonstrates the effect th...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: userinterface-layoutoptions
+---
 LayoutOptions
 =============
 

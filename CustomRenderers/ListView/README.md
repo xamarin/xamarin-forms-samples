@@ -1,3 +1,15 @@
+---
+name: ListView Custom Renderer
+description: This sample demonstrates a custom renderer that encapsulates platform-specific list controls and native cell layouts.   For more information about ...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: customrenderers-listview
+---
 ListView Custom Renderer
 ========================
 

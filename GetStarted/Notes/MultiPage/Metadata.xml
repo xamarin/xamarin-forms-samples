@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleMetadata>
+	<ID>8C6412E9-25F6-4301-8DE4-AC7B65A2F9F1</ID>
+	<IsFullApplication>false</IsFullApplication>
+  <Brief>This sample demonstrates a multi-page Xamarin.Forms application that's capable of storing multiple notes in device storage.</Brief>
+	<Level>Beginner</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>Get Started, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>

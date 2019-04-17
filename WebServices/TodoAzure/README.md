@@ -1,3 +1,15 @@
+---
+name: TodoAzure
+description: This sample demonstrates a Todo list application where the data is stored and accessed from an Azure Mobile App instance.  The app functionality is...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: webservices-todoazure
+---
 TodoAzure
 =========
 

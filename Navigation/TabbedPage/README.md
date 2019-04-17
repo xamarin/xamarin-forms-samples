@@ -1,3 +1,15 @@
+---
+name: TabbedPage
+description: This sample demonstrates how to use a `TabbedPage` to navigate through a collection of pages. The `TabbedPage` is constructed by assigning a collec...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: navigation-tabbedpage
+---
 TabbedPage
 ==========
 

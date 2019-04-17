@@ -19,7 +19,6 @@ namespace TodoWCF.iOS
 			Xamarin.Calabash.Start ();
 			#endif
 
-			App.Speech = new Speech ();
 			LoadApplication (new App ());
 
 			return base.FinishedLaunching (app, options);

@@ -18,10 +18,10 @@ namespace PlatformSpecifics
             BindingContext = this;
 
             Title = "Platform Specifics Demo";
-			Content = new TableView 
-            { 
+            Content = new TableView
+            {
                 Intent = TableIntent.Menu,
-                Root = new TableRoot 
+                Root = new TableRoot
                 {
                     new TableSection("iOS")
                     {
@@ -34,7 +34,8 @@ namespace PlatformSpecifics
                         new TextCell { Text="Picker UpdateMode", Command = NavigateCommand, CommandParameter = typeof(iOSPickerPageCS) },
                         new TextCell { Text="ScrollView DelayContentTouches", Command = NavigateCommand, CommandParameter = typeof(iOSScrollViewPageCS) },
                         new TextCell { Text="NavigationPage Status Bar Text Color Mode", Command = NavigateCommand, CommandParameter = typeof(iOSStatusBarTextColorModePageCS) },
-						new TextCell { Text = "ListView FullWidth Separators", Command = NavigateCommand, CommandParameter = typeof(iOSListViewPageCS) },
+                        new TextCell { Text = "ListView Platform-Specifics", Command = NavigateCommand, CommandParameter = typeof(iOSListViewPageCS) },
+                        new TextCell { Text = "ListView/Cell Platform-Specifics", Command = NavigateCommand, CommandParameter = typeof(iOSListViewWithCellPageCS) },
 						new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(LegacyColorModePageCS) },
                         new TextCell { Text = "VisualElement Shadow Effect", Command = NavigateCommand, CommandParameter = typeof(iOSShadowEffectPageCS) },
                         new TextCell { Text = "Application PanGestureRecognizer", Command = NavigateCommand, CommandParameter = typeof(iOSPanGestureRecognizerPageCS) },

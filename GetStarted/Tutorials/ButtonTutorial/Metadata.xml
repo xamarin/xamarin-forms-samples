@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleMetadata>
+	<ID>BAD614E0-BDC3-486B-A2DB-30752A0EB3BB</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Beginner</Level>
+	<Tags>Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>false</Gallery>
+	<Brief>This sample demonstrates how to respond to a tap or click of a Xamarin.Forms Button.</Brief>
+</SampleMetadata>

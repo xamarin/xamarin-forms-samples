@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Styles.StyleClassPage"
+             Title="Additional style properties">
+    <ContentPage.Resources>
+        <!-- Button -->
+        <Style TargetType="Button" 
+               x:Key="BaseButtonClass">
+            <Setter Property="TextColor" 
+                    Value="#FFFFFF" />
+            <Setter Property="BorderWidth" 
+                    Value="0" />
+        </Style>
+
+        <Style TargetType="Button" 
+               Class="Success" 
+               BasedOn="{ StaticResource BaseButtonClass }">
+            <Setter Property="BackgroundColor" 
+                    Value="#449D44" />
+        </Style>
+
+        <Style TargetType="Button" 
+               Class="Warning" 
+               BasedOn="{ StaticResource BaseButtonClass }">
+            <Setter Property="BackgroundColor"
+                    Value="#EC971F" />
+        </Style>
+
+        <Style TargetType="Button"
+               Class="Danger"
+               BasedOn="{ StaticResource BaseButtonClass }">
+            <Setter Property="BackgroundColor" 
+                    Value="#C9302C" />
+        </Style>
+        
+        <!-- BoxView -->    
+        <Style TargetType="BoxView" 
+               Class="Separator">
+            <Setter Property="BackgroundColor" 
+                    Value="#CCCCCC" />
+            <Setter Property="HeightRequest" 
+                    Value="1" />
+        </Style>
+        
+        <Style TargetType="BoxView"
+               Class="Rounded">
+            <Setter Property="BackgroundColor" 
+                    Value="#1FAECE" />
+            <Setter Property="HorizontalOptions" 
+                    Value="Start" />
+            <Setter Property="CornerRadius" 
+                    Value="10" />
+        </Style>    
+
+        <Style TargetType="BoxView" 
+               Class="Circle">
+            <Setter Property="BackgroundColor" 
+                    Value="#1FAECE" />
+            <Setter Property="WidthRequest" 
+                    Value="100" />
+            <Setter Property="HeightRequest" 
+                    Value="100" />
+            <Setter Property="HorizontalOptions" 
+                    Value="Start" />
+            <Setter Property="CornerRadius"
+                    Value="50" />
+        </Style>
+        
+        <!-- VisualElement -->
+        <Style TargetType="VisualElement"
+               Class="Rotated"
+               ApplyToDerivedTypes="true">
+            <Setter Property="Rotation"
+                    Value="45" />
+        </Style>
+        
+        <!-- Label -->
+        <Style TargetType="Label">
+            <Setter Property="FontSize"
+                    Value="24" />
+        </Style>
+        
+        <Style x:Key="body"
+               TargetType="Label" 
+               CanCascade="true">
+            <Setter Property="TextColor"
+                    Value="DarkGray" />
+            <Setter Property="FontAttributes"
+                    Value="Italic" />
+        </Style>
+    </ContentPage.Resources>
+    
+    <StackLayout Margin="20">
+        <Label Text="Style class demos"
+               HorizontalOptions="Center"
+               FontAttributes="Bold" />
+        <Label Text="The following controls are styled using a style class." 
+               Style="{StaticResource body}" />
+        <Button Text="Success Button"
+                StyleClass="Success" />
+        <Button Text="Warning Button"
+                StyleClass="Warning" />
+        <Button Text="Danger Button"
+                StyleClass="Danger" />
+        
+        <BoxView StyleClass="Separator" />       
+        <BoxView Margin="0,20,0,0"
+                 WidthRequest="100" 
+                 HeightRequest="100"
+                 HorizontalOptions="Center"
+                 StyleClass="Rounded, Rotated" />
+        <BoxView Margin="0,20,0,0"
+                 HorizontalOptions="Center"
+                 StyleClass="Circle" />
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:local="clr-namespace:BindableLayoutDemo"
+             x:Class="BindableLayoutDemo.Views.UserProfilePage">
+    
+    <ContentPage.Resources>
+        <!-- Global Colors -->
+        <Color x:Key="primaryColor">#303030</Color>
+        <Color x:Key="accentColor">White</Color>
+        <Color x:Key="darkAccentColor">#7c6a5c</Color>
+        
+        <!-- Global Sizes -->
+        <x:Double x:Key="mediumTextSize">20</x:Double>
+        <x:Double x:Key="smallTextSize">14</x:Double>
+
+        <!-- Implict Styles -->
+        <Style TargetType="Entry">
+            <Setter Property="HeightRequest" Value="44" />
+            <Setter Property="TextColor" Value="{StaticResource darkAccentColor}" />
+        </Style>
+
+        <!-- Explicit Styles -->
+        <Style x:Key="labelHeading" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource primaryColor}" />
+            <Setter Property="FontSize" Value="{StaticResource mediumTextSize}" />
+        </Style>
+
+        <Style x:Key="nakedButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="TextColor" Value="{StaticResource accentColor}" />
+            <Setter Property="BorderColor" Value="Transparent"/>
+            <Setter Property="BorderWidth" Value="0"/>
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+        
+        <OnPlatform x:TypeArguments="x:String"
+                    x:Key="IconFontFamily">
+            <On Platform="iOS" Value="Font Awesome 5 Free" />
+            <On Platform="Android" Value="fa-solid-900.ttf#Font Awesome 5 Free" />
+        </OnPlatform>
+        
+        <DataTemplate x:Key="defaultTemplate">
+            <Label Text="{Binding}"
+                   FontSize="{StaticResource smallTextSize}"
+                   Margin="0,0,7,0" />
+        </DataTemplate>
+        
+        <DataTemplate x:Key="formsTemplate">
+            <Label FontSize="{StaticResource smallTextSize}"
+                   Margin="0,0,7,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{Binding}"
+                              TextColor="DarkRed" />
+                        <Span Text="&#xf004;"
+                              TextColor="DarkRed"
+                              FontFamily="{StaticResource IconFontFamily}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </DataTemplate>
+        
+        <local:TechItemTemplateSelector x:Key="TechItemTemplateSelector"
+                                        DefaultTemplate="{StaticResource defaultTemplate}"
+                                        XamarinFormsTemplate="{StaticResource formsTemplate}" />        
+    </ContentPage.Resources>
+    
+    <StackLayout> 
+        <AbsoluteLayout BackgroundColor="#909090"
+                        HeightRequest="60">
+            <AbsoluteLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" 
+                            iOS="0,35,0,0"
+                            Android="0,0,0,0" />
+            </AbsoluteLayout.Padding>
+            <Button Text="Cancel" 
+                    Margin="10,10"
+                    Style="{StaticResource nakedButton}" />
+            <Image AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.36, 0.7" 
+                   AbsoluteLayout.LayoutFlags="All" 
+                   BackgroundColor="Transparent" 
+                   HeightRequest="36" 
+                   Source="microsoft_gray.png" />
+            <Button Text="Logout" 
+                    Margin="10,10" 
+                    AbsoluteLayout.LayoutBounds="1, 0, AutoSize, AutoSize" 
+                    AbsoluteLayout.LayoutFlags="PositionProportional" 
+                    Style="{StaticResource nakedButton}" />
+        </AbsoluteLayout>
+        
+        <Label BackgroundColor="#D1D1D1" 
+               HeightRequest="22" 
+               TextColor="#000000" 
+               FontSize="14" 
+               HorizontalTextAlignment="Center" 
+               Text="PROFILE" />
+        
+        <StackLayout Margin="20">
+            <StackLayout Spacing="20" 
+                         Orientation="Horizontal">
+                <controls:CircleImage Source="david.jpg" 
+                                      BorderThickness="3" 
+                                      BorderColor="#9B9B9B" 
+                                      Aspect="AspectFill" 
+                                      WidthRequest="104" 
+                                      HeightRequest="104" />
+                <StackLayout Spacing="5" 
+                             Margin="0,10,0,0">
+                    <Label Text="{Binding User.Username}" 
+                           TextColor="#303030" 
+                           FontSize="12" 
+                           FontAttributes="Bold" 
+                           HeightRequest="40" 
+                           VerticalTextAlignment="Center" />
+                    <Label Text="{Binding User.Email}"
+                           Style="{StaticResource labelHeading}" />
+                </StackLayout>
+            </StackLayout>
+            
+            <Label Text="Top Followers"
+                   Margin="0,20,0,0"
+                   Style="{StaticResource labelHeading}" />
+            <StackLayout BindableLayout.ItemsSource="{Binding User.TopFollowers}"
+                         Orientation="Horizontal"
+                         Margin="13,10,0,0">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <controls:CircleImage Source="{Binding}"
+                                              Aspect="AspectFill"
+                                              WidthRequest="44"
+                                              HeightRequest="44"
+                                              BorderColor="LightGray"
+                                              BorderThickness="1"
+                                              Margin="-13,0,0,0" />
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+            
+            <Label Text="Favorite Tech"
+                   Margin="0,10,0,0"
+                   Style="{StaticResource labelHeading}" />
+            <FlexLayout BindableLayout.ItemsSource="{Binding User.FavoriteTech}"
+                        BindableLayout.ItemTemplateSelector="{StaticResource TechItemTemplateSelector}"
+                        Wrap="Wrap"
+                        JustifyContent="Start"
+                        Margin="0,10,0,0" />
+             
+            <Label Text="Achievements"
+                   Margin="0,10,0,0"
+                   Style="{StaticResource labelHeading}" />
+            <StackLayout BindableLayout.ItemsSource="{Binding User.Achievements}"
+                         Orientation="Horizontal"
+                         Margin="0,10,0,0"
+                         Spacing="20">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Image BackgroundColor="#D1D1D1">
+                            <Image.Source>
+                                <FontImageSource Glyph="{Binding}"
+                                                 FontFamily="{OnPlatform iOS=Ionicons, Android=ionicons.ttf#}"
+                                                 Size="44" />
+                            </Image.Source>
+                        </Image>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

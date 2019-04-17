@@ -19,7 +19,7 @@ namespace FormsGallery.CodeExamples
             {
                 Source = new UriImageSource
                 {
-                    Uri = new Uri("https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png")
+                    Uri = new Uri("https://aka.ms/campus.jpg")
                 },
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.CenterAndExpand

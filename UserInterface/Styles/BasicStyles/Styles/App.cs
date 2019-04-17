@@ -1,6 +1,6 @@
 ﻿//using Xamarin.Forms;
 //using Xamarin.Forms.Xaml;
-//
+
 //[assembly:XamlCompilation (XamlCompilationOptions.Compile)]
 //namespace Styles
 //{
@@ -23,7 +23,7 @@
 //						Value = Color.Lime
 //					},
 //					new Setter {
-//						Property = Button.BorderRadiusProperty,
+//						Property = Button.CornerRadiusProperty,
 //						Value = 5
 //					},
 //					new Setter {
@@ -40,27 +40,41 @@
 //					}
 //				}
 //			};
-//					
-//			Resources = new ResourceDictionary ();
-//			Resources.Add ("buttonStyle", buttonStyle);
-//
-//			MainPage = new HomePageCS ();
+
+//            var contentPageStyle = new Style(typeof(ContentPage))
+//            {
+//                ApplyToDerivedTypes = true,
+//                Setters =
+//                {
+//                    new Setter
+//                    {
+//                        Property = VisualElement.BackgroundColorProperty,
+//                        Value = Color.WhiteSmoke
+//                    }
+//                }
+//            };
+
+//            Resources = new ResourceDictionary();
+//			Resources.Add("buttonStyle", buttonStyle);
+//            Resources.Add(contentPageStyle);
+
+//			MainPage = new NavigationPage(new HomePageCS());
 //		}
-//
+
 //		protected override void OnStart ()
 //		{
 //			// Handle when your app starts
 //		}
-//
+
 //		protected override void OnSleep ()
 //		{
 //			// Handle when your app sleeps
 //		}
-//
+
 //		protected override void OnResume ()
 //		{
 //			// Handle when your app resumes
 //		}
 //	}
 //}
-//
+

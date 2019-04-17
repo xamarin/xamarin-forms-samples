@@ -1,14 +1,15 @@
 ﻿using Xamarin.Forms;
 
-namespace FileUploader
+namespace FileUploader.CS
 {
-	public class FileUploaderPageCS : TabbedPage
-	{
-		public FileUploaderPageCS()
-		{
-			Children.Add(new ImageFileUploaderPageCS());
-			Children.Add(new TextFileUploaderPageCS());
-			Children.Add(new TextFileBrowserPageCS());
-		}
-	}
+    public class FileUploaderPageCS : TabbedPage
+    {
+        public FileUploaderPageCS()
+        {
+            Children.Add(new ImageFileUploaderPageCS());
+            Children.Add(new TextFileUploaderPageCS());
+            Children.Add(new TextFileBrowserPageCS());
+        }
+    }
 }
+

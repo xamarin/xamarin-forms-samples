@@ -7,7 +7,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.UWP;
 
 [assembly: ResolutionGroupName("MyCompany")]
-[assembly: ExportEffect(typeof(FocusEffect), "FocusEffect")]
+[assembly: ExportEffect(typeof(FocusEffect), nameof(FocusEffect))]
 namespace EffectsDemo.UWP
 {
     public class FocusEffect : PlatformEffect

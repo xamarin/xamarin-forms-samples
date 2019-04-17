@@ -1,3 +1,15 @@
+---
+name: SkiaSharp and Xamarin.Forms
+description: The SkiaSharpFormsDemos program demonstrates the use of SkiaSharp in a Xamarin.Forms application.  For more information about this sample, see [Usi...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: skiasharpforms-demos
+---
 SkiaSharp and Xamarin.Forms
 ================
 

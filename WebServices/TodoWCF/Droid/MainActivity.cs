@@ -18,7 +18,6 @@ namespace TodoWCF.Droid
             Instance = this;
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
-            App.Speech = new Speech();
             LoadApplication(new App());
         }
     }

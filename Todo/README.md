@@ -1,3 +1,15 @@
+---
+name: Todo
+description: 'This sample demonstrates a Todo list application where the data is stored and accessed in a local SQLite database.  The app functionality is:  - Vi...'
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: todo
+---
 Todo
 ====
 

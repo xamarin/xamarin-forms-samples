@@ -23,6 +23,7 @@ namespace TextSample
 			layout.Children.Add (styledEntry);
             layout.Children.Add (entry);
             layout.Children.Add(new Entry { Text = "Cursor position and selection length set", CursorPosition = 5, SelectionLength = 10 });
+            layout.Children.Add(new Entry { Text = "This is a read-only Entry", IsReadOnly = true });
 			this.Content = layout;
 		}
 

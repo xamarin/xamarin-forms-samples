@@ -4,7 +4,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 [assembly:ResolutionGroupName ("MyCompany")]
-[assembly:ExportEffect (typeof(FocusEffect), "FocusEffect")]
+[assembly:ExportEffect(typeof(FocusEffect), nameof(FocusEffect))]
 namespace EffectsDemo.Droid
 {
 	public class FocusEffect : PlatformEffect

@@ -1,12 +1,12 @@
 ﻿using Xamarin.Forms;
 
-namespace FileUploader
+namespace FileUploader.XAML
 {
-	public partial class FileUploaderPage : TabbedPage
-	{
-		public FileUploaderPage()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class FileUploaderPage : TabbedPage
+    {
+        public FileUploaderPage()
+        {
+            InitializeComponent();
+        }
+    }
 }

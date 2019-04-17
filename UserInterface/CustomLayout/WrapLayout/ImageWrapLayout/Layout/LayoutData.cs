@@ -12,13 +12,12 @@ namespace ImageWrapLayout
 
 		public int Columns { get; private set; }
 
-		public LayoutData(int visibleChildCount, Size cellSize, int rows, int columns) : this()
+		public LayoutData(int visibleChildCount, Size cellSize, int rows, int columns)
 		{
 			VisibleChildCount = visibleChildCount;
 			CellSize = cellSize;
 			Rows = rows;
 			Columns = columns;
 		}
-
 	}
 }

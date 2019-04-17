@@ -1,3 +1,15 @@
+---
+name: Event to Command Behavior
+description: In the context of commanding, behaviors are a useful approach for connecting a control to a command. In addition, they can also be used to associat...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: behaviors-eventtocommandbehavior
+---
 Event to Command Behavior
 =========================
 

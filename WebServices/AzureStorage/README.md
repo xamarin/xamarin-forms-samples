@@ -1,3 +1,15 @@
+---
+name: Azure Storage
+description: This sample demonstrates how to use Xamarin.Forms to store text and binary data in Azure Storage, and how to access the data.  For more information...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: webservices-azurestorage
+---
 Azure Storage
 =============
 

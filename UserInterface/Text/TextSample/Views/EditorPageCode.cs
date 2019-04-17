@@ -19,6 +19,7 @@ namespace TextSample
             layout.Children.Add (editor);
 			layout.Children.Add (new Editor { IsEnabled = false, Text = "This is a disabled editor" });
             layout.Children.Add(new Editor { Placeholder = "This is placeholder text", PlaceholderColor = Color.Olive });
+            layout.Children.Add(new Editor { Text = "This is a read-only Editor", IsReadOnly = true });
 			this.Content = layout;
 		}
 	}

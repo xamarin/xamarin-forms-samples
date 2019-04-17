@@ -3,16 +3,20 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 x:Class="TodoREST.TodoItemPage" 
 			 Title="Todo">
-	<StackLayout Margin="20" VerticalOptions="StartAndExpand">
+	<StackLayout Margin="20">
 		<Label Text="Name" />
-		<Entry x:Name="nameEntry" Text="{Binding Path=Name}" Placeholder="task name" />
+		<Entry Text="{Binding Path=Name}" 
+               Placeholder="Enter item" />
 		<Label Text="Notes" />
-		<Entry x:Name="notesEntry" Text="{Binding Path=Notes}" />
+		<Entry Text="{Binding Path=Notes}"
+               Placeholder="Enter notes" />
 		<Label Text="Done" />
-		<Switch x:Name="doneSwitch" IsToggled="{Binding Path=Done}" />
-		<Button Text="Save" Clicked="OnSaveActivated" />
-		<Button Text="Delete" Clicked="OnDeleteActivated" />
-		<Button Text="Cancel" Clicked="OnCancelActivated" />
-		<Button Text="Speak" Clicked="OnSpeakActivated" />
+		<Switch IsToggled="{Binding Path=Done}" />
+		<Button Text="Save" 
+                Clicked="OnSaveButtonClicked" />
+		<Button Text="Delete"
+                Clicked="OnDeleteButtonClicked" />
+		<Button Text="Cancel" 
+                Clicked="OnCancelButtonClicked" />
 	</StackLayout>
 </ContentPage>

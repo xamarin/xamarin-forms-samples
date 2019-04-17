@@ -92,7 +92,7 @@
     <PackageReference Include="PCLStorage" Version="1.0.2" />
     <PackageReference Include="sqlite-net-pcl" Version="1.2.1" />
     <PackageReference Include="Xam.Plugin.Media" Version="2.6.1" />
-    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

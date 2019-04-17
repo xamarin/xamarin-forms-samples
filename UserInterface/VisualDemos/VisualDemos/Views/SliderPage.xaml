@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="VisualDemos.SliderPage"
+             Title="Sliders"
+             Visual="Material">
+    <StackLayout Spacing="20" 
+                 Padding="10"  
+                 BackgroundColor="White">
+        <Label Text="Default" 
+               Margin="0,0,0,-10" />
+        <Slider Minimum="-100" 
+                Maximum="100" />
+
+        <Label Text="Disabled" 
+               Margin="0,0,0,-10" />
+        <Slider Minimum="-100" 
+                Maximum="100" 
+                IsEnabled="false" />
+
+        <Label Text="ThumbColor and MinimumTrackColor" 
+               Margin="0,0,0,-10" />
+        <Slider Minimum="-100" 
+                Maximum="100"
+                ThumbColor="{StaticResource PrimaryColor}" 
+                MinimumTrackColor="{StaticResource PrimaryColor}" />
+                
+        <Label Text="ThumbColor, MinimumTrackColor, and MaximumTrackColor" 
+               Margin="0,0,0,-10" />
+        <Slider Minimum="-100" 
+                Maximum="100"
+                ThumbColor="{StaticResource QuinaryColor}" 
+                MaximumTrackColor="{StaticResource SecondaryColor}" 
+                MinimumTrackColor="{StaticResource PrimaryColor}" />
+        
+        <Label Text="ThumbColor, MinimumTrackColor, MaximumTrackColor, Disabled" 
+               Margin="0,0,0,-10" />
+        <Slider Minimum="-100" 
+                Maximum="100" 
+                IsEnabled="false"
+                ThumbColor="{StaticResource PrimaryColor}" 
+                MaximumTrackColor="{StaticResource QuinaryColor}" 
+                MinimumTrackColor="{StaticResource PrimaryColor}" />
+    </StackLayout>
+</ContentPage>

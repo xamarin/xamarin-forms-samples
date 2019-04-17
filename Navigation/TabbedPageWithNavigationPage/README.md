@@ -1,3 +1,15 @@
+---
+name: TabbedPage with NavigationPage
+description: This sample demonstrates how embed a `NavigationPage` in a `TabbedPage`, in order to perform page navigation within a tab. The `TabbedPage` is cons...
+topic: sample
+languages:
+- csharp
+products:
+- xamarin
+technologies:
+- xamarin-forms
+urlFragment: navigation-tabbedpagewithnavigationpage
+---
 TabbedPage with NavigationPage
 ==============================
 
