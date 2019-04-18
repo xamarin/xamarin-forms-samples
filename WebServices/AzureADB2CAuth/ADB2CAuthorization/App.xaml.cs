@@ -9,30 +9,30 @@ namespace ADB2CAuthorization
     {
         public static PublicClientApplication AuthenticationClient { get; private set; }
 
-        public static UIParent UiParent {get; set;} = null;
+        public static UIParent UiParent { get; set; } = null;
 
-		public App()
-		{
-			InitializeComponent();
+        public App()
+        {
+            InitializeComponent();
 
             AuthenticationClient = new PublicClientApplication(Constants.ClientId, Constants.AuthoritySignin);
 
             MainPage = new NavigationPage(new LoginPage());
-		}
+        }
 
-		protected override void OnStart()
-		{
-			// Handle when your app starts
-		}
+        protected override void OnStart()
+        {
+            // Handle when your app starts
+        }
 
-		protected override void OnSleep()
-		{
-			// Handle when your app sleeps
-		}
+        protected override void OnSleep()
+        {
+            // Handle when your app sleeps
+        }
 
-		protected override void OnResume()
-		{
-			// Handle when your app resumes
-		}
-	}
+        protected override void OnResume()
+        {
+            // Handle when your app resumes
+        }
+    }
 }

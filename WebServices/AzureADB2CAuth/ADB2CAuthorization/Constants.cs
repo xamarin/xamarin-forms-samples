@@ -1,7 +1,7 @@
 ﻿namespace ADB2CAuthorization
 {
-	public static class Constants
-	{
+    public static class Constants
+    {
         // set your tenant name, for example "contoso123tenant"
         static readonly string tenantName = "<INSERT_YOUR_TENANT_NAME>";
 
