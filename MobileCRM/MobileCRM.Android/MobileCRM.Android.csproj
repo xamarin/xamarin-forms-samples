@@ -94,10 +94,8 @@
     <PackageReference Include="System.Xml.ReaderWriter" Version="4.3.0" />
     <PackageReference Include="System.Xml.XDocument" Version="4.3.0" />
     <PackageReference Include="System.Xml.XmlDocument" Version="4.3.0" />
-    <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="3.6.0.220655" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Maps" Version="60.1142.1" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

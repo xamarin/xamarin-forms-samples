@@ -43,10 +43,8 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="3.6.0.220655" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Maps" Version="60.1142.1" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

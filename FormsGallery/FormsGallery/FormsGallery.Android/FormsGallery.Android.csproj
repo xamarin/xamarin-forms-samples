@@ -44,8 +44,6 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Build.Download" Version="0.4.11" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Maps" Version="60.1142.1" />
     <PackageReference Include="Xamarin.Forms">
       <Version>3.6.0.220655</Version>
     </PackageReference>
