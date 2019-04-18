@@ -13,7 +13,7 @@
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <JavaMaximumHeapSize />
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>8926cf41</NuGetPackageImportStamp>
@@ -38,11 +38,6 @@
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="27.0.2.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
   </ItemGroup>
   <ItemGroup>
