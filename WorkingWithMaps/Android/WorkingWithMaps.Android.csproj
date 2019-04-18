@@ -31,6 +31,7 @@
     <ConsolePause>false</ConsolePause>
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>portable</DebugType>
