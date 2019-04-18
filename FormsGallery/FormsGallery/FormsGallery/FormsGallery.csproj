@@ -144,7 +144,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.232914-pre6" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="4.0.0.232914-pre6" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.346134-pre9" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.0.0.346134-pre9" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -143,10 +143,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
-      <Version>4.0.0.232914-pre6</Version>
+      <Version>4.0.0.346134-pre9</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms.Maps">
-      <Version>4.0.0.232914-pre6</Version>
+      <Version>4.0.0.346134-pre9</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="..\FormsGallery.Shared\FormsGallery.Shared.projitems" Label="Shared" />
