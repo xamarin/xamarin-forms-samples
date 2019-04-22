@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.Mobile.Client" Version="4.0.2" />
-    <PackageReference Include="Microsoft.Identity.Client" Version="1.1.2-preview0008" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="2.7.1" />
     <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
     <PackageReference Include="PCLCrypto" Version="2.0.147" />
     <PackageReference Include="PInvoke.BCrypt" Version="0.3.2" />
