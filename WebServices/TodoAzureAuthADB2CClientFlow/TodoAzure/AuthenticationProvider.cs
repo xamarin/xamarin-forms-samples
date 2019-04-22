@@ -78,6 +78,8 @@ namespace TodoAzure
                     accounts = await ADB2CClient.GetAccountsAsync();
                 }
 
+                User = null;
+
                 success = true;
             }
             catch (Exception ex)
