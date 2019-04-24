@@ -88,11 +88,16 @@
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Identity.Client" Version="1.0.304142221-alpha" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="2.7.1" />
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.12" />
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ADB2CAuthorization\ADB2CAuthorization.csproj">
+      <Project>{8773e75a-be4e-4566-9ce9-0059aafc56ea}</Project>
+      <Name>ADB2CAuthorization</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -126,12 +131,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ADB2CAuthorization\ADB2CAuthorization.csproj">
-      <Project>{9132bcde-0739-4b0b-9da7-bd37a9d410b3}</Project>
-      <Name>ADB2CAuthorization</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

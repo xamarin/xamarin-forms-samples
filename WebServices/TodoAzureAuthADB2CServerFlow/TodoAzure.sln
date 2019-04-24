@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2035
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoAzure", "TodoAzure\TodoAzure.csproj", "{3AFA591D-C115-4AC9-9519-F788373ECDE9}"
 EndProject
@@ -111,42 +111,30 @@ Global
 		{3AFA591D-C115-4AC9-9519-F788373ECDE9}.Release|x86.ActiveCfg = Release|Any CPU
 		{3AFA591D-C115-4AC9-9519-F788373ECDE9}.Release|x86.Build.0 = Release|Any CPU
 		{3AFA591D-C115-4AC9-9519-F788373ECDE9}.Release|x86.Deploy.0 = Release|Any CPU
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|Any CPU.ActiveCfg = Ad-Hoc|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|Any CPU.Build.0 = Ad-Hoc|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|Any CPU.Deploy.0 = Ad-Hoc|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|ARM.ActiveCfg = Ad-Hoc|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|ARM.Build.0 = Ad-Hoc|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|ARM.Deploy.0 = Ad-Hoc|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|iPhone.Deploy.0 = Ad-Hoc|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhoneSimulator
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|iPhoneSimulator.Build.0 = Ad-Hoc|iPhoneSimulator
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|iPhoneSimulator.Deploy.0 = Ad-Hoc|iPhoneSimulator
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|x64.ActiveCfg = Ad-Hoc|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|x64.Build.0 = Ad-Hoc|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|x64.Deploy.0 = Ad-Hoc|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|x86.ActiveCfg = Ad-Hoc|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|x86.Build.0 = Ad-Hoc|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|x86.Deploy.0 = Ad-Hoc|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|Any CPU.ActiveCfg = AppStore|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|Any CPU.Build.0 = AppStore|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|Any CPU.Deploy.0 = AppStore|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|ARM.ActiveCfg = AppStore|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|ARM.Build.0 = AppStore|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|ARM.Deploy.0 = AppStore|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|iPhone.Build.0 = AppStore|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|iPhone.Deploy.0 = AppStore|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|iPhoneSimulator.Deploy.0 = AppStore|iPhoneSimulator
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|x64.ActiveCfg = AppStore|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|x64.Build.0 = AppStore|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|x64.Deploy.0 = AppStore|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|x86.ActiveCfg = AppStore|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|x86.Build.0 = AppStore|iPhone
-		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|x86.Deploy.0 = AppStore|iPhone
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|Any CPU.Build.0 = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|ARM.ActiveCfg = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|ARM.Build.0 = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|iPhone.ActiveCfg = Release|iPhone
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|iPhone.Build.0 = Release|iPhone
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|x64.ActiveCfg = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|x64.Build.0 = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|x86.ActiveCfg = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Ad-Hoc|x86.Build.0 = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|Any CPU.Build.0 = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|ARM.ActiveCfg = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|ARM.Build.0 = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|iPhone.ActiveCfg = Release|iPhone
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|iPhone.Build.0 = Release|iPhone
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|x64.ActiveCfg = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|x64.Build.0 = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|x86.ActiveCfg = Release|iPhoneSimulator
+		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.AppStore|x86.Build.0 = Release|iPhoneSimulator
 		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
 		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{5FA0219F-B063-4D07-800B-CC38BDB5B916}.Debug|Any CPU.Deploy.0 = Debug|iPhoneSimulator

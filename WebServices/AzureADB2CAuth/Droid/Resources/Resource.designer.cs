@@ -26,9 +26,6 @@ namespace ADB2CAuthorization.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Microsoft.Identity.Client.Resource.Id.agentWebView = global::ADB2CAuthorization.Droid.Resource.Id.agentWebView;
-			global::Microsoft.Identity.Client.Resource.Layout.WebAuthenticationBroker = global::ADB2CAuthorization.Droid.Resource.Layout.WebAuthenticationBroker;
-			global::Microsoft.Identity.Client.Resource.String.ApplicationName = global::ADB2CAuthorization.Droid.Resource.String.ApplicationName;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_in = global::ADB2CAuthorization.Droid.Resource.Animation.abc_fade_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_out = global::ADB2CAuthorization.Droid.Resource.Animation.abc_fade_out;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::ADB2CAuthorization.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -6374,9 +6371,6 @@ namespace ADB2CAuthorization.Droid
 			// aapt resource value: 0x7f08002e
 			public const int add = 2131230766;
 			
-			// aapt resource value: 0x7f0800fd
-			public const int agentWebView = 2131230973;
-			
 			// aapt resource value: 0x7f08007f
 			public const int alertTitle = 2131230847;
 			
@@ -6608,8 +6602,8 @@ namespace ADB2CAuthorization.Droid
 			// aapt resource value: 0x7f0800f5
 			public const int main_toolbar = 2131230965;
 			
-			// aapt resource value: 0x7f0800ff
-			public const int masked = 2131230975;
+			// aapt resource value: 0x7f0800fe
+			public const int masked = 2131230974;
 			
 			// aapt resource value: 0x7f0800e7
 			public const int media_actions = 2131230951;
@@ -7049,8 +7043,8 @@ namespace ADB2CAuthorization.Droid
 			// aapt resource value: 0x7f08001b
 			public const int view_offset_helper = 2131230747;
 			
-			// aapt resource value: 0x7f0800fe
-			public const int visible = 2131230974;
+			// aapt resource value: 0x7f0800fd
+			public const int visible = 2131230973;
 			
 			// aapt resource value: 0x7f0800d4
 			public const int volume_item_container = 2131230932;
@@ -7430,9 +7424,6 @@ namespace ADB2CAuthorization.Droid
 			// aapt resource value: 0x7f030054
 			public const int Toolbar = 2130903124;
 			
-			// aapt resource value: 0x7f030055
-			public const int WebAuthenticationBroker = 2130903125;
-			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -7445,9 +7436,6 @@ namespace ADB2CAuthorization.Droid
 		
 		public partial class String
 		{
-			
-			// aapt resource value: 0x7f09004e
-			public const int ApplicationName = 2131296334;
 			
 			// aapt resource value: 0x7f090018
 			public const int abc_action_bar_home_description = 2131296280;
