@@ -28,17 +28,12 @@ namespace FlexLayoutDemos
 
         async void LoadBitmapCollection()
         {
-            int imageDimension = Device.RuntimePlatform == Device.iOS ||
-                                 Device.RuntimePlatform == Device.Android ? 240 : 120;
-
-            string urlSuffix = String.Format("?width={0}&height={0}&mode=max", imageDimension);
-
             using (WebClient webClient = new WebClient())
             {
                 try
                 {
                     // Download the list of stock photos
-                    Uri uri = new Uri("http://docs.xamarin.com/demo/stock.json");
+                    Uri uri = new Uri("https://raw.githubusercontent.com/xamarin/docs-archive/master/Images/stock/small/stock.json");
                     byte[] data = await webClient.DownloadDataTaskAsync(uri);
 
                     // Convert to a Stream object
@@ -53,7 +48,7 @@ namespace FlexLayoutDemos
                         {
                             Image image = new Image
                             {
-                                Source = ImageSource.FromUri(new Uri(filepath + urlSuffix))
+                                Source = ImageSource.FromUri(new Uri(filepath))
                             };
                             flexLayout.Children.Add(image);
                         }
