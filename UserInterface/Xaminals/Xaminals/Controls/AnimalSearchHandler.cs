@@ -35,7 +35,7 @@ namespace Xaminals.Controls
 
             ShellNavigationState state = (App.Current.MainPage as Shell).CurrentState;
             // Note: strings will be URL encoded for navigation (e.g. "Blue Monkey" becomes "Blue%20Monkey"). Therefore, decode at the receiver.
-            await Shell.Current.GoToAsync($"{state.Location.AbsoluteUri}{GetNavigationTarget()}?name={((Animal)item).Name}"); 
+            await Shell.Current.GoToAsync($"{state.Location.AbsoluteUri}/{GetNavigationTarget()}?name={((Animal)item).Name}"); 
         }
 
         string GetNavigationTarget()

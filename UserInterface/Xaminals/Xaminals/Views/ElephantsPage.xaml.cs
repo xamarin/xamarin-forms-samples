@@ -14,7 +14,10 @@ namespace Xaminals.Views
         async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string elephantName = (e.CurrentSelection.FirstOrDefault() as Animal).Name;
-            await Shell.Current.GoToAsync($"app://xamarin.com/xaminals/animals/elephants/elephantdetails?name={elephantName}");
+            // This works because route names are unique in this application.
+            await Shell.Current.GoToAsync($"elephantdetails?name={elephantName}");
+            // The full route is shown below.
+            // await Shell.Current.GoToAsync($"//animals/elephants/elephantdetails?name={elephantName}");
         }
     }
 }
