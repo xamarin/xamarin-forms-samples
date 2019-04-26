@@ -1,9 +1,8 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace WorkingWithWebview
 {
-	public class App : Application // superclass new in 1.3
+	public class App : Application
 	{
 		public App ()
 		{
