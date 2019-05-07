@@ -44,13 +44,19 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:VerticalListDataTemplateSelectorPage}" />
                 <TextCell Text="Vertical list"
-                          Detail="Variable size items"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type views:VerticalListVariableSizeItemsPage}" />
-                <TextCell Text="Vertical list"
                           Detail="RTL FlowDirection"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:VerticalListRTLPage}" />
+            </TableSection>
+            <TableSection Title="Sizing">
+                <TextCell Text="Variable size items"
+                          Detail="Vertical list"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VerticalListVariableSizeItemsPage}" />
+                <TextCell Text="Dynamic item sizing"
+                          Detail="Vertical list"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VerticalListDynamicSizeItemsPage}" />
             </TableSection>
             <TableSection Title="Selection">
                 <TextCell Text="Single"

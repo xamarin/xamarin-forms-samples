@@ -19,6 +19,7 @@
     <Folder Include="Views\ScrollTo\" />
     <Folder Include="Views\SnapPoints\" />
     <Folder Include="Controls\" />
+    <Folder Include="Views\Sizing\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -52,6 +53,10 @@
     </Compile>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\ScrollTo\ScrollToByObjectPage.xaml.cs">
       <DependentUpon>ScrollToByObjectPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Sizing\VerticalListVariableSizeItemsPage.xaml.cs">
+      <DependentUpon>VerticalListVariableSizeItemsPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
