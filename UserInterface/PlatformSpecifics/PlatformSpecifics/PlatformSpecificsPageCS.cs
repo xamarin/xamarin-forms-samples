@@ -56,7 +56,8 @@ namespace PlatformSpecifics
 						new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(LegacyColorModePageCS) },
 						new TextCell { Text = "Button Default Padding/Shadow", Command = NavigateCommand, CommandParameter = typeof(AndroidButtonPageCS) },
                         new TextCell { Text = "NavigationPage BarHeight", Command = NavigateCommand, CommandParameter = typeof(AndroidTitleViewPageCS) },
-                        new TextCell { Text = "ImageButton Shadow Effect", Command = NavigateCommand, CommandParameter = typeof(AndroidImageButtonPageCS) }
+                        new TextCell { Text = "ImageButton Shadow Effect", Command = NavigateCommand, CommandParameter = typeof(AndroidImageButtonPageCS) },
+                        new TextCell { Text = "WebView Zoom Controls", Command = NavigateCommand, CommandParameter = typeof(AndroidWebViewZoomPageCS) }
                     },
                     new TableSection("UWP")
                     {

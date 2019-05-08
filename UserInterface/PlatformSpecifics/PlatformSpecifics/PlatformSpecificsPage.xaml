@@ -95,6 +95,9 @@
             <TextCell Text="ImageButton Shadow Effect"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:AndroidImageButtonPage}" />
+            <TextCell Text="WebView Zoom Controls"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:AndroidWebViewZoomPage}" />
         </TableSection>
         <TableSection Title="UWP">
             <TextCell Text="TabbedPage Toolbar Location"

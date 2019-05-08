@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"  x:Class="PlatformSpecifics.AndroidWebViewPage" Title="WebView Mixed Content">
-    <WebView Source="https://htmlpreview.github.io/?https://github.com/xamarin/xamarin-forms-samples/blob/master/UserInterface/PlatformSpecifics/HTML/mixed_content.html" android:WebView.MixedContentMode="AlwaysAllow" />
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"  
+             x:Class="PlatformSpecifics.AndroidWebViewPage" 
+             Title="WebView Mixed Content with Zoom">
+    <WebView Source="https://htmlpreview.github.io/?https://github.com/xamarin/xamarin-forms-samples/blob/master/UserInterface/PlatformSpecifics/HTML/mixed_content.html" 
+             android:WebView.MixedContentMode="AlwaysAllow" />
 </ContentPage>
