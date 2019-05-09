@@ -16,9 +16,7 @@ namespace PlatformSpecifics
             On<Android>().SetOffscreenPageLimit(2)
                          .SetIsSwipePagingEnabled(true)
                          .SetIsSmoothScrollEnabled(false)
-                         .SetToolbarPlacement(ToolbarPlacement.Bottom)
-                         .SetBarItemColor(Color.Black)
-                         .SetBarSelectedItemColor(Color.Red);
+                         .SetToolbarPlacement(ToolbarPlacement.Bottom);
 
             var firstPage = CreatePage(1);
             var stackLayout = firstPage.Content as StackLayout;
@@ -58,7 +56,7 @@ namespace PlatformSpecifics
             return new ContentPage
             {
                 Title = string.Format("Page {0}", pageNumber),
-                Icon = "csharp.png",
+                IconImageSource = "csharp.png",
                 Content = new StackLayout
                 {
                     Margin = new Thickness(20),

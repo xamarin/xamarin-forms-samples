@@ -33,7 +33,7 @@ namespace PlatformSpecifics
             return new ContentPage
             {
                 Title = title,
-                Icon = icon,
+                IconImageSource = icon,
                 Content = new StackLayout
                 {
                     Margin = new Thickness(20),

@@ -24,7 +24,7 @@ namespace PlatformSpecifics
             return new ContentPage
             {
                 Title = "ContentPage One",
-                Icon = "csharp.png",
+                IconImageSource = "csharp.png",
                 Content = new StackLayout
                 {
                     Margin = new Thickness(20),
@@ -47,7 +47,7 @@ namespace PlatformSpecifics
             return new ContentPage
             {
                 Title = "ContentPage Two",
-                Icon = "csharp.png",
+                IconImageSource = "csharp.png",
                 Content = new StackLayout
                 {
                     Margin = new Thickness(20),

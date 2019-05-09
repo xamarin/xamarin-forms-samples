@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core"
@@ -12,7 +12,7 @@
             </x:Arguments>
         </Size>
     </windows:TabbedPage.HeaderIconsSize>
-    <ContentPage Title="Todo" Icon="todo.png">
+    <ContentPage Title="Todo" IconImageSource="todo.png">
         <StackLayout Margin="20">
             <Label Text="This is the Todo page." />
             <Button Text="Toggle Header Icons" Clicked="OnToggleButtonClicked" />
@@ -20,7 +20,7 @@
                     Clicked="OnReturnButtonClicked" />
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="Reminders" Icon="reminders.png">
+    <ContentPage Title="Reminders" IconImageSource="reminders.png">
         <StackLayout Margin="20">
             <Label Text="This is the Reminders page." />
             <Button Text="Toggle Header Icons" Clicked="OnToggleButtonClicked" />
@@ -28,7 +28,7 @@
                     Clicked="OnReturnButtonClicked" />
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="Contacts" Icon="contacts.png">
+    <ContentPage Title="Contacts" IconImageSource="contacts.png">
         <StackLayout Margin="20">
             <Label Text="This is the Contacts page." />
             <Button Text="Toggle Header Icons" Clicked="OnToggleButtonClicked" />

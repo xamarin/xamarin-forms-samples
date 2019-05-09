@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage x:Name="page" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:PlatformSpecifics" x:Class="PlatformSpecifics.ContentPageOneInTabbedPage" Title="ContentPage One" Icon="xaml.png"> 
+<ContentPage x:Name="page" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:PlatformSpecifics" x:Class="PlatformSpecifics.ContentPageOneInTabbedPage" Title="ContentPage One" IconImageSource="xaml.png"> 
   <StackLayout Margin="20" >
     <Label Text="Toolbar Items" FontAttributes="Bold" HorizontalOptions="Center" />
     <local:AddRemoveToolbarItemsContentView BindingContext="{x:Reference page}" ParentPage="{Binding Parent}" />

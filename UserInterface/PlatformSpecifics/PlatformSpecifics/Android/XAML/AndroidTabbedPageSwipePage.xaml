@@ -7,10 +7,8 @@
         android:TabbedPage.IsSwipePagingEnabled="true"
         android:TabbedPage.IsSmoothScrollEnabled="false"
         android:TabbedPage.ToolbarPlacement="Bottom"
-        android:TabbedPage.BarItemColor="Black"
-        android:TabbedPage.BarSelectedItemColor="Red"
         Title="TabbedPage">
-    <ContentPage Title="Page 1" Icon="xaml.png">
+    <ContentPage Title="Page 1" IconImageSource="xaml.png">
         <StackLayout Margin="20">
             <Label Text="Page 1" HorizontalOptions="Center" />
             <Button Text="Toggle Swipe Paging" Clicked="OnSwipePagingButtonClicked" />
@@ -18,25 +16,25 @@
             <Button Text="Return to Platform-Specifics List" Clicked="OnReturnButtonClicked" />
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="Page 2" Icon="xaml.png">
+    <ContentPage Title="Page 2" IconImageSource="xaml.png">
         <StackLayout Margin="20">
             <Label Text="Page 2" HorizontalOptions="Center" />
             <Button Text="Return to Platform-Specifics List" Clicked="OnReturnButtonClicked" />
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="Page 3" Icon="xaml.png">
+    <ContentPage Title="Page 3" IconImageSource="xaml.png">
         <StackLayout Margin="20">
             <Label Text="Page 3" HorizontalOptions="Center" />
             <Button Text="Return to Platform-Specifics List" Clicked="OnReturnButtonClicked" />
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="Page 4" Icon="xaml.png">
+    <ContentPage Title="Page 4" IconImageSource="xaml.png">
         <StackLayout Margin="20">
             <Label Text="Page 4" HorizontalOptions="Center" />
             <Button Text="Return to Platform-Specifics List" Clicked="OnReturnButtonClicked" />
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="Page 5" Icon="xaml.png">
+    <ContentPage Title="Page 5" IconImageSource="xaml.png">
         <StackLayout Margin="20">
             <Label Text="Page 5" HorizontalOptions="Center" />
             <Button Text="Return to Platform-Specifics List" Clicked="OnReturnButtonClicked" />
