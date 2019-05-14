@@ -50,7 +50,7 @@
     <PackageReference Include="SQLitePCLRaw.core" Version="1.1.0" />
     <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.android" Version="1.1.0" />
     <PackageReference Include="SQLitePCLRaw.provider.e_sqlite3.android" Version="1.1.0" />
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLitePCL.batteries">
