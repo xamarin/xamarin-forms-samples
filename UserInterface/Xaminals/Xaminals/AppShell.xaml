@@ -6,20 +6,19 @@
        FlyoutHeaderBehavior="CollapseOnScroll"
        Navigating="OnNavigating"
        Navigated="OnNavigated"
-       x:Class="Xaminals.AppShell"
-       x:Name="self">
+       x:Class="Xaminals.AppShell">
     <Shell.Resources>
         <Style x:Key="BaseStyle" 
                TargetType="Element">
-            <Setter Property="Shell.ShellBackgroundColor" 
+            <Setter Property="Shell.BackgroundColor" 
                     Value="#455A64" />
-            <Setter Property="Shell.ShellForegroundColor" 
+            <Setter Property="Shell.ForegroundColor" 
                     Value="White" />
-            <Setter Property="Shell.ShellTitleColor" 
+            <Setter Property="Shell.TitleColor" 
                     Value="White" />
-            <Setter Property="Shell.ShellDisabledColor" 
+            <Setter Property="Shell.DisabledColor" 
                     Value="#B4FFFFFF" />
-            <Setter Property="Shell.ShellUnselectedColor" 
+            <Setter Property="Shell.UnselectedColor" 
                     Value="#95FFFFFF" />
         </Style>
         <Style TargetType="ShellItem" 
@@ -27,31 +26,31 @@
         <Style x:Key="DomesticShell"
                TargetType="Element" 
                BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.ShellBackgroundColor" 
+            <Setter Property="Shell.BackgroundColor" 
                     Value="#039BE6" />
         </Style>
         <Style x:Key="MonkeysShell" 
                TargetType="Element"
                BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.ShellBackgroundColor" 
+            <Setter Property="Shell.BackgroundColor" 
                     Value="#689F39" />
         </Style>
         <Style x:Key="ElephantsShell" 
                TargetType="Element" 
                BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.ShellBackgroundColor" 
+            <Setter Property="Shell.BackgroundColor" 
                     Value="#ED3B3B" />
         </Style>
         <Style x:Key="BearsShell" 
                TargetType="Element" 
                BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.ShellBackgroundColor"
+            <Setter Property="Shell.BackgroundColor"
                     Value="#546DFE" />
         </Style>
         <Style x:Key="AboutShell" 
                TargetType="Element" 
                BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.ShellBackgroundColor" 
+            <Setter Property="Shell.BackgroundColor" 
                     Value="#96d1ff" />
         </Style>       
     </Shell.Resources>
@@ -156,16 +155,12 @@
                   Icon="info.png"
                   ContentTemplate="{DataTemplate views:AboutPage}" />
                   
-    <Shell.MenuItems>
-        <MenuItem Text="Random"
-                  Icon="random.png"
-                  BindingContext="{x:Reference self}"
-                  Command="{Binding RandomPageCommand}" />
-        <MenuItem Text="Help"
-                  Icon="help.png"
-                  BindingContext="{x:Reference self}"
-                  Command="{Binding HelpCommand}"
-                  CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />
-    </Shell.MenuItems>
+    <MenuItem Text="Random"
+              Icon="random.png"
+              Command="{Binding RandomPageCommand}" />
+    <MenuItem Text="Help"
+              Icon="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />
     
 </Shell>

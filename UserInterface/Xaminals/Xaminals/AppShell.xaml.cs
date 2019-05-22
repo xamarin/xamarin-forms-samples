@@ -22,6 +22,7 @@ namespace Xaminals
         {
             InitializeComponent();
             RegisterRoutes();
+            BindingContext = this;
         }
 
         void RegisterRoutes()
@@ -63,7 +64,7 @@ namespace Xaminals
             }
 
             ShellNavigationState state = Shell.Current.CurrentState;
-            await Shell.Current.GoToAsync($"{state.Location.AbsoluteUri}/{destinationRoute}?name={animalName}");
+            await Shell.Current.GoToAsync($"{state.Location}/{destinationRoute}?name={animalName}");
             Shell.Current.FlyoutIsPresented = false;
         }
 
