@@ -41,7 +41,8 @@ namespace PlatformSpecifics
                         new TextCell { Text = "Application PanGestureRecognizer", Command = NavigateCommand, CommandParameter = typeof(iOSPanGestureRecognizerPageCS) },
                         new TextCell { Text = "Slider Update on Tap", Command = NavigateCommand, CommandParameter = typeof(iOSSliderUpdateOnTapPageCS) },
                         new TextCell { Text = "NavigationPage NavigationBarSeparator", Command = NavigateCommand, CommandParameter = typeof(iOSTitleViewPageCS) },
-                        new TextCell { Text = "iPad Page Modal FormSheet Page", Command = NavigateCommand, CommandParameter = typeof(iOSModalFormSheetPageCS) }
+                        new TextCell { Text = "iPad Page Modal FormSheet Page", Command = NavigateCommand, CommandParameter = typeof(iOSModalFormSheetPageCS) },
+                        new TextCell { Text = "Hide Home Indicator on Page", Command = NavigateCommand, CommandParameter = typeof(iOSHideHomeIndicatorPageCS) }
                     },
                     new TableSection("Android")
                     {
@@ -55,7 +56,8 @@ namespace PlatformSpecifics
 						new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(LegacyColorModePageCS) },
 						new TextCell { Text = "Button Default Padding/Shadow", Command = NavigateCommand, CommandParameter = typeof(AndroidButtonPageCS) },
                         new TextCell { Text = "NavigationPage BarHeight", Command = NavigateCommand, CommandParameter = typeof(AndroidTitleViewPageCS) },
-                        new TextCell { Text = "ImageButton Shadow Effect", Command = NavigateCommand, CommandParameter = typeof(AndroidImageButtonPageCS) }
+                        new TextCell { Text = "ImageButton Shadow Effect", Command = NavigateCommand, CommandParameter = typeof(AndroidImageButtonPageCS) },
+                        new TextCell { Text = "WebView Zoom Controls", Command = NavigateCommand, CommandParameter = typeof(AndroidWebViewZoomPageCS) }
                     },
                     new TableSection("UWP")
                     {

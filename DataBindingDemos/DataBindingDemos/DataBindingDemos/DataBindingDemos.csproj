@@ -69,6 +69,6 @@
     <Compile Remove="PathVariationsWithFallbackValuesPage.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
   </ItemGroup>
 </Project>

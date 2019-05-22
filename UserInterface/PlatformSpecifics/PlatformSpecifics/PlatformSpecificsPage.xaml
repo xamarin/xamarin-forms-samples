@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:PlatformSpecifics" x:Class="PlatformSpecifics.PlatformSpecificsPage" Title="Platform Specifics Demo">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:PlatformSpecifics" 
+             x:Class="PlatformSpecifics.PlatformSpecificsPage" 
+             Title="Platform Specifics Demo">
     <TableView Intent="Menu">
         <TableSection Title="iOS">
             <TextCell Text="VisualElement Blur Effect"
@@ -53,6 +57,9 @@
             <TextCell Text="iPad Page Modal FormSheet Page"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:iOSModalFormSheetPage}" />
+            <TextCell Text="Hide Home Indicator on Page"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:iOSHideHomeIndicatorPage}" />
         </TableSection>
         <TableSection Title="Android">
             <TextCell Text="Soft Input Mode Adjust"
@@ -88,6 +95,9 @@
             <TextCell Text="ImageButton Shadow Effect"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:AndroidImageButtonPage}" />
+            <TextCell Text="WebView Zoom Controls"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:AndroidWebViewZoomPage}" />
         </TableSection>
         <TableSection Title="UWP">
             <TextCell Text="TabbedPage Toolbar Location"

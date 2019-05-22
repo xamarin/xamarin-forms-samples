@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:CollectionViewDemos.Controls"
+             x:Class="CollectionViewDemos.Views.EmptyViewTemplatePage"
+             Title="EmptyView (template)">
+    <StackLayout Margin="20">
+        <SearchBar x:Name="searchBar"
+                   SearchCommand="{Binding FilterCommand}"
+                   SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
+                   Placeholder="Filter" />
+        <CollectionView ItemsSource="{Binding Monkeys}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.RowSpan="2"
+                               Source="{Binding ImageUrl}" 
+                               Aspect="AspectFill"
+                               HeightRequest="60" 
+                               WidthRequest="60" />
+                        <Label Grid.Column="1" 
+                               Text="{Binding Name}" 
+                               FontAttributes="Bold" />
+                        <Label Grid.Row="1"
+                               Grid.Column="1" 
+                               Text="{Binding Location}"
+                               FontAttributes="Italic" 
+                               VerticalOptions="End" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.EmptyView>
+                <controls:FilterData Filter="{Binding Source={x:Reference searchBar}, Path=Text}" />
+            </CollectionView.EmptyView>
+            <CollectionView.EmptyViewTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Filter, StringFormat='Your filter term of {0} did not match any records.'}"
+                           Margin="10,25,10,10"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                </DataTemplate>
+            </CollectionView.EmptyViewTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

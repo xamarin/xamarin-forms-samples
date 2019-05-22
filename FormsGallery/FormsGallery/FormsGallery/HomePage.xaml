@@ -129,21 +129,27 @@
                 </TableSection>
 
                 <TableSection Title="Views that Display Collections">
-                    <TextCell Text="Picker"
-                              Detail="Select from a list of text items"
+                    
+                    <TextCell Text="CollectionView"
+                              Detail="Select from a list of data items"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.PickerDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.CollectionViewDemoPage}" />
                     
                     <TextCell Text="ListView"
                               Detail="Select from a list of data items"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.ListViewDemoPage}" />
+                    
+                    <TextCell Text="Picker"
+                              Detail="Select from a list of text items"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.PickerDemoPage}" />
 
                     <TextCell Text="TableView for a menu"
                               Detail="Show a table suitable for a menu"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.TableViewMenuDemoPage}" />
-
+                    
                     <TextCell Text="TableView for a form"
                               Detail="Show a table suitable for a form"
                               Command="{Binding NavigateCommand}"

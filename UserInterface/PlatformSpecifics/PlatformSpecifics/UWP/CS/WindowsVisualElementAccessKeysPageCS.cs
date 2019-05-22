@@ -76,7 +76,7 @@ namespace PlatformSpecifics
             var page = new ContentPage
             {
                 Title = $"Page {pageNumber}",
-                Icon = "csharp.png",
+                IconImageSource = "csharp.png",
                 Content = new StackLayout
                 {
                     Margin = new Thickness(20),

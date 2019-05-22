@@ -34,7 +34,6 @@ namespace DataPagesDemo.Droid
 			global::Xamarin.Auth._MobileServices.Resource.String.ApplicationName = global::DataPagesDemo.Droid.Resource.String.ApplicationName;
 			global::Xamarin.Auth._MobileServices.Resource.String.Hello = global::DataPagesDemo.Droid.Resource.String.Hello;
 			global::Xamarin.Auth._MobileServices.Resource.String.title_activity_webview = global::DataPagesDemo.Droid.Resource.String.title_activity_webview;
-			global::ModernHttpClient.Resource.String.library_name = global::DataPagesDemo.Droid.Resource.String.library_name;
 			global::PCLCrypto.Resource.String.ApplicationName = global::DataPagesDemo.Droid.Resource.String.ApplicationName;
 			global::PCLCrypto.Resource.String.Hello = global::DataPagesDemo.Droid.Resource.String.Hello;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_in = global::DataPagesDemo.Droid.Resource.Animation.abc_fade_in;
@@ -7619,9 +7618,6 @@ namespace DataPagesDemo.Droid
 			// aapt resource value: 0x7f070048
 			public const int hide_bottom_view_on_scroll_behavior = 2131165256;
 			
-			// aapt resource value: 0x7f070050
-			public const int library_name = 2131165264;
-			
 			// aapt resource value: 0x7f070002
 			public const int mr_button_content_description = 2131165186;
 			
@@ -7718,8 +7714,8 @@ namespace DataPagesDemo.Droid
 			// aapt resource value: 0x7f07004f
 			public const int status_bar_notification_info_overflow = 2131165263;
 			
-			// aapt resource value: 0x7f070051
-			public const int title_activity_webview = 2131165265;
+			// aapt resource value: 0x7f070050
+			public const int title_activity_webview = 2131165264;
 			
 			static String()
 			{
