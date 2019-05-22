@@ -58,7 +58,7 @@
     <PackageReference Include="Xamarin.Firebase.Common" Version="60.1142.1" />
     <PackageReference Include="Xamarin.Firebase.Iid" Version="60.1142.1" />
     <PackageReference Include="Xamarin.Firebase.Messaging" Version="60.1142.1" />
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
     <PackageReference Include="Xamarin.GooglePlayServices.Base" Version="60.1142.1" />
     <PackageReference Include="Xamarin.GooglePlayServices.Basement" Version="60.1142.1" />
     <PackageReference Include="Xamarin.GooglePlayServices.Tasks" Version="60.1142.1" />

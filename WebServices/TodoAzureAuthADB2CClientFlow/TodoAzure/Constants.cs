@@ -2,18 +2,64 @@
 {
     public static class Constants
     {
-        // Replace strings with your own values
-        // Azure Active Directory B2C
-        public static readonly string Tenant = "INSERT_TENANT_HERE"; // Domain/resource name from AD B2C
-        public static readonly string ClientID = "INSERT_CLIENTID_HERE"; // Application ID from AD B2C
-        public static readonly string PolicySignUpSignIn = "INSERT_POLICY_HERE"; // Policy name from AD B2C
-        public static readonly string[] Scopes = { "" }; // Leave blank unless additional scopes have been added to AD B2C
-        public static string AuthorityBase = $"https://login.microsoftonline.com/tfp/{Tenant}/"; // Doesn't require editing
-        public static string Authority = $"{AuthorityBase}{PolicySignUpSignIn}"; // Doesn't require editing
-        public static readonly string URLScheme = "INSERT_URL_SCHEME_HERE"; // Custom Redirect URI from AD B2C (without ://auth/)
-        public static readonly string RedirectUri = $"{URLScheme}://auth"; // Doesn't require editing
+        // set your tenant name, for example "contoso123tenant"
+        static readonly string tenantName = "<INSERT_YOUR_TENANT_NAME>";
 
-        // Azure Mobile App
-        public static readonly string AzureMobileAppURL = @"INSERT_MOBILE_APP_URL_HERE";
+        // set your tenant id, for example: "contoso123tenant.onmicrosoft.com"
+        static readonly string tenantId = "<INSERT_YOUR_TENANT_ID>";
+
+        // set your client/application id, for example: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
+        static readonly string clientId = "<INSERT_YOUR_CLIENT_ID>";
+
+        // set your sign up/in policy name, for example: "B2C_1_signupsignin"
+        static readonly string policySignin = "<INSERT_SIGNUP_SIGNIN_POLICY_NAME>";
+
+        // set your forgot password policy, for example: "B2C_1_passwordreset"
+        static readonly string policyPassword = "<INSERT_PASSWORD_RESET_POLICY_NAME>";
+
+        // set your azure mobile applicatino url, for example: "yourapp.azurewebsites.net"
+        static readonly string applicationUrl = "<INSERT_AZURE_APP_URL>";
+
+
+
+        // The following fields and properties should not need to be changed
+        static readonly string[] scopes = { "" };
+        static readonly string authorityBase = $"https://{tenantName}.b2clogin.com/tfp/{tenantId}/";
+
+        public static string ClientId
+        {
+            get
+            {
+                return clientId;
+            }
+        }
+        public static string ApplicationUrl
+        {
+            get
+            {
+                return applicationUrl;
+            }
+        }
+        public static string AuthoritySignin
+        {
+            get
+            {
+                return $"{authorityBase}{policySignin}";
+            }
+        }
+        public static string AuthorityPasswordReset
+        {
+            get
+            {
+                return $"{authorityBase}{policyPassword}";
+            }
+        }
+        public static string[] Scopes
+        {
+            get
+            {
+                return scopes;
+            }
+        }
     }
 }

@@ -17,8 +17,7 @@ namespace TodoAzure
 
         public AuthenticationProvider()
         {
-            ADB2CClient = new PublicClientApplication(Constants.ClientID, Constants.Authority);
-            ADB2CClient.RedirectUri = Constants.RedirectUri;
+            ADB2CClient = new PublicClientApplication(Constants.ClientId, Constants.AuthoritySignin);
         }
 
         public async Task<bool> LoginAsync(bool useSilent = false)
@@ -27,20 +26,21 @@ namespace TodoAzure
             try
             {
                 AuthenticationResult authenticationResult;
+                IEnumerable<IAccount> accounts = await ADB2CClient.GetAccountsAsync();
 
                 if (useSilent)
                 {
                     authenticationResult = await ADB2CClient.AcquireTokenSilentAsync(
                         Constants.Scopes,
-                        GetUserByPolicy(ADB2CClient.Users, Constants.PolicySignUpSignIn),
-                        Constants.Authority,
-                        false);
+                        accounts.FirstOrDefault());
                 }
                 else
                 {
                     authenticationResult = await ADB2CClient.AcquireTokenAsync(
                         Constants.Scopes,
-                        GetUserByPolicy(ADB2CClient.Users, Constants.PolicySignUpSignIn),
+                        string.Empty,
+                        UIBehavior.SelectAccount,
+                        string.Empty,
                         App.UiParent);
                 }
 
@@ -70,43 +70,24 @@ namespace TodoAzure
             bool success = false;
             try
             {
-                if (User != null)
-                {
-                    await TodoItemManager.DefaultManager.CurrentClient.LogoutAsync();
+                IEnumerable<IAccount> accounts = await ADB2CClient.GetAccountsAsync();
 
-                    foreach (var user in ADB2CClient.Users)
-                    {
-                        ADB2CClient.Remove(user);
-                    }
-                    User = null;
-                    success = true;
+                while(accounts.Any())
+                {
+                    await ADB2CClient.RemoveAsync(accounts.First());
+                    accounts = await ADB2CClient.GetAccountsAsync();
                 }
+
+                User = null;
+
+                success = true;
             }
             catch (Exception ex)
             {
+                success = false;
                 throw ex;
             }
             return success;
-        }
-
-        IUser GetUserByPolicy(IEnumerable<IUser> users, string policy)
-        {
-            foreach (var user in users)
-            {
-                string userId = Base64UrlDecode(user.Identifier.Split('.')[0]);
-                if (userId.EndsWith(policy.ToLower(), StringComparison.Ordinal))
-                    return user;
-            }
-            return null;
-        }
-
-        string Base64UrlDecode(string str)
-        {
-            str = str.Replace('-', '+').Replace('_', '/');
-            str = str.PadRight(str.Length + (4 - str.Length % 4) % 4, '=');
-            var byteArray = Convert.FromBase64String(str);
-            var decoded = Encoding.UTF8.GetString(byteArray, 0, byteArray.Count());
-            return decoded;
         }
     }
 }

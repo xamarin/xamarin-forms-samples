@@ -15,7 +15,7 @@ namespace TodoAzure
 
         private TodoItemManager()
         {
-            this.client = new MobileServiceClient(Constants.AzureMobileAppURL);
+            this.client = new MobileServiceClient(Constants.ApplicationUrl);
             this.todoTable = client.GetTable<TodoItem>();
         }
 

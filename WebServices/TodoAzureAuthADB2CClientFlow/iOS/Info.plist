@@ -66,12 +66,12 @@
 		<dict>
 			<key>CFBundleURLName</key>
 			<string>TodoAzure</string>
-			<key>CFBundleURLTypes</key>
-			<string>None</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>INSERT_URL_SCHEME_HERE</string>
+				<string>INSERT_URI_SCHEME_HERE</string>
 			</array>
+			<key>CFBundleTypeRole</key>
+			<string>None</string>
 		</dict>
 	</array>
 </dict>

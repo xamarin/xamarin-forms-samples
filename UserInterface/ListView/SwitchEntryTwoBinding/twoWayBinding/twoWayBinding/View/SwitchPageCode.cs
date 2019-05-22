@@ -1,6 +1,4 @@
-﻿using System;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace twoWayBinding
 {
@@ -17,5 +15,3 @@ namespace twoWayBinding
 		}
 	}
 }
-
-

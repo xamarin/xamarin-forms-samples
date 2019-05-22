@@ -12,7 +12,10 @@ namespace TodoAzure.iOS
             global::Xamarin.Forms.Forms.Init();
             Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
             LoadApplication(new App());
-            return base.FinishedLaunching(app, options);
+            var result = base.FinishedLaunching(app, options);
+            AuthenticationProvider.ADB2CClient.iOSKeychainSecurityGroup = "com.xamarin.sample.TodoAzure";
+
+            return result;
         }
 
         public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)

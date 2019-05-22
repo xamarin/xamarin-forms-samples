@@ -28,7 +28,7 @@ namespace ImageWrapLayout
                 {
                     var image = new Image
                     {
-                        Source = ImageSource.FromUri(new Uri(photo + string.Format("?width={0}&height={0}&mode=max", Device.RuntimePlatform == Device.UWP ? 120 : 240)))
+                        Source = ImageSource.FromUri(new Uri(photo))
                     };
                     wrapLayout.Children.Add(image);
                 }
@@ -39,7 +39,7 @@ namespace ImageWrapLayout
         {
             try
             {
-                var requestUri = "https://docs.xamarin.com/demo/stock.json";
+                string requestUri = "https://raw.githubusercontent.com/xamarin/docs-archive/master/Images/stock/small/stock.json";
                 string result = await _client.GetStringAsync(requestUri);
                 return JsonConvert.DeserializeObject<ImageList>(result);
             }

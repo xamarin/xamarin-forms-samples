@@ -11,8 +11,8 @@
   <ItemGroup>
     <PackageReference Include="modernhttpclient" Version="2.4.2" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
-    <PackageReference Include="Xamarin.Forms.Pages" Version="3.6.0.220655" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+    <PackageReference Include="Xamarin.Forms.Pages" Version="3.6.0.344457" />
     <PackageReference Include="Xamarin.Forms.Theme.Base" Version="1.0.0.43-pre1" />
     <PackageReference Include="Xamarin.Forms.Theme.Dark" Version="1.0.0.43-pre1" />
     <PackageReference Include="Xamarin.Forms.Theme.Light" Version="1.0.0.43-pre1" />
