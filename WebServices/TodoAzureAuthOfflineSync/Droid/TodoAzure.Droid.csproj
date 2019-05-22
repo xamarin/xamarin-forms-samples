@@ -57,7 +57,7 @@
     <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.android" Version="1.1.2" />
     <PackageReference Include="SQLitePCLRaw.provider.e_sqlite3.android" Version="1.1.2" />
     <PackageReference Include="Validation" Version="2.2.8" />
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
