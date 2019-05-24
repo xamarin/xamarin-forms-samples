@@ -9,7 +9,7 @@ namespace NotificationDispatcher
 
         /// <summary>
         /// These are the tags the app will send to. These could be subjects like
-        /// news, sports, and deals, or they can be custom tags that identify a user
+        /// news, sports, and weather, or they can be custom tags that identify a user
         /// across devices.
         /// </summary>
         public static string[] SubscriptionTags { get; set; } = { "default" };

@@ -32,8 +32,7 @@ namespace NotificationHubSample
             {
                 if (messageDisplay.Children.OfType<Label>().Where(c => c.Text == message).Any())
                 {
-                    // We have already handled an identical message.
-                    // Do nothing so we don't get duplicates
+                    // Do nothing, an identical message already exists
                 }
                 else
                 {

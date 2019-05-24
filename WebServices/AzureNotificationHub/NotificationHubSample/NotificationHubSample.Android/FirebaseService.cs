@@ -25,7 +25,7 @@ namespace NotificationHubSample.Droid
             base.OnMessageReceived(message);
             string messageBody = string.Empty;
 
-            if(message.GetNotification() != null)
+            if (message.GetNotification() != null)
             {
                 messageBody = message.GetNotification().Body;
             }
@@ -38,6 +38,9 @@ namespace NotificationHubSample.Droid
 
             // convert the incoming message to a local notification
             SendLocalNotification(messageBody);
+
+            // send the incoming message directly to the MainPage
+            SendMessageToMainPage(messageBody);
         }
 
         void SendLocalNotification(string body)
@@ -53,9 +56,9 @@ namespace NotificationHubSample.Droid
                 .SetContentText(body)
                 .SetAutoCancel(true)
                 .SetShowWhen(false)
-                .SetContentIntent(pendingIntent); 
+                .SetContentIntent(pendingIntent);
 
-            if(Build.VERSION.SdkInt >= BuildVersionCodes.O)
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
             {
                 notificationBuilder.SetChannelId(AppConstants.NotificationChannelName);
             }
@@ -66,7 +69,6 @@ namespace NotificationHubSample.Droid
 
         void SendMessageToMainPage(string body)
         {
-            // Attempt to send the message directly to the mainpage activity
             (App.Current.MainPage as MainPage)?.AddMessage(body);
         }
     }

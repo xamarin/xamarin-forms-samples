@@ -33,7 +33,7 @@ namespace NotificationHubSample
 
         /// <summary>
         /// The tags the device will subscribe to. These could be subjects like
-        /// news, sports, and deals. Or they can be tags that identify a user
+        /// news, sports, and weather. Or they can be tags that identify a user
         /// across devices.
         /// </summary>
         public static string[] SubscriptionTags { get; set; } = { "default" };

@@ -5,7 +5,6 @@
              x:Class="NotificationHubSample.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
         <Label Text="Welcome to Azure Notification Hub"
            FontSize="Large"
            FontAttributes="Bold"
@@ -20,7 +19,6 @@
             HorizontalOptions="Center"
             VerticalOptions="Start">
         </StackLayout>
-
     </StackLayout>
 
 </ContentPage>

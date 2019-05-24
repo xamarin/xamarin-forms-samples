@@ -14,7 +14,7 @@ using Android.Content;
 
 namespace NotificationHubSample.Droid
 {
-    [Activity(Label = "NotificationHubSample", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, LaunchMode =LaunchMode.SingleTop)]
+    [Activity(Label = "NotificationHubSample", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, LaunchMode = LaunchMode.SingleTop)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -30,24 +30,12 @@ namespace NotificationHubSample.Droid
 
             IsPlayServiceAvailable();
             CreateNotificationChannel();
-
-            Log.Info(AppConstants.DebugTag, $"App starting with token: {FirebaseInstanceId.Instance.Token}");
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-
-        void ForceRefreshIdToken()
-        {
-            // this can't be run on the UI thread
-            Task.Run(() =>
-            {
-                Log.Info(AppConstants.DebugTag, "ForceRefreshIdToken called, deleting instance id");
-                FirebaseInstanceId.Instance.DeleteInstanceId();
-            });
         }
 
         protected override void OnNewIntent(Intent intent)
