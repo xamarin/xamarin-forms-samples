@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>CE448962-18B6-41EE-BF66-520401E9B309</ID>
+	<IsFullApplication>true</IsFullApplication>
+	<Brief>This sample demonstrates how to use Azure Notification Hubs to send push notifications to Xamarin Forms applications on Android and iOS.</Brief>
+	<Level>Intermediate</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>Web Services, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>
