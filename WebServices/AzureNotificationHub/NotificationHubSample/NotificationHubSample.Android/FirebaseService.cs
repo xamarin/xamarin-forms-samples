@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Support.V4.App;
-using Android.Util;
-using Android.Views;
-using Android.Widget;
 using Firebase.Messaging;
-using Xamarin.Forms;
+using System.Linq;
 
 namespace NotificationHubSample.Droid
 {

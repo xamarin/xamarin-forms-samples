@@ -17,7 +17,6 @@ namespace NotificationDispatcher
             {
                 SendTemplateNotificationsAsync().GetAwaiter().GetResult();
             }
-            
         }
 
         private static async Task SendTemplateNotificationsAsync()
