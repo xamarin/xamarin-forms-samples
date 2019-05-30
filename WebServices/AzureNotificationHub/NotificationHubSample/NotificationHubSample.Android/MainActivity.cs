@@ -21,7 +21,7 @@ namespace NotificationHubSample.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
 
-            if(IsPlayServiceAvailable() == false)
+            if (IsPlayServiceAvailable() == false)
             {
                 throw new Exception("This device does not have Google Play Services and cannot receive push notifications.");
             }
