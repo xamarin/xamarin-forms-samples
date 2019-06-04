@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:ChatClient.ViewModel"
+             x:Class="ChatClient.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewmodel:ChatViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        
+        <StackLayout Padding="10">
+            <ListView Grid.ColumnSpan="2"
+                      ItemsSource="{Binding Messages}"
+                      VerticalOptions="FillAndExpand"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Margin="0,0,0,30">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Name}" />
+                                        <Label Text="says:" />
+                                    </StackLayout>
+
+                                    <Label FontSize="Medium"
+                                           LineBreakMode="WordWrap"
+                                           Text="{Binding Text}" />
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="at:" />
+                                        <Label Text="{Binding TimeReceived}" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Entry Grid.Row="1"
+                   HorizontalOptions="FillAndExpand"
+                   Text="{Binding MessageText, Mode=TwoWay}"/>
+            
+            <Button Grid.Row="1"
+                    Grid.Column="1"
+                    Text="Send" 
+                    Command="{Binding SendMessageCommand}"/>
+
+            <Button Grid.Row="2"
+                    Grid.Column="1"
+                    Text="Connect" 
+                    Command="{Binding ConnectCommand}"/>
+
+        </StackLayout>
+        
+        <ActivityIndicator Grid.ColumnSpan="2"
+                           IsRunning="{Binding IsSendingMessage}"
+                           IsVisible="{Binding IsSendingMessage}"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand"/>
+    </Grid>
+</ContentPage>
