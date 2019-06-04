@@ -7,7 +7,7 @@ namespace LayoutOptionsDemo
 		public LayoutOptionsExpansionPageCS()
 		{
 			Title = "Expansion";
-			Icon = "csharp.png";
+			IconImageSource = "csharp.png";
 
 			Content = new StackLayout
 			{

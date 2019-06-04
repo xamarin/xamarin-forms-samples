@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="FileUploader.XAML.ImageFileUploaderPage" 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FileUploader.XAML.ImageFileUploaderPage"
              Title="Upload Image"
-             Icon="xaml.png">
+             IconImageSource="xaml.png">
     <ScrollView Margin="20,35,20,20">
         <StackLayout>
-            <Label Text="Image Upload and Download" 
-                   FontAttributes="Bold" 
+            <Label Text="Image Upload and Download"
+                   FontAttributes="Bold"
                    HorizontalOptions="Center" />
             <Image x:Name="imageToUpload" />
-            <Button x:Name="uploadButton" 
+            <Button x:Name="uploadButton"
                     Text="Upload Image"
                     Clicked="OnUploadImageButtonClicked" />
             <ActivityIndicator x:Name="activityIndicator" />
-            <Button x:Name="downloadButton" 
-                    Text="Download Image" 
+            <Button x:Name="downloadButton"
+                    Text="Download Image"
                     Clicked="OnDownloadImageButtonClicked"
                     IsEnabled="false" />
             <Image x:Name="downloadedImage" />

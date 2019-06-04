@@ -5,19 +5,19 @@
 			<Style x:Key="plainButton" TargetType="Button">
 				<Setter Property="BackgroundColor" Value="#eee" />
 				<Setter Property="TextColor" Value="Black" />
-				<Setter Property="BorderRadius" Value="0" />
+				<Setter Property="CornerRadius" Value="0" />
 				<Setter Property="FontSize" Value="40" />
 			</Style>
 			<Style x:Key="darkerButton" TargetType="Button">
 				<Setter Property="BackgroundColor" Value="#ddd" />
 				<Setter Property="TextColor" Value="Black" />
-				<Setter Property="BorderRadius" Value="0" />
+				<Setter Property="CornerRadius" Value="0" />
 				<Setter Property="FontSize" Value="40" />
 			</Style>
 			<Style x:Key="orangeButton" TargetType="Button">
 				<Setter Property="BackgroundColor" Value="#E8AD00" />
 				<Setter Property="TextColor" Value="White" />
-				<Setter Property="BorderRadius" Value="0" />
+				<Setter Property="CornerRadius" Value="0" />
 				<Setter Property="FontSize" Value="40" />
 			</Style>
 		</ResourceDictionary>

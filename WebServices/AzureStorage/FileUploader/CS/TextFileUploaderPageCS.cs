@@ -45,7 +45,7 @@ namespace FileUploader.CS
             };
 
             Title = "Upload Text";
-            Icon = "csharp.png";
+            IconImageSource = "csharp.png";
 
             Content = new StackLayout
             {
@@ -63,4 +63,3 @@ namespace FileUploader.CS
         }
     }
 }
-

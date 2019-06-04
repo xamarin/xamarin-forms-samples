@@ -14,7 +14,7 @@ Title="RelativeLayout Demo - XAML">
 	            
 			</RelativeLayout>
 			<AbsoluteLayout AbsoluteLayout.LayoutBounds="0,1,1,50" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Green">
-				<Button BackgroundColor="White" FontSize="20" TextColor="Lime" Text="Move" BorderRadius="0"  AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All" x:Name="moveButton" />
+				<Button BackgroundColor="White" FontSize="20" TextColor="Lime" Text="Move" CornerRadius="0"  AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All" x:Name="moveButton" />
 			</AbsoluteLayout>
 		</AbsoluteLayout>
 	</ContentPage.Content>

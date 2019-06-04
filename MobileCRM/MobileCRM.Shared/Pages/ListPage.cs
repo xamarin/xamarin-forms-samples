@@ -28,7 +28,7 @@ namespace MobileCRM.Shared.Pages
             //Set value will directly set the value to "List"
             this.SetValue(Page.TitleProperty, "List");
             //This will bind to our BindingContext.Icon
-            this.SetBinding(Page.IconProperty, "Icon");
+            this.SetBinding(Page.IconImageSourceProperty, "Icon");
 
             var list = new ListView();
 

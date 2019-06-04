@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TodoCognitive.TodoListPage" Title="Todo">
 	<ContentPage.ToolbarItems>
-		<ToolbarItem Icon="plus.png" Clicked="OnItemAdded" />
-		<ToolbarItem Icon="rating.png" Clicked="OnRateApplication" />
+		<ToolbarItem IconImageSource="plus.png" Clicked="OnItemAdded" />
+		<ToolbarItem IconImageSource="rating.png" Clicked="OnRateApplication" />
 	</ContentPage.ToolbarItems>
 	<ListView x:Name="listView" Margin="20" ItemSelected="OnItemSelected">
 		<ListView.ItemTemplate>

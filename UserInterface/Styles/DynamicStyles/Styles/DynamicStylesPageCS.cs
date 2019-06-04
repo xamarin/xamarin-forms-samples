@@ -10,7 +10,7 @@ namespace Styles
 		public DynamicStylesPageCS ()
 		{
 			Title = "Dynamic";
-			Icon = "csharp.png";
+			IconImageSource = "csharp.png";
 			Padding = new Thickness (0, 20, 0, 0);
 
 			var baseStyle = new Style (typeof(View)) {
@@ -32,8 +32,8 @@ namespace Styles
 					new Setter {
 						Property = SearchBar.PlaceholderColorProperty,
 						Value = Color.Blue
-					} 
-				}	
+					}
+				}
 			};
 
 			var greenSearchBarStyle = new Style (typeof(SearchBar)) {
@@ -46,7 +46,7 @@ namespace Styles
 						Property = SearchBar.PlaceholderColorProperty,
 						Value = Color.Green
 					}
-				}	
+				}
 			};
 
 			var buttonStyle = new Style (typeof(Button)) {
@@ -59,9 +59,9 @@ namespace Styles
 					new Setter {
 						Property = Button.TextColorProperty,
 						Value = Color.Red
-					} 
-				}	
-			};					
+					}
+				}
+			};
 
 			var searchBar1 = new SearchBar { Placeholder = "These SearchBar controls" };
 			searchBar1.SetDynamicResource (VisualElement.StyleProperty, "searchBarStyle");
@@ -79,7 +79,7 @@ namespace Styles
 			Resources.Add ("greenSearchBarStyle", greenSearchBarStyle);
 			Resources ["searchBarStyle"] = Resources ["blueSearchBarStyle"];
 
-			Content = new StackLayout { 
+			Content = new StackLayout {
 				Children = {
 					searchBar1,
 					searchBar2,

@@ -32,14 +32,13 @@ namespace WorkingWithStyles
 			Application.Current.Resources.Add (boxStyle); // implicit style for ALL boxviews
 
 			var tabs = new TabbedPage ();
-			tabs.Children.Add (new StylePage {Title = "C#", Icon = "csharp.png"});
-			tabs.Children.Add (new StyleXaml {Title = "Xaml", Icon = "xaml.png"});
-			tabs.Children.Add (new DynamicResourceXaml {Title = "Dynamic", Icon = "xaml.png"});
+			tabs.Children.Add (new StylePage {Title = "C#", IconImageSource = "csharp.png"});
+			tabs.Children.Add (new StyleXaml {Title = "Xaml", IconImageSource = "xaml.png"});
+			tabs.Children.Add (new DynamicResourceXaml {Title = "Dynamic", IconImageSource = "xaml.png"});
 
-			//tabs.Children.Add (new OldResourceDictionary {Title = "Old", Icon = "xaml.png"});
+			//tabs.Children.Add (new OldResourceDictionary {Title = "Old", IconImageSource = "xaml.png"});
 
 			MainPage = tabs;
 		}
 	}
 }
-

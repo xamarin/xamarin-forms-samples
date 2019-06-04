@@ -46,7 +46,7 @@ namespace FileUploader.CS
             };
 
             Title = "Text File Browser";
-            Icon = "csharp.png";
+            IconImageSource = "csharp.png";
 
             Content = new StackLayout
             {
@@ -71,4 +71,3 @@ namespace FileUploader.CS
         }
     }
 }
-

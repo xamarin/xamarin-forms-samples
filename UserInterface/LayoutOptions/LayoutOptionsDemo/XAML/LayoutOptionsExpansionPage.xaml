@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LayoutOptionsDemo.LayoutOptionsExpansionPage" Title="Expansion" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LayoutOptionsDemo.LayoutOptionsExpansionPage" Title="Expansion" IconImageSource="xaml.png">
 	<StackLayout Margin="0,20,0,0">
 		<Label Text="LayoutOptions - Expansion" FontAttributes="Bold" HorizontalOptions="Center" />
 		<BoxView BackgroundColor="Red" HeightRequest="1" />

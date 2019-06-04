@@ -7,24 +7,24 @@
             Padding="10, 0">
 
     <local:CodeExamplesMainPage Title="C# Pages">
-        <local:CodeExamplesMainPage.Icon>
-            <OnPlatform x:TypeArguments="FileImageSource">
+        <local:CodeExamplesMainPage.IconImageSource>
+            <OnPlatform x:TypeArguments="ImageSource">
                 <On Platform="iOS, Android" Value="csharp.png" />
             </OnPlatform>
-        </local:CodeExamplesMainPage.Icon>
+        </local:CodeExamplesMainPage.IconImageSource>
     </local:CodeExamplesMainPage>
-    
+
     <ContentPage Title="XAML Pages">
-        <local:CodeExamplesMainPage.Icon>
-            <OnPlatform x:TypeArguments="FileImageSource">
+        <local:CodeExamplesMainPage.IconImageSource>
+            <OnPlatform x:TypeArguments="ImageSource">
                 <On Platform="iOS, Android" Value="xaml.png" />
             </OnPlatform>
-        </local:CodeExamplesMainPage.Icon>
-        
+        </local:CodeExamplesMainPage.IconImageSource>
+
         <TableView Intent="Menu">
             <TableRoot>
                 <TableSection Title="Views for Presentation">
-                    
+
                     <TextCell Text="Label"
                               Detail="Display a text string"
                               Command="{Binding NavigateCommand}"
@@ -57,12 +57,12 @@
                 </TableSection>
 
                 <TableSection Title="Views that Initiate Commands">
-                    
+
                     <TextCell Text="Button"
                               Detail="Initiate a command"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.ButtonDemoPage}" />
-                    
+
                     <TextCell Text="ImageButton"
                               Detail="Initiate a command"
                               Command="{Binding NavigateCommand}"
@@ -73,9 +73,9 @@
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.SearchBarDemoPage}" />
                 </TableSection>
-                
+
                 <TableSection Title="Views for Setting Values">
-                    
+
                     <TextCell Text= "Slider (double)"
                               Detail="Select a number from a continuous range"
                               Command="{Binding NavigateCommand}"
@@ -85,12 +85,12 @@
                               Detail="Select a number from discrete increments"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.StepperDemoPage}" />
-                    
+
                     <TextCell Text="Switch (bool)"
                               Detail="Select a Boolean value"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.SwitchDemoPage}" />
-                    
+
                     <TextCell Text="DatePicker"
                               Detail="Select a date"
                               Command="{Binding NavigateCommand}"
@@ -103,7 +103,7 @@
                 </TableSection>
 
                 <TableSection Title="Views for Editing Text">
-                    
+
                     <TextCell Text="Entry (single line)"
                               Detail="Edit a single line of text"
                               Command="{Binding NavigateCommand}"
@@ -116,12 +116,12 @@
                 </TableSection>
 
                 <TableSection Title="Views to Indicate Activity">
-                    
+
                     <TextCell Text="ActivityIndicator"
                               Detail="Show that the program is busy"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.ActivityIndicatorDemoPage}" />
-                    
+
                     <TextCell Text="ProgressBar"
                               Detail="Show the progress of a program task"
                               Command="{Binding NavigateCommand}"
@@ -129,17 +129,17 @@
                 </TableSection>
 
                 <TableSection Title="Views that Display Collections">
-                    
+
                     <TextCell Text="CollectionView"
                               Detail="Select from a list of data items"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.CollectionViewDemoPage}" />
-                    
+
                     <TextCell Text="ListView"
                               Detail="Select from a list of data items"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.ListViewDemoPage}" />
-                    
+
                     <TextCell Text="Picker"
                               Detail="Select from a list of text items"
                               Command="{Binding NavigateCommand}"
@@ -149,7 +149,7 @@
                               Detail="Show a table suitable for a menu"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.TableViewMenuDemoPage}" />
-                    
+
                     <TextCell Text="TableView for a form"
                               Detail="Show a table suitable for a form"
                               Command="{Binding NavigateCommand}"
@@ -204,17 +204,17 @@
                               Detail="Arrange children in a stack"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.StackLayoutDemoPage}" />
-                    
+
                     <TextCell Text="AbsoluteLayout"
                               Detail="Arrange children by coordinate positions"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.AbsoluteLayoutDemoPage}" />
-                    
+
                     <TextCell Text="Grid"
                               Detail="Arrange children in a grid"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.GridDemoPage}" />
-                    
+
                     <TextCell Text="RelativeLayout"
                               Detail="Arrange children relative to each other"
                               Command="{Binding NavigateCommand}"
@@ -227,12 +227,12 @@
                 </TableSection>
 
                 <TableSection Title="Pages">
-                    
+
                     <TextCell Text="ContentPage"
                               Detail="Present a normal page"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.ContentPageDemoPage}" />
-                    
+
                     <TextCell Text="NavigationPage"
                               Detail="Present a navigatable page"
                               Command="{Binding NavigateCommand}"
@@ -242,12 +242,12 @@
                               Detail="Present two pages with a list and an item"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.MasterDetailPageDemoPage}" />
-                    
+
                     <TextCell Text="TabbedPage"
                               Detail="Present a page with tabs"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.TabbedPageDemoPage}" />
-                    
+
                     <TextCell Text="CarouselPage"
                               Detail="Present a horizontally scrollable page"
                               Command="{Binding NavigateCommand}"
