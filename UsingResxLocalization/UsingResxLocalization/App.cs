@@ -25,11 +25,10 @@ namespace UsingResxLocalization
             }
 
             var tabs = new TabbedPage();
-            tabs.Children.Add(new FirstPage { Title = "C#", Icon = "csharp.png" });
-            tabs.Children.Add(new FirstPageXaml { Title = "Xaml", Icon = "xaml.png" });
+            tabs.Children.Add(new FirstPage { Title = "C#", IconImageSource = "csharp.png" });
+            tabs.Children.Add(new FirstPageXaml { Title = "Xaml", IconImageSource = "xaml.png" });
 
             MainPage = tabs;
         }
     }
 }
-

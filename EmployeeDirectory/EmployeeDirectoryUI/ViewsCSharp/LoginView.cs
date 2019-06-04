@@ -54,7 +54,7 @@ namespace EmployeeDirectoryUI.CSharp
                     Children = { logo, usernameEntry, passwordEntry, grid }
                 };
 
-                BackgroundImage = "login_box";
+                BackgroundImageSource = "login_box";
 
             }
             else

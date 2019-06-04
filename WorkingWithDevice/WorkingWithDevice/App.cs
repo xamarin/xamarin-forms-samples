@@ -10,11 +10,10 @@ namespace WorkingWithPlatformSpecifics
 		{
 			var csTab = new TabbedPage ();
 
-			csTab.Children.Add(new DevicePage {Title = "C#", Icon="csharp.png"});
-			csTab.Children.Add(new DevicePageXaml {Title = "Xaml", Icon="xaml.png"});
+			csTab.Children.Add(new DevicePage {Title = "C#", IconImageSource="csharp.png"});
+			csTab.Children.Add(new DevicePageXaml {Title = "Xaml", IconImageSource="xaml.png"});
 
 			MainPage = csTab;
 		}
 	}
 }
-

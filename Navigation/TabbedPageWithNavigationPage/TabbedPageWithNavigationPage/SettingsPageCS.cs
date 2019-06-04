@@ -6,9 +6,9 @@ namespace TabbedPageWithNavigationPage
 	{
 		public SettingsPageCS ()
 		{
-			Icon = "settings.png";
+			IconImageSource = "settings.png";
 			Title = "Settings";
-			Content = new StackLayout { 
+			Content = new StackLayout {
 				Children = {
 					new Label {
 						Text = "Settings go here",

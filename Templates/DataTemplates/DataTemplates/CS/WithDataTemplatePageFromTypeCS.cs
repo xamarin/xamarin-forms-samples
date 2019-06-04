@@ -8,7 +8,7 @@ namespace DataTemplates
         public WithDataTemplatePageFromTypeCS()
         {
             Title = "With a Data Template (Type)";
-            Icon = "csharp.png";
+            IconImageSource = "csharp.png";
 
             var people = new List<Person>
             {

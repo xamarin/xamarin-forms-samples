@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TodoREST.TodoListPage"
              Title="Todo">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="+" Clicked="OnAddItemClicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="ImageSource">
                     <On Platform="Android, UWP" Value="plus.png" />
                 </OnPlatform>
-            </ToolbarItem.Icon>
+            </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
-    <ListView x:Name="listView" 
-              Margin="20" 
+    <ListView x:Name="listView"
+              Margin="20"
               ItemSelected="OnItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <StackLayout Padding="20,0,0,0" 
+                    <StackLayout Padding="20,0,0,0"
                                  HorizontalOptions="StartAndExpand"
                                  Orientation="Horizontal">
-                        <Label Text="{Binding Name}" 
+                        <Label Text="{Binding Name}"
                                VerticalTextAlignment="Center" />
-                        <Image Source="check.png" 
+                        <Image Source="check.png"
                                IsVisible="{Binding Done}" />
                     </StackLayout>
                 </ViewCell>

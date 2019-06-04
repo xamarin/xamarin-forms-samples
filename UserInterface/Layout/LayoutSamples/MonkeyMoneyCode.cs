@@ -26,7 +26,7 @@ namespace LayoutSamples
 				FontSize = 20,
 				TextColor = Color.White,
 				BackgroundColor = Color.Lime,
-				BorderRadius = 25
+				CornerRadius = 25
 			});
 			topRow.Children.Add (new Button {
 				HeightRequest = 50,
@@ -36,7 +36,7 @@ namespace LayoutSamples
 				FontSize = 20,
 				TextColor = Color.White,
 				BackgroundColor = Color.Lime,
-				BorderRadius = 25
+				CornerRadius = 25
 			});
 			outerLayout.Children.Add (topRow);
 			//big total
@@ -82,14 +82,14 @@ namespace LayoutSamples
 				BackgroundColor = Color.White,
 				TextColor = Color.Lime,
 				Text = "REQUEST",
-				BorderRadius = 0,
+				CornerRadius = 0,
 				FontSize = 20
 			}, new Rectangle (0, 1, .5, 1), AbsoluteLayoutFlags.All);
 			bottomButtonLayout.Children.Add (new Button {
 				BackgroundColor = Color.White,
 				TextColor = Color.Lime,
 				Text = "PAY",
-				BorderRadius = 0,
+				CornerRadius = 0,
 				FontSize = 20
 			}, new Rectangle (1, 1, .49, 1), AbsoluteLayoutFlags.All);
 			outerLayout.Children.Add (bottomButtonLayout);

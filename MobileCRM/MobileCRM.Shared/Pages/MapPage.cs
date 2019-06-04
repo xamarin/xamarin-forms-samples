@@ -43,7 +43,7 @@ namespace MobileCRM.Shared.Pages
             BindingContext = viewModel;
 
             this.SetBinding(Page.TitleProperty, "Title");
-            this.SetBinding(Page.IconProperty, "Icon");
+            this.SetBinding(Page.IconImageSourceProperty, "Icon");
 
             var map = MakeMap();
             var stack = new StackLayout { Spacing = 0 };

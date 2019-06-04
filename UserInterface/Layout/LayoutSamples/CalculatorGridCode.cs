@@ -15,7 +15,7 @@ namespace LayoutSamples
 				Setters = {
 					new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromHex ("#eee") },
 					new Setter { Property = Button.TextColorProperty, Value = Color.Black },
-					new Setter { Property = Button.BorderRadiusProperty, Value = 0 },
+					new Setter { Property = Button.CornerRadiusProperty, Value = 0 },
 					new Setter { Property = Button.FontSizeProperty, Value = 40 }
 				}
 			};
@@ -23,7 +23,7 @@ namespace LayoutSamples
 				Setters = {
 					new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromHex ("#ddd") },
 					new Setter { Property = Button.TextColorProperty, Value = Color.Black },
-					new Setter { Property = Button.BorderRadiusProperty, Value = 0 },
+					new Setter { Property = Button.CornerRadiusProperty, Value = 0 },
 					new Setter { Property = Button.FontSizeProperty, Value = 40 }
 				}
 			};
@@ -31,7 +31,7 @@ namespace LayoutSamples
 				Setters = {
 					new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromHex ("#E8AD00") },
 					new Setter { Property = Button.TextColorProperty, Value = Color.White },
-					new Setter { Property = Button.BorderRadiusProperty, Value = 0 },
+					new Setter { Property = Button.CornerRadiusProperty, Value = 0 },
 					new Setter { Property = Button.FontSizeProperty, Value = 40 }
 				}
 			};

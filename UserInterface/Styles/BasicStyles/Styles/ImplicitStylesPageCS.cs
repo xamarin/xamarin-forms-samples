@@ -8,7 +8,7 @@ namespace Styles
 		{
 			var entryStyle = new Style (typeof(Entry)) {
 				Setters = {
-					new Setter { 
+					new Setter {
 						Property = View.HorizontalOptionsProperty,
 						Value = LayoutOptions.Fill
 					},
@@ -27,17 +27,17 @@ namespace Styles
 					new Setter {
 						Property = Entry.TextColorProperty,
 						Value = Color.Blue
-					} 
-				}	
+					}
+				}
 			};
 
 			Title = "Implicit";
-			Icon = "csharp.png";
+			IconImageSource = "csharp.png";
 			Padding = new Thickness (0, 20, 0, 0);
 			Resources = new ResourceDictionary ();
 			Resources.Add (entryStyle);
 
-			Content = new StackLayout { 
+			Content = new StackLayout {
 				Children = {
 					new Entry { Text = "These entries" },
 					new Entry { Text = "are demonstrating" },

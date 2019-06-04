@@ -48,7 +48,7 @@ namespace TodoCognitive
                 {
                     audioRecordingService.StartRecording();
 
-                    ((Button)sender).Image = "recording.png";
+                    ((Button)sender).ImageSource = "recording.png";
                     IsProcessing = true;
                 }
                 else
@@ -78,7 +78,7 @@ namespace TodoCognitive
             {
                 if (!isRecording)
                 {
-                    ((Button)sender).Image = "record.png";
+                    ((Button)sender).ImageSource = "record.png";
                     IsProcessing = false;
                 }
             }

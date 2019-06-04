@@ -10,7 +10,7 @@
                         Value="CenterAndExpand" />
 				<Setter Property="BorderColor"
                         Value="Lime" />
-				<Setter Property="BorderRadius" 
+				<Setter Property="CornerRadius" 
                         Value="5" />
 				<Setter Property="BorderWidth" 
                         Value="5" />

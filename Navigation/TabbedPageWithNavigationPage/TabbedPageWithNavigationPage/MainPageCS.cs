@@ -7,7 +7,7 @@ namespace TabbedPageWithNavigationPage
 		public MainPageCS ()
 		{
 			var navigationPage = new NavigationPage (new SchedulePageCS ());
-			navigationPage.Icon = "schedule.png";
+			navigationPage.IconImageSource = "schedule.png";
 			navigationPage.Title = "Schedule";
 
 			Children.Add (new TodayPageCS ());

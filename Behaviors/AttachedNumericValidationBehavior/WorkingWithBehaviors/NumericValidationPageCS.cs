@@ -7,7 +7,7 @@ namespace WorkingWithBehaviors
 		public NumericValidationPageCS ()
 		{
 			Title = "Numeric";
-			Icon = "csharp.png";
+			IconImageSource = "csharp.png";
 
 			var entry = new Entry { Placeholder = "Enter a System.Double" };
 			NumericValidationBehavior.SetAttachBehavior (entry, true);

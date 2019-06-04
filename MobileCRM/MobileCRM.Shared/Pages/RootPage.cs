@@ -9,14 +9,14 @@ namespace MobileCRM.Shared.Pages
     public class RootPage : MasterDetailPage
     {
         OptionItem previousItem;
-        
+
         public RootPage ()
-        {            
-            var optionsPage = new MenuPage { Icon = "settings.png", Title = "menu" };            
+        {
+            var optionsPage = new MenuPage { IconImageSource = "settings.png", Title = "menu" };            
             optionsPage.Menu.ItemSelected += (sender, e) => NavigateTo(e.SelectedItem as OptionItem);
             Master = optionsPage;
             NavigateTo(optionsPage.Menu.ItemsSource.Cast<OptionItem>().First());
-            ShowLoginDialog();    
+            ShowLoginDialog();
         }
 
         async void ShowLoginDialog()

@@ -44,7 +44,7 @@ namespace FileUploader.CS
             imageToUpload.Source = ImageSource.FromStream(() => new MemoryStream(byteData));
 
             Title = "Upload Image";
-            Icon = "csharp.png";
+            IconImageSource = "csharp.png";
 
             Content = new ScrollView
             {
@@ -64,4 +64,3 @@ namespace FileUploader.CS
         }
     }
 }
-

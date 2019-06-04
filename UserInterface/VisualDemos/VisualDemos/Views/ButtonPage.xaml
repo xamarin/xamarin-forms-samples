@@ -35,10 +35,10 @@
             <Label Text="Image"
                    Margin="0,0,0,-10" />
             <StackLayout Orientation="Horizontal">
-                <Button Image="iconXamarinBlue" 
+                <Button ImageSource="iconXamarinBlue" 
                         Text="Enabled"
                         HorizontalOptions="FillAndExpand" />
-                <Button Image="iconXamarinBlue" 
+                <Button ImageSource="iconXamarinBlue" 
                         Text="Disabled" IsEnabled="false"
                         HorizontalOptions="FillAndExpand" />
             </StackLayout>
@@ -67,11 +67,11 @@
 
             <Label Text="Text and Image" Margin="0,0,0,-10" />
             <StackLayout Orientation="Horizontal">
-                <Button Image="iconXamarinBlue"
+                <Button ImageSource="iconXamarinBlue"
                         Text="Enabled" 
                         TextColor="{StaticResource SecondaryTextColor}" 
                         HorizontalOptions="FillAndExpand" />
-                <Button Image="iconXamarinBlue" 
+                <Button ImageSource="iconXamarinBlue" 
                         Text="Disabled" 
                         TextColor="{StaticResource SecondaryTextColor}"
                         IsEnabled="false" 
@@ -96,9 +96,9 @@
                         
             <Label Text="Default and Image"
                    Margin="0,0,0,-10" />
-            <Button Image="iconXamarinBlue" 
+            <Button ImageSource="iconXamarinBlue" 
                     Text="Default Enabled Button" />
-            <Button Image="iconXamarinBlue" 
+            <Button ImageSource="iconXamarinBlue" 
                     Text="Default Disabled Button" 
                     IsEnabled="false"  /> 
             

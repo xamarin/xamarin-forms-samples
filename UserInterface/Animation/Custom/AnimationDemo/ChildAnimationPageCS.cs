@@ -11,7 +11,7 @@ namespace AnimationDemo
 		public ChildAnimationPageCS()
 		{
 			Title = "Child Animations";
-			Icon = "csharp.png";
+			IconImageSource = "csharp.png";
 
 			image = new Image
 			{
