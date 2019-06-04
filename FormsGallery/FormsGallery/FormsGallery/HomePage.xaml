@@ -15,7 +15,7 @@
     </local:CodeExamplesMainPage>
 
     <ContentPage Title="XAML Pages">
-        <local:CodeExamplesMainPage.IconImageSourcen>
+        <local:CodeExamplesMainPage.IconImageSource>
             <OnPlatform x:TypeArguments="ImageSource">
                 <On Platform="iOS, Android" Value="xaml.png" />
             </OnPlatform>
