@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Notes.iOS.Views.NotesPage">
+    <StackLayout Margin="20,85,20,20">
+        <Button Text="+"
+                FontSize="Large"
+                Clicked="OnNoteAddedClicked"
+                HorizontalOptions="End" />
+        <ListView x:Name="listView"
+                  ItemSelected="OnListViewItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Text}"
+                              Detail="{Binding Date}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
