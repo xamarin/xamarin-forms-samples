@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ButtonDemos.ImageButtonDemoPage"
@@ -10,8 +10,8 @@
         
         <FlexLayout.Resources>
             <Style TargetType="Button">
-                <Setter Property="Image">
-                    <OnPlatform x:TypeArguments="FileImageSource">
+                <Setter Property="ImageSource">
+                    <OnPlatform x:TypeArguments="ImageSource">
                         <On Platform="iOS, Android" Value="MonkeyFace.png" />
                         <On Platform="UWP" Value="Assets/MonkeyFace.png" />
                     </OnPlatform>
@@ -20,12 +20,12 @@
         </FlexLayout.Resources>
 
         <Button>
-            <Button.Image>
-                <OnPlatform x:TypeArguments="FileImageSource">
+            <Button.ImageSource>
+                <OnPlatform x:TypeArguments="ImageSource">
                     <On Platform="iOS, Android" Value="MonkeyFace.png" />
                     <On Platform="UWP" Value="Assets/MonkeyFace.png" />
                 </OnPlatform>
-            </Button.Image>
+            </Button.ImageSource>
         </Button>
 
         <Button Text="Default" />

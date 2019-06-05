@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PickerDemo.PickerItemsPage"
-             Title="Picker Items" 
-             Icon="xaml.png">
+             Title="Picker Items"
+             IconImageSource="xaml.png">
 	<StackLayout Margin="20,35,20,20">
-		<Label Text="Picker - Data in Items Collection" 
-               FontAttributes="Bold" 
+		<Label Text="Picker - Data in Items Collection"
+               FontAttributes="Bold"
                HorizontalOptions="Center" />
 		<Picker Title="Select a monkey"
                 TitleColor="Red"

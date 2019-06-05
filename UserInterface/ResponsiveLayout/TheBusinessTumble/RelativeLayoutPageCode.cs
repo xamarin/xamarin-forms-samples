@@ -9,7 +9,7 @@ namespace ResponsiveLayout
 		public RelativeLayoutPageCode ()
 		{
 			Title = "RelativeLayout - C#";
-			BackgroundImage = "deer.jpg";
+			BackgroundImageSource = "deer.jpg";
 
 			var outerLayout = new RelativeLayout ();
 			outerLayout.Children.Add (new BoxView { BackgroundColor = Color.FromHex ("#AA1A7019") }, Constraint.RelativeToParent ((parent) => {
@@ -59,7 +59,7 @@ namespace ResponsiveLayout
 				Text = "Previous",
 				BackgroundColor = Color.White,
 				TextColor = Color.Green,
-				BorderRadius = 0
+				CornerRadius = 0
 			}, Constraint.RelativeToParent ((parent) => {
 				return 0;
 			}), Constraint.RelativeToParent ((parent) => {
@@ -73,7 +73,7 @@ namespace ResponsiveLayout
 				Text = "Next",
 				BackgroundColor = Color.White,
 				TextColor = Color.Green,
-				BorderRadius = 0
+				CornerRadius = 0
 			}, Constraint.RelativeToParent ((parent) => {
 				return parent.Width * .5;
 			}), Constraint.RelativeToParent ((parent) => {

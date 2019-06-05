@@ -32,7 +32,7 @@
             <Setter Property="FontSize" Value="Large" />
             <Setter Property="TextColor" Value="White" />
             <Setter Property="BackgroundColor" Value="Green" />
-            <Setter Property="BorderRadius" Value="20" />
+            <Setter Property="CornerRadius" Value="20" />
         </Style>
     </ContentPage.Resources>
 

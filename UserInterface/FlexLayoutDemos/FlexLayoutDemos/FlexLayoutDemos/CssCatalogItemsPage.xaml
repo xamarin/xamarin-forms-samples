@@ -14,7 +14,7 @@
 
         <Style TargetType="Button">
             <Setter Property="Text" Value="LEARN MORE" />
-            <Setter Property="BorderRadius" Value="20" />
+            <Setter Property="CornerRadius" Value="20" />
         </Style>
     </ContentPage.Resources>
 

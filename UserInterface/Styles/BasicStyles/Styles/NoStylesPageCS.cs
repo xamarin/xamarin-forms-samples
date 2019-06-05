@@ -7,10 +7,10 @@ namespace Styles
 		public NoStylesPageCS ()
 		{
 			Title = "No Styles";
-			Icon = "csharp.png";
+			IconImageSource = "csharp.png";
 			Padding = new Thickness (0, 20, 0, 0);
 
-			Content = new StackLayout { 
+			Content = new StackLayout {
 				Children = {
 					new Label {
 						Text = "These labels",
@@ -29,11 +29,9 @@ namespace Styles
 						HorizontalOptions = LayoutOptions.Center,
 						VerticalOptions = LayoutOptions.CenterAndExpand,
 						FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label))
-					} 
+					}
 				}
 			};
 		}
 	}
 }
-
-

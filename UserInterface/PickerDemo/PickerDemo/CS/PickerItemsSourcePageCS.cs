@@ -8,7 +8,7 @@ namespace PickerDemo
 		public PickerItemsSourcePageCS()
 		{
 			Title = "Picker ItemsSource";
-			Icon = "csharp.png";
+			IconImageSource = "csharp.png";
 
 			var monkeyList = new List<string>();
 			monkeyList.Add("Baboon");

@@ -7,7 +7,7 @@ namespace PickerDemo
 		public PickerItemsPageCS()
 		{
 			Title = "Picker Items";
-			Icon = "csharp.png";
+			IconImageSource = "csharp.png";
 
 			var monkeyNameLabel = new Label();
 
@@ -48,4 +48,3 @@ namespace PickerDemo
 		}
 	}
 }
-

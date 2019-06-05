@@ -11,7 +11,7 @@ namespace AnimationDemo
 		public SimpleAnimationPageCS ()
 		{
 			Title = "Simple Animation";
-			Icon = "csharp.png";
+			IconImageSource = "csharp.png";
 
 			image = new Image {
 				Source = ImageSource.FromFile ("monkey.png"),
@@ -24,7 +24,7 @@ namespace AnimationDemo
 			cancelButton = new Button { Text = "Cancel Animation", IsEnabled = false };
 			cancelButton.Clicked += OnCancelAnimationButtonClicked;
 
-			Content = new StackLayout { 
+			Content = new StackLayout {
 				Margin = new Thickness (0, 20, 0, 0),
 				Children = {
 					image,

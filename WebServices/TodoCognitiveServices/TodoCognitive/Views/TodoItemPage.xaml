@@ -5,9 +5,9 @@
 		<Entry Text="{Binding Source={x:Reference page}, Path=TodoItem.Name}" Placeholder="Enter task name here" />
 		<ActivityIndicator HorizontalOptions="Center" IsRunning="{Binding Source={x:Reference page}, Path=IsProcessing}" />
 		<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-			<Button Image="record.png" Clicked="OnRecognizeSpeechButtonClicked" />
-			<Button Image="spellcheck.png" Clicked="OnSpellCheckButtonClicked" />
-			<Button Image="translate.png" Clicked="OnTranslateButtonClicked" />
+			<Button ImageSource="record.png" Clicked="OnRecognizeSpeechButtonClicked" />
+			<Button ImageSource="spellcheck.png" Clicked="OnSpellCheckButtonClicked" />
+			<Button ImageSource="translate.png" Clicked="OnTranslateButtonClicked" />
 		</StackLayout>
 		<Label Text="Done" />
 		<Switch IsToggled="{Binding Source={x:Reference page}, Path=TodoItem.Done}" />

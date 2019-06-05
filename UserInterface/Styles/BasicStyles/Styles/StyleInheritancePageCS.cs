@@ -8,7 +8,7 @@ namespace Styles
 		{
 			var baseStyle = new Style (typeof(View)) {
 				Setters = {
-					new Setter { 
+					new Setter {
 						Property = View.HorizontalOptionsProperty,
 						Value = LayoutOptions.Center
 					},
@@ -33,8 +33,8 @@ namespace Styles
 					new Setter {
 						Property = Label.TextColorProperty,
 						Value = Color.Teal
-					} 
-				}	
+					}
+				}
 			};
 
 			var buttonStyle = new Style (typeof(Button)) {
@@ -50,7 +50,7 @@ namespace Styles
 					},
 					new Setter {
 						Property = Button.BorderWidthProperty,
-						Value = 5	
+						Value = 5
 					},
 					new Setter {
 						Property = VisualElement.WidthRequestProperty,
@@ -59,19 +59,19 @@ namespace Styles
 					new Setter {
 						Property = Button.TextColorProperty,
 						Value = Color.Teal
-					} 
-				}	
+					}
+				}
 			};
 
 			Title = "Inheritance";
-			Icon = "csharp.png";
+			IconImageSource = "csharp.png";
 			Padding = new Thickness (0, 20, 0, 0);
-			Content = new StackLayout { 
+			Content = new StackLayout {
 				Children = {
 					new Label { Text = "These labels", Style = labelStyle },
 					new Label { Text = "are demonstrating", Style = labelStyle },
 					new Label { Text = "style inheritance", Style = labelStyle },
-					new Button { Text = "So is the button", Style = buttonStyle } 
+					new Button { Text = "So is the button", Style = buttonStyle }
 				}
 			};
 		}

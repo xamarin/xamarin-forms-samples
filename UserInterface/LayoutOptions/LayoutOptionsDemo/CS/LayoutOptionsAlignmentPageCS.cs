@@ -7,7 +7,7 @@ namespace LayoutOptionsDemo
 		public LayoutOptionsAlignmentPageCS()
 		{
 			Title = "Alignment";
-			Icon = "csharp.png";
+			IconImageSource = "csharp.png";
 
 			Content = new StackLayout
 			{

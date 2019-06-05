@@ -33,7 +33,7 @@ namespace LayoutSamples
 			}), Constraint.RelativeToParent ((parent) => {
 				return (parent.Height * .5) - 50;
 			}));
-			moveButton = new Button { BackgroundColor = Color.White, FontSize = 20, TextColor = Color.Lime, Text = "Move", BorderRadius = 0};
+			moveButton = new Button { BackgroundColor = Color.White, FontSize = 20, TextColor = Color.Lime, Text = "Move", CornerRadius = 0};
 			buttonLayout.Children.Add (moveButton, new Rectangle(0,1,1,1), AbsoluteLayoutFlags.All);
 			outerLayout.Children.Add (layout, new Rectangle(0,0,1,1), AbsoluteLayoutFlags.All);
 			outerLayout.Children.Add (buttonLayout, new Rectangle(0,1,1,50), AbsoluteLayoutFlags.PositionProportional|AbsoluteLayoutFlags.WidthProportional);

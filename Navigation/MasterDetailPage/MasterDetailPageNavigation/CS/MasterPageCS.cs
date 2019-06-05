@@ -53,7 +53,7 @@ namespace MasterDetailPageNavigation
                 SeparatorVisibility = SeparatorVisibility.None
             };
 
-            Icon = "hamburger.png";
+            IconImageSource = "hamburger.png";
             Title = "Personal Organiser";
             Padding = new Thickness(0, 40, 0, 0);
             Content = new StackLayout
