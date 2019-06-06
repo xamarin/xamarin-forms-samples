@@ -16,7 +16,11 @@ namespace ChatClient
         HttpClient client;
 
         public delegate void MessageReceivedHandler(object sender, Message message);
+        public delegate void ConnectionHandler(object sender, bool successful, string message);
+
         public event MessageReceivedHandler NewMessageReceived;
+        public event ConnectionHandler Connected;
+        public event ConnectionHandler ConnectionFailed;
         public bool IsConnected { get; private set; }
         public bool IsBusy { get; private set; }
 
@@ -48,9 +52,9 @@ namespace ChatClient
             {
                 IsBusy = true;
 
-                var negotiateJson = await client.GetStringAsync($"{Constants.HostName}/api/negotiate");
-                var negotiate = JsonConvert.DeserializeObject<NegotiateInfo>(negotiateJson);
-                var connection = new HubConnectionBuilder()
+                string negotiateJson = await client.GetStringAsync($"{Constants.HostName}/api/negotiate");
+                NegotiateInfo negotiate = JsonConvert.DeserializeObject<NegotiateInfo>(negotiateJson);
+                HubConnection connection = new HubConnectionBuilder()
                     .WithUrl(negotiate.Url, options =>
                     {
                         options.AccessTokenProvider = async () => negotiate.AccessToken;
@@ -62,16 +66,18 @@ namespace ChatClient
 
                 IsConnected = true;
                 IsBusy = false;
+
+                Connected?.Invoke(this, true, "Connection successful.");
             }
             catch(Exception ex)
             {
-                Debugger.Break();
+                ConnectionFailed?.Invoke(this, false, ex.Message);
             }
         }
 
         void AddNewMessage(JObject message)
         {
-            var messageModel = new Message
+            Message messageModel = new Message
             {
                 Name = message.GetValue("name").ToString(),
                 Text = message.GetValue("text").ToString(),
