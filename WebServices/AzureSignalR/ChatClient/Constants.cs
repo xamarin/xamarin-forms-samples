@@ -9,6 +9,8 @@ namespace ChatClient
     {
         public static string HostName { get; set; } = "http://localhost:7071";
 
+        public static string MessageName { get; set; } = "newMessage";
+
         public static string Username
         {
             get
