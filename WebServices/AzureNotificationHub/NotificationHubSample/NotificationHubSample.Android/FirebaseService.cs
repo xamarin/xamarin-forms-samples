@@ -41,7 +41,7 @@ namespace NotificationHubSample.Droid
             intent.PutExtra("message", body);
             var pendingIntent = PendingIntent.GetActivity(this, 0, intent, PendingIntentFlags.OneShot);
 
-            var notificationBuilder = new NotificationCompat.Builder(this)
+            var notificationBuilder = new NotificationCompat.Builder(this, AppConstants.NotificationChannelName)
                 .SetContentTitle("XamarinNotify Message")
                 .SetSmallIcon(Resource.Drawable.ic_launcher)
                 .SetContentText(body)

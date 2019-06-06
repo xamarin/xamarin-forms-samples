@@ -14,5 +14,5 @@
 			</intent-filter>
 		</receiver>
 	</application>
-	<uses-sdk />
+	<uses-sdk android:minSdkVersion="21" />
 </manifest>

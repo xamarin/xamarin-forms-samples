@@ -3,14 +3,14 @@
     "project_number": "",
     "firebase_url": "",
     "project_id": "",
-    "storage_bucket": ""
+    "storage_bucket": "m"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "",
         "android_client_info": {
-          "package_name": ""
+          "package_name": "com.xamarin.notifysample"
         }
       },
       "oauth_client": [
