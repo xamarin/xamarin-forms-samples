@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using System.Linq;
+﻿using System.Linq;
 using Xamarin.Forms;
 
 namespace NotificationHubSample
