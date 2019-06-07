@@ -27,7 +27,7 @@ namespace ChatClient
                Label label = new Label
                {
                    Text = message,
-                   HorizontalOptions = LayoutOptions.CenterAndExpand,
+                   HorizontalOptions = LayoutOptions.Start,
                    VerticalOptions = LayoutOptions.Start
                };
 
@@ -37,7 +37,7 @@ namespace ChatClient
 
         private void SignalR_NewMessageReceived(object sender, Model.Message message)
         {
-            string msg = $"{message.Name} ({message.TimeReceived} - {message.Text}";
+            string msg = $"{message.Name} ({message.TimeReceived}) - {message.Text}";
             AddMessage(msg);
         }
 
