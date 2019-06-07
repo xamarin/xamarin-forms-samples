@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotificationHubSample.MainPage">
+
+    <StackLayout>
+        <Label Text="Welcome to Azure Notification Hub"
+               Margin="0,35,0,0"
+               FontAttributes="Bold"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Start" />
+        <Label Text="Messages Received:"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Start" />
+        <StackLayout x:Name="messageDisplay"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Start">
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
