@@ -28,17 +28,11 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="NUnit" Version="3.0.1" />
-    <PackageReference Include="Xamarin.UITest" Version="1.2.0" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="Xamarin.UITest" Version="3.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="Xamarin.UITest">
-      <HintPath>..\packages\Xamarin.UITest.1.2.0\lib\Xamarin.UITest.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Tests.cs" />
@@ -59,4 +53,5 @@
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
