@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.CheckBoxPage"
+             Title="CheckBox Demo">
+    <StackLayout>
+        <Label Text="CheckBox"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        
+        <CheckBox x:Name="checkbox"
+                  HorizontalOptions="Center"
+                  VerticalOptions="CenterAndExpand" />
+        
+        <Label Text="CheckBox is now False"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand">
+            <Label.Triggers>
+                <DataTrigger TargetType="Label"
+                             Binding="{Binding Source={x:Reference checkbox},
+                                               Path=IsChecked}"
+                             Value="True">
+                    <Setter Property="Text"
+                            Value="CheckBox is now True" />
+                </DataTrigger>
+            </Label.Triggers>
+        </Label>
+    </StackLayout>
+</ContentPage>

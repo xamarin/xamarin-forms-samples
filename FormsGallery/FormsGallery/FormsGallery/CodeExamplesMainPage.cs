@@ -102,6 +102,14 @@ namespace FormsGallery
                     {
                         new TextCell
                         {
+                            Text = "CheckBox (bool)",
+                            Detail = "Select a Boolean value",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.CheckBoxPage)
+                        },
+
+                        new TextCell
+                        {
                             Text = "Slider (double)",
                             Detail = "Select a number from a continuous range",
                             Command = navigateCommand,
