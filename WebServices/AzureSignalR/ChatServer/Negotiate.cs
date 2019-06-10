@@ -1,6 +1,6 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Azure.WebJobs.Extensions.SignalRService;
 
 namespace ChatServer
@@ -9,13 +9,10 @@ namespace ChatServer
     {
         [FunctionName("Negotiate")]
         public static SignalRConnectionInfo GetSignalRInfo(
-
             [HttpTrigger(AuthorizationLevel.Anonymous,"get",Route = "negotiate")]
             HttpRequest req,
-
             [SignalRConnectionInfo(HubName = "simplechat")]
-            SignalRConnectionInfo connectionInfo
-        )
+            SignalRConnectionInfo connectionInfo)
         {
             return connectionInfo;
         }

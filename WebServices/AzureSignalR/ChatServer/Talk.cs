@@ -1,14 +1,14 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
-using System.Threading.Tasks;
-using System.IO;
-using Newtonsoft.Json;
 using Microsoft.Azure.WebJobs.Extensions.SignalRService;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace ChatServer
 {
@@ -17,8 +17,8 @@ namespace ChatServer
         [FunctionName("Talk")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(
-                AuthorizationLevel.Anonymous, 
-                "post", 
+                AuthorizationLevel.Anonymous,
+                "post",
                 Route = "talk")]
             HttpRequest req,
             [SignalR(HubName = "simplechat")]

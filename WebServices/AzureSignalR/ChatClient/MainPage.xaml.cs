@@ -1,7 +1,4 @@
-﻿using ChatClient.ViewModel;
-using System;
-using System.ComponentModel;
-using System.Threading.Tasks;
+﻿using System;
 using Xamarin.Forms;
 
 namespace ChatClient

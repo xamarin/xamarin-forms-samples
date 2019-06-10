@@ -3,8 +3,6 @@ using Microsoft.AspNetCore.SignalR.Client;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -69,7 +67,7 @@ namespace ChatClient
 
                 Connected?.Invoke(this, true, "Connection successful.");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 ConnectionFailed?.Invoke(this, false, ex.Message);
             }
