@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="CheckBoxDemos.BasicCheckBoxBindingsPage"
+             Title="Basic CheckBox (Bindings)">
+    <Grid Margin="20,35,20,20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*" />
+            <ColumnDefinition Width="0.75*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Text="Style text:"
+               VerticalOptions="Center" />
+        <CheckBox x:Name="styleCheckBox"
+                  Grid.Column="1"
+                  VerticalOptions="Center" />
+        <ScrollView Grid.Row="1"
+                    Grid.ColumnSpan="2">
+            <Label FontSize="Medium"
+                   Text="Lorem ipsum dolor sit amet, elit rutrum, enim hendrerit augue vitae praesent sed non, lorem aenean quis praesent pede, lacus sodales sed condimentum senectus nunc donec, neque pellentesque curabitur velit eleifend et pulvinar. Dapibus in libero volutpat libero. Condimentum hac nec eget, in aliquet sodales orci duis mauris diam, felis iaculis auctor amet curabitur justo faucibus, voluptate mollis, ipsum arcu in fusce. Felis per commodo tempus, in velit lacinia duis lacinia porttitor volutpat. Praesent eros incidunt. Eros purus arcu in suscipit urna. Condimentum eu, mauris sagittis mauris, augue nulla morbi, vehicula mattis cras vulputate sed. Metus amet, bibendum eget nulla consectetuer. Ipsum eget fusce, sapien aenean a. Sit id pellentesque tincidunt pulvinar ac, justo lacus enim. Consectetuer libero, mi aenean dui rhoncus, rutrum dolor lectus amet, praesent porttitor a varius tempor lorem et. Velit at auctor dolore, purus tellus mauris, magna eu ac erat orci ridiculus, leo luctus ultricies sapien in purus ipsum.">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                 Binding="{Binding Source={x:Reference styleCheckBox}, Path=IsChecked}"
+                                 Value="true">
+                        <Setter Property="FontAttributes" 
+                                Value="Italic, Bold" />
+                        <Setter Property="FontSize"
+                                Value="Large" />
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+        </ScrollView>
+    </Grid>
+</ContentPage>
