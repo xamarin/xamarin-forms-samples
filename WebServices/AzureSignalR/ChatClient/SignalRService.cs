@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -59,6 +60,7 @@ namespace ChatClient
                     })
                     .Build();
 
+                connection.Closed += Connection_Closed;
                 connection.On<JObject>(Constants.MessageName, AddNewMessage);
                 await connection.StartAsync();
 
@@ -70,7 +72,17 @@ namespace ChatClient
             catch (Exception ex)
             {
                 ConnectionFailed?.Invoke(this, false, ex.Message);
+                IsConnected = false;
+                IsBusy = false;
             }
+        }
+
+        private Task Connection_Closed(Exception arg)
+        {
+            ConnectionFailed?.Invoke(this, false, arg.Message);
+            IsConnected = false;
+            IsBusy = false;
+            return Task.CompletedTask;
         }
 
         void AddNewMessage(JObject message)
