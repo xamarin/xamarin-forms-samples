@@ -40,11 +40,13 @@ namespace ChatClient
 
         private void SignalR_ConnectionChanged(object sender, bool success, string message)
         {
-            connectButton.Text = "Connect";
-            connectButton.IsEnabled = !success;
-            sendButton.IsEnabled = success;
-
-            AddMessage($"Server connection changed: {message}");
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                connectButton.Text = "Connect";
+                connectButton.IsEnabled = !success;
+                sendButton.IsEnabled = success;
+                AddMessage($"Server connection changed: {message}");
+            });
         }
 
         private async void ConnectButton_ClickedAsync(object sender, EventArgs e)
