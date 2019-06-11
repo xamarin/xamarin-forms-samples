@@ -31,19 +31,20 @@ namespace ChatServer
             {
                 string json = await new StreamReader(req.Body).ReadToEndAsync();
                 dynamic obj = JsonConvert.DeserializeObject(json);
-
-                var name = obj.name.ToString();
-                var text = obj.text.ToString();
-
                 var jObject = new JObject(obj);
 
                 await questionR.AddAsync(
                     new SignalRMessage
                     {
-                        Target = "newMessage",
+                        Target = Constants.MessageName,
                         Arguments = new[] { jObject }
                     });
 
+                var name = obj.name.ToString();
+                var text = obj.text.ToString();
+
+                // NOTE: returning values is helpful for testing requests in a browser
+                // or with a program such as Postman
                 return new OkObjectResult($"Hello {name}, your message was '{text}'");
             }
             catch (Exception ex)
