@@ -17,28 +17,28 @@ namespace ChatClient
             signalR.NewMessageReceived += SignalR_NewMessageReceived;
         }
 
-        private void AddMessage(string message)
+        void AddMessage(string message)
         {
             Device.BeginInvokeOnMainThread(() =>
-           {
-               Label label = new Label
-               {
-                   Text = message,
-                   HorizontalOptions = LayoutOptions.Start,
-                   VerticalOptions = LayoutOptions.Start
-               };
+            {
+                Label label = new Label
+                {
+                    Text = message,
+                    HorizontalOptions = LayoutOptions.Start,
+                    VerticalOptions = LayoutOptions.Start
+                };
 
-               messageList.Children.Add(label);
-           });
+                messageList.Children.Add(label);
+            });
         }
 
-        private void SignalR_NewMessageReceived(object sender, Model.Message message)
+        void SignalR_NewMessageReceived(object sender, Model.Message message)
         {
             string msg = $"{message.Name} ({message.TimeReceived}) - {message.Text}";
             AddMessage(msg);
         }
 
-        private void SignalR_ConnectionChanged(object sender, bool success, string message)
+        void SignalR_ConnectionChanged(object sender, bool success, string message)
         {
             Device.BeginInvokeOnMainThread(() =>
             {
@@ -49,14 +49,14 @@ namespace ChatClient
             });
         }
 
-        private async void ConnectButton_ClickedAsync(object sender, EventArgs e)
+        async void ConnectButton_ClickedAsync(object sender, EventArgs e)
         {
             connectButton.Text = "Connecting...";
             connectButton.IsEnabled = false;
             await signalR.ConnectAsync();
         }
 
-        private async void SendButton_ClickedAsync(object sender, EventArgs e)
+        async void SendButton_ClickedAsync(object sender, EventArgs e)
         {
             await signalR.SendMessageAsync(Constants.Username, messageEntry.Text);
             messageEntry.Text = "";

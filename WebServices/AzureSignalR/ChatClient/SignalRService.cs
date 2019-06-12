@@ -4,7 +4,6 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Net.Http;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -77,7 +76,7 @@ namespace ChatClient
             }
         }
 
-        private Task Connection_Closed(Exception arg)
+        Task Connection_Closed(Exception arg)
         {
             ConnectionFailed?.Invoke(this, false, arg.Message);
             IsConnected = false;

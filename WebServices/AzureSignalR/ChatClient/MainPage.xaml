@@ -5,9 +5,9 @@
              x:Class="ChatClient.MainPage">
     <StackLayout>
         <Label Text="Messages"
-           Margin="0,45,0,0"
-           HorizontalOptions="CenterAndExpand"
-           VerticalOptions="Start" />
+               Margin="0,45,0,0"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Start" />
         <Frame OutlineColor="Gray"
                Margin="10,20,10,0"
                WidthRequest="500"
