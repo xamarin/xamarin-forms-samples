@@ -14,8 +14,8 @@ namespace UsingUITest.UITests
 			{
 				return ConfigureApp
 					.Android
-                    .InstalledApp("com.xamarin.usinguitest")
-                    .StartApp();
+					.InstalledApp("com.xamarin.usinguitest")
+					.StartApp();
 			}
 
 			return ConfigureApp
