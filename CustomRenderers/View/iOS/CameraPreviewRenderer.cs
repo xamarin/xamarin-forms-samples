@@ -15,17 +15,18 @@ namespace CustomRenderer.iOS
 		{
 			base.OnElementChanged (e);
 
-			if (Control == null) {
-				uiCameraPreview = new UICameraPreview (e.NewElement.Camera);
-				SetNativeControl (uiCameraPreview);
-			}
 			if (e.OldElement != null) {
 				// Unsubscribe
 				uiCameraPreview.Tapped -= OnCameraPreviewTapped;
 			}
 			if (e.NewElement != null) {
-				// Subscribe
-				uiCameraPreview.Tapped += OnCameraPreviewTapped;
+                if (Control == null)
+                {
+                    uiCameraPreview = new UICameraPreview(e.NewElement.Camera);
+                    SetNativeControl(uiCameraPreview);
+                }
+                // Subscribe
+                uiCameraPreview.Tapped += OnCameraPreviewTapped;
 			}
 		}
 

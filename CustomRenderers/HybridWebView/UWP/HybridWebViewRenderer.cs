@@ -19,10 +19,6 @@ namespace CustomRenderer.UWP
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                SetNativeControl(new Windows.UI.Xaml.Controls.WebView());
-            }
             if (e.OldElement != null)
             {
                 Control.NavigationCompleted -= OnWebViewNavigationCompleted;
@@ -30,7 +26,12 @@ namespace CustomRenderer.UWP
             }
             if (e.NewElement != null)
             {
-                Control.NavigationCompleted += OnWebViewNavigationCompleted;
+				if (Control == null)
+				{
+					SetNativeControl(new Windows.UI.Xaml.Controls.WebView());
+				}
+
+				Control.NavigationCompleted += OnWebViewNavigationCompleted;
                 Control.ScriptNotify += OnWebViewScriptNotify;
                 Control.Source = new Uri(string.Format("ms-appx-web:///Content//{0}", Element.Uri));
             }

@@ -44,18 +44,6 @@ namespace CustomRenderer.UWP
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                _app = Application.Current;
-                _app.Suspending += OnAppSuspending;
-                _app.Resuming += OnAppResuming;
-
-                _captureElement = new CaptureElement();
-                _captureElement.Stretch = Stretch.UniformToFill;
-
-                SetupCamera();
-                SetNativeControl(_captureElement);
-            }
             if (e.OldElement != null)
             {
                 // Unsubscribe
@@ -66,8 +54,21 @@ namespace CustomRenderer.UWP
             }
             if (e.NewElement != null)
             {
-                // Subscribe
-                Tapped += OnCameraPreviewTapped;
+				if (Control == null)
+				{
+					_app = Application.Current;
+					_app.Suspending += OnAppSuspending;
+					_app.Resuming += OnAppResuming;
+
+					_captureElement = new CaptureElement();
+					_captureElement.Stretch = Stretch.UniformToFill;
+
+					SetupCamera();
+					SetNativeControl(_captureElement);
+				}
+
+				// Subscribe
+				Tapped += OnCameraPreviewTapped;
             }
         }
 

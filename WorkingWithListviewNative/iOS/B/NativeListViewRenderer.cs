@@ -19,18 +19,17 @@ namespace WorkingWithListviewNative.iOS
 		{
 			base.OnElementChanged (e);
 
-			if (Control == null) {
-				SetNativeControl (new UITableView ());
-			}
-
 			if (e.OldElement != null) {
 				// unsubscribe
 			}
 
 			if (e.NewElement != null) {
-				// subscribe
-
-				var s = new NativeListViewSource (e.NewElement);
+                if (Control == null)
+                {
+                    SetNativeControl(new UITableView());
+                }
+                // subscribe
+                var s = new NativeListViewSource (e.NewElement);
 				Control.Source = s;
 			}
 		}

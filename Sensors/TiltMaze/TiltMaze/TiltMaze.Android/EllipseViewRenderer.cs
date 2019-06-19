@@ -22,14 +22,13 @@ namespace Xamarin.FormsBook.Platform.Android
         {
             base.OnElementChanged(args);
 
-            if (Control == null)
-            {
-                SetNativeControl(new EllipseDrawableView(Context));
-            }
-
             if (args.NewElement != null)
             {
-                SetColor();
+				if (Control == null)
+				{
+					SetNativeControl(new EllipseDrawableView(Context));
+				}
+				SetColor();
                 SetSize();
             }
         }

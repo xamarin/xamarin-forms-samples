@@ -16,13 +16,12 @@ namespace Xamarin.FormsBook.Platform.iOS
         {
             base.OnElementChanged(args);
 
-            if (Control == null)
-            {
-                SetNativeControl(new EllipseUIView());
-            }
-
             if (args.NewElement != null)
             {
+                if (Control == null)
+                {
+                    SetNativeControl(new EllipseUIView());
+                }
                 SetColor();
             }
         }
