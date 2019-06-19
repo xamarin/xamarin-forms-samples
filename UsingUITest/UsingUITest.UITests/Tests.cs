@@ -33,7 +33,11 @@ namespace UsingUITest.UITests
 		[Test]
 		public void AppLaunches()
 		{
+#if DEBUG
+			// The following method will trap the UI test into REPL tool window CLI
 			app.Repl();
+			// if you want to quit the REPL tool, type quit at the REPL prompt
+#endif
 			// Arrange - Nothing to do because the queries have already been initialized.
 			AppResult[] result = app.Query(InitialMessage);
 			Assert.IsTrue(result.Any(), "The initial message string isn't correct - maybe the app wasn't re-started?");
