@@ -13,7 +13,6 @@ namespace ADB2CAuthorization.iOS
             LoadApplication(new App());
 
             var result = base.FinishedLaunching(app, options);
-            App.AuthenticationClient.iOSKeychainSecurityGroup = "com.xamarin.adb2cauthorization";
             return result;
         }
 

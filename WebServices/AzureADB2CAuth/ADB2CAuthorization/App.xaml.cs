@@ -17,6 +17,7 @@ namespace ADB2CAuthorization
             InitializeComponent();
 
             AuthenticationClient = PublicClientApplicationBuilder.Create(Constants.ClientId)
+                .WithIosKeychainSecurityGroup(Constants.IosKeychainSecurityGroups)
                 .WithB2CAuthority(Constants.AuthoritySignin)
                 .Build();
 
