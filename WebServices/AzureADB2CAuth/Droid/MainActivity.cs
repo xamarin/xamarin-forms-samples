@@ -20,7 +20,7 @@ namespace ADB2CAuthorization.Droid
 
             Forms.Init(this, bundle);
             LoadApplication(new App());
-            App.UiParent = this;
+            App.UIParent = this;
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

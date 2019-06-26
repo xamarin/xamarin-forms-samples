@@ -10,7 +10,7 @@ namespace ADB2CAuthorization
     {
         public static IPublicClientApplication AuthenticationClient { get; private set; }
 
-        public static object UiParent { get; set; } = null;
+        public static object UIParent { get; set; } = null;
 
         public App()
         {

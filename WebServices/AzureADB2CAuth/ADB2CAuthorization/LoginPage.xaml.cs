@@ -43,7 +43,7 @@ namespace ADB2CAuthorization
                 result = await App.AuthenticationClient
                     .AcquireTokenInteractive(Constants.Scopes)
                     .WithPrompt(Prompt.SelectAccount)
-                    .WithParentActivityOrWindow(App.UiParent)
+                    .WithParentActivityOrWindow(App.UIParent)
                     .ExecuteAsync();
 
                 await Navigation.PushAsync(new LogoutPage(result));
@@ -69,7 +69,7 @@ namespace ADB2CAuthorization
                 return await App.AuthenticationClient
                     .AcquireTokenInteractive(Constants.Scopes)
                     .WithPrompt(Prompt.SelectAccount)
-                    .WithParentActivityOrWindow(App.UiParent)
+                    .WithParentActivityOrWindow(App.UIParent)
                     .WithB2CAuthority(Constants.AuthorityPasswordReset)
                     .ExecuteAsync();
             }
