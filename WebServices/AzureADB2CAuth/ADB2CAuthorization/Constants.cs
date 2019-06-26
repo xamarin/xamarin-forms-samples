@@ -17,6 +17,9 @@
         // set your forgot password policy, for example: "B2C_1_passwordreset"
         static readonly string policyPassword = "<INSERT_PASSWORD_RESET_POLICY_NAME>";
 
+        // set to a unique value for your app, such as your bundle identifier. Used on iOS to share keychain access.
+        static readonly string iosKeychainSecurityGroup = "com.xamarin.adb2cauthorization";
+
 
 
         // The following fields and properties should not need to be changed
@@ -48,6 +51,13 @@
             get
             {
                 return scopes;
+            }
+        }
+        public static string IosKeychainSecurityGroups
+        {
+            get
+            {
+                return iosKeychainSecurityGroup;
             }
         }
     }
