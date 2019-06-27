@@ -22,9 +22,10 @@ namespace ADB2CAuthorization
                 // Look for existing account
                 IEnumerable<IAccount> accounts = await App.AuthenticationClient.GetAccountsAsync();
 
-                AuthenticationResult result = await App.AuthenticationClient.AcquireTokenSilentAsync(
-                    Constants.Scopes,
-                    accounts.FirstOrDefault());
+                AuthenticationResult result = await App.AuthenticationClient
+                    .AcquireTokenSilent(Constants.Scopes, accounts.FirstOrDefault())
+                    .ExecuteAsync();
+
                 await Navigation.PushAsync(new LogoutPage(result));
             }
             catch
@@ -39,12 +40,12 @@ namespace ADB2CAuthorization
             AuthenticationResult result;
             try
             {
-                result = await App.AuthenticationClient.AcquireTokenAsync(
-                    Constants.Scopes,
-                    string.Empty,
-                    UIBehavior.SelectAccount,
-                    string.Empty,
-                    App.UiParent);
+                result = await App.AuthenticationClient
+                    .AcquireTokenInteractive(Constants.Scopes)
+                    .WithPrompt(Prompt.SelectAccount)
+                    .WithParentActivityOrWindow(App.UIParent)
+                    .ExecuteAsync();
+
                 await Navigation.PushAsync(new LogoutPage(result));
             }
             catch (MsalException ex)
@@ -65,15 +66,12 @@ namespace ADB2CAuthorization
         {
             try
             {
-                return await App.AuthenticationClient.AcquireTokenAsync(
-                    Constants.Scopes,
-                    string.Empty,
-                    UIBehavior.SelectAccount,
-                    string.Empty,
-                    null,
-                    Constants.AuthorityPasswordReset,
-                    App.UiParent
-                    );
+                return await App.AuthenticationClient
+                    .AcquireTokenInteractive(Constants.Scopes)
+                    .WithPrompt(Prompt.SelectAccount)
+                    .WithParentActivityOrWindow(App.UIParent)
+                    .WithB2CAuthority(Constants.AuthorityPasswordReset)
+                    .ExecuteAsync();
             }
             catch (MsalException)
             {
