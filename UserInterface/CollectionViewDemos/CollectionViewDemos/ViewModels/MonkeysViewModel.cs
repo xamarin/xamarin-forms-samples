@@ -45,7 +45,6 @@ namespace CollectionViewDemos.ViewModels
                 if (selectedMonkeys != value)
                 {
                     selectedMonkeys = value;
-                    OnPropertyChanged();
                 }
             }
         }

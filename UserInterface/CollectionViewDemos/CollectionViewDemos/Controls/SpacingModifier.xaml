@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionViewDemos.Controls.SpacingModifier">
+    <StackLayout Orientation="Horizontal"
+                 HorizontalOptions="CenterAndExpand">
+        <Label Text="Spacing:"
+               VerticalTextAlignment="Center" />
+        <Entry x:Name="entry"
+               Text="0"
+               WidthRequest="100" />
+        <Button Text="Update"
+                Clicked="OnUpdateButtonClicked" />
+    </StackLayout>
+</ContentView>

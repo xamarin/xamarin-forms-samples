@@ -20,6 +20,8 @@
     <Folder Include="Views\SnapPoints\" />
     <Folder Include="Controls\" />
     <Folder Include="Views\Sizing\" />
+    <Folder Include="Views\Spacing\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 
   <ItemGroup>
