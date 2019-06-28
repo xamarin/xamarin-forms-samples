@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
@@ -9,7 +9,8 @@
              androidAppCompat:Application.SendDisappearingEventOnPause="false" 
              androidAppCompat:Application.SendAppearingEventOnResume="false" 
              androidAppCompat:Application.ShouldPreserveKeyboardOnResume="false"
-             ios:Application.PanGestureRecognizerShouldRecognizeSimultaneously="true">
+             ios:Application.PanGestureRecognizerShouldRecognizeSimultaneously="true"
+             ios:Application.EnableAccessibilityScalingForNamedFontSizes="false">
     <!-- Add the following to direct control layout/rendering updates to the main thread on iOS:
             
             ios:Application.HandleControlUpdatesOnMainThread="true"
