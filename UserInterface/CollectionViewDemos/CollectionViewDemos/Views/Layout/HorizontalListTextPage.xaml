@@ -4,7 +4,7 @@
              x:Class="CollectionViewDemos.Views.HorizontalListTextPage"
              Title="Horizontal list (text)">
     <StackLayout Margin="20">
-        <CollectionView ItemsLayout="{x:Static ListItemsLayout.HorizontalList}">
+        <CollectionView ItemsLayout="HorizontalList">
             <CollectionView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Baboon</x:String>
