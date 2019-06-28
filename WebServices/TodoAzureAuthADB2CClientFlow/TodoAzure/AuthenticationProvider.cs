@@ -47,9 +47,9 @@ namespace TodoAzure
                 if (User == null)
                 {
                     var payload = new JObject();
-                    if (authenticationResult != null && !string.IsNullOrWhiteSpace(authenticationResult.IdToken))
+                    if (authenticationResult != null && !string.IsNullOrWhiteSpace(authenticationResult.AccessToken))
                     {
-                        payload["access_token"] = authenticationResult.IdToken;
+                        payload["access_token"] = authenticationResult.AccessToken;
                     }
 
                     User = await TodoItemManager.DefaultManager.CurrentClient.LoginAsync(

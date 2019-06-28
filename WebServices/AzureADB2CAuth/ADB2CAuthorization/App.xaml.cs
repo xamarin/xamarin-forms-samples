@@ -1,21 +1,25 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Microsoft.Identity.Client;
+using System.Runtime.CompilerServices;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace ADB2CAuthorization
 {
     public partial class App : Application
     {
-        public static PublicClientApplication AuthenticationClient { get; private set; }
+        public static IPublicClientApplication AuthenticationClient { get; private set; }
 
-        public static UIParent UiParent { get; set; } = null;
+        public static object UIParent { get; set; } = null;
 
         public App()
         {
             InitializeComponent();
 
-            AuthenticationClient = new PublicClientApplication(Constants.ClientId, Constants.AuthoritySignin);
+            AuthenticationClient = PublicClientApplicationBuilder.Create(Constants.ClientId)
+                .WithIosKeychainSecurityGroup(Constants.IosKeychainSecurityGroups)
+                .WithB2CAuthority(Constants.AuthoritySignin)
+                .Build();
 
             MainPage = new NavigationPage(new LoginPage());
         }

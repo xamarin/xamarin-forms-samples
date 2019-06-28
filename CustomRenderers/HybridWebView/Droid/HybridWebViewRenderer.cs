@@ -21,13 +21,6 @@ namespace CustomRenderer.Droid
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                var webView = new Android.Webkit.WebView(_context);
-                webView.Settings.JavaScriptEnabled = true;
-                webView.SetWebViewClient(new JavascriptWebViewClient($"javascript: {JavascriptFunction}"));
-                SetNativeControl(webView);
-            }
             if (e.OldElement != null)
             {
                 Control.RemoveJavascriptInterface("jsBridge");
@@ -36,6 +29,13 @@ namespace CustomRenderer.Droid
             }
             if (e.NewElement != null)
             {
+                if (Control == null)
+                {
+                    var webView = new Android.Webkit.WebView(_context);
+                    webView.Settings.JavaScriptEnabled = true;
+                    webView.SetWebViewClient(new JavascriptWebViewClient($"javascript: {JavascriptFunction}"));
+                    SetNativeControl(webView);
+                }
                 Control.AddJavascriptInterface(new JSBridge(this), "jsBridge");
                 Control.LoadUrl($"file:///android_asset/Content/{Element.Uri}");
             }

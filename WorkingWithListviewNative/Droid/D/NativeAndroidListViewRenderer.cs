@@ -19,11 +19,6 @@ namespace WorkingWithListviewNative.Droid
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                SetNativeControl(new global::Android.Widget.ListView(MainActivity.Instance));
-            }
-
             if (e.OldElement != null)
             {
                 // unsubscribe
@@ -32,6 +27,10 @@ namespace WorkingWithListviewNative.Droid
 
             if (e.NewElement != null)
             {
+                if (Control == null)
+                {
+                    SetNativeControl(new global::Android.Widget.ListView(MainActivity.Instance));
+                }
                 // subscribe
                 Control.Adapter = new NativeAndroidListViewAdapter(MainActivity.Instance as Android.App.Activity, e.NewElement);
                 Control.ItemClick += clicked;
