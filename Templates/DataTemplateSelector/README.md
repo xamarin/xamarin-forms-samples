@@ -1,6 +1,6 @@
 ---
 name: Data Template Selector
-description: This sample demonstrates using a `DataTemplateSelector` to select a `DataTemplate` at runtime per item in a `ListView`.  For more information about...
+description: This sample demonstrates using a DataTemplateSelector to select a DataTemplate at runtime per item in a ListView. For more information about the sample see Data Template Selector.
 topic: sample
 languages:
 - csharp

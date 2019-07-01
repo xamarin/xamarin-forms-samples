@@ -1,6 +1,6 @@
 ---
 name: 'Xamarin.Forms ListView Sample: Custom Cells'
-description: 'Sample code associated with the [ListView Docs](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/user-interface/list_view/):  This ...'
+description: 'Sample code associated with the ListView Docs: This sample demonstrates how to implement a custom cell in both XAML and C. This sample mirrors the samples for iOS and Android UITableViewController and ListView, respectively.'
 topic: sample
 languages:
 - csharp

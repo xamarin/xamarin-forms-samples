@@ -1,6 +1,6 @@
 ---
 name: Working with Styles
-description: This sample relates to the [Working with Styles in Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/sty...
+description: This sample relates to the Working with Styles in Xamarin.Forms doc.
 topic: sample
 languages:
 - csharp

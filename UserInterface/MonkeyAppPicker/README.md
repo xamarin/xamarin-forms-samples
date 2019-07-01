@@ -1,6 +1,6 @@
 ---
 name: Monkey Picker
-description: This sample demonstrates how to populate a `Picker` with data by setting the ItemsSource property, and how to respond to item selection by the user...
+description: This sample demonstrates how to populate a Picker with data by setting the ItemsSource property, and how to respond to item selection by the user. For more information about this sample see Setting a Picker's ItemsSource Property.
 topic: sample
 languages:
 - csharp

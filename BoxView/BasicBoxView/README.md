@@ -1,6 +1,6 @@
 ---
 name: Basic BoxView
-description: Just a `BoxView` on the page, demonstrating the `Color`, `WidthRequest`, and `HeightRequest` properties.  This sample is described in more detail i...
+description: Just a BoxView on the page, demonstrating the Color, WidthRequest, and HeightRequest properties. This sample is described in more detail in the article on BoxView.
 topic: sample
 languages:
 - csharp

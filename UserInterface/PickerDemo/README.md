@@ -1,6 +1,6 @@
 ---
 name: Picker
-description: This sample demonstrates how to use a `Picker` to select a text item from a list of data.  For more information about this sample see [Adding Data ...
+description: This sample demonstrates how to use a Picker to select a text item from a list of data. For more information about this sample see Adding Data to a Picker's Items Collection.
 topic: sample
 languages:
 - csharp
