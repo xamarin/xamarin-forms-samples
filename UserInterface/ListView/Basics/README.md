@@ -1,6 +1,6 @@
 ---
 name: 'Xamarin.Forms ListView Sample: The Basics'
-description: 'Sample code associated with the [ListView Docs](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/user-interface/list_view/):  This ...'
+description: 'Sample code associated with the ListView Docs: This sample demonstrates basic use of ListView populated with just an array of strings, using the default view.'
 topic: sample
 languages:
 - csharp

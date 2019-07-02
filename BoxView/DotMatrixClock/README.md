@@ -1,6 +1,6 @@
 ---
 name: Dot-Matrix Clock
-description: The `BoxView` element is ideal for creating a simulation of a dot-matrix digital display.  This sample is described in more detail in the article o...
+description: The BoxView element is ideal for creating a simulation of a dot-matrix digital display. This sample is described in more detail in the article on BoxView.
 topic: sample
 languages:
 - csharp

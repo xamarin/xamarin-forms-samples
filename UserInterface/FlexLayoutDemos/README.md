@@ -1,6 +1,6 @@
 ---
 name: FlexLayout Demos
-description: This program demonstrates the `FlexLayout` introduced in Xamarin.Forms 3.0, and allows experimentating with it.  This sample is described in more d...
+description: This program demonstrates the FlexLayout introduced in Xamarin.Forms 3.0, and allows experimentating with it. This sample is described in more detail in the article The Xamarin.Forms FlexLayout.
 topic: sample
 languages:
 - csharp
