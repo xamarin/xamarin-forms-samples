@@ -1,6 +1,6 @@
 ---
 name: Working with Colors
-description: These samples relate to the Working with Colors in Xamarin.Forms doc. !screenshot
+description: These samples relate to the Working with Colors in Xamarin.Forms doc.
 topic: sample
 languages:
 - csharp

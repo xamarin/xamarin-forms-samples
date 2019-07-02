@@ -1,6 +1,6 @@
 ---
 name: Working with Files
-description: These samples relate to the Working with Files in Xamarin.Forms doc. !screenshot
+description: These samples relate to the Working with Files in Xamarin.Forms doc.
 topic: sample
 languages:
 - csharp

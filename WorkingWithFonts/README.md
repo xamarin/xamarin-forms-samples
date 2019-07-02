@@ -1,6 +1,6 @@
 ---
 name: Working with Fonts
-description: These samples relate to the Working with Fonts in Xamarin.Forms doc. !screenshot
+description: These samples relate to the Working with Fonts in Xamarin.Forms doc.
 topic: sample
 languages:
 - csharp
