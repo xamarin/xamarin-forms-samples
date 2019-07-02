@@ -1,6 +1,6 @@
 ---
 name: OAuthNativeFlow
-description: This sample demonstrates how to use Xamarin.Auth to manage a native authentication flow in a Xamarin.Forms application. For more information about this sample see Authenticating Users with an Identity Provider.
+description: This sample demonstrates how to use Xamarin.Auth to manage a native authentication flow in a Xamarin.Forms application.
 topic: sample
 languages:
 - csharp

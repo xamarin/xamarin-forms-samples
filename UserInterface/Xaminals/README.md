@@ -1,6 +1,6 @@
 ---
 name: Xaminals
-description: Xamarin.Forms Shell reduces the complexity of mobile application development by providing the fundamental features that most mobile applications require. This includes a common navigation user experience, a URI-based navigation scheme, and an integrated search handler. This sample demonstrates a Xamarin.Forms Shell application. For more information about this sample, see Xamarin.Forms Shell.
+description: Xamarin.Forms Shell reduces the complexity of mobile application development by providing the fundamental features that most mobile applications require. This includes a common navigation user experience, a URI-based navigation scheme, and an integrated search handler. This sample demonstrates a Xamarin.Forms Shell application.
 topic: sample
 languages:
 - csharp

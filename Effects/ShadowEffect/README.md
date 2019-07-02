@@ -1,6 +1,6 @@
 ---
 name: Shadow Effect
-description: This sample demonstrates using CLR properties to pass parameters to an effect. For more information about the sample see Creating an Effect, and Passing Parameters to an Effect.
+description: This sample demonstrates using CLR properties to pass parameters to an effect.
 topic: sample
 languages:
 - csharp

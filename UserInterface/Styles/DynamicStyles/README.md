@@ -1,6 +1,6 @@
 ---
 name: DynamicStyles
-description: This sample demonstrates how to use dynamic resources to make applications respond to style changes dynamically at runtime. For more information about the sample see Dynamic Styles, and Device Styles.
+description: This sample demonstrates how to use dynamic resources to make applications respond to style changes dynamically at runtime.
 topic: sample
 languages:
 - csharp

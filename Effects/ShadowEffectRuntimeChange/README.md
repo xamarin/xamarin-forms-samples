@@ -1,6 +1,6 @@
 ---
 name: Shadow Effect with Runtime Parameter Change
-description: This sample demonstrates using attached properties to pass parameters to an effect, and changing a parameter at runtime. For more information about the sample see Creating an Effect, and Passing Parameters to an Effect.
+description: This sample demonstrates using attached properties to pass parameters to an effect, and changing a parameter at runtime.
 topic: sample
 languages:
 - csharp

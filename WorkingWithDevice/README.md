@@ -1,6 +1,6 @@
 ---
 name: Working with Platform Tweaks
-description: This samples demonstrates how to use the Device class. For more information, see the Device Class.
+description: This samples demonstrates how to use the Device class.
 topic: sample
 languages:
 - csharp

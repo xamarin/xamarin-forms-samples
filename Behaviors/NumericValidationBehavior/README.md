@@ -1,6 +1,6 @@
 ---
 name: NumericValidation Behavior
-description: Xamarin.Forms behaviors are created in a class that derives from the Behavior, or Behavior<T> class. This sample demonstrates how to create and consume a Xamarin.Forms behavior. For more information about this sample, see Behaviors.
+description: Xamarin.Forms behaviors are created in a class that derives from the Behavior, or Behavior<T> class. This sample demonstrates how to create and consume a Xamarin.Forms behavior.
 topic: sample
 languages:
 - csharp

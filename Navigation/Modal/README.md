@@ -1,6 +1,6 @@
 ---
 name: Modal Pages
-description: This sample demonstrates how to navigate to modal pages. For more information about the sample see Modal Pages.
+description: This sample demonstrates how to navigate to modal pages.
 topic: sample
 languages:
 - csharp
