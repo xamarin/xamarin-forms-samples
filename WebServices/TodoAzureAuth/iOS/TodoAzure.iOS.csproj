@@ -74,7 +74,7 @@
     <PackageReference Include="PInvoke.NCrypt" Version="0.5.97" />
     <PackageReference Include="PInvoke.Windows.Core" Version="0.5.97" />
     <PackageReference Include="Validation" Version="2.4.15" />
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
