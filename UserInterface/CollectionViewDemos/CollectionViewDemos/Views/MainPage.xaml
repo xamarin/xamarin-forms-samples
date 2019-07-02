@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:views="clr-namespace:CollectionViewDemos.Views" 
@@ -47,6 +47,24 @@
                           Detail="RTL FlowDirection"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:VerticalListRTLPage}" />
+            </TableSection>
+            <TableSection Title="Spacing">
+                <TextCell Text="Vertical list"
+                          Detail="ItemSpacing"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VerticalListSpacingPage}" />
+                <TextCell Text="Horizontal list"
+                          Detail="ItemSpacing"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:HorizontalListSpacingPage}" />
+                <TextCell Text="Vertical grid"
+                          Detail="HorizontalItemSpacing and VerticalItemSpacing"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VerticalGridSpacingPage}" />
+                <TextCell Text="Horizontal grid"
+                          Detail="HorizontalItemSpacing and VerticalItemSpacing"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:HorizontalGridSpacingPage}" />
             </TableSection>
             <TableSection Title="Sizing">
                 <TextCell Text="Variable size items"

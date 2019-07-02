@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CollectionViewDemos.Views.VerticalListMultiplePreSelectionPage"
@@ -6,7 +6,8 @@
     <StackLayout Margin="20">
         <CollectionView x:Name="collectionView"
                         ItemsSource="{Binding Monkeys}"
-                        SelectionMode="Multiple">
+                        SelectionMode="Multiple"
+                        SelectedItems="{Binding SelectedMonkeys}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">

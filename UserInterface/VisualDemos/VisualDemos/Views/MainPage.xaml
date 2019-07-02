@@ -16,6 +16,9 @@
                 <TextCell Text="Cards"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:CardPage}" />
+                <TextCell Text="CheckBoxes"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CheckBoxPage}" />
                 <TextCell Text="Editors"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:EditorPage}" />                

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="VisualDemos.CheckBoxPage"
+             Title="CheckBoxes"
+             Visual="Material">
+    <StackLayout Spacing="20"
+                 Padding="10"
+                 BackgroundColor="White">
+        <Label Text="Default"
+               Margin="0,0,0,-10" />
+        <StackLayout Orientation="Horizontal">
+            <CheckBox HorizontalOptions="CenterAndExpand" />
+            <CheckBox IsChecked="true"
+                      HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+        
+        <Label Text="Disabled"
+               Margin="0,0,0,-10" />
+        <StackLayout Orientation="Horizontal">
+            <CheckBox IsEnabled="false"
+                      HorizontalOptions="CenterAndExpand" />
+            <CheckBox IsChecked="true"
+                      IsEnabled="false"
+                      HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+        
+        <Label Text="Color"
+               Margin="0,0,0,-10" />
+        <StackLayout Orientation="Horizontal">
+            <CheckBox Color="{StaticResource PrimaryColor}"
+                      HorizontalOptions="CenterAndExpand" />
+            <CheckBox Color="{StaticResource PrimaryColor}"
+                      IsChecked="true"
+                      HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+        
+        <Label Text="Color and Disabled"
+               Margin="0,0,0,-10" />
+        <StackLayout Orientation="Horizontal">
+            <CheckBox Color="{StaticResource SecondaryColor}"
+                      IsEnabled="false"
+                      HorizontalOptions="CenterAndExpand" />
+            <CheckBox Color="{StaticResource SecondaryColor}"
+                      IsEnabled="false"
+                      IsChecked="true"
+                      HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -75,8 +75,13 @@
                 </TableSection>
 
                 <TableSection Title="Views for Setting Values">
-
-                    <TextCell Text= "Slider (double)"
+                
+                    <TextCell Text="CheckBox (bool)"
+                              Detail="Select a Boolean value"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.CheckBoxPage}" />
+                    
+                    <TextCell Text="Slider (double)"
                               Detail="Select a number from a continuous range"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.SliderDemoPage}" />

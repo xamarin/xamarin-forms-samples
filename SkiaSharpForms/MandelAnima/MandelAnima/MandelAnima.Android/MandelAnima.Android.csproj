@@ -50,7 +50,7 @@
     <PackageReference Include="SkiaSharp.Views.Forms">
       <Version>1.60.2</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

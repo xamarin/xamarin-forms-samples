@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using CollectionViewDemos.ViewModels;
+﻿using CollectionViewDemos.ViewModels;
 using Xamarin.Forms;
 
 namespace CollectionViewDemos.Views
@@ -9,13 +8,7 @@ namespace CollectionViewDemos.Views
         public VerticalListMultiplePreSelectionPage()
         {
             InitializeComponent();
-
-            MonkeysViewModel viewModel = new MonkeysViewModel();
-            BindingContext = viewModel;
-
-            collectionView.SelectedItems.Add(viewModel.Monkeys.Skip(1).FirstOrDefault());
-            collectionView.SelectedItems.Add(viewModel.Monkeys.Skip(3).FirstOrDefault());
-            collectionView.SelectedItems.Add(viewModel.Monkeys.Skip(4).FirstOrDefault());
+            BindingContext = new MonkeysViewModel();
         }
     }
 }

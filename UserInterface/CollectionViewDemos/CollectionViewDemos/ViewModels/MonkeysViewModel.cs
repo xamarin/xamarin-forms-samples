@@ -33,6 +33,22 @@ namespace CollectionViewDemos.ViewModels
             }
         }
 
+        ObservableCollection<object> selectedMonkeys;
+        public ObservableCollection<object> SelectedMonkeys
+        {
+            get
+            {
+                return selectedMonkeys;
+            }
+            set
+            {
+                if (selectedMonkeys != value)
+                {
+                    selectedMonkeys = value;
+                }
+            }
+        }
+
         public string SelectedMonkeyMessage { get; private set; }
 
         public ICommand FilterCommand => new Command<string>(FilterItems);
@@ -45,6 +61,11 @@ namespace CollectionViewDemos.ViewModels
 
             selectedMonkey = Monkeys.Skip(3).FirstOrDefault();
             MonkeySelectionChanged();
+
+            SelectedMonkeys = new ObservableCollection<object>()
+            {
+                Monkeys[1], Monkeys[3], Monkeys[4]
+            };
         }
 
         void CreateMonkeyCollection()

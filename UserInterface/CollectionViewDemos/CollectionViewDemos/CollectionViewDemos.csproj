@@ -20,6 +20,8 @@
     <Folder Include="Views\SnapPoints\" />
     <Folder Include="Controls\" />
     <Folder Include="Views\Sizing\" />
+    <Folder Include="Views\Spacing\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -61,6 +63,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
   </ItemGroup>
 </Project>
