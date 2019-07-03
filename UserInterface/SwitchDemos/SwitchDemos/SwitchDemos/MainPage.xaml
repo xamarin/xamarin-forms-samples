@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:SwitchDemos"
+             mc:Ignorable="d"
+             x:Class="SwitchDemos.MainPage"
+             Title="Switch Demos"
+             Padding="10">
+
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="Switch XAML"
+                          Detail="Implement a Switch in XAML"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SwitchXamlPage}" />
+
+                <TextCell Text="Switch Code"
+                          Detail="Implement a Switch in code"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SwitchCodePage}" />
+
+                <TextCell Text="Switch Bindings"
+                          Detail="Implement a Switch with bindings"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SwitchBindingsPage}" />
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+
+</ContentPage>
