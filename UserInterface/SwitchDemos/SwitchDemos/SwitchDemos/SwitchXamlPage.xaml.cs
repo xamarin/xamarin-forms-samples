@@ -13,7 +13,7 @@ namespace SwitchDemos
 
         private void XAMLSwitch_Toggled(object sender, ToggledEventArgs e)
         {
-            var stateName = e.Value ? "ON" : "OFF";
+            string stateName = e.Value ? "ON" : "OFF";
             SwitchStateLabel.Text = $"The switch is {stateName}";
         }
     }
