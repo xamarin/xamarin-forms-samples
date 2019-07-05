@@ -8,15 +8,15 @@
              Title="Switch XAML Demo">
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="SwitchStateLabel"
+            <Label x:Name="switchStateLabel"
                    Text="The switch is off"
                    VerticalOptions="CenterAndExpand" 
                    HorizontalOptions="CenterAndExpand" />
 
-            <Switch x:Name="XAMLSwitch"
+            <Switch x:Name="xamlSwitch"
                     Toggled="XAMLSwitch_Toggled"
                     IsToggled="False"
-                    OnColor="Green"
+                    OnColor="Orange"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand" />
         </StackLayout>

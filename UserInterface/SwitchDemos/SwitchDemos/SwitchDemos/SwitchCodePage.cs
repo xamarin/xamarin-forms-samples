@@ -20,7 +20,7 @@ namespace SwitchDemos
             Switch switchControl = new Switch
             {
                 IsToggled = false,
-                OnColor = Color.Green,
+                OnColor = Color.Orange,
                 HorizontalOptions = LayoutOptions.CenterAndExpand,
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
