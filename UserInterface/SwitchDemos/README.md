@@ -1,6 +1,6 @@
 ---
-name: CheckBox Demos
-description: This sample demonstrates how to use a `CheckBox` in code, XAML with code-behind, and XAML data-binding scenarios.  For more information about this s...
+name: Switch Demos
+description: This sample demonstrates how to use a Switch in code, XAML with code-behind, and XAML data-binding scenarios.
 topic: sample
 languages:
 - csharp
@@ -8,16 +8,16 @@ products:
 - xamarin
 technologies:
 - xamarin-forms
-urlFragment: userinterface-checkboxdemos
+urlFragment: userinterface-switchdemos
 ---
-CheckBox Demos
+Switch Demos
 ==============
 
-This sample demonstrates how to use a `CheckBox` in code, XAML with code-behind, and XAML data-binding scenarios.
+This sample demonstrates how to use a `Switch` in code, XAML with code-behind, and XAML data-binding scenarios.
 
-For more information about this sample, see [Xamarin.Forms CheckBox](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/checkbox).
+For more information about this sample, see [Xamarin.Forms Switch](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/switch).
 
 Author
 ------
 
-David Britch
+Justin Johnson
