@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DataBindingDemos"             
@@ -14,14 +14,14 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <StackLayout>
+    <StackLayout x:DataType="local:HslColorViewModel">
         <StackLayout.BindingContext>
             <local:HslColorViewModel Color="Sienna" />
         </StackLayout.BindingContext>
-        <BoxView x:DataType="local:HslColorViewModel"
-                 Color="{Binding Color}"
+        <BoxView Color="{Binding Color}"
                  VerticalOptions="FillAndExpand" />
-        <StackLayout Margin="10, 0">
+        <StackLayout x:DataType="{x:Null}"
+                     Margin="10, 0">
             <Label Text="{Binding Name}" />
             <Slider Value="{Binding Hue}" />
             <Label Text="{Binding Hue, StringFormat='Hue = {0:F2}'}" />
