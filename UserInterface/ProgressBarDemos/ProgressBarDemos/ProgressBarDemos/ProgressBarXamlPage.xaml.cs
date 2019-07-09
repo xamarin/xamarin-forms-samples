@@ -9,7 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace ProgressBarDemos
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+
     public partial class ProgressBarXamlPage : ContentPage
     {
         float progress = 0f;
