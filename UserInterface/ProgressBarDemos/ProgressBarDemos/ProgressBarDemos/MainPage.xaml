@@ -3,14 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ProgressBarDemos"
              mc:Ignorable="d"
-             x:Class="ProgressBarDemos.MainPage">
+             x:Class="ProgressBarDemos.MainPage"
+             Title="ProgressBar Demos"
+             Padding="10">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="ProgressBar XAML"
+                          Detail="Implement a ProgressBar in XAML"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ProgressBarXamlPage}" />
+
+                <TextCell Text="ProgressBar Code"
+                          Detail="Implement a ProgressBar in code"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ProgressBarCodePage}" />
+
+                <TextCell Text="ProgressBar Bindings"
+                          Detail="Implement a ProgressBar with bindings"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ProgressBarBindingsPage}" />
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
 
 </ContentPage>
