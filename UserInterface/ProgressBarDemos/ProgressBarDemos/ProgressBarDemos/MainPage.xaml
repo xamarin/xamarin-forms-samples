@@ -22,11 +22,6 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:ProgressBarCodePage}" />
 
-                <TextCell Text="ProgressBar Bindings"
-                          Detail="Implement a ProgressBar with bindings"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:ProgressBarBindingsPage}" />
-
             </TableSection>
         </TableRoot>
     </TableView>

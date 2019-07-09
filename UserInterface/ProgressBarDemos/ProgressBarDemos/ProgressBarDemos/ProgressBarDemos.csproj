@@ -15,9 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="ProgressBarBindingsPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="ProgressBarXamlPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
