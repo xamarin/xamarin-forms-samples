@@ -5,20 +5,19 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ProgressBarDemos.ProgressBarXamlPage"
-             Title="ProgressBar XAML Demo">
+             Title="ProgressBar XAML Demo"
+             Padding="10">
     <ContentPage.Content>
         <StackLayout>
-            <Label
-                Text="Click the button to make progress!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
             <ProgressBar x:Name="defaultProgressBar"
+                         WidthRequest="500"
                          VerticalOptions="CenterAndExpand"
-                         HorizontalOptions="CenterAndExpand" />
+                         HorizontalOptions="Fill" />
             <ProgressBar x:Name="styledProgressBar"
+                         WidthRequest="500"
                          ProgressColor="Orange"
                          VerticalOptions="CenterAndExpand"
-                         HorizontalOptions="CenterAndExpand" />
+                         HorizontalOptions="Fill" />
             <Button Text="Click to Progress"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"

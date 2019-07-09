@@ -18,24 +18,20 @@ namespace ProgressBarDemos
         public ProgressBarCodePage()
         {
             Title = "ProgressBar Code Demo";
-
-            var label = new Label
-            {
-                Text = "Click the button to make progress!",
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
-                VerticalOptions = LayoutOptions.CenterAndExpand
-            };
+            Padding = 10;
 
             defaultProgressBar = new ProgressBar
             {
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                WidthRequest = 500,
+                HorizontalOptions = LayoutOptions.Fill,
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
 
             styledProgressBar = new ProgressBar
             {
                 ProgressColor = Color.Orange,
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                WidthRequest = 500,
+                HorizontalOptions = LayoutOptions.Fill,
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
 
@@ -51,7 +47,6 @@ namespace ProgressBarDemos
             Content = new StackLayout
             {
                 Children = {
-                    label,
                     defaultProgressBar,
                     styledProgressBar,
                     progressButton
