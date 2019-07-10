@@ -36,11 +36,12 @@ namespace ProgressBarDemos
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
 
-            progressButton.Clicked += Button_Clicked;
+            progressButton.Clicked += OnButtonClickedAsync;
 
             Content = new StackLayout
             {
-                Children = {
+                Children =
+                {
                     defaultProgressBar,
                     styledProgressBar,
                     progressButton
@@ -48,7 +49,7 @@ namespace ProgressBarDemos
             };
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        async void OnButtonClickedAsync(object sender, EventArgs e)
         {
             progress += 0.2f;
 
@@ -61,7 +62,7 @@ namespace ProgressBarDemos
             defaultProgressBar.Progress = progress;
 
             // animate to the new value over 750 milliseconds using Linear easing
-            styledProgressBar.ProgressTo(progress, 750, Easing.Linear);
+            await styledProgressBar.ProgressTo(progress, 750, Easing.Linear);
         }
     }
 }

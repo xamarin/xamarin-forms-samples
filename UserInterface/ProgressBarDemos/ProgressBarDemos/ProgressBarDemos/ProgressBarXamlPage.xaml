@@ -7,21 +7,19 @@
              x:Class="ProgressBarDemos.ProgressBarXamlPage"
              Title="ProgressBar XAML Demo"
              Padding="10">
-    <ContentPage.Content>
-        <StackLayout>
-            <ProgressBar x:Name="defaultProgressBar"
+    <StackLayout>
+        <ProgressBar x:Name="defaultProgressBar"
                          WidthRequest="500"
                          VerticalOptions="CenterAndExpand"
                          HorizontalOptions="Fill" />
-            <ProgressBar x:Name="styledProgressBar"
+        <ProgressBar x:Name="styledProgressBar"
                          WidthRequest="500"
                          ProgressColor="Orange"
                          VerticalOptions="CenterAndExpand"
                          HorizontalOptions="Fill" />
-            <Button Text="Click to Progress"
+        <Button Text="Click to Progress"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
-                    Clicked="Button_Clicked" />
-        </StackLayout>
-    </ContentPage.Content>
+                    Clicked="OnButtonClickedAsync" />
+    </StackLayout>
 </ContentPage>
