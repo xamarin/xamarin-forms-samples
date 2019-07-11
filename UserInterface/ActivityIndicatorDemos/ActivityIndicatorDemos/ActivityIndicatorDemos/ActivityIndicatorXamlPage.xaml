@@ -18,8 +18,7 @@
                            Color="Orange"
                            VerticalOptions="CenterAndExpand"
                            HorizontalOptions="Fill" />
-        <Button x:Name="activityStatusToggle"
-                Text="Toggle task status"
+        <Button Text="Toggle task status"
                 Clicked="OnButtonClicked"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand" />
