@@ -13,7 +13,7 @@ namespace ProgressBarDemos
             InitializeComponent();
         }
 
-        async void OnButtonClickedAsync(object sender, EventArgs e)
+        async void OnButtonClicked(object sender, EventArgs e)
         {
             progress += 0.2f;
 

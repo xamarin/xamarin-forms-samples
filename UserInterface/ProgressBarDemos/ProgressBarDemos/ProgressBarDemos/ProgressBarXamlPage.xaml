@@ -9,17 +9,17 @@
              Padding="10">
     <StackLayout>
         <ProgressBar x:Name="defaultProgressBar"
-                         WidthRequest="500"
-                         VerticalOptions="CenterAndExpand"
-                         HorizontalOptions="Fill" />
+                     WidthRequest="500"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="Fill" />
         <ProgressBar x:Name="styledProgressBar"
-                         WidthRequest="500"
-                         ProgressColor="Orange"
-                         VerticalOptions="CenterAndExpand"
-                         HorizontalOptions="Fill" />
+                     WidthRequest="500"
+                     ProgressColor="Orange"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="Fill" />
         <Button Text="Click to Progress"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand"
-                    Clicked="OnButtonClickedAsync" />
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                Clicked="OnButtonClicked" />
     </StackLayout>
 </ContentPage>

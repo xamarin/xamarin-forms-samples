@@ -36,7 +36,7 @@ namespace ProgressBarDemos
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
 
-            progressButton.Clicked += OnButtonClickedAsync;
+            progressButton.Clicked += OnButtonClicked;
 
             Content = new StackLayout
             {
@@ -49,7 +49,7 @@ namespace ProgressBarDemos
             };
         }
 
-        async void OnButtonClickedAsync(object sender, EventArgs e)
+        async void OnButtonClicked(object sender, EventArgs e)
         {
             progress += 0.2f;
 
