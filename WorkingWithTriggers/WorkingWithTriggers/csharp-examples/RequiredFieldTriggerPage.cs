@@ -1,6 +1,4 @@
-﻿using System;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace WorkingWithTriggers
 {
@@ -13,7 +11,7 @@ namespace WorkingWithTriggers
 			};
 			l.FontSize = Device.GetNamedSize (NamedSize.Small, l); 
 
-			var e = new Entry { Placeholder = "enter name" };
+			var e = new Entry { Placeholder = "enter name", Text = string.Empty };
 
 			var b = new Button { Text = "Save",
 
@@ -24,9 +22,9 @@ namespace WorkingWithTriggers
 			var dt = new DataTrigger (typeof(Button));
 			dt.Binding = new Binding ("Text.Length", BindingMode.Default, source: e);
 			dt.Value = 0;
-			dt.Setters.Add (new Setter { Property = Button.IsEnabledProperty, Value = false });
+			dt.Setters.Add (new Setter { Property = VisualElement.IsEnabledProperty, Value = false });
 			b.Triggers.Add (dt);
-
+                
 			Content = new StackLayout { 
 				Padding = new Thickness(0,20,0,0),
 				Children = {

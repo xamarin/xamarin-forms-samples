@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleMetadata>
+    <ID>88D48E65-E269-4F7E-9A98-D4B470917090</ID>
+    <IsFullApplication>false</IsFullApplication>
+    <Level>Beginner</Level>
+    <Tags>User Interface, Xamarin.Forms</Tags>
+    <SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+    <LicenseRequirement>Indie</LicenseRequirement>
+    <Gallery>true</Gallery>
+    <Brief>This sample demonstrates how to use a ProgressBar in code and XAML with code-behind.</Brief>
+</SampleMetadata>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ProgressBarDemos"
+             mc:Ignorable="d"
+             x:Class="ProgressBarDemos.MainPage"
+             Title="ProgressBar Demos"
+             Padding="10">
+
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="ProgressBar XAML"
+                          Detail="Implement a ProgressBar in XAML"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ProgressBarXamlPage}" />
+
+                <TextCell Text="ProgressBar Code"
+                          Detail="Implement a ProgressBar in code"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ProgressBarCodePage}" />
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+
+</ContentPage>
