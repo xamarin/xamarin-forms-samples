@@ -1,6 +1,6 @@
 ---
 name: Todo DocumentDB
-description: This sample demonstrates how to use the Microsoft Azure DocumentDB Client Library to integrate the Azure DocumentDB service into a Xamarin.Forms ap...
+description: This sample demonstrates how to use the Microsoft Azure DocumentDB Client Library to integrate the Azure DocumentDB service into a Xamarin.Forms application.
 topic: sample
 languages:
 - csharp

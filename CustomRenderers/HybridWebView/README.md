@@ -1,6 +1,6 @@
 ---
 name: HybridWebView Custom Renderer
-description: This sample demonstrates a custom renderer for a `HybridWebView` custom control, that demonstrates how to enhance the platform-specific web control...
+description: This sample demonstrates a custom renderer for a HybridWebView custom control, that demonstrates how to enhance the platform-specific web controls to allow C code to be invoked from JavaScript.
 topic: sample
 languages:
 - csharp

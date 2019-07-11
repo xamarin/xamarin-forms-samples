@@ -1,6 +1,6 @@
 ---
 name: PanGesture
-description: This sample demonstrates using the `PanGestureRecognizer` class to implement dragging.  For more information about the sample see [Adding a Pan Ges...
+description: This sample demonstrates using the PanGestureRecognizer class to implement dragging.
 topic: sample
 languages:
 - csharp

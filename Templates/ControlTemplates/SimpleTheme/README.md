@@ -1,6 +1,6 @@
 ---
 name: Simple Theme
-description: This sample demonstrates using a `ControlTemplate` to theme a `ContentPage` and change the theme at runtime.  For more information about the sample...
+description: This sample demonstrates using a ControlTemplate to theme a ContentPage and change the theme at runtime.
 topic: sample
 languages:
 - csharp

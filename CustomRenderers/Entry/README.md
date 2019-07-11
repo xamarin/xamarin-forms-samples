@@ -1,6 +1,6 @@
 ---
 name: Entry Custom Renderer
-description: This sample demonstrates a custom renderer for the `Entry` control, enabling developers to override the default native rendering with their own pla...
+description: This sample demonstrates a custom renderer for the Entry control, enabling developers to override the default native rendering with their own platform-specific customization.
 topic: sample
 languages:
 - csharp

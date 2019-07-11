@@ -1,6 +1,6 @@
 ---
 name: ContentPage Custom Renderer
-description: This sample demonstrates a custom renderer for a `ContentPage`, enabling developers to override the default native rendering with their own platfor...
+description: This sample demonstrates a custom renderer for a ContentPage, enabling developers to override the default native rendering with their own platform-specific customization.
 topic: sample
 languages:
 - csharp

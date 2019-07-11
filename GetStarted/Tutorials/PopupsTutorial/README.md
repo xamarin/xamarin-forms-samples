@@ -1,6 +1,6 @@
 ---
 name: Pop-ups Tutorial
-description: This sample demonstrates how to display alerts and action sheets with Xamarin.Forms, to ask users simple questions, and to guide users through task...
+description: This sample demonstrates how to display alerts and action sheets with Xamarin.Forms, to ask users simple questions, and to guide users through tasks.
 topic: sample
 languages:
 - csharp

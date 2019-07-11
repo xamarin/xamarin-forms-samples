@@ -1,6 +1,6 @@
 ---
 name: Working with Platform Tweaks
-description: This samples demonstrates how to use the `Device` class. For more information, see the [Device Class](http://developer.xamarin.com/guides/xamarin-f...
+description: This samples demonstrates how to use the Device class.
 topic: sample
 languages:
 - csharp

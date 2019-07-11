@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms Layout Demos
-description: 'Sample code associated with the [Layout Docs](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/user-interface/layouts/):  This appl...'
+description: 'Sample code associated with the Layout Docs: This application demonstrates several layout topics, from beginner to advanced, including: - StackLayout - RelativeLayout - AbsoluteLayout - ScrollView - Grid'
 topic: sample
 languages:
 - csharp

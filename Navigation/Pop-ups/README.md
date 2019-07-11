@@ -1,6 +1,6 @@
 ---
 name: Displaying Pop-ups
-description: This sample demonstrates using the alert and action sheet APIs to ask users simple questions and guide users through tasks.  For more information a...
+description: This sample demonstrates using the alert and action sheet APIs to ask users simple questions and guide users through tasks.
 topic: sample
 languages:
 - csharp

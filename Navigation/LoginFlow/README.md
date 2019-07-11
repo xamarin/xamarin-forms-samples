@@ -1,6 +1,6 @@
 ---
 name: LoginFlow
-description: This sample demonstrates how to manipulate the navigation stack in order to only display the main page of the application once the user has success...
+description: This sample demonstrates how to manipulate the navigation stack in order to only display the main page of the application once the user has successfully logged in.
 topic: sample
 languages:
 - csharp

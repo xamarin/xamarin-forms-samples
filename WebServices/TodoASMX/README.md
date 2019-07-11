@@ -1,6 +1,6 @@
 ---
 name: TodoASMX
-description: This sample demonstrates a Todo list application where the data is stored and accessed from an ASMX web service. The web service is hosted by Xamar...
+description: "This sample demonstrates a Todo list application where the data is stored and accessed from an ASMX web service. The web service, included in the solution, is run locally. Connecting emulators, simulators or physical devices to the service may require special configuration. For information see Configure remote access to IIS Express. The app functionality is: - View a list of tasks. - Add, edit, and delete tasks. - Set a task's status to 'done'. In all cases the tasks are stored in an in-memory collection that's accessed through an ASMX web service."
 topic: sample
 languages:
 - csharp

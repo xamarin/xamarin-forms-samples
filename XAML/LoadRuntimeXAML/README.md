@@ -1,6 +1,6 @@
 ---
 name: Load XAML at Runtime
-description: This sample demonstrates using the `LoadFromXaml` extension method to load, parse, and display XAML at runtime.  For more information about this sa...
+description: This sample demonstrates using the LoadFromXaml extension method to load, parse, and display XAML at runtime.
 topic: sample
 languages:
 - csharp

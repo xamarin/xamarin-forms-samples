@@ -1,6 +1,6 @@
 ---
 name: Platform Specifics
-description: This sample demonstrates how to consume the platform-specifics that are built into Xamarin.Forms.  For more information about this sample see [Cons...
+description: This sample demonstrates how to consume the platform-specifics that are built into Xamarin.Forms.
 topic: sample
 languages:
 - csharp

@@ -1,6 +1,6 @@
 ---
 name: Polygon Map Overlay
-description: This sample demonstrates how to add a polygon overlay to a map in order to highlight a region on the map. Polygons are a closed shape and have thei...
+description: This sample demonstrates how to add a polygon overlay to a map in order to highlight a region on the map. Polygons are a closed shape and have their interiors filled in.
 topic: sample
 languages:
 - csharp

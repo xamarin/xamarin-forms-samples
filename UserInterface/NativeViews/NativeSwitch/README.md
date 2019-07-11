@@ -1,6 +1,6 @@
 ---
 name: Native Switch
-description: This sample demonstrates how to add native views to a Xamarin.Forms page, and how they can interact with Xamarin.Forms views.  For more information...
+description: This sample demonstrates how to add native views to a Xamarin.Forms page, and how they can interact with Xamarin.Forms views.
 topic: sample
 languages:
 - csharp

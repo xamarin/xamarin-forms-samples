@@ -1,6 +1,6 @@
 ---
 name: Shadow Platform-Specific
-description: This sample demonstrates how to expose an Effect through a platform-specific.  For more information about this sample see [Creating Platform-Specif...
+description: This sample demonstrates how to expose an Effect through a platform-specific.
 topic: sample
 languages:
 - csharp

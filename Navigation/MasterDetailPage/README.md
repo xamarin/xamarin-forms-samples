@@ -1,6 +1,6 @@
 ---
 name: MasterDetailPage
-description: This sample demonstrates how to use a `MasterDetailPage` and navigate between its pages of information.  For more information about the sample see ...
+description: This sample demonstrates how to use a MasterDetailPage and navigate between its pages of information.
 topic: sample
 languages:
 - csharp

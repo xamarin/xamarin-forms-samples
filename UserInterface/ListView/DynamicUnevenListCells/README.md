@@ -1,6 +1,6 @@
 ---
 name: Dynamic ListView Row Resizing
-description: This sample demonstrates using the `Cell.ForceUpdateSize` method to programmatically resize a `ListView` row at runtime.  For more information abou...
+description: This sample demonstrates using the Cell.ForceUpdateSize method to programmatically resize a ListView row at runtime.
 topic: sample
 languages:
 - csharp

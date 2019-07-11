@@ -1,6 +1,6 @@
 ---
 name: CarouselPage
-description: This sample demonstrates how to use a `CarouselPage` to navigate through a collection of pages. The `CarouselPage` is constructed by populating it ...
+description: This sample demonstrates how to use a CarouselPage to navigate through a collection of pages. The CarouselPage is constructed by populating it with a collection of child Page objects.
 topic: sample
 languages:
 - csharp

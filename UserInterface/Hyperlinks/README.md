@@ -1,6 +1,6 @@
 ---
 name: Hyperlinks
-description: This sample demonstrates how `Label` and `Span` instances can be turned into hyperlinks.  For more information about this sample see [Hyperlinks](h...
+description: This sample demonstrates how Label and Span instances can be turned into hyperlinks.
 topic: sample
 languages:
 - csharp

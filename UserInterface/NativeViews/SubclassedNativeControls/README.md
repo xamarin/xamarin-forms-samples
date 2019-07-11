@@ -1,6 +1,6 @@
 ---
 name: Subclassed Native Views
-description: This sample demonstrates how to subclass native to define a XAML-friendly API.  For more information about this sample see [Native Views](https://d...
+description: This sample demonstrates how to subclass native to define a XAML-friendly API.
 topic: sample
 languages:
 - csharp

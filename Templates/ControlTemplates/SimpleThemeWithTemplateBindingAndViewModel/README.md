@@ -1,6 +1,6 @@
 ---
 name: Simple Theme with Template Binding and ViewModel
-description: This sample demonstrates using a `ControlTemplate` with a `TemplateBinding`, that in turn binds to a ViewModel, to theme a `ContentPage` and change...
+description: This sample demonstrates using a ControlTemplate with a TemplateBinding, that in turn binds to a ViewModel, to theme a ContentPage and change the theme at runtime.
 topic: sample
 languages:
 - csharp

@@ -1,6 +1,6 @@
 ---
 name: Coerce Value Callback
-description: A bindable property is a special type of property, where the property's value is tracked by the Xamarin.Forms property system. This sample demonstr...
+description: A bindable property is a special type of property, where the property's value is tracked by the Xamarin.Forms property system. This sample demonstrates using a coerce value callback to force a re-evaluation of a bindable property when the value of the property changes.
 topic: sample
 languages:
 - csharp

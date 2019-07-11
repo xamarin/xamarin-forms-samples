@@ -1,6 +1,6 @@
 ---
 name: Markup Extensions
-description: This sample demonstrates how to use the various XAML markup extensions and how to create your own.  For more information about this code, see the a...
+description: This sample demonstrates how to use the various XAML markup extensions and how to create your own.
 topic: sample
 languages:
 - csharp

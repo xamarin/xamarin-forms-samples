@@ -1,6 +1,6 @@
 ---
 name: Working with ListView
-description: These samples relate to the [Working with ListView in Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/...
+description: 'These samples relate to the Working with ListView in Xamarin.Forms doc. Many people have questions about specific ListView features, this sample attempts to cover some of them: De-selecting the row after tapping Uneven row heights Adding clickable buttons to cells that work on Android See the working with ListView native layouts for tips on using custom renderers for cells or the entire ListView.'
 topic: sample
 languages:
 - csharp

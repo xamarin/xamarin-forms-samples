@@ -1,6 +1,6 @@
 ---
 name: Notes (single page)
-description: This sample demonstrates a simple cross-platform Notes application that allows you to enter a note and persist it to device storage.  For more info...
+description: This sample demonstrates a simple cross-platform Notes application that allows you to enter a note and persist it to device storage.
 topic: sample
 languages:
 - csharp

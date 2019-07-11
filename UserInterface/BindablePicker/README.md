@@ -1,6 +1,6 @@
 ---
 name: Bindable Picker
-description: This sample demonstrates how to use a `Picker` to select a color from a list of colors.  For more information about this sample see [Setting a Pick...
+description: This sample demonstrates how to use a Picker to select a color from a list of colors.
 topic: sample
 languages:
 - csharp

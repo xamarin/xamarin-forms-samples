@@ -1,6 +1,6 @@
 ---
 name: Working with Images
-description: These samples relate to the [Working with Images in Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/im...
+description: These samples relate to the Working with Images in Xamarin.Forms doc.
 topic: sample
 languages:
 - csharp

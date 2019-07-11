@@ -1,6 +1,6 @@
 ---
 name: Touch-Tracking Effect Demos
-description: This sample demonstrates an effect that implements multi-touch finger tracking, and shows how to trigger events from an effect.  For more informati...
+description: This sample demonstrates an effect that implements multi-touch finger tracking, and shows how to trigger events from an effect.
 topic: sample
 languages:
 - csharp

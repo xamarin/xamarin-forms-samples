@@ -1,6 +1,6 @@
 ---
 name: AzureADB2CAuth
-description: This sample demonstrates how to use Microsoft Authentication Library and Azure Active Directory B2C to integrate consumer identity management into ...
+description: This sample demonstrates how to use Microsoft Authentication Library and Azure Active Directory B2C to integrate consumer identity management into a mobile application.
 topic: sample
 languages:
 - csharp

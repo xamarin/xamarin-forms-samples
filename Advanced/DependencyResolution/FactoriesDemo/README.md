@@ -1,6 +1,6 @@
 ---
 name: Dependency Resolution (Factory Methods)
-description: This sample demonstrates how to inject a dependency resolution method into Xamarin.Forms, so that custom renderers, effects, and DependencyService ...
+description: This sample demonstrates how to inject a dependency resolution method into Xamarin.Forms, so that custom renderers, effects, and DependencyService implementations are created using factory methods.
 topic: sample
 languages:
 - csharp

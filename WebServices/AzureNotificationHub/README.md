@@ -1,6 +1,6 @@
 ---
 name: Azure Notification Hub
-description: This sample demonstrates how to use Azure Notification Hubs to send push notifications to Xamarin Forms applications on Android and iOS.
+description: This sample demonstrates how to use Azure Notification Hubs to send push notifications to Xamarin Forms applications on Android and iOS. To run the Android application, you must replace the google-services.json file with a file downloaded from your Firebase console.
 topic: sample
 languages:
 - csharp

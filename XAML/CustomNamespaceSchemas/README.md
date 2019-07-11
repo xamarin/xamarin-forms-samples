@@ -1,6 +1,6 @@
 ---
 name: Custom Namespace Schemas
-description: This sample demonstrates defining and consuming a custom namespace schema, which specifies a mapping between a custom URL and one or more CLR names...
+description: This sample demonstrates defining and consuming a custom namespace schema, which specifies a mapping between a custom URL and one or more CLR namespaces.
 topic: sample
 languages:
 - csharp

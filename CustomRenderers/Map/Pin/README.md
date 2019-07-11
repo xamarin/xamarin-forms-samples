@@ -1,6 +1,6 @@
 ---
 name: Map Custom Renderer
-description: This sample demonstrates how to create a custom renderer for the `Map` control, which displays a native map with a customized pin and a customized ...
+description: This sample demonstrates how to create a custom renderer for the Map control, which displays a native map with a customized pin and a customized view of the pin data on each platform.
 topic: sample
 languages:
 - csharp

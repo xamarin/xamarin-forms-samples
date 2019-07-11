@@ -1,6 +1,6 @@
 ---
 name: Azure Search
-description: This sample demonstrates how to use the Microsoft Azure Search Library to integrate Azure Search into a Xamarin.Forms application.  For more inform...
+description: This sample demonstrates how to use the Microsoft Azure Search Library to integrate Azure Search into a Xamarin.Forms application.
 topic: sample
 languages:
 - csharp

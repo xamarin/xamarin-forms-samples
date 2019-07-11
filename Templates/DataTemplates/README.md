@@ -1,6 +1,6 @@
 ---
 name: Data Template
-description: This sample demonstrates creating a `DataTemplate` to specify the appearance of data being displayed by a `ListView`.  For more information about t...
+description: This sample demonstrates creating a DataTemplate to specify the appearance of data being displayed by a ListView.
 topic: sample
 languages:
 - csharp

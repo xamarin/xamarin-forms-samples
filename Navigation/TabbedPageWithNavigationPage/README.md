@@ -1,6 +1,6 @@
 ---
 name: TabbedPage with NavigationPage
-description: This sample demonstrates how embed a `NavigationPage` in a `TabbedPage`, in order to perform page navigation within a tab. The `TabbedPage` is cons...
+description: This sample demonstrates how embed a NavigationPage in a TabbedPage, in order to perform page navigation within a tab. The TabbedPage is constructed by populating it with a collection of child Page objects.
 topic: sample
 languages:
 - csharp

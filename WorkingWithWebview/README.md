@@ -1,6 +1,6 @@
 ---
 name: Working with WebView
-description: These samples relate to the [Working with WebView in Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/w...
+description: These samples relate to the Working with WebView in Xamarin.Forms doc.
 topic: sample
 languages:
 - csharp

@@ -1,6 +1,6 @@
 ---
 name: Material Visual
-description: This sample demonstrates how Xamarin.Forms Material Visual can be used to create Xamarin.Forms applications that look identical, or largely identic...
+description: This sample demonstrates how Xamarin.Forms Material Visual can be used to create Xamarin.Forms applications that look identical, or largely identical, on iOS and Android.
 topic: sample
 languages:
 - csharp

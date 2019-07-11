@@ -1,6 +1,6 @@
 ---
 name: Forms2Native
-description: This sample demonstrates how to add native views to a Xamarin.Forms page, and how they can interact with Xamarin.Forms views.  For more samples, an...
+description: This sample demonstrates how to add native views to a Xamarin.Forms page, and how they can interact with Xamarin.Forms views. For more samples, and more information about this sample see Native Views.
 topic: sample
 languages:
 - csharp

@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms Localization with RESX
-description: Sample code for the [Xamarin.Forms Localization](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/localization) doc.  ![Example scr...
+description: 'Sample code for the Xamarin.Forms Localization doc. FYI: updated language fallback information for Android 7/API 24.'
 topic: sample
 languages:
 - csharp

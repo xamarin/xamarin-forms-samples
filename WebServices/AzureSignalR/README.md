@@ -1,6 +1,6 @@
 ---
 name: AzureSignalR
-description: This sample demonstrates how to use Azure SignalR Service with Azure Functions and Xamarin.Forms to create a real-time chat application.
+description: This sample is a real-time chat application demonstrating the integration of Azure SignalR Service with Azure Functions and Xamarin.Forms.
 topic: sample
 languages:
 - csharp

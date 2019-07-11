@@ -1,6 +1,6 @@
 ---
 name: Native Embedding
-description: This sample demonstrates how to add platform-specific controls to a Xamarin.Forms layout, and includes how to override the layout of custom control...
+description: This sample demonstrates how to add platform-specific controls to a Xamarin.Forms layout, and includes how to override the layout of custom controls in order to correct their measurement API usage.
 topic: sample
 languages:
 - csharp

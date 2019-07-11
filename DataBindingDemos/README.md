@@ -1,6 +1,6 @@
 ---
 name: Data Binding Demos
-description: This sample demonstrates data binding in both code and XAML.  For more information about this code, see the article [Data Binding](https://develope...
+description: This sample demonstrates data binding in both code and XAML.
 topic: sample
 languages:
 - csharp

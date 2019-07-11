@@ -1,6 +1,6 @@
 ---
 name: Local Database Tutorial
-description: This sample demonstrates how to use the SQLite.NET NuGet package to incorporate local database operations into a Xamarin.Forms application.  For mo...
+description: This sample demonstrates how to use the SQLite.NET NuGet package to incorporate local database operations into a Xamarin.Forms application.
 topic: sample
 languages:
 - csharp

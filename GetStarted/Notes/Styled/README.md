@@ -1,6 +1,6 @@
 ---
 name: Notes (styled)
-description: This sample demonstrates a multi-page Xamarin.Forms application that's styled with XAML styles.  For more information about the sample see [Style a...
+description: This sample demonstrates a multi-page Xamarin.Forms application that's styled with XAML styles.
 topic: sample
 languages:
 - csharp

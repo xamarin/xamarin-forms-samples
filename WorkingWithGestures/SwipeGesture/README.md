@@ -1,6 +1,6 @@
 ---
 name: SwipeGesture
-description: This sample demonstrates how to use the `SwipeGestureRecognizer` class to recognize a swipe gesture.  For more information about this sample, see [...
+description: This sample demonstrates how to use the SwipeGestureRecognizer class to recognize a swipe gesture.
 topic: sample
 languages:
 - csharp

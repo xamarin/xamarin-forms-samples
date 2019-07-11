@@ -1,6 +1,6 @@
 ---
 name: Resource Dictionaries
-description: This sample demonstrates creating and consuming a ResourceDictionary at the application, page, and control level.  For more information about the s...
+description: This sample demonstrates creating and consuming a ResourceDictionary at the application, page, and control level.
 topic: sample
 languages:
 - csharp

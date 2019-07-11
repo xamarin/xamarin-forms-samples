@@ -1,6 +1,6 @@
 ---
 name: TabbedPage
-description: This sample demonstrates how to use a `TabbedPage` to navigate through a collection of pages. The `TabbedPage` is constructed by assigning a collec...
+description: This sample demonstrates how to use a TabbedPage to navigate through a collection of pages. The TabbedPage is constructed by assigning a collection to the ItemsSource property and assigning a DataTemplate to the ItemTemplate property to return pages for objects in the collection.
 topic: sample
 languages:
 - csharp

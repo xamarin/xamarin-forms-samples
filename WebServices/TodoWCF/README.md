@@ -1,6 +1,6 @@
 ---
 name: TodoWCF
-description: This sample demonstrates a Todo list application where the data is stored and accessed from a WCF web service. The web service is hosted by Xamarin...
+description: "This sample demonstrates a Todo list application where the data is stored and accessed from a WCF web service. The web service, included in the solution, is run locally. Connecting emulators, simulators or physical devices to the service may require special configuration. For information see Configure remote access to IIS Express. The app functionality is: - View a list of tasks. - Add, edit, and delete tasks. - Set a task's status to 'done'. In all cases the tasks are stored in an in-memory collection that's accessed through a WCF web service."
 topic: sample
 languages:
 - csharp

@@ -1,6 +1,6 @@
 ---
 name: Passing Data
-description: This sample demonstrates how to pass data between pages when navigating.  For more information about the sample see [Hierarchical Navigation](http:...
+description: This sample demonstrates how to pass data between pages when navigating.
 topic: sample
 languages:
 - csharp

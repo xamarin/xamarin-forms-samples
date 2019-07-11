@@ -1,6 +1,6 @@
 ---
 name: Accessing Native Views in Code
-description: This sample demonstrates how to refer to native views declared in XAML, from code.  For more information about this sample see [Native Views](https...
+description: This sample demonstrates how to refer to native views declared in XAML, from code.
 topic: sample
 languages:
 - csharp

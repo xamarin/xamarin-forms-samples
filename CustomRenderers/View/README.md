@@ -1,6 +1,6 @@
 ---
 name: View Custom Renderer
-description: This sample demonstrates a custom renderer for a Xamarin.Forms custom control that's used to display a preview video stream from the device's camer...
+description: This sample demonstrates a custom renderer for a Xamarin.Forms custom control that's used to display a preview video stream from the device's camera.
 topic: sample
 languages:
 - csharp

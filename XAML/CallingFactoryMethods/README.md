@@ -1,6 +1,6 @@
 ---
 name: Calling Factory Methods
-description: This sample demonstrates using XAML to call a factory method that can be used to initialize an object.  For more information about this sample, see...
+description: This sample demonstrates using XAML to call a factory method that can be used to initialize an object.
 topic: sample
 languages:
 - csharp
