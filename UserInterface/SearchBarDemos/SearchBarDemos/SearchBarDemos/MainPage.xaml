@@ -24,6 +24,10 @@
                           Detail="Code SearchBar that searches upon request"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:SearchBarCodePage}" />
+                <TextCell Text="Realtime SearchBar Code"
+                          Detail="Code SearchBar that filters results in realtime"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SearchBarRealtimeCodePage}" />
 
             </TableSection>
         </TableRoot>
