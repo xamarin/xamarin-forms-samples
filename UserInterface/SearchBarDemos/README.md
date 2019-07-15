@@ -1,6 +1,6 @@
 ---
 name: SearchBar Demos
-description: The SearchBar control is a user input that supports placeholder text, query input, execution, and cancellation. This sample demonstrates how to use a SearchBar in XAML and code.
+description: The Xamarin.Forms SearchBar control is a user input that supports placeholder text, query input, execution, and cancellation. This sample demonstrates how to use a SearchBar in XAML and code.
 topic: sample
 languages:
 - csharp
@@ -13,7 +13,7 @@ urlFragment: userinterface-searchbardemos
 SearchBar Demos
 ==============
 
-The SearchBar control is a user input that supports placeholder text, query input, execution, and cancellation. This sample demonstrates how to use a `SearchBar` to execute searches in XAML and code.
+The Xamarin.Forms SearchBar control is a user input that supports placeholder text, query input, execution, and cancellation. This sample demonstrates how to use a `SearchBar` to execute searches in XAML and code.
 
 For more information about this sample, see [Xamarin.Forms SearchBar](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/searchbar).
 
