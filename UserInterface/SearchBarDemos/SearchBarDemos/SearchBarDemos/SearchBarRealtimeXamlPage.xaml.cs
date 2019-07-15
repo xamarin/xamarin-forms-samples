@@ -11,7 +11,7 @@ namespace SearchBarDemos
             searchResults.ItemsSource = Constants.GetFilteredFruits(searchBar.Text);
         }
 
-        private void OnTextChanged(object sender, TextChangedEventArgs e)
+        void OnTextChanged(object sender, TextChangedEventArgs e)
         {
             searchResults.ItemsSource = Constants.GetFilteredFruits(e.NewTextValue);
         }

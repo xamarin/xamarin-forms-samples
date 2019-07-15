@@ -37,7 +37,8 @@ namespace SearchBarDemos
 
             Content = new StackLayout
             {
-                Children = {
+                Children =
+                {
                     searchBar,
                     label,
                     searchResults
