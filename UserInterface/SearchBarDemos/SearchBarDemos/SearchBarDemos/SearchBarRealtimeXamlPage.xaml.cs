@@ -8,12 +8,12 @@ namespace SearchBarDemos
         {
             InitializeComponent();
 
-            searchResults.ItemsSource = Constants.GetFilteredFruits(searchBar.Text);
+            searchResults.ItemsSource = Data.GetSearchResults(searchBar.Text);
         }
 
         void OnTextChanged(object sender, TextChangedEventArgs e)
         {
-            searchResults.ItemsSource = Constants.GetFilteredFruits(e.NewTextValue);
+            searchResults.ItemsSource = Data.GetSearchResults(e.NewTextValue);
         }
     }
 }

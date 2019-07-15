@@ -13,12 +13,12 @@ namespace SearchBarDemos
 
             PerformSearchCommand = new Command<SearchBar>((SearchBar searchBar) =>
             {
-                searchResults.ItemsSource = Constants.GetFilteredFruits(searchBar.Text);
+                searchResults.ItemsSource = Data.GetSearchResults(searchBar.Text);
             });
 
             BindingContext = this;
 
-            searchResults.ItemsSource = Constants.Fruits;
+            searchResults.ItemsSource = Data.Fruits;
         }
     }
 }

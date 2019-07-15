@@ -19,7 +19,7 @@ namespace SearchBarDemos
             };
             searchBar.SearchButtonPressed += (sender, e) =>
             {
-                searchResults.ItemsSource = Constants.GetFilteredFruits(searchBar.Text);
+                searchResults.ItemsSource = Data.GetSearchResults(searchBar.Text);
             };
 
             Label label = new Label
@@ -45,7 +45,7 @@ namespace SearchBarDemos
                 }
             };
 
-            searchResults.ItemsSource = Constants.Fruits;
+            searchResults.ItemsSource = Data.Fruits;
         }
     }
 }

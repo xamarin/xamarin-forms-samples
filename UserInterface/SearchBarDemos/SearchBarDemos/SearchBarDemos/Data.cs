@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace SearchBarDemos
 {
-    public static class Constants
+    public static class Data
     {
         public static List<string> Fruits { get; set; } = new List<string>
         {
@@ -103,10 +103,10 @@ namespace SearchBarDemos
             "Yuzu"
         };
 
-        public static List<string> GetFilteredFruits(string filterString)
+        public static List<string> GetSearchResults(string queryString)
         {
-            var normalizedString = filterString?.ToLower() ?? "";
-            return Fruits.Where(f => f.ToLowerInvariant().Contains(normalizedString)).ToList();
+            var normalizedQuery = queryString?.ToLower() ?? "";
+            return Fruits.Where(f => f.ToLowerInvariant().Contains(normalizedQuery)).ToList();
         }
     }
 }
