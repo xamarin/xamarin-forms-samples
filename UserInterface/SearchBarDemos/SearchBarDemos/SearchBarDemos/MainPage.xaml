@@ -32,8 +32,8 @@
                           Detail="Code SearchBar using MVVM bindings to perform search."
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:SearchBarCodeMvvmPage}" />
-                <TextCell Text="Realtime SearchBar Code"
-                          Detail="Code SearchBar that filters results in realtime"
+                <TextCell Text="Code Realtime SearchBar"
+                          Detail="Code SearchBar that filters results in realtime."
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:SearchBarRealtimeCodePage}" />
 
