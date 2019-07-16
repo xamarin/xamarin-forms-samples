@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="SearchBarDemos.SearchBarRealtimeXamlPage"
              Padding="10"
-             Title="XML SearchBar Realtime Page">
+             Title="XAML Realtime SearchBar">
     <StackLayout>
         <SearchBar x:Name="searchBar"
                    HorizontalOptions="Fill"

@@ -21,6 +21,9 @@
     <EmbeddedResource Update="SearchBarRealtimeXamlPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="SearchBarXamlMvvmPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="SearchBarXamlPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

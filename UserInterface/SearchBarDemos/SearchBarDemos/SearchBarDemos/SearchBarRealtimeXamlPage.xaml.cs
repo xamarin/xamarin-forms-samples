@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using SearchBarDemos.Services;
+using Xamarin.Forms;
 
 namespace SearchBarDemos
 {
@@ -8,12 +9,12 @@ namespace SearchBarDemos
         {
             InitializeComponent();
 
-            searchResults.ItemsSource = Data.GetSearchResults(searchBar.Text);
+            searchResults.ItemsSource = DataService.GetSearchResults(searchBar.Text);
         }
 
         void OnTextChanged(object sender, TextChangedEventArgs e)
         {
-            searchResults.ItemsSource = Data.GetSearchResults(e.NewTextValue);
+            searchResults.ItemsSource = DataService.GetSearchResults(e.NewTextValue);
         }
     }
 }

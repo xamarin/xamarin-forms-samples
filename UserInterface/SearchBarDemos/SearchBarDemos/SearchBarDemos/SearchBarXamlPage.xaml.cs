@@ -1,4 +1,6 @@
-﻿using System.Windows.Input;
+﻿using SearchBarDemos.Services;
+using System;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace SearchBarDemos
@@ -10,15 +12,13 @@ namespace SearchBarDemos
         public SearchBarXamlPage()
         {
             InitializeComponent();
+            searchResults.ItemsSource = DataService.Fruits;
+        }
 
-            PerformSearchCommand = new Command<SearchBar>((SearchBar searchBar) =>
-            {
-                searchResults.ItemsSource = Data.GetSearchResults(searchBar.Text);
-            });
-
-            BindingContext = this;
-
-            searchResults.ItemsSource = Data.Fruits;
+        public void OnSearchButtonPressed(object sender, EventArgs e)
+        {
+            SearchBar bar = (SearchBar)sender;
+            searchResults.ItemsSource = DataService.GetSearchResults(bar.Text);
         }
     }
 }

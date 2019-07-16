@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace SearchBarDemos
+namespace SearchBarDemos.Services
 {
-    public static class Data
+    public static class DataService
     {
         public static List<string> Fruits { get; set; } = new List<string>
         {

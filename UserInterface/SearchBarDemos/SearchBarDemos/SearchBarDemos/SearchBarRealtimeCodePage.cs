@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using SearchBarDemos.Services;
+using Xamarin.Forms;
 
 namespace SearchBarDemos
 {
@@ -8,7 +9,7 @@ namespace SearchBarDemos
 
         public SearchBarRealtimeCodePage()
         {
-            Title = "Code Realtime SearchBar Page";
+            Title = "Code Realtime SearchBar";
             Padding = 10;
 
             SearchBar searchBar = new SearchBar
@@ -18,10 +19,6 @@ namespace SearchBarDemos
                 Placeholder = "Search fruits...",
                 CancelButtonColor = Color.Orange,
                 PlaceholderColor = Color.Orange
-            };
-            searchBar.TextChanged += (sender, e) =>
-            {
-                searchResults.ItemsSource = Data.GetSearchResults(searchBar.Text);
             };
 
             Label label = new Label
@@ -47,7 +44,13 @@ namespace SearchBarDemos
                 }
             };
 
-            searchResults.ItemsSource = Data.Fruits;
+            searchBar.TextChanged += OnTextChanged;
+            searchResults.ItemsSource = DataService.Fruits;
+        }
+
+        void OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            searchResults.ItemsSource = DataService.GetSearchResults(e.NewTextValue);
         }
     }
 }

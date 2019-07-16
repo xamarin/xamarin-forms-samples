@@ -12,18 +12,26 @@
     <TableView Intent="Menu">
         <TableRoot>
             <TableSection>
-                <TextCell Text="SearchBar XAML"
-                          Detail="XAML SearchBar that searches upon request"
+                <TextCell Text="XAML SearchBar"
+                          Detail="XAML SearchBar using an event handler to perform search."
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:SearchBarXamlPage}" />
-                <TextCell Text="Realtime SearchBar XAML"
-                          Detail="XAML SearchBar that filters results in realtime"
+                <TextCell Text="XAML MVVM SearchBar"
+                          Detail="XAML SearchBar using MVVM bindings to perform search."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SearchBarXamlMvvmPage}" />
+                <TextCell Text="XAML Realtime SearchBar"
+                          Detail="XAML SearchBar that filters results in realtime."
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:SearchBarRealtimeXamlPage}" />
-                <TextCell Text="SearchBar Code"
-                          Detail="Code SearchBar that searches upon request"
+                <TextCell Text="Code SearchBar"
+                          Detail="Code SearchBar using an event handler to perform search."
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:SearchBarCodePage}" />
+                <TextCell Text="Code MVVM SearchBar"
+                          Detail="Code SearchBar using MVVM bindings to perform search."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SearchBarCodeMvvmPage}" />
                 <TextCell Text="Realtime SearchBar Code"
                           Detail="Code SearchBar that filters results in realtime"
                           Command="{Binding NavigateCommand}"

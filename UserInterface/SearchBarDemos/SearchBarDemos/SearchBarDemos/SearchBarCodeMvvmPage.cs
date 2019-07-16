@@ -1,17 +1,15 @@
-﻿using SearchBarDemos.Services;
-using System;
+﻿using SearchBarDemos.ViewModels;
 using Xamarin.Forms;
 
 namespace SearchBarDemos
 {
-    public class SearchBarCodePage : ContentPage
+    public class SearchBarCodeMvvmPage : ContentPage
     {
-        ListView searchResults;
-
-        public SearchBarCodePage()
+        public SearchBarCodeMvvmPage()
         {
-            Title = "Code SearchBar";
+            Title = "Code MVVM SearchBar";
             Padding = 10;
+            BindingContext = new SearchViewModel();
 
             SearchBar searchBar = new SearchBar
             {
@@ -19,6 +17,8 @@ namespace SearchBarDemos
                 VerticalOptions = LayoutOptions.CenterAndExpand,
                 Placeholder = "Search fruits...",
             };
+            searchBar.SetBinding(SearchBar.SearchCommandProperty, "PerformSearch");
+            searchBar.SetBinding(SearchBar.SearchCommandParameterProperty, new Binding { Source = searchBar, Path = "Text" });
 
             Label label = new Label
             {
@@ -27,11 +27,12 @@ namespace SearchBarDemos
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
 
-            searchResults = new ListView
+            ListView searchResults = new ListView
             {
                 HorizontalOptions = LayoutOptions.Fill,
                 VerticalOptions = LayoutOptions.Fill
             };
+            searchResults.SetBinding(ListView.ItemsSourceProperty, "SearchResults");
 
             Content = new StackLayout
             {
@@ -42,15 +43,6 @@ namespace SearchBarDemos
                     searchResults
                 }
             };
-
-            searchBar.SearchButtonPressed += OnSearchButtonPressed;
-            searchResults.ItemsSource = DataService.Fruits;
-        }
-
-        public void OnSearchButtonPressed(object sender, EventArgs e)
-        {
-            SearchBar bar = (SearchBar)sender;
-            searchResults.ItemsSource = DataService.GetSearchResults(bar.Text);
         }
     }
 }
