@@ -5,7 +5,7 @@ namespace SearchBarDemos.Services
 {
     public static class DataService
     {
-        public static List<string> Fruits { get; set; } = new List<string>
+        public static List<string> Fruits { get; } = new List<string>
         {
             "Akee",
             "Apple",

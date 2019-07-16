@@ -47,7 +47,7 @@ namespace SearchBarDemos
             searchResults.ItemsSource = DataService.Fruits;
         }
 
-        public void OnSearchButtonPressed(object sender, EventArgs e)
+        void OnSearchButtonPressed(object sender, EventArgs e)
         {
             SearchBar bar = (SearchBar)sender;
             searchResults.ItemsSource = DataService.GetSearchResults(bar.Text);
