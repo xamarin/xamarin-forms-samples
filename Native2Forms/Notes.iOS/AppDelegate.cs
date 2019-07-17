@@ -18,6 +18,7 @@ namespace Notes.iOS
 
         UIWindow _window;
         UINavigationController _navigation;
+        UIViewController _noteEntryPage;
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
@@ -44,17 +45,23 @@ namespace Notes.iOS
 
         public void NavigateToNoteEntryPage(Note note)
         {
-            UIViewController noteEntryPage = new NoteEntryPage
+            _noteEntryPage = new NoteEntryPage
             {
                 BindingContext = note
             }.CreateViewController();
-            noteEntryPage.Title = "Note Entry";
-            _navigation.PushViewController(noteEntryPage, true);
+            _noteEntryPage.Title = "Note Entry";
+            _navigation.PushViewController(_noteEntryPage, true);
         }
 
         public void NavigateBack()
         {
             _navigation.PopViewController(true);
+        }
+
+        public void DisposeNoteEntryPage()
+        {
+            _noteEntryPage.Dispose();
+            _noteEntryPage = null;
         }
     }
 }

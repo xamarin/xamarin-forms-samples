@@ -14,6 +14,12 @@ namespace Notes.iOS.Views
             InitializeComponent();
         }
 
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            AppDelegate.Instance.DisposeNoteEntryPage();
+        }
+
         void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var note = (Note)BindingContext;
