@@ -1,5 +1,5 @@
 ---
-name: Attached Behaviors
+name: "Xamarin Forms - Attached Behaviors"
 description: "This sample demonstrates creating and consuming an attached behavior."
 page_type: sample
 languages:

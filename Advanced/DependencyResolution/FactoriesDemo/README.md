@@ -1,5 +1,5 @@
 ---
-name: Dependency Resolution (Factory Methods)
+name: "Xamarin Forms - Dependency Resolution (Factory Methods)"
 description: "This sample demonstrates how to inject a dependency resolution method into Xamarin.Forms."
 page_type: sample
 languages:

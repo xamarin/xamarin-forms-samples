@@ -1,5 +1,5 @@
 ---
-name: Effect Behavior
+name: "Xamarin Forms - Effect Behavior"
 description: "This sample demonstrates using a behavior to add an effect to a control."
 page_type: sample
 languages:

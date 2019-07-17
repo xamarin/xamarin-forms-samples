@@ -1,5 +1,5 @@
 ---
-name: Event to Command Behavior
+name: "Xamarin Forms - Event to Command Behavior"
 description: "This sample demonstrates using a behavior to invoke a command when an event fires."
 page_type: sample
 languages:
