@@ -7,8 +7,6 @@ namespace SearchBarDemos
 {
     public partial class SearchBarXamlPage : ContentPage
     {
-        public ICommand PerformSearchCommand { get; set; }
-
         public SearchBarXamlPage()
         {
             InitializeComponent();

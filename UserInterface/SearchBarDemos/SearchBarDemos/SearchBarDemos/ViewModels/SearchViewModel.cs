@@ -21,7 +21,7 @@ namespace SearchBarDemos.ViewModels
             SearchResults = DataService.GetSearchResults(query);
         });
 
-        private List<string> searchResults = DataService.Fruits;
+        List<string> searchResults = DataService.Fruits;
         public List<string> SearchResults
         {
             get
