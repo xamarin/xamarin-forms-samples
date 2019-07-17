@@ -15,7 +15,6 @@ This sample demonstrates how to inject a dependency resolution method into Xamar
 
 For more information about this sample, see [Dependency Resolution in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/internals/dependency-injection).
 
-Author
-------
+## Author
 
 David Britch
