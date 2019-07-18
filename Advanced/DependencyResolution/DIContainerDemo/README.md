@@ -1,13 +1,11 @@
 ---
-name: Xamarin.Forms - Dependency Resolution (Container)
-description: This sample demonstrates how to inject a dependency resolution method into Xamarin.Forms, so that an app's dependency injection container has...
+name: "Xamarin Forms - Dependency Resolution (Container)"
+description: "This sample demonstrates how to inject a dependency resolution method into Xamarin.Forms."
 page_type: sample
 languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: advanced-dependencyresolution-dicontainerdemo
 ---
 

@@ -1,7 +1,7 @@
 ---
-name: Xamarin.Forms - PanGesture
+name: PanGesture
 description: This sample demonstrates using the PanGestureRecognizer class to implement dragging.
-page_type: sample
+topic: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,14 @@ technologies:
 - xamarin-forms
 urlFragment: workingwithgestures-pangesture
 ---
-# PanGesture
+PanGesture
+==========
 
 This sample demonstrates using the `PanGestureRecognizer` class to implement dragging.
 
 For more information about the sample see [Adding a Pan Gesture Recognizer](http://developer.xamarin.com/guides/xamarin-forms/user-interface/gestures/pan/).
 
-![PanGesture application screenshot](Screenshots/01All.png "PanGesture application screenshot")
-
-## Author
+Author
+------
 
 David Britch

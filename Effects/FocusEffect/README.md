@@ -1,7 +1,7 @@
 ---
-name: Xamarin.Forms - Focus Effect
+name: Focus Effect
 description: This sample demonstrates creating an effect for the Entry control, that changes the background color of the control when it gains focus.
-page_type: sample
+topic: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,14 @@ technologies:
 - xamarin-forms
 urlFragment: effects-focuseffect
 ---
-# Focus Effect
+Focus Effect
+============
 
 This sample demonstrates creating an effect for the `Entry` control, that changes the background color of the control when it gains focus.
 
 For more information about the sample see [Creating an Effect](https://developer.xamarin.com/guides/xamarin-forms/effects/creating/).
 
-![Focus Effect application screenshot](Screenshots/01All.png "Focus Effect application screenshot")
-
-## Author
+Author
+------
 
 David Britch

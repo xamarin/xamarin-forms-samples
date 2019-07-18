@@ -1,7 +1,7 @@
 ---
-name: Xamarin.Forms - Data Template Selector
+name: Data Template Selector
 description: This sample demonstrates using a DataTemplateSelector to select a DataTemplate at runtime per item in a ListView.
-page_type: sample
+topic: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,14 @@ technologies:
 - xamarin-forms
 urlFragment: templates-datatemplateselector
 ---
-# Data Template Selector
+Data Template Selector
+======================
 
 This sample demonstrates using a `DataTemplateSelector` to select a `DataTemplate` at runtime per item in a `ListView`.
 
 For more information about the sample see [Data Template Selector](http://developer.xamarin.com/guides/xamarin-forms/templates/data-templates/selector/).
 
-![Data Template Selector application screenshot](Screenshots/01All.png "Data Template Selector application screenshot")
-
-## Author
+Author
+------
 
 David Britch

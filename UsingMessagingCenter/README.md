@@ -1,7 +1,7 @@
 ---
-name: Xamarin.Forms - Xamarin.Forms MessagingCenter
+name: Xamarin.Forms MessagingCenter
 description: Sample code for the Xamarin.Forms MessagingCenter doc.
-page_type: sample
+topic: sample
 languages:
 - csharp
 products:
@@ -10,11 +10,13 @@ technologies:
 - xamarin-forms
 urlFragment: usingmessagingcenter
 ---
-# Xamarin.Forms MessagingCenter
+Xamarin.Forms MessagingCenter
+==============
 
 Sample code for the [Xamarin.Forms MessagingCenter](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/messaging-center) doc.
 
 
-## Author
+Author
+------
 
 Craig Dunn

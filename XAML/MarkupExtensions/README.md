@@ -1,7 +1,7 @@
 ---
-name: Xamarin.Forms - Markup Extensions
+name: Markup Extensions
 description: This sample demonstrates how to use the various XAML markup extensions and how to create your own.
-page_type: sample
+topic: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,14 @@ technologies:
 - xamarin-forms
 urlFragment: xaml-markupextensions
 ---
-# Markup Extensions
+Markup Extensions
+=================
 
 This sample demonstrates how to use the various XAML markup extensions and how to create your own.
 
 For more information about this code, see the article [XAML Markup Extensions](https://developer.xamarin.com/guides/xamarin-forms/xaml/markup-extensions/).
 
-![Markup Extensions application screenshot](Screenshots/01MainPage-Large.png "Markup Extensions application screenshot")
-
-## Author
+Author
+------
 
 Charles Petzold

@@ -1,7 +1,7 @@
 ---
-name: Xamarin.Forms - Image Tutorial
+name: Image Tutorial
 description: This sample demonstrates how to display images on a page, using the Xamarin.Forms Image view.
-page_type: sample
+topic: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,14 @@ technologies:
 - xamarin-forms
 urlFragment: getstarted-tutorials-imagetutorial
 ---
-# Image Tutorial
+Image Tutorial
+==============
 
 This sample demonstrates how to display images on a page, using the Xamarin.Forms `Image` view.
 
 For more information about this sample, see [Image Tutorial](https://docs.microsoft.com/xamarin/get-started/tutorials/image/).
 
-![Image Tutorial application screenshot](Screenshots/01All.png "Image Tutorial application screenshot")
-
-## Author
+Author
+------
 
 David Britch

@@ -1,7 +1,7 @@
 ---
-name: Xamarin.Forms - Shadow Effect
+name: Shadow Effect
 description: This sample demonstrates using CLR properties to pass parameters to an effect.
-page_type: sample
+topic: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,14 @@ technologies:
 - xamarin-forms
 urlFragment: effects-shadoweffect
 ---
-# Shadow Effect
+Shadow Effect
+=============
 
 This sample demonstrates using CLR properties to pass parameters to an effect.
 
 For more information about the sample see [Creating an Effect](https://developer.xamarin.com/guides/xamarin-forms/effects/creating/), and [Passing Parameters to an Effect](https://developer.xamarin.com/guides/xamarin-forms/effects/passing-parameters/).
 
-![Shadow Effect application screenshot](Screenshots/01All.png "Shadow Effect application screenshot")
-
-## Author
+Author
+------
 
 David Britch

@@ -1,7 +1,7 @@
 ---
-name: Xamarin.Forms - CheckBox Demos
+name: CheckBox Demos
 description: This sample demonstrates how to use a CheckBox in code, XAML with code-behind, and XAML data-binding scenarios.
-page_type: sample
+topic: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,14 @@ technologies:
 - xamarin-forms
 urlFragment: userinterface-checkboxdemos
 ---
-# CheckBox Demos
+CheckBox Demos
+==============
 
 This sample demonstrates how to use a `CheckBox` in code, XAML with code-behind, and XAML data-binding scenarios.
 
 For more information about this sample, see [Xamarin.Forms CheckBox](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/checkbox).
 
-![CheckBox Demos application screenshot](Screenshots/01All.png "CheckBox Demos application screenshot")
-
-## Author
+Author
+------
 
 David Britch

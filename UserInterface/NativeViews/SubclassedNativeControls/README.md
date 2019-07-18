@@ -1,7 +1,7 @@
 ---
-name: Xamarin.Forms - Subclassed Native Views
+name: Subclassed Native Views
 description: This sample demonstrates how to subclass native to define a XAML-friendly API.
-page_type: sample
+topic: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,14 @@ technologies:
 - xamarin-forms
 urlFragment: userinterface-nativeviews-subclassednativecontrols
 ---
-# Subclassed Native Views
+Subclassed Native Views
+=======================
 
 This sample demonstrates how to subclass native to define a XAML-friendly API.
 
 For more information about this sample see [Native Views](https://developer.xamarin.com/guides/xamarin-forms/user-interface/native-views/).
 
-![Subclassed Native Views application screenshot](Screenshots/01All.png "Subclassed Native Views application screenshot")
-
-## Author
+Author
+------
 
 Charles Petzold / David Britch

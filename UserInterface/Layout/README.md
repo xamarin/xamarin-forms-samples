@@ -1,7 +1,7 @@
 ---
-name: Xamarin.Forms - Xamarin.Forms Layout Demos
-description: 'Sample code associated with the Layout Docs: This application demonstrates several layout topics, from beginner to advanced, including: StackLayout...'
-page_type: sample
+name: Xamarin.Forms Layout Demos
+description: 'Sample code associated with the Layout Docs: This application demonstrates several layout topics, from beginner to advanced, including: - StackLayout - RelativeLayout - AbsoluteLayout - ScrollView - Grid'
+topic: sample
 languages:
 - csharp
 products:
@@ -10,13 +10,19 @@ technologies:
 - xamarin-forms
 urlFragment: userinterface-layout
 ---
-# Xamarin.Forms Layout Demos
+Xamarin.Forms Layout Demos
+===========================
 
 Sample code associated with the [Layout Docs](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/user-interface/layouts/):
 
-## This application demonstrates several layout topics, from beginner to advanced, including:##  StackLayout##  RelativeLayout##  AbsoluteLayout##  ScrollView Grid
+This application demonstrates several layout topics, from beginner to advanced, including:
 
-![Xamarin.Forms Layout Demos application screenshot](Screenshots/anchor_end.png "Xamarin.Forms Layout Demos application screenshot")
+- StackLayout
+- RelativeLayout
+- AbsoluteLayout
+- ScrollView
+- Grid
 
-## Author
+Author
+------
 Nathan Castle
