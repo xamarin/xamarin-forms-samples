@@ -5,6 +5,6 @@
              Title="FontImage Demo">
     <StackLayout Margin="20,35,20,20">
         <Image BackgroundColor="#D1D1D1"
-               Source="{FontImage Glyph=&#xf30c;, FontFamily={OnPlatform iOS=Ionicons, Android=ionicons.ttf#, UWP=Assets/Fonts/ionicons.ttf#Ionicons}, Size=44}" />
+               Source="{FontImage &#xf30c;, FontFamily={OnPlatform iOS=Ionicons, Android=ionicons.ttf#, UWP=Assets/Fonts/ionicons.ttf#Ionicons}, Size=44}" />
     </StackLayout>
 </ContentPage>
