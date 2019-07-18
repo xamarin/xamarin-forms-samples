@@ -43,7 +43,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
-      <Version>4.1.0.555618</Version>
+      <Version>4.2.0.608146-pre1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +82,9 @@
       <Project>{2BFCFCE0-8D13-48D0-927C-9A0D2AFDD01D}</Project>
       <Name>MarkupExtensions</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\ionicons.ttf" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

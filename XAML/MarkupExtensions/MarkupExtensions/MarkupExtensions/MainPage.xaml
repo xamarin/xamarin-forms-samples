@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MarkupExtensions"
@@ -42,6 +42,11 @@
                           Detail="Specifying values per idiom"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:OnIdiomDemoPage}" />
+                
+                <TextCell Text="FontImage Demo"
+                          Detail="Specifying font glyphs"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:FontImageDemoPage}" />
 
                 <TextCell Text="HSL Color Demo"
                           Detail="Specify a Color with HSL components"
