@@ -1,7 +1,7 @@
 ---
-name: Working with Maps
+name: Xamarin.Forms - Working with Maps
 description: This sample relates to the Working with Maps in Xamarin.Forms doc.
-topic: sample
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,12 +10,12 @@ technologies:
 - xamarin-forms
 urlFragment: workingwithmaps
 ---
-Working with Maps
-==============
+# Working with Maps
 
 This sample relates to the [Working with Maps in Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/maps) doc.
 
-Author
-------
+![Working with Maps application screenshot](Screenshots/01All.png "Working with Maps application screenshot")
+
+## Author
 
 Craig Dunn, Andrei Nitescu

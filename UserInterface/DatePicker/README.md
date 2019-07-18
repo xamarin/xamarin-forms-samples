@@ -1,7 +1,7 @@
 ---
-name: Days Between Dates
-description: This program uses the Xamarin.Forms DatePicker to allow the selection of two dates and then calculates the number of days between those dates. See the article Using DatePicker for more details.
-topic: sample
+name: Xamarin.Forms - Days Between Dates
+description: This program uses the Xamarin.Forms DatePicker to allow the selection of two dates and then calculates the number of days between those dates. See...
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,14 @@ technologies:
 - xamarin-forms
 urlFragment: userinterface-datepicker
 ---
-Days Between Dates
-==================
+# Days Between Dates
 
 This program uses the Xamarin.Forms DatePicker to allow the selection of two dates and then calculates the number of days between those dates.
 
 See the article [Using DatePicker](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/datepicker) for more details.
 
-Author
-------
+![Days Between Dates application screenshot](Screenshots/01DaysBetweenDatesSelect-Large.png "Days Between Dates application screenshot")
+
+## Author
 
 Charles Petzold

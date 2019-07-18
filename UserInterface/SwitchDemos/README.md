@@ -1,7 +1,7 @@
 ---
-name: Switch Demos
+name: Xamarin.Forms - Switch Demos
 description: This sample demonstrates how to use a Switch in code, XAML with code-behind, and XAML data-binding scenarios.
-topic: sample
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,14 @@ technologies:
 - xamarin-forms
 urlFragment: userinterface-switchdemos
 ---
-Switch Demos
-==============
+# Switch Demos
 
 This sample demonstrates how to use a `Switch` in code, XAML with code-behind, and XAML data-binding scenarios.
 
 For more information about this sample, see [Xamarin.Forms Switch](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/switch).
 
-Author
-------
+![Switch Demos application screenshot](Screenshots/01Menu-Large.png "Switch Demos application screenshot")
+
+## Author
 
 Justin Johnson

@@ -1,7 +1,7 @@
 ---
-name: ListView Tutorial
+name: Xamarin.Forms - ListView Tutorial
 description: This sample demonstrates how to present lists of data, using the Xamarin.Forms ListView.
-topic: sample
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,14 @@ technologies:
 - xamarin-forms
 urlFragment: getstarted-tutorials-listviewtutorial
 ---
-ListView Tutorial
-=================
+# ListView Tutorial
 
 This sample demonstrates how to present lists of data, using the Xamarin.Forms `ListView`.
 
 For more information about this sample, see [ListView Tutorial](https://docs.microsoft.com/xamarin/get-started/tutorials/listview/).
 
-Author
-------
+![ListView Tutorial application screenshot](Screenshots/01All.png "ListView Tutorial application screenshot")
+
+## Author
 
 David Britch

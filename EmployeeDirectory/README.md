@@ -1,7 +1,7 @@
 ---
-name: Employee Directory
-description: 'This contacts application is Xamarin.Forms port of the existing pre-build app. With Xamarin.Forms you can use C or XAML to create layout and this sample app shows how to use both of them. To switch between user interface implementations open ~/EmployeeDirectory/EmployeeDirectoryUI/App.cs file and change uiImplementation variable. Switch to XAML: public static class App { //Change the following line to switch between XAML and C versions private static UIImplementation uiImplementation UIImplementation.Xaml; ... } Switch to C: public static class App { //Change the following line to switch between XAML and C versions private static UIImplementation uiImplementation UIImplementation.CSharp; ... } Nugets used in this solution: [PCLStorage][pclHref], [Xamarin.Forms][xFormsHref], [Microsoft.Bcl][mBclHref], [Microsoft.Bcl.Build][mBclBuildHref], [Microsoft.Net.Http][mNetHttpHref] Components used in this solution: [Xamarin.Social][xSocialHref]'
-topic: sample
+name: Xamarin.Forms - Employee Directory
+description: This contacts application is Xamarin.Forms port of the existing pre-build app. With Xamarin.Forms you can use C or XAML to create layout and this...
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,8 +10,7 @@ technologies:
 - xamarin-forms
 urlFragment: employeedirectory
 ---
-Employee Directory
-==========
+# Employee Directory
 
 This contacts application is Xamarin.Forms port of the [existing pre-build app](http://xamarin.com/prebuilt/employeedirectory). 
 With Xamarin.Forms you can use C# or XAML to create layout and this sample app shows how to use both of them. To switch between user interface implementations open  ~/EmployeeDirectory/EmployeeDirectoryUI/App.cs file and change `uiImplementation` variable. 
@@ -42,8 +41,7 @@ Nugets used in this solution: [PCLStorage][pclHref],
 
 Components used in this solution: [Xamarin.Social][xSocialHref]
 
-Authors
----------
+## Authors
 
 Original: Jonathan Peppers, Bryan Phillips, Frank Krueger, James Clancey, Zack Gramana
 
