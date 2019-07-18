@@ -1,7 +1,7 @@
 ---
-name: AzureSignalR
+name: Xamarin.Forms - AzureSignalR
 description: This sample is a real-time chat application demonstrating the integration of Azure SignalR Service with Azure Functions and Xamarin.Forms.
-topic: sample
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,15 +10,13 @@ technologies:
 - xamarin-forms
 urlFragment: webservices-azuresignalr
 ---
-AzureSignalR
-==============
+# AzureSignalR
 
 This sample is a real-time chat application demonstrating the integration of Azure SignalR Service with Azure Functions and Xamarin.Forms.
 
 For more information about this sample see [Azure SignalR Service with Azure Functions and Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/data-cloud/serverless/azure-signalr).
 
-Setting up Azure SignalR Service and Azure Functions
------------------------------------------------
+## Setting up Azure SignalR Service and Azure Functions
 
 In order to run this sample application an Azure SignalR Service instance and an Azure Functions App must be created. These, high level steps must be performed:
 
@@ -29,7 +27,6 @@ In order to run this sample application an Azure SignalR Service instance and an
 
 Once these steps have been performed, run any of the platform applications, click the Connect button and test sending messages once connected.
 
-Author
-------
+## Author
 
 Justin Johnson

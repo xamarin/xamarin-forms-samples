@@ -1,7 +1,7 @@
 ---
-name: Button Demos
+name: Xamarin.Forms - Button Demos
 description: This program demonstrates the Xamarin.Forms Button properties and events.
-topic: sample
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,12 +10,12 @@ technologies:
 - xamarin-forms
 urlFragment: userinterface-buttondemos
 ---
-Button Demos
-============
+# Button Demos
 
 This program demonstrates the Xamarin.Forms `Button` properties and events.
 
-Author
-------
+![Button Demos application screenshot](Screenshots/BasicButtonCommand-Large.png "Button Demos application screenshot")
+
+## Author
 
 Charles Petzold

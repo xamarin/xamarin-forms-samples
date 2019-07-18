@@ -1,7 +1,7 @@
 ---
-name: Working with WebView
+name: Xamarin.Forms - Working with WebView
 description: These samples relate to the Working with WebView in Xamarin.Forms doc.
-topic: sample
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,12 @@ technologies:
 - xamarin-forms
 urlFragment: workingwithwebview
 ---
-Working with WebView
-==============
+# Working with WebView
 
 These samples relate to the [Working with WebView in Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/webview) doc.
 
 ![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/WorkingWithWebview/Screenshots/webview-sml.png "Fonts")
 
-Author
-------
+## Author
 
 Craig Dunn

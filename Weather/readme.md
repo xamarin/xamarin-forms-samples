@@ -1,7 +1,7 @@
 ---
-name: Weather App
-description: WeatherApp is a sample app that retrieves weather data from OpenWeatherMap. To use this sample, you must sign up for a free API key at https://openweathermap.org/appid. Paste that key into the Constants.OpenWeatherMapAPIKey property.
-topic: sample
+name: Xamarin.Forms - Weather App
+description: WeatherApp is a sample app that retrieves weather data from OpenWeatherMap. To use this sample, you must sign up for a free API key at...
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,14 @@ technologies:
 - xamarin-forms
 urlFragment: weather
 ---
-Weather App
-==========
+# Weather App
 
 WeatherApp is a sample app that retrieves weather data from OpenWeatherMap.
 
 To use this sample, you must sign up for a free API key at [https://openweathermap.org/appid](https://openweathermap.org/appid). Paste that key into the `Constants.OpenWeatherMapAPIKey` property.
 
-Authors
--------
+![Weather App application screenshot](Screenshots/01All.png "Weather App application screenshot")
+
+## Authors
 
 Kraig Brockschmidt, Nicole Haugen, Charles Petzold, David Britch

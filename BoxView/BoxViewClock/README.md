@@ -1,7 +1,7 @@
 ---
-name: BoxView Clock
-description: A classic analog clock realized entirely with BoxView. Although Xamarin.Forms doesn't have a vector graphics programming interface, it does have a BoxView. Although normally used for displaying rectangular blocks of color, BoxView can be sized, positioned, and rotated. This is enough to render a classic analog clock. This sample is described in more detail in the article on BoxView.
-topic: sample
+name: Xamarin.Forms - BoxView Clock
+description: A classic analog clock realized entirely with BoxView. Although Xamarin.Forms doesn't have a vector graphics programming interface, it does have a...
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,8 +10,7 @@ technologies:
 - xamarin-forms
 urlFragment: boxview-boxviewclock
 ---
-BoxView Clock
-======
+# BoxView Clock
 
 A classic analog clock realized entirely with `BoxView`. 
 
@@ -19,7 +18,8 @@ Although Xamarin.Forms doesn't have a vector graphics programming interface, it 
 
 This sample is described in more detail in the article on [BoxView](/guides/xamarin-forms/user-interface/boxview/).
 
-Author
-------
+![BoxView Clock application screenshot](Screenshots/01Triple.png "BoxView Clock application screenshot")
+
+## Author
 
 Charles Petzold
