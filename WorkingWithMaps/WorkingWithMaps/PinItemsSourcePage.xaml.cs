@@ -10,6 +10,7 @@ namespace WorkingWithMaps
             InitializeComponent();
             BindingContext = new PinItemsSourcePageViewModel();
             map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(39.8283459, -98.5794797), Distance.FromMiles(1500)));
+            map.MoveToLastRegionOnLayoutChange = false;
         }
 
         void OnMapClicked(object sender, MapClickedEventArgs e)
