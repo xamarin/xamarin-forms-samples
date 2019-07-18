@@ -1,7 +1,7 @@
 ---
-name: Working with Styles
+name: Xamarin.Forms - Working with Styles
 description: This sample relates to the Working with Styles in Xamarin.Forms doc.
-topic: sample
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,13 +10,13 @@ technologies:
 - xamarin-forms
 urlFragment: workingwithstyles
 ---
-Working with Styles
-==============
+# Working with Styles
 
 This sample relates to the [Working with Styles in Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/styles/) doc.
 
 
-Author
-------
+![Working with Styles application screenshot](Screenshots/Android.png "Working with Styles application screenshot")
+
+## Author
 
 Charles Petzold, Craig Dunn

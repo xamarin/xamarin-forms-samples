@@ -1,7 +1,7 @@
 ---
-name: 'Xamarin.Forms ListView Sample: Grouping'
+name: 'Xamarin.Forms - Xamarin.Forms ListView Sample: Grouping'
 description: 'Sample code associated with the ListView Docs: This sample demonstrates how to implement grouping in a ListView, using both XAML and C.'
-topic: sample
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,13 +10,11 @@ technologies:
 - xamarin-forms
 urlFragment: userinterface-listview-grouping
 ---
-Xamarin.Forms ListView Sample: Grouping
-===========================
+# Xamarin.Forms ListView Sample: Grouping
 
 Sample code associated with the [ListView Docs](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/user-interface/listview/):
 
 This sample demonstrates how to implement grouping in a ListView, using both XAML and C#. 
 
-Author
-------
+## Author
 Nathan Castle

@@ -1,7 +1,7 @@
 ---
-name: Shadow Platform-Specific
+name: Xamarin.Forms - Shadow Platform-Specific
 description: This sample demonstrates how to expose an Effect through a platform-specific.
-topic: sample
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,14 @@ technologies:
 - xamarin-forms
 urlFragment: userinterface-shadowplatformspecific
 ---
-Shadow Platform-Specific
-========================
+# Shadow Platform-Specific
 
 This sample demonstrates how to expose an Effect through a platform-specific.
 
 For more information about this sample see [Creating Platform-Specifics](https://developer.xamarin.com/guides/xamarin-forms/user-interface/platform-specifics/creating/).
 
-Author
-------
+![Shadow Platform-Specific application screenshot](Screenshots/01All.png "Shadow Platform-Specific application screenshot")
+
+## Author
 
 David Britch

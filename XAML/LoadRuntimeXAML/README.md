@@ -1,7 +1,7 @@
 ---
-name: Load XAML at Runtime
+name: Xamarin.Forms - Load XAML at Runtime
 description: This sample demonstrates using the LoadFromXaml extension method to load, parse, and display XAML at runtime.
-topic: sample
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,14 @@ technologies:
 - xamarin-forms
 urlFragment: xaml-loadruntimexaml
 ---
-Load XAML at Runtime
-====================
+# Load XAML at Runtime
 
 This sample demonstrates using the `LoadFromXaml` extension method to load, parse, and display XAML at runtime.
 
 For more information about this sample, see [Loading XAML at Runtime](https://docs.microsoft.com/en-gb/xamarin/xamarin-forms/xaml/runtime-load).
 
-Author
-------
+![Load XAML at Runtime application screenshot](Screenshots/01All.png "Load XAML at Runtime application screenshot")
+
+## Author
 
 David Britch

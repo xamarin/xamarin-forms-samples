@@ -1,7 +1,7 @@
 ---
-name: Shadow Effect with Runtime Parameter Change
+name: Xamarin.Forms - Shadow Effect with Runtime Parameter Change
 description: This sample demonstrates using attached properties to pass parameters to an effect, and changing a parameter at runtime.
-topic: sample
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,14 @@ technologies:
 - xamarin-forms
 urlFragment: effects-shadoweffectruntimechange
 ---
-Shadow Effect with Runtime Parameter Change
-===========================================
+# Shadow Effect with Runtime Parameter Change
 
 This sample demonstrates using attached properties to pass parameters to an effect, and changing a parameter at runtime.
 
 For more information about the sample see [Creating an Effect](https://developer.xamarin.com/guides/xamarin-forms/effects/creating/), and [Passing Parameters to an Effect](https://developer.xamarin.com/guides/xamarin-forms/effects/passing-parameters/).
 
-Author
-------
+![Shadow Effect with Runtime Parameter Change application screenshot](Screenshots/01All.png "Shadow Effect with Runtime Parameter Change application screenshot")
+
+## Author
 
 David Britch

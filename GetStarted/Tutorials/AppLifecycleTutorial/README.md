@@ -1,7 +1,7 @@
 ---
-name: App Lifecycle Tutorial
+name: Xamarin.Forms - App Lifecycle Tutorial
 description: This sample demonstrates the Xamarin.Forms app lifecycle, and how to persist data across lifecycle state changes.
-topic: sample
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,14 @@ technologies:
 - xamarin-forms
 urlFragment: getstarted-tutorials-applifecycletutorial
 ---
-App Lifecycle Tutorial
-======================
+# App Lifecycle Tutorial
 
 This sample demonstrates the Xamarin.Forms app lifecycle, and how to persist data across lifecycle state changes.
 
 For more information about this sample, see [App Lifecycle Tutorial](https://docs.microsoft.com/xamarin/get-started/tutorials/app-lifecycle/).
 
-Author
-------
+![App Lifecycle Tutorial application screenshot](Screenshots/01All.png "App Lifecycle Tutorial application screenshot")
+
+## Author
 
 David Britch

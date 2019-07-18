@@ -1,7 +1,7 @@
 ---
-name: Working with Triggers
+name: Xamarin.Forms - Working with Triggers
 description: This sample relates to the Working with Triggers in Xamarin.Forms 1.3 doc.
-topic: sample
+page_type: sample
 languages:
 - csharp
 products:
@@ -10,14 +10,12 @@ technologies:
 - xamarin-forms
 urlFragment: workingwithtriggers
 ---
-Working with Triggers
-==============
+# Working with Triggers
 
 This sample relates to the [Working with Triggers in Xamarin.Forms 1.3](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/triggers) doc.
 
 
 
-Author
-------
+## Author
 
 Craig Dunn
