@@ -3,7 +3,9 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:controls="clr-namespace:Xaminals.Controls"
        xmlns:views="clr-namespace:Xaminals.Views"
-       FlyoutHeaderBehavior="CollapseOnScroll"
+       FlyoutBackgroundImage="photo.jpg"
+       FlyoutBackgroundImageAspect="AspectFill"
+       FlyoutHeaderBehavior="CollapseOnScroll"       
        Navigating="OnNavigating"
        Navigated="OnNavigated"
        x:Class="Xaminals.AppShell">
