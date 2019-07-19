@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: customrenderers-map-polyline
 ---
 # Polyline Map Overlay

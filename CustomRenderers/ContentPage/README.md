@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: customrenderers-contentpage
 ---
 # ContentPage Custom Renderer
