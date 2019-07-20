@@ -1,6 +1,6 @@
 ---
-name: TodoLocalized (Xamarin.Forms)
-description: 'This sample demonstrates a localized Todo list application where the data is stored and accessed in a local SQLite database.'
+name: Xamarin.Forms - TodoLocalized
+description: 'Demonstrates a localized Todo list application where the data is stored and accessed in a local SQLite database.'
 page_type: sample
 languages:
 - csharp

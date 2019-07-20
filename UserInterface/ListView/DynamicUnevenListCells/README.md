@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Dynamic ListView Row Resizing
-description: This sample demonstrates using the Cell.ForceUpdateSize method to programmatically resize a ListView row at runtime.
+description: "Demonstrates using the Cell.ForceUpdateSize method to programmatically resize a ListView row at runtime #ui"
 page_type: sample
 languages:
 - csharp
@@ -12,7 +12,7 @@ urlFragment: userinterface-listview-dynamicunevenlistcells
 
 This sample demonstrates using the `Cell.ForceUpdateSize` method to programmatically resize a `ListView` row at runtime.
 
-For more information about the sample see [List Appearance](https://developer.xamarin.com/guides/xamarin-forms/user-interface/listview/customizing-list-appearance/).
+For more information about the sample see [List Appearance](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-list-appearance).
 
 ![Dynamic ListView Row Resizing application screenshot](Screenshots/01All.png "Dynamic ListView Row Resizing application screenshot")
 

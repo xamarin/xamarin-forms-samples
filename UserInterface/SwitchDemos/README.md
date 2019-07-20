@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Switch Demos
-description: This sample demonstrates how to use a Switch in code, XAML with code-behind, and XAML data-binding scenarios.
+description: "Demonstrates how to use a Switch in code, XAML with code-behind, and XAML data-binding scenarios #ui"
 page_type: sample
 languages:
 - csharp

@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Xamarin.Forms Text
-description: This sample relates to the Text in Xamarin.Forms series of documents. The app consists of several pages, demonstrating each of the text controls...
+description: "This sample relates to the Text in Xamarin.Forms series of documents. The app consists of several pages, demonstrating each of the text controls #ui"
 page_type: sample
 languages:
 - csharp

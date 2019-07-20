@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Accessing Native Views in Code
-description: This sample demonstrates how to refer to native views declared in XAML, from code.
+description: "How to refer to native views declared in XAML, from code #ui"
 page_type: sample
 languages:
 - csharp
@@ -12,7 +12,7 @@ urlFragment: userinterface-nativeviews-nativeviewinsidecontentview
 
 This sample demonstrates how to refer to native views declared in XAML, from code.
 
-For more information about this sample see [Native Views](https://developer.xamarin.com/guides/xamarin-forms/user-interface/native-views/).
+For more information about this sample see [Native Views](https://docs.microsoft.com/xamarin/xamarin-forms/platform/native-views/).
 
 ![Accessing Native Views in Code application screenshot](Screenshots/01All.png "Accessing Native Views in Code application screenshot")
 

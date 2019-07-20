@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Monkey App (CSS)
-description: This sample demonstrates how to use CSS to perform basic styling in a Xamarin.Forms app.
+description: "Demonstrates how to use CSS to perform basic styling in a Xamarin.Forms app #ui"
 page_type: sample
 languages:
 - csharp

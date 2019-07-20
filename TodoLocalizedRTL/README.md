@@ -1,5 +1,5 @@
 ---
-name: TodoLocalized RTL (Xamarin.Forms)
+name: Xamarin.Forms - TodoLocalized RTL
 description: 'This sample demonstrates a localized Todo list application where the data is stored and accessed in a local SQLite database, with right-to-left text.'
 page_type: sample
 languages:

@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Slider Demos
-description: This program demonstrates the Xamarin.Forms Slider in code, XAML with code-behind, and XAML data-binding scenarios.
+description: "This program demonstrates the Xamarin.Forms Slider in code, XAML with code-behind, and XAML data-binding scenarios #ui"
 page_type: sample
 languages:
 - csharp

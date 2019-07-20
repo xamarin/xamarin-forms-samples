@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - ProgressBar Demos
-description: This sample demonstrates how to use a ProgressBar in code and XAML with code-behind.
+description: "Demonstrates how to use a ProgressBar in code and XAML with code-behind #ui"
 page_type: sample
 languages:
 - csharp

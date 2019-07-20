@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Xamarin.Forms WebView
-description: This sample relates to the WebView in Xamarin.Forms doc. The app consists of two tabs. One tab demonstrates how to navigate within a WebView,...
+description: "This sample relates to the WebView in Xamarin.Forms doc. The app consists of two tabs. One tab demonstrates how to navigate within a WebView #ui"
 page_type: sample
 languages:
 - csharp
@@ -10,7 +10,7 @@ urlFragment: userinterface-webview
 ---
 # Xamarin.Forms WebView
 
-This sample relates to the [ WebView in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/webview) doc.
+This sample relates to the [WebView in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/webview) doc.
 
 The app consists of two tabs. One tab demonstrates how to navigate within a `WebView`, taking advantage of:
 

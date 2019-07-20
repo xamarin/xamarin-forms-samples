@@ -1,6 +1,6 @@
 ---
-name: 'Xamarin.Forms - Xamarin.Forms ListView Sample: Two-Way Binding with SwitchCell and EntryCell'
-description: 'Sample code associated with the ListView Docs: This sample demonstrates how to implement data collection using EntryCell and ViewCell in...'
+name: 'Xamarin.Forms - ListView Two-Way Binding'
+description: 'Sample code associated with the ListView docs. This sample demonstrates how to implement data collection using EntryCell and ViewCell #ui'
 page_type: sample
 languages:
 - csharp
@@ -10,10 +10,10 @@ urlFragment: userinterface-listview-switchentrytwobinding
 ---
 # Xamarin.Forms ListView Sample: Two-Way Binding with SwitchCell and EntryCell
 
-Sample code associated with the [ListView Docs](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/user-interface/list_view/):
+Sample code associated with the [ListView docs](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/listview/):
 
 This sample demonstrates how to implement data collection using EntryCell and ViewCell in Xamarin.Forms. Implementations for XAML and C# provided.
 
-
 ## Author
+
 Nathan C. Castle

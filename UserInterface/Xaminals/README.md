@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Xaminals
-description: Xamarin.Forms Shell reduces the complexity of mobile application development by providing the fundamental features that most mobile applications...
+description: "Xamarin.Forms Shell reduces the complexity of mobile application development by providing fundamental features #shell #ui"
 page_type: sample
 languages:
 - csharp
