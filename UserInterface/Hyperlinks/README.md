@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Hyperlinks
-description: This sample demonstrates how Label and Span instances can be turned into hyperlinks.
+description: "Demonstrates how Label and Span instances can be turned into hyperlinks #ui"
 page_type: sample
 languages:
 - csharp

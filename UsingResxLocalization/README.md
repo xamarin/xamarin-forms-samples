@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Xamarin.Forms Localization with RESX
-description: 'Sample code for the Xamarin.Forms Localization doc. FYI: updated language fallback information for Android 7/API 24.'
+description: 'Sample code for the Xamarin.Forms Localization doc.'
 page_type: sample
 languages:
 - csharp
@@ -10,7 +10,7 @@ urlFragment: usingresxlocalization
 ---
 # Xamarin.Forms Localization with RESX
 
-Sample code for the [Xamarin.Forms Localization](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/localization) doc.
+Sample code for the [Xamarin.Forms Localization](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/localization/) doc.
 
 ![Example screenshots](Screenshots/all-sml.png)
 

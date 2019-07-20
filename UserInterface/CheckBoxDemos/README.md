@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - CheckBox Demos
-description: This sample demonstrates how to use a CheckBox in code, XAML with code-behind, and XAML data-binding scenarios.
+description: "This sample demonstrates how to use a CheckBox in code, XAML with code-behind, and XAML data-binding scenarios #ui"
 page_type: sample
 languages:
 - csharp

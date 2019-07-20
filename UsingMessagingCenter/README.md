@@ -10,8 +10,7 @@ urlFragment: usingmessagingcenter
 ---
 # Xamarin.Forms MessagingCenter
 
-Sample code for the [Xamarin.Forms MessagingCenter](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/messaging-center) doc.
-
+Sample code for the [Xamarin.Forms MessagingCenter](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/messaging-center) doc.
 
 ## Author
 

@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - CollectionView
-description: This sample demonstrates how to use the Xamarin.Forms CollectionView.
+description: "This sample demonstrates how to use the Xamarin.Forms CollectionView #ui"
 page_type: sample
 languages:
 - csharp

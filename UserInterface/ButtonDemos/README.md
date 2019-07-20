@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Button Demos
-description: This program demonstrates the Xamarin.Forms Button properties and events.
+description: "This program demonstrates the Xamarin.Forms Button properties and events #ui"
 page_type: sample
 languages:
 - csharp
