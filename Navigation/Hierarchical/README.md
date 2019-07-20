@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Hierarchical Navigation
-description: This sample demonstrates how to perform hierarchical navigation through a stack of pages in Xamarin.Forms.
+description: "How to perform hierarchical navigation through a stack of pages in Xamarin.Forms #navigation"
 page_type: sample
 languages:
 - csharp
@@ -12,7 +12,7 @@ urlFragment: navigation-hierarchical
 
 This sample demonstrates how to perform hierarchical navigation through a stack of pages in Xamarin.Forms.
 
-For more information about the sample see [Hierarchical Navigation](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/user-interface/navigation/hierarchical/).
+For more information about the sample see [Hierarchical Navigation](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/navigation/hierarchical).
 
 ![Hierarchical Navigation application screenshot](Screenshots/01All.png "Hierarchical Navigation application screenshot")
 

@@ -14,7 +14,7 @@ A C# port of the [Solitaire encryption algorithm](https://www.schneier.com/solit
 
 ![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/SolitaireEncryption/Screenshots/all-sml.png "Colors")
 
-This sample illustrates the inclusion of a Unit Test project in a Xamarin.Forms solution and also a custom `Button` [renderer](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/custom-renderer/).
+This sample illustrates the inclusion of a Unit Test project in a Xamarin.Forms solution and also a custom `Button` [renderer](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/custom-renderer/).
 
 ## Author
 

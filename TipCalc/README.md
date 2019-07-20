@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - TipCalc
-description: TipCalc is based on an existing iOS and Android sample but has been completely rewritten for Xamarin.Forms using XAML and data-binding. This new...
+description: TipCalc is based on an existing iOS and Android sample but has been completely rewritten for Xamarin.Forms using XAML and data-binding.
 page_type: sample
 languages:
 - csharp
@@ -18,9 +18,7 @@ and a post-tax total from your restaurant bill and then select a tip percentage.
 to the food-and-drink subtotal and adds the result to the post-tax total, rounded to the nearest quarter.
 
 The calculations are handled in a *TipCalcModel* class, and the entire user interface is realized in
-XAML in the TipCalcPage.xaml file. Two data-binding value converters help massage the data between the 
-data model and the XAML file.
-
+XAML in the TipCalcPage.xaml file. Two data-binding value converters help massage the data between the data model and the XAML file.
 
 ![TipCalc application screenshot](Screenshots/01Android.png "TipCalc application screenshot")
 

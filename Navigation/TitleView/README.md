@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Title View
-description: This sample demonstrates how to display any Xamarin.Forms View in the navigation bar of a NavigationPage.
+description: "This sample demonstrates how to display any Xamarin.Forms View in the navigation bar of a NavigationPage #navigation"
 page_type: sample
 languages:
 - csharp

@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Tilt Maze
-description: Tilt Maze is a game for Xamarin.Forms that uses the cross-platform Accelerometer included in Xamarin.Essentials. Tilt Maze runs on iOS, Android,...
+description: Tilt Maze is a game for Xamarin.Forms that uses the cross-platform Accelerometer included in Xamarin.Essentials. 
 page_type: sample
 languages:
 - csharp
@@ -21,11 +21,5 @@ A different version of this program originally appeared in the book _Programming
 ![Tilt Maze application screenshot](Screenshots/TiltMaze.png "Tilt Maze application screenshot")
 
 ## Author
-Charles Petzold 
 
-
-
-
-
-
-
+Charles Petzold

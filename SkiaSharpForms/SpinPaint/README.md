@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - SpinPaint
-description: SpinPaint is a Xamarin.Forms application that runs on iOS, Android, and Universal Windows Platform devices. The program simulates a revolving disk...
+description: "SpinPaint is a Xamarin.Forms application that runs on iOS, Android, and Universal Windows Platform devices. #skiasharp"
 page_type: sample
 languages:
 - csharp
@@ -23,4 +23,5 @@ SpinPaint uses a .NET Standard Library for the shared code. For a version that u
 ![SpinPaint application screenshot](Screenshots/Image0.png "SpinPaint application screenshot")
 
 ## Author
+
 Charles Petzold
