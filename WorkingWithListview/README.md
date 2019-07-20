@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Working with ListView
-description: These samples relate to the Working with ListView in Xamarin.Forms doc. Many people have questions about specific ListView features, this sample...
+description: "These samples relate to the Working with ListView in Xamarin.Forms doc. Many people have questions about specific ListView features #ui"
 page_type: sample
 languages:
 - csharp
@@ -10,7 +10,7 @@ urlFragment: workingwithlistview
 ---
 # Working with ListView
 
-These samples relate to the [Working with ListView in Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/listview) doc.
+These samples relate to the [Working with ListView in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/listview/) doc.
 
 Many people have questions about specific `ListView` features, this sample attempts to cover some of them:
 
@@ -18,11 +18,9 @@ Many people have questions about specific `ListView` features, this sample attem
 * Uneven row heights
 * Adding clickable buttons to cells that work on Android
 
-See the [working with ListView "native layouts"](https://github.com/xamarin/xamarin-forms-samples/tree/master/WorkingWithListviewNative) for tips on using custom renderers for cells or the entire `ListView`. 
-
+See the [working with ListView "native layouts"](https://github.com/xamarin/xamarin-forms-samples/tree/master/WorkingWithListviewNative) for tips on using custom renderers for cells or the entire `ListView`.
 
 ![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/WorkingWithListview/Screenshots/all-sml.png "Colors")
-
 
 ## Author
 

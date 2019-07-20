@@ -12,7 +12,7 @@ urlFragment: workingwithgestures-pangesture
 
 This sample demonstrates using the `PanGestureRecognizer` class to implement dragging.
 
-For more information about the sample see [Adding a Pan Gesture Recognizer](http://developer.xamarin.com/guides/xamarin-forms/user-interface/gestures/pan/).
+For more information about the sample see [Adding a Pan Gesture Recognizer](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/gestures/pan).
 
 ![PanGesture application screenshot](Screenshots/01All.png "PanGesture application screenshot")
 

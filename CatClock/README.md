@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Cat Clock
-description: Cat Clock is a Xamarin.Forms application that demonstrates various features of SkiaSharp graphics. It runs on iOS, Android, and Universal Windows...
+description: "Cat Clock is a Xamarin.Forms application that demonstrates various features of SkiaSharp graphics. It runs on iOS, Android, and UWP #skiasharp"
 page_type: sample
 languages:
 - csharp

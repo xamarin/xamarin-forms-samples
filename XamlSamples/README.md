@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - XAML Samples
-description: XAML—the eXtensible Application Markup Language—allows developers to define user interfaces in Xamarin.Forms applications using markup rather than...
+description: "XAML—the eXtensible Application Markup Language—allows developers to define user interfaces in Xamarin.Forms applications using markup #ui"
 page_type: sample
 languages:
 - csharp
