@@ -19,3 +19,4 @@ This sample is described in more detail in the article on [BoxView](/guides/xama
 ## Author
 
 Charles Petzold
+

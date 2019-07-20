@@ -19,3 +19,4 @@ For more information about this sample, see [Behaviors](https://developer.xamari
 ## Author
 
 David Britch
+

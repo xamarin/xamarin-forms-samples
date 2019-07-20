@@ -18,3 +18,4 @@ For more information about this sample, see [Dependency Resolution in Xamarin.Fo
 ## Author
 
 David Britch
+

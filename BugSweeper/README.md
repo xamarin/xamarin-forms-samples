@@ -18,7 +18,6 @@ Thereafter, numbers indicate the number of surrounding tiles with bugs.
 If you know that a tile has a bug, flag it (or unflag it) with a single tap.
 Avoid double-tapping a tile with a bug!
 
-
 ![BugSweeper application screenshot](Screenshots/01Android.png "BugSweeper application screenshot")
 
 ## Author
