@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Polyline Map Overlay
-description: This sample demonstrates how to add a polyline overlay to a map. A polyline overlay is a series of connected line segments that are typically used...
+description: "How to add a polyline overlay to a map. A polyline overlay is a series of connected line segments #map #customrenderer"
 page_type: sample
 languages:
 - csharp

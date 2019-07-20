@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - ListView Custom Renderer
-description: This sample demonstrates a custom renderer that encapsulates platform-specific list controls and native cell layouts.
+description: "Demonstrates a custom renderer that encapsulates platform-specific list controls and native cell layouts #customrenderer"
 page_type: sample
 languages:
 - csharp

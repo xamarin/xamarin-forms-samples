@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Polygon Map Overlay
-description: This sample demonstrates how to add a polygon overlay to a map in order to highlight a region on the map. Polygons are a closed shape and have...
+description: "How to add a polygon overlay to a map in order to highlight a region on the map. Polygons are a closed shape #map #customrenderer"
 page_type: sample
 languages:
 - csharp

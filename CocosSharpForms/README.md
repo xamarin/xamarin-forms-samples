@@ -1,13 +1,3 @@
----
-name: Xamarin.Forms - CocosSharp and Xamarin Forms
-description: This solution contains an iOS and Android project which combines CocosSharp with Xamarin Forms. All code (aside from initial template code) is...
-page_type: sample
-languages:
-- csharp
-products:
-- xamarin
-urlFragment: cocossharpforms
----
 # CocosSharp and Xamarin Forms
 
 This solution contains an iOS and Android project which combines CocosSharp with Xamarin Forms. All code (aside from initial template code) is contained in a .NET Standard Library.

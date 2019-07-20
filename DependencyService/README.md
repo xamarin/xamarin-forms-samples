@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Dependency Service
-description: This sample demonstrates how to use the DependencyService class, which is a service locator that enables Xamarin.Forms applications to invoke...
+description: Use the DependencyService class, which is a service locator that enables Xamarin.Forms applications to invoke native functionality.
 page_type: sample
 languages:
 - csharp

@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Video Player Demos
-description: This sample demonstrates renderers for a VideoPlayer custom control.
+description: "Renderers for a VideoPlayer custom control #customrenderer"
 page_type: sample
 languages:
 - csharp

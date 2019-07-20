@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Deep Linking
-description: Application indexing allows applications that would otherwise be forgotten after a few uses to stay relevant by appearing in search results. Deep...
+description: Application indexing allows applications that would otherwise be forgotten after a few uses to stay relevant by appearing in search results.
 page_type: sample
 languages:
 - csharp
