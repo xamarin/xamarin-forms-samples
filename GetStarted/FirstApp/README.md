@@ -1,6 +1,6 @@
 ---
 name: 'Xamarin.Forms - Get Started: First app with Xamarin.Forms'
-description: Sample code for the get started page and video, that shows how to build a basic Xamarin.Forms app from the File > New template in Visual Studio.
+description: "Sample code for the get started page that shows how to build a basic Xamarin.Forms app #getstarted"
 page_type: sample
 languages:
 - csharp

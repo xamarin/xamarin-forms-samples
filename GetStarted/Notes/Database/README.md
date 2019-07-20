@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Notes (local database)
-description: This sample demonstrates a multi-page Xamarin.Forms application that's capable of storing multiple notes in a local SQLite.NET database.
+description: "A multi-page Xamarin.Forms application that's capable of storing multiple notes in a local SQLite.NET database #getstarted"
 page_type: sample
 languages:
 - csharp

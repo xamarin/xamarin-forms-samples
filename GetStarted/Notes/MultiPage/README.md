@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Notes (multi-page)
-description: This sample demonstrates a multi-page Xamarin.Forms application that's capable of storing multiple notes in device storage.
+description: "A multi-page Xamarin.Forms application that's capable of storing multiple notes in device storage #getstarted"
 page_type: sample
 languages:
 - csharp

@@ -1,12 +1,3 @@
----
-topic: sample
-languages:
-- csharp
-technologies:
-  - xamarin-forms
-name: DataPages Demo
-urlFragment: pages-datapagesdemo
----
 DataPagesDemo
 =========
 

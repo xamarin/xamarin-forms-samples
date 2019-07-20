@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Notes (single page)
-description: This sample demonstrates a simple cross-platform Notes application that allows you to enter a note and persist it to device storage.
+description: "A simple cross-platform Notes application that allows you to enter a note and persist it to device storage #getstarted"
 page_type: sample
 languages:
 - csharp
