@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Label Tutorial
-description: This sample demonstrates how to display text, with the Xamarin.Forms Label view, in both single and multiple lines.
+description: "This sample demonstrates how to display text, with the Xamarin.Forms Label view, in both single and multiple lines #getstarted"
 page_type: sample
 languages:
 - csharp

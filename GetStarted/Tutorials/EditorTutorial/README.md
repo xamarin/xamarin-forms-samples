@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Editor Tutorial
-description: This sample demonstrates how to accept multi-line text input, using the Xamarin.Forms Editor view.
+description: "This sample demonstrates how to accept multi-line text input, using the Xamarin.Forms Editor view #getstarted"
 page_type: sample
 languages:
 - csharp

@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Entry Tutorial
-description: This sample demonstrates how to accept single-line text input, using the Xamarin.Forms Entry view.
+description: "This sample demonstrates how to accept single-line text input, using the Xamarin.Forms Entry view #getstarted"
 page_type: sample
 languages:
 - csharp

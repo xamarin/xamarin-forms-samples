@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Image Tutorial
-description: This sample demonstrates how to display images on a page, using the Xamarin.Forms Image view.
+description: "This sample demonstrates how to display images on a page, using the Xamarin.Forms Image view #getstarted"
 page_type: sample
 languages:
 - csharp

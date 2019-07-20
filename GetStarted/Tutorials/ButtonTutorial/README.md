@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Button Tutorial
-description: This sample demonstrates how to respond to a tap or click of a Xamarin.Forms Button.
+description: "This sample demonstrates how to respond to a tap or click of a Xamarin.Forms Button #getstarted"
 page_type: sample
 languages:
 - csharp

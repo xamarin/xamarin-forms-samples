@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Local Database Tutorial
-description: This sample demonstrates how to use the SQLite.NET NuGet package to incorporate local database operations into a Xamarin.Forms application.
+description: "This sample demonstrates how to use the SQLite.NET NuGet package to incorporate local database operations into a Xamarin.Forms application #getstarted"
 page_type: sample
 languages:
 - csharp
@@ -12,7 +12,7 @@ urlFragment: getstarted-tutorials-localdatabasetutorial
 
 This sample demonstrates how to use the SQLite.NET NuGet package to incorporate local database operations into a Xamarin.Forms application.
 
-For more information about this sample, see [Local Database Tutorial](https://docs.microsoft.com/xamarin/get-started/tutorials/local-datbase/).
+For more information about this sample, see [Local Database Tutorial](https://docs.microsoft.com/xamarin/get-started/tutorials/local-database/).
 
 ![Local Database Tutorial application screenshot](Screenshots/01All.png "Local Database Tutorial application screenshot")
 

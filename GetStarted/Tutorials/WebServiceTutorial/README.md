@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Web Service Tutorial
-description: This sample demonstrates how to consume REST-based web services from Xamarin.Forms applications.
+description: "This sample demonstrates how to consume REST-based web services from Xamarin.Forms applications #getstarted"
 page_type: sample
 languages:
 - csharp
