@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: usingresxlocalization
 ---
 # Xamarin.Forms Localization with RESX

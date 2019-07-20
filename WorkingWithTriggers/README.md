@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: workingwithtriggers
 ---
 # Working with Triggers

@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: userinterface-listview-bindingcontextchanged
 ---
 # Xamarin.Forms ListView Sample: Binding Context Changed

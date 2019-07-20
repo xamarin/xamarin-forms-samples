@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: userinterface-listview-customcells
 ---
 # Xamarin.Forms ListView Sample: Custom Cells

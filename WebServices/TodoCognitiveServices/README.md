@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: webservices-todocognitiveservices
 ---
 # Todo Cognitive Services

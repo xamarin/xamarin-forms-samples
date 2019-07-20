@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: templates-controltemplates-simplethemewithtemplatebindingandviewmodel
 ---
 # Simple Theme with Template Binding and ViewModel

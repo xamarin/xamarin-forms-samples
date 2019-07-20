@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: userinterface-businesstumble
 ---
 # Xamarin.Forms Layout Sample: The Business Tumble

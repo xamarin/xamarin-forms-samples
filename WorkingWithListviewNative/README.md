@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: workingwithlistviewnative
 ---
 # Working with ListView Native Layouts

@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: userinterface-listview-switchentrytwobinding
 ---
 # Xamarin.Forms ListView Sample: Two-Way Binding with SwitchCell and EntryCell

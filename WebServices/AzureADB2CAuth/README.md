@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: webservices-azureadb2cauth
 ---
 # AzureADB2CAuth

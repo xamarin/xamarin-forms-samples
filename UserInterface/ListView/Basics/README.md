@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: userinterface-listview-basics
 ---
 # Xamarin.Forms ListView Sample: The Basics

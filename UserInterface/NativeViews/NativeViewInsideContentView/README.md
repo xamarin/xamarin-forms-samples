@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: userinterface-nativeviews-nativeviewinsidecontentview
 ---
 # Accessing Native Views in Code

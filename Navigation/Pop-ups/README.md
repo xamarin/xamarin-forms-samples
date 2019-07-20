@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: navigation-pop-ups
 ---
 # Displaying Pop-ups

@@ -5,8 +5,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: usinguitest
 ---
 Using UITest (Xamarin.Forms)

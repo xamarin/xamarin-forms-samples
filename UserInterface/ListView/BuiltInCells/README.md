@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: userinterface-listview-builtincells
 ---
 # Xamarin.Forms ListView Sample: Built-In Cells

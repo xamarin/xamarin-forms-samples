@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: getstarted-tutorials-webservicetutorial
 ---
 # Web Service Tutorial

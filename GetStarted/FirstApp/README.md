@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: getstarted-firstapp
 ---
 # Get Started: First app with Xamarin.Forms

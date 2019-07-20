@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: xaml-loadruntimexaml
 ---
 # Load XAML at Runtime

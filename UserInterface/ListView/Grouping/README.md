@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: userinterface-listview-grouping
 ---
 # Xamarin.Forms ListView Sample: Grouping

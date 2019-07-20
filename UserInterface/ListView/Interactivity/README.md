@@ -6,8 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: userinterface-listview-interactivity
 ---
 # Xamarin.Forms ListView Sample: Interactivity
