@@ -12,7 +12,7 @@ urlFragment: effects-backgroundcoloreffect
 
 This sample demonstrates creating an effect for the `Entry` control, that changes the background color of the control.
 
-For more information about the sample see [Creating an Effect](https://developer.xamarin.com/guides/xamarin-forms/effects/creating/).
+For more information about the sample see [Creating an Effect](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/effects/creating).
 
 ![BackgroundColor Effect application screenshot](Screenshots/01All.png "BackgroundColor Effect application screenshot")
 

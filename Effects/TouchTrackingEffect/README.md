@@ -12,7 +12,7 @@ urlFragment: effects-touchtrackingeffect
 
 This sample demonstrates an effect that implements multi-touch finger tracking, and shows how to trigger events from an effect.
 
-For more information about the sample see [Invoking Events from Effects](https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/effects/touch-tracking/).
+For more information about the sample see [Invoking Events from Effects](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/effects/touch-tracking).
 
 ![Touch-Tracking Effect Demos application screenshot](Screenshots/EllipseDrawing-Small.png "Touch-Tracking Effect Demos application screenshot")
 
