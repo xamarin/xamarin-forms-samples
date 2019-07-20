@@ -6,6 +6,7 @@ languages:
 - csharp
 products:
 - xamarin
+- azure-storage
 urlFragment: webservices-azurestorage
 ---
 # Azure Storage

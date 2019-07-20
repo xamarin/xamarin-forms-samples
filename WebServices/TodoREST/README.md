@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - TodoREST
-description: This sample demonstrates a Todo list application where the data is stored and accessed from a RESTful web service. The web service code is in the...
+description: This sample demonstrates a Todo list application where the data is stored and accessed from a RESTful web service.
 page_type: sample
 languages:
 - csharp

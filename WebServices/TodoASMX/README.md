@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - TodoASMX
-description: This sample demonstrates a Todo list application where the data is stored and accessed from an ASMX web service. The web service, included in the...
+description: This sample demonstrates a Todo list application where the data is stored and accessed from an ASMX web service.
 page_type: sample
 languages:
 - csharp
@@ -20,7 +20,7 @@ The app functionality is:
 
 In all cases the tasks are stored in an in-memory collection that's accessed through an ASMX web service.
 
-For more information about the sample see [Consuming an ASP.NET Web Service (ASMX)](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/web-services/consuming/asmx/).
+For more information about the sample see [Consuming an ASP.NET Web Service (ASMX)](https://docs.microsoft.com/xamarin/xamarin-forms/data-cloud/web-services/asmx).
 
 ![TodoASMX application screenshot](Screenshots/01All.png "TodoASMX application screenshot")
 

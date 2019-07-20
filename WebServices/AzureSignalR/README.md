@@ -6,6 +6,7 @@ languages:
 - csharp
 products:
 - xamarin
+- azure
 urlFragment: webservices-azuresignalr
 ---
 # AzureSignalR

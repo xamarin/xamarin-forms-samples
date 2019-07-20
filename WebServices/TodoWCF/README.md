@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - TodoWCF
-description: This sample demonstrates a Todo list application where the data is stored and accessed from a WCF web service. The web service, included in the...
+description: This sample demonstrates a Todo list application where the data is stored and accessed from a WCF web service. 
 page_type: sample
 languages:
 - csharp

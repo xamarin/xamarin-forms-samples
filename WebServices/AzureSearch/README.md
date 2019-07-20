@@ -6,6 +6,7 @@ languages:
 - csharp
 products:
 - xamarin
+- azure-search
 urlFragment: webservices-azuresearch
 ---
 # Azure Search
