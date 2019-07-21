@@ -83,6 +83,14 @@ namespace FormsGallery
 
                         new TextCell
                         {
+                            Text = "ImageButton",
+                            Detail = "Initiate a command",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.ImageButtonDemoPage)
+                        },
+
+                        new TextCell
+                        {
                             Text = "SearchBar",
                             Detail = "Initiate a search",
                             Command = navigateCommand,
@@ -92,6 +100,14 @@ namespace FormsGallery
 
                     new TableSection("Views for Common Data Types")
                     {
+                        new TextCell
+                        {
+                            Text = "CheckBox (bool)",
+                            Detail = "Select a Boolean value",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.CheckBoxPage)
+                        },
+
                         new TextCell
                         {
                             Text = "Slider (double)",
@@ -175,10 +191,10 @@ namespace FormsGallery
                     {
                         new TextCell
                         {
-                            Text = "Picker",
-                            Detail = "Select from a list of text items",
+                            Text = "CollectionView",
+                            Detail = "Select from a list of data items",
                             Command = navigateCommand,
-                            CommandParameter = typeof(CodeExamples.PickerDemoPage)
+                            CommandParameter = typeof(CodeExamples.CollectionViewDemoPage)
                         },
 
                         new TextCell
@@ -187,6 +203,14 @@ namespace FormsGallery
                             Detail = "Select from a list of data items",
                             Command = navigateCommand,
                             CommandParameter = typeof(CodeExamples.ListViewDemoPage)
+                        },
+
+                        new TextCell
+                        {
+                            Text = "Picker",
+                            Detail = "Select from a list of text items",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.PickerDemoPage)
                         },
 
                         new TextCell
@@ -295,6 +319,13 @@ namespace FormsGallery
                             Detail = "Arrange children relative to each other",
                             Command = navigateCommand,
                             CommandParameter = typeof(CodeExamples.RelativeLayoutDemoPage)
+                        },
+                        new TextCell
+                        {
+                            Text = "FlexLayout",
+                            Detail = "Arrange children in a stack or a wrapped stack",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.FlexLayoutDemoPage)
                         }
                     },
 

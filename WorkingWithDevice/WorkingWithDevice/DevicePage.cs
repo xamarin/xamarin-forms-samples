@@ -37,7 +37,7 @@ namespace WorkingWithPlatformSpecifics
 			if (Device.RuntimePlatform == Device.iOS)
             {
 				heading.Text += "iOS";
-			} else { // could be Android or WinPhone
+			} else { // could be Android or UWP
 				heading.Text += Device.RuntimePlatform;
 			}
 
@@ -54,7 +54,6 @@ namespace WorkingWithPlatformSpecifics
                 case Device.Android:
                     width = 40;
                     break;
-                case Device.WinPhone:
                 case Device.UWP:
                 default:
                     width = 50;
@@ -77,7 +76,6 @@ namespace WorkingWithPlatformSpecifics
                     box.Color = box.Color.AddLuminosity(0.3);
                     heading.TextColor = Color.FromRgb(115, 129, 130);
                     break;
-                case Device.WinPhone:
                 case Device.UWP:
                     box.Color = box.Color.AddLuminosity(0.3);
                     heading.TextColor = Color.Accent;
@@ -101,7 +99,6 @@ namespace WorkingWithPlatformSpecifics
                 case Device.Android:
                     width = 300;
                     break;
-                case Device.WinPhone:
                 case Device.UWP:
                 default:
                     width = 150;

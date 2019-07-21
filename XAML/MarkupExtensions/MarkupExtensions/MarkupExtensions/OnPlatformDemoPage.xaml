@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MarkupExtensions.OnPlatformDemoPage"
+             Title="OnPlatform Demo">
+    <StackLayout Margin="20">
+        <BoxView x:Name="_boxView"
+                 Color="{OnPlatform iOS=Red, Android=Green, UWP=Blue}" 
+                 WidthRequest="{OnPlatform iOS=200, Android=300, UWP=400}"  
+                 HeightRequest="{OnPlatform iOS=200, Android=300, UWP=400}" 
+                 HorizontalOptions="Center" />
+        <Label BindingContext="{x:Reference _boxView}" HorizontalTextAlignment="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{Binding WidthRequest}" />
+                    <Span Text=" x " />
+                    <Span Text="{Binding HeightRequest}" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label HorizontalTextAlignment="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Platform: " />
+                    <Span Text="{x:Static Device.RuntimePlatform}" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentPage>

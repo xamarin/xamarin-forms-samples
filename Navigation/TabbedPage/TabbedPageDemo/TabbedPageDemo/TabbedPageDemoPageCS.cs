@@ -46,23 +46,23 @@ namespace TabbedPageDemo
 				var subFamilyStackLayout = new StackLayout {
 					Orientation = StackOrientation.Horizontal,
 					Children = {
-						new Label { Text = "Subfamily:", HorizontalOptions = LayoutOptions.FillAndExpand }, 
+						new Label { Text = "Subfamily:", HorizontalOptions = LayoutOptions.FillAndExpand },
 						subFamilyLabel
 					}
-				};				
+				};
 				subFamilyStackLayout.SetBinding (VisualElement.IsVisibleProperty, new Binding ("Subfamily", BindingMode.Default, booleanConverter));
 
-				var tribeStackLayout = new StackLayout { 
+				var tribeStackLayout = new StackLayout {
 					Orientation = StackOrientation.Horizontal,
 					Children = {
 						new Label { Text = "Tribe:", HorizontalOptions = LayoutOptions.FillAndExpand },
 						tribeLabel
-					}	
+					}
 				};
 				tribeStackLayout.SetBinding (VisualElement.IsVisibleProperty, new Binding ("Tribe", BindingMode.Default, booleanConverter));
 
 				var contentPage = new ContentPage {
-					Icon = "monkeyicon.png",
+					IconImageSource = "monkeyicon.png",
 					Content = new StackLayout {
 						Padding = new Thickness (5, 25),
 						Children = {
@@ -71,7 +71,7 @@ namespace TabbedPageDemo
 							new StackLayout {
 								Padding = new Thickness (50, 10),
 								Children = {
-									new StackLayout { 
+									new StackLayout {
 										Orientation = StackOrientation.Horizontal,
 										Children = {
 											new Label { Text = "Family:", HorizontalOptions = LayoutOptions.FillAndExpand },
@@ -86,9 +86,9 @@ namespace TabbedPageDemo
 											new Label { Text = "Genus:", HorizontalOptions = LayoutOptions.FillAndExpand },
 											genusLabel
 										}
-									} 
+									}
 								}
-							} 
+							}
 
 						}
 					}

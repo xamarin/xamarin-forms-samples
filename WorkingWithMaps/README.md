@@ -1,15 +1,19 @@
-Working with Maps
-==============
+---
+name: Xamarin.Forms - Working with Maps
+description: "This sample relates to the Working with Maps in Xamarin.Forms doc #ui #map"
+page_type: sample
+languages:
+- csharp
+products:
+- xamarin
+urlFragment: workingwithmaps
+---
+# Working with Maps
 
-This sample relates to the [Working with Maps in Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/maps) doc.
+This sample relates to the [Working with Maps in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/map) doc.
 
-![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/WorkingWithMaps/Screenshots/maps-zoom-sml.png "Map zoom")
+![Working with Maps application screenshot](Screenshots/01All.png "Working with Maps application screenshot")
 
-Requirements 
-------------
-An iOS provisioning profile is required to deploy this sample to a simulator.
+## Author
 
-Author
-------
-
-Craig Dunn
+Craig Dunn, Andrei Nitescu

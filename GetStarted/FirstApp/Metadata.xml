@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>05FCADB0-950F-4559-9774-5E301E8E3771</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Basic</Level>
+	<Tags>Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS, Windows</SupportedPlatforms>
+	<Gallery>true</Gallery>
+	<Brief>Two lines of code beginner app.</Brief>
+</SampleMetadata>

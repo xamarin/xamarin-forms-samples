@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:ScaleAndRotate"
+             x:Class="ScaleAndRotate.HomePage"
+             Title="Scale and Rotate">
+    <TableView Intent="Menu">
+        <TableSection>
+            <TextCell Text="Scale and Rotate (XAML)"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:ScaleAndRotatePage}" />
+            <TextCell Text="Scale"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:ScaleDemoPage}" />
+            <TextCell Text="ScaleX"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:ScaleXDemoPage}" />
+            <TextCell Text="ScaleY"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:ScaleYDemoPage}" />
+            <TextCell Text="Rotation"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:RotationDemoPage}" />
+            <TextCell Text="RotationX"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:RotationXDemoPage}" />
+            <TextCell Text="RotationY"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:RotationYDemoPage}" />
+        </TableSection>
+    </TableView>
+</ContentPage>

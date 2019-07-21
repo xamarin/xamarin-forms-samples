@@ -18,16 +18,6 @@ namespace CustomRenderer.iOS
 		{
 			base.OnElementChanged (e);
 
-			if (Control == null) {
-				userController = new WKUserContentController ();
-				var script = new WKUserScript (new NSString (JavaScriptFunction), WKUserScriptInjectionTime.AtDocumentEnd, false);
-				userController.AddUserScript (script);
-				userController.AddScriptMessageHandler (this, "invokeAction");
-
-				var config = new WKWebViewConfiguration { UserContentController = userController };
-				var webView = new WKWebView (Frame, config);
-				SetNativeControl (webView);
-			}
 			if (e.OldElement != null) {
 				userController.RemoveAllUserScripts ();
 				userController.RemoveScriptMessageHandler ("invokeAction");
@@ -35,7 +25,19 @@ namespace CustomRenderer.iOS
 				hybridWebView.Cleanup ();
 			}
 			if (e.NewElement != null) {
-				string fileName = Path.Combine (NSBundle.MainBundle.BundlePath, string.Format ("Content/{0}", Element.Uri));
+                if (Control == null)
+                {
+                    userController = new WKUserContentController();
+                    var script = new WKUserScript(new NSString(JavaScriptFunction), WKUserScriptInjectionTime.AtDocumentEnd, false);
+                    userController.AddUserScript(script);
+                    userController.AddScriptMessageHandler(this, "invokeAction");
+
+                    var config = new WKWebViewConfiguration { UserContentController = userController };
+                    var webView = new WKWebView(Frame, config);
+                    SetNativeControl(webView);
+                }
+
+                string fileName = Path.Combine (NSBundle.MainBundle.BundlePath, string.Format ("Content/{0}", Element.Uri));
 				Control.LoadRequest (new NSUrlRequest (new NSUrl (fileName, false)));
 			}
 		}

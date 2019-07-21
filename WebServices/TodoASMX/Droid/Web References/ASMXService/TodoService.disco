@@ -1,4 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<discovery xmlns:scl="http://schemas.xmlsoap.org/disco/scl/" xmlns="http://schemas.xmlsoap.org/disco/">
-  <scl:contractRef docRef="http://todoasmxservice.azurewebsites.net/TodoService.asmx" ref="http://todoasmxservice.azurewebsites.net/TodoService.asmx?wsdl" />
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost:49178/TodoService.asmx?wsdl" docRef="http://localhost:49178/TodoService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost:49178/TodoService.asmx" xmlns:q1="http://www.xamarin.com/webservices/" binding="q1:TodoServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://localhost:49178/TodoService.asmx" xmlns:q2="http://www.xamarin.com/webservices/" binding="q2:TodoServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
 </discovery>

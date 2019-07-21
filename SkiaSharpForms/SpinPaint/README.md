@@ -1,5 +1,14 @@
-SpinPaint
-=========
+---
+name: Xamarin.Forms - SpinPaint
+description: "SpinPaint is a Xamarin.Forms application that runs on iOS, Android, and Universal Windows Platform devices. #skiasharp"
+page_type: sample
+languages:
+- csharp
+products:
+- xamarin
+urlFragment: skiasharpforms-spinpaint
+---
+# SpinPaint
 
 SpinPaint is a Xamarin.Forms application that runs on iOS, Android, and Universal Windows Platform devices.
 
@@ -9,8 +18,10 @@ The current color of the line is indicated by the color of the title of the prog
 
 SpinPaint demonstrates the use of SkiaSharp in a Xamarin.Forms application. For more information about SkiaSharp see [Using SkiaSharp in Xamarin.Forms](/guides/xamarin-forms/advanced/skiasharp/). The program also uses a touch-tracking effect discussed in the article [Invoking Events from Effects](/guides/xamarin-forms/application-fundamentals/effects/touch-tracking/).
 
-SpinPaint uses a Portable Class Library (PCL) for the shared code. For a version that uses a Shared Project, see [SpinPaintShared](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaintShared/).
+SpinPaint uses a .NET Standard Library for the shared code. For a version that uses a Shared Project, see [SpinPaintShared](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaintShared/).
 
-Author
-------
+![SpinPaint application screenshot](Screenshots/Image0.png "SpinPaint application screenshot")
+
+## Author
+
 Charles Petzold

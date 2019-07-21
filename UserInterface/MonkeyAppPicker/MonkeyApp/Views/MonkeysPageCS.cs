@@ -6,7 +6,7 @@ namespace MonkeyApp
 	{
 		public MonkeysPageCS()
 		{
-			var picker = new Picker { Title = "Select a monkey" };
+			var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 			picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");
 			picker.SetBinding(Picker.SelectedItemProperty, "SelectedMonkey");
 			picker.ItemDisplayBinding = new Binding("Name");
@@ -29,7 +29,7 @@ namespace MonkeyApp
 			{
 				Content = new StackLayout
 				{
-					Margin = new Thickness(20),
+					Margin = new Thickness(20,35,20,20),
 					Children =
 					{
 						new Label { Text = "Monkeys", FontAttributes = FontAttributes.Bold, HorizontalOptions = LayoutOptions.Center },

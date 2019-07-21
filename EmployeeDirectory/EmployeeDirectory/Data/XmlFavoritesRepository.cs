@@ -24,117 +24,128 @@ using PCLStorage;
 
 namespace EmployeeDirectory.Data
 {
-	[XmlRoot ("Favorites")]
-	public class XmlFavoritesRepository : IFavoritesRepository
-	{
-		public string IsolatedStorageName { get; set; }
+    [XmlRoot("Favorites")]
+    public class XmlFavoritesRepository : IFavoritesRepository
+    {
+        public string IsolatedStorageName { get; set; }
 
-		public event EventHandler Changed;
+        public event EventHandler Changed;
 
-		public List<Person> People { get; set; }
+        public List<Person> People { get; set; }
 
-		public async static Task<XmlFavoritesRepository> OpenIsolatedStorage (string isolatedStorageName)
-		{
-			var serializer = new XmlSerializer (typeof(XmlFavoritesRepository));
+        public async static Task<XmlFavoritesRepository> OpenIsolatedStorage(string isolatedStorageName)
+        {
+            var serializer = new XmlSerializer(typeof(XmlFavoritesRepository));
 
-			IFolder store = FileSystem.Current.LocalStorage;
-			IFile file = await store.GetFileAsync (isolatedStorageName);
+            IFolder store = FileSystem.Current.LocalStorage;
+            IFile file = await store.GetFileAsync(isolatedStorageName);
 
-			try {
-				using (var f = new StreamReader (await file.OpenAsync (FileAccess.Read))) {
-					var repo = (XmlFavoritesRepository)serializer.Deserialize (f);
-					repo.IsolatedStorageName = isolatedStorageName;
-					return repo;
-				}
-			} catch (Exception) {
-				return new XmlFavoritesRepository {
-					IsolatedStorageName = isolatedStorageName,
-					People = new List<Person> ()
-				};
-			}
-		}
+            try
+            {
+                using (var f = new StreamReader(await file.OpenAsync(PCLStorage.FileAccess.Read)))
+                {
+                    var repo = (XmlFavoritesRepository)serializer.Deserialize(f);
+                    repo.IsolatedStorageName = isolatedStorageName;
+                    return repo;
+                }
+            }
+            catch (Exception)
+            {
+                return new XmlFavoritesRepository
+                {
+                    IsolatedStorageName = isolatedStorageName,
+                    People = new List<Person>()
+                };
+            }
+        }
 
-		public async static Task<XmlFavoritesRepository> OpenFile (string path)
-		{
-			var serializer = new XmlSerializer (typeof(XmlFavoritesRepository));
+        public async static Task<XmlFavoritesRepository> OpenFile(string path)
+        {
+            var serializer = new XmlSerializer(typeof(XmlFavoritesRepository));
 
-			IFolder store = FileSystem.Current.LocalStorage;
-			IFile file = await store.GetFileAsync (path);
+            IFolder store = FileSystem.Current.LocalStorage;
+            IFile file = await store.GetFileAsync(path);
 
-			using (var f = new StreamReader (await file.OpenAsync (FileAccess.Read))) {
-				var repo = (XmlFavoritesRepository)serializer.Deserialize (f);
-				repo.IsolatedStorageName = Path.GetFileName (path);
-				return repo;
-			}
-		}
+            using (var f = new StreamReader(await file.OpenAsync(PCLStorage.FileAccess.Read)))
+            {
+                var repo = (XmlFavoritesRepository)serializer.Deserialize(f);
+                repo.IsolatedStorageName = Path.GetFileName(path);
+                return repo;
+            }
+        }
 
-		private async Task Commit ()
-		{
-			var serializer = new XmlSerializer (typeof(XmlFavoritesRepository));
+        private async Task Commit()
+        {
+            var serializer = new XmlSerializer(typeof(XmlFavoritesRepository));
 
-			IFolder store = FileSystem.Current.LocalStorage;
-			IFile file = await store.GetFileAsync (IsolatedStorageName);
+            IFolder store = FileSystem.Current.LocalStorage;
+            IFile file = await store.GetFileAsync(IsolatedStorageName);
 
-			await file.DeleteAsync ();
-			file = await store.CreateFileAsync (IsolatedStorageName, CreationCollisionOption.OpenIfExists);
+            await file.DeleteAsync();
+            file = await store.CreateFileAsync(IsolatedStorageName, CreationCollisionOption.OpenIfExists);
 
-			using (var f = await file.OpenAsync (FileAccess.ReadAndWrite)) {
-				serializer.Serialize (f, this);
-			}
+            using (var f = await file.OpenAsync(PCLStorage.FileAccess.ReadAndWrite))
+            {
+                serializer.Serialize(f, this);
+            }
 
-			var ev = Changed;
-			if (ev != null) {
-				ev (this, EventArgs.Empty);
-			}
-		}
+            var ev = Changed;
+            if (ev != null)
+            {
+                ev(this, EventArgs.Empty);
+            }
+        }
 
-		#region IFavoritesRepository implementation
+        #region IFavoritesRepository implementation
 
-		public IEnumerable<Person> GetAll ()
-		{
-			return People;
-		}
+        public IEnumerable<Person> GetAll()
+        {
+            return People;
+        }
 
-		public Person FindById (string id)
-		{
-			return People.FirstOrDefault (x => x.Id == id);
-		}
+        public Person FindById(string id)
+        {
+            return People.FirstOrDefault(x => x.Id == id);
+        }
 
-		public bool IsFavorite (Person person)
-		{
-			return People.Any (x => x.Id == person.Id);
-		}
+        public bool IsFavorite(Person person)
+        {
+            return People.Any(x => x.Id == person.Id);
+        }
 
-		public void InsertOrUpdate (Person person)
-		{
-			var existing = People.FirstOrDefault (x => x.Id == person.Id);
-			if (existing != null)
-				People.Remove (existing);
+        public void InsertOrUpdate(Person person)
+        {
+            var existing = People.FirstOrDefault(x => x.Id == person.Id);
+            if (existing != null)
+                People.Remove(existing);
 
-			People.Add (person);
-			var task = Task.Run (async () => {
-				await Commit ();
-			});
-			task.Wait ();
-		}
+            People.Add(person);
+            var task = Task.Run(async () =>
+            {
+                await Commit();
+            });
+            task.Wait();
+        }
 
-		public void Delete (Person person)
-		{
-			var newPeopleQ = from p in People
-			                 where p.Id != person.Id
-			                 select p;
-			var newPeople = newPeopleQ.ToList ();
-			var n = People.Count - newPeople.Count;
-			People = newPeople;
-			if (n != 0) {
-				var task = Task.Run (async () => {
-					await Commit ();
-				});
-				task.Wait ();
-			}
-		}
+        public void Delete(Person person)
+        {
+            var newPeopleQ = from p in People
+                             where p.Id != person.Id
+                             select p;
+            var newPeople = newPeopleQ.ToList();
+            var n = People.Count - newPeople.Count;
+            People = newPeople;
+            if (n != 0)
+            {
+                var task = Task.Run(async () =>
+                {
+                    await Commit();
+                });
+                task.Wait();
+            }
+        }
 
-		#endregion
-	}
+        #endregion
+    }
 }
 

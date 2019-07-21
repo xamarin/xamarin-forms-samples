@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Accessibility"
+             x:Class="Accessibility.MainPage"
+             Title="Accessibility Demos">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout Margin="20">
+        <Button Text="Automation Properties"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:AccessibilityPage}" />
+        <Button Text="Tab Order"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:TabIndexPage}" />
+    </StackLayout>
+</ContentPage>

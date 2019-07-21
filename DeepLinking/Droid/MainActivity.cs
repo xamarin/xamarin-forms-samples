@@ -2,31 +2,40 @@
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
+using Firebase;
 using Xamarin.Forms.Platform.Android.AppLinks;
 
 namespace DeepLinking.Droid
 {
-	[Activity (Label = "DeepLinking.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "DeepLinking.Droid", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	[IntentFilter (new[] { Intent.ActionView },
-		Categories = new[] {
+		Categories = new[] 
+        {
 			Intent.ActionView,
 			Intent.CategoryDefault,
 			Intent.CategoryBrowsable
 		},
-		DataScheme = "http",
-		DataHost = "DeepLinking",
-		DataPathPrefix = "/deeplinking/")
-	]
-	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
+        DataScheme = "http",
+        DataHost = "deeplinking",
+        DataPathPrefix = "/",
+        AutoVerify = true)
+    ]
+	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
-			base.OnCreate (bundle);
+            ToolbarResource = Resource.Layout.Toolbar;
+            TabLayoutResource = Resource.Layout.Tabbar;
 
-			global::Xamarin.Forms.Forms.Init (this, bundle);
-			AndroidAppLinks.Init (this);
+            base.OnCreate (bundle);
 
-			LoadApplication (new App ());
+            // Check that the data has been retrieved from google-services.json
+            //var apps = FirebaseApp.GetApps(this);
+
+            Xamarin.Forms.Forms.Init(this, bundle);
+            FirebaseApp.InitializeApp(this);
+            AndroidAppLinks.Init(this);
+            LoadApplication (new App ());
 		}
 	}
 }

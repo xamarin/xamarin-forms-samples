@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="StepperDemo.BasicStepperBindingsPage"
+             Title="Basic Stepper Bindings">
+    <StackLayout Margin="20">
+        <Label Text="ROTATING TEXT"
+               Rotation="{Binding Source={x:Reference _stepper}, Path=Value}"
+               FontSize="Large"
+               HorizontalOptions="Center" 
+               VerticalOptions="CenterAndExpand" />
+        <Stepper x:Name="_stepper"
+                 Maximum="360"
+                 Increment="30"
+                 HorizontalOptions="Center" />
+        <Label Text="{Binding Source={x:Reference _stepper}, Path=Value, StringFormat='The Stepper value is {0:F0}'}"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>

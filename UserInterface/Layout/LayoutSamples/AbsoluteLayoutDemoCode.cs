@@ -46,7 +46,7 @@ namespace LayoutSamples
 				HorizontalOptions = LayoutOptions.FillAndExpand,
 				BackgroundColor = Color.Green,
 				TextColor = Color.White,
-				BorderRadius = 0,
+				CornerRadius = 0,
 				FontSize = 20
 			};
 			btnSize = new Button {
@@ -54,7 +54,7 @@ namespace LayoutSamples
 				HorizontalOptions = LayoutOptions.FillAndExpand,
 				BackgroundColor = Color.Green,
 				TextColor = Color.White,
-				BorderRadius = 0,
+				CornerRadius = 0,
 				FontSize = 20
 			};
 

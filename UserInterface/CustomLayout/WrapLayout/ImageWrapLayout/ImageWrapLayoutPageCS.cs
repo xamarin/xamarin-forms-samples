@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -6,44 +7,56 @@ using Xamarin.Forms;
 
 namespace ImageWrapLayout
 {
-	public class ImageWrapLayoutPageCS : ContentPage
+    public class ImageWrapLayoutPageCS : ContentPage
 	{
-		WrapLayout wrapLayout;
+        HttpClient _client;
+        WrapLayout _wrapLayout;
 
 		public ImageWrapLayoutPageCS()
 		{
-			wrapLayout = new WrapLayout();
+			_wrapLayout = new WrapLayout();
 
 			Content = new ScrollView
 			{
-				Margin = new Thickness(0, 20, 0, 20),
-				Content = wrapLayout
+				Margin = new Thickness(20, 35, 20, 20),
+				Content = _wrapLayout
 			};
-		}
 
-		protected override async void OnAppearing()
-		{
-			base.OnAppearing();
+            _client = new HttpClient();
+        }
 
-			var images = await GetImageListAsync();
-			foreach (var photo in images.Photos)
-			{
-				var image = new Image
-				{
-					Source = ImageSource.FromUri(new Uri(photo + string.Format("?width={0}&height={0}&mode=max", Device.RuntimePlatform == Device.UWP ? 120 : 240)))
-				};
-				wrapLayout.Children.Add(image);
-			}
-		}
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
 
-		async Task<ImageList> GetImageListAsync()
-		{
-			var requestUri = "https://docs.xamarin.com/demo/stock.json";
-			using (var client = new HttpClient())
-			{
-				var result = await client.GetStringAsync(requestUri);
-				return JsonConvert.DeserializeObject<ImageList>(result);
-			}
-		}
-	}
+            var images = await GetImageListAsync();
+            if (images != null)
+            {
+                foreach (var photo in images.Photos)
+                {
+                    var image = new Image
+                    {
+                        Source = ImageSource.FromUri(new Uri(photo))
+                    };
+                    _wrapLayout.Children.Add(image);
+                }
+            }
+        }
+
+        async Task<ImageList> GetImageListAsync()
+        {
+            try
+            {
+                string requestUri = "https://raw.githubusercontent.com/xamarin/docs-archive/master/Images/stock/small/stock.json";
+                string result = await _client.GetStringAsync(requestUri);
+                return JsonConvert.DeserializeObject<ImageList>(result);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"\tERROR: {ex.Message}");
+            }
+
+            return null;
+        }
+    }
 }

@@ -1,5 +1,14 @@
-Working with ListView Native Layouts
-==============
+---
+name: Xamarin.Forms - Working with ListView Native Layouts
+description: "The Xamarin.Forms layout engine is very powerful, enabling developers to express their screens in a way that can be rendered... #ui"
+page_type: sample
+languages:
+- csharp
+products:
+- xamarin
+urlFragment: workingwithlistviewnative
+---
+# Working with ListView Native Layouts
 
 The Xamarin.Forms layout engine is very powerful, enabling developers to express their screens in a way that can be rendered across all supported platforms.
 
@@ -22,7 +31,6 @@ The custom renderer native cells are shown in this screenshot:
 *(Xaml examples still-to-come)*
 
 
-Author
-------
+## Author
 
 Craig Dunn

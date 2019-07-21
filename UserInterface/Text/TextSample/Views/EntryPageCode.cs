@@ -1,5 +1,4 @@
-﻿ using System;
-
+﻿using System;
 using Xamarin.Forms;
 
 namespace TextSample
@@ -10,14 +9,21 @@ namespace TextSample
 		int currentStatus = 0;
 		int maxStatus = 4;
 		StackLayout layout;
+
 		public EntryPageCode ()
 		{
-			layout = new StackLayout{ Padding = new Thickness (5, 10) };
+			layout = new StackLayout { Margin = new Thickness (20) };
 			this.Title = "Entry Demo - Code";
 			styledEntry.Focused += StyledEntry_Focused;
 
+            var entry = new Entry { Placeholder = "Enter text here", ReturnType = ReturnType.Send };
+            entry.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
+
 			layout.Children.Add (new Entry ());
 			layout.Children.Add (styledEntry);
+            layout.Children.Add (entry);
+            layout.Children.Add(new Entry { Text = "Cursor position and selection length set", CursorPosition = 5, SelectionLength = 10 });
+            layout.Children.Add(new Entry { Text = "This is a read-only Entry", IsReadOnly = true });
 			this.Content = layout;
 		}
 
@@ -54,5 +60,3 @@ namespace TextSample
 		}
 	}
 }
-
-

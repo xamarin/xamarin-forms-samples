@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Xaminals.Controls"
+             xmlns:data="clr-namespace:Xaminals.Data"
+             xmlns:views="clr-namespace:Xaminals.Views"
+             x:Class="Xaminals.Views.BearsPage"
+             Title="Bears">
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" 
+                                        Value="#546DFE" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+    
+    <Shell.SearchHandler>
+        <controls:AnimalSearchHandler Placeholder="Enter search term"
+                                      ShowsResults="true"
+                                      ItemTemplate="{StaticResource AnimalSearchTemplate}"
+                                      Animals="{x:Static data:BearData.Bears}"
+                                      SelectedItemNavigationTarget="{x:Type views:BearDetailPage}" />
+    </Shell.SearchHandler>
+   
+<!--    <Shell.SearchHandler>
+        <SearchHandler x:Name="searchHandler"
+                       Placeholder="Enter search term"
+                       ShowsResults="true"
+                       Command="{Binding SearchCommand}"
+                       CommandParameter="{Binding Source={x:Reference searchHandler}, Path=Query}"
+                       ItemsSource="{Binding SearchResults}"
+                       ItemTemplate="{StaticResource AnimalSearchTemplate}" />
+    </Shell.SearchHandler>-->
+    
+    <CollectionView Margin="20"
+                    ItemsSource="{x:Static data:BearData.Bears}"
+                    ItemTemplate="{StaticResource AnimalTemplate}"
+                    SelectionMode="Single"
+                    SelectionChanged="OnCollectionViewSelectionChanged" />
+</ContentPage>

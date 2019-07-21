@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FlexLayoutDemos"
+             x:Class="FlexLayoutDemos.BasisExperimentPage"
+             Title="Basis Experiment">
+    
+    <Grid Margin="10, 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Control Panel -->
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.Resources>
+                <local:BooleanInverseConverter x:Key="booleanInverse" />
+
+                <Style TargetType="Label">
+                    <Setter Property="VerticalOptions" Value="Center" />
+                </Style>
+
+                <Style TargetType="StackLayout">
+                    <Setter Property="Orientation" Value="Horizontal" />
+                    <Setter Property="HorizontalOptions" Value="Center" />
+                </Style>
+            </Grid.Resources>
+
+            <!-- Controls for Label 2 -->
+            <Label Text="Label 2:"
+                   Grid.Row="0" Grid.Column="0" />
+
+            <StackLayout Grid.Row="0" Grid.Column="1">
+
+                <Label Text="Auto" />
+
+                <Switch x:Name="autoSwitch2"
+                        IsToggled="True"
+                        Toggled="OnLabel2AutoSwitchToggled" />
+                
+            </StackLayout>
+
+            <StackLayout Grid.Row="0" Grid.Column="2">
+                <Label Text="Is Relative"
+                       IsEnabled="{Binding Source={x:Reference autoSwitch2},
+                                           Path=IsToggled,
+                                           Converter={StaticResource booleanInverse}}" />
+
+                <Switch x:Name="relativeSwitch2"
+                        IsToggled="True"
+                        Toggled="OnLabel2IsRelativeSwitchToggled"
+                        IsEnabled="{Binding Source={x:Reference autoSwitch2},
+                                            Path=IsToggled,
+                                            Converter={StaticResource booleanInverse}}" />
+            </StackLayout>
+
+            <Slider x:Name="slider2"
+                    ValueChanged="OnLabel2SliderValueChanged"
+                    Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
+                    IsEnabled="{Binding Source={x:Reference autoSwitch2},
+                                        Path=IsToggled,
+                                        Converter={StaticResource booleanInverse}}" />
+
+            <Label Text="{Binding Source={x:Reference slider2},
+                                  Path=Value,
+                                  StringFormat='Value = {0:F2}'}"
+                   Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
+                   HorizontalOptions="Center"
+                   IsEnabled="{Binding Source={x:Reference autoSwitch2},
+                                       Path=IsToggled,
+                                       Converter={StaticResource booleanInverse}}" />
+            
+            <!-- Controls for Label 4 -->
+            <Label Text="Label 4:"
+                   Grid.Row="3" Grid.Column="0" />
+
+            <StackLayout Grid.Row="3" Grid.Column="1">
+
+                <Label Text="Auto" />
+
+                <Switch x:Name="autoSwitch4"
+                        IsToggled="True"
+                        Toggled="OnLabel4AutoSwitchToggled" />
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="3" Grid.Column="2">
+                <Label Text="Is Relative"
+                       IsEnabled="{Binding Source={x:Reference autoSwitch4},
+                                           Path=IsToggled,
+                                           Converter={StaticResource booleanInverse}}" />
+
+                <Switch x:Name="relativeSwitch4"
+                        IsToggled="True"
+                        Toggled="OnLabel4IsRelativeSwitchToggled"
+                        IsEnabled="{Binding Source={x:Reference autoSwitch4},
+                                            Path=IsToggled,
+                                            Converter={StaticResource booleanInverse}}" />
+            </StackLayout>
+
+            <Slider x:Name="slider4"
+                    ValueChanged="OnLabel4SliderValueChanged"
+                    Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
+                    IsEnabled="{Binding Source={x:Reference autoSwitch4},
+                                        Path=IsToggled,
+                                        Converter={StaticResource booleanInverse}}" />
+
+            <Label Text="{Binding Source={x:Reference slider4},
+                                  Path=Value,
+                                  StringFormat='Value = {0:F2}'}"
+                   Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
+                   HorizontalOptions="Center"
+                   IsEnabled="{Binding Source={x:Reference autoSwitch4},
+                                       Path=IsToggled,
+                                       Converter={StaticResource booleanInverse}}" />
+        </Grid>
+
+        <!-- FlexLayout -->
+        <FlexLayout Grid.Row="1"
+                    Direction="Column"
+                    Wrap="Wrap"
+                    BackgroundColor="AliceBlue">
+            
+            <Label Text="Label 1"
+                   TextColor="Blue"
+                   BackgroundColor="Pink" />
+
+            <Label x:Name="label2"
+                   Text="Label 2"
+                   TextColor="Red"
+                   BackgroundColor="Cyan" />
+            
+            <Label Text="Label 3"
+                   TextColor="Blue"
+                   BackgroundColor="Pink" />
+
+            <Label x:Name="label4"
+                   Text="Label 4"
+                   TextColor="Red"
+                   BackgroundColor="Cyan" />
+
+            <Label Text="Label 5"
+                   TextColor="Blue"
+                   BackgroundColor="Pink" />
+        </FlexLayout>
+    </Grid>
+</ContentPage>

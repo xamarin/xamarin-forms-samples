@@ -10,7 +10,7 @@ namespace Styles
 		public DynamicStylesInheritancePageCS ()
 		{
 			Title = "Dynamic Inheritance";
-			Icon = "csharp.png";
+			IconImageSource = "csharp.png";
 			Padding = new Thickness (0, 20, 0, 0);
 
 			var baseStyle = new Style (typeof(View)) {
@@ -32,8 +32,8 @@ namespace Styles
 					new Setter {
 						Property = SearchBar.TextColorProperty,
 						Value = Color.Blue
-					} 
-				}	
+					}
+				}
 			};
 
 			var greenSearchBarStyle = new Style (typeof(SearchBar)) {
@@ -46,7 +46,7 @@ namespace Styles
 						Property = SearchBar.TextColorProperty,
 						Value = Color.Green
 					}
-				}	
+				}
 			};
 
 			var tealSearchBarStyle = new Style (typeof(SearchBar)) {
@@ -56,7 +56,7 @@ namespace Styles
 						Property = VisualElement.BackgroundColorProperty,
 						Value = Color.Teal
 					},
-					new Setter { 
+					new Setter {
 						Property = SearchBar.CancelButtonColorProperty,
 						Value = Color.White
 					}
@@ -73,8 +73,8 @@ namespace Styles
 					new Setter {
 						Property = Button.TextColorProperty,
 						Value = Color.Red
-					} 
-				}	
+					}
+				}
 			};
 
 			var button = new Button { Text = "Change Style", Style = buttonStyle };
@@ -85,7 +85,7 @@ namespace Styles
 			Resources.Add ("greenSearchBarStyle", greenSearchBarStyle);
 			Resources ["searchBarStyle"] = Resources ["blueSearchBarStyle"];
 
-			Content = new StackLayout { 
+			Content = new StackLayout {
 				Children = {
 					new SearchBar { Text = "These SearchBar controls", Style = tealSearchBarStyle },
 					new SearchBar { Text = "are demonstrating", Style = tealSearchBarStyle },

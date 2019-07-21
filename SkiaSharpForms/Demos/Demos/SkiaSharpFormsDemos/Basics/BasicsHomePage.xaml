@@ -68,6 +68,18 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:Basics.BasicBitmapsPage}" />
             </TableSection>
+
+            <TableSection Title="Transparency">
+                <TextCell Text="Code More Code"
+                          Detail="Animate the alpha channel to fade between text strings"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.CodeMoreCodePage}" />
+
+                <TextCell Text="Bitmap Dissolve"
+                          Detail="Use a transparency to dissolve between one bitmap and another"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.BitmapDissolvePage}" />
+            </TableSection>
         </TableRoot>
     </TableView>
 </local:HomeBasePage>

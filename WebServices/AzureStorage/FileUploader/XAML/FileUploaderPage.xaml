@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:FileUploader" x:Class="FileUploader.FileUploaderPage">
-	<local:ImageFileUploaderPage />
-	<local:TextFileUploaderPage />
-	<local:TextFileBrowserPage />
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:xamlpages="clr-namespace:FileUploader.XAML" 
+            x:Class="FileUploader.XAML.FileUploaderPage">
+    <xamlpages:ImageFileUploaderPage />
+    <xamlpages:TextFileUploaderPage />
+    <xamlpages:TextFileBrowserPage />
 </TabbedPage>

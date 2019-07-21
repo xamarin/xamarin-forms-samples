@@ -6,9 +6,9 @@ namespace TabbedPageWithNavigationPage
 	{
 		public TodayPageCS ()
 		{
-			Icon = "today.png";
+			IconImageSource = "today.png";
 			Title = "Today";
-			Content = new StackLayout { 
+			Content = new StackLayout {
 				Children = {
 					new Label {
 						Text = "Today's appointments go here",

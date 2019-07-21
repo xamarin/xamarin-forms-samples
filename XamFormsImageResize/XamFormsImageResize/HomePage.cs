@@ -13,12 +13,6 @@ namespace XamFormsImageResize
 #if __ANDROID__
 		public static string ResourcePrefix = "XamFormsImageResize.Android.";
 #endif
-#if WINDOWS_PHONE
-		public static string ResourcePrefix = "XamFormsImageResize.WinPhone.";
-#endif
-#if WINDOWS_PHONE_APP
-        public static string ResourcePrefix = "XamFormsImageResize.WinPhone81.";
-#endif
 #if WINDOWS_UWP
         public static string ResourcePrefix = "XamFormsImageResize.UWP.";
 #endif

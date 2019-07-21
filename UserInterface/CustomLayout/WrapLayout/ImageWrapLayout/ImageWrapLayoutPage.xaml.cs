@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -8,9 +9,12 @@ namespace ImageWrapLayout
 {
     public partial class ImageWrapLayoutPage : ContentPage
     {
+        HttpClient _client;
+
         public ImageWrapLayoutPage()
         {
             InitializeComponent();
+            _client = new HttpClient();
         }
 
         protected override async void OnAppearing()
@@ -18,24 +22,33 @@ namespace ImageWrapLayout
             base.OnAppearing();
 
             var images = await GetImageListAsync();
-            foreach (var photo in images.Photos)
+            if (images != null)
             {
-                var image = new Image
+                foreach (var photo in images.Photos)
                 {
-                    Source = ImageSource.FromUri(new Uri(photo + string.Format("?width={0}&height={0}&mode=max", Device.RuntimePlatform == Device.UWP ? 120 : 240)))
-                };
-                wrapLayout.Children.Add(image);
+                    var image = new Image
+                    {
+                        Source = ImageSource.FromUri(new Uri(photo))
+                    };
+                    wrapLayout.Children.Add(image);
+                }
             }
         }
 
         async Task<ImageList> GetImageListAsync()
         {
-            var requestUri = "https://docs.xamarin.com/demo/stock.json";
-            using (var client = new HttpClient())
+            try
             {
-                var result = await client.GetStringAsync(requestUri);
+                string requestUri = "https://raw.githubusercontent.com/xamarin/docs-archive/master/Images/stock/small/stock.json";
+                string result = await _client.GetStringAsync(requestUri);
                 return JsonConvert.DeserializeObject<ImageList>(result);
             }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"\tERROR: {ex.Message}");
+            }
+
+            return null;
         }
     }
 }

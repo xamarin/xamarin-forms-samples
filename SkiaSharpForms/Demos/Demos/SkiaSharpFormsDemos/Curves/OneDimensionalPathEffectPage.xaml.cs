@@ -52,7 +52,7 @@ namespace SkiaSharpFormsDemos.Curves
                              new SKPoint(-info.Width, info.Height),
                              new SKPoint(info.Width, 0));
 
-                switch (effectStylePicker.Items[effectStylePicker.SelectedIndex])
+                switch ((string)effectStylePicker.SelectedItem)
                 {
                     case "Translate":
                         pathPaint.PathEffect = translatePathEffect;

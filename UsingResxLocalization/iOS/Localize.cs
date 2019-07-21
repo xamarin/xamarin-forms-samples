@@ -57,15 +57,12 @@ namespace UsingResxLocalization.iOS
 		string iOSToDotnetLanguage(string iOSLanguage)
 		{
 			Console.WriteLine("iOS Language:" + iOSLanguage);
-			var netLanguage = iOSLanguage; 
+            // .NET cultures don't support underscores
+            string netLanguage = iOSLanguage.Replace("_", "-");
 
-			//certain languages need to be converted to CultureInfo equivalent
+			// certain languages need to be converted to CultureInfo equivalent
 			switch (iOSLanguage)
 			{
-				case "ms-MY":   // "Malaysian (Malaysia)" not supported .NET culture
-				case "ms-SG":	// "Malaysian (Singapore)" not supported .NET culture
-					netLanguage = "ms"; // closest supported
-					break;
 				case "gsw-CH":  // "Schwiizertüütsch (Swiss German)" not supported .NET culture
 					netLanguage = "de-CH"; // closest supported
 					break;
@@ -83,8 +80,8 @@ namespace UsingResxLocalization.iOS
 
 			switch (platCulture.LanguageCode)
 			{
-				// 
-				case "pt":
+                // force different 'fallback' behavior for some language codes
+                case "pt":
 					netLanguage = "pt-PT"; // fallback to Portuguese (Portugal)
 					break;
 				case "gsw":

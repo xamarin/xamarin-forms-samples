@@ -17,7 +17,7 @@ namespace LayoutSamples
 				BackgroundColor = Color.FromHex ("#3498db"),
 				TextColor = Color.White,
 				Text = "<",
-				BorderRadius = 15,
+				CornerRadius = 15,
 				HeightRequest = 30,
 				WidthRequest = 30
 			};
@@ -27,7 +27,7 @@ namespace LayoutSamples
 				BackgroundColor = Color.FromHex ("#3498db"),
 				TextColor = Color.White,
 				Text = "||",
-				BorderRadius = 25,
+				CornerRadius = 25,
 				HeightRequest = 50,
 				WidthRequest = 50
 			};
@@ -35,7 +35,7 @@ namespace LayoutSamples
 				BackgroundColor = Color.FromHex ("#3498db"),
 				TextColor = Color.White,
 				Text = ">",
-				BorderRadius = 15,
+				CornerRadius = 15,
 				HeightRequest = 30,
 				WidthRequest = 30
 			};

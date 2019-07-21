@@ -1,11 +1,19 @@
-Xamarin.Forms ListView Sample: Binding Context Changed
-===========================
+---
+name: 'Xamarin.Forms - ListView Binding Context Changed'
+description: "Demonstrates binding context changes in a ListView custom cell in Xamarin.Forms #ui"
+page_type: sample
+languages:
+- csharp
+products:
+- xamarin
+urlFragment: userinterface-listview-bindingcontextchanged
+---
+# Xamarin.Forms ListView Sample: Binding Context Changed
 
-Sample code associated with the [ListView Docs](http://developer.xamarin.com/guides/xamarin-forms/user-interface/list_view/).
+Sample code associated with the [ListView docs](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/listview/).
 
 This sample demonstrates binding context changes in a ListView custom cell in Xamarin.Forms.
 
 
-Author
-------
+## Author
 David Britch

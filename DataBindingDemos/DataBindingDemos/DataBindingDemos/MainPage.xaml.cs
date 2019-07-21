@@ -6,6 +6,8 @@ namespace DataBindingDemos
 {
     public partial class MainPage : ContentPage
     {
+        public ICommand NavigateCommand { get; private set; }
+
         public MainPage()
         {
             InitializeComponent();
@@ -19,7 +21,5 @@ namespace DataBindingDemos
 
             BindingContext = this;
         }
-
-        public ICommand NavigateCommand { private set; get; }
     }
 }

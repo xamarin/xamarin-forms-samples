@@ -63,8 +63,8 @@ namespace ResponsiveLayout
 					innerGrid.Children.Remove (controlsGrid);
 					innerGrid.Children.Add (controlsGrid, 1, 0);
 				} else {
+					innerGrid.RowDefinitions.Clear();
 					innerGrid.ColumnDefinitions.Clear ();
-
 					innerGrid.ColumnDefinitions.Add (new ColumnDefinition{ Width = new GridLength (1, GridUnitType.Star) });
 					innerGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Auto) });
 					innerGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Star) });

@@ -1,11 +1,21 @@
-Xamarin.Forms TableView
-==============
+---
+name: Xamarin.Forms - Xamarin.Forms TableView
+description: "This sample relates to the TableView in Xamarin.Forms doc. The app consists of several tabs. There are four tabs with identical tables #ui"
+page_type: sample
+languages:
+- csharp
+products:
+- xamarin
+urlFragment: userinterface-tableview
+---
+# Xamarin.Forms TableView
 
-This sample relates to the [ TableView in Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/user-interface/table-view/) doc.
+This sample relates to the [TableView in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/tableview/) doc.
 
-The app consists of several tabs. There are four tabs with identical tables, with each demonstrating a different `TableIntent`. There is one tab demonstrating the customization options of `EntryCell`. Another tab demonstrates `SwitchCell`. 
+The app consists of several tabs. There are four tabs with identical tables, with each demonstrating a different `TableIntent`. There is one tab demonstrating the customization options of `EntryCell`. Another tab demonstrates `SwitchCell`.
 
-Author
-------
+![Xamarin.Forms TableView application screenshot](Screenshots/entry.png "Xamarin.Forms TableView application screenshot")
+
+## Author
 
 Nathan C. Castle

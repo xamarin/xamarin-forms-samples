@@ -21,7 +21,7 @@ namespace MarkupExtensions
             }
 
             string assemblyName = GetType().GetTypeInfo().Assembly.GetName().Name;
-            return ImageSource.FromResource(assemblyName + "." + Source);
+            return ImageSource.FromResource(assemblyName + "." + Source, typeof(ImageResourceExtension).GetTypeInfo().Assembly);
         }
 
         object IMarkupExtension.ProvideValue(IServiceProvider serviceProvider)

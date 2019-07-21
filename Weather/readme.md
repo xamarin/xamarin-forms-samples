@@ -1,22 +1,21 @@
-Weather App for Xamarin.Forms
-==========
+---
+name: Xamarin.Forms - Weather App
+description: WeatherApp is a sample app that retrieves weather data from OpenWeatherMap. To use this sample, you must sign up for a free API key.
+page_type: sample
+languages:
+- csharp
+products:
+- xamarin
+urlFragment: weather
+---
+# Weather App
 
-WeatherApp is an example that accompanies [Learn app-building basics with Xamarin.Forms in Visual Studio](https://docs.microsoft.com/visualstudio/cross-platform/learn-app-building-basics-with-xamarin-forms-in-visual-studio).
+WeatherApp is a sample app that retrieves weather data from OpenWeatherMap.
 
-It consists of a .NET Standard library that contains all the UI and business logic. The platform-specific projects for Android, iOS, and the Universal Windows Platform are the minimal app stubs.
+To use this sample, you must sign up for a free API key at [https://openweathermap.org/appid](https://openweathermap.org/appid). Paste that key into the `Constants.OpenWeatherMapAPIKey` property.
 
-To use this sample, you must first sign up for a free API key at [http://openweathermap.org/appid](http://openweathermap.org/appid). Paste that key in place of *YOUR API KEY HERE* in the following line of **WeatherApp/Core.cs**:
+![Weather App application screenshot](Screenshots/01All.png "Weather App application screenshot")
 
-```
-string key = "YOUR API KEY HERE";
-```
+## Authors
 
-Native Version
---------------
-
-The equivalent app written with native UI layers, is [WeatherApp (Native)](https://github.com/xamarin/mobile-samples/tree/master/Weather).
-
-Authors
--------
-
-Kraig Brockschmidt, Nicole Haugen, Charles Petzold
+Kraig Brockschmidt, Nicole Haugen, Charles Petzold, David Britch

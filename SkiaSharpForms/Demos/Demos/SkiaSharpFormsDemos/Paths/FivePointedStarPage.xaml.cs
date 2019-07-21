@@ -35,8 +35,7 @@ namespace SkiaSharpFormsDemos.Paths
 
             SKPath path = new SKPath
             {
-                FillType = (SKPathFillType)Enum.Parse(typeof(SKPathFillType), 
-                                fillTypePicker.Items[fillTypePicker.SelectedIndex])
+                FillType = (SKPathFillType)fillTypePicker.SelectedItem
             };
             path.MoveTo(info.Width / 2, info.Height / 2 - radius);
 
@@ -63,22 +62,22 @@ namespace SkiaSharpFormsDemos.Paths
                 Color = SKColors.Blue
             };
 
-            switch (drawingModePicker.SelectedIndex)
+            switch ((string)drawingModePicker.SelectedItem)
             {
-                case 0:
+                case "Fill only":
                     canvas.DrawPath(path, fillPaint);
                     break;
 
-                case 1:
+                case "Stroke only":
                     canvas.DrawPath(path, strokePaint);
                     break;
 
-                case 2:
+                case "Stroke then Fill":
                     canvas.DrawPath(path, strokePaint);
                     canvas.DrawPath(path, fillPaint);
                     break;
 
-                case 3:
+                case "Fill then Stroke":
                     canvas.DrawPath(path, fillPaint);
                     canvas.DrawPath(path, strokePaint);
                     break;

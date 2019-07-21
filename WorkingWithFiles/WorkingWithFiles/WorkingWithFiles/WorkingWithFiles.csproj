@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="LibTextResource.txt" />
+    <EmbeddedResource Include="LibJsonResource.json" />
+    <EmbeddedResource Include="LibXmlResource.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="LibTextResource.txt" />
+    <None Remove="LibJsonResource.json" />
+    <None Remove="LibXmlResource.xml" />
+  </ItemGroup>
+  
+</Project>

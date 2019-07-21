@@ -44,7 +44,7 @@ namespace PlatformSpecifics
                 HorizontalOptions = LayoutOptions.Center,
                 Children =
                 {
-                    new Label { Text = text, VerticalOptions = LayoutOptions.Center },
+                    new Xamarin.Forms.Label { Text = text, VerticalOptions = LayoutOptions.Center },
                     picker
                 }
             };

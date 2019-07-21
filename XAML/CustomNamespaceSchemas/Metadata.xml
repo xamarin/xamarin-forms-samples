@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SampleMetadata>
+	<ID>D22600F5-2BA0-4021-821E-3181318C70E5</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Brief>This sample demonstrates defining and consuming a custom namespace schema, which specifies a mapping between a custom URL and one or more CLR namespaces.</Brief>
+	<Level>Beginner</Level>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Tags>XAML, Xamarin.Forms</Tags>
+	<SupportedPlatforms>Android, iOS</SupportedPlatforms>
+	<Gallery>true</Gallery>
+</SampleMetadata>

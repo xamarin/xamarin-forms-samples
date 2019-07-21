@@ -16,7 +16,7 @@ namespace TouchTracking.Droid
     {
         Android.Views.View view;
         Element formsElement;
-        TouchTracking.TouchEffect pclTouchEffect;
+        TouchTracking.TouchEffect libTouchEffect;
         bool capture;
         Func<double, double> fromPixels;
         int[] twoIntArray = new int[2];
@@ -32,7 +32,7 @@ namespace TouchTracking.Droid
             // Get the Android View corresponding to the Element that the effect is attached to
             view = Control == null ? Container : Control;
 
-            // Get access to the TouchEffect class in the PCL
+            // Get access to the TouchEffect class in the .NET Standard library
             TouchTracking.TouchEffect touchEffect = 
                 (TouchTracking.TouchEffect)Element.Effects.
                     FirstOrDefault(e => e is TouchTracking.TouchEffect);
@@ -43,7 +43,7 @@ namespace TouchTracking.Droid
 
                 formsElement = Element;
 
-                pclTouchEffect = touchEffect;
+                libTouchEffect = touchEffect;
 
                 // Save fromPixels function
                 fromPixels = view.Context.FromPixels;
@@ -89,7 +89,7 @@ namespace TouchTracking.Droid
 
                     idToEffectDictionary.Add(id, this);
 
-                    capture = pclTouchEffect.Capture;
+                    capture = libTouchEffect.Capture;
                     break;
 
                 case MotionEventActions.Move:
@@ -194,7 +194,7 @@ namespace TouchTracking.Droid
         void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType, Point pointerLocation, bool isInContact)
         {
             // Get the method to call for firing events
-            Action<Element, TouchActionEventArgs> onTouchAction = touchEffect.pclTouchEffect.OnTouchAction;
+            Action<Element, TouchActionEventArgs> onTouchAction = touchEffect.libTouchEffect.OnTouchAction;
 
             // Get the location of the pointer within the view
             touchEffect.view.GetLocationOnScreen(twoIntArray);

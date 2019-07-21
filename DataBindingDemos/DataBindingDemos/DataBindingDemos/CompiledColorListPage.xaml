@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataBindingDemos"
+             x:Class="DataBindingDemos.CompiledColorListPage"
+             Title="Compiled Color List">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ListView x:Name="colorListView" 
+                  Grid.Row="0"
+                  ItemsSource="{x:Static local:NamedColor.All}"
+                  RowHeight="40">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:NamedColor">
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <BoxView Color="{Binding Color}"
+                                     HeightRequest="32"
+                                     WidthRequest="32"
+                                     VerticalOptions="Center" />
+
+                            <Label Text="{Binding FriendlyName}"
+                                   FontSize="24"
+                                   VerticalOptions="Center" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <BoxView Grid.Row="1"
+                 Color="{Binding Source={x:Reference colorListView},
+                                 Path=SelectedItem.Color}" />
+    </Grid>
+</ContentPage>

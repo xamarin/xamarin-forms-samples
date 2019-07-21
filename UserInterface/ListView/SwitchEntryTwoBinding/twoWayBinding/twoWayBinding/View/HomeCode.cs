@@ -51,9 +51,9 @@ namespace twoWayBinding
 			nameLabel.SetBinding (Label.TextColorProperty, "color");
 			layout.Children.Add (nameLabel);
 			Label onLabel = new Label () { HorizontalOptions = LayoutOptions.End, TextColor = Color.Blue, Text="On" };
-			onLabel.SetBinding (Label.IsVisibleProperty, "isOn");
+			onLabel.SetBinding (VisualElement.IsVisibleProperty, "isOn");
 			Label offLabel = new Label () { HorizontalOptions = LayoutOptions.End, TextColor = Color.Gray, Text="Off" };
-			offLabel.SetBinding (Label.IsVisibleProperty, "isNotOn");
+			offLabel.SetBinding (VisualElement.IsVisibleProperty, "isNotOn");
 			layout.Children.Add (onLabel);
 			layout.Children.Add (offLabel);
 			View = layout;

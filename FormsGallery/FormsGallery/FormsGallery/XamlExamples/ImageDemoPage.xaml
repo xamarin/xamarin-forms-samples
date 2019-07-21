@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FormsGallery.XamlExamples.ImageDemoPage"
@@ -9,7 +9,7 @@
                FontAttributes="Bold"
                HorizontalOptions="Center" />
 
-        <Image Source="https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png"
+        <Image Source="https://aka.ms/campus.jpg"
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand" />
     </StackLayout>

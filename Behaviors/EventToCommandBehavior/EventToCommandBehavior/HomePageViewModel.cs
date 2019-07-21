@@ -17,7 +17,8 @@ namespace EventToCommandBehavior
 
 		public HomePageViewModel ()
 		{
-			People = new ObservableCollection<Person> {
+			People = new ObservableCollection<Person> 
+            {
 				new Person ("Steve", 21),
 				new Person ("John", 37),
 				new Person ("Tom", 42),
@@ -37,7 +38,8 @@ namespace EventToCommandBehavior
 		protected virtual void OnPropertyChanged (string propertyName)
 		{
 			var changed = PropertyChanged;
-			if (changed != null) {
+			if (changed != null)
+            {
 				PropertyChanged (this, new PropertyChangedEventArgs (propertyName));
 			}
 		}

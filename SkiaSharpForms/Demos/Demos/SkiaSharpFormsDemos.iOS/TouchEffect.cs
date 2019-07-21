@@ -21,7 +21,7 @@ namespace TouchTracking.iOS
             // Get the iOS UIView corresponding to the Element that the effect is attached to
             view = Control == null ? Container : Control;
 
-            // Get access to the TouchEffect class in the PCL
+            // Get access to the TouchEffect class in the .NET Standard library
             TouchTracking.TouchEffect effect = (TouchTracking.TouchEffect)Element.Effects.FirstOrDefault(e => e is TouchTracking.TouchEffect);
 
             if (effect != null && view != null)

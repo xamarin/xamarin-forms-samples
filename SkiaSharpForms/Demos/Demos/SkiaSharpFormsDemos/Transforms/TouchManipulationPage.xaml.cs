@@ -26,9 +26,8 @@ namespace SkiaSharpFormsDemos.Transforms
             Assembly assembly = GetType().GetTypeInfo().Assembly;
 
             using (Stream stream = assembly.GetManifestResourceStream(resourceID))
-            using (SKManagedStream skStream = new SKManagedStream(stream))
             {
-                SKBitmap bitmap = SKBitmap.Decode(skStream);
+                SKBitmap bitmap = SKBitmap.Decode(stream);
                 this.bitmap = new TouchManipulationBitmap(bitmap);
                 this.bitmap.TouchManager.Mode = TouchManipulationMode.ScaleRotate;
             }
@@ -39,9 +38,7 @@ namespace SkiaSharpFormsDemos.Transforms
             if (bitmap != null)
             {
                 Picker picker = (Picker)sender;
-                TouchManipulationMode mode;
-                Enum.TryParse(picker.Items[picker.SelectedIndex], out mode);
-                bitmap.TouchManager.Mode = mode;
+                bitmap.TouchManager.Mode = (TouchManipulationMode)picker.SelectedItem;
             }
         }
 

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Foundation;
+﻿using Foundation;
 using UIKit;
 
 namespace TodoREST.iOS
@@ -13,11 +10,17 @@ namespace TodoREST.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            App.Speech = new Speech();
-            LoadApplication(new App());
+#if DEBUG
+            System.Net.ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, sslPolicyErrors) =>
+            {
+                if (certificate.Issuer.Equals("CN=localhost"))
+                    return true;
+                return sslPolicyErrors == System.Net.Security.SslPolicyErrors.None;
+            };
+#endif
 
+            LoadApplication(new App());
             return base.FinishedLaunching(app, options);
         }
     }
 }
-

@@ -44,7 +44,7 @@ namespace CustomRenderer.iOS
             }
         }
 
-        MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
+        protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
         {
             MKAnnotationView annotationView = null;
 

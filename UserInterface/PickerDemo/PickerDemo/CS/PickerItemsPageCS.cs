@@ -7,11 +7,11 @@ namespace PickerDemo
 		public PickerItemsPageCS()
 		{
 			Title = "Picker Items";
-			Icon = "csharp.png";
+			IconImageSource = "csharp.png";
 
 			var monkeyNameLabel = new Label();
 
-			var picker = new Picker { Title = "Select a monkey" };
+            var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 			picker.Items.Add("Baboon");
 			picker.Items.Add("Capuchin Monkey");
 			picker.Items.Add("Blue Monkey");
@@ -31,7 +31,7 @@ namespace PickerDemo
 
 			Content = new StackLayout
 			{
-				Margin = new Thickness(20),
+				Margin = new Thickness(20, 35, 20, 20),
 				Children = {
 					new Label { Text = "Picker - Data in Items Collection", FontAttributes = FontAttributes.Bold, HorizontalOptions = LayoutOptions.Center },
 					picker,
@@ -48,4 +48,3 @@ namespace PickerDemo
 		}
 	}
 }
-

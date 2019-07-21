@@ -33,7 +33,7 @@ namespace SkiaSharpFormsDemos.Curves
                 textPaint.TextSize = Math.Min(info.Width, info.Height);
 
                 // Measure the text
-                SKRect textBounds;
+                SKRect textBounds = new SKRect();
                 textPaint.MeasureText("@", ref textBounds);
 
                 // Coordinates to center text on screen

@@ -10,7 +10,7 @@ namespace Accessibility
         {
             InitializeComponent();
 
-            MainPage = new AccessibilityPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

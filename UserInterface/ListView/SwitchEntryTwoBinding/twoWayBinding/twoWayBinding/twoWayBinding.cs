@@ -1,17 +1,14 @@
-﻿using System;
+﻿using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
-using Xamarin.Forms;
-
+[assembly:XamlCompilation(XamlCompilationOptions.Compile)]
 namespace twoWayBinding
 {
 	public class App : Application
 	{
 		public App ()
 		{
-			NavigationPage nav = new NavigationPage ();
-			// The root page of your application
-			MainPage = nav;
-			nav.PushAsync (new HomeCode ());
+            MainPage = new NavigationPage(new Home());
 		}
 
 		protected override void OnStart ()

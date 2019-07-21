@@ -9,7 +9,7 @@
 			<Entry.WidthRequest>
 				<OnPlatform x:TypeArguments="x:Double">
         <On Platform="iOS, Android" Value="220" />
-        <On Platform="UWP, WinRT, WinPhone" Value="250" />
+        <On Platform="UWP" Value="250" />
     </OnPlatform>
 			</Entry.WidthRequest>
 		</Entry>

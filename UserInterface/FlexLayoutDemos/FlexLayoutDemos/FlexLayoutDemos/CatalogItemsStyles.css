@@ -1,0 +1,32 @@
+﻿frame {
+    width: 300;
+    height: 480;
+    background-color: lightyellow;
+    margin: 10;
+}
+
+label {
+    margin: 4 0;
+}
+
+label.header {
+    margin: 8 0;
+    font-size: large;
+    color: blue;
+}
+
+label.empty {
+    flex-grow: 1;
+}
+
+image {
+    height: 180;
+    order: -1;
+    align-self: center;
+}
+
+button {
+    font-size: large;
+    color: white;
+    background-color: green;
+}

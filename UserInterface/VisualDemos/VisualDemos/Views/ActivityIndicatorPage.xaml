@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="VisualDemos.ActivityIndicatorPage"
+             Title="Activity Indicators"
+             Visual="Material">
+    <StackLayout Spacing="20"
+                 Padding="10"
+                 BackgroundColor="White">
+        <Label Text="Default" 
+               Margin="0,0,0,-10" />
+        <ActivityIndicator IsRunning="true" />
+
+        <Label Text="Color" 
+               Margin="0,0,0,-10" />
+        <ActivityIndicator Color="{StaticResource PrimaryColor}" 
+                           IsRunning="true" />
+
+        <Label Text="BackgroundColor" 
+               Margin="0,0,0,-10" />
+        <StackLayout Orientation="Horizontal">
+            <ActivityIndicator BackgroundColor="{StaticResource SecondaryColor}" 
+                               IsRunning="true"
+                               HorizontalOptions="FillAndExpand" />
+            <ActivityIndicator BackgroundColor="{StaticResource SecondaryColor}" 
+                               IsRunning="false" 
+                               HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <Label Text="Color and BackgroundColor" 
+               Margin="0,0,0,-10" />
+        <StackLayout Orientation="Horizontal">
+            <ActivityIndicator Color="{StaticResource PrimaryColor}" 
+                               BackgroundColor="{StaticResource SecondaryColor}" 
+                               IsRunning="true" 
+                               HorizontalOptions="FillAndExpand" />
+            <ActivityIndicator Color="{StaticResource PrimaryColor}" 
+                               BackgroundColor="{StaticResource SecondaryColor}" 
+                               IsRunning="false" 
+                               HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

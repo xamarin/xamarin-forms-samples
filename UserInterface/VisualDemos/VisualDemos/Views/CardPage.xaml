@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:VisualDemos"
+             x:Class="VisualDemos.CardPage"
+             Title="Cards"
+             Visual="Material">
+    <ScrollView>
+        <StackLayout Spacing="20" 
+                     Padding="10"
+                     BackgroundColor="White">
+            <Label Text="Default" 
+                   Margin="0,0,0,-10" />
+            <Frame Padding="16">
+                <StackLayout Spacing="16">
+                    <Image Source="{local:ImageResource VisualDemos.Assets.Images.photo2.png}" 
+                           Margin="-16,-16,-16,0" 
+                           Aspect="AspectFill" />
+                    <Label Text="Walk below the arches" 
+                           FontSize="24" 
+                           TextColor="{StaticResource TextColor}"/>
+                    <Label Text="Card containers hold all card elements, and their size is determined by the space those elements occupy. Card elevation is expressed by the container."
+                           TextColor="{StaticResource TextColor}"
+                           FontSize="14" />
+                    <Button Text="more" 
+                            HorizontalOptions="End" />
+                </StackLayout>
+            </Frame>
+
+            <Label Text="No Shadow" 
+                   Margin="0,0,0,-10" />
+            <Frame Padding="16" 
+                   HasShadow="false">
+                <StackLayout Spacing="16">
+                    <Image Source="{local:ImageResource VisualDemos.Assets.Images.photo1.png}" 
+                           Margin="-16,-16,-16,0" 
+                           Aspect="AspectFill" />
+                    <Label Text="Walk below the arches" FontSize="24" />
+                    <Label Text="Card containers hold all card elements, and their size is determined by the space those elements occupy. Card elevation is expressed by the container."
+                           TextColor="{StaticResource TextColor}"
+                           FontSize="14" />
+                    <Button Text="more" 
+                            HorizontalOptions="End" />
+                </StackLayout>
+            </Frame>
+
+            <Label Text="BorderColor" 
+                   Margin="0,0,0,-10" />
+            <Frame Padding="16" 
+                   BorderColor="{StaticResource QuaternaryColor}">
+                <StackLayout Spacing="16">
+                    <Image Source="{local:ImageResource VisualDemos.Assets.Images.photo3.png}" 
+                           Margin="-16,-16,-16,0" 
+                           Aspect="AspectFill" />
+                    <Label Text="Walk below the arches"
+                           FontSize="24" 
+                           TextColor="{StaticResource TextColor}"/>
+                    <Label Text="Card containers hold all card elements, and their size is determined by the space those elements occupy. Card elevation is expressed by the container."
+                           TextColor="{StaticResource TextColor}" 
+                           FontSize="14" />
+                    <Button Text="more" 
+                            HorizontalOptions="End" />
+                </StackLayout>
+            </Frame>
+
+            <Label Text="BorderColor with No Shadow"
+                   Margin="0,0,0,-10" />
+            <Frame Padding="16" 
+                   BorderColor="{StaticResource QuaternaryColor}"
+                   HasShadow="false">
+                <StackLayout Spacing="16">
+                    <Image Source="{local:ImageResource VisualDemos.Assets.Images.photo2.png}" 
+                           Margin="-16,-16,-16,0"
+                           Aspect="AspectFill" />
+                    <Label Text="Walk below the arches" 
+                           FontSize="24" 
+                           TextColor="{StaticResource TextColor}"/>
+                    <Label Text="Card containers hold all card elements, and their size is determined by the space those elements occupy. Card elevation is expressed by the container."
+                           TextColor="{StaticResource TextColor}" 
+                           FontSize="14" />
+                    <Button Text="more" 
+                            HorizontalOptions="End" />
+                </StackLayout>
+            </Frame>
+
+            <Label Text="No Card Padding and Thin Content Padding"
+                   Margin="0,0,0,-10" />
+            <Frame Padding="0"
+                   BorderColor="{StaticResource QuaternaryColor}"
+                   CornerRadius="10">
+                <StackLayout Spacing="16" 
+                             BackgroundColor="{StaticResource QuinaryColor}" 
+                             Padding="8">
+                    <Image Source="{local:ImageResource VisualDemos.Assets.Images.photo1.png}" 
+                           Margin="-8,-8,-8,0" 
+                           Aspect="AspectFill" />
+                    <Label Text="Walk below the arches" 
+                           FontSize="24" 
+                           TextColor="{StaticResource SecondaryTextColor}"/>
+                    <Label Text="Card containers hold all card elements, and their size is determined by the space those elements occupy. Card elevation is expressed by the container."
+                           TextColor="{StaticResource SecondaryTextColor}" 
+                           FontSize="14" />
+                    <Button Text="more" HorizontalOptions="End" />
+                </StackLayout>
+            </Frame>
+
+            <Label Text="No Padding or Spacing" 
+                   Margin="0,0,0,-10" />
+            <Frame BackgroundColor="{StaticResource QuinaryColor}"
+                   Margin="0" 
+                   Padding="0"
+                   HasShadow="true"
+                   CornerRadius="10" 
+                   BorderColor="{StaticResource QuaternaryColor}">
+                <StackLayout Spacing="16" Margin="0" Padding="0">
+                    <Label Text="Customized Card" 
+                           FontSize="24"
+                           TextColor="{StaticResource SecondaryTextColor}" />
+                    <Image Source="{local:ImageResource VisualDemos.Assets.Images.photo3.png}"
+                           Margin="-16,0" 
+                           Aspect="AspectFill" />
+                    <Label Text="This card has a few changes to its appearance to test whether or not changing properties is supported."
+                           TextColor="{StaticResource SecondaryTextColor}" 
+                           FontSize="14" />
+                    <Button Text="more" HorizontalOptions="End"
+                            BackgroundColor="{StaticResource PrimaryColor}" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

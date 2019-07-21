@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CheckBoxDemos"
+             x:Class="CheckBoxDemos.MainPage"
+             Title="CheckBox Demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="Basic CheckBox Code"
+                          Detail="Implement a CheckBox in code"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicCheckBoxCodePage}" />
+                <TextCell Text="Basic CheckBox XAML"
+                          Detail="Implement a CheckBox in XAML"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicCheckBoxXAMLPage}" />
+                <TextCell Text="Basic CheckBox Visual States"
+                          Detail="Implement a CheckBox that responds to visual states"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicCheckBoxVisualStatesPage}" />
+                <TextCell Text="Basic CheckBox Bindings"
+                          Detail="Implement a CheckBox with data bindings"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicCheckBoxBindingsPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+
+</ContentPage>

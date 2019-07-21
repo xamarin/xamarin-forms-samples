@@ -1,14 +1,15 @@
 ﻿using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly:XamlCompilation(XamlCompilationOptions.Compile)]
 namespace TextSample
 {
 	public class App : Application
 	{
 		public App ()
 		{
-			// The root page of your application
-			MainPage = new NavigationPage();
-			MainPage.Navigation.PushAsync (new ListPage ());
+            // The root page of your application
+            MainPage = new NavigationPage(new ListPage());
 		}
 
 		protected override void OnStart ()

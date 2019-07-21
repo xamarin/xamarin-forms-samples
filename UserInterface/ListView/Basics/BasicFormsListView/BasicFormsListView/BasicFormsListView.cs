@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
-using Xamarin.Forms;
-
+[assembly:XamlCompilation(XamlCompilationOptions.Compile)]
 namespace BasicFormsListView
 {
 	public class App : Application

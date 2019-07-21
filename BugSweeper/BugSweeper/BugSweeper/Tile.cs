@@ -1,5 +1,5 @@
-﻿#define FIX_WINDOWS_DOUBLE_TAPS         // Double-taps don't work well on Windows Runtime as of 2.3.0
-#define FIX_WINDOWS_PHONE_NULL_CONTENT  // Set Content of Frame to null doesn't work in Windows as of 2.3.0
+﻿#define FIX_UWP_DOUBLE_TAPS   // Double-taps don't work well on UWP as of 2.3.0
+#define FIX_UWP_NULL_CONTENT  // Set Content of Frame to null doesn't work in UWP as of 2.3.0
 
 using System;
 using Xamarin.Forms;
@@ -62,9 +62,9 @@ namespace BugSweeper
             singleTap.Tapped += OnSingleTap;
             this.GestureRecognizers.Add(singleTap);
 
-#if FIX_WINDOWS_DOUBLE_TAPS
+#if FIX_UWP_DOUBLE_TAPS
 
-            if (Device.RuntimePlatform != Device.UWP && Device.RuntimePlatform != Device.WinPhone) {
+            if (Device.RuntimePlatform != Device.UWP) {
 
 #endif
 
@@ -74,7 +74,7 @@ namespace BugSweeper
                 doubleTap.Tapped += OnDoubleTap;
                 this.GestureRecognizers.Add(doubleTap);
 
-#if FIX_WINDOWS_DOUBLE_TAPS
+#if FIX_UWP_DOUBLE_TAPS
 
             }
 
@@ -99,9 +99,9 @@ namespace BugSweeper
                         case TileStatus.Hidden:
                             this.Content = null;
 
-#if FIX_WINDOWS_PHONE_NULL_CONTENT
+#if FIX_UWP_NULL_CONTENT
 
-                            if (Device.RuntimePlatform == Device.WinPhone || Device.RuntimePlatform == Device.UWP) {
+                            if (Device.RuntimePlatform == Device.UWP) {
                                 this.Content = new Label { Text = " " };
                             }
 
@@ -144,7 +144,7 @@ namespace BugSweeper
             doNotFireEvent = false;
         }
 
-#if FIX_WINDOWS_DOUBLE_TAPS
+#if FIX_UWP_DOUBLE_TAPS
 
         bool lastTapSingle;
         DateTime lastTapTime;
@@ -154,9 +154,9 @@ namespace BugSweeper
         void OnSingleTap(object sender, object args)
         {
 
-#if FIX_WINDOWS_DOUBLE_TAPS
+#if FIX_UWP_DOUBLE_TAPS
 
-            if (Device.RuntimePlatform == Device.UWP || Device.RuntimePlatform == Device.WinPhone) {
+            if (Device.RuntimePlatform == Device.UWP) {
                 if (lastTapSingle && DateTime.Now - lastTapTime < TimeSpan.FromMilliseconds (500)) {
                     OnDoubleTap (sender, args);
                     lastTapSingle = false;

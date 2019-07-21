@@ -14,23 +14,33 @@ namespace PlatformSpecifics
             _returnToPlatformSpecificsPage = restore;
 
             On<Android>().SetOffscreenPageLimit(2)
-                         .SetIsSwipePagingEnabled(true);
-            Title = "Tabbed Page";
+                         .SetIsSwipePagingEnabled(true)
+                         .SetIsSmoothScrollEnabled(false)
+                         .SetToolbarPlacement(ToolbarPlacement.Bottom);
 
             var firstPage = CreatePage(1);
-
-            var button = new Button
+            var stackLayout = firstPage.Content as StackLayout;
+            var swipePagingButton = new Xamarin.Forms.Button
             {
                 Text = "Toggle Swipe Paging"
             };
-            button.Clicked += (sender, e) =>
+            swipePagingButton.Clicked += (sender, e) =>
             {
                 On<Android>().SetIsSwipePagingEnabled(!On<Android>().IsSwipePagingEnabled());
             };
+            var smoothScrollButton = new Xamarin.Forms.Button
+            {
+                Text = "Toggle Smooth Scroll"
+            };
+            smoothScrollButton.Clicked += (sender, e) =>
+            {
+                On<Android>().SetIsSmoothScrollEnabled(!On<Android>().IsSmoothScrollEnabled());
+            };
 
-            var stackLayout = firstPage.Content as StackLayout;
-            stackLayout.Children.Add(button);
+            stackLayout.Children.Add(swipePagingButton);
+            stackLayout.Children.Add(smoothScrollButton);
 
+            Title = "TabbedPage";
             Children.Add(firstPage);
             Children.Add(CreatePage(2));
             Children.Add(CreatePage(3));
@@ -40,12 +50,13 @@ namespace PlatformSpecifics
 
         ContentPage CreatePage(int pageNumber)
         {
-            var returnButton = new Button { Text = "Return to Platform-Specifics List" };
+            var returnButton = new Xamarin.Forms.Button { Text = "Return to Platform-Specifics List" };
             returnButton.Clicked += (sender, e) => _returnToPlatformSpecificsPage.Execute(null);
 
             return new ContentPage
             {
                 Title = string.Format("Page {0}", pageNumber),
+                IconImageSource = "csharp.png",
                 Content = new StackLayout
                 {
                     Margin = new Thickness(20),

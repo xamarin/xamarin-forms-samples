@@ -1,11 +1,21 @@
-Platform Specifics
-==================
+---
+name: Xamarin.Forms - Platform Specifics
+description: "How to consume the platform-specifics that are built into Xamarin.Forms #ui"
+page_type: sample
+languages:
+- csharp
+products:
+- xamarin
+urlFragment: userinterface-platformspecifics
+---
+# Platform Specifics
 
 This sample demonstrates how to consume the platform-specifics that are built into Xamarin.Forms.
 
-For more information about this sample see [Consuming Platform-Specifics](https://developer.xamarin.com/guides/xamarin-forms/platform-features/platform-specifics/consuming/).
+For more information about this sample see [Consuming Platform-Specifics](https://docs.microsoft.com/xamarin/xamarin-forms/platform/platform-specifics/).
 
-Author
-------
+![Platform Specifics application screenshot](Screenshots/01Android.png "Platform Specifics application screenshot")
+
+## Author
 
 David Britch

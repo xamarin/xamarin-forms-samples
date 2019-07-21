@@ -16,7 +16,7 @@ namespace PlatformSpecifics
 				   .SendAppearingEventOnResume(false)
 				   .ShouldPreserveKeyboardOnResume(false);
 
-			var button = new Button { Text = "Toggle Pause and Resume Events" };
+			var button = new Xamarin.Forms.Button { Text = "Toggle Pause and Resume Events" };
 			button.Clicked += (sender, e) =>
 			{
 				Xamarin.Forms.Application.Current.On<Android>()

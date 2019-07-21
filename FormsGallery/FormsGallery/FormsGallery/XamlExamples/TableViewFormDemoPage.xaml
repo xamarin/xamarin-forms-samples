@@ -22,7 +22,7 @@
                             <OnPlatform x:TypeArguments="ImageSource">
                                 <On Platform="iOS" Value="Icon-Small-40.png" />
                                 <On Platform="Android" Value="icon.png" />
-                                <On Platform="UWP, Windows, WinRT, WinPhone" Value="Assets/Icon.png" />
+                                <On Platform="UWP" Value="Assets/Icon.png" />
                             </OnPlatform>
                         </ImageCell.ImageSource>
                     </ImageCell>

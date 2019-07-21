@@ -2,10 +2,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using MobileCRM.Shared.Pages;
 using MobileCRM.Models;
-using MobileCRM.Services;
-
 
 namespace MobileCRM.Shared.Pages
 {
@@ -15,22 +12,16 @@ namespace MobileCRM.Shared.Pages
 
         public RootPage ()
         {
-            
-            var optionsPage = new MenuPage { Icon = "settings.png", Title = "menu" };
-            
+            var optionsPage = new MenuPage { IconImageSource = "settings.png", Title = "menu" };            
             optionsPage.Menu.ItemSelected += (sender, e) => NavigateTo(e.SelectedItem as OptionItem);
-
             Master = optionsPage;
-
             NavigateTo(optionsPage.Menu.ItemsSource.Cast<OptionItem>().First());
-
-            ShowLoginDialog();    
+            ShowLoginDialog();
         }
 
         async void ShowLoginDialog()
         {
             var page = new LoginPage();
-
             await Navigation.PushModalAsync(page);
         }
 
@@ -44,9 +35,6 @@ namespace MobileCRM.Shared.Pages
 
             var displayPage = PageForOption(option);
 
-#if WINDOWS_PHONE
-            Detail = new ContentPage();//work around to clear current page.
-#endif
 			var color = Helpers.Color.Blue.ToFormsColor ();
 			Detail = new NavigationPage (displayPage) {
 				BarBackgroundColor = color,
@@ -72,4 +60,3 @@ namespace MobileCRM.Shared.Pages
 		}
     }
 }
-

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ButtonDemos"
+             x:Class="ButtonDemos.ToggleButtonDemoPage"
+             Title="Toggle Button Demo">
+    
+    <ContentPage.Resources>
+        <Style TargetType="local:ToggleButton">
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="10, 0">
+        <local:ToggleButton Toggled="OnItalicButtonToggled">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup Name="ToggleStates">
+                    <VisualState Name="ToggledOff">
+                        <VisualState.Setters>
+                            <Setter Property="Text" Value="Italic Off" />
+                            <Setter Property="BackgroundColor" Value="#C0C0C0" />
+                            <Setter Property="TextColor" Value="Black" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    
+                    <VisualState Name="ToggledOn">
+                        <VisualState.Setters>
+                            <Setter Property="Text" Value=" Italic On " />
+                            <Setter Property="BackgroundColor" Value="#404040" />
+                            <Setter Property="TextColor" Value="White" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </local:ToggleButton>
+
+        <local:ToggleButton Toggled="OnBoldButtonToggled">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup Name="ToggleStates">
+                    <VisualState Name="ToggledOff">
+                        <VisualState.Setters>
+                            <Setter Property="Text" Value="Bold Off" />
+                            <Setter Property="BackgroundColor" Value="#C0C0C0" />
+                            <Setter Property="TextColor" Value="Black" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    
+                    <VisualState Name="ToggledOn">
+                        <VisualState.Setters>
+                            <Setter Property="Text" Value=" Bold On " />
+                            <Setter Property="BackgroundColor" Value="#404040" />
+                            <Setter Property="TextColor" Value="White" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </local:ToggleButton>
+
+        <Label x:Name="label"
+               Text="Just a little passage of some sample text that can be formatted in italic or boldface by toggling the two buttons."
+               FontSize="Large"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="CenterAndExpand" />
+
+    </StackLayout>
+</ContentPage>

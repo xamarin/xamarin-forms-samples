@@ -10,13 +10,13 @@
   </TabbedPage.Resources>
   <TabbedPage.ItemTemplate>
     <DataTemplate>
-      <ContentPage Title="{Binding Name}" Icon="monkeyicon.png">
+      <ContentPage Title="{Binding Name}" IconImageSource="monkeyicon.png">
         <StackLayout Padding="5, 25">
           <Label Text="{Binding Name}"
                  Font="Bold,Large"
                  HorizontalOptions="Center" />
           <Image Source="{Binding PhotoUrl}"
-                 WidthRequest="200" 
+                 WidthRequest="200"
                  HeightRequest="200" />
           <StackLayout Padding="50, 10">
             <StackLayout Orientation="Horizontal">

@@ -17,7 +17,7 @@ namespace FormsGallery.CodeExamples
 
             Frame frame = new Frame
             {
-                OutlineColor = Color.Accent,
+                BorderColor = Color.Accent,
                 HasShadow = true,
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.CenterAndExpand,

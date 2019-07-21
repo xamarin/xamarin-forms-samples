@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using MobileCRM.Shared.Pages;
 
 namespace MobileCRM
@@ -12,4 +11,3 @@ namespace MobileCRM
 		}
 	}
 }
-

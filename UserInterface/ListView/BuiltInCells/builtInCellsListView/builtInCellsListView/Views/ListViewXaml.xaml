@@ -1,12 +1,12 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="builtInCellsListView.ListViewXaml">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="builtInCellsListView.ListViewXaml" Title="Cell Types">
 	<ContentPage.Content>
 		<ListView x:Name="lstView">
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<!--comment and uncomment lines to see each cell type-->
 					<TextCell Text="{Binding name}" Detail="{Binding comment}" />
-					<!--<ImageCell Text="{Binding name}" Detail="{Binding comment}" ImageSource="{Binding image}" />-->
+	                <!--<ImageCell Text="{Binding name}" Detail="{Binding comment}" ImageSource="{Binding image}" />-->
 					<!--<SwitchCell Text="{Binding name}" On="{Binding isReallyAVeggie}" />-->
 					<!--<EntryCell Label="{Binding name}" Text="{Binding comment}" />-->
 				</DataTemplate>

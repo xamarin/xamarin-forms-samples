@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DataBindingDemos"
@@ -95,6 +95,15 @@
 
             </TableSection>
 
+            <TableSection Title="Binding Fallbacks">
+
+                <TextCell Text="TargetNullValue and FallbackValue"
+                          Detail="Provide values for bindings that fail"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MonkeysPage}" />
+                
+            </TableSection>
+
             <TableSection Title="Commanding">
 
                 <TextCell Text="Person Entry"
@@ -107,6 +116,25 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:DecimalKeypadPage}" />
 
+            </TableSection>
+            
+            <TableSection Title="Compiled Bindings">
+
+                <TextCell Text="Compiled color list"
+                          Detail="Use compiled bindings in a DataTemplate"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CompiledColorListPage}" />
+                
+                <TextCell Text="Compiled color selector"
+                          Detail="Use compiled bindings with a ViewModel"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CompiledColorSelectorPage}" />
+
+                <TextCell Text="Mixed bindings color selector"
+                          Detail="Use compiled bindings with conventional bindings"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MixedBindingsPage}" />
+                
             </TableSection>
         </TableRoot>
     </TableView>

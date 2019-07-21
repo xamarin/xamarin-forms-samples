@@ -8,7 +8,7 @@ namespace DataTemplates
         public WithoutDataTemplatePageCS()
         {
             Title = "Without a Data Template";
-            Icon = "csharp.png";
+            IconImageSource = "csharp.png";
 
             var people = new List<Person>
             {

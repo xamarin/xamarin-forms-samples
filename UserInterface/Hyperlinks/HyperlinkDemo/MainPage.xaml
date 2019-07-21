@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:HyperlinkDemo" 
+             x:Class="HyperlinkDemo.MainPage">
+    <StackLayout Margin="20,35,20,20">
+        <Label Text="Hyperlink Demos"
+               HorizontalOptions="Center"
+               FontAttributes="Bold" />
+        <Label Text="Click the Label below to view Xamarin documentation." />
+        <Label Text="Xamarin documentation"
+               TextColor="Blue"
+               TextDecorations="Underline"
+               HorizontalOptions="Center">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TapCommand}"
+                                      CommandParameter="https://docs.microsoft.com/xamarin/" />
+            </Label.GestureRecognizers>
+        </Label>
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Alternatively, click " />
+                    <Span Text="here"
+                          TextColor="Blue"
+                          TextDecorations="Underline">
+                        <Span.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TapCommand}"
+                                                  CommandParameter="https://docs.microsoft.com/xamarin/" />
+                        </Span.GestureRecognizers>
+                    </Span>
+                    <Span Text=" to view Xamarin documentation." />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        
+        <Label Text="Click the Label below to view AppCenter documentation." />
+        <local:HyperlinkLabel Text="AppCenter documentation"
+                              Url="https://docs.microsoft.com/appcenter/"
+                              HorizontalOptions="Center" />
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Alternatively, click " />
+                    <local:HyperlinkSpan Text="here"
+                                         Url="https://docs.microsoft.com/appcenter/" />
+                    <Span Text=" to view AppCenter documentation." />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentPage>

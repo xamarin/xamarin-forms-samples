@@ -26,9 +26,8 @@ namespace SkiaSharpFormsDemos.Transforms
             Assembly assembly = GetType().GetTypeInfo().Assembly;
 
             using (Stream stream = assembly.GetManifestResourceStream(resourceID))
-            using (SKManagedStream skStream = new SKManagedStream(stream))
             {
-                bitmap = SKBitmap.Decode(skStream);
+                bitmap = SKBitmap.Decode(stream);
             }
 
             taperFractionSlider.Value = 1;
@@ -58,8 +57,8 @@ namespace SkiaSharpFormsDemos.Transforms
 
             canvas.Clear();
 
-            TaperSide taperSide = (TaperSide)taperSidePicker.SelectedIndex;
-            TaperCorner taperCorner = (TaperCorner)taperCornerPicker.SelectedIndex;
+            TaperSide taperSide = (TaperSide)taperSidePicker.SelectedItem;
+            TaperCorner taperCorner = (TaperCorner)taperCornerPicker.SelectedItem;
             float taperFraction = (float)taperFractionSlider.Value;
 
             SKMatrix taperMatrix = 

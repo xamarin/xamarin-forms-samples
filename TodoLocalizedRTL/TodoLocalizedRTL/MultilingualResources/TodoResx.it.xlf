@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="it" original="TODOXLF/RESX/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1087.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="TODOXLF/RESX/APPRESOURCES.RESX">
+        <trans-unit id="AddButton" translate="yes" xml:space="preserve">
+          <source>Add</source>
+          <target state="translated" state-qualifier="tm-suggestion">Aggiungi</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">machine translation</note>
+          </trans-unit>
+        <trans-unit id="ApplicationHeading" translate="yes" xml:space="preserve">
+          <source>LionTodo</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">LionTodo</target>
+        </trans-unit>
+        <trans-unit id="ApplicationTitle" translate="yes" xml:space="preserve">
+          <source>LionTodo</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">LionTodo</target>
+        </trans-unit>
+        <trans-unit id="DeleteButton" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated" state-qualifier="tm-suggestion">Elimina</target>
+        </trans-unit>
+        <trans-unit id="DoneLabel" translate="yes" xml:space="preserve">
+          <source>Done</source>
+          <target state="translated" state-qualifier="tm-suggestion">Fine</target>
+        </trans-unit>
+        <trans-unit id="NameLabel" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nome</target>
+        </trans-unit>
+        <trans-unit id="NotesLabel" translate="yes" xml:space="preserve">
+          <source>Notes</source>
+          <target state="translated" state-qualifier="tm-suggestion">Note</target>
+        </trans-unit>
+        <trans-unit id="SaveButton" translate="yes" xml:space="preserve">
+          <source>Save</source>
+          <target state="translated" state-qualifier="tm-suggestion">Salva</target>
+        </trans-unit>
+        <trans-unit id="CancelButton" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated" state-qualifier="tm-suggestion">Annulla</target>
+        </trans-unit>
+        <trans-unit id="SpeakButton" translate="yes" xml:space="preserve">
+          <source>Speak</source>
+          <target state="translated" state-qualifier="tm-suggestion">Leggi</target>
+        </trans-unit>
+        <trans-unit id="SpeakTaskCount" translate="yes" xml:space="preserve">
+          <source>There are {0} tasks.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vi sono attività di {0}.</target>
+        </trans-unit>
+              </group>
+    </body>
+  </file>
+</xliff>

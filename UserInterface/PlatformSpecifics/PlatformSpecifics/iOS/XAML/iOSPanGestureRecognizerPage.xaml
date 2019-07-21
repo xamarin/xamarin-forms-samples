@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"            
+             x:Class="PlatformSpecifics.iOSPanGestureRecognizerPage"
+             Title="Pan Gesture Recognizer">
+    <StackLayout Margin="20">
+        <Label x:Name="_messageLabel" Text="Scroll the list. If you touch the age Label, this Label will change." FontAttributes="Bold" />
+        <Button Text="Toggle Simultaneous Gesture Recognition" Clicked="OnButtonClicked" />
+        <ListView ItemsSource="{Binding GroupedEmployees}" GroupDisplayBinding="{Binding Key}" IsGroupingEnabled="true">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.7*" />
+                                <ColumnDefinition Width="0.3*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Name}" />
+                            <Label Grid.Column="1" Text="{Binding Age}" HorizontalOptions="End">
+                                <Label.GestureRecognizers>
+                                    <PanGestureRecognizer PanUpdated="OnPanUpdated" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

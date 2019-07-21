@@ -1,6 +1,5 @@
 ﻿using System;
 using Android.Webkit;
-using CustomRenderer.Droid;
 using Java.Interop;
 
 namespace CustomRenderer.Droid
@@ -20,7 +19,8 @@ namespace CustomRenderer.Droid
 		{
 			HybridWebViewRenderer hybridRenderer;
 
-			if (hybridWebViewRenderer != null && hybridWebViewRenderer.TryGetTarget (out hybridRenderer)) {
+			if (hybridWebViewRenderer != null && hybridWebViewRenderer.TryGetTarget (out hybridRenderer)) 
+            {
 				hybridRenderer.Element.InvokeAction (data);
 			}
 		}

@@ -39,7 +39,7 @@ namespace SkiaSharpFormsDemos.Basics
             textPaint.TextSize = 0.9f * info.Width * textPaint.TextSize / textWidth;
 
             // Find the text bounds
-            SKRect textBounds;
+            SKRect textBounds = new SKRect();
             textPaint.MeasureText(str, ref textBounds);
 
             // Calculate offsets to center the text on the screen

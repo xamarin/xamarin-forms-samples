@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="PlatformSpecifics.WindowsLegacyColorModePage"
+             Title="Legacy Color Mode">
+    <StackLayout Margin="20">
+        <Label Text="The Editor below uses the legacy color mode. When IsEnabled is false, it uses the default native colors for the control."/>
+        <Editor x:Name="_defaultColorModeEditor" Text="Enter text here" TextColor="Blue" BackgroundColor="Bisque" />
+        <Button Text="Toggle IsEnabled" Clicked="OnDefaultToggleButtonClicked" />
+
+        <Label Text="The Editor below has the legacy color mode disabled. It will use whatever colors are manually set."/>
+        <Editor x:Name="_legacyColorModeDisabledEditor" Text="Enter text here" TextColor="Blue" BackgroundColor="Bisque"
+                windows:VisualElement.IsLegacyColorModeEnabled="False"/>
+        <Button Text="Toggle IsEnabled" Clicked="OnLegacyColorModeDisabledToggleButtonClicked" />
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleMetadata>
+	<ID>8F70A16F-3594-4CF7-8AD2-8BCD02F60D47</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Beginner</Level>
+	<Tags>User Interface, Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>The ActivityIndicator control indicates to users that the application is busy performing a task. This sample demonstrates how to use an ActivityIndicator in XAML and code.</Brief>
+</SampleMetadata>

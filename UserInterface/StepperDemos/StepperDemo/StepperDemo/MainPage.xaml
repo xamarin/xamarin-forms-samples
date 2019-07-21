@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StepperDemo"
+             x:Class="StepperDemo.MainPage"
+             Title="Stepper Demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="Basic Stepper Code"
+                          Detail="Implement a Stepper in Code"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicStepperCodePage}" />
+
+                <TextCell Text="Basic Stepper XAML" 
+                          Detail="Implement a Stepper in XAML"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicStepperXAMLPage}" />
+
+                <TextCell Text="Basic Stepper Bindings" 
+                          Detail="Implement a Stepper with data bindings"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicStepperBindingsPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

@@ -1,8 +1,31 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.HomePage">
-	<local:NoStylesPage />
-	<local:ExplicitStylesPage />
-	<local:ImplicitStylesPage />
-	<local:ApplicationStylesPage />
-	<local:StyleInheritancePage />
-</TabbedPage>
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Styles"
+             x:Class="Styles.HomePage"
+             Title="Style demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Styles">
+                <TextCell Text="No styles"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:NoStylesPage}" />
+                <TextCell Text="Explicit styles"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ExplicitStylesPage}" />
+                <TextCell Text="Implicit styles"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ImplicitStylesPage}" />
+                <TextCell Text="Application styles"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ApplicationStylesPage}" />
+                <TextCell Text="Style inheritance"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:StyleInheritancePage}" />
+                <TextCell Text="Style classes"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:StyleClassPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

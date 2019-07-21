@@ -49,7 +49,10 @@
 	<string></string>
 
   <key>NSPhotoLibraryUsageDescription</key>
-  <string>SkiaSharp Forms Demos uses photo library</string>
+  <string>SkiaSharp Forms Demos accesses your photo library</string>
+  
+  <key>NSPhotoLibraryAddUsageDescription</key>
+  <string>SkiaSharp Forms Demos adds images to your photo library</string>
 
 </dict>
 </plist>

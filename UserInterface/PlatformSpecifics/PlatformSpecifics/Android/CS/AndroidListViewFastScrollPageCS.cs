@@ -15,7 +15,7 @@ namespace PlatformSpecifics
                 grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(0.3, GridUnitType.Star) });
 
                 var nameLabel = new Label();
-                var ageLabel = new Label { HorizontalOptions = LayoutOptions.EndAndExpand };
+                var ageLabel = new Label { HorizontalOptions = LayoutOptions.End };
 
                 nameLabel.SetBinding(Label.TextProperty, "Name");
                 ageLabel.SetBinding(Label.TextProperty, "Age");
@@ -31,7 +31,7 @@ namespace PlatformSpecifics
             listView.GroupDisplayBinding = new Binding("Key");
             listView.On<Android>().SetIsFastScrollEnabled(true);
 
-            var button = new Button { Text = "Toggle FastScroll" };
+            var button = new Xamarin.Forms.Button { Text = "Toggle FastScroll" };
             button.Clicked += (sender, e) => { listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScrollEnabled()); };
 
             Title = "ListView FastScroll";

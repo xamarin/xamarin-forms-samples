@@ -13,7 +13,7 @@ namespace AnimationDemo
 		public ColorAnimationPageCS()
 		{
 			Title = "Color Animations";
-			Icon = "csharp.png";
+			IconImageSource = "csharp.png";
 
 			boxView = new BoxView { Color = Color.Blue, HeightRequest = 100, HorizontalOptions = LayoutOptions.FillAndExpand };
 			label = new Label

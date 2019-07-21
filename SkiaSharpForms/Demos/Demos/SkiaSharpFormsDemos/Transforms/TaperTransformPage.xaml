@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:local="clr-namespace:SkiaSharpFormsDemos.Transforms"
              x:Class="SkiaSharpFormsDemos.Transforms.TaperTransformPage"
              Title="Taper Transform">
     <Grid>
@@ -22,12 +23,14 @@
                     Title="Taper Side"
                     Grid.Column="0"
                     SelectedIndexChanged="OnPickerSelectedIndexChanged">
-                <Picker.Items>
-                    <x:String>Left</x:String>
-                    <x:String>Top</x:String>
-                    <x:String>Right</x:String>
-                    <x:String>Bottom</x:String>
-                </Picker.Items>
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type local:TaperSide}">
+                        <x:Static Member="local:TaperSide.Left" />
+                        <x:Static Member="local:TaperSide.Top" />
+                        <x:Static Member="local:TaperSide.Right" />
+                        <x:Static Member="local:TaperSide.Bottom" />
+                    </x:Array>
+                </Picker.ItemsSource>
                 <Picker.SelectedIndex>
                     0
                 </Picker.SelectedIndex>
@@ -37,11 +40,13 @@
                     Title="Taper Corner"
                     Grid.Column="1"
                     SelectedIndexChanged="OnPickerSelectedIndexChanged">
-                <Picker.Items>
-                    <x:String>Left or Top</x:String>
-                    <x:String>Right or Bottom</x:String>
-                    <x:String>Both</x:String>
-                </Picker.Items>
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type local:TaperCorner}">
+                        <x:Static Member="local:TaperCorner.LeftOrTop" />
+                        <x:Static Member="local:TaperCorner.RightOrBottom" />
+                        <x:Static Member="local:TaperCorner.Both" />
+                    </x:Array>
+                </Picker.ItemsSource>
                 <Picker.SelectedIndex>
                     0
                 </Picker.SelectedIndex>

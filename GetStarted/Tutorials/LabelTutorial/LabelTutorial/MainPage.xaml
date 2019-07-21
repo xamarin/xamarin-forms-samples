@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="LabelTutorial.MainPage">
+   <StackLayout Margin="20,35,20,20">
+        
+<!--        <Label Text="Welcome to Xamarin.Forms!"
+               TextColor="Blue"
+               FontAttributes="Italic"
+               FontSize="22"
+               TextDecorations="Underline"
+               HorizontalOptions="Center" />-->
+        
+        <Label TextColor="Gray"
+               FontSize="Medium">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="This sentence contains " />
+                    <Span Text="words that are emphasized, "
+                          FontAttributes="Italic" />
+                    <Span Text="and underlined."
+                          TextDecorations="Underline" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+   </StackLayout>
+</ContentPage>
