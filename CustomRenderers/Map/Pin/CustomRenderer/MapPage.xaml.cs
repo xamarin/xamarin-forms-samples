@@ -16,7 +16,7 @@ namespace CustomRenderer
                 Position = new Position(37.79752, -122.40183),
                 Label = "Xamarin San Francisco Office",
                 Address = "394 Pacific Ave, San Francisco CA",
-                Id = "Xamarin",
+                MarkerId = "Xamarin",
                 Url = "http://xamarin.com/about/"
             };
 
