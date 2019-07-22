@@ -28,9 +28,6 @@ The custom renderer native cells are shown in this screenshot:
 
 ![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/WorkingWithListviewNative/Screenshots/all-sml.png "Performance")
 
-*(Xaml examples still-to-come)*
-
-
 ## Author
 
 Craig Dunn

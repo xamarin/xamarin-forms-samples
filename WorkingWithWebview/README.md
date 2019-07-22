@@ -8,11 +8,11 @@ products:
 - xamarin
 urlFragment: workingwithwebview
 ---
-# Working with WebView
+# Working with WebView in Xamarin.Forms
 
 These samples relate to the [Working with WebView in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/webview?tabs=macos) doc.
 
-![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/WorkingWithWebview/Screenshots/webview-sml.png "Fonts")
+![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/WorkingWithWebview/Screenshots/webview-sml.png "WebView")
 
 ## Author
 

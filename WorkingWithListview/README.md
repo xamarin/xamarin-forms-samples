@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Working with ListView
-description: "These samples relate to the Working with ListView in Xamarin.Forms doc. Many people have questions about specific ListView features #ui"
+description: "These samples relate to the Working with ListView in Xamarin.Forms doc, including de-selecting the row after tapping, uneven row heights... #ui"
 page_type: sample
 languages:
 - csharp
@@ -8,7 +8,7 @@ products:
 - xamarin
 urlFragment: workingwithlistview
 ---
-# Working with ListView
+# Working with ListView in Xamarin.Forms
 
 These samples relate to the [Working with ListView in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/listview/) doc.
 

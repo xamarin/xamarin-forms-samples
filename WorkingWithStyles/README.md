@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Working with Styles
-description: This sample relates to the Working with styles in Xamarin.Forms doc.
+description: "This sample relates to the Working with styles in Xamarin.Forms doc #ui"
 page_type: sample
 languages:
 - csharp
@@ -8,7 +8,7 @@ products:
 - xamarin
 urlFragment: workingwithstyles
 ---
-# Working with Styles
+# Working with Styles in Xamarin.Forms
 
 This sample relates to the [Working with Styles in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/styles/) doc.
 

@@ -8,7 +8,7 @@ products:
 - xamarin
 urlFragment: workingwithmaps
 ---
-# Working with Maps
+# Working with maps in Xamarin.Forms
 
 This sample relates to the [Working with Maps in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/map) doc.
 
