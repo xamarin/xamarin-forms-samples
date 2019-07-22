@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - PinchGesture
-description: This sample demonstrates using the PinchGestureRecognizer class to implement interactive zoom functionality.
+description: "This sample demonstrates using the PinchGestureRecognizer class to implement interactive zoom functionality."
 page_type: sample
 languages:
 - csharp

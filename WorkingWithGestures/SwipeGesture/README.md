@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - SwipeGesture
-description: This sample demonstrates how to use the SwipeGestureRecognizer class to recognize a swipe gesture.
+description: "This sample demonstrates how to use the SwipeGestureRecognizer class to recognize a swipe gesture."
 page_type: sample
 languages:
 - csharp

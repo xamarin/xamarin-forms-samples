@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Working with Fonts
-description: "These samples relate to the Working with Fonts in Xamarin.Forms doc #ui"
+description: "Changing fonts attributes in Xamarin.Forms user interfaces #ui"
 page_type: sample
 languages:
 - csharp

@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Working with Colors
-description: "These samples relate to the Working with Colors in Xamarin.Forms doc #ui"
+description: "Working with the Colors enumeration in Xamarin.Forms #ui"
 page_type: sample
 languages:
 - csharp
@@ -8,7 +8,7 @@ products:
 - xamarin
 urlFragment: workingwithcolors
 ---
-# Working with Colors
+# Working with Colors in Xamarin.Forms
 
 These samples relate to the [Working with Colors in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/colors) doc.
 
