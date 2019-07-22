@@ -8,7 +8,7 @@ products:
 - xamarin
 urlFragment: xaml-resourcedictionaries
 ---
-# Resource Dictionaries
+# Resource Dictionaries in Xamarin.Forms
 
 This sample demonstrates creating and consuming a ResourceDictionary at the application, page, and control level.
 

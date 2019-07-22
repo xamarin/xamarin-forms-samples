@@ -8,7 +8,7 @@ products:
 - xamarin
 urlFragment: xaml-callingfactorymethods
 ---
-# Calling Factory Methods
+# Calling factory methods in Xamarin.Forms XAML
 
 This sample demonstrates using XAML to call a factory method that can be used to initialize an object.
 

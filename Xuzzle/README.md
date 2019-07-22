@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Xuzzle
-description: This is a variation of the classic 14-15 puzzle. On the early Mac, the 14-15 program was called PUZZLE. 
+description: "This is a variation of the classic 14-15 puzzle. On the early Mac, the 14-15 program was called PUZZLE. #game"
 page_type: sample
 languages:
 - csharp

@@ -8,7 +8,7 @@ products:
 - xamarin
 urlFragment: xaml-loadruntimexaml
 ---
-# Load XAML at Runtime
+# Load Xamarin.Forms XAML at runtime
 
 This sample demonstrates using the `LoadFromXaml` extension method to load, parse, and display XAML at runtime.
 

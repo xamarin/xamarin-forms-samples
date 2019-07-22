@@ -8,7 +8,7 @@ products:
 - xamarin
 urlFragment: xaml-passingconstructorarguments
 ---
-# Passing Constructor Arguments
+# Passing constructor arguments in Xamarin.Forms XAML
 
 This sample demonstrates specifying constructor arguments for a non-default constructor in XAML.
 
