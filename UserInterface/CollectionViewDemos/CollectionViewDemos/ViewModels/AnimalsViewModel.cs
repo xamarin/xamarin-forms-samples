@@ -6,12 +6,11 @@ namespace CollectionViewDemos.ViewModels
     public class AnimalsViewModel
     {
         bool includeEmptyGroups;
-        public List<AnimalGroup> Animals { get; private set; }
+        public List<AnimalGroup> Animals { get; private set; } = new List<AnimalGroup>();
 
         public AnimalsViewModel(bool emptyGroups = false)
         {
             includeEmptyGroups = emptyGroups;
-            Animals = new List<AnimalGroup>();
             CreateAnimalsCollection();
         }
 
