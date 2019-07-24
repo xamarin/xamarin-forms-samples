@@ -1,23 +1,6 @@
-﻿using System.Collections.Generic;
-
-namespace CollectionViewDemos.Models
+﻿namespace CollectionViewDemos.Models
 {
-    public class Animal : List<AnimalDetails>
-    {
-        public string Category { get; private set; }
-
-        public Animal(string category, List<AnimalDetails> details) : base(details)
-        {
-            Category = category;
-        }
-
-        public override string ToString()
-        {
-            return Category;
-        }
-    }
-
-    public class AnimalDetails
+    public class Animal
     {
         public string Name { get; set; }
         public string Location { get; set; }

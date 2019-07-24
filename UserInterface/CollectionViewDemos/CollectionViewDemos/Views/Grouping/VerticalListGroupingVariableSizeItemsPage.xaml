@@ -43,7 +43,7 @@
             </CollectionView.ItemTemplate>
             <CollectionView.GroupHeaderTemplate>
                 <DataTemplate>
-                    <Label Text="{Binding Category}"
+                    <Label Text="{Binding Name}"
                            BackgroundColor="LightGray"
                            FontSize="Large"
                            FontAttributes="Bold" />
