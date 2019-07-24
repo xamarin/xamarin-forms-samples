@@ -22,6 +22,7 @@
     <Folder Include="Views\Sizing\" />
     <Folder Include="Views\Spacing\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Views\Grouping\" />
   </ItemGroup>
 
   <ItemGroup>
