@@ -16,7 +16,7 @@
     <Folder Include="Views\EmptyView\" />
     <Folder Include="Views\Layout\" />
     <Folder Include="Views\Selection\" />
-    <Folder Include="Views\ScrollTo\" />
+    <Folder Include="Views\Scrolling\" />
     <Folder Include="Views\SnapPoints\" />
     <Folder Include="Controls\" />
     <Folder Include="Views\Sizing\" />
@@ -64,6 +64,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.608146-pre1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.618605-pre2" />
   </ItemGroup>
 </Project>

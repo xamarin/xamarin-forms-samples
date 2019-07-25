@@ -159,6 +159,10 @@
                           Detail="Type and alignment"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:VerticalListSnapPointsPage}" />
+                <TextCell Text="Scroll mode when adding items"
+                          Detail="ItemsUpdatingScrollMode"
+                          Command="{Binding  NavigateCommand}"
+                          CommandParameter="{x:Type views:ItemsUpdatingScrollModePage}" />
             </TableSection>
         </TableRoot>
     </TableView>
