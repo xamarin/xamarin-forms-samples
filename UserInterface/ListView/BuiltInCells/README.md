@@ -1,11 +1,14 @@
 ---
 name: 'Xamarin.Forms - ListView Built-In Cells'
-description: 'Sample code associated with the ListView Docs: This sample demonstrates each of the built-in cell types in both XAML and C #ui'
+description: 'Sample code associated with the ListView Docs: This sample demonstrates each of the built-in cell types in both XAML and C (UI)'
 page_type: sample
 languages:
 - csharp
 products:
 - xamarin
+extensions:
+    tags:
+    - ui
 urlFragment: userinterface-listview-builtincells
 ---
 # Xamarin.Forms ListView Sample: Built-In Cells
@@ -16,11 +19,7 @@ This sample demonstrates each of the built-in cell types in both XAML and C#.
 
 Built-In Cells:
 
-* TextCell
-* ImageCell
-* SwitchCell
-* EntryCell
-
-## Author
-
-Nathan Castle
+- TextCell
+- ImageCell
+- SwitchCell
+- EntryCell

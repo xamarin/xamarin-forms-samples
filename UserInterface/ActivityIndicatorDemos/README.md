@@ -1,11 +1,14 @@
 ---
 name: Xamarin.Forms - ActivityIndicator Demos
-description: "The ActivityIndicator control indicates to users that the application is busy performing a task #ui"
+description: "The ActivityIndicator control indicates to users that the application is busy performing a task (UI)"
 page_type: sample
 languages:
 - csharp
 products:
 - xamarin
+extensions:
+    tags:
+    - ui
 urlFragment: userinterface-activityindicatordemos
 ---
 # ActivityIndicator Demos
@@ -15,7 +18,3 @@ The ActivityIndicator control indicates to users that the application is busy pe
 For more information about this sample, see [Xamarin.Forms ActivityIndicator](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/activityindicator).
 
 ![Screenshot of sample ActivityIndicator Demos application](Screenshots/02ActivityIndicatorDemo.png "Screenshot of sample ActivityIndicator Demos application")
-
-## Author
-
-Justin Johnson

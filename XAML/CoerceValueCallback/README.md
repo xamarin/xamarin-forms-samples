@@ -1,11 +1,14 @@
 ---
 name: Xamarin.Forms - Coerce Value Callback
-description: "A bindable property is a special type of property, where the property's value is tracked by the Xamarin.Forms property system #ui"
+description: "A bindable property is a special type of property, where the property's value is tracked by the Xamarin.Forms property system (UI)"
 page_type: sample
 languages:
 - csharp
 products:
 - xamarin
+extensions:
+    tags:
+    - ui
 urlFragment: xaml-coercevaluecallback
 ---
 # Coerce Value Callback in Xamarin.Forms
@@ -15,7 +18,3 @@ A bindable property is a special type of property, where the property's value is
 For more information about this sample, see [Bindable Properties](https://docs.microsoft.com/xamarin/xamarin-forms/xaml/bindable-properties).
 
 ![Coerce Value Callback application screenshot](Screenshots/01All.png "Coerce Value Callback application screenshot")
-
-## Author
-
-David Britch
