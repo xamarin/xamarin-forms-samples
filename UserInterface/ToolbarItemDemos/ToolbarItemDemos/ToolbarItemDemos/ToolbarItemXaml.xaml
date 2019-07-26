@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ToolbarItemDemos.ToolbarItemXaml">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Item1" Order="Primary" Text="Item 1" Priority="0" IconImageSource="icon.png" Clicked="OnItemClicked" />
+        <ToolbarItem Name="Item2" Order="Primary" Text="Item 2" Priority="1" Clicked="OnItemClicked" />
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label x:Name="messageLabel"
+               Text="Click a toolbar item." 
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>
