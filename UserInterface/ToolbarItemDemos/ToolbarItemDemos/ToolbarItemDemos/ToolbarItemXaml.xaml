@@ -4,10 +4,13 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ToolbarItemDemos.ToolbarItemXaml">
+             x:Class="ToolbarItemDemos.ToolbarItemXaml"
+             Padding="10"
+             Title="Xaml ToolbarItem Demo">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="Item1" Order="Primary" Text="Item 1" Priority="0" IconImageSource="icon.png" Clicked="OnItemClicked" />
-        <ToolbarItem Name="Item2" Order="Primary" Text="Item 2" Priority="1" Clicked="OnItemClicked" />
+        <ToolbarItem Order="Primary" Text="Icon Item" Priority="0" IconImageSource="icon.png" Clicked="OnItemClicked" />
+        <ToolbarItem Order="Primary" Text="Text Item" Priority="1" Clicked="OnItemClicked" />
+        <ToolbarItem Order="Secondary" Text="Secondary Item" Priority="2" Clicked="OnItemClicked" />
     </ContentPage.ToolbarItems>
     <StackLayout>
         <!-- Place new controls here -->
