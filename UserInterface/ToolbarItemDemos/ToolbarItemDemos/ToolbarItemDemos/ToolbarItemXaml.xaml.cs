@@ -5,7 +5,6 @@ using Xamarin.Forms.Xaml;
 
 namespace ToolbarItemDemos
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ToolbarItemXaml : ContentPage
     {
         public ToolbarItemXaml()
