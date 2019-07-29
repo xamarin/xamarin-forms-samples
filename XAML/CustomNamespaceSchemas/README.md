@@ -17,4 +17,4 @@ This sample demonstrates defining and consuming a custom namespace schema, which
 
 For more information about this sample see [XAML Custom Namespace Schemas in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/xaml/custom-namespace-schemas/).
 
-![Custom Namespace Schemas application screenshot](Screenshots/01All.png "Custom Namespace Schemas application screenshot")
+![Custom Namespace Schemas sample application](Screenshots/01All.png "Custom Namespace Schemas application screenshot")

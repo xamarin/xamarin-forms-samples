@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Calling Factory Methods
-description: "This sample demonstrates using XAML to call a factory method that can be used to initialize an object (UI)"
+description: "Demonstrates using XAML to call a factory method that can be used to initialize an object (UI)"
 page_type: sample
 languages:
 - csharp

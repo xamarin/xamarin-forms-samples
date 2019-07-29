@@ -17,4 +17,4 @@ A bindable property is a special type of property, where the property's value is
 
 For more information about this sample, see [Bindable Properties](https://docs.microsoft.com/xamarin/xamarin-forms/xaml/bindable-properties).
 
-![Coerce Value Callback application screenshot](Screenshots/01All.png "Coerce Value Callback application screenshot")
+![Coerce Value Callback sample application](Screenshots/01All.png "Coerce Value Callback application screenshot")
