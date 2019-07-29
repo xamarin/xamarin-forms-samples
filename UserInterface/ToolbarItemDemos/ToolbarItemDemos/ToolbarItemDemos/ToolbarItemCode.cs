@@ -33,7 +33,7 @@ namespace ToolbarItemDemos
 
             ToolbarItem item3 = new ToolbarItem
             {
-                Text = "Secondary Item",
+                Text = "Secondary Text Item",
                 Order = ToolbarItemOrder.Secondary,
                 Priority = 2
             };
