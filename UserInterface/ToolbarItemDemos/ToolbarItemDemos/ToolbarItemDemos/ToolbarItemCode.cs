@@ -58,7 +58,7 @@ namespace ToolbarItemDemos
 
             item1.Clicked += OnItemClicked;
             item2.Clicked += OnItemClicked;
-            item3.ClassId += OnItemClicked;
+            item3.Clicked += OnItemClicked;
         }
 
         void OnItemClicked(object sender, EventArgs e)
