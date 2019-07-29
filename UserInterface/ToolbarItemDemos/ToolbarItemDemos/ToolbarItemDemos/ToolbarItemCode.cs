@@ -35,8 +35,7 @@ namespace ToolbarItemDemos
             {
                 Text = "Secondary Item",
                 Order = ToolbarItemOrder.Secondary,
-                Priority = 2,
-                IconImageSource = ImageSource.FromFile("icon.png")
+                Priority = 2
             };
 
             messageLabel = new Label
@@ -59,6 +58,7 @@ namespace ToolbarItemDemos
 
             item1.Clicked += OnItemClicked;
             item2.Clicked += OnItemClicked;
+            item3.ClassId += OnItemClicked;
         }
 
         void OnItemClicked(object sender, EventArgs e)
