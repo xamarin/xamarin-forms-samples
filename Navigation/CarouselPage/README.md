@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - CarouselPage
-description: "How to use a CarouselPage to navigate through a collection of pages. #navigation"
+description: "How to use a CarouselPage to navigate through a collection of pages (navigation)"
 page_type: sample
 languages:
 - csharp
@@ -15,7 +15,3 @@ This sample demonstrates how to use a `CarouselPage` to navigate through a colle
 For more information about the sample see [Carousel Page](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/navigation/carousel-page).
 
 ![CarouselPage application screenshot](Screenshots/01All.png "CarouselPage application screenshot")
-
-## Author
-
-David Britch

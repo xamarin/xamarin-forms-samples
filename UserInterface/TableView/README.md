@@ -1,5 +1,5 @@
 ---
-name: Xamarin.Forms - Xamarin.Forms TableView
+name: Xamarin.Forms - TableView
 description: "This sample relates to the TableView in Xamarin.Forms doc. The app consists of several tabs. There are four tabs with identical tables (UI)"
 page_type: sample
 languages:

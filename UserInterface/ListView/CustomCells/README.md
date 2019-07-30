@@ -1,5 +1,5 @@
 ---
-name: 'Xamarin.Forms - Xamarin.Forms ListView Sample: Custom Cells'
+name: 'Xamarin.Forms - ListView Sample: Custom Cells'
 description: 'Demonstrates how to implement a custom cell in both XAML and C# (UI)'
 page_type: sample
 languages:

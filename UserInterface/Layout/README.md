@@ -1,5 +1,5 @@
 ---
-name: Xamarin.Forms - Xamarin.Forms Layout Demos
+name: Xamarin.Forms - Layout Demos
 description: 'Sample code associated with the Layout docs. This application demonstrates several layout topics, from beginner to advanced (UI)'
 page_type: sample
 languages:

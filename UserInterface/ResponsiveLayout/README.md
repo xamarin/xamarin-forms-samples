@@ -1,5 +1,5 @@
 ---
-name: 'Xamarin.Forms - Xamarin.Forms Layout: Handling Device Orientation'
+name: 'Xamarin.Forms - Layout: Handling Device Orientation'
 description: 'Sample code associated with the Layout Docs: This application demonstrates how various layouts can be used to create user interfaces (UI)'
 page_type: sample
 languages:

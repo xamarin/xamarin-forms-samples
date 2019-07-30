@@ -1,5 +1,5 @@
 ---
-name: Xamarin.Forms - Xamarin.Forms WebView
+name: Xamarin.Forms - WebView
 description: "This sample relates to the WebView in Xamarin.Forms doc. The app consists of two tabs. One tab demonstrates how to navigate within a WebView (UI)"
 page_type: sample
 languages:
