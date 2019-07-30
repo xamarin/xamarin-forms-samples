@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Accessibility
-description: "Demonstrates how to use the AutomationProperties class, so that a screen reader can speak about the user interface elements on the (UI)"
+description: "How to use the AutomationProperties class so that a screen reader can speak about the visible user interface elements (UI)"
 page_type: sample
 languages:
 - csharp

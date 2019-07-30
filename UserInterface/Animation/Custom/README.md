@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Custom Animations
-description: "The Animation class is the building block of all Xamarin.Forms animations, with the extension methods in the ViewExtensions class creating... (UI)"
+description: "The Animation class is the building block of all Xamarin.Forms animations, with the extension methods in the ViewExtensions class... (UI)"
 page_type: sample
 languages:
 - csharp

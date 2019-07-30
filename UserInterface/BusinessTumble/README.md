@@ -1,6 +1,6 @@
 ---
 name: 'Xamarin.Forms - Layout Sample: The Business Tumble'
-description: "This sample, inspired by a corporate social media profile app, demonstrates how to build similar layouts across StackLayout, RelativeLayout, (UI)"
+description: "This sample, inspired by a corporate social media profile app, demonstrates how to build app layouts (UI)"
 page_type: sample
 languages:
 - csharp

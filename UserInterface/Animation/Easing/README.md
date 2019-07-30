@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Easing Functions
-description: "Xamarin.Forms includes an Easing class that allows you to specify a transfer function that controls how animations speed up or slow down (UI)"
+description: "Xamarin.Forms includes an Easing class that allows you to specify a transfer function that controls how animations speed up/slow down (UI)"
 page_type: sample
 languages:
 - csharp

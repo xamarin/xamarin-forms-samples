@@ -17,4 +17,4 @@ The ActivityIndicator control indicates to users that the application is busy pe
 
 For more information about this sample, see [Xamarin.Forms ActivityIndicator](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/activityindicator).
 
-![Screenshot of sample ActivityIndicator Demos application](Screenshots/02ActivityIndicatorDemo.png "Screenshot of sample ActivityIndicator Demos application")
+![Sample ActivityIndicator demo application](Screenshots/02ActivityIndicatorDemo.png "Sample ActivityIndicator demo application")

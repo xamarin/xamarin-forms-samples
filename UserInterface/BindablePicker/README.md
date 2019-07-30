@@ -17,4 +17,4 @@ This sample demonstrates how to use a `Picker` to select a color from a list of 
 
 For more information about this sample see [Setting a Picker's ItemsSource Property](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/picker/populating-itemssource).
 
-![Bindable Picker application screenshot](Screenshots/01All.png "Bindable Picker application screenshot")
+![Bindable Picker demo screenshot](Screenshots/01All.png "Bindable Picker demo screenshot")
