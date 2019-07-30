@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UsingMessagingCenter.MainPage">
+    <StackLayout Margin="20,35,20,20">
+        <Label Text="MessagingCenter Demo"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <Button Text="Say Hi"
+                Clicked="OnSayHiButtonClicked" />
+        <Button Text="Say Hi to John"
+                Clicked="OnSayHiToJohnButtonClicked" />
+        <Button Text="Unsubscribe"
+                Clicked="OnUnsubscribeButtonClicked" />
+        <ListView ItemsSource="{Binding Greetings}" />
+    </StackLayout>
+</ContentPage>
