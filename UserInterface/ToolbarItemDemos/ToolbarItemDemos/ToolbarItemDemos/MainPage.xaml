@@ -12,12 +12,12 @@
         <TableRoot>
             <TableSection>
                 <TextCell Text="XAML ToolbarItem"
-                          Detail="Implement a ProgressBar in XAML"
+                          Detail="Implement a ToolbarItem in XAML"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:ToolbarItemXaml}" />
 
                 <TextCell Text="Code ToolbarItem"
-                          Detail="Implement a ProgressBar in code"
+                          Detail="Implement a ToolbarItem in code"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:ToolbarItemCode}" />
 
