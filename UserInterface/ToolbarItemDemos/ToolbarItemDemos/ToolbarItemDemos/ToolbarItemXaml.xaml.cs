@@ -11,7 +11,7 @@ namespace ToolbarItemDemos
             InitializeComponent();
         }
 
-        private void OnItemClicked(object sender, EventArgs e)
+        void OnItemClicked(object sender, EventArgs e)
         {
             ToolbarItem item = (ToolbarItem)sender;
             messageLabel.Text = $"You clicked the \"{item.Text}\" toolbar item.";
