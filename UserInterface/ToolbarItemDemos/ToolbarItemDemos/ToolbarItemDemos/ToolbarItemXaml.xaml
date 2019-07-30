@@ -7,11 +7,21 @@
              x:Class="ToolbarItemDemos.ToolbarItemXaml"
              Padding="10"
              Title="Xaml ToolbarItem Demo">
-<ContentPage.ToolbarItems>
-    <ToolbarItem Order="Primary" Text="Icon Item" Priority="0" IconImageSource="icon.png" Clicked="OnItemClicked" />
-        <ToolbarItem Order="Primary" Text="Text Item" Priority="1" Clicked="OnItemClicked" />
-        <ToolbarItem Order="Secondary" Text="Secondary Text Item" Priority="2" Clicked="OnItemClicked" />
-</ContentPage.ToolbarItems>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary"
+                     Text="Icon Item"
+                     Priority="0"
+                     IconImageSource="icon.png"
+                     Clicked="OnItemClicked" />
+        <ToolbarItem Order="Primary"
+                     Text="Text Item"
+                     Priority="1"
+                     Clicked="OnItemClicked" />
+        <ToolbarItem Order="Secondary"
+                     Text="Secondary Text Item"
+                     Priority="2"
+                     Clicked="OnItemClicked" />
+    </ContentPage.ToolbarItems>
     <StackLayout>
         <!-- Place new controls here -->
         <Label x:Name="messageLabel"
