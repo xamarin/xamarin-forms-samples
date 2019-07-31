@@ -1,11 +1,14 @@
 ---
-name: Xamarin.Forms - Xuzzle
-description: "This is a variation of the classic 14-15 puzzle. On the early Mac, the 14-15 program was called PUZZLE. #game"
+name: Xamarin.Forms - Xuzzle number game
+description: "This is a variation of the classic 14-15 puzzle. On the early Mac, the 14-15 program was called PUZZLE (game)"
 page_type: sample
 languages:
 - csharp
 products:
 - xamarin
+extensions:
+    tags:
+    - game
 urlFragment: xuzzle
 ---
 # Xuzzle
@@ -24,7 +27,3 @@ Use the numbers in the lower-right corner of each tile as a guide.
 When you successfully complete the puzzle, you'll be rewarded with an animation.
 
 ![Xuzzle application screenshot](Screenshots/01Android.png "Xuzzle application screenshot")
-
-## Author
-
-Charles Petzold
