@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ToolbarItemDemos"
+             mc:Ignorable="d"
+             x:Class="ToolbarItemDemos.MainPage"
+             Padding="10"
+             Title="ToolbarItem Demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="XAML ToolbarItem"
+                          Detail="Implement a ToolbarItem in XAML"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ToolbarItemXaml}" />
+
+                <TextCell Text="Code ToolbarItem"
+                          Detail="Implement a ToolbarItem in code"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ToolbarItemCode}" />
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+
+</ContentPage>
