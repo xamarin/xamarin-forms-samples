@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MenuItemDemos.Services;
+using MenuItemDemos.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,8 @@ namespace MenuItemDemos
         public MenuItemXamlPage()
         {
             InitializeComponent();
+
+            BindingContext = new ListPageViewModel(DataService.GetListItems());
         }
     }
 }

@@ -3,15 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodels="clr-namespace:MenuItemDemos.ViewModels"
              mc:Ignorable="d"
              x:Class="MenuItemDemos.MenuItemXamlPage"
+             x:Name="contentPage"
              Padding="10"
              Title="MenuItem XAML Demo">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <ContentPage.BindingContext>
+        <viewmodels:ListPageViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Label Text="{Binding Message}"
+               TextColor="Red"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Start" />
+        <ListView x:Name="sampleListView"
+                  ItemsSource="{Binding Items}"
+                  SelectedItem="{Binding SelectedItem}"
+                  HorizontalOptions="CenterAndExpand"
+                  VerticalOptions="CenterAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Edit"
+                                      Command="{Binding Source={x:Reference contentPage}, Path=BindingContext.EditCommand}"
+                                      CommandParameter="{Binding .}"/>
+                            <MenuItem Text="Delete"
+                                      Command="{Binding Source={x:Reference contentPage}, Path=BindingContext.DeleteCommand}"
+                                      CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
+                        <Label Text="{Binding .}" Margin="0,10,0,10" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>
