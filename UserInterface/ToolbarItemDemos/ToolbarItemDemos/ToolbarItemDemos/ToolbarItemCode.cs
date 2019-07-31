@@ -44,7 +44,8 @@ namespace ToolbarItemDemos
 
             Content = new StackLayout
             {
-                Children = {
+                Children =
+                {
                     messageLabel
                 }
             };

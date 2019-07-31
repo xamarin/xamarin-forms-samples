@@ -23,9 +23,8 @@
                      Clicked="OnItemClicked" />
     </ContentPage.ToolbarItems>
     <StackLayout>
-        <!-- Place new controls here -->
         <Label x:Name="messageLabel"
-               Text="Click a toolbar item." 
+               Text="Click a toolbar item."
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand" />
     </StackLayout>
