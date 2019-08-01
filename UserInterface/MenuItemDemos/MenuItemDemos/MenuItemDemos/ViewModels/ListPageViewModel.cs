@@ -24,7 +24,6 @@ namespace MenuItemDemos.ViewModels
             }
         }
 
-
         string message;
         public string Message
         {
@@ -42,6 +41,17 @@ namespace MenuItemDemos.ViewModels
             }
         }
 
+
+        public ListPageViewModel()
+        {
+            Items = new List<string>();
+        }
+
+        public ListPageViewModel(List<string> startingItems)
+        {
+            Items = startingItems;
+        }
+
         public ICommand EditCommand => new Command<string>((string item) =>
         {
             Message = $"Edit command was called on: {item}";
@@ -55,16 +65,6 @@ namespace MenuItemDemos.ViewModels
         protected virtual void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        public ListPageViewModel()
-        {
-            Items = new List<string>();
-        }
-
-        public ListPageViewModel(List<string> startingItems)
-        {
-            Items = startingItems;
         }
     }
 }

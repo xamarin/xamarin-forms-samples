@@ -16,13 +16,13 @@ namespace MenuItemDemos
 
         void DeleteClicked(object sender, EventArgs e)
         {
-            var item = sender as MenuItem;
+            MenuItem item = sender as MenuItem;
             messageLabel.Text = $"Delete handler was called on {item.BindingContext}";
         }
 
         void EditClicked(object sender, EventArgs e)
         {
-            var item = sender as MenuItem;
+            MenuItem item = sender as MenuItem;
             messageLabel.Text = $"Edit handler was called on {item.BindingContext}";
         }
     }

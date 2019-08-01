@@ -21,23 +21,23 @@ namespace MenuItemDemos
                 VerticalOptions = LayoutOptions.Start
             };
 
-            var dataTemplate = new DataTemplate(() =>
+            DataTemplate dataTemplate = new DataTemplate(() =>
             {
-                var label = new Label();
+                Label label = new Label();
                 label.SetBinding(Label.TextProperty, ".");
-                var viewCell = new ViewCell
+                ViewCell viewCell = new ViewCell
                 {
                     View = label
                 };
 
-                var menuItem1 = new MenuItem
+                MenuItem menuItem1 = new MenuItem
                 {
                     Text = "Edit",
                     IconImageSource = ImageSource.FromFile("icon.png")
                 };
                 menuItem1.Clicked += EditClicked;
 
-                var menuItem2 = new MenuItem
+                MenuItem menuItem2 = new MenuItem
                 {
                     Text = "Delete"
                 };
@@ -49,7 +49,7 @@ namespace MenuItemDemos
                 return viewCell;
             });
 
-            var listView = new ListView
+            ListView listView = new ListView
             {
                 ItemsSource = DataService.GetListItems(),
                 ItemTemplate = dataTemplate
@@ -66,13 +66,13 @@ namespace MenuItemDemos
 
         void DeleteClicked(object sender, EventArgs e)
         {
-            var item = sender as MenuItem;
+            MenuItem item = sender as MenuItem;
             messageLabel.Text = $"Delete handler was called on {item.BindingContext}";
         }
 
         void EditClicked(object sender, EventArgs e)
         {
-            var item = sender as MenuItem;
+            MenuItem item = sender as MenuItem;
             messageLabel.Text = $"Edit handler was called on {item.BindingContext}";
         }
     }
