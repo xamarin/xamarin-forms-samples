@@ -25,6 +25,7 @@
                     <ViewCell>
                         <ViewCell.ContextActions>
                             <MenuItem Text="Edit"
+                                      IconImageSource="icon.png"
                                       Clicked="EditClicked"/>
                             <MenuItem Text="Delete"
                                       Clicked="DeleteClicked"/>

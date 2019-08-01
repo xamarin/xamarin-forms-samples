@@ -27,6 +27,7 @@
                     <ViewCell>
                         <ViewCell.ContextActions>
                             <MenuItem Text="Edit"
+                                      IconImageSource="icon.png"
                                       Command="{Binding Source={x:Reference contentPage}, Path=BindingContext.EditCommand}"
                                       CommandParameter="{Binding .}"/>
                             <MenuItem Text="Delete"

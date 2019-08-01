@@ -32,7 +32,8 @@ namespace MenuItemDemos
 
                 var menuItem1 = new MenuItem
                 {
-                    Text = "Edit"
+                    Text = "Edit",
+                    IconImageSource = ImageSource.FromFile("icon.png")
                 };
                 menuItem1.Clicked += EditClicked;
 
