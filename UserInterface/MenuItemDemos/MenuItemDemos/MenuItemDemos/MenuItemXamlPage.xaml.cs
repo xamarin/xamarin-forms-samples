@@ -1,24 +1,29 @@
 ﻿using MenuItemDemos.Services;
-using MenuItemDemos.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace MenuItemDemos
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuItemXamlPage : ContentPage
     {
         public MenuItemXamlPage()
         {
             InitializeComponent();
 
-            BindingContext = new ListPageViewModel(DataService.GetListItems());
+            listView.ItemsSource = DataService.GetListItems();
+        }
+
+        private void DeleteClicked(object sender, EventArgs e)
+        {
+            var item = sender as MenuItem;
+            messageLabel.Text = $"Delete handler was called on {item.BindingContext}";
+        }
+
+        private void EditClicked(object sender, EventArgs e)
+        {
+            var item = sender as MenuItem;
+            messageLabel.Text = $"Edit handler was called on {item.BindingContext}";
         }
     }
 }

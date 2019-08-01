@@ -16,17 +16,14 @@
                           Detail="Implement a MenuItem in XAML"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:MenuItemXamlPage}" />
-
+                <TextCell Text="MenuItem XAML MVVM"
+                          Detail="Implement a MenuItem in XAML"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MenuItemXamlMvvmPage}" />
                 <TextCell Text="MenuItem Code"
                           Detail="Implement a MenuItem in code"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:MenuItemCodePage}" />
-
-                <TextCell Text="MenuItem MVVM Bindings"
-                          Detail="Implement a MenuItem with MVVM"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:MenuItemMvvmPage}" />
-
             </TableSection>
         </TableRoot>
     </TableView>

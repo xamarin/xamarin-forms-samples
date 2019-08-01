@@ -5,19 +5,21 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewmodels="clr-namespace:MenuItemDemos.ViewModels"
              mc:Ignorable="d"
-             x:Class="MenuItemDemos.MenuItemXamlPage"
+             x:Class="MenuItemDemos.MenuItemXamlMvvmPage"
+             x:Name="contentPage"
              Padding="10"
-             Title="MenuItem XAML Demo">
+             Title="MenuItem XAML MVVM Demo">
+    
     <ContentPage.BindingContext>
         <viewmodels:ListPageViewModel />
     </ContentPage.BindingContext>
 
     <StackLayout>
-        <Label x:Name="messageLabel"
+        <Label Text="{Binding Message}"
                TextColor="Red"
                HorizontalOptions="CenterAndExpand"
                VerticalOptions="Start" />
-        <ListView x:Name="listView"
+        <ListView ItemsSource="{Binding Items}"
                   HorizontalOptions="CenterAndExpand"
                   VerticalOptions="CenterAndExpand">
             <ListView.ItemTemplate>
@@ -25,9 +27,11 @@
                     <ViewCell>
                         <ViewCell.ContextActions>
                             <MenuItem Text="Edit"
-                                      Clicked="EditClicked"/>
+                                      Command="{Binding Source={x:Reference contentPage}, Path=BindingContext.EditCommand}"
+                                      CommandParameter="{Binding .}"/>
                             <MenuItem Text="Delete"
-                                      Clicked="DeleteClicked"/>
+                                      Command="{Binding Source={x:Reference contentPage}, Path=BindingContext.DeleteCommand}"
+                                      CommandParameter="{Binding .}"/>
                         </ViewCell.ContextActions>
                         <Label Text="{Binding .}" />
                     </ViewCell>

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace MenuItemDemos.Services
 {
@@ -9,7 +7,7 @@ namespace MenuItemDemos.Services
         public static List<string> GetListItems(int itemCount = 10)
         {
             List<string> items = new List<string>();
-            for(var i = 1; i <= itemCount; i++)
+            for (var i = 1; i <= itemCount; i++)
             {
                 items.Add($"Item {i}");
             }
