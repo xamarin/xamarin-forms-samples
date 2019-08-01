@@ -7,14 +7,35 @@
              x:Class="FrameDemos.FrameXamlPage"
              Padding="10"
              Title="Frame XAML Demo">
-    <ContentPage.Content>
-        <StackLayout>
-            <Frame BackgroundColor="LightGray"
-                   BorderColor="Orange"
-                   CornerRadius="10"
-                   HasShadow="True">
-                <Label Text="example" />
-            </Frame>
-        </StackLayout>
-    </ContentPage.Content>
+  <ContentPage.Content>
+    <StackLayout>
+      <Frame>
+        <Label Text="Default" />
+      </Frame>
+      <Frame BorderColor="Orange" >
+        <Label Text="BorderColor" />
+      </Frame>
+      <Frame BorderColor="Orange"
+             CornerRadius="10">
+        <Label Text="CornerRadius" />
+      </Frame>
+      <Frame BackgroundColor="LightGray"
+             BorderColor="Orange"
+             CornerRadius="10">
+        <Label Text="BackgroundColor" />
+      </Frame>
+      <Frame BackgroundColor="LightGray"
+             BorderColor="Orange"
+             CornerRadius="10"
+             HasShadow="False">
+        <Label Text="HasShadow False (platform dependent)" />
+      </Frame>
+      <Frame BackgroundColor="LightGray"
+               BorderColor="Orange"
+               CornerRadius="10"
+               HasShadow="True">
+        <Label Text="HasShadow True (platform dependent)" />
+      </Frame>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>
