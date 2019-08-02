@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="WorkingWithImages.LocalImagesXaml">
-  <StackLayout Margin="20">
-    <Label Text="Image FileSource XAML" FontAttributes="Bold" HorizontalOptions="Center" />
-    <Image Source="waterfront.jpg" />
-    <Label Text="The image is referenced in XAML. On iOS and Android multiple resolutions are supplied and resolved at runtime." />
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkingWithImages.LocalImagesXaml">
+    <StackLayout Margin="20,35,20,20">
+        <Label Text="Image FileSource XAML"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <Image Source="waterfront.jpg" />
+        <Label Text="The image is referenced in XAML. On iOS and Android multiple resolutions are supplied and resolved at runtime." />
     </StackLayout>
 </ContentPage>

@@ -1,31 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="WorkingWithImages.DownloadImagesXaml">
-	<ContentPage.Padding>
-		<OnPlatform x:TypeArguments="Thickness">
-            <On Platform="iOS" Value="0, 20, 0, 0" />
-		</OnPlatform>
-	</ContentPage.Padding>
-  <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-    <Label Text="Image UriSource Xaml" />
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkingWithImages.DownloadImagesXaml">
+    <StackLayout Margin="20,35,20,20">
+        <Label Text="Image UriSource XAML"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <Image Source="https://aka.ms/campus.jpg" />
 
-    <Image Source="http://xamarin.com/content/images/pages/forms/example-app.png" />
+        <!--- Alternatively you can use attached property to manually alter the cache time-->
+        <Image IsVisible="false">
+            <Image.Source>
+                <UriImageSource
+                    Uri="https://aka.ms/campus.jpg"
+                    CacheValidity="10:00:00.0" />
+            </Image.Source>
+        </Image>
 
-
-    <!--- Alternatively you can use attached property to manually alter the cache time-->
-    <Image IsVisible="false">
-    	<Image.Source>
-    		<UriImageSource 
-    			Uri="http://xamarin.com/content/images/pages/forms/example-app.png"
-    			CacheValidity="10:00:00.0"
-    		/>
-    	</Image.Source>
-    </Image>
-
-
-
-    <Label Text="example-app.png gets downloaded from xamarin.com" />
-  </StackLayout>
+        <Label Text="This image is downloaded from microsoft.com." />
+    </StackLayout>
 </ContentPage>
