@@ -17,7 +17,6 @@ namespace Notes.iOS.Views
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            AppDelegate.Instance.DisposeNoteEntryPage();
         }
 
         void OnSaveButtonClicked(object sender, EventArgs e)
@@ -32,7 +31,7 @@ namespace Notes.iOS.Views
             }
             else
             {
-                // Update 
+                // Update
                 File.WriteAllText(note.Filename, note.Text);
             }
 
