@@ -6,10 +6,10 @@ languages:
 - csharp
 products:
 - xamarin
-- customrenderer
 extensions:
     tags:
     - map
+    - customrenderer
 urlFragment: customrenderers-map-circle
 ---
 # Circle Map Overlay
