@@ -28,4 +28,7 @@
     <EmbeddedResource Include="beach.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="beach.jpg" />
+  </ItemGroup>
 </Project>
