@@ -9,7 +9,7 @@ products:
 extensions:
     tags:
     - ui
-urlFragment: userinterface-activityindicatordemos
+urlFragment: userinterface-frame
 ---
 # Frame Demos
 
