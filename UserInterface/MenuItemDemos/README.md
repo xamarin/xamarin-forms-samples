@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - MenuItem Demos
-description: "The MenuItem control is used to define context menu choices for ListView items."
+description: "The MenuItem class is used to create menu items for menus such as ListView item context menus and Shell application flyout menus."
 page_type: sample
 languages:
 - csharp
@@ -13,7 +13,7 @@ urlFragment: userinterface-menuitem
 ---
 # MenuItem Demos
 
-The `MenuItem` control is used to define context menu choices for `ListView` items. `MenuItem` objects are typically defined as part of the `DataTemplate` used to render the `ListView` items.
+The `MenuItem` class is used to create menu items for menus such as `ListView` item context menus and Shell application flyout menus.
 
 For more information about this sample, see [Xamarin.Forms MenuItem](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/menuitem).
 

@@ -15,6 +15,7 @@
     </ContentPage.BindingContext>
 
     <StackLayout>
+        <Label Text="Reveal the context menu by right-clicking (UWP), long-pressing (Android), or swiping (iOS) an item in the following list." />
         <Label Text="{Binding Message}"
                TextColor="Red"
                HorizontalOptions="CenterAndExpand"

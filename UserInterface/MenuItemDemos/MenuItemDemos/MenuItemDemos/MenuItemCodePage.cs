@@ -35,13 +35,13 @@ namespace MenuItemDemos
                     Text = "Edit",
                     IconImageSource = ImageSource.FromFile("icon.png")
                 };
-                menuItem1.Clicked += EditClicked;
+                menuItem1.Clicked += OnEditClicked;
 
                 MenuItem menuItem2 = new MenuItem
                 {
                     Text = "Delete"
                 };
-                menuItem2.Clicked += DeleteClicked;
+                menuItem2.Clicked += OnDeleteClicked;
 
                 viewCell.ContextActions.Add(menuItem1);
                 viewCell.ContextActions.Add(menuItem2);
@@ -57,20 +57,25 @@ namespace MenuItemDemos
 
             Content = new StackLayout
             {
-                Children = {
+                Children =
+                {
+                    new Label
+                    {
+                        Text = "Reveal the context menu by right-clicking (UWP), long-pressing (Android), or swiping (iOS) an item in the following list."
+                    },
                     messageLabel,
                     listView
                 }
             };
         }
 
-        void DeleteClicked(object sender, EventArgs e)
+        void OnDeleteClicked(object sender, EventArgs e)
         {
             MenuItem item = sender as MenuItem;
             messageLabel.Text = $"Delete handler was called on {item.BindingContext}";
         }
 
-        void EditClicked(object sender, EventArgs e)
+        void OnEditClicked(object sender, EventArgs e)
         {
             MenuItem item = sender as MenuItem;
             messageLabel.Text = $"Edit handler was called on {item.BindingContext}";

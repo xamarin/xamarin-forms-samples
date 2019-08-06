@@ -14,13 +14,13 @@ namespace MenuItemDemos
             listView.ItemsSource = DataService.GetListItems();
         }
 
-        void DeleteClicked(object sender, EventArgs e)
+        void OnDeleteClicked(object sender, EventArgs e)
         {
             MenuItem item = sender as MenuItem;
             messageLabel.Text = $"Delete handler was called on {item.BindingContext}";
         }
 
-        void EditClicked(object sender, EventArgs e)
+        void OnEditClicked(object sender, EventArgs e)
         {
             MenuItem item = sender as MenuItem;
             messageLabel.Text = $"Edit handler was called on {item.BindingContext}";
