@@ -9,7 +9,7 @@
              Title="Frame XAML Demo">
   <ContentPage.Content>
     <ScrollView>
-      <StackLayout>
+      <StackLayout Padding="10">
         <Frame>
           <Label Text="Default" />
         </Frame>
