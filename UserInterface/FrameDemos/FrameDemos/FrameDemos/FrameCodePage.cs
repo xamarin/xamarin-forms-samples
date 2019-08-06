@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace FrameDemos
 {
@@ -60,16 +53,49 @@ namespace FrameDemos
                 HasShadow = true
             };
 
-            Content = new StackLayout
+            Frame cardFrame = new Frame
             {
-                Children =
+                BorderColor = Color.Gray,
+                CornerRadius = 5,
+                Padding = 8,
+                Content = new StackLayout
                 {
-                    frame1,
-                    frame2,
-                    frame3,
-                    frame4,
-                    frame5,
-                    frame6
+                    Children =
+                    {
+                        new Label
+                        {
+                            Text = "Card Example",
+                            FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                            FontAttributes = FontAttributes.Bold
+                        },
+                        new BoxView
+                        {
+                            Color = Color.Gray,
+                            HeightRequest = 2,
+                            HorizontalOptions = LayoutOptions.Fill
+                        },
+                        new Label
+                        {
+                            Text = "Frames can wrap more complex layouts to create more complex UI components, such as this card!"
+                        }
+                    }
+                }
+            };
+
+            Content = new ScrollView
+            {
+                Content = new StackLayout
+                {
+                    Children =
+                    {
+                        frame1,
+                        frame2,
+                        frame3,
+                        frame4,
+                        frame5,
+                        frame6,
+                        cardFrame
+                    }
                 }
             };
         }

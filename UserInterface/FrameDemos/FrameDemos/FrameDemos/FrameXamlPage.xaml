@@ -8,34 +8,49 @@
              Padding="10"
              Title="Frame XAML Demo">
   <ContentPage.Content>
-    <StackLayout>
-      <Frame>
-        <Label Text="Default" />
-      </Frame>
-      <Frame BorderColor="Orange" >
-        <Label Text="BorderColor" />
-      </Frame>
-      <Frame BorderColor="Orange"
-             CornerRadius="10">
-        <Label Text="CornerRadius" />
-      </Frame>
-      <Frame BackgroundColor="LightGray"
-             BorderColor="Orange"
-             CornerRadius="10">
-        <Label Text="BackgroundColor" />
-      </Frame>
-      <Frame BackgroundColor="LightGray"
-             BorderColor="Orange"
-             CornerRadius="10"
-             HasShadow="False">
-        <Label Text="HasShadow False (platform dependent)" />
-      </Frame>
-      <Frame BackgroundColor="LightGray"
+    <ScrollView>
+      <StackLayout>
+        <Frame>
+          <Label Text="Default" />
+        </Frame>
+        <Frame BorderColor="Orange" >
+          <Label Text="BorderColor" />
+        </Frame>
+        <Frame BorderColor="Orange"
+               CornerRadius="10">
+          <Label Text="CornerRadius" />
+        </Frame>
+        <Frame BackgroundColor="LightGray"
+               BorderColor="Orange"
+               CornerRadius="10">
+          <Label Text="BackgroundColor" />
+        </Frame>
+        <Frame BackgroundColor="LightGray"
+               BorderColor="Orange"
+               CornerRadius="10"
+               HasShadow="False">
+          <Label Text="HasShadow False (platform dependent)" />
+        </Frame>
+        <Frame BackgroundColor="LightGray"
                BorderColor="Orange"
                CornerRadius="10"
                HasShadow="True">
-        <Label Text="HasShadow True (platform dependent)" />
-      </Frame>
-    </StackLayout>
+          <Label Text="HasShadow True (platform dependent)" />
+        </Frame>
+        <Frame BorderColor="Gray"
+               CornerRadius="5"
+               Padding="8">
+          <StackLayout>
+            <Label Text="Card Example"
+                   FontSize="Medium"
+                   FontAttributes="Bold" />
+            <BoxView Color="Gray"
+                     HeightRequest="2"
+                     HorizontalOptions="Fill" />
+            <Label Text="Frames can wrap more complex layouts to create more complex UI components, such as this card!"/>
+          </StackLayout>
+        </Frame>
+      </StackLayout>
+    </ScrollView>
   </ContentPage.Content>
 </ContentPage>
