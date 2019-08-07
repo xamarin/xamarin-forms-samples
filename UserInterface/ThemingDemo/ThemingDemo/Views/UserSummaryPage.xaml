@@ -20,7 +20,7 @@
                 <Label Text="Face-Palm Monkey"
                        VerticalOptions="Center"
                        Margin="15"
-                       FontSize="22" />
+                       Style="{StaticResource MediumLabelStyle}" />
                 <Frame Margin="10"
                        CornerRadius="50"
                        HeightRequest="60"
