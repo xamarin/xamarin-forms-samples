@@ -9,33 +9,12 @@ namespace FrameDemos
             Padding = 10;
             Title = "Frame Code Demo";
 
-            Frame frame1 = new Frame
+            Frame defaultFrame = new Frame
             {
                 Content = new Label { Text = "Default" }
             };
 
-            Frame frame2 = new Frame
-            {
-                BorderColor = Color.Orange,
-                Content = new Label { Text = "BorderColor" },
-            };
-
-            Frame frame3 = new Frame
-            {
-                BorderColor = Color.Orange,
-                Content = new Label { Text = "CornerRadius" },
-                CornerRadius = 10
-            };
-
-            Frame frame4 = new Frame
-            {
-                BackgroundColor = Color.LightGray,
-                BorderColor = Color.Orange,
-                Content = new Label { Text = "BackgroundColor" },
-                CornerRadius = 10
-            };
-
-            Frame frame5 = new Frame
+            Frame noShadowFrame = new Frame
             {
                 BackgroundColor = Color.LightGray,
                 BorderColor = Color.Orange,
@@ -44,13 +23,33 @@ namespace FrameDemos
                 HasShadow = false
             };
 
-            Frame frame6 = new Frame
+            Frame forceShadowFrame = new Frame
             {
                 BackgroundColor = Color.LightGray,
                 BorderColor = Color.Orange,
                 Content = new Label { Text = "HasShadow True (platform-dependent)" },
                 CornerRadius = 10,
                 HasShadow = true
+            };
+
+            Frame circleImageFrame = new Frame
+            {
+                Margin = 10,
+                BorderColor = Color.Black,
+                CornerRadius = 50,
+                HeightRequest = 60,
+                WidthRequest = 60,
+                IsClippedToBounds = true,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
+                Content = new Image
+                {
+                    Source = ImageSource.FromFile("outdoors.jpg"),
+                    Aspect = Aspect.AspectFill,
+                    Margin = -20,
+                    HeightRequest = 100,
+                    WidthRequest = 100
+                }
             };
 
             Frame cardFrame = new Frame
@@ -88,12 +87,10 @@ namespace FrameDemos
                 {
                     Children =
                     {
-                        frame1,
-                        frame2,
-                        frame3,
-                        frame4,
-                        frame5,
-                        frame6,
+                        defaultFrame,
+                        noShadowFrame,
+                        forceShadowFrame,
+                        circleImageFrame,
                         cardFrame
                     }
                 }

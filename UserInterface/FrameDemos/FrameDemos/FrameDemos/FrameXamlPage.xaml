@@ -13,18 +13,6 @@
         <Frame>
           <Label Text="Default" />
         </Frame>
-        <Frame BorderColor="Orange" >
-          <Label Text="BorderColor" />
-        </Frame>
-        <Frame BorderColor="Orange"
-               CornerRadius="10">
-          <Label Text="CornerRadius" />
-        </Frame>
-        <Frame BackgroundColor="LightGray"
-               BorderColor="Orange"
-               CornerRadius="10">
-          <Label Text="BackgroundColor" />
-        </Frame>
         <Frame BackgroundColor="LightGray"
                BorderColor="Orange"
                CornerRadius="10"
@@ -36,6 +24,20 @@
                CornerRadius="10"
                HasShadow="True">
           <Label Text="HasShadow True (platform dependent)" />
+        </Frame>
+        <Frame Margin="10"
+               BorderColor="Black"
+               CornerRadius="50"
+               HeightRequest="60"
+               WidthRequest="60"
+               IsClippedToBounds="True"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+          <Image Source="outdoors.jpg"
+                 Aspect="AspectFill"
+                 Margin="-20"
+                 HeightRequest="100"
+                 WidthRequest="100" />
         </Frame>
         <Frame BorderColor="Gray"
                CornerRadius="5"
