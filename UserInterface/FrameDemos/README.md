@@ -17,7 +17,7 @@ The `Frame` class is a layout used to wrap another view with a border that can b
 
 For more information about this sample, see [Xamarin.Forms Frame](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/layouts/frame).
 
-![Sample Frame demo application](Screenshots/01frame-demo.png "Sample Frame demo application")
+![Sample Frame demo application](Screenshots/01frame-full.png "Sample Frame demo application")
 
 ## Author
 
