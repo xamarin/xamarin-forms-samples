@@ -9,7 +9,7 @@ products:
 extensions:
     tags:
     - ui
-urlFragment: userinterface-menuitem
+urlFragment: userinterface-menuitemdemos
 ---
 # MenuItem Demos
 
