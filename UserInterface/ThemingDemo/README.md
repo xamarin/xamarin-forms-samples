@@ -12,6 +12,7 @@ extensions:
     - theming
 urlFragment: userinterface-theming
 ---
+
 # Theming
 
 Theming can be implemented in Xamarin.Forms applications by creating a `ResourceDictionary` for each theme, and then loading the resources with the `DynamicResource` markup extension.
