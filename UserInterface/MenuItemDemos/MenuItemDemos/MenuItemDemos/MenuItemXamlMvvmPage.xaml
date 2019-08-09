@@ -6,7 +6,7 @@
              xmlns:viewmodels="clr-namespace:MenuItemDemos.ViewModels"
              mc:Ignorable="d"
              x:Class="MenuItemDemos.MenuItemXamlMvvmPage"
-             x:Name="contentPage"
+             x:Name="this"
              Padding="10"
              Title="MenuItem XAML MVVM Demo">
     
@@ -29,10 +29,10 @@
                         <ViewCell.ContextActions>
                             <MenuItem Text="Edit"
                                       IconImageSource="icon.png"
-                                      Command="{Binding Source={x:Reference contentPage}, Path=BindingContext.EditCommand}"
+                                      Command="{Binding Source={x:Reference this}, Path=BindingContext.EditCommand}"
                                       CommandParameter="{Binding .}"/>
                             <MenuItem Text="Delete"
-                                      Command="{Binding Source={x:Reference contentPage}, Path=BindingContext.DeleteCommand}"
+                                      Command="{Binding Source={x:Reference this}, Path=BindingContext.DeleteCommand}"
                                       CommandParameter="{Binding .}"/>
                         </ViewCell.ContextActions>
                         <Label Text="{Binding .}" />
