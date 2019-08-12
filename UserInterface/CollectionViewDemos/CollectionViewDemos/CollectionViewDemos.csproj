@@ -23,6 +23,7 @@
     <Folder Include="Views\Spacing\" />
     <Folder Include="Helpers\" />
     <Folder Include="Views\Grouping\" />
+    <Folder Include="Views\HeadersAndFooters\" />
   </ItemGroup>
 
   <ItemGroup>
