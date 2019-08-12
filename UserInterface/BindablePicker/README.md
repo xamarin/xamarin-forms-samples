@@ -1,23 +1,20 @@
 ---
-name: Bindable Picker
-description: This sample demonstrates how to use a Picker to select a color from a list of colors.
-topic: sample
+name: Xamarin.Forms - Bindable Picker
+description: "This sample demonstrates how to use a Picker to select a color from a list of colors (UI)"
+page_type: sample
 languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
+extensions:
+    tags:
+    - ui
 urlFragment: userinterface-bindablepicker
 ---
-Bindable Picker
-===============
+# Bindable Picker
 
 This sample demonstrates how to use a `Picker` to select a color from a list of colors.
 
-For more information about this sample see [Setting a Picker's ItemsSource Property](https://developer.xamarin.com/guides/xamarin-forms/user-interface/picker/populating-itemssource/).
+For more information about this sample see [Setting a Picker's ItemsSource Property](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/picker/populating-itemssource).
 
-Author
-------
-
-David Britch
+![Bindable Picker demo screenshot](Screenshots/01All.png "Bindable Picker demo screenshot")

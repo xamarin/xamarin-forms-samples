@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodels="clr-namespace:SearchBarDemos.ViewModels" 
+             mc:Ignorable="d"
+             x:Class="SearchBarDemos.SearchBarXamlMvvmPage"
+             Padding="10"
+             Title="XAML MVVM SearchBar">
+    <ContentPage.BindingContext>
+        <viewmodels:SearchViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <SearchBar x:Name="searchBar"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="CenterAndExpand"
+                   Placeholder="Search fruits..."
+                   SearchCommand="{Binding PerformSearch}" 
+                   SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"/>
+        <Label Text="Enter a search term and press enter or click the magnifying glass to perform a search."
+               HorizontalOptions="Fill"
+               VerticalOptions="CenterAndExpand" />
+        <ListView x:Name="searchResults"
+                  HorizontalOptions="Fill"
+                  VerticalOptions="CenterAndExpand"
+                  ItemsSource="{Binding SearchResults}"/>
+    </StackLayout>
+</ContentPage>

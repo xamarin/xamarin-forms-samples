@@ -57,15 +57,15 @@ namespace CustomRenderer.iOS
                 throw new Exception("Custom pin not found");
             }
 
-            annotationView = mapView.DequeueReusableAnnotation(customPin.Id.ToString());
+            annotationView = mapView.DequeueReusableAnnotation(customPin.MarkerId.ToString());
             if (annotationView == null)
             {
-                annotationView = new CustomMKAnnotationView(annotation, customPin.Id.ToString());
+                annotationView = new CustomMKAnnotationView(annotation, customPin.MarkerId.ToString());
                 annotationView.Image = UIImage.FromFile("pin.png");
                 annotationView.CalloutOffset = new CGPoint(0, 0);
                 annotationView.LeftCalloutAccessoryView = new UIImageView(UIImage.FromFile("monkey.png"));
                 annotationView.RightCalloutAccessoryView = UIButton.FromType(UIButtonType.DetailDisclosure);
-                ((CustomMKAnnotationView)annotationView).Id = customPin.Id.ToString();
+                ((CustomMKAnnotationView)annotationView).MarkerId = customPin.MarkerId.ToString();
                 ((CustomMKAnnotationView)annotationView).Url = customPin.Url;
             }
             annotationView.CanShowCallout = true;
@@ -87,7 +87,7 @@ namespace CustomRenderer.iOS
             var customView = e.View as CustomMKAnnotationView;
             customPinView = new UIView();
 
-            if (customView.Id == "Xamarin")
+            if (customView.MarkerId == "Xamarin")
             {
                 customPinView.Frame = new CGRect(0, 0, 200, 84);
                 var image = new UIImageView(new CGRect(0, 0, 200, 84));

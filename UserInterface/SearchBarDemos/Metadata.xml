@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleMetadata>
+	<ID>6B7E1C0C-9749-4218-BBA9-5071CEA7D6DF</ID>
+	<IsFullApplication>false</IsFullApplication>
+	<Level>Beginner</Level>
+	<Tags>User Interface, Xamarin.Forms</Tags>
+	<SupportedPlatforms>iOS, Android, Windows</SupportedPlatforms>
+	<LicenseRequirement>Indie</LicenseRequirement>
+	<Gallery>true</Gallery>
+	<Brief>The SearchBar is a user input control used for initiating a search. The SearchBar control supports placeholder text, query input, execution, and cancellation. This sample demonstrates how to use a SearchBar in XAML and code.</Brief>
+</SampleMetadata>

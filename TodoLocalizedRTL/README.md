@@ -1,16 +1,14 @@
 ---
-name: TodoLocalized RTL (Xamarin.Forms)
-topic: sample
+name: Xamarin.Forms - TodoLocalized RTL
+description: 'This sample demonstrates a localized Todo list application where the data is stored and accessed in a local SQLite database, with right-to-left text.'
+page_type: sample
 languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: todolocalizedrtl
 ---
-TodoLocalized RTL (Xamarin.Forms)
-=============
+# TodoLocalized RTL (Xamarin.Forms)
 
 This sample demonstrates how to right-to-left localize Xamarin.Forms apps.
 

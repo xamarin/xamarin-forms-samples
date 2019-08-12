@@ -1,23 +1,20 @@
 ---
-name: 'Xamarin.Forms ListView Sample: Custom Cells'
-description: 'Sample code associated with the ListView Docs: This sample demonstrates how to implement a custom cell in both XAML and C. This sample mirrors the samples for iOS and Android UITableViewController and ListView, respectively.'
-topic: sample
+name: 'Xamarin.Forms - ListView Sample: Custom Cells'
+description: 'Demonstrates how to implement a custom cell in both XAML and C# (UI)'
+page_type: sample
 languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
+extensions:
+    tags:
+    - ui
 urlFragment: userinterface-listview-customcells
 ---
-Xamarin.Forms ListView Sample: Custom Cells
-===========================
+# Xamarin.Forms ListView Sample: Custom Cells
 
-Sample code associated with the [ListView Docs](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/user-interface/list_view/):
+Sample code associated with the [ListView Docs](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/listview/):
 
-This sample demonstrates how to implement a custom cell in both XAML and C#. This sample mirrors the samples for [iOS](URL) and [Android](URL) UITableViewController and ListView, respectively. 
+This sample demonstrates how to implement a custom cell in both XAML and C#. This sample mirrors the samples for iOS UITableViewController and Android ListView, respectively.
 
-
-Author
-------
-Nathan Castle
+![Xamarin.Forms ListView Sample: Custom Cells application screenshot](Screenshots/CustomCellsHome_Android.png "Xamarin.Forms ListView Sample: Custom Cells application screenshot")

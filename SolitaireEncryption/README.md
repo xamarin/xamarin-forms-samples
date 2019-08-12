@@ -1,26 +1,22 @@
 ---
-name: Solitaire Encryption (Xamarin.Forms)
-description: A C port of the Solitaire encryption algorithm featured in Neal Stephenson's novel Cryptonomicon. The algorithm has been implemented in a Xamarin.Forms mobile app for iOS, Android, and the Universal Windows Platform (along with an NUnit test project containing the tests from the author's website). The algorithm itself is based on a deck of cards, however you don't see this when using the app; for more info check the source code^ or the details of how it works. This sample illustrates the inclusion of a Unit Test project in a Xamarin.Forms solution and also a custom Button renderer.
-topic: sample
+name: Xamarin.Forms - Solitaire Encryption (Xamarin.Forms)
+description: A C port of the Solitaire encryption algorithm featured in Neal Stephenson's novel Cryptonomicon. The algorithm has been implemented in a...
+page_type: sample
 languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: solitaireencryption
 ---
-Solitaire Encryption (Xamarin.Forms)
-==============
+# Solitaire Encryption (Xamarin.Forms)
 
 A C# port of the [Solitaire encryption algorithm](https://www.schneier.com/solitaire.html) featured in Neal Stephenson's novel [Cryptonomicon](http://en.wikipedia.org/wiki/Cryptonomicon). The algorithm has been implemented in a Xamarin.Forms mobile app for iOS, Android, and the Universal Windows Platform (along with an NUnit test project containing the [tests from the author's website](https://www.schneier.com/code/sol-test.txt)). The algorithm itself is based on a deck of cards, however you don't see this when using the app; for more info check the source code^ or the [details of how it works](https://www.schneier.com/solitaire.html).
 
 ![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/SolitaireEncryption/Screenshots/all-sml.png "Colors")
 
-This sample illustrates the inclusion of a Unit Test project in a Xamarin.Forms solution and also a custom `Button` [renderer](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/custom-renderer/).
+This sample illustrates the inclusion of a Unit Test project in a Xamarin.Forms solution and also a custom `Button` [renderer](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/custom-renderer/).
 
-Author
-------
+## Author
 
 Craig Dunn
 

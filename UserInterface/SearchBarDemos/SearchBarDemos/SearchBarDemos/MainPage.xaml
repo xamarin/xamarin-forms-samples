@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:SearchBarDemos"
+             mc:Ignorable="d"
+             x:Class="SearchBarDemos.MainPage"
+             Padding="10"
+             Title="SearchBar Demos">
+
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="XAML SearchBar"
+                          Detail="Use an event handler to perform search."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SearchBarXamlPage}" />
+                <TextCell Text="XAML MVVM SearchBar"
+                          Detail="Use MVVM bindings to perform search."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SearchBarXamlMvvmPage}" />
+                <TextCell Text="XAML Realtime SearchBar"
+                          Detail="Filter results in realtime."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SearchBarRealtimeXamlPage}" />
+                <TextCell Text="Code SearchBar"
+                          Detail="Use an event handler to perform search."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SearchBarCodePage}" />
+                <TextCell Text="Code MVVM SearchBar"
+                          Detail="Use MVVM bindings to perform search."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SearchBarCodeMvvmPage}" />
+                <TextCell Text="Code Realtime SearchBar"
+                          Detail="Filter results in realtime."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SearchBarRealtimeCodePage}" />
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+
+</ContentPage>

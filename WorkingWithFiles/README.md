@@ -1,23 +1,19 @@
 ---
-name: Working with Files
-description: These samples relate to the Working with Files in Xamarin.Forms doc.
-topic: sample
+name: Xamarin.Forms - Working with Files
+description: "How use System.IO to work with Files in Xamarin.Forms"
+page_type: sample
 languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: workingwithfiles
 ---
-Working with Files
-==============
+# Working with Files in Xamarin.Forms
 
-These samples relate to the [Working with Files in Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/files/) doc.
+These samples relate to the [Working with Files in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/data-cloud/data/files) doc.
 
 ![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/WorkingWithFiles/Screenshots/SaveAndLoad-sml.png "Save and load a file")
 
-Author
-------
+## Author
 
 Craig Dunn

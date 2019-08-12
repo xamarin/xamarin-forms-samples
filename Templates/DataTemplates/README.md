@@ -1,23 +1,17 @@
 ---
-name: Data Template
-description: This sample demonstrates creating a DataTemplate to specify the appearance of data being displayed by a ListView.
-topic: sample
+name: Xamarin.Forms - Data Template
+description: "Demonstrates creating a DataTemplate to specify the appearance of data being displayed by a ListView"
+page_type: sample
 languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: templates-datatemplates
 ---
-Data Template
-=============
+# Data Template
 
 This sample demonstrates creating a `DataTemplate` to specify the appearance of data being displayed by a `ListView`.
 
-For more information about the sample see [Data Templates](http://developer.xamarin.com/guides/xamarin-forms/templates/data-templates/).
+For more information about the sample see [Data Templates](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/templates/data-templates/).
 
-Author
-------
-
-David Britch
+![Data Template application screenshot](Screenshots/01All.png "Data Template application screenshot")

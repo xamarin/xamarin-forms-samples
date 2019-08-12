@@ -1,23 +1,17 @@
 ---
-name: Modal Pages
-description: This sample demonstrates how to navigate to modal pages.
-topic: sample
+name: Xamarin.Forms - Modal Pages
+description: "This sample demonstrates how to navigate to modal pages (navigation)"
+page_type: sample
 languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: navigation-modal
 ---
-Modal Pages
-===========
+# Modal Pages
 
 This sample demonstrates how to navigate to modal pages.
 
-For more information about the sample see [Modal Pages](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/user-interface/navigation/modal/).
+For more information about the sample see [Modal Pages](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/navigation/modal).
 
-Author
-------
-
-David Britch
+![Modal Pages application screenshot](Screenshots/01All.png "Modal Pages application screenshot")

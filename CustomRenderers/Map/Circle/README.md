@@ -1,23 +1,21 @@
 ---
-name: Circle Map Overlay
-description: This sample demonstrates how to add a circular overlay to a map in order to highlight a circular area of the map.
-topic: sample
+name: Xamarin.Forms - Circle Map Overlay
+description: "How to add a circular overlay to a map in order to highlight a circular area..."
+page_type: sample
 languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
+extensions:
+    tags:
+    - map
+    - customrenderer
 urlFragment: customrenderers-map-circle
 ---
-Circle Map Overlay
-==================
+# Circle Map Overlay
 
 This sample demonstrates how to add a circular overlay to a map in order to highlight a circular area of the map.
 
-For more information about this sample see [Highlighting a Circular Area on a Map](http://developer.xamarin.com/guides/xamarin-forms/custom-renderer/map/circle-map-overlay/).
+For more information about this sample see [Highlighting a Circular Area on a Map](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/custom-renderer/map/circle-map-overlay).
 
-Author
-------
-
-David Britch
+![Circle Map Overlay application screenshot](Screenshots/01All.png "Circle Map Overlay application screenshot")

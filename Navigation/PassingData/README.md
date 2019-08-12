@@ -1,23 +1,17 @@
 ---
-name: Passing Data
-description: This sample demonstrates how to pass data between pages when navigating.
-topic: sample
+name: Xamarin.Forms - Passing Data
+description: "This sample demonstrates how to pass data between pages when navigating (navigation)"
+page_type: sample
 languages:
 - csharp
 products:
 - xamarin
-technologies:
-- xamarin-forms
 urlFragment: navigation-passingdata
 ---
-Passing Data
-============
+# Passing Data
 
 This sample demonstrates how to pass data between pages when navigating.
 
-For more information about the sample see [Hierarchical Navigation](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/user-interface/navigation/hierarchical/).
+For more information about the sample see [Hierarchical Navigation](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/navigation/hierarchical).
 
-Author
-------
-
-David Britch
+![Passing Data application screenshot](Screenshots/01All.png "Passing Data application screenshot")

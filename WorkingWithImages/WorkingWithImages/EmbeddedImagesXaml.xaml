@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:WorkingWithImages;assembly=WorkingWithImages"
-    x:Class="WorkingWithImages.EmbeddedImagesXaml">
-   	<ContentPage.Padding>
-		<OnPlatform x:TypeArguments="Thickness">
-			<On Platform="iOS" Value="0, 20, 0, 0" />
-		</OnPlatform>
-	</ContentPage.Padding>
-  <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-    <Label Text="Image Resource Xaml" />
-    <!-- uses a custom Extension defined in this project for now -->
-    <Image Source="{local:ImageResource WorkingWithImages.beach.jpg}" />
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WorkingWithImages;assembly=WorkingWithImages"
+             x:Class="WorkingWithImages.EmbeddedImagesXaml">
+    <StackLayout Margin="20,35,20,20">
+        <Label Text="Image Resource XAML"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <!-- uses a custom Extension defined in this project for now -->
+        <Image Source="{local:ImageResource WorkingWithImages.beach.jpg}" />
 
-    <Label Text="WorkingWithImages.beach.jpg embedded resource" />
-  </StackLayout>
+        <Label Text="This image is an embedded resource." />
+    </StackLayout>
 </ContentPage>
