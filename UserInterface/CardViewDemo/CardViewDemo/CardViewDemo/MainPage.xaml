@@ -7,5 +7,5 @@
              mc:Ignorable="d"
              x:Class="CardViewDemo.MainPage"
              Padding="10">
-    <controls:CardView />
+    <controls:CardView CardTitle="Example Card" />
 </ContentPage>

@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             x:Name="this"
              x:Class="CardViewDemo.Controls.CardView">
     <Frame BorderColor="DarkGray"
            CornerRadius="5"
@@ -39,7 +40,8 @@
             </Frame>
             <Label Grid.Row="0"
                    Grid.Column="1"
-                   Text="Card Name"
+                   BindingContext="{x:Reference this}"
+                   Text="{Binding CardTitle}"
                    FontAttributes="Bold"
                    FontSize="Large"
                    HeightRequest="100"
