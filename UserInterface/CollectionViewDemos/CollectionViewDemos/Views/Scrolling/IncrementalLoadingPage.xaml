@@ -1,21 +1,12 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:CollectionViewDemos.Controls"
-             x:Class="CollectionViewDemos.Views.ItemsUpdatingScrollModePage"
-             Title="Scroll mode when adding items">
+             x:Class="CollectionViewDemos.Views.IncrementalLoadingPage"
+             Title="Incremental loading on scroll">
     <StackLayout Margin="20">
-        <StackLayout Orientation="Horizontal"
-                     HorizontalOptions="Center">
-            <Label Text="UpdatingScrollMode: "
-                   VerticalTextAlignment="Center" />
-            <controls:EnumPicker x:Name="enumPicker"
-                                 EnumType="{x:Type ItemsUpdatingScrollMode}"
-                                 SelectedIndex="0"
-                                 SelectedIndexChanged="OnItemsUpdatingScrollModeChanged" />
-        </StackLayout>
-        <CollectionView x:Name="collectionView"
-                        ItemsSource="{Binding Monkeys}">
+        <CollectionView ItemsSource="{Binding Animals}"
+                        RemainingItemsThreshold="5"
+                        RemainingItemsThresholdReached="OnCollectionViewRemainingItemsThresholdReached">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">

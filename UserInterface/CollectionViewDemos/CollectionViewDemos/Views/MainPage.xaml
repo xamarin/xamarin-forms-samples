@@ -181,6 +181,10 @@
                           Detail="ItemsUpdatingScrollMode"
                           Command="{Binding  NavigateCommand}"
                           CommandParameter="{x:Type views:ItemsUpdatingScrollModePage}" />
+                <TextCell Text="Incremental loading on scroll"
+                          Detail="RemainingItemsThreshold"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:IncrementalLoadingPage}" />
             </TableSection>
         </TableRoot>
     </TableView>

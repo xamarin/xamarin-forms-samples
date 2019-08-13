@@ -8,7 +8,7 @@ namespace CollectionViewDemos.Views
         public VerticalListGroupingPage()
         {
             InitializeComponent();
-            BindingContext = new AnimalsViewModel();
+            BindingContext = new GroupedAnimalsViewModel();
         }
     }
 }
