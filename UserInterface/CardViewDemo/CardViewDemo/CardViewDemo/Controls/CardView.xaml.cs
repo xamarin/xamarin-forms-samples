@@ -9,7 +9,6 @@ using Xamarin.Forms.Xaml;
 
 namespace CardViewDemo.Controls
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CardView : ContentView
     {
         public CardView()
