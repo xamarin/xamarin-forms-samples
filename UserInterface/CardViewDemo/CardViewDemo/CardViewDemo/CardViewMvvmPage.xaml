@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodels="clr-namespace:CardViewDemo.ViewModels"
+             xmlns:controls="clr-namespace:CardViewDemo.Controls"
+             mc:Ignorable="d"
+             x:Name="this"
+             x:Class="CardViewDemo.CardViewMvvmPage"
+             Title="CardView MVVM Demo"
+             Padding="10">
+    
+    <ContentPage.BindingContext>
+        <viewmodels:PersonCollectionViewModel />
+    </ContentPage.BindingContext>
+
+
+    <ListView ItemsSource="{Binding Items}"
+              HorizontalOptions="Fill"
+              VerticalOptions="Fill" >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <controls:CardView Margin="4"
+                                       IconBackgroundColor="Purple"
+                                       BindingContext="{Binding .}"
+                                       CardTitle="{Binding Name}" 
+                                       CardDescription="{Binding Bio}"
+                                       IconImageSource="{Binding Photo}"/>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

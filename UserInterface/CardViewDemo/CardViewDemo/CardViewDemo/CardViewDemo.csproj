@@ -14,6 +14,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="CardViewMvvmPage.xaml.cs">
+      <DependentUpon>CardViewMvvmPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="CardViewMvvmPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CardViewXamlPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Controls\CardView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -21,6 +33,12 @@
 
   <ItemGroup>
     <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="CardViewMvvmPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="CardViewXamlPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="Controls\CardView.xaml">
