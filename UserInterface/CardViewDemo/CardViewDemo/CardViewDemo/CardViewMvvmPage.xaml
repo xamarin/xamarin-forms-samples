@@ -10,11 +10,10 @@
              x:Class="CardViewDemo.CardViewMvvmPage"
              Title="CardView MVVM Demo"
              Padding="10">
-    
+
     <ContentPage.BindingContext>
         <viewmodels:PersonCollectionViewModel />
     </ContentPage.BindingContext>
-
 
     <ListView ItemsSource="{Binding Items}"
               HorizontalOptions="Fill"
