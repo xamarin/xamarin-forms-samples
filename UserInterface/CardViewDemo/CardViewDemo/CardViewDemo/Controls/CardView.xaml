@@ -6,7 +6,8 @@
              mc:Ignorable="d"
              x:Name="this"
              x:Class="CardViewDemo.Controls.CardView">
-    <Frame BorderColor="DarkGray"
+    <Frame BindingContext="{x:Reference this}"
+           BorderColor="{Binding BorderColor}"
            CornerRadius="5"
            HasShadow="True"
            Padding="8"
@@ -15,8 +16,8 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="75" />
-                <RowDefinition Height="5" />
-                <RowDefinition Height="150*" />
+                <RowDefinition Height="4" />
+                <RowDefinition Height="100*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="75" />
@@ -25,18 +26,20 @@
             <Frame
                 Grid.Row="0"
                 Grid.Column="0"
-                BorderColor="DarkGray"
-                BackgroundColor="LightGray"
+                BindingContext="{x:Reference this}"
+                BorderColor="{Binding BorderColor}"
+                BackgroundColor="{Binding IconBackgroundColor}"
                 CornerRadius="40"
                 HeightRequest="60"
                 WidthRequest="60"
                 HorizontalOptions="Center"
                 VerticalOptions="Center">
-                <Image Margin="-20"
+                <Image BindingContext="{x:Reference this}"
+                       Source="{Binding IconImageSource}"
+                       Margin="-20"
                        WidthRequest="100"
                        HeightRequest="100"
-                       Aspect="AspectFill"
-                       BackgroundColor="DarkGray"/>
+                       Aspect="AspectFill" />
             </Frame>
             <Label Grid.Row="0"
                    Grid.Column="1"
@@ -50,14 +53,16 @@
             <BoxView Grid.Row="1"
                      Grid.Column="0"
                      Grid.ColumnSpan="2"
-                     BackgroundColor="DarkGray"
+                     BindingContext="{x:Reference this}"
+                     BackgroundColor="{Binding BorderColor}"
                      HeightRequest="2"
                      HorizontalOptions="Fill"
                      VerticalOptions="Center" />
             <Label Grid.Row="2"
                    Grid.Column="0"
                    Grid.ColumnSpan="2"
-                   Text="Card description text will go here"
+                   BindingContext="{x:Reference this}"
+                   Text="{Binding CardDescription}"
                    VerticalTextAlignment="Start"
                    HorizontalOptions="Fill"
                    VerticalOptions="Fill" />

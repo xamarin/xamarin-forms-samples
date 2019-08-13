@@ -5,7 +5,29 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:controls="clr-namespace:CardViewDemo.Controls"
              mc:Ignorable="d"
-             x:Class="CardViewDemo.MainPage"
-             Padding="10">
-    <controls:CardView CardTitle="Example Card" />
+             x:Class="CardViewDemo.MainPage">
+    <ScrollView>
+        <StackLayout Padding="10">
+            <controls:CardView BorderColor="DarkGray"
+                               CardTitle="Slavko Vlasic"
+                               CardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum vitae, sagittis at eros. Nullam egestas pulvinar pharetra."
+                               IconBackgroundColor="SlateGray"
+                               IconImageSource="user.png"/>
+            <controls:CardView BorderColor="DarkGray"
+                               CardTitle="Carolina Pena"
+                               CardDescription="Phasellus eu convallis mi. In tempus augue eu dignissim fermentum. Morbi ut lacus vitae eros lacinia pharetra. Donec fringilla mi vel sapien scelerisque scelerisque."
+                               IconBackgroundColor="Red"
+                               IconImageSource="user.png"/>
+            <controls:CardView BorderColor="DarkGray"
+                               CardTitle="Wade Blanks"
+                               CardDescription="Aliquam sagittis, odio lacinia fermentum dictum, mi erat scelerisque erat, quis aliquet arcu lectus nec ex. Sed interdum sodales arcu laoreet blandit."
+                               IconBackgroundColor="Brown"
+                               IconImageSource="user.png"/>
+            <controls:CardView BorderColor="DarkGray"
+                               CardTitle="Colette Quint"
+                               CardDescription="In pellentesque odio eget augue elementum lobortis. Sed augue massa, rhoncus eu nisi vitae, egestas lacinia libero. Vivamus finibus metus vel nibh sollicitudin ultrices."
+                               IconBackgroundColor="Blue"
+                               IconImageSource="user.png"/>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
