@@ -6,7 +6,8 @@
     <StackLayout Margin="20">
         <CollectionView ItemsSource="{Binding Animals}"
                         RemainingItemsThreshold="5"
-                        RemainingItemsThresholdReached="OnCollectionViewRemainingItemsThresholdReached">
+                        RemainingItemsThresholdReached="OnCollectionViewRemainingItemsThresholdReached"
+                        RemainingItemsThresholdReachedCommand="{Binding LoadMoreDataCommand}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">

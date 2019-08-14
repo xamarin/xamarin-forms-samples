@@ -1,15 +1,50 @@
 ﻿using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Windows.Input;
 using CollectionViewDemos.Models;
+using Xamarin.Forms;
 
 namespace CollectionViewDemos.ViewModels
 {
     public class AnimalsViewModel
     {
+        int itemCount = 10;
+        const int MaximumItemCount = 50;
+        const int PageSize = 10;
+
         public ObservableCollection<Animal> Animals { get; private set; } = new ObservableCollection<Animal>();
+
+        public ICommand LoadMoreDataCommand => new Command(GetNextPageOfData);
 
         public AnimalsViewModel()
         {
             AddBears();
+        }
+
+        void GetNextPageOfData()
+        {
+            switch (itemCount)
+            {
+                case 10:
+                    AddCats();
+                    break;
+                case 20:
+                    AddDogs();
+                    break;
+                case 30:
+                    AddElephants();
+                    break;
+                case 40:
+                    AddMonkeys();
+                    break;
+            }
+
+            if (itemCount < MaximumItemCount)
+            {
+                itemCount += PageSize;
+            }
+
+            Debug.WriteLine("Count: " + itemCount);
         }
 
         void AddBears()
@@ -86,7 +121,7 @@ namespace CollectionViewDemos.ViewModels
             });
         }
 
-        public void AddCats()
+        void AddCats()
         {
             Animals.Add(new Animal
             {
@@ -160,7 +195,7 @@ namespace CollectionViewDemos.ViewModels
             });
         }
 
-        public void AddDogs()
+        void AddDogs()
         {
             Animals.Add(new Animal
             {
@@ -234,7 +269,7 @@ namespace CollectionViewDemos.ViewModels
             });
         }
 
-        public void AddElephants()
+        void AddElephants()
         {
             Animals.Add(new Animal
             {
@@ -308,7 +343,7 @@ namespace CollectionViewDemos.ViewModels
             });
         }
 
-        public void AddMonkeys()
+        void AddMonkeys()
         {
             Animals.Add(new Animal
             {
