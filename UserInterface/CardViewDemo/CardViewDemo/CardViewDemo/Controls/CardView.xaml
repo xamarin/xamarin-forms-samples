@@ -7,6 +7,7 @@
              x:Name="this"
              x:Class="CardViewDemo.Controls.CardView">
     <Frame BindingContext="{x:Reference this}"
+           BackgroundColor="{Binding CardColor}"
            BorderColor="{Binding BorderColor}"
            CornerRadius="5"
            HasShadow="True"
