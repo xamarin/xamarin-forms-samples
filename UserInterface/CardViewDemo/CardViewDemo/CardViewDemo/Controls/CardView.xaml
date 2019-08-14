@@ -24,17 +24,16 @@
                 <ColumnDefinition Width="75" />
                 <ColumnDefinition Width="200*" />
             </Grid.ColumnDefinitions>
-            <Frame
-                Grid.Row="0"
-                Grid.Column="0"
-                BindingContext="{x:Reference this}"
-                BorderColor="{Binding BorderColor}"
-                BackgroundColor="{Binding IconBackgroundColor}"
-                CornerRadius="40"
-                HeightRequest="60"
-                WidthRequest="60"
-                HorizontalOptions="Center"
-                VerticalOptions="Center">
+            <Frame Grid.Row="0"
+                   Grid.Column="0"
+                   BindingContext="{x:Reference this}"
+                   BorderColor="{Binding BorderColor}"
+                   BackgroundColor="{Binding IconBackgroundColor}"
+                   CornerRadius="40"
+                   HeightRequest="60"
+                   WidthRequest="60"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
                 <Image BindingContext="{x:Reference this}"
                        Source="{Binding IconImageSource}"
                        Margin="-20"
