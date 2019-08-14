@@ -47,6 +47,9 @@
     <None Update="Controls\CardView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <None Update="ControlTemplatePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <None Update="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>

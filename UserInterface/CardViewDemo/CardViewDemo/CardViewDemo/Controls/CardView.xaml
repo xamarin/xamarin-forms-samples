@@ -18,7 +18,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="75" />
                 <RowDefinition Height="4" />
-                <RowDefinition Height="100*" />
+                <RowDefinition Height="150*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="75" />
@@ -26,6 +26,7 @@
             </Grid.ColumnDefinitions>
             <Frame Grid.Row="0"
                    Grid.Column="0"
+                   IsClippedToBounds="True"
                    BindingContext="{x:Reference this}"
                    BorderColor="{Binding BorderColor}"
                    BackgroundColor="{Binding IconBackgroundColor}"
@@ -33,6 +34,7 @@
                    HeightRequest="60"
                    WidthRequest="60"
                    HorizontalOptions="Center"
+                   HasShadow="False"
                    VerticalOptions="Center">
                 <Image BindingContext="{x:Reference this}"
                        Source="{Binding IconImageSource}"
