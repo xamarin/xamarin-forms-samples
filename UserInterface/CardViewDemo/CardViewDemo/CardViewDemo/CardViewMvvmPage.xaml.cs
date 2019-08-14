@@ -1,5 +1,4 @@
 ﻿using CardViewDemo.Services;
-
 using Xamarin.Forms;
 
 namespace CardViewDemo
