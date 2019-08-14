@@ -16,6 +16,10 @@
                           Detail="Create CardView items with XAML."
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:CardViewXamlPage}" />
+                <TextCell Text="CardView Code"
+                          Detail="Create CardView items with code."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CardViewCodePage}" />
                 <TextCell Text="CardView MVVM"
                           Detail="Create CardView items with the MVVM pattern."
                           Command="{Binding NavigateCommand}"
