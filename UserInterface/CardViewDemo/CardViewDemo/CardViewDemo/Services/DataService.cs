@@ -15,7 +15,7 @@ namespace CardViewDemo.Services
             new PersonViewModel() {
                 Name = "Carolina Pena",
                 Photo = "user.png",
-                Bio = "Phasellus eu convallis mi. In tempus augue eu dignissim fermentum. Morbi ut lacus vitae eros lacinia pharetra. Donec fringilla mi vel sapien scelerisque scelerisque."
+                Bio = "Phasellus eu convallis mi. In tempus augue eu dignissim fermentum. Morbi ut lacus vitae eros lacinia pharetra. Donec fringilla mi vel sapien scelerisque."
             },
             new PersonViewModel() {
                 Name = "Wade Blanks",

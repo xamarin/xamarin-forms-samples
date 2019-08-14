@@ -17,7 +17,7 @@
                                IconImageSource="user.png"/>
             <controls:CardView BorderColor="DarkGray"
                                CardTitle="Carolina Pena"
-                               CardDescription="Phasellus eu convallis mi. In tempus augue eu dignissim fermentum. Morbi ut lacus vitae eros lacinia pharetra. Donec fringilla mi vel sapien scelerisque scelerisque."
+                               CardDescription="Phasellus eu convallis mi. In tempus augue eu dignissim fermentum. Morbi ut lacus vitae eros lacinia pharetra. Donec fringilla mi vel sapien scelerisque."
                                IconBackgroundColor="SlateGray"
                                IconImageSource="user.png"/>
             <controls:CardView BorderColor="DarkGray"
