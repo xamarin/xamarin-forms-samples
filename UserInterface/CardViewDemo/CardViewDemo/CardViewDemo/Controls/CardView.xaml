@@ -18,7 +18,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="75" />
                 <RowDefinition Height="4" />
-                <RowDefinition Height="150*" />
+                <RowDefinition Height="100*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="75" />
@@ -30,7 +30,7 @@
                    BindingContext="{x:Reference this}"
                    BorderColor="{Binding BorderColor}"
                    BackgroundColor="{Binding IconBackgroundColor}"
-                   CornerRadius="40"
+                   CornerRadius="38"
                    HeightRequest="60"
                    WidthRequest="60"
                    HorizontalOptions="Center"

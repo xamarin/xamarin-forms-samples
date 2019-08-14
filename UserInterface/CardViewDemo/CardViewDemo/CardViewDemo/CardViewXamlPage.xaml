@@ -8,28 +8,26 @@
              x:Class="CardViewDemo.CardViewXamlPage"
              Title="CardView XAML Demo"
              Padding="10">
-    <ScrollView>
-        <StackLayout Padding="10">
-            <controls:CardView BorderColor="DarkGray"
+    <StackLayout>
+        <controls:CardView BorderColor="DarkGray"
                                CardTitle="Slavko Vlasic"
-                               CardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum vitae, sagittis at eros. Nullam egestas pulvinar pharetra."
+                               CardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum."
                                IconBackgroundColor="SlateGray"
                                IconImageSource="user.png"/>
-            <controls:CardView BorderColor="DarkGray"
+        <controls:CardView BorderColor="DarkGray"
                                CardTitle="Carolina Pena"
-                               CardDescription="Phasellus eu convallis mi. In tempus augue eu dignissim fermentum. Morbi ut lacus vitae eros lacinia pharetra. Donec fringilla mi vel sapien scelerisque."
+                               CardDescription="Phasellus eu convallis mi. In tempus augue eu dignissim fermentum. Morbi ut lacus vitae eros lacinia."
                                IconBackgroundColor="SlateGray"
                                IconImageSource="user.png"/>
-            <controls:CardView BorderColor="DarkGray"
+        <controls:CardView BorderColor="DarkGray"
                                CardTitle="Wade Blanks"
-                               CardDescription="Aliquam sagittis, odio lacinia fermentum dictum, mi erat scelerisque erat, quis aliquet arcu lectus nec ex. Sed interdum sodales arcu laoreet blandit."
+                               CardDescription="Aliquam sagittis, odio lacinia fermentum dictum, mi erat scelerisque erat, quis aliquet arcu."
                                IconBackgroundColor="SlateGray"
                                IconImageSource="user.png"/>
-            <controls:CardView BorderColor="DarkGray"
+        <controls:CardView BorderColor="DarkGray"
                                CardTitle="Colette Quint"
-                               CardDescription="In pellentesque odio eget augue elementum lobortis. Sed augue massa, rhoncus eu nisi vitae, egestas lacinia libero. Vivamus finibus metus vel nibh sollicitudin ultrices."
+                               CardDescription="In pellentesque odio eget augue elementum lobortis. Sed augue massa, rhoncus eu nisi vitae, egestas."
                                IconBackgroundColor="SlateGray"
                                IconImageSource="user.png"/>
-        </StackLayout>
-    </ScrollView>
+    </StackLayout>
 </ContentPage>
