@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:CardViewDemo.Controls"
+             mc:Ignorable="d"
+             x:Class="CardViewDemo.ControlTemplatePage"
+             Title="ControlTemplate XAML Demo"
+             Padding="10">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ControlTemplate x:Key="CardViewCompressed">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Row="0"
+                           Grid.Column="0"
+                           Source="{TemplateBinding IconImageSource}"
+                           BackgroundColor="{TemplateBinding IconBackgroundColor}"
+                           WidthRequest="100"
+                           HeightRequest="100"
+                           Aspect="AspectFill"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                    <StackLayout Grid.Row="0"
+                                 Grid.Column="1">
+                        <Label Text="{TemplateBinding CardTitle}"
+                           FontAttributes="Bold" />
+                        <Label Text="{TemplateBinding CardDescription}" />
+                    </StackLayout>
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Label Text="A standard CardView control is suitable for grid layouts:"
+               FontAttributes="Italic"
+               TextColor="Red"
+               Margin="0,0,0,10" />
+        <controls:CardView BorderColor="DarkGray"
+                           CardTitle="Slavko Vlasic"
+                           CardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum vitae, sagittis at eros. Nullam egestas pulvinar pharetra."
+                           IconBackgroundColor="SlateGray"
+                           IconImageSource="user.png" />
+        <Label Text="A ControlTemplate overrides standard view, creating a more compact view suitable for lists:"
+               FontAttributes="Italic"
+               TextColor="Red"
+               Margin="0,0,0,10" />
+        <controls:CardView BorderColor="DarkGray"
+                           CardTitle="Carolina Pena"
+                           CardDescription="Phasellus eu convallis mi. In tempus augue eu dignissim fermentum. Morbi ut lacus vitae eros lacinia pharetra. Donec fringilla mi vel sapien scelerisque."
+                           IconBackgroundColor="SlateGray"
+                           IconImageSource="user.png"
+                           ControlTemplate="{StaticResource CardViewCompressed}"/>
+        <controls:CardView BorderColor="DarkGray"
+                           CardTitle="Wade Blanks"
+                           CardDescription="Aliquam sagittis, odio lacinia fermentum dictum, mi erat scelerisque erat, quis aliquet arcu lectus nec ex. Sed interdum sodales arcu laoreet blandit."
+                           IconBackgroundColor="SlateGray"
+                           IconImageSource="user.png"
+                           ControlTemplate="{StaticResource CardViewCompressed}"/>
+        <controls:CardView BorderColor="DarkGray"
+                           CardTitle="Colette Quint"
+                           CardDescription="In pellentesque odio eget augue elementum lobortis. Sed augue massa, rhoncus eu nisi vitae, egestas lacinia libero. Vivamus finibus metus vel nibh sollicitudin ultrices."
+                           IconBackgroundColor="SlateGray"
+                           IconImageSource="user.png"
+                           ControlTemplate="{StaticResource CardViewCompressed}"/>
+    </StackLayout>
+</ContentPage>
