@@ -22,7 +22,8 @@
             <DataTemplate>
                 <ViewCell>
                     <controls:CardView Margin="4"
-                                       IconBackgroundColor="Purple"
+                                       BorderColor="DarkGray"
+                                       IconBackgroundColor="SlateGray"
                                        BindingContext="{Binding .}"
                                        CardTitle="{Binding Name}" 
                                        CardDescription="{Binding Bio}"

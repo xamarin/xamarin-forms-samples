@@ -18,17 +18,17 @@
             <controls:CardView BorderColor="DarkGray"
                                CardTitle="Carolina Pena"
                                CardDescription="Phasellus eu convallis mi. In tempus augue eu dignissim fermentum. Morbi ut lacus vitae eros lacinia pharetra. Donec fringilla mi vel sapien scelerisque scelerisque."
-                               IconBackgroundColor="Red"
+                               IconBackgroundColor="SlateGray"
                                IconImageSource="user.png"/>
             <controls:CardView BorderColor="DarkGray"
                                CardTitle="Wade Blanks"
                                CardDescription="Aliquam sagittis, odio lacinia fermentum dictum, mi erat scelerisque erat, quis aliquet arcu lectus nec ex. Sed interdum sodales arcu laoreet blandit."
-                               IconBackgroundColor="Brown"
+                               IconBackgroundColor="SlateGray"
                                IconImageSource="user.png"/>
             <controls:CardView BorderColor="DarkGray"
                                CardTitle="Colette Quint"
                                CardDescription="In pellentesque odio eget augue elementum lobortis. Sed augue massa, rhoncus eu nisi vitae, egestas lacinia libero. Vivamus finibus metus vel nibh sollicitudin ultrices."
-                               IconBackgroundColor="Blue"
+                               IconBackgroundColor="SlateGray"
                                IconImageSource="user.png"/>
         </StackLayout>
     </ScrollView>
