@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:FrameDemos"
+             mc:Ignorable="d"
+             x:Class="FrameDemos.MainPage"
+             Padding="10"
+             Title="Frame Demos">
+
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="XAML Frame"
+                          Detail="Create a frame with XAML."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:FrameXamlPage}" />
+                <TextCell Text="Code Frame"
+                          Detail="Create a frame with code."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:FrameCodePage}" />
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+
+</ContentPage>
