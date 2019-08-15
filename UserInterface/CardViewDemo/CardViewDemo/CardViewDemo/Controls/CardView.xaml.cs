@@ -1,7 +1,9 @@
-﻿using Xamarin.Forms;
+﻿using System.ComponentModel;
+using Xamarin.Forms;
 
 namespace CardViewDemo.Controls
 {
+    [DesignTimeVisible(true)]
     public partial class CardView : ContentView
     {
         public static readonly BindableProperty CardTitleProperty = BindableProperty.Create(nameof(CardTitle), typeof(string), typeof(CardView), string.Empty);
