@@ -15,23 +15,22 @@
         <viewmodels:PersonCollectionViewModel />
     </ContentPage.BindingContext>
 
-    <ListView ItemsSource="{Binding Items}"
-              HorizontalOptions="Fill"
-              VerticalOptions="Fill"
-              SeparatorVisibility="None"
-              HasUnevenRows="True" >
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
+    <ScrollView HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+        <StackLayout HorizontalOptions="Fill"
+                     VerticalOptions="Fill"
+                     BindableLayout.ItemsSource="{Binding Items}">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
                     <controls:CardView Margin="4"
-                                       BorderColor="DarkGray"
-                                       IconBackgroundColor="SlateGray"
-                                       BindingContext="{Binding .}"
-                                       CardTitle="{Binding Name}" 
-                                       CardDescription="{Binding Bio}"
-                                       IconImageSource="{Binding Photo}"/>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+                                           BorderColor="DarkGray"
+                                           IconBackgroundColor="SlateGray"
+                                           BindingContext="{Binding .}"
+                                           CardTitle="{Binding Name}" 
+                                           CardDescription="{Binding Bio}"
+                                           IconImageSource="{Binding Photo}"/>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
