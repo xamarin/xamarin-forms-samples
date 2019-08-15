@@ -1,12 +1,6 @@
 ﻿using CardViewDemo.Controls;
 using CardViewDemo.Services;
 using CardViewDemo.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
-using System.Reflection;
-using System.Text;
 
 using Xamarin.Forms;
 
@@ -19,7 +13,7 @@ namespace CardViewDemo
             Title = "CardView Code Demo";
             Padding = 10;
 
-            
+
             StackLayout layout = new StackLayout
             {
                 HorizontalOptions = LayoutOptions.Fill,
@@ -34,7 +28,7 @@ namespace CardViewDemo
             };
 
             PersonCollectionViewModel personCollection = DataService.GetPersonCollection();
-            foreach(var person in personCollection.Items)
+            foreach (var person in personCollection.Items)
             {
                 CardView card = new CardView
                 {
