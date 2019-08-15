@@ -18,7 +18,8 @@
     <ListView ItemsSource="{Binding Items}"
               HorizontalOptions="Fill"
               VerticalOptions="Fill"
-              HasUnevenRows="True">
+              SeparatorVisibility="None"
+              HasUnevenRows="True" >
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>

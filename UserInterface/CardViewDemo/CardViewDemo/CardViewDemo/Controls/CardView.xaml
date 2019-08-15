@@ -18,11 +18,11 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="75" />
                 <RowDefinition Height="4" />
-                <RowDefinition Height="100*" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="75" />
-                <ColumnDefinition Width="200*" />
+                <ColumnDefinition Width="200" />
             </Grid.ColumnDefinitions>
             <Frame Grid.Row="0"
                    Grid.Column="0"
@@ -49,25 +49,23 @@
                    Text="{Binding CardTitle}"
                    FontAttributes="Bold"
                    FontSize="Large"
-                   HeightRequest="100"
                    VerticalTextAlignment="Center"
-                   HorizontalTextAlignment="Start"/>
+                   HorizontalTextAlignment="Start" />
             <BoxView Grid.Row="1"
                      Grid.Column="0"
                      Grid.ColumnSpan="2"
                      BindingContext="{x:Reference this}"
                      BackgroundColor="{Binding BorderColor}"
                      HeightRequest="2"
-                     HorizontalOptions="Fill"
-                     VerticalOptions="Center" />
+                     HorizontalOptions="Fill" />
             <Label Grid.Row="2"
                    Grid.Column="0"
                    Grid.ColumnSpan="2"
                    BindingContext="{x:Reference this}"
                    Text="{Binding CardDescription}"
                    VerticalTextAlignment="Start"
-                   HorizontalOptions="Fill"
-                   VerticalOptions="Fill" />
+                   VerticalOptions="Fill"
+                   HorizontalOptions="Fill" />
 
         </Grid>
     </Frame>
