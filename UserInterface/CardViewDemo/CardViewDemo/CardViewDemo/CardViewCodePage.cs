@@ -3,6 +3,7 @@ using CardViewDemo.Services;
 using CardViewDemo.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -18,7 +19,19 @@ namespace CardViewDemo
             Title = "CardView Code Demo";
             Padding = 10;
 
-            StackLayout layout = new StackLayout();
+            
+            StackLayout layout = new StackLayout
+            {
+                HorizontalOptions = LayoutOptions.Fill,
+                VerticalOptions = LayoutOptions.Fill
+            };
+
+            ScrollView scroll = new ScrollView
+            {
+                HorizontalOptions = LayoutOptions.Fill,
+                VerticalOptions = LayoutOptions.Fill,
+                Content = layout
+            };
 
             PersonCollectionViewModel personCollection = DataService.GetPersonCollection();
             foreach(var person in personCollection.Items)
@@ -34,7 +47,7 @@ namespace CardViewDemo
                 layout.Children.Add(card);
             }
 
-            Content = layout;
+            Content = scroll;
         }
     }
 }
