@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - TodoLocalized RTL
-description: 'This sample demonstrates a localized Todo list application where the data is stored and accessed in a local SQLite database, with right-to-left text.'
+description: 'Todo list Android & iOS app that supports right-to-left UI layout and translation to languages like Arabic & Hebrew'
 page_type: sample
 languages:
 - csharp
@@ -8,9 +8,11 @@ products:
 - xamarin
 urlFragment: todolocalizedrtl
 ---
-# TodoLocalized RTL (Xamarin.Forms)
+# Xamarin.Forms TodoLocalized Right-to-Left (RTL) user interface layout
 
 This sample demonstrates how to right-to-left localize Xamarin.Forms apps.
+
+![iOS screenshot showing right-to-left language layout](Screenshots/02ar-small.png)
 
 This sample uses [Multilingual App Toolkit (MAT) from Microsoft](https://dev.windows.com/en-us/develop/multilingual-app-toolkit) (specifically the [v4.0 Technical Preview](https://visualstudiogallery.msdn.microsoft.com/6dab9154-a7e1-46e4-bbfa-18b5e81df520))to localize a Xamarin.Forms application for iOS, Android, and the Universal Windows Platform. You do NOT need MAT to build or run this sample.
 

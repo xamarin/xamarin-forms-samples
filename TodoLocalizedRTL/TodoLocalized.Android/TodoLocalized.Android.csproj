@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B746C87C-7335-4830-AAE2-ACACE4D69DB5}</ProjectGuid>
+    <ProjectGuid>{68E454AC-734B-4D7A-A9B5-24DD594EEBE0}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>TodoLocalized</RootNamespace>
@@ -85,7 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TodoLocalizedRTL\TodoLocalizedRTL.csproj">
-      <Project>{18bb0815-69cc-4f43-8447-3a5acfc472ff}</Project>
+      <Project>{B3529E3A-043C-4E77-8796-ABBE3F98D8B4}</Project>
       <Name>TodoLocalizedRTL</Name>
     </ProjectReference>
   </ItemGroup>
