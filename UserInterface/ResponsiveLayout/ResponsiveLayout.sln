@@ -5,11 +5,11 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsiveLayout", "TheBusinessTumble\ResponsiveLayout.csproj", "{5218E273-5109-457F-9A5F-FA6C0E493F07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsiveLayout.iOS", "iOS\iOS.csproj", "{FF125069-CE64-40C0-BD2D-98475EDD5863}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsiveLayout.iOS", "iOS\ResponsiveLayout.iOS.csproj", "{FF125069-CE64-40C0-BD2D-98475EDD5863}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsiveLayout.Droid", "Droid\Droid.csproj", "{17680D3F-D428-4D50-B209-6182483EEDB3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsiveLayout.Droid", "Droid\ResponsiveLayout.Droid.csproj", "{17680D3F-D428-4D50-B209-6182483EEDB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsiveLayoutUWP", "UWP\UWP.csproj", "{83E91F88-C2C3-490A-BD62-E471585FF427}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsiveLayoutUWP", "UWP\ResponsiveLayout.UWP.csproj", "{83E91F88-C2C3-490A-BD62-E471585FF427}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
