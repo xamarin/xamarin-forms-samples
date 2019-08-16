@@ -10,7 +10,7 @@ namespace ResponsiveLayout
 		{
 			var nav = new NavigationPage ();
 			nav.BarBackgroundColor = Color.Transparent;
-			nav.BarTextColor = Color.White;
+			nav.BarTextColor = Color.DarkGray;
 
 
 			var listpage = new ContentPage ();
