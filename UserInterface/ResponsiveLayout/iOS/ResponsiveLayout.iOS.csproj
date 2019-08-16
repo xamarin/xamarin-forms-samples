@@ -74,7 +74,7 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TheBusinessTumble\ResponsiveLayout.csproj">
+    <ProjectReference Include="..\ResponsiveLayout\ResponsiveLayout.csproj">
       <Project>{5218E273-5109-457F-9A5F-FA6C0E493F07}</Project>
       <Name>ResponsiveLayout</Name>
     </ProjectReference>

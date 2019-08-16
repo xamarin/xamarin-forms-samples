@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsiveLayout", "TheBusinessTumble\ResponsiveLayout.csproj", "{5218E273-5109-457F-9A5F-FA6C0E493F07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsiveLayout", "ResponsiveLayout\ResponsiveLayout.csproj", "{5218E273-5109-457F-9A5F-FA6C0E493F07}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsiveLayout.iOS", "iOS\ResponsiveLayout.iOS.csproj", "{FF125069-CE64-40C0-BD2D-98475EDD5863}"
 EndProject
