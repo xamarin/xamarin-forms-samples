@@ -13,7 +13,6 @@ namespace CardViewDemo
             Title = "CardView Code Demo";
             Padding = 10;
 
-
             StackLayout layout = new StackLayout
             {
                 HorizontalOptions = LayoutOptions.Fill,

@@ -49,8 +49,6 @@ namespace CardViewDemo.ViewModels
             }
         }
 
-
-
         protected virtual void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

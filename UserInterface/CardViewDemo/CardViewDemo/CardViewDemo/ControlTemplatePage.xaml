@@ -27,11 +27,11 @@
                            HeightRequest="100"
                            Aspect="AspectFill"
                            HorizontalOptions="Center"
-                           VerticalOptions="Center"/>
+                           VerticalOptions="Center" />
                     <StackLayout Grid.Row="0"
                                  Grid.Column="1">
                         <Label Text="{TemplateBinding CardTitle}"
-                           FontAttributes="Bold" />
+                               FontAttributes="Bold" />
                         <Label Text="{TemplateBinding CardDescription}" />
                     </StackLayout>
                 </Grid>
@@ -58,18 +58,18 @@
                            CardDescription="Phasellus eu convallis mi. In tempus augue eu dignissim fermentum. Morbi ut lacus vitae eros lacinia."
                            IconBackgroundColor="SlateGray"
                            IconImageSource="user.png"
-                           ControlTemplate="{StaticResource CardViewCompressed}"/>
+                           ControlTemplate="{StaticResource CardViewCompressed}" />
         <controls:CardView BorderColor="DarkGray"
                            CardTitle="Wade Blanks"
                            CardDescription="Aliquam sagittis, odio lacinia fermentum dictum, mi erat scelerisque erat, quis aliquet arcu."
                            IconBackgroundColor="SlateGray"
                            IconImageSource="user.png"
-                           ControlTemplate="{StaticResource CardViewCompressed}"/>
+                           ControlTemplate="{StaticResource CardViewCompressed}" />
         <controls:CardView BorderColor="DarkGray"
                            CardTitle="Colette Quint"
                            CardDescription="In pellentesque odio eget augue elementum lobortis. Sed augue massa, rhoncus eu nisi vitae, egestas."
                            IconBackgroundColor="SlateGray"
                            IconImageSource="user.png"
-                           ControlTemplate="{StaticResource CardViewCompressed}"/>
+                           ControlTemplate="{StaticResource CardViewCompressed}" />
     </StackLayout>
 </ContentPage>

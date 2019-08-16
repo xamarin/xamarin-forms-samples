@@ -23,12 +23,12 @@
             <BindableLayout.ItemTemplate>
                 <DataTemplate>
                     <controls:CardView Margin="4"
-                                           BorderColor="DarkGray"
-                                           IconBackgroundColor="SlateGray"
-                                           BindingContext="{Binding .}"
-                                           CardTitle="{Binding Name}" 
-                                           CardDescription="{Binding Bio}"
-                                           IconImageSource="{Binding Photo}"/>
+                                       BorderColor="DarkGray"
+                                       IconBackgroundColor="SlateGray"
+                                       BindingContext="{Binding .}"
+                                       CardTitle="{Binding Name}"
+                                       CardDescription="{Binding Bio}"
+                                       IconImageSource="{Binding Photo}" />
                 </DataTemplate>
             </BindableLayout.ItemTemplate>
         </StackLayout>
