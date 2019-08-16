@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{440361E1-F010-4635-967E-5DC1BFBFF7A6}</ProjectGuid>
+    <ProjectGuid>{58E63286-495C-4C0A-B896-126E0332A7AE}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TodoLocalized.UWP</RootNamespace>
@@ -143,7 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TodoLocalizedRTL\TodoLocalizedRTL.csproj">
-      <Project>{18bb0815-69cc-4f43-8447-3a5acfc472ff}</Project>
+      <Project>{B3529E3A-043C-4E77-8796-ABBE3F98D8B4}</Project>
       <Name>TodoLocalizedRTL</Name>
     </ProjectReference>
   </ItemGroup>

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{D3FFF87E-52D4-458D-B970-935A0EE53E5C}</ProjectGuid>
+    <ProjectGuid>{83E91F88-C2C3-490A-BD62-E471585FF427}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UWP</RootNamespace>
@@ -127,8 +127,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TheBusinessTumble\ResponsiveLayout.csproj">
-      <Project>{467976a1-2377-497a-a975-34f4b1295415}</Project>
+    <ProjectReference Include="..\ResponsiveLayout\ResponsiveLayout.csproj">
+      <Project>{5218E273-5109-457F-9A5F-FA6C0E493F07}</Project>
       <Name>ResponsiveLayout</Name>
     </ProjectReference>
   </ItemGroup>

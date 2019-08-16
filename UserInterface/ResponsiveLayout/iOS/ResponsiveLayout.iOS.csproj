@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{947DCD2D-6083-42FD-A30B-114FF437B3D6}</ProjectGuid>
+    <ProjectGuid>{FF125069-CE64-40C0-BD2D-98475EDD5863}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>TheBusinessTumble.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
@@ -74,8 +74,8 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TheBusinessTumble\ResponsiveLayout.csproj">
-      <Project>{467976A1-2377-497A-A975-34F4B1295415}</Project>
+    <ProjectReference Include="..\ResponsiveLayout\ResponsiveLayout.csproj">
+      <Project>{5218E273-5109-457F-9A5F-FA6C0E493F07}</Project>
       <Name>ResponsiveLayout</Name>
     </ProjectReference>
   </ItemGroup>

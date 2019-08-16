@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B746C87C-7335-4830-AAE2-ACACE4D69DB5}</ProjectGuid>
+    <ProjectGuid>{84025F4A-59CA-4D44-8A6E-E4357AAB7906}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>EmployeeDirectory.Android</RootNamespace>
@@ -98,7 +98,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\EmployeeDirectoryUI\EmployeeDirectoryUI.csproj">
-      <Project>{C1D18B43-2776-432B-8B83-AAA7A567FFBA}</Project>
+      <Project>{94DD515A-2054-49B2-A3CC-30225A3B1EC8}</Project>
       <Name>EmployeeDirectoryUI</Name>
     </ProjectReference>
   </ItemGroup>

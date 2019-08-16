@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{5D892129-D547-4BE6-BCBD-D0527BE4CA71}</ProjectGuid>
+    <ProjectGuid>{17680D3F-D428-4D50-B209-6182483EEDB3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>TheBusinessTumble.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -47,8 +47,8 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TheBusinessTumble\ResponsiveLayout.csproj">
-      <Project>{467976A1-2377-497A-A975-34F4B1295415}</Project>
+    <ProjectReference Include="..\ResponsiveLayout\ResponsiveLayout.csproj">
+      <Project>{5218E273-5109-457F-9A5F-FA6C0E493F07}</Project>
       <Name>ResponsiveLayout</Name>
     </ProjectReference>
   </ItemGroup>

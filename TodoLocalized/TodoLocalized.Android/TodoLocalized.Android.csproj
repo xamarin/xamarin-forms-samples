@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B746C87C-7335-4830-AAE2-ACACE4D69DB5}</ProjectGuid>
+    <ProjectGuid>{7252AA45-DD8A-4C60-91B9-0C1BED5902B3}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>TodoLocalized</RootNamespace>
@@ -92,7 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TodoLocalized\TodoLocalized.csproj">
-      <Project>{5F610EA1-9E35-4870-AE9B-5E18B4B4D5B8}</Project>
+      <Project>{041F24B8-6FD2-41D3-8338-9E68F92B4683}</Project>
       <Name>TodoLocalized</Name>
     </ProjectReference>
   </ItemGroup>

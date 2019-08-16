@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{1902913C-BB6F-4CCB-9B90-1D0CAEECAF12}</ProjectGuid>
+    <ProjectGuid>{27B4953F-4133-4934-B6D7-5BEAA6A7FAE3}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>TodoLocalized.iOS</RootNamespace>
@@ -208,7 +208,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TodoLocalizedRTL\TodoLocalizedRTL.csproj">
-      <Project>{18bb0815-69cc-4f43-8447-3a5acfc472ff}</Project>
+      <Project>{B3529E3A-043C-4E77-8796-ABBE3F98D8B4}</Project>
       <Name>TodoLocalizedRTL</Name>
     </ProjectReference>
   </ItemGroup>
