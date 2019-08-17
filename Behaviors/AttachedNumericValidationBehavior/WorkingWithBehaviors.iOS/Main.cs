@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace WorkingWithBehaviors
+namespace AttachedNumericValidationBehavior
 {
     public class Application
     {

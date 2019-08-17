@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace WorkingWithBehaviors
+namespace AttachedNumericValidationBehavior
 {
 	public partial class NumericValidationPage : ContentPage
 	{
