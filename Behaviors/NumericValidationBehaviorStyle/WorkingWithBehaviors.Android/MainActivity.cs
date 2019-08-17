@@ -2,7 +2,7 @@
 using Android.OS;
 using Xamarin.Forms.Platform.Android;
 
-namespace WorkingWithBehaviors.Droid
+namespace NumericValidationBehaviorStyle.Droid
 {
     [Activity(Label = "Behaviors", 
 		Theme = "@style/MainTheme", MainLauncher = true,
