@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{43ED064E-8336-4A30-8A3B-5029E3AB4D4D}</ProjectGuid>
+    <ProjectGuid>{96FF0CE3-8105-4D76-AB6B-AD9A8B44DAE4}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>WorkingWithBehaviors.iOS</RootNamespace>
@@ -106,10 +106,7 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="WorkingWithBehaviors">
-      <HintPath>..\WorkingWithBehaviors\bin\Debug\netstandard2.0\WorkingWithBehaviors.dll</HintPath>
-    </Reference>
-    <Reference Include="WorkingWithBehaviors">
-      <HintPath>..\WorkingWithBehaviors\bin\Debug\netstandard2.0\WorkingWithBehaviors.dll</HintPath>
+      <HintPath>..\AttachedNumericValidationBehavior\bin\Debug\netstandard2.0\AttachedNumericValidationBehavior.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -148,9 +145,9 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WorkingWithBehaviors\WorkingWithBehaviors.csproj">
-      <Project>{E3BA1FC1-A02E-44B5-9982-3B78CAECFABE}</Project>
-      <Name>WorkingWithBehaviors</Name>
+    <ProjectReference Include="..\AttachedNumericValidationBehavior\AttachedNumericValidationBehavior.csproj">
+      <Project>{5E15836C-B530-447E-AB7C-D5A7CFE4C2DE}</Project>
+      <Name>AttachedNumericValidationBehavior</Name>
     </ProjectReference>
   </ItemGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

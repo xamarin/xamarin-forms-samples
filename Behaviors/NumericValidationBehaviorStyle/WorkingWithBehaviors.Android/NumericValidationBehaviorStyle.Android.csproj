@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BDE708B4-27B1-448F-83CB-77BB2FAF6868}</ProjectGuid>
+    <ProjectGuid>{D51CF710-63B1-4F68-BDC3-CD418266A512}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -46,9 +46,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="WorkingWithBehaviors">
-      <HintPath>..\WorkingWithBehaviors\bin\Debug\netstandard2.0\WorkingWithBehaviors.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -80,9 +77,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\WorkingWithBehaviors\WorkingWithBehaviors.csproj">
-      <Project>{E3BA1FC1-A02E-44B5-9982-3B78CAECFABE}</Project>
-      <Name>WorkingWithBehaviors</Name>
+    <ProjectReference Include="..\WorkingWithBehaviors\NumericValidationBehaviorStyle.csproj">
+      <Project>{048DC4A5-0199-444A-BA0D-6AEA29657221}</Project>
+      <Name>NumericValidationBehaviorStyle</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

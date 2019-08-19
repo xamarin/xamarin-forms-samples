@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{12EFF248-B1C5-41C9-BA4B-15E88DA82307}</ProjectGuid>
+    <ProjectGuid>{9787D9DD-313A-46EB-BB0F-269C86E4B6DB}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WorkingWithBehaviors.UWP</RootNamespace>
@@ -127,8 +127,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WorkingWithBehaviors\WorkingWithBehaviors.csproj">
-      <Project>{e3ba1fc1-a02e-44b5-9982-3b78caecfabe}</Project>
+    <ProjectReference Include="..\WorkingWithBehaviors\NumericValidationBehaviorStyle.csproj">
+      <Project>{048DC4A5-0199-444A-BA0D-6AEA29657221}</Project>
       <Name>WorkingWithBehaviors</Name>
     </ProjectReference>
   </ItemGroup>

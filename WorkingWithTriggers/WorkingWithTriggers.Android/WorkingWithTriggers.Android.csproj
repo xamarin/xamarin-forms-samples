@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BDE708B4-27B1-448F-83CB-77BB2FAF6868}</ProjectGuid>
+    <ProjectGuid>{047B6C5D-56FC-4FD7-866E-01076BC4BD52}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -81,7 +81,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\WorkingWithTriggers\WorkingWithTriggers.csproj">
-      <Project>{E3BA1FC1-A02E-44B5-9982-3B78CAECFABE}</Project>
+      <Project>{374666BA-A117-4802-A4D1-5BA36AF047BC}</Project>
       <Name>WorkingWithTriggers</Name>
     </ProjectReference>
   </ItemGroup>

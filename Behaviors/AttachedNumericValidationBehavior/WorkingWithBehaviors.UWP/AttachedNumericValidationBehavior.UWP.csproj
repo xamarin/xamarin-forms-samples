@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{B0ADE268-ADE8-4C87-A190-DA67AA60577B}</ProjectGuid>
+    <ProjectGuid>{48AEBBCB-1153-4DE3-929E-7168F1980081}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WorkingWithBehaviors.UWP</RootNamespace>
-    <AssemblyName>WorkingWithBehaviors.UWP</AssemblyName>
+    <RootNamespace>AttachedNumericValidationBehavior.UWP</RootNamespace>
+    <AssemblyName>AttachedNumericValidationBehavior.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
@@ -16,7 +16,7 @@
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>WorkingWithBehaviors.UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>AttachedNumericValidationBehavior.UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -127,8 +127,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WorkingWithBehaviors\WorkingWithBehaviors.csproj">
-      <Project>{e3ba1fc1-a02e-44b5-9982-3b78caecfabe}</Project>
+    <ProjectReference Include="..\AttachedNumericValidationBehavior\AttachedNumericValidationBehavior.csproj">
+      <Project>{5E15836C-B530-447E-AB7C-D5A7CFE4C2DE}</Project>
       <Name>WorkingWithBehaviors</Name>
     </ProjectReference>
   </ItemGroup>

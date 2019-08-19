@@ -2,7 +2,7 @@
 using Xamarin.Forms.Xaml;
 
 [assembly:XamlCompilation (XamlCompilationOptions.Compile)]
-namespace WorkingWithBehaviors
+namespace AttachedNumericValidationBehavior
 {
 	public class App : Application
 	{

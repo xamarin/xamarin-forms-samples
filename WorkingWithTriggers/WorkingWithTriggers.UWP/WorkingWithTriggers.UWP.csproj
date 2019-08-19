@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{BE3856C2-8327-46E0-923E-1952D0468947}</ProjectGuid>
+    <ProjectGuid>{DDC11553-804D-4DC1-B90A-EFA1764000E3}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WorkingWithTriggers.UWP</RootNamespace>
@@ -128,7 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WorkingWithTriggers\WorkingWithTriggers.csproj">
-      <Project>{e3ba1fc1-a02e-44b5-9982-3b78caecfabe}</Project>
+      <Project>{374666BA-A117-4802-A4D1-5BA36AF047BC}</Project>
       <Name>WorkingWithTriggers</Name>
     </ProjectReference>
   </ItemGroup>
