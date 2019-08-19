@@ -38,11 +38,6 @@ namespace Notes.iOS.Views
                 .ToList();
         }
 
-        protected override void OnDisappearing()
-        {
-            base.OnDisappearing();
-        }
-
         void OnNoteAddedClicked(object sender, EventArgs e)
         {
             AppDelegate.Instance.NavigateToNoteEntryPage(new Note());

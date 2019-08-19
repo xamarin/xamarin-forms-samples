@@ -126,7 +126,7 @@
     <None Include="Entitlements.plist" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\OverrideNavigationController.cs" />
+    <Compile Include="Controllers\AppNavigationController.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Views\NotesPage.xaml.cs">

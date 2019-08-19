@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 using Foundation;
 using Notes.Controllers;
 using Notes.iOS.Models;
@@ -16,7 +15,8 @@ namespace Notes.iOS
     {
         public static AppDelegate Instance;
         UIWindow _window;
-        OverrideNavigationController _navigation;
+        AppNavigationController _navigation;
+
         public static string FolderPath { get; private set; }
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -35,7 +35,7 @@ namespace Notes.iOS
             UIViewController mainPage = new NotesPage().CreateViewController();
             mainPage.Title = "Notes";
 
-            _navigation = new OverrideNavigationController(mainPage);
+            _navigation = new AppNavigationController(mainPage);
 
             _window.RootViewController = _navigation;
             _window.MakeKeyAndVisible();

@@ -14,11 +14,6 @@ namespace Notes.iOS.Views
             InitializeComponent();
         }
 
-        protected override void OnDisappearing()
-        {
-            base.OnDisappearing();
-        }
-
         void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var note = (Note)BindingContext;
@@ -26,7 +21,7 @@ namespace Notes.iOS.Views
             if (string.IsNullOrWhiteSpace(note.Filename))
             {
                 // Save
-                var filename = Path.Combine(AppDelegate.FolderPath, $"{Path.GetRandomFileName()}.notes.txt");
+                string filename = Path.Combine(AppDelegate.FolderPath, $"{Path.GetRandomFileName()}.notes.txt");
                 File.WriteAllText(filename, note.Text);
             }
             else
