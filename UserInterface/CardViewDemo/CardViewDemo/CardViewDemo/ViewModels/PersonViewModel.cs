@@ -7,7 +7,7 @@ namespace CardViewDemo.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private string photo;
+        string photo;
         public string Photo
         {
             get
@@ -21,7 +21,7 @@ namespace CardViewDemo.ViewModels
             }
         }
 
-        private string name;
+        string name;
         public string Name
         {
             get
@@ -35,7 +35,7 @@ namespace CardViewDemo.ViewModels
             }
         }
 
-        private string bio;
+        string bio;
         public string Bio
         {
             get
