@@ -128,7 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarouselPageNavigation\CarouselPageNavigation.csproj">
-      <Project>{388f4a9d-83db-49d5-854c-eaeb3268f1a4}</Project>
+      <Project>{DFF1BBAA-D213-42A0-BC7B-8000C3873A2D}</Project>
       <Name>CarouselPageNavigation</Name>
     </ProjectReference>
   </ItemGroup>

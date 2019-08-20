@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{0FEF040F-8C17-4B38-8816-C9D7E49C9E84}</ProjectGuid>
+    <ProjectGuid>{00322951-74C3-401E-A706-526E9767E84F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>EffectsDemo.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EffectsDemo\EffectsDemo.csproj">
-      <Project>{8DBFAF48-04E8-4FC6-9577-408DDFB11A1B}</Project>
+      <Project>{B99F7170-A139-4589-82E3-3FD1500B5B81}</Project>
       <Name>EffectsDemo</Name>
     </ProjectReference>
   </ItemGroup>

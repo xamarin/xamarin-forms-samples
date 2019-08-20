@@ -128,7 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MonkeyApp\MonkeyApp.csproj">
-      <Project>{47329cee-1f55-41ac-b9fa-048f11abcbfb}</Project>
+      <Project>{3865868E-9C1C-4352-8EF1-8C5D887AC106}</Project>
       <Name>MonkeyApp</Name>
     </ProjectReference>
   </ItemGroup>

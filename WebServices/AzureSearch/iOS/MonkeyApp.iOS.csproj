@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{EB728B00-B991-45E1-AF1D-F7BA555A0752}</ProjectGuid>
+    <ProjectGuid>{8A56D586-B8D6-48C5-82E8-5DD2753AB055}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>MonkeyApp.iOS</RootNamespace>
@@ -168,7 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MonkeyApp\MonkeyApp.csproj">
-      <Project>{47329CEE-1F55-41AC-B9FA-048F11ABCBFB}</Project>
+      <Project>{3865868E-9C1C-4352-8EF1-8C5D887AC106}</Project>
       <Name>MonkeyApp</Name>
     </ProjectReference>
   </ItemGroup>

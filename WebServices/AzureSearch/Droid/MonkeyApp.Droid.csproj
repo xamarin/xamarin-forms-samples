@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0FFEBB86-2A4D-4CCE-9DE6-7BE3D675EFCD}</ProjectGuid>
+    <ProjectGuid>{FECE678A-FA46-47E4-BADF-F5B36BC3E0A7}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>MonkeyApp.Droid</RootNamespace>
@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MonkeyApp\MonkeyApp.csproj">
-      <Project>{47329CEE-1F55-41AC-B9FA-048F11ABCBFB}</Project>
+      <Project>{3865868E-9C1C-4352-8EF1-8C5D887AC106}</Project>
       <Name>MonkeyApp</Name>
     </ProjectReference>
   </ItemGroup>
