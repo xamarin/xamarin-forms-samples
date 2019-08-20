@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{9DB18799-C32C-4054-811C-3EAEDAF9BC0A}</ProjectGuid>
+    <ProjectGuid>{55734EB5-F29F-47D6-8413-9A71235E58A8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>SimpleTheme.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleTheme\SimpleTheme.csproj">
-      <Project>{6480A0C2-E44E-4FC9-B8CD-3A95BA8EACCD}</Project>
+      <Project>{4D2652A8-AF2E-4148-9DA8-55934E79C684}</Project>
       <Name>SimpleTheme</Name>
     </ProjectReference>
   </ItemGroup>
