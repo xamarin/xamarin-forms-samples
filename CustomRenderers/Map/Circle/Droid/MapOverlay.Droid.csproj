@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{75AC2162-94A4-4B8F-8D3D-4ACBF9CE10FA}</ProjectGuid>
+    <ProjectGuid>{DA7FB1AE-A0D7-40FB-B5A5-852E3A7B93F1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>MapOverlay.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MapOverlay\MapOverlay.csproj">
-      <Project>{5B19CDED-4814-4651-A6BD-4006C5FFAE34}</Project>
+      <Project>{61E6D969-58D3-47D8-B653-410B26EE1FE6}</Project>
       <Name>MapOverlay</Name>
     </ProjectReference>
   </ItemGroup>

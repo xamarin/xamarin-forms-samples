@@ -129,7 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EffectsDemo\EffectsDemo.csproj">
-      <Project>{8dbfaf48-04e8-4fc6-9577-408ddfb11a1b}</Project>
+      <Project>{B99F7170-A139-4589-82E3-3FD1500B5B81}</Project>
       <Name>EffectsDemo</Name>
     </ProjectReference>
   </ItemGroup>

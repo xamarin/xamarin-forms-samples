@@ -131,7 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MapOverlay\MapOverlay.csproj">
-      <Project>{5b19cded-4814-4651-a6bd-4006c5ffae34}</Project>
+      <Project>{61E6D969-58D3-47D8-B653-410B26EE1FE6}</Project>
       <Name>MapOverlay</Name>
     </ProjectReference>
   </ItemGroup>

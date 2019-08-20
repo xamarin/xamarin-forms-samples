@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{1F498E45-B00D-477C-9645-B223BA83AB35}</ProjectGuid>
+    <ProjectGuid>{28ECE382-589C-4D97-91FD-1B8A1E5554F9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>CarouselPageNavigation.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
@@ -76,7 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarouselPageNavigation\CarouselPageNavigation.csproj">
-      <Project>{388F4A9D-83DB-49D5-854C-EAEB3268F1A4}</Project>
+      <Project>{DFF1BBAA-D213-42A0-BC7B-8000C3873A2D}</Project>
       <Name>CarouselPageNavigation</Name>
     </ProjectReference>
   </ItemGroup>
