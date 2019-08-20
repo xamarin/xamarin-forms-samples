@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewmodels="clr-namespace:CardViewDemo.ViewModels"
+             xmlns:services="clr-namespace:CardViewDemo.Services"
              xmlns:controls="clr-namespace:CardViewDemo.Controls"
              mc:Ignorable="d"
              x:Name="this"
@@ -11,15 +12,11 @@
              Title="CardView MVVM Demo"
              Padding="10">
 
-    <ContentPage.BindingContext>
-        <viewmodels:PersonCollectionViewModel />
-    </ContentPage.BindingContext>
-
     <ScrollView HorizontalOptions="Fill"
                 VerticalOptions="Fill">
         <StackLayout HorizontalOptions="Fill"
                      VerticalOptions="Fill"
-                     BindableLayout.ItemsSource="{Binding Items}">
+                     BindableLayout.ItemsSource="{x:Static services:DataService.People}">
             <BindableLayout.ItemTemplate>
                 <DataTemplate>
                     <controls:CardView Margin="4"

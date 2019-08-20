@@ -33,12 +33,12 @@ namespace CardViewDemo.Services
             }
         };
 
-        public static PersonCollectionViewModel GetPersonCollection()
+        public static List<PersonViewModel> People
         {
-            return new PersonCollectionViewModel
+            get
             {
-                Items = people
-            };
+                return people;
+            }
         }
     }
 }

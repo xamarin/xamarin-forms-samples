@@ -1,7 +1,7 @@
 ﻿using CardViewDemo.Controls;
 using CardViewDemo.Services;
 using CardViewDemo.ViewModels;
-
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace CardViewDemo
@@ -26,8 +26,7 @@ namespace CardViewDemo
                 Content = layout
             };
 
-            PersonCollectionViewModel personCollection = DataService.GetPersonCollection();
-            foreach (var person in personCollection.Items)
+            foreach (var person in DataService.People)
             {
                 CardView card = new CardView
                 {

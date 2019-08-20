@@ -10,7 +10,6 @@ namespace CardViewDemo
         public CardViewMvvmPage()
         {
             InitializeComponent();
-            BindingContext = DataService.GetPersonCollection();
         }
     }
 }
