@@ -20,10 +20,6 @@
                           Detail="Create CardView items with code."
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:CardViewCodePage}" />
-                <TextCell Text="CardView MVVM"
-                          Detail="Create CardView items with the MVVM pattern."
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:CardViewMvvmPage}" />
                 <TextCell Text="CardView ControlTemplate"
                           Detail="Use a ControlTemplate to change control appearance."
                           Command="{Binding NavigateCommand}"
