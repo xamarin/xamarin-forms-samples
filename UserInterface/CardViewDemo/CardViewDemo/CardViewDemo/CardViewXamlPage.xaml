@@ -8,10 +8,8 @@
              x:Class="CardViewDemo.CardViewXamlPage"
              Title="CardView XAML Demo"
              Padding="10">
-    <ScrollView HorizontalOptions="Fill"
-                VerticalOptions="Fill">
-        <StackLayout HorizontalOptions="Fill"
-                     VerticalOptions="Fill">
+    <ScrollView>
+        <StackLayout>
             <controls:CardView BorderColor="DarkGray"
                                CardTitle="Slavko Vlasic"
                                CardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum."
