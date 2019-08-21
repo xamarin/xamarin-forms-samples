@@ -1,0 +1,22 @@
+{
+  "images": [
+    {
+      "scale": "2x",
+      "idiom": "universal"
+    },
+    {
+      "scale": "3x",
+      "idiom": "universal"
+    },
+    {
+      "scale": "1x",
+      "idiom": "universal",
+      "filename": "user.png"
+    }
+  ],
+  "properties": {},
+  "info": {
+    "version": 1,
+    "author": ""
+  }
+}
