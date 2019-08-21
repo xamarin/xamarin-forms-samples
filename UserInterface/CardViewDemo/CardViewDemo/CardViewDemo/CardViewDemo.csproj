@@ -14,9 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="CardViewMvvmPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="CardViewXamlPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
