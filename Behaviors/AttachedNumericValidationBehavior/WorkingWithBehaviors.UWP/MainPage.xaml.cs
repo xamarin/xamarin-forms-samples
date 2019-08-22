@@ -8,7 +8,7 @@
         public MainPage()
         {
             this.InitializeComponent();
-            this.LoadApplication(new WorkingWithBehaviors.App());
+            this.LoadApplication(new AttachedNumericValidationBehavior.App());
         }
     }
 }
