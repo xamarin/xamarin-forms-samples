@@ -47,6 +47,6 @@
     <Compile Remove="OnPlatformPage.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.608146-pre1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
   </ItemGroup>
 </Project>
