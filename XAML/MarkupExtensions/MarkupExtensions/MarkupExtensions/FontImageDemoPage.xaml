@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MarkupExtensions.FontImageDemoPage"
+             Title="FontImage Demo">
+    <StackLayout Margin="20,35,20,20">
+        <Image BackgroundColor="#D1D1D1"
+               Source="{FontImage &#xf30c;, FontFamily={OnPlatform iOS=Ionicons, Android=ionicons.ttf#, UWP=Assets/Fonts/ionicons.ttf#Ionicons}, Size=44}" />
+    </StackLayout>
+</ContentPage>

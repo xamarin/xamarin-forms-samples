@@ -19,6 +19,7 @@ namespace WorkingWithMaps
 
 			map.MoveToRegion (MapSpan.FromCenterAndRadius (
 				new Position (36.9628066,-122.0194722), Distance.FromMiles (3))); // Santa Cruz golf course
+            map.MoveToLastRegionOnLayoutChange = false;
 
 			var position = new Position(36.9628066,-122.0194722); // Latitude, Longitude
 			var pin = new Pin {

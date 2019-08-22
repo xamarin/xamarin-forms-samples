@@ -1,29 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:CollectionViewDemos.Controls"
-             x:Class="CollectionViewDemos.Views.ScrollToByObjectPage"
-             Title="Scroll to object">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="CollectionViewDemos.Views.VerticalListGroupingPage"
+             Title="Grouping (with DataTemplates)">
     <StackLayout Margin="20">
-        <StackLayout Orientation="Horizontal"
-                     HorizontalOptions="Center">
-            <Label Text="ScrollToPosition: "
-                   VerticalTextAlignment="Center" />
-            <controls:EnumPicker x:Name="enumPicker"
-                              EnumType="{x:Type ScrollToPosition}"
-                              SelectedIndex="0" />
-        </StackLayout>
-        <StackLayout Orientation="Horizontal"
-                     HorizontalOptions="Center">
-            <Label Text="Animate scroll: "
-                   VerticalTextAlignment="Center" />
-            <Switch x:Name="animateSwitch"
-                    IsToggled="true" />
-        </StackLayout>
-        <Button Text="Scroll to Proboscis Monkey"
-                Clicked="OnButtonClicked" />
-        <CollectionView x:Name="collectionView"
-                        ItemsSource="{Binding Monkeys}">
+        <CollectionView ItemsSource="{Binding Animals}"
+                        IsGrouped="true">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">
@@ -51,6 +33,20 @@
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Name}"
+                           BackgroundColor="LightGray"
+                           FontSize="Large"
+                           FontAttributes="Bold" />
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+            <CollectionView.GroupFooterTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Count, StringFormat='Total animals: {0:D}'}"
+                           Margin="0,0,0,10" />
+                </DataTemplate>
+            </CollectionView.GroupFooterTemplate>
         </CollectionView>
     </StackLayout>
 </ContentPage>
