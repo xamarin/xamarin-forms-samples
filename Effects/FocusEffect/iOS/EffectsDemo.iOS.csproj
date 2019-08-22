@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{B900275D-D33B-4DD1-AAD2-66CDF4C5A783}</ProjectGuid>
+    <ProjectGuid>{E1CD975A-D768-4B79-B15E-4A1527DE7956}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>EffectsDemo.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
@@ -90,7 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EffectsDemo\EffectsDemo.csproj">
-      <Project>{8DBFAF48-04E8-4FC6-9577-408DDFB11A1B}</Project>
+      <Project>{4AE76E01-EF3A-403D-A781-064147D08541}</Project>
       <Name>EffectsDemo</Name>
     </ProjectReference>
   </ItemGroup>

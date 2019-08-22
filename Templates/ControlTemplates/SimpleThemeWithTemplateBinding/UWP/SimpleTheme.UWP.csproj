@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{AD1CE8B2-3354-4D05-A43E-FB8740198EA5}</ProjectGuid>
+    <ProjectGuid>{21259654-9485-43F1-ACCF-42A9C4443C8B}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SimpleTheme.UWP</RootNamespace>
@@ -128,7 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleTheme\SimpleTheme.csproj">
-      <Project>{6480a0c2-e44e-4fc9-b8cd-3a95ba8eaccd}</Project>
+      <Project>{69A01695-89D7-4DE6-9015-DCAA637B1EB0}</Project>
       <Name>SimpleTheme</Name>
     </ProjectReference>
   </ItemGroup>

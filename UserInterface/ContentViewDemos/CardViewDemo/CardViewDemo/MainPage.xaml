@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:CardViewDemo"
+             mc:Ignorable="d"
+             x:Class="CardViewDemo.MainPage"
+             Padding="10"
+             Title="CardView Demos">
+    
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="CardView XAML"
+                          Detail="Create CardView items with XAML."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CardViewXamlPage}" />
+                <TextCell Text="CardView Code"
+                          Detail="Create CardView items with code."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CardViewCodePage}" />
+                <TextCell Text="CardView ControlTemplate"
+                          Detail="Use a ControlTemplate to change control appearance."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ControlTemplatePage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+    
+</ContentPage>

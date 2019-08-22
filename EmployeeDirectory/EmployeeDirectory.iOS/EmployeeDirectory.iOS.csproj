@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{1902913C-BB6F-4CCB-9B90-1D0CAEECAF12}</ProjectGuid>
+    <ProjectGuid>{A6027037-0C70-45B2-9E93-F555F271CA79}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>EmployeeDirectory.iOS</RootNamespace>
@@ -192,7 +192,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EmployeeDirectoryUI\EmployeeDirectoryUI.csproj">
-      <Project>{C1D18B43-2776-432B-8B83-AAA7A567FFBA}</Project>
+      <Project>{94DD515A-2054-49B2-A3CC-30225A3B1EC8}</Project>
       <Name>EmployeeDirectoryUI</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FrameDemos.FrameXamlPage"
+             Padding="10"
+             Title="Frame XAML Demo">
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Frame>
+                <Label Text="Default" />
+            </Frame>
+            <Frame BackgroundColor="LightGray"
+                   BorderColor="Orange"
+                   CornerRadius="10"
+                   HasShadow="False">
+                <Label Text="HasShadow False (platform dependent)" />
+            </Frame>
+            <Frame BackgroundColor="LightGray"
+                   BorderColor="Orange"
+                   CornerRadius="10"
+                   HasShadow="True">
+                <Label Text="HasShadow True (platform dependent)" />
+            </Frame>
+            <Frame Margin="10"
+                   BorderColor="Black"
+                   CornerRadius="50"
+                   HeightRequest="60"
+                   WidthRequest="60"
+                   IsClippedToBounds="True"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
+                <Image Source="outdoors.jpg"
+                       Aspect="AspectFill"
+                       Margin="-20"
+                       HeightRequest="100"
+                       WidthRequest="100" />
+            </Frame>
+            <Frame BorderColor="Gray"
+                   CornerRadius="5"
+                   Padding="8">
+                <StackLayout>
+                    <Label Text="Card Example"
+                           FontSize="Medium"
+                           FontAttributes="Bold" />
+                    <BoxView Color="Gray"
+                             HeightRequest="2"
+                             HorizontalOptions="Fill" />
+                    <Label Text="Frames can wrap more complex layouts to create more complex UI components, such as this card!" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

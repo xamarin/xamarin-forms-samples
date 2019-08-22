@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{CF93242C-C182-47EF-866F-60CC374D1A5E}</ProjectGuid>
+    <ProjectGuid>{4797C7FD-7C28-4279-B9B3-DA15F565EC2B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>CarouselPageNavigation.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarouselPageNavigation\CarouselPageNavigation.csproj">
-      <Project>{388F4A9D-83DB-49D5-854C-EAEB3268F1A4}</Project>
+      <Project>{DFF1BBAA-D213-42A0-BC7B-8000C3873A2D}</Project>
       <Name>CarouselPageNavigation</Name>
     </ProjectReference>
   </ItemGroup>

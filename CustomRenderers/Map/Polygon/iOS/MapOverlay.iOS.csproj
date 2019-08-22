@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{88FEB283-C2CD-4E10-BEDF-1498D2617B60}</ProjectGuid>
+    <ProjectGuid>{E5B6BD6C-7E30-4A48-A679-7CFEA5E0B7B8}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>MapOverlay.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
@@ -77,7 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MapOverlay\MapOverlay.csproj">
-      <Project>{5B19CDED-4814-4651-A6BD-4006C5FFAE34}</Project>
+      <Project>{6A579B08-685B-4DDD-81EA-D15B22CFE5B6}</Project>
       <Name>MapOverlay</Name>
     </ProjectReference>
   </ItemGroup>

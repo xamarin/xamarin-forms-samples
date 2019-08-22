@@ -128,7 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleTheme\SimpleTheme.csproj">
-      <Project>{6480a0c2-e44e-4fc9-b8cd-3a95ba8eaccd}</Project>
+      <Project>{4D2652A8-AF2E-4148-9DA8-55934E79C684}</Project>
       <Name>SimpleTheme</Name>
     </ProjectReference>
   </ItemGroup>

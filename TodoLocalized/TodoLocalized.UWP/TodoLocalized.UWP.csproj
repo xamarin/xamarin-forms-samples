@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{440361E1-F010-4635-967E-5DC1BFBFF7A6}</ProjectGuid>
+    <ProjectGuid>{02BAEA91-B5AE-4EEB-A4A6-8AE51D137581}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TodoLocalized.UWP</RootNamespace>
@@ -136,7 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TodoLocalized\TodoLocalized.csproj">
-      <Project>{5f610ea1-9e35-4870-ae9b-5e18b4b4d5b8}</Project>
+      <Project>{041F24B8-6FD2-41D3-8338-9E68F92B4683}</Project>
       <Name>TodoLocalized</Name>
     </ProjectReference>
   </ItemGroup>

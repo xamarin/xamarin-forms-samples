@@ -14,4 +14,12 @@ Xamarin.Forms behaviors are created in a class that derives from the Behavior, o
 
 For more information about this sample, see [Behaviors](https://developer.xamarin.com/guides/xamarin-forms/behaviors/).
 
+```xaml
+<Entry Placeholder="Enter a System.Double">
+    <Entry.Behaviors>
+        <local:NumericValidationBehavior />
+    </Entry.Behaviors>
+</Entry>
+```
+
 ![NumericValidation Behavior application screenshot](Screenshots/01All.png "NumericValidation Behavior application screenshot")

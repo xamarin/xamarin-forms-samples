@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{43ED064E-8336-4A30-8A3B-5029E3AB4D4D}</ProjectGuid>
+    <ProjectGuid>{E1C6751A-A674-41FB-9AFD-926724EDDD97}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>WorkingWithTriggers.iOS</RootNamespace>
@@ -151,7 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WorkingWithTriggers\WorkingWithTriggers.csproj">
-      <Project>{E3BA1FC1-A02E-44B5-9982-3B78CAECFABE}</Project>
+      <Project>{374666BA-A117-4802-A4D1-5BA36AF047BC}</Project>
       <Name>WorkingWithTriggers</Name>
     </ProjectReference>
   </ItemGroup>

@@ -8,7 +8,7 @@ using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-namespace WorkingWithBehaviors
+namespace AttachedNumericValidationBehavior
 {
 	[Register ("AppDelegate")]
 	public partial class AppDelegate : FormsApplicationDelegate
