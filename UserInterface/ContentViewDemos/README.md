@@ -9,7 +9,7 @@ products:
 extensions:
     tags:
     - ui
-urlFragment: userinterface-contentview
+urlFragment: userinterface-contentviewdemos
 ---
 # ContentView demos
 
