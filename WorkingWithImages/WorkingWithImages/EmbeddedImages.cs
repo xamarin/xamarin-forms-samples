@@ -15,14 +15,14 @@ namespace WorkingWithImages
 			Content = new StackLayout {
 				Children = {
 					new Label {
-						Text = "ImageSource.FromResource",
+						Text = "Image Embedded Resource C#",
 						FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
-						FontAttributes = FontAttributes.Bold
-					},
+						FontAttributes = FontAttributes.Bold, HorizontalOptions = LayoutOptions.Center
+                    },
 					embeddedImage, 
-					new Label { Text = "WorkingWithImages.beach.jpg embedded resource" }
+					new Label { Text = "This image is an embedded resource, referenced in C#. The same image file is used, regardless of the pixel density of the device (eg. iOS Retina)." }
 				},
-				Padding = new Thickness (0, 20, 0, 0),
+				Margin = new Thickness (20, 35, 20, 20),
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand
 			};
