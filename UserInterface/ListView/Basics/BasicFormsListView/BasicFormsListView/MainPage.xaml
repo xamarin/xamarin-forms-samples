@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:BasicFormsListView"
+             mc:Ignorable="d"
+             x:Class="BasicFormsListView.MainPage"
+             Padding="10"
+             Title="Basic ListView Demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="XAML ListView Demo"
+                          Detail="A ListView created in XAML."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ListViewXaml}" />
+                <TextCell Text="Code ListView Demo"
+                          Detail="A ListView created in code."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ListViewCode}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
