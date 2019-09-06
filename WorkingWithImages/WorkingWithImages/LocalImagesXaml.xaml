@@ -7,6 +7,6 @@
                FontAttributes="Bold"
                HorizontalOptions="Center" />
         <Image Source="waterfront.jpg" />
-        <Label Text="The image is referenced in XAML. On iOS and Android multiple resolutions are supplied and resolved at runtime." />
+        <Label Text="The image is referenced in XAML. On iOS and Android multiple resolutions are supplied and resolved at runtime, by the platform's naming conventions." />
     </StackLayout>
 </ContentPage>

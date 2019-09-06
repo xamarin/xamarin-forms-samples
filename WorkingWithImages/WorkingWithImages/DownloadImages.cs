@@ -12,33 +12,33 @@ namespace WorkingWithImages
         public DownloadImages() {
 			var webImage = new Image { Aspect = Aspect.AspectFit };
 
-			webImage.Source = ImageSource.FromUri(new Uri("http://xamarin.com/content/images/pages/forms/example-app.png"));
+			webImage.Source = ImageSource.FromUri(new Uri("https://aka.ms/campus.jpg"));
 
-			// Other examples of how to set the Image Source
-//			webImage.Source = "http://xamarin.com/content/images/pages/forms/example-app.png";
-//
-//			webImage.Source = new UriImageSource {
-//				Uri = new Uri("http://xamarin.com/content/images/pages/forms/example-app.png"),
-//				CachingEnabled = false
-//			};
-//
-//			webImage.Source = new UriImageSource {
-//				Uri = new Uri("http://xamarin.com/content/images/pages/forms/example-app.png"),
-//				CachingEnabled = true,
-//				CacheValidity = new TimeSpan(5,0,0,0)
-//			};
+            // Other examples of how to set the Image Source
+            //			webImage.Source = "https://aka.ms/campus.jpg";
+            //
+            //			webImage.Source = new UriImageSource {
+            //				Uri = new Uri("https://aka.ms/campus.jpg"),
+            //				CachingEnabled = false
+            //			};
+            //
+            //			webImage.Source = new UriImageSource {
+            //				Uri = new Uri("https://aka.ms/campus.jpg"),
+            //				CachingEnabled = true,
+            //				CacheValidity = new TimeSpan(5,0,0,0)
+            //			};
 
-			Content = new StackLayout {
+            Content = new StackLayout {
 				Children = {
 					new Label {
-						Text = "ImageSource.FromUri",
+						Text = "Image UriSource C#",
 						FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
-						FontAttributes = FontAttributes.Bold
-					},
+						FontAttributes = FontAttributes.Bold, HorizontalOptions = LayoutOptions.Center
+                    },
 					webImage, 
-					new Label { Text = "example-app.png gets downloaded from xamarin.com" }
+					new Label { Text = "This image is downloaded from microsoft.com" }
 				},
-				Padding = new Thickness (0, 20, 0, 0),
+				Margin = new Thickness (20, 35, 20, 20),
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand
 			};
