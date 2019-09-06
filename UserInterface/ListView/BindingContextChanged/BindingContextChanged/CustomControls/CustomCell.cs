@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace BindingContextChanged
+namespace BindingContextChanged.CustomControls
 {
 	public class CustomCell : ViewCell
 	{
