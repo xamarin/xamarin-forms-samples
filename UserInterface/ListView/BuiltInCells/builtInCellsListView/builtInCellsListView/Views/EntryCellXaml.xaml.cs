@@ -2,9 +2,9 @@
 
 namespace builtInCellsListView.Views
 {
-    public partial class TextCellXaml : ContentPage
+    public partial class EntryCellXaml : ContentPage
     {
-        public TextCellXaml()
+        public EntryCellXaml()
         {
             InitializeComponent();
             listView.ItemsSource = Constants.Veggies;

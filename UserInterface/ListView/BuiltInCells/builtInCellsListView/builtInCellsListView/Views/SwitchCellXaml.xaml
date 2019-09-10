@@ -4,15 +4,16 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="builtInCellsListView.Views.TextCellXaml"
+             x:Class="builtInCellsListView.Views.SwitchCellXaml"
              Padding="10"
-             Title="TextCell XAML Demo">
+             Title="SwitchCell XAML Demo">
     <ListView x:Name="listView">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding Name}"
-                          Detail="{Binding Comment}" />
+                <SwitchCell Text="{Binding Name}" 
+                            On="{Binding IsAVeggie}" />
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+    
 </ContentPage>

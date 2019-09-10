@@ -4,14 +4,15 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="builtInCellsListView.Views.TextCellXaml"
+             x:Class="builtInCellsListView.Views.ImageCellXaml"
              Padding="10"
-             Title="TextCell XAML Demo">
+             Title="ImageCell XAML Demo">
     <ListView x:Name="listView">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding Name}"
-                          Detail="{Binding Comment}" />
+                <ImageCell Text="{Binding Name}"
+                           Detail="{Binding Comment}"
+                           ImageSource="{Binding Image}"/>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
