@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SearchBarDemos.SearchBarRealtimeXamlPage"
+             Padding="10"
+             Title="XAML Realtime SearchBar">
+    <StackLayout>
+        <SearchBar x:Name="searchBar"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="CenterAndExpand"
+                   Placeholder="Search fruits..."
+                   CancelButtonColor="Orange"
+                   PlaceholderColor="Orange"
+                   HorizontalTextAlignment="Start"
+                   TextChanged="OnTextChanged"/>
+        <Label Text="Type in the searchbox to filter results in realtime."
+               HorizontalOptions="Fill"
+               VerticalOptions="CenterAndExpand" />
+        <ListView x:Name="searchResults"
+                  HorizontalOptions="Fill"
+                  VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>

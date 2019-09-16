@@ -13,7 +13,7 @@
 	<key>MinimumOSVersion</key>
 	<string>9.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>WorkingWithBehaviors</string>
+	<string>AttachedNumericValidationBehavior</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>CFBundleShortVersionString</key>
@@ -65,6 +65,6 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.xamarin.WorkingWithBehaviors</string>
+	<string>com.xamarin.AttachedNumericValidationBehavior</string>
 </dict>
 </plist>

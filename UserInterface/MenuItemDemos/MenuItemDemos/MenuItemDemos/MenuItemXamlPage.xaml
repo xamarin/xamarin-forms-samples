@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodels="clr-namespace:MenuItemDemos.ViewModels"
+             mc:Ignorable="d"
+             x:Class="MenuItemDemos.MenuItemXamlPage"
+             Padding="10"
+             Title="MenuItem XAML Demo">
+    <ContentPage.BindingContext>
+        <viewmodels:ListPageViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Label Text="Reveal the context menu by right-clicking (UWP), long-pressing (Android), or swiping (iOS) an item in the following list." />
+        <Label x:Name="messageLabel"
+               TextColor="Red"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Start" />
+        <ListView x:Name="listView"
+                  HorizontalOptions="CenterAndExpand"
+                  VerticalOptions="CenterAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Edit"
+                                      IconImageSource="icon.png"
+                                      Clicked="OnEditClicked"/>
+                            <MenuItem Text="Delete"
+                                      Clicked="OnDeleteClicked"/>
+                        </ViewCell.ContextActions>
+                        <Label Text="{Binding .}" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

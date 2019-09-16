@@ -6,6 +6,6 @@
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
   </ItemGroup>
 </Project>

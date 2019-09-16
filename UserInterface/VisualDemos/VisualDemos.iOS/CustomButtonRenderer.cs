@@ -1,9 +1,7 @@
-﻿using UIKit;
-using VisualDemos;
+﻿using VisualDemos;
 using VisualDemos.iOS;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
-using System;
 
 [assembly: ExportRenderer(typeof(Xamarin.Forms.Button), typeof(CustomButtonRenderer), new[] { typeof(CustomVisual) })]
 namespace VisualDemos.iOS

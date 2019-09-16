@@ -90,7 +90,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.12" />
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -106,6 +106,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Assets\Fonts\ionicons.ttf" />
     <None Include="MarkupExtensions.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

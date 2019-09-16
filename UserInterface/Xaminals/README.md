@@ -1,11 +1,15 @@
 ---
 name: Xamarin.Forms - Xaminals
-description: "Xamarin.Forms Shell reduces the complexity of mobile application development by providing fundamental features #shell #ui"
+description: "Xamarin.Forms Shell reduces the complexity of mobile application development by providing fundamental features #shell (UI)"
 page_type: sample
 languages:
 - csharp
 products:
 - xamarin
+extensions:
+    tags:
+    - ui
+    - shell
 urlFragment: userinterface-xaminals
 ---
 # Xaminals
@@ -17,7 +21,3 @@ This sample demonstrates a Xamarin.Forms Shell application.
 For more information about this sample, see [Xamarin.Forms Shell](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/).
 
 ![Xaminals application screenshot](Screenshots/01All.png "Xaminals application screenshot")
-
-## Author
-
-David Britch

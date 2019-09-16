@@ -21,6 +21,7 @@ namespace SwitchDemos
             {
                 IsToggled = false,
                 OnColor = Color.Orange,
+                ThumbColor = Color.Green,
                 HorizontalOptions = LayoutOptions.CenterAndExpand,
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };

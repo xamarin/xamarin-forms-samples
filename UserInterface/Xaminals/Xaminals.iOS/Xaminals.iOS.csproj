@@ -157,7 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
-      <Version>4.1.0.555618</Version>
+      <Version>4.2.0.709249</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -187,5 +187,6 @@
     <BundleResource Include="Resources\3bar%402x.png" />
     <BundleResource Include="Resources\back.png" />
     <BundleResource Include="Resources\back%402x.png" />
+    <BundleResource Include="Resources\photo.jpg" />
   </ItemGroup>
 </Project>

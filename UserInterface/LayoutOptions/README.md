@@ -1,11 +1,14 @@
 ---
 name: Xamarin.Forms - LayoutOptions
-description: "Every Xamarin.Forms view has HorizontalOptions and VerticalOptions properties, of type LayoutOptions #ui"
+description: "Every Xamarin.Forms view has HorizontalOptions and VerticalOptions properties, of type LayoutOptions (UI)"
 page_type: sample
 languages:
 - csharp
 products:
 - xamarin
+extensions:
+    tags:
+    - ui
 urlFragment: userinterface-layoutoptions
 ---
 # LayoutOptions
@@ -15,7 +18,3 @@ Every Xamarin.Forms view has `HorizontalOptions` and `VerticalOptions` propertie
 For more information about the sample see [LayoutOptions](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/layouts/layout-options).
 
 ![LayoutOptions application screenshot](Screenshots/01All.png "LayoutOptions application screenshot")
-
-## Author
-
-David Britch

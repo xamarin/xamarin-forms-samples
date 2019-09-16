@@ -89,7 +89,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.12" />
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -128,7 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarouselPageNavigation\CarouselPageNavigation.csproj">
-      <Project>{388f4a9d-83db-49d5-854c-eaeb3268f1a4}</Project>
+      <Project>{DFF1BBAA-D213-42A0-BC7B-8000C3873A2D}</Project>
       <Name>CarouselPageNavigation</Name>
     </ProjectReference>
   </ItemGroup>

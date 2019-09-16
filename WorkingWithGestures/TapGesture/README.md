@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - TapGesture
-description: This sample demonstrates using the TapGestureRecognizer class to implement tap gesture recognition.
+description: "This sample demonstrates using the TapGestureRecognizer class to implement tap gesture recognition."
 page_type: sample
 languages:
 - csharp

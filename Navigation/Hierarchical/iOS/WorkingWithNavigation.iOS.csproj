@@ -22,10 +22,7 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchProfiling>true</MtouchProfiling>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
@@ -37,8 +34,6 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
@@ -96,7 +91,7 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

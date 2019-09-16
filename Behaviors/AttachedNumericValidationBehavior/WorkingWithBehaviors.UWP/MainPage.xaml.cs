@@ -1,4 +1,4 @@
-﻿namespace WorkingWithBehaviors.UWP
+﻿namespace AttachedNumericValidationBehavior.UWP
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -8,7 +8,7 @@
         public MainPage()
         {
             this.InitializeComponent();
-            this.LoadApplication(new WorkingWithBehaviors.App());
+            this.LoadApplication(new AttachedNumericValidationBehavior.App());
         }
     }
 }

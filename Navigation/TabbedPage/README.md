@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - TabbedPage
-description: "How to use a TabbedPage to navigate through a collection of pages #navigation"
+description: "How to use a TabbedPage to navigate through a collection of pages (navigation)"
 page_type: sample
 languages:
 - csharp
@@ -15,7 +15,3 @@ This sample demonstrates how to use a `TabbedPage` to navigate through a collect
 For more information about the sample see [Tabbed Page](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/navigation/tabbed-page/).
 
 ![TabbedPage application screenshot](Screenshots/01All.png "TabbedPage application screenshot")
-
-## Authors
-
-Charles Petzold / David Britch

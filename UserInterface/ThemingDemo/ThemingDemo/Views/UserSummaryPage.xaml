@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ThemingDemo"
+             x:Class="ThemingDemo.UserSummaryPage"
+             Title="User Summary"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Theme"
+                     Clicked="OnThemeToolbarItemClicked" />
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                <RowDefinition Height="120" />
+                <RowDefinition Height="70" />
+            </Grid.RowDefinitions>
+            <Grid BackgroundColor="{DynamicResource PrimaryColor}">
+                <Label Text="Face-Palm Monkey"
+                       VerticalOptions="Center"
+                       Margin="15"
+                       Style="{StaticResource MediumLabelStyle}" />
+                <Frame Margin="10"
+                       CornerRadius="50"
+                       HeightRequest="60"
+                       WidthRequest="60"
+                       IsClippedToBounds="True"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center">
+                    <Image Grid.Column="1"
+                           Margin="-40"
+                           Source="{local:ImageResource ThemingDemo.Images.monkey.png}"
+                           HeightRequest="100"
+                           WidthRequest="100" />
+                </Frame>
+            </Grid>
+            <StackLayout Grid.Row="1"
+                         Margin="10">
+                <Label Text="This monkey reacts appropriately to ridiculous assertions and actions."
+                       Style="{StaticResource SmallLabelStyle}" />
+                <Label Text="  &#x2022; Cynical but not unfriendly."
+                       Style="{StaticResource SmallLabelStyle}" />
+                <Label Text="  &#x2022; Seven varieties of grimaces."
+                       Style="{StaticResource SmallLabelStyle}" />
+                <Label Text="  &#x2022; Doesn't laugh at your jokes."
+                       Style="{StaticResource SmallLabelStyle}" />
+            </StackLayout>
+            <Button Grid.Row="2"
+                    Text="MORE INFO"
+                    Clicked="OnNavigationInvoked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Style="{StaticResource ButtonStyle}" />
+        </Grid>
+    </ScrollView>
+</ContentPage>

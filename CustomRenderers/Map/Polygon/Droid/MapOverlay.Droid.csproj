@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{75AC2162-94A4-4B8F-8D3D-4ACBF9CE10FA}</ProjectGuid>
+    <ProjectGuid>{31F4760E-4880-455F-8FD7-05C52D56E816}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>MapOverlay.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -41,8 +41,8 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="4.1.0.555618" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.2.0.709249" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MapOverlay\MapOverlay.csproj">
-      <Project>{5B19CDED-4814-4651-A6BD-4006C5FFAE34}</Project>
+      <Project>{6A579B08-685B-4DDD-81EA-D15B22CFE5B6}</Project>
       <Name>MapOverlay</Name>
     </ProjectReference>
   </ItemGroup>

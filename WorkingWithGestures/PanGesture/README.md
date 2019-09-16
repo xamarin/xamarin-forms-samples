@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - PanGesture
-description: This sample demonstrates using the PanGestureRecognizer class to implement dragging.
+description: "This sample demonstrates using the PanGestureRecognizer class to implement dragging."
 page_type: sample
 languages:
 - csharp

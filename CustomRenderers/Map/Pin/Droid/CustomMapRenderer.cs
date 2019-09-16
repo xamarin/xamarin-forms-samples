@@ -86,7 +86,7 @@ namespace CustomRenderer.Droid
                     throw new Exception("Custom pin not found");
                 }
 
-                if (customPin.Id.ToString() == "Xamarin")
+                if (customPin.MarkerId.ToString() == "Xamarin")
                 {
                     view = inflater.Inflate(Resource.Layout.XamarinMapInfoWindow, null);
                 }

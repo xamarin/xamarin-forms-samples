@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - TodoLocalized
-description: 'Demonstrates a localized Todo list application where the data is stored and accessed in a local SQLite database.'
+description: 'Todo list Android & iOS app, with UI translated into Spanish, French, Japanese, Chinese, and other languages.'
 page_type: sample
 languages:
 - csharp
@@ -10,8 +10,10 @@ urlFragment: todolocalized
 ---
 # TodoLocalized (Xamarin.Forms)
 
-A complete application that demonstrates the localization concepts from [this developer portal page](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/localization/),
-and its [sample code](https://github.com/xamarin/xamarin-forms-samples/tree/master/UsingResxLocalization).
+A complete application that demonstrates the localization concepts from the [Xamarin.Forms localization](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/localization/) docs,
+and [sample code](https://github.com/xamarin/xamarin-forms-samples/tree/master/UsingResxLocalization).
+
+![iOS screenshot using Spanish language labels](Screenshots/02es-small.png)
 
 This sample uses [Multilingual App Toolkit (MAT) from Microsoft](https://dev.windows.com/en-us/develop/multilingual-app-toolkit) (specifically the [v4.0 Technical Preview](https://visualstudiogallery.msdn.microsoft.com/6dab9154-a7e1-46e4-bbfa-18b5e81df520))to localize a Xamarin.Forms application for iOS, Android, and the Universal Windows Platform. You do NOT need MAT to build or run this sample.
 

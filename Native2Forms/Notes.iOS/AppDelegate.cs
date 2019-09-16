@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using Foundation;
+using Notes.Controllers;
 using Notes.iOS.Models;
 using Notes.iOS.Views;
 using UIKit;
@@ -12,13 +13,11 @@ namespace Notes.iOS
     [Register("AppDelegate")]
     public class AppDelegate : UIApplicationDelegate
     {
-        public static string FolderPath { get; private set; }
-
         public static AppDelegate Instance;
-
         UIWindow _window;
-        UINavigationController _navigation;
-        UIViewController _noteEntryPage;
+        AppNavigationController _navigation;
+
+        public static string FolderPath { get; private set; }
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
@@ -36,7 +35,8 @@ namespace Notes.iOS
             UIViewController mainPage = new NotesPage().CreateViewController();
             mainPage.Title = "Notes";
 
-            _navigation = new UINavigationController(mainPage);
+            _navigation = new AppNavigationController(mainPage);
+
             _window.RootViewController = _navigation;
             _window.MakeKeyAndVisible();
 
@@ -45,23 +45,17 @@ namespace Notes.iOS
 
         public void NavigateToNoteEntryPage(Note note)
         {
-            _noteEntryPage = new NoteEntryPage
+            var noteEntryPage = new NoteEntryPage
             {
                 BindingContext = note
             }.CreateViewController();
-            _noteEntryPage.Title = "Note Entry";
-            _navigation.PushViewController(_noteEntryPage, true);
+            noteEntryPage.Title = "Note Entry";
+            _navigation.PushViewController(noteEntryPage, true);
         }
 
         public void NavigateBack()
         {
             _navigation.PopViewController(true);
-        }
-
-        public void DisposeNoteEntryPage()
-        {
-            _noteEntryPage.Dispose();
-            _noteEntryPage = null;
         }
     }
 }

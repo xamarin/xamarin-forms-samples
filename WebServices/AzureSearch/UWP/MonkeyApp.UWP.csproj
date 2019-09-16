@@ -89,7 +89,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.12" />
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -128,7 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MonkeyApp\MonkeyApp.csproj">
-      <Project>{47329cee-1f55-41ac-b9fa-048f11abcbfb}</Project>
+      <Project>{3865868E-9C1C-4352-8EF1-8C5D887AC106}</Project>
       <Name>MonkeyApp</Name>
     </ProjectReference>
   </ItemGroup>
