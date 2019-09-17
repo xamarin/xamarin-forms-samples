@@ -173,6 +173,14 @@
                           Detail="ScrollTo"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:ScrollToByObjectPage}" />
+                <TextCell Text="Scroll by index"
+                          Detail="Grouped data"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ScrollToByIndexWithGroupingPage}" />
+                <TextCell Text="Scroll by object"
+                          Detail="Grouped data"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ScrollToByObjectWithGroupingPage}" />
                 <TextCell Text="Snap points"
                           Detail="Type and alignment"
                           Command="{Binding NavigateCommand}"
