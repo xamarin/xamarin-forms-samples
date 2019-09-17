@@ -1,45 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-			 x:Class="WorkingWithPlatformSpecifics.DevicePageXaml"
-			 Title="DevicePageXaml">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkingWithPlatformSpecifics.DevicePageXaml"
+             Title="DevicePageXaml">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
-            <On Platform="iOS" Value="5,20,0,5" />
-            <On Platform="Android, UWP" Value="5,0,0,5" />
+            <On Platform="iOS"
+                Value="5,20,0,5" />
+            <On Platform="Android, UWP"
+                Value="5,0,0,5" />
         </OnPlatform>
     </ContentPage.Padding>
     <StackLayout>
-  	<Label Text="Heading" Font="Large"></Label>
-  	<BoxView HorizontalOptions="Center">
-  		<BoxView.Color>
+        <Label Text="Heading"
+               Font="Large"></Label>
+        <BoxView HorizontalOptions="Center">
+            <BoxView.Color>
                 <OnPlatform x:TypeArguments="Color">
-                    <On Platform="iOS" Value="Green" />
-                    <On Platform="Android" Value="#738182" />
-                    <On Platform="UWP" Value="Accent" />
+                    <On Platform="iOS"
+                        Value="Green" />
+                    <On Platform="Android"
+                        Value="#738182" />
+                    <On Platform="UWP"
+                        Value="Accent" />
                 </OnPlatform>
-		</BoxView.Color>
-		<BoxView.WidthRequest>
+            </BoxView.Color>
+            <BoxView.WidthRequest>
                 <OnPlatform x:TypeArguments="x:Double">
-                    <On Platform="iOS" Value="30" />
-                    <On Platform="Android" Value="40" />
-                    <On Platform="UWP" Value="50" />
+                    <On Platform="iOS"
+                        Value="30" />
+                    <On Platform="Android"
+                        Value="40" />
+                    <On Platform="UWP"
+                        Value="50" />
                 </OnPlatform>
             </BoxView.WidthRequest>
-  	</BoxView>
-    <Button Text="Open Uri" Clicked="OpenUriClicked" />
-  	<Label x:Name="timer" Text="Click start below" />
-  	<Button Text="Start 10s Timer" 
-  		Clicked="TimerClicked" 
-  		BackgroundColor="Gray" 
-  		HorizontalOptions="Center">
-	  	<Button.WidthRequest>
+        </BoxView>
+        <Label x:Name="timer"
+               Text="Click start below" />
+        <Button Text="Start 10s Timer"
+                Clicked="TimerClicked"
+                BackgroundColor="Gray"
+                HorizontalOptions="Center">
+            <Button.WidthRequest>
                 <OnPlatform x:TypeArguments="x:Double">
-                    <On Platform="iOS" Value="200" />
-                    <On Platform="Android" Value="300" />
-                    <On Platform="UWP" Value="150" />
+                    <On Platform="iOS"
+                        Value="200" />
+                    <On Platform="Android"
+                        Value="300" />
+                    <On Platform="UWP"
+                        Value="150" />
                 </OnPlatform>
             </Button.WidthRequest>
-  	</Button>
-  </StackLayout>
+        </Button>
+    </StackLayout>
 </ContentPage>
