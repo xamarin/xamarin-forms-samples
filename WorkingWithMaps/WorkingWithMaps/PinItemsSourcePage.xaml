@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:WorkingWithMaps"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              x:Class="WorkingWithMaps.PinItemsSourcePage"
-             Title="Pins (Collection)"
+             Title="Databinding pins demo (Collection)"
              IconImageSource="glyphish_07_map_marker.png">
 <!--    <ContentPage.Resources>
         <local:MapItemTemplateSelector x:Key="MapItemTemplateSelector">

@@ -5,7 +5,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
-namespace WorkingWithMaps
+namespace WorkingWithMaps.ViewModels
 {
     public class PinItemsSourcePageViewModel
     {

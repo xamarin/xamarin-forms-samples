@@ -10,6 +10,8 @@ namespace WorkingWithMaps
 
 		public PinPage ()
 		{
+            Title = "Pins demo";
+
 			map = new Map { 
 				IsShowingUser = true,
 				HeightRequest = 100,

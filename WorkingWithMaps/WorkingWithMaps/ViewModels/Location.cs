@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using Xamarin.Forms.Maps;
 
-namespace WorkingWithMaps
+namespace WorkingWithMaps.ViewModels
 {
     public class Location : INotifyPropertyChanged
     {

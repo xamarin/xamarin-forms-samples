@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
@@ -11,6 +12,8 @@ namespace WorkingWithMaps
 
 		public GeocoderPage ()
 		{
+            Title = "Geocoder demo";
+
 			geoCoder = new Geocoder ();
 
 			var b1 = new Button { Text = "Reverse geocode '37.808, -122.432'" };
