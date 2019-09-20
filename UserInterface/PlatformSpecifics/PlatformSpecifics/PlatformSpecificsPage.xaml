@@ -130,6 +130,9 @@
             <TextCell Text="TabbedPage Icons"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type local:WindowsTabbedPageIcons}" />
+            <TextCell Text="RefreshView Pull Direction"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type local:WindowsRefreshViewPage}" />
         </TableSection>
     </TableView>
 </ContentPage>

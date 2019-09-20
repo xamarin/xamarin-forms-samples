@@ -107,6 +107,9 @@
     <EmbeddedResource Update="UWP\XAML\WindowsVisualElementAccessKeysPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="UWP\XAML\WindowsRefreshViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>

@@ -36,7 +36,7 @@ namespace PlatformSpecifics
                         new TextCell { Text="NavigationPage Status Bar Text Color Mode", Command = NavigateCommand, CommandParameter = typeof(iOSStatusBarTextColorModePageCS) },
                         new TextCell { Text = "ListView Platform-Specifics", Command = NavigateCommand, CommandParameter = typeof(iOSListViewPageCS) },
                         new TextCell { Text = "ListView/Cell Platform-Specifics", Command = NavigateCommand, CommandParameter = typeof(iOSListViewWithCellPageCS) },
-						new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(LegacyColorModePageCS) },
+                        new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(LegacyColorModePageCS) },
                         new TextCell { Text = "VisualElement Shadow Effect", Command = NavigateCommand, CommandParameter = typeof(iOSShadowEffectPageCS) },
                         new TextCell { Text = "Application PanGestureRecognizer", Command = NavigateCommand, CommandParameter = typeof(iOSPanGestureRecognizerPageCS) },
                         new TextCell { Text = "Slider Update on Tap", Command = NavigateCommand, CommandParameter = typeof(iOSSliderUpdateOnTapPageCS) },
@@ -51,10 +51,10 @@ namespace PlatformSpecifics
                         new TextCell { Text = "TabbedPage Swipe, Smooth Scroll, Toolbar Placement", Command = NavigateCommand, CommandParameter = typeof(AndroidTabbedPageSwipePageCS) },
                         new TextCell { Text = "ListView Fast Scroll", Command = NavigateCommand, CommandParameter = typeof(AndroidListViewFastScrollPageCS) },
                         new TextCell { Text = "Elevation", Command = NavigateCommand, CommandParameter = typeof(AndroidElevationPageCS) },
-						new TextCell { Text = "Entry ImeOptions", Command = NavigateCommand, CommandParameter = typeof(AndroidEntryPageCS) },
-						new TextCell { Text = "WebView Mixed Content", Command = NavigateCommand, CommandParameter = typeof(AndroidWebViewPageCS) },
-						new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(LegacyColorModePageCS) },
-						new TextCell { Text = "Button Default Padding/Shadow", Command = NavigateCommand, CommandParameter = typeof(AndroidButtonPageCS) },
+                        new TextCell { Text = "Entry ImeOptions", Command = NavigateCommand, CommandParameter = typeof(AndroidEntryPageCS) },
+                        new TextCell { Text = "WebView Mixed Content", Command = NavigateCommand, CommandParameter = typeof(AndroidWebViewPageCS) },
+                        new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(LegacyColorModePageCS) },
+                        new TextCell { Text = "Button Default Padding/Shadow", Command = NavigateCommand, CommandParameter = typeof(AndroidButtonPageCS) },
                         new TextCell { Text = "NavigationPage BarHeight", Command = NavigateCommand, CommandParameter = typeof(AndroidTitleViewPageCS) },
                         new TextCell { Text = "ImageButton Shadow Effect", Command = NavigateCommand, CommandParameter = typeof(AndroidImageButtonPageCS) },
                         new TextCell { Text = "WebView Zoom Controls", Command = NavigateCommand, CommandParameter = typeof(AndroidWebViewZoomPageCS) }
@@ -64,13 +64,14 @@ namespace PlatformSpecifics
                         new TextCell { Text = "TabbedPage Toolbar Location", Command = NavigateCommand, CommandParameter = typeof(WindowsTabbedPageCS) },
                         new TextCell { Text = "NavigationPage Toolbar Location", Command = NavigateCommand, CommandParameter = typeof(WindowsNavigationPageCS) },
                         new TextCell { Text = "MasterDetailPage Toolbar Location", Command = NavigateCommand, CommandParameter = typeof(WindowsMasterDetailPageCS) },
-						new TextCell { Text = "WebView JavaScript Alert", Command = NavigateCommand, CommandParameter = typeof(WindowsWebViewPageCS) },
-						new TextCell { Text = "Text Reading Order", Command = NavigateCommand, CommandParameter = typeof(WindowsReadingOrderPageCS) },
-						new TextCell { Text = "SearchBar Spell Check", Command = NavigateCommand, CommandParameter = typeof(WindowsSearchBarPageCS) },
-						new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(WindowsLegacyColorModePageCS) },
-						new TextCell { Text = "ListView Selection Mode", Command = NavigateCommand, CommandParameter = typeof(WindowsListViewPageCS) },
+                        new TextCell { Text = "WebView JavaScript Alert", Command = NavigateCommand, CommandParameter = typeof(WindowsWebViewPageCS) },
+                        new TextCell { Text = "Text Reading Order", Command = NavigateCommand, CommandParameter = typeof(WindowsReadingOrderPageCS) },
+                        new TextCell { Text = "SearchBar Spell Check", Command = NavigateCommand, CommandParameter = typeof(WindowsSearchBarPageCS) },
+                        new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(WindowsLegacyColorModePageCS) },
+                        new TextCell { Text = "ListView Selection Mode", Command = NavigateCommand, CommandParameter = typeof(WindowsListViewPageCS) },
                         new TextCell { Text = "VisualElement Access Keys", Command = NavigateCommand, CommandParameter = typeof(WindowsVisualElementAccessKeysPageCS) },
-                        new TextCell { Text = "TabbedPage Icons", Command = NavigateCommand, CommandParameter = typeof(WindowsTabbedPageIconsCS) }
+                        new TextCell { Text = "TabbedPage Icons", Command = NavigateCommand, CommandParameter = typeof(WindowsTabbedPageIconsCS) },
+                        new TextCell { Text = "RefreshView Pull Direction", Command = NavigateCommand,  CommandParameter = typeof(WindowsRefreshViewPageCS) }
                     }
                 }
             };         
