@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using WorkingWithMaps.ViewModels;
+using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
 namespace WorkingWithMaps

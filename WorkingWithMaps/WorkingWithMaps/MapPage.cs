@@ -10,6 +10,8 @@ namespace WorkingWithMaps
 		Map map;
 		public MapPage ()
 		{
+            Title = "Map demo";
+
 			map = new Map { 
 				//IsShowingUser = true,
 				HeightRequest = 100,

@@ -10,6 +10,8 @@ namespace WorkingWithMaps
         // European (and other countries) use a comma as the separator, which will break the request
         public MapAppPage()
         {
+            Title = "Native map app demo";
+
             var l = new Label
             {
                 Text = "These buttons leave the current app and open the built-in Maps app for the platform"
