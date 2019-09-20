@@ -75,10 +75,6 @@
     <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
-    <AndroidResource Include="Resources\drawable\glyphish_07_map_marker.png" />
-    <AndroidResource Include="Resources\drawable\glyphish_13_target.png" />
-    <AndroidResource Include="Resources\drawable\glyphish_103_map.png" />
-    <AndroidResource Include="Resources\drawable\glyphish_74_location.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />

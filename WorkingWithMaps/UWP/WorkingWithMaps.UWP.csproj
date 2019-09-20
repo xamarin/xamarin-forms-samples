@@ -109,10 +109,6 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="glyphish_07_map_marker.png" />
-    <Content Include="glyphish_103_map.png" />
-    <Content Include="glyphish_13_target.png" />
-    <Content Include="glyphish_74_location.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
