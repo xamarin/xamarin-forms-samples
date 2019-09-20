@@ -146,6 +146,16 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:VerticalListGroupingVariableSizeItemsPage}" />
             </TableSection>
+            <TableSection Title="Pull to Refresh">
+                <TextCell Text="Pull to refresh using RefreshView"
+                          Detail="Vertical list"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VerticalListPullToRefreshPage}" />
+                <TextCell Text="Pull to refresh using RefreshView"
+                          Detail="Horizontal grid"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:HorizontalGridPullToRefreshPage}" />
+            </TableSection>
             <TableSection Title="Headers and Footers">
                 <TextCell Text="String header and footer"
                           Detail="Vertical list"

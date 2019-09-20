@@ -24,6 +24,7 @@
     <Folder Include="Helpers\" />
     <Folder Include="Views\Grouping\" />
     <Folder Include="Views\HeadersAndFooters\" />
+    <Folder Include="Views\PullToRefresh\" />
   </ItemGroup>
 
   <ItemGroup>
