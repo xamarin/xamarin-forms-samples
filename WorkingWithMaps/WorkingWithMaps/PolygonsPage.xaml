@@ -8,12 +8,11 @@
              x:Class="WorkingWithMaps.PolygonsPage"
              Title="Polygon/Polyline Demo">
     <StackLayout>
-        <maps:Map x:Name="Map"
-                  MapClicked="MapClicked" />
-        <Button Text="Add Polyline"
+        <maps:Map x:Name="Map" />
+        <Button Text="Show Campus (Polygons)"
+                Clicked="AddPolygonsClicked" />
+        <Button Text="Show Access Road (Polyline)"
                 Clicked="AddPolylineClicked" />
-        <Button Text="Add Polygon"
-                Clicked="AddPolygonClicked" />
         <Button Text="Clear All"
                 Clicked="ClearClicked" />
     </StackLayout>

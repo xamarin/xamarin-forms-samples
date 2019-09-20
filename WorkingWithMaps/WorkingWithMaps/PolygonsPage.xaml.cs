@@ -7,88 +7,103 @@ namespace WorkingWithMaps
 {
     public partial class PolygonsPage : ContentPage
     {
-        Polyline polyline;
-        Polygon polygon;
+        Polyline interstateBridge;
+        Polygon msWest;
+        Polygon msEast;
 
         public PolygonsPage()
         {
             InitializeComponent();
 
-            // polygon is a collection of points representing
-            // the xamarin hexagon shape
-            polygon = new Polygon
+            msWest = new Polygon
             {
-                StrokeColor = Color.FromHex("#3498DB"),
-                StrokeWidth = 15,
-                FillColor = Color.FromHex("#883498DB"),
+                StrokeColor = Color.FromHex("#FF9900"),
+                StrokeWidth = 8,
+                FillColor = Color.FromHex("#88FF9900"),
                 Geopath =
                 {
-                    new Position(46.1037086, -105.0732425),
-                    new Position(41.5743612, -108.6328128),
-                    new Position(36.5978889, -104.9414065),
-                    new Position(36.6331619, -97.69043),
-                    new Position(41.5414775, -94.0869144),
-                    new Position(46.1037086, -97.5585941),
-                    new Position(46.1037086, -105.0732425)
+                    new Position(47.6458676, -122.1356007),
+                    new Position(47.6458097, -122.142789),
+                    new Position(47.6367593, -122.1428104),
+                    new Position(47.6368027, -122.1398707),
+                    new Position(47.6380172, -122.1376177),
+                    new Position(47.640663, -122.1352359),
+                    new Position(47.6426148, -122.1347209),
+                    new Position(47.6458676, -122.1356007)
                 }
             };
 
-            // polyline is a collection of points representing
-            // the xamarin X shape
-            polyline = new Polyline
+            msEast = new Polygon
             {
-                StrokeColor = Color.White,
-                StrokeWidth = 15,
+                StrokeColor = Color.FromHex("#1BA1E2"),
+                StrokeWidth = 8,
+                FillColor = Color.FromHex("#881BA1E2"),
                 Geopath =
                 {
-                    new Position(41.0627859, -101.6455081),
-                    new Position(39.0789079, -103.0078128),
-                    new Position(39.0789079, -104.3261722),
-                    new Position(41.5250294, -102.4804691),
-                    new Position(43.9453722, -104.4140628),
-                    new Position(43.9453722, -103.0957034),
-                    new Position(41.6893221, -101.2500003),
-                    new Position(44.00862, -99.4042972),
-                    new Position(44.00862, -98.3496097),
-                    new Position(41.6236552, -100.0634769),
-                    new Position(39.0789079, -98.2177737),
-                    new Position(39.1130135, -99.5361331),
-                    new Position(41.0959119, -100.8105472)
+                    new Position(47.6368678, -122.137305),
+                    new Position(47.6368894, -122.134655),
+                    new Position(47.6359424, -122.134655),
+                    new Position(47.6359496, -122.1325521),
+                    new Position(47.6424124, -122.1325199),
+                    new Position(47.642463, -122.1338932),
+                    new Position(47.6406414, -122.1344833),
+                    new Position(47.6384943, -122.1361248),
+                    new Position(47.6372943, -122.1376912),
+                    new Position(47.6368678, -122.137305),
+                }
+            };
+
+            // polyline is a collection of points
+            interstateBridge = new Polyline
+            {
+                StrokeColor = Color.Black,
+                StrokeWidth = 12,
+                Geopath =
+                {
+                    new Position(47.6381401, -122.1317367),
+                    new Position(47.6381473, -122.1350841),
+                    new Position(47.6382847, -122.1353094),
+                    new Position(47.6384582, -122.1354703),
+                    new Position(47.6401136, -122.1360819),
+                    new Position(47.6403883, -122.1364681),
+                    new Position(47.6407426, -122.1377019),
+                    new Position(47.6412558, -122.1404056),
+                    new Position(47.6414148, -122.1418647),
+                    new Position(47.6414654, -122.1432702)
                 }
             };
 
             Map.MoveToRegion(
                 MapSpan.FromCenterAndRadius(
-                    new Position(36.61, -100),Distance.FromMiles(1500)));
-        }
-
-        private void MapClicked(object sender, Xamarin.Forms.Maps.MapClickedEventArgs e)
-        {
-
+                    new Position(47.640663, -122.1376177),Distance.FromMiles(1)));
         }
 
         private void AddPolylineClicked(object sender, System.EventArgs e)
         {
-            if (!Map.MapElements.Contains(polyline))
+            if (!Map.MapElements.Contains(interstateBridge))
             {
-                // inserting at zero ensures polyline draws on top
-                // of any other MapElements
-                Map.MapElements.Insert(0, polyline);
+                Map.MapElements.Add(interstateBridge);
             }
         }
 
-        private void AddPolygonClicked(object sender, System.EventArgs e)
+        private void AddPolygonsClicked(object sender, System.EventArgs e)
         {
-            if (!Map.MapElements.Contains(polygon))
+            if (!Map.MapElements.Contains(msWest))
             {
-                Map.MapElements.Add(polygon);
+                Map.MapElements.Add(msWest);
+            }
+
+            if (!Map.MapElements.Contains(msEast))
+            {
+                Map.MapElements.Add(msEast);
             }
         }
 
         private void ClearClicked(object sender, System.EventArgs e)
         {
-            Map.MapElements.Remove(polygon);
-            Map.MapElements.Remove(polyline);
+            Map.MapElements.Remove(msWest);
+            Map.MapElements.Remove(msEast);
+            Map.MapElements.Remove(interstateBridge);
         }
     }
 }
