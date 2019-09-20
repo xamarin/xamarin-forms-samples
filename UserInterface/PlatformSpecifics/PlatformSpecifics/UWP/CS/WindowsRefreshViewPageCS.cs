@@ -7,10 +7,10 @@ using RefreshView = Xamarin.Forms.RefreshView;
 
 namespace PlatformSpecifics
 {
-	public class WindowsRefreshViewPageCS : ContentPage
-	{
-		public WindowsRefreshViewPageCS ()
-		{
+    public class WindowsRefreshViewPageCS : ContentPage
+    {
+        public WindowsRefreshViewPageCS()
+        {
             WindowsRefreshViewPageViewModel viewModel = new WindowsRefreshViewPageViewModel();
 
             // Define DataTemplate.
@@ -91,7 +91,7 @@ namespace PlatformSpecifics
             };
             refreshView.SetBinding(RefreshView.IsRefreshingProperty, "IsRefreshing");
             refreshView.SetBinding(RefreshView.CommandProperty, "RefreshCommand");
-            refreshView.On<Windows>().SetRefreshPullDirection((RefreshPullDirection)enumPicker.SelectedItem);
+            refreshView.On<Windows>().SetRefreshPullDirection(RefreshPullDirection.LeftToRight);
 
             enumPicker.SelectedIndexChanged += (s, e) =>
             {
