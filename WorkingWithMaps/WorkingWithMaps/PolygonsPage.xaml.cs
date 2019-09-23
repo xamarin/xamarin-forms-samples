@@ -73,37 +73,37 @@ namespace WorkingWithMaps
                 }
             };
 
-            Map.MoveToRegion(
+            map.MoveToRegion(
                 MapSpan.FromCenterAndRadius(
                     new Position(47.640663, -122.1376177),Distance.FromMiles(1)));
         }
 
         private void AddPolylineClicked(object sender, System.EventArgs e)
         {
-            if (!Map.MapElements.Contains(interstateBridge))
+            if (!map.MapElements.Contains(interstateBridge))
             {
-                Map.MapElements.Add(interstateBridge);
+                map.MapElements.Add(interstateBridge);
             }
         }
 
         private void AddPolygonsClicked(object sender, System.EventArgs e)
         {
-            if (!Map.MapElements.Contains(msWest))
+            if (!map.MapElements.Contains(msWest))
             {
-                Map.MapElements.Add(msWest);
+                map.MapElements.Add(msWest);
             }
 
-            if (!Map.MapElements.Contains(msEast))
+            if (!map.MapElements.Contains(msEast))
             {
-                Map.MapElements.Add(msEast);
+                map.MapElements.Add(msEast);
             }
         }
 
         private void ClearClicked(object sender, System.EventArgs e)
         {
-            Map.MapElements.Remove(msWest);
-            Map.MapElements.Remove(msEast);
-            Map.MapElements.Remove(interstateBridge);
+            map.MapElements.Remove(msWest);
+            map.MapElements.Remove(msEast);
+            map.MapElements.Remove(interstateBridge);
         }
     }
 }
