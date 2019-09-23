@@ -16,3 +16,5 @@ urlFragment: userinterface-listview-bindingcontextchanged
 Sample code associated with the [ListView docs](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/listview/).
 
 This sample demonstrates binding context changes in a ListView custom cell in Xamarin.Forms.
+
+![Screenshot of ListView BindingContextChanged Demo](Screenshots/listview-bindingcontextchanged.png)

@@ -8,7 +8,7 @@ namespace BasicFormsListView
 		public ListViewXaml ()
 		{
 			InitializeComponent ();
-			lstView.ItemsSource = new List<string> () { "Vegetables", "Fruits", "Flower Buds", "Legumes", "Bulbs", "Tubers" };
+            lstView.ItemsSource = Constants.Items;
 		}
 	}
 }

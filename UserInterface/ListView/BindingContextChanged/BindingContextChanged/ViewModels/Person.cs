@@ -1,4 +1,4 @@
-﻿namespace BindingContextChanged
+﻿namespace BindingContextChanged.ViewModels
 {
 	public class Person
 	{

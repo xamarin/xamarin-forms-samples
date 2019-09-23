@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:builtInCellsListView.Views"
+             mc:Ignorable="d"
+             x:Class="builtInCellsListView.Views.MainPage"
+             Padding="10"
+             Title="Built-in Cell Demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="TextCell XAML demo"
+                          Detail="ListView demonstrating the built in TextCell class in XAML."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:TextCellXaml}" />
+                <TextCell Text="ImageCell XAML demo"
+                          Detail="ListView demonstrating the built in ImageCell class in XAML."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ImageCellXaml}" />
+                <TextCell Text="SwitchCell XAML demo"
+                          Detail="ListView demonstrating the built in SwitchCell class in XAML."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:SwitchCellXaml}" />
+                <TextCell Text="EntryCell XAML demo"
+                          Detail="ListView demonstrating the built in EntryCell class in XAML."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:EntryCellXaml}" />
+                <TextCell Text="TextCell code demo"
+                          Detail="ListView demonstrating the built in TextCell class in code."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:TextCellCode}" />
+                <TextCell Text="ImageCell code demo"
+                          Detail="ListView demonstrating the built in ImageCell class in code."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ImageCellCode}" />
+                <TextCell Text="SwitchCell code demo"
+                          Detail="ListView demonstrating the built in SwitchCell class in code."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:SwitchCellCode}" />
+                <TextCell Text="EntryCell code demo"
+                          Detail="ListView demonstrating the built in EntryCell class in code."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:EntryCellCode}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
