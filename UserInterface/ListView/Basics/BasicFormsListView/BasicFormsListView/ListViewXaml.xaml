@@ -4,7 +4,5 @@
              x:Class="BasicFormsListView.ListViewXaml"
              Padding="10"
              Title="XAML ListView Demo">
-    <ContentPage.Content>
-        <ListView x:Name="lstView" />
-    </ContentPage.Content>
+    <ListView x:Name="lstView" />
 </ContentPage>

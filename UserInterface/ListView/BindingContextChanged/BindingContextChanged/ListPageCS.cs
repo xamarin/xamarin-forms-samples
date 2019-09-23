@@ -1,37 +1,38 @@
 ﻿using BindingContextChanged.CustomControls;
-using BindingContextChanged.ViewModels;
-using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace BindingContextChanged
 {
-	public class ListPageCS : ContentPage
-	{
-		public ListPageCS ()
-		{
+    public class ListPageCS : ContentPage
+    {
+        public ListPageCS()
+        {
             Title = "BindingContextChanged Code Demo";
             Padding = 10;
 
-			var customCell = new DataTemplate (typeof(CustomCell));
-			customCell.SetBinding (CustomCell.NameProperty, "Name");
-			customCell.SetBinding (CustomCell.AgeProperty, "Age");
-			customCell.SetBinding (CustomCell.LocationProperty, "Location");
+            var customCell = new DataTemplate(typeof(CustomCell));
+            customCell.SetBinding(CustomCell.NameProperty, "Name");
+            customCell.SetBinding(CustomCell.AgeProperty, "Age");
+            customCell.SetBinding(CustomCell.LocationProperty, "Location");
 
-			var listView = new ListView {
-				ItemTemplate = customCell
-			};
+            var listView = new ListView
+            {
+                ItemTemplate = customCell
+            };
 
-			var button = new Button { Text = "Change Binding Context" };
-			button.Clicked += (sender, e) => {
-				listView.ItemsSource = Constants.People;
-			};
+            var button = new Button { Text = "Change Binding Context" };
+            button.Clicked += (sender, e) =>
+            {
+                listView.ItemsSource = Constants.People;
+            };
 
-			Content = new StackLayout {
-				Children = {
-					listView,
-					button
-				}
-			};
-		}
-	}
+            Content = new StackLayout
+            {
+                Children = {
+                    listView,
+                    button
+                }
+            };
+        }
+    }
 }

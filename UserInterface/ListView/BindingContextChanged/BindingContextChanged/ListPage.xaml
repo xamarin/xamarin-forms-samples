@@ -10,8 +10,8 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <controls:CustomCell Name="{Binding Name}"
-                                      Age="{Binding Age}"
-                                      Location="{Binding Location}" />
+                                         Age="{Binding Age}"
+                                         Location="{Binding Location}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

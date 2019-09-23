@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace BasicFormsListView
 {
-	public class ListViewCode : ContentPage
-	{
-		public ListViewCode ()
-		{
+    public class ListViewCode : ContentPage
+    {
+        public ListViewCode()
+        {
             Title = "ListView Code Demo";
             Padding = 10;
 
-			var listView = new ListView ();
+            var listView = new ListView();
             listView.ItemsSource = Constants.Items;
-			Content = listView;
-		}
-	}
+            Content = listView;
+        }
+    }
 }
 
 
