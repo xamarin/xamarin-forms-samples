@@ -13,3 +13,5 @@ urlFragment: userinterface-listview-basics
 Sample code associated with the [ListView Docs](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/listview/).
 
 This sample demonstrates basic use of ListView populated with just an array of strings, using the default view.
+
+![Screenshot of Basic ListView Demo on iOS and Android](Screenshots/basic-listview-demo.png)

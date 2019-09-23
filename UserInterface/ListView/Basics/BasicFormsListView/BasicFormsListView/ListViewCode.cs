@@ -1,18 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace BasicFormsListView
 {
-	public class ListViewCode : ContentPage
-	{
-		public ListViewCode ()
-		{
-			var lstView = new ListView ();
-			lstView.ItemsSource = new List<String> (){ "Vegetables", "Fruits", "Flower Buds", "Legumes", "Bulbs", "Tubers" };
-			Content = lstView;
-		}
-	}
+    public class ListViewCode : ContentPage
+    {
+        public ListViewCode()
+        {
+            Title = "ListView Code Demo";
+            Padding = 10;
+
+            var listView = new ListView();
+            listView.ItemsSource = Constants.Items;
+            Content = listView;
+        }
+    }
 }
 
 

@@ -1,47 +1,38 @@
-﻿using System.Collections.Generic;
+﻿using BindingContextChanged.CustomControls;
 using Xamarin.Forms;
 
 namespace BindingContextChanged
 {
-	public class ListPageCS : ContentPage
-	{
-		public ListPageCS ()
-		{
-			var customCell = new DataTemplate (typeof(CustomCell));
-			customCell.SetBinding (CustomCell.NameProperty, "Name");
-			customCell.SetBinding (CustomCell.AgeProperty, "Age");
-			customCell.SetBinding (CustomCell.LocationProperty, "Location");
+    public class ListPageCS : ContentPage
+    {
+        public ListPageCS()
+        {
+            Title = "BindingContextChanged Code Demo";
+            Padding = 10;
 
-			var listView = new ListView {
-				ItemTemplate = customCell
-			};
+            var customCell = new DataTemplate(typeof(CustomCell));
+            customCell.SetBinding(CustomCell.NameProperty, "Name");
+            customCell.SetBinding(CustomCell.AgeProperty, "Age");
+            customCell.SetBinding(CustomCell.LocationProperty, "Location");
 
-			var button = new Button { Text = "Change Binding Context" };
-			button.Clicked += (sender, e) => {
-				var people = new List<Person> {
-					new Person ("Steve", 21, "USA"),
-					new Person ("John", 37, "USA"),
-					new Person ("Tom", 42, "UK"),
-					new Person ("Lucas", 29, "Germany"),
-					new Person ("Tariq", 39, "UK"),
-					new Person ("Jane", 30, "USA")
-				};
+            var listView = new ListView
+            {
+                ItemTemplate = customCell
+            };
 
-				listView.ItemsSource = people;
-			};
+            var button = new Button { Text = "Change Binding Context" };
+            button.Clicked += (sender, e) =>
+            {
+                listView.ItemsSource = Constants.People;
+            };
 
-			Content = new StackLayout {
-				Padding = new Thickness (0, 20, 0, 0),
-				Children = {
-					new Label {
-						Text = "Binding Context Changed Demo",
-						HorizontalOptions = LayoutOptions.Center,
-						FontAttributes = FontAttributes.Bold
-					},
-					listView,
-					button
-				}
-			};
-		}
-	}
+            Content = new StackLayout
+            {
+                Children = {
+                    listView,
+                    button
+                }
+            };
+        }
+    }
 }
