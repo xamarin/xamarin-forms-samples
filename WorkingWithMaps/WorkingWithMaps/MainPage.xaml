@@ -17,9 +17,13 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:MapPage}" />
                 <TextCell Text="Pins demo"
-                          Detail="Demonstrates the map control with map and pins created in code.."
+                          Detail="Demonstrates the map control with map and pins created in code."
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:PinPage}" />
+                <TextCell Text="Pin events demo"
+                          Detail="Demonstrates events fired by pin and info window clicks"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PinEvents}" />
                 <TextCell Text="Databinding pins demo"
                           Detail="Demonstrates the map control with map in XAML and databinding."
                           Command="{Binding NavigateCommand}"
