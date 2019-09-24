@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PlatformSpecifics"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="PlatformSpecifics.AndroidViewCellPage"
+             x:Name="this"
+             Title="ViewCell Context Actions">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="OneItemTemplate">
+            <ViewCell android:ViewCell.IsContextActionsLegacyModeEnabled="{Binding BindingContext.IsContextActionsLegacyModeEnabled, Source={x:Reference this}}">
+                <ViewCell.ContextActions>
+                    <MenuItem Text="{Binding Item1Text}" />
+                </ViewCell.ContextActions>
+                <Label Text="{Binding Text}" />
+            </ViewCell>
+        </DataTemplate>
+        <DataTemplate x:Key="TwoItemsTemplate">
+            <ViewCell android:ViewCell.IsContextActionsLegacyModeEnabled="{Binding BindingContext.IsContextActionsLegacyModeEnabled, Source={x:Reference this}}">
+                <ViewCell.ContextActions>
+                    <MenuItem Text="{Binding Item1Text}" />
+                    <MenuItem Text="{Binding Item2Text}" />
+                </ViewCell.ContextActions>
+                <Label Text="{Binding Text}" />
+            </ViewCell>
+        </DataTemplate>
+        <local:ItemDataTemplateSelector x:Key="ItemDataTemplateSelector"
+                                        OneItemTemplate="{StaticResource OneItemTemplate}"
+                                        TwoItemsTemplate="{StaticResource TwoItemsTemplate}" />
+    </ContentPage.Resources>
+    <StackLayout Margin="20">
+        <Button Text="Toggle Legacy Mode"
+                Command="{Binding ToggleLegacyMode}" />
+        <ListView ItemsSource="{Binding Items}"
+                  ItemTemplate="{StaticResource ItemDataTemplateSelector}" />
+    </StackLayout>
+</ContentPage>
