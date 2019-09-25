@@ -1,6 +1,19 @@
+---
+name: Xamarin.Forms - Sign In with Apple
+description: Implement Sign In with Apple for Xamarin.Forms apps on iOS, Android, and UWP
+page_type: sample
+languages:
+- csharp
+products:
+- xamarin
+extensions:
+    tags:
+    - ios13
+urlFragment: signinwithapple
+---
 # Apple Sign In for Xamarin.Forms
 
-This repository contains a sample Xamarin.Forms (iOS, Android, UWP) app which demonstrates how to implement Apple Sign In, as well as an Azure Functions project which is required for non-iOS13+ platforms, and a library project which contains the code for handling Apple Sign In's OpenID/OAuth calls.
+A sample Xamarin.Forms (iOS, Android, UWP) app which demonstrates how to implement Apple Sign In, as well as an Azure Functions project which is required for non-iOS13+ platforms, and a library project which contains the code for handling Apple Sign In's OpenID/OAuth calls.
 
  - XamarinFormsAppleSignIn - Sample Xamarin.Forms project using DependencyService pattern for calling Apple Sign In flows (native iOS 13+ sign in API's and OAuth/OpenID for the other platforms)
  - AppleSignInAzureFunction - Azure Functions for generating Apple Sign In Authorization URL and handling sign in callback from Apple
