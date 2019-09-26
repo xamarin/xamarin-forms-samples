@@ -5,10 +5,11 @@
              Title="Label Demo - XAML">
     <ScrollView>
         <StackLayout Padding="5,10">
-            <Label TextColor="#77d065" Text="This is a green label." />
             <Label Text="This is a default, non-customized label." />
+            <Label TextColor="#77d065" Text="This is a green label." />
             <Label FontSize="30" Text="This label has a font size of 30." />
-            <Label FontAttributes="Bold" Text="This is bold text." />
+            <Label FontAttributes="Bold" Text="This is bold text that uses character spacing." CharacterSpacing="5" />
+            <Label TextType="Html" Text="This is &lt;strong style=&quot;color:red&quot;&gt;HTML&lt;/strong&gt; text." />
             <Label TextDecorations="Underline" Text="This is underlined text." />
             <Label TextDecorations="Strikethrough" Text="This is text with strikethrough." />
             <Label TextDecorations="Underline, Strikethrough" Text="This is underlined text with strikethrough." />
