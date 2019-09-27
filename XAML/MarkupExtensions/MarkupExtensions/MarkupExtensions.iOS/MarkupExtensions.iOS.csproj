@@ -119,8 +119,6 @@
     <BundleResource Include="Resources\Icon-Small%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <BundleResource Include="Resources\ionicons.ttf" />
-    <BundleResource Include="Resources\user.png" />
-    <BundleResource Include="Resources\xaml.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace MarkupExtensions.Controls
+namespace DataBindingDemos.Controls
 {
     public class Separator : BoxView
     {

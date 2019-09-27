@@ -1,9 +1,9 @@
 ﻿using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
-namespace MarkupExtensions
+namespace DataBindingDemos
 {
-    public partial class RelativeSourceFindAncestorDemoPage : ContentPage
+    public partial class RelativeSourceFindAncestorPage : ContentPage
     {
         public PeopleViewModel People { get; } = new PeopleViewModel
         {
@@ -27,7 +27,7 @@ namespace MarkupExtensions
             }
         };
 
-        public RelativeSourceFindAncestorDemoPage()
+        public RelativeSourceFindAncestorPage()
         {
             InitializeComponent();
         }

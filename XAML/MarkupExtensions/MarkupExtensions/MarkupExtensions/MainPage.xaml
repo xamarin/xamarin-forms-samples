@@ -33,11 +33,6 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:NullDemoPage}" />
 
-                <TextCell Text="RelativeSource Demo"
-                          Detail="Specify the binding source as a relative relationship."
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:RelativeSourceDemoPage}" />
-
                 <TextCell Text="OnPlatform Demo"
                           Detail="Specify values per platform"
                           Command="{Binding NavigateCommand}"

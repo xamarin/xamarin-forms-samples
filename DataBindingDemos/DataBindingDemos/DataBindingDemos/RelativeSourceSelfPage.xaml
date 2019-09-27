@@ -1,15 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:MarkupExtensions.Controls"
-             x:Class="MarkupExtensions.RelativeSourceSelfDemoPage"
-             Title="Self"
-             IconImageSource="xaml.png"
+             xmlns:controls="clr-namespace:DataBindingDemos.Controls"
+             x:Class="DataBindingDemos.RelativeSourceSelfPage"
+             Title="RelativeSource Self Mode"
              BindingContext="{Binding Source={RelativeSource Self}, Path=Person}">
     <StackLayout Margin="10">
-        <Label Text="Self Binding"
-               FontAttributes="Bold"
-               HorizontalOptions="Center" />
         <!--
         In this example, the WidthRequest property is set to a fixed value, and the HeightRequest property binds to the WidthRequest property.
         -->

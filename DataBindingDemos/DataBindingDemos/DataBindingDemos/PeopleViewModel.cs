@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace MarkupExtensions
+namespace DataBindingDemos
 {
     public class PeopleViewModel
     {

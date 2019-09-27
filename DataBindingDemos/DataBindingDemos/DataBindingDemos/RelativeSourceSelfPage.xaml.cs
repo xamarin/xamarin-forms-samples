@@ -1,8 +1,8 @@
 ﻿using Xamarin.Forms;
 
-namespace MarkupExtensions
+namespace DataBindingDemos
 {
-    public partial class RelativeSourceSelfDemoPage : ContentPage
+    public partial class RelativeSourceSelfPage : ContentPage
     {
         public Person Person { get; } = new Person
         {
@@ -10,7 +10,7 @@ namespace MarkupExtensions
             Surname = "Doe"
         };
 
-        public RelativeSourceSelfDemoPage()
+        public RelativeSourceSelfPage()
         {
             InitializeComponent();
         }

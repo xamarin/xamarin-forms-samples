@@ -1,4 +1,4 @@
-﻿namespace MarkupExtensions
+﻿namespace DataBindingDemos
 {
     public class Person
     {

@@ -1,15 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MarkupExtensions"
-             x:Class="MarkupExtensions.RelativeSourceFindAncestorDemoPage"
-             Title="FindAncestor"
-             IconImageSource="xaml.png"
+             xmlns:local="clr-namespace:DataBindingDemos"
+             x:Class="DataBindingDemos.RelativeSourceFindAncestorPage"
+             Title="RelativeSource FindAncestor Mode"
              BindingContext="{Binding Source={RelativeSource Self}, Path=People}">
     <StackLayout Margin="10">
-        <Label Text="AncestorType Binding"
-               FontAttributes="Bold"
-               HorizontalOptions="Center" />
         <!--
         In this example, the page's BindingContext is bound to its own People property.
         -->
