@@ -88,15 +88,3 @@
                            ControlTemplate="{StaticResource CardViewControlTemplate}" />
     </StackLayout>
 </ContentPage>
-
-        <!--<ControlTemplate x:Key="ControlTemplate1">
-            <StackLayout>
-                <Label Text="{Binding Source={RelativeSource TemplatedParent}, Path=CustomText}" />
-            </StackLayout>
-        </ControlTemplate>-->
-
-
-        <!--<local:CustomControl CustomText="RelativeSource Binding 1"
-                             ControlTemplate="{StaticResource ControlTemplate1}" />
-        <local:CustomControl CustomText="RelativeSource Binding 2"
-                             ControlTemplate="{StaticResource ControlTemplate1}" />-->
