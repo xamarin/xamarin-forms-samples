@@ -23,6 +23,11 @@ namespace DataBindingDemos
                 {
                     Forename = "Xamarin",
                     Surname = "Monkey"
+                },
+                new Person
+                {
+                    Forename = "Count",
+                    Surname = "Dracula"
                 }
             }
         };
