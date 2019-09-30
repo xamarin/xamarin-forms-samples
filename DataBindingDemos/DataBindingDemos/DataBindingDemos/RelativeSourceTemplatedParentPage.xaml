@@ -48,11 +48,11 @@
                            FontSize="Large"
                            VerticalTextAlignment="Center"
                            HorizontalTextAlignment="Start" />
-                     <BoxView Grid.Row="1"
-                              Grid.ColumnSpan="2"
-                              BackgroundColor="{Binding BorderColor}"
-                              HeightRequest="2"
-                              HorizontalOptions="Fill" />
+                    <BoxView Grid.Row="1"
+                             Grid.ColumnSpan="2"
+                             BackgroundColor="{Binding BorderColor}"
+                             HeightRequest="2"
+                             HorizontalOptions="Fill" />
                     <Label Grid.Row="2"
                            Grid.ColumnSpan="2"
                            Text="{Binding CardDescription}"

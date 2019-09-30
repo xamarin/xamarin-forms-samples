@@ -8,7 +8,7 @@
     <StackLayout Margin="10">
         <!--
         In this example, the page's BindingContext is bound to its own DefaultViewModel property.
-        -->
+        -->        
         <ListView ItemsSource="{Binding Employees}">
             <ListView.ItemTemplate>
                 <DataTemplate>
