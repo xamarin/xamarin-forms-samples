@@ -4,10 +4,10 @@
              xmlns:local="clr-namespace:DataBindingDemos"
              x:Class="DataBindingDemos.RelativeSourceFindAncestorPage"
              Title="RelativeSource FindAncestor Mode"
-             BindingContext="{Binding Source={RelativeSource Self}, Path=People}">
+             BindingContext="{Binding Source={RelativeSource Self}, Path=DefaultViewModel}">
     <StackLayout Margin="10">
         <!--
-        In this example, the page's BindingContext is bound to its own People property.
+        In this example, the page's BindingContext is bound to its own DefaultViewModel property.
         -->
         <ListView ItemsSource="{Binding Employees}">
             <ListView.ItemTemplate>

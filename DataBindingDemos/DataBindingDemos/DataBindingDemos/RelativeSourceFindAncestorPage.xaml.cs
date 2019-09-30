@@ -5,7 +5,7 @@ namespace DataBindingDemos
 {
     public partial class RelativeSourceFindAncestorPage : ContentPage
     {
-        public PeopleViewModel People { get; } = new PeopleViewModel
+        public PeopleViewModel DefaultViewModel { get; } = new PeopleViewModel
         {
             Employees = new ObservableCollection<Person>
             {
