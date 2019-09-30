@@ -19,7 +19,7 @@
                             <!--
                             In this example, the button's Command property is bound to the DeleteEmployeeCommand in its parent's view model.
                             Therefore, the PeopleViewModel class does not need a reference to its parent, and the DataTemplate isn't dependent
-                            upon the parent view type.
+                            upon the parent type.
                             -->
                             <Button Text="Delete"
                                     Command="{Binding Source={RelativeSource AncestorType={x:Type local:PeopleViewModel}}, Path=DeleteEmployeeCommand}"
