@@ -11,6 +11,7 @@ extensions:
     - ios13
 urlFragment: signinwithapple
 ---
+
 # Apple Sign In for Xamarin.Forms
 
 A sample Xamarin.Forms (iOS, Android, UWP) app which demonstrates how to implement Apple Sign In, as well as an Azure Functions project which is required for non-iOS13+ platforms, and a library project which contains the code for handling Apple Sign In's OpenID/OAuth calls.
@@ -20,11 +21,11 @@ A sample Xamarin.Forms (iOS, Android, UWP) app which demonstrates how to impleme
  - Xamarin.AppleSignIn - Library project containing code to handle the OAuth/OpenID flow for Apple Sign In
 
 
-# Apple Developer Setup
+## Apple Developer Setup
 
 First of all you need to set up a few things in Apple's Developer portal, in the [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources/) section.
 
-## Setup Apple Sign In Domain
+### Setup Apple Sign In Domain
 
 First of all you will need to register your domain name and verify it with Apple in the [More](https://developer.apple.com/account/resources/services/list) section of the _Certificates, Identifiers & Profiles_ portal, by clicking **Configure**.
 
@@ -49,7 +50,7 @@ Once your `.well-known/apple-developer-domain-association.txt` file is uploaded,
 
 You will need to successfully complete this process before continuing to the next Setup section.
 
-## Setup your App ID
+### Setup your App ID
 
 In the [Identifiers](https://developer.apple.com/account/resources/identifiers/list) section, create a new identifier, and choose **App IDs**.  If you already have an App ID, choose to edit it instead.
 
@@ -60,7 +61,7 @@ Enable **Sign In with Apple**.  You will most likely want to use the **Enable as
 
 Save your App ID changes.
 
-## Create a Server ID
+### Create a Server ID
 
 Next, in the [Identifiers](https://developer.apple.com/account/resources/identifiers/list/serviceId) section, create a new identifier, and this time choose **Service IDs**
 
@@ -83,7 +84,7 @@ Finally, add one ore more **Return URLs**.  Any `redirect_uri` you use later mus
 Save your changes when your are finished.
 
 
-## Create a Key for your Services ID
+### Create a Key for your Services ID
 
 In the [Keys](https://developer.apple.com/account/resources/authkeys/list) section, create a new **Key**.
 
@@ -117,15 +118,15 @@ DHF5Svq0
 Keep this key in a safe place.  We will use it later as the `P8FileContents`.
 
 
-# Using Apple Sign In in your App
+## Using Apple Sign In in your App
 
-## iOS 13+
+### iOS 13+
 
 In iOS 13 and newer, Apple has native API's to help Authenticate users with Apple Sign In.
 
 The [AppleSignInServiceiOS.cs](XamarinFormsAppleSignIn/XamarinFormsAppleSignIn.iOS/Services/AppleSignInServiceiOS.cs) file demonstrates how to use the native API's.
 
-## iOS 13+ Setup
+### iOS 13+ Setup
 
 You will need to add a new entitlement to your app.  Make sure you add the following to your entitlements file:
 
@@ -144,12 +145,12 @@ You will need to add a new entitlement to your app.  Make sure you add the follo
 
 Note: For testing of your iOS app, ensure you are signing with a certificate and provisioning profile for the App ID you enabled Apple Sign In for.
 
-## Android, UWP, and older iOS versions
+### Android, UWP, and older iOS versions
 
 Apple also supports a version of OpenID/OpenAuth for other platforms.
 
 
-# Sample Apple Sign In Flow
+## Sample Apple Sign In Flow
 
 This sample offers an opinionated implementation for getting Apple Sign In to work in your Xamarin.Forms app.
 
@@ -172,11 +173,11 @@ When the user initiates authentication, the following steps happen:
 8. The Mobile app parses out the URI Fragment into an `AppleAccount` and validates the `nonce` claim received matches the `nonce` generated at the start of the flow.
 9. The mobile app is now authenticated!
 
-# Azure Functions / Server Configuration
+## Azure Functions / Server Configuration
 
 This sample uses Azure Functions, but you could just as easily use an ASP.NET Core Controller by copying the simple logic in each of the functions, or even some completely different web server for that matter (but you're on your own to implement those!).
 
-## Configuration
+### Configuration
 There are several App Settings you will need to configure for your Azure Functions:
 
 - `APPLE_SIGNIN_KEY_ID` - This is your `KeyId` from earlier.
@@ -186,11 +187,10 @@ There are several App Settings you will need to configure for your Azure Functio
 - `APPLE_SIGNIN_REDIRECT_URI` - The *Redirect URL* you setup when creating your *Services ID* in the *Apple Sign In* Configuration section.  To test, it might look something like: `http://local.test:7071/api/applesignin_callback`
 - `APPLE_SIGNIN_P8_KEY` - The text contents of your `.p8` file, with all the `\n` newlines removed so it's one long string
 
-# Security Notes
+## Security Notes
 
 First of all, it is very important that you should **never** store your P8 key inside of your application code.  Your application code is easy to download and disassemble.  Placing your private p8 key value inside your app should be considered about as safe as posting it publicly.
 
 It is also considered a bad practice to use a `WebView` to host the authentication flow, and to intercept URL Navigation events to obtain the authorization code.
 
 There is currently no secure way to handle the Apple Sign In flow on non iOS13+ devices/platforms without hosting some code on a server to handle the token exchange.  We also recommend hosting the authorization url generation code on the server so you can cache the state and validate it when Apple POST's a callback to your server.
-
