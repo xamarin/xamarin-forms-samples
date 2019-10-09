@@ -28,10 +28,14 @@
                           Detail="Demonstrates the map control with map in XAML and databinding."
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:PinItemsSourcePage}" />
-                <TextCell Text="Polygon/Polyline Demo"
-                          Detail="Demonstrates creating polygons and polylines on a map."
+                <TextCell Text="Polygon/Polyline XAML Demo"
+                          Detail="Demonstrates creating polygons and polylines in XAML."
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:PolygonsPage}" />
+                <TextCell Text="Polygon/Polyline Code Demo"
+                          Detail="Demonstrates creating polygons and polylines in code."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PolygonsPageCode}" />
                 <TextCell Text="Geocoder demo"
                           Detail="Demonstrates the geocoder class."
                           Command="{Binding NavigateCommand}"

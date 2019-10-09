@@ -25,8 +25,8 @@ namespace WorkingWithMaps
                 Label = "Example Pin 1",
                 Address = "Example custom details..."
             };
-            pin1.MarkerClicked += OnMarkerClicked;
-            pin1.InfoWindowClicked += OnInfoWindowClicked;
+            pin1.MarkerClicked += OnMarkerClickedAsync;
+            pin1.InfoWindowClicked += OnInfoWindowClickedAsync;
             map.Pins.Add(pin1);
 
             Pin pin2 = new Pin
@@ -36,8 +36,8 @@ namespace WorkingWithMaps
                 Label = "Example Pin 2",
                 Address = "Example custom details..."
             };
-            pin2.MarkerClicked += OnMarkerClicked;
-            pin2.InfoWindowClicked += OnInfoWindowClicked;
+            pin2.MarkerClicked += OnMarkerClickedAsync;
+            pin2.InfoWindowClicked += OnInfoWindowClickedAsync;
             map.Pins.Add(pin2);
 
             Content = new StackLayout
@@ -48,16 +48,16 @@ namespace WorkingWithMaps
             };
         }
 
-        private void OnMarkerClicked(object sender, PinClickedEventArgs e)
+        async void OnMarkerClickedAsync(object sender, PinClickedEventArgs e)
         {
             string pinName = ((Pin)sender).Label;
-            DisplayAlert("Pin Clicked", $"{pinName} was clicked.", "Ok");
+            await DisplayAlert("Pin Clicked", $"{pinName} was clicked.", "Ok");
         }
 
-        private void OnInfoWindowClicked(object sender, PinClickedEventArgs e)
+        async void OnInfoWindowClickedAsync(object sender, PinClickedEventArgs e)
         {
             string pinName = ((Pin)sender).Label;
-            DisplayAlert("Info Window Clicked", $"The info window was clicked for {pinName}.", "Ok");
+            await DisplayAlert("Info Window Clicked", $"The info window was clicked for {pinName}.", "Ok");
         }
     }
 }
