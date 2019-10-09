@@ -1,13 +1,7 @@
 ﻿using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
-/*
-Glyphish icons from
-	http://www.glyphish.com/
-under
-	http://creativecommons.org/licenses/by/3.0/us/
-support them by buying the full set / Retina versions
-*/
-
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace WorkingWithMaps
 {
     public class App : Application
