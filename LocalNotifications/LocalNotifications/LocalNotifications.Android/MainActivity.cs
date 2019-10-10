@@ -1,12 +1,7 @@
-﻿using System;
-
-using Android.App;
-using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Android.OS;
+﻿using Android.App;
 using Android.Content;
+using Android.Content.PM;
+using Android.OS;
 using Xamarin.Forms;
 
 namespace LocalNotifications.Droid
@@ -29,13 +24,11 @@ namespace LocalNotifications.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
 
-            // handle notification taps that launched the activity
             CreateNotificationFromIntent(Intent);
         }
 
         protected override void OnNewIntent(Intent intent)
         {
-            // handle notification taps if activity was already running
             CreateNotificationFromIntent(intent);
         }
 

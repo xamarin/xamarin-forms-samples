@@ -1,12 +1,6 @@
 ﻿using System;
-using Xamarin.Forms;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Foundation;
-using UIKit;
 using UserNotifications;
+using Xamarin.Forms;
 
 [assembly: Dependency(typeof(LocalNotifications.iOS.iOSNotificationManager))]
 namespace LocalNotifications.iOS
@@ -21,7 +15,7 @@ namespace LocalNotifications.iOS
 
         public void Initialize()
         {
-            // request the permission to use local notifications immediately
+            // request the permission to use local notifications
             UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert, (approved, err) =>
             {
                 hasNotificationsPermission = approved;
@@ -50,7 +44,6 @@ namespace LocalNotifications.iOS
             // Create a time-based trigger, interval is in seconds and must be greater than 0
             var trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(0.25, false);
 
-            // create and send notification request
             var request = UNNotificationRequest.FromIdentifier(messageId.ToString(), content, trigger);
             UNUserNotificationCenter.Current.AddNotificationRequest(request, (err) =>
             {

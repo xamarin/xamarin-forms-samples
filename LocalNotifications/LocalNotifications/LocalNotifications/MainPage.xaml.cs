@@ -29,8 +29,6 @@ namespace LocalNotifications
 
         private void ShowNotification(string title, string message)
         {
-            // this could be dispatched from other threads, since UI is affected we
-            // must make sure we're on the UI thread
             Device.BeginInvokeOnMainThread(() =>
             {
                 var msg = new Label()
