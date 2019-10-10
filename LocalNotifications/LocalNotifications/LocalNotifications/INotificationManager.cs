@@ -9,6 +9,9 @@ namespace LocalNotifications
         // allows UI to respond to incoming notifications
         event EventHandler NotificationReceived;
 
+        // allows platform implementations to perform startup tasks
+        void Initialize();
+
         // provides cross-platform way of scheduling a notification
         int ScheduleNotification(string title, string message);
 

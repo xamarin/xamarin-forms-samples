@@ -4,7 +4,10 @@ using Android.Content;
 using Android.Graphics;
 using Android.OS;
 using Android.Support.V4.App;
+using Xamarin.Forms;
+using AndroidApp = Android.App.Application;
 
+[assembly: Dependency(typeof(LocalNotifications.Droid.AndroidNotificationManager))]
 namespace LocalNotifications.Droid
 {
     public class AndroidNotificationManager : INotificationManager
@@ -23,21 +26,9 @@ namespace LocalNotifications.Droid
 
         public event EventHandler NotificationReceived;
 
-        void CreateNotificationChannel()
+        public void Initialize()
         {
-            manager = (NotificationManager)Application.Context.GetSystemService(Application.NotificationService);
-
-            if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
-            {
-                var channelNameJava = new Java.Lang.String(channelName);
-                var channel = new NotificationChannel(channelId, channelNameJava, NotificationImportance.Default)
-                {
-                    Description = channelDescription
-                };
-                manager.CreateNotificationChannel(channel);
-            }
-
-            channelInitialized = true;
+            CreateNotificationChannel();
         }
 
         public int ScheduleNotification(string title, string message)
@@ -49,17 +40,17 @@ namespace LocalNotifications.Droid
 
             messageId++;
 
-            Intent intent = new Intent(Application.Context, typeof(MainActivity));
+            Intent intent = new Intent(AndroidApp.Context, typeof(MainActivity));
             intent.PutExtra(TitleKey, title);
             intent.PutExtra(MessageKey, message);
 
-            PendingIntent pendingIntent = PendingIntent.GetActivity(Application.Context, pendingIntentId, intent, PendingIntentFlags.OneShot);
+            PendingIntent pendingIntent = PendingIntent.GetActivity(AndroidApp.Context, pendingIntentId, intent, PendingIntentFlags.OneShot);
 
-            NotificationCompat.Builder builder = new NotificationCompat.Builder(Application.Context, channelId)
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(AndroidApp.Context, channelId)
                 .SetContentIntent(pendingIntent)
                 .SetContentTitle(title)
                 .SetContentText(message)
-                .SetLargeIcon(BitmapFactory.DecodeResource(Application.Context.Resources, Resource.Drawable.xamagonBlue))
+                .SetLargeIcon(BitmapFactory.DecodeResource(AndroidApp.Context.Resources, Resource.Drawable.xamagonBlue))
                 .SetSmallIcon(Resource.Drawable.xamagonBlue)
                 .SetDefaults((int)NotificationDefaults.Sound | (int)NotificationDefaults.Vibrate);
 
@@ -77,6 +68,23 @@ namespace LocalNotifications.Droid
                 Message = message,
             };
             NotificationReceived?.Invoke(null, args);
+        }
+
+        void CreateNotificationChannel()
+        {
+            manager = (NotificationManager)AndroidApp.Context.GetSystemService(AndroidApp.NotificationService);
+
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
+            {
+                var channelNameJava = new Java.Lang.String(channelName);
+                var channel = new NotificationChannel(channelId, channelNameJava, NotificationImportance.Default)
+                {
+                    Description = channelDescription
+                };
+                manager.CreateNotificationChannel(channel);
+            }
+
+            channelInitialized = true;
         }
     }
 }

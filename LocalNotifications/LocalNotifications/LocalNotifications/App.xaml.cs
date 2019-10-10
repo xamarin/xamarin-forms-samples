@@ -9,10 +9,14 @@ namespace LocalNotifications
         // interface instance can be implemented natively on each platform
         public INotificationManager NotificationManager { get; private set; }
 
-        public App(INotificationManager manager)
+        public App()
         {
             InitializeComponent();
-            NotificationManager = manager;
+
+            // use the dependency service to get a platform-specific implementation and initialize it
+            NotificationManager = DependencyService.Get<INotificationManager>();
+            NotificationManager.Initialize();
+
             MainPage = new MainPage();
         }
 

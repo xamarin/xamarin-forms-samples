@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Android.Content;
+using Xamarin.Forms;
 
 namespace LocalNotifications.Droid
 {
@@ -18,8 +19,6 @@ namespace LocalNotifications.Droid
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        AndroidNotificationManager notificationManager;
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
@@ -28,17 +27,15 @@ namespace LocalNotifications.Droid
             base.OnCreate(savedInstanceState);
 
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            LoadApplication(new App());
 
-            // initialize application with a platform-specific scheduler
-            notificationManager = new AndroidNotificationManager();
-            var app = new App(notificationManager);
-            LoadApplication(app);
-
+            // handle notification taps that launched the activity
             CreateNotificationFromIntent(Intent);
         }
 
         protected override void OnNewIntent(Intent intent)
         {
+            // handle notification taps if activity was already running
             CreateNotificationFromIntent(intent);
         }
 
@@ -48,7 +45,8 @@ namespace LocalNotifications.Droid
             {
                 var title = intent.Extras.GetString(AndroidNotificationManager.TitleKey);
                 var message = intent.Extras.GetString(AndroidNotificationManager.MessageKey);
-                notificationManager.ReceiveNotification(title, message);
+
+                DependencyService.Get<INotificationManager>().ReceiveNotification(title, message);
             }
         }
     }

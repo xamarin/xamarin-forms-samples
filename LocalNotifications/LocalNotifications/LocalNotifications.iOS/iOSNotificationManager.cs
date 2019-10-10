@@ -1,4 +1,5 @@
 ﻿using System;
+using Xamarin.Forms;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +8,7 @@ using Foundation;
 using UIKit;
 using UserNotifications;
 
+[assembly: Dependency(typeof(LocalNotifications.iOS.iOSNotificationManager))]
 namespace LocalNotifications.iOS
 {
     public class iOSNotificationManager : INotificationManager
@@ -17,7 +19,7 @@ namespace LocalNotifications.iOS
 
         public event EventHandler NotificationReceived;
 
-        public iOSNotificationManager()
+        public void Initialize()
         {
             // request the permission to use local notifications immediately
             UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert, (approved, err) =>
