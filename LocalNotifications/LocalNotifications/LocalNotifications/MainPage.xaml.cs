@@ -11,7 +11,7 @@ namespace LocalNotifications
         {
             InitializeComponent();
 
-            notificationManager = ((App)App.Current).NotificationManager;
+            notificationManager = DependencyService.Get<INotificationManager>();
             notificationManager.NotificationReceived += (sender, eventArgs) =>
             {
                 var evtData = (NotificationEventArgs)eventArgs;
