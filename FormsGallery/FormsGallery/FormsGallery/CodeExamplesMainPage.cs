@@ -199,6 +199,14 @@ namespace FormsGallery
                     {
                         new TextCell
                         {
+                            Text = "CarouselView",
+                            Detail = "Present data in a carousel layout",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.CarouselViewDemoPage)
+                        },
+
+                        new TextCell
+                        {
                             Text = "CollectionView",
                             Detail = "Select from a list of data items",
                             Command = navigateCommand,

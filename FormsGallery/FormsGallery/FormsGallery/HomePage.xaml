@@ -142,6 +142,11 @@
 
                 <TableSection Title="Views that Display Collections">
 
+                    <TextCell Text="CarouselView"
+                              Detail="Present data in a carousel layout"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.CarouselViewDemoPage}" />
+
                     <TextCell Text="CollectionView"
                               Detail="Select from a list of data items"
                               Command="{Binding NavigateCommand}"
