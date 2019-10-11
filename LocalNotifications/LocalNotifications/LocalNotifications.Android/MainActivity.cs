@@ -32,7 +32,7 @@ namespace LocalNotifications.Droid
             CreateNotificationFromIntent(intent);
         }
 
-        private void CreateNotificationFromIntent(Intent intent)
+        void CreateNotificationFromIntent(Intent intent)
         {
             if(intent?.Extras != null)
             {

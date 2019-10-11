@@ -19,7 +19,7 @@ namespace LocalNotifications
             };
         }
 
-        private void OnScheduleClick(object sender, EventArgs e)
+        void OnScheduleClick(object sender, EventArgs e)
         {
             notificationNumber++;
             string title = $"Local Notification #{notificationNumber}";
@@ -27,7 +27,7 @@ namespace LocalNotifications
             notificationManager.ScheduleNotification(title, message);
         }
 
-        private void ShowNotification(string title, string message)
+        void ShowNotification(string title, string message)
         {
             Device.BeginInvokeOnMainThread(() =>
             {
