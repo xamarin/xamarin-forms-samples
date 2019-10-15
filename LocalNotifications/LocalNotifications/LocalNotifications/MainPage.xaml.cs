@@ -7,6 +7,7 @@ namespace LocalNotifications
     {
         INotificationManager notificationManager;
         int notificationNumber = 0;
+
         public MainPage()
         {
             InitializeComponent();
