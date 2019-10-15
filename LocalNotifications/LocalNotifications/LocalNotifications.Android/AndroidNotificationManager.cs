@@ -54,7 +54,7 @@ namespace LocalNotifications.Droid
                 .SetSmallIcon(Resource.Drawable.xamagonBlue)
                 .SetDefaults((int)NotificationDefaults.Sound | (int)NotificationDefaults.Vibrate);
 
-            var notification = builder.Build();
+            Notification notification = builder.Build();
             manager.Notify(messageId, notification);
 
             return messageId;

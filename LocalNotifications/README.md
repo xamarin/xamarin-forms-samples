@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Local notifications demo
-description: "Local notifications are alerts sent by local apps. This sample demonstrates how to implement local notifications in Xamarin.Forms."
+description: "Local notifications are alerts sent by installed apps. This sample demonstrates how to implement local notifications in Xamarin.Forms."
 page_type: sample
 languages:
 - csharp

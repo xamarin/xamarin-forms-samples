@@ -6,8 +6,6 @@ namespace LocalNotifications.iOS
 {
     public class iOSNotificationReceiver : UNUserNotificationCenterDelegate
     {
-        public iOSNotificationReceiver() { }
-
         public override void WillPresentNotification(UNUserNotificationCenter center, UNNotification notification, Action<UNNotificationPresentationOptions> completionHandler)
         {
             DependencyService.Get<INotificationManager>().ReceiveNotification(notification.Request.Content.Title, notification.Request.Content.Body);
