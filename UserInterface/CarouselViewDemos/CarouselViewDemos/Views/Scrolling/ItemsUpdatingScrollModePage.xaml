@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:CarouselViewDemos.Controls"
+             xmlns:viewmodels="clr-namespace:CarouselViewDemos.ViewModels"
+             x:Class="CarouselViewDemos.Views.ItemsUpdatingScrollModePage"
+             Title="Scroll mode when adding items">
+    <ContentPage.BindingContext>
+        <viewmodels:MonkeysViewModelWithDelay />
+    </ContentPage.BindingContext>
+
+    <StackLayout Margin="20">
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center">
+            <Label Text="UpdatingScrollMode: "
+                   VerticalTextAlignment="Center" />
+            <controls:EnumPicker x:Name="enumPicker"
+                                 EnumType="{x:Type ItemsUpdatingScrollMode}"
+                                 SelectedIndex="0"
+                                 SelectedIndexChanged="OnItemsUpdatingScrollModeChanged" />
+        </StackLayout>
+        <Label Text="{Binding Monkeys.Count, StringFormat='Number of items: {0}'}" />
+        <CarouselView x:Name="carouselView"
+                      ItemsSource="{Binding Monkeys}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HasShadow="True"
+                               BorderColor="DarkGray"
+                               CornerRadius="5"
+                               Margin="20"
+                               HeightRequest="300"
+                               HorizontalOptions="Center"
+                               VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Label Text="{Binding Name}" 
+                                        FontAttributes="Bold"
+                                        FontSize="Large"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center" />
+                                <Image Source="{Binding ImageUrl}" 
+                                        Aspect="AspectFill"
+                                        HeightRequest="150"
+                                        WidthRequest="150"
+                                        HorizontalOptions="Center" />
+                                <Label Text="{Binding Location}"
+                                        HorizontalOptions="Center" />
+                                <Label Text="{Binding Details}"
+                                        FontAttributes="Italic"
+                                        HorizontalOptions="Center"
+                                        MaxLines="5"
+                                        LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </StackLayout>
+</ContentPage>
