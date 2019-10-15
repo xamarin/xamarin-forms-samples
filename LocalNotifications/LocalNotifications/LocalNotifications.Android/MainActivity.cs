@@ -34,7 +34,7 @@ namespace LocalNotifications.Droid
 
         void CreateNotificationFromIntent(Intent intent)
         {
-            if(intent?.Extras != null)
+            if (intent?.Extras != null)
             {
                 string title = intent.Extras.GetString(AndroidNotificationManager.TitleKey);
                 string message = intent.Extras.GetString(AndroidNotificationManager.MessageKey);

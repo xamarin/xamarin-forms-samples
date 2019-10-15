@@ -33,7 +33,7 @@ namespace LocalNotifications.Droid
 
         public int ScheduleNotification(string title, string message)
         {
-            if(!channelInitialized)
+            if (!channelInitialized)
             {
                 CreateNotificationChannel();
             }
