@@ -40,9 +40,12 @@
             </TableSection>
             
             <TableSection Title="Visual">
-                <TextCell Text="Custom Visual"
+                <TextCell Text="Custom Visual Renderer"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:CustomVisualPage}" />
+                <TextCell Text="Custom Effect"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CustomEffectPage}" />
             </TableSection>
         </TableRoot>
     </TableView>

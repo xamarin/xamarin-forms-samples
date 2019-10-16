@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VisualDemos.CustomEffectPage"
+             xmlns:local="clr-namespace:VisualDemos"
+             Title="Material Effect Demo"
+             Padding="10">
+    <StackLayout>
+        <Label Text="This page demonstrates a Material Visual button with an effect applied." />
+        <Button Text="Material Button"
+                Visual="Material" />
+        <Button Text="Material Button With Effect"
+                Visual="Material">
+            <Button.Effects>
+                <local:CustomEffect />
+            </Button.Effects>
+        </Button>
+    </StackLayout>
+</ContentPage>
