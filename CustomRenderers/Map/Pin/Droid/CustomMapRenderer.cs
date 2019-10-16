@@ -34,7 +34,6 @@ namespace CustomRenderer.Droid
             {
                 var formsMap = (CustomMap)e.NewElement;
                 customPins = formsMap.CustomPins;
-                Control.GetMapAsync(this);
             }
         }
 
