@@ -29,7 +29,6 @@ namespace MapOverlay.Droid
             {
                 var formsMap = (CustomMap)e.NewElement;
                 circle = formsMap.Circle;
-                Control.GetMapAsync(this);
             }
         }
 

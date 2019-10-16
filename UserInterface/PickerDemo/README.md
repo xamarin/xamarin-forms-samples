@@ -17,4 +17,4 @@ This sample demonstrates how to use a `Picker` to select a text item from a list
 
 For more information about this sample see [Adding Data to a Picker's Items Collection](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/picker/populating-items/).
 
-![Picker application screenshot](Screenshots/Nexus 5 (Lollipop) Screenshot 1.png "Picker application screenshot")
+![Picker application screenshot](Screenshots/android01.png "Picker application screenshot")
