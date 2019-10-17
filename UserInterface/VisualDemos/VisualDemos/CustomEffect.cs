@@ -3,9 +3,9 @@ using Xamarin.Forms;
 
 namespace VisualDemos
 {
-    public class CustomEffect : RoutingEffect
+    public class RoundEffect : RoutingEffect
     {
-        public CustomEffect() : base($"Xamarin.{nameof(CustomEffect)}")
+        public RoundEffect() : base($"Xamarin.{nameof(RoundEffect)}")
         {
         }
     }

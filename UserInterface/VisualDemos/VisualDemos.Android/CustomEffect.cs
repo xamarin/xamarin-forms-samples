@@ -1,19 +1,25 @@
-﻿using System;
+﻿using Android.Graphics;
+using Android.Views;
+using System;
+using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 [assembly: ResolutionGroupName("Xamarin")]
-[assembly: ExportEffect(typeof(VisualDemos.Droid.CustomEffect), nameof(VisualDemos.Droid.CustomEffect))]
+[assembly: ExportEffect(typeof(VisualDemos.Droid.RoundEffect), nameof(VisualDemos.Droid.RoundEffect))]
 namespace VisualDemos.Droid
 {
-    public class CustomEffect : PlatformEffect
+    public class RoundEffect : PlatformEffect
     {
-        Random rand = new Random();
+        private ViewOutlineProvider originalProvider;
+
         protected override void OnAttached()
         {
             try
             {
-                Control.Rotation = 50;
+                originalProvider = Control.OutlineProvider;
+                Control.OutlineProvider = new CornerRadiusOutlineProvider(Element);
+                Control.ClipToOutline = true;
             }
             catch (Exception ex)
             {
@@ -23,7 +29,28 @@ namespace VisualDemos.Droid
 
         protected override void OnDetached()
         {
+            Control.OutlineProvider = originalProvider;
+            Control.ClipToOutline = false;
+        }
 
+        class CornerRadiusOutlineProvider : ViewOutlineProvider
+        {
+            Element element;
+
+            public CornerRadiusOutlineProvider(Element formsElement)
+            {
+                element = formsElement;
+            }
+
+            public override void GetOutline(Android.Views.View view, Outline outline)
+            {
+                double width = (double)element.GetValue(VisualElement.WidthProperty) * view.Resources.DisplayMetrics.Density;
+                double height = (double)element.GetValue(VisualElement.HeightProperty) * view.Resources.DisplayMetrics.Density;
+                float minDimension = (float)Math.Min(height, width);// * view.Resources.DisplayMetrics.Density;
+                float radius = minDimension / 2f;
+                Rect rect = new Rect(0, 0, (int)width, (int)height);
+                outline.SetRoundRect(rect, radius);
+            }
         }
     }
 }
