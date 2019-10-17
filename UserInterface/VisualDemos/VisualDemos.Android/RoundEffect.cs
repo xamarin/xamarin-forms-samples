@@ -44,9 +44,10 @@ namespace VisualDemos.Droid
 
             public override void GetOutline(Android.Views.View view, Outline outline)
             {
-                double width = (double)element.GetValue(VisualElement.WidthProperty) * view.Resources.DisplayMetrics.Density;
-                double height = (double)element.GetValue(VisualElement.HeightProperty) * view.Resources.DisplayMetrics.Density;
-                float minDimension = (float)Math.Min(height, width);// * view.Resources.DisplayMetrics.Density;
+                float scale = view.Resources.DisplayMetrics.Density;
+                double width = (double)element.GetValue(VisualElement.WidthProperty) * scale;
+                double height = (double)element.GetValue(VisualElement.HeightProperty) * scale;
+                float minDimension = (float)Math.Min(height, width);
                 float radius = minDimension / 2f;
                 Rect rect = new Rect(0, 0, (int)width, (int)height);
                 outline.SetRoundRect(rect, radius);
