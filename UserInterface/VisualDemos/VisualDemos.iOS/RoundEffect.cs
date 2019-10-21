@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Foundation;
-using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
@@ -14,11 +8,11 @@ namespace VisualDemos.iOS
 {
     public class RoundEffect : PlatformEffect
     {
-        private nfloat originalRadius;
+        nfloat originalRadius;
 
         protected override void OnAttached()
         {
-            if(Control != null)
+            if (Control != null)
             {
                 originalRadius = Control.Layer.CornerRadius;
                 Control.ClipsToBounds = true;
@@ -28,7 +22,7 @@ namespace VisualDemos.iOS
 
         protected override void OnDetached()
         {
-            if(Control != null)
+            if (Control != null)
             {
                 Control.Layer.CornerRadius = originalRadius;
                 Control.ClipsToBounds = false;

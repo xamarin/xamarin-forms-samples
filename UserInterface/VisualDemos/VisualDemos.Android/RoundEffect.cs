@@ -1,7 +1,6 @@
 ﻿using Android.Graphics;
 using Android.Views;
 using System;
-using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
@@ -11,7 +10,7 @@ namespace VisualDemos.Droid
 {
     public class RoundEffect : PlatformEffect
     {
-        private ViewOutlineProvider originalProvider;
+        ViewOutlineProvider originalProvider;
 
         protected override void OnAttached()
         {
