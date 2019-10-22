@@ -14,7 +14,7 @@ namespace CarouselViewDemos.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-            Forms.SetFlags("CollectionView_Experimental");
+            Forms.SetFlags("CarouselView_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
