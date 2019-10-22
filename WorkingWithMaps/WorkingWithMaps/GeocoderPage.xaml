@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkingWithMaps.GeocoderPage"
+             Title="Geocoder demo">
+	<StackLayout Margin="10">
+		<Label Text="Geocode:" />
+		<Entry x:Name="geocodeEntry" Text="Pacific Ave, San Francisco, California" />
+		<Button Text="Geocode" Clicked="OnGeocodeButtonClicked" />
+		<Label x:Name="geocodedOutputLabel" />
+		<Label Text="Reverse geocode:" />
+		<Entry x:Name="reverseGeocodeEntry" Text="37.8044866, -122.4324132" />
+		<Button Text="Reverse Geocode" Clicked="OnReverseGeocodeButtonClicked" />
+		<Label x:Name="reverseGeocodedOutputLabel" />
+	</StackLayout>	
+</ContentPage>
