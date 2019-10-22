@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:CarouselViewDemos.ViewModels"
+             x:Class="CarouselViewDemos.Views.HorizontalLayoutMultipleItemsPage"
+             Title="Horizontal layout (multiple items)">
+    <ContentPage.BindingContext>
+        <viewmodels:MonkeysViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout Margin="10">
+        <Label Text="Monkeys"
+               FontAttributes="Bold"
+               FontSize="Large" />
+        <CarouselView ItemsSource="{Binding Monkeys}"
+                      NumberOfSideItems="1">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HasShadow="True"
+                               BorderColor="DarkGray"
+                               CornerRadius="5"
+                               Margin="10">
+                            <Image Source="{Binding ImageUrl}" 
+                                   Aspect="AspectFill"
+                                   HeightRequest="100"
+                                   WidthRequest="100"/>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </StackLayout>
+</ContentPage>

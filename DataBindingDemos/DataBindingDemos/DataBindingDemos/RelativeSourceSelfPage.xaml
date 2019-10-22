@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:DataBindingDemos.Controls"
+             x:Class="DataBindingDemos.RelativeSourceSelfPage"
+             Title="RelativeSource Self Mode"
+             BindingContext="{Binding Source={RelativeSource Self}, Path=Person}">
+    <StackLayout Margin="10">
+        <!--
+        In this example, the WidthRequest property is set to a fixed value, and the HeightRequest property binds to the WidthRequest property.
+        -->
+        <BoxView Color="Red"
+                 WidthRequest="200"
+                 HeightRequest="{Binding Source={RelativeSource Self}, Path=WidthRequest}"
+                 HorizontalOptions="Center" />
+        <controls:Separator />
+        <!--
+        In this example, the page's BindingContext is bound to its own Person property.
+        -->        
+        <Label Text="{Binding Fullname, StringFormat='Name: {0}'}"
+               HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>

@@ -9,7 +9,8 @@
     <local:CodeExamplesMainPage Title="C# Pages">
         <local:CodeExamplesMainPage.IconImageSource>
             <OnPlatform x:TypeArguments="ImageSource">
-                <On Platform="iOS, Android" Value="csharp.png" />
+                <On Platform="iOS, Android"
+                    Value="csharp.png" />
             </OnPlatform>
         </local:CodeExamplesMainPage.IconImageSource>
     </local:CodeExamplesMainPage>
@@ -17,7 +18,8 @@
     <ContentPage Title="XAML Pages">
         <local:CodeExamplesMainPage.IconImageSource>
             <OnPlatform x:TypeArguments="ImageSource">
-                <On Platform="iOS, Android" Value="xaml.png" />
+                <On Platform="iOS, Android"
+                    Value="xaml.png" />
             </OnPlatform>
         </local:CodeExamplesMainPage.IconImageSource>
 
@@ -50,7 +52,7 @@
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.OpenGLViewDemoPage}" />
 
-                    <TextCell Text = "Map"
+                    <TextCell Text="Map"
                               Detail="Display a map"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.MapDemoPage}" />
@@ -68,6 +70,11 @@
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.ImageButtonDemoPage}" />
 
+                    <TextCell Text="RefreshView"
+                              Detail="Initiate a command"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.RefreshViewDemoPage}" />
+
                     <TextCell Text="SearchBar"
                               Detail="Initiate a search"
                               Command="{Binding NavigateCommand}"
@@ -75,12 +82,12 @@
                 </TableSection>
 
                 <TableSection Title="Views for Setting Values">
-                
+
                     <TextCell Text="CheckBox (bool)"
                               Detail="Select a Boolean value"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.CheckBoxPage}" />
-                    
+
                     <TextCell Text="Slider (double)"
                               Detail="Select a number from a continuous range"
                               Command="{Binding NavigateCommand}"
@@ -134,6 +141,11 @@
                 </TableSection>
 
                 <TableSection Title="Views that Display Collections">
+
+                    <TextCell Text="CarouselView"
+                              Detail="Present data in a carousel layout"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.CarouselViewDemoPage}" />
 
                     <TextCell Text="CollectionView"
                               Detail="Select from a list of data items"

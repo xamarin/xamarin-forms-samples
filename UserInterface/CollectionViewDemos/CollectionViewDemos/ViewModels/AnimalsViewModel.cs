@@ -1,20 +1,37 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using CollectionViewDemos.Models;
 using Xamarin.Forms;
 
 namespace CollectionViewDemos.ViewModels
 {
-    public class AnimalsViewModel
+    public class AnimalsViewModel : INotifyPropertyChanged
     {
         int itemCount = 10;
         const int MaximumItemCount = 50;
         const int PageSize = 10;
+        const int RefreshDuration = 2;
+        bool isRefreshing;
 
         public ObservableCollection<Animal> Animals { get; private set; } = new ObservableCollection<Animal>();
 
+        public bool IsRefreshing
+        {
+            get { return isRefreshing; }
+            set
+            {
+                isRefreshing = value;
+                OnPropertyChanged();
+            }
+        }
+
         public ICommand LoadMoreDataCommand => new Command(GetNextPageOfData);
+        public ICommand RefreshCommand => new Command(async () => await RefreshDataAsync());
 
         public AnimalsViewModel()
         {
@@ -45,6 +62,14 @@ namespace CollectionViewDemos.ViewModels
             }
 
             Debug.WriteLine("Count: " + itemCount);
+        }
+
+        async Task RefreshDataAsync()
+        {
+            IsRefreshing = true;
+            await Task.Delay(TimeSpan.FromSeconds(RefreshDuration));
+            GetNextPageOfData();
+            IsRefreshing = false;
         }
 
         void AddBears()
@@ -416,5 +441,16 @@ namespace CollectionViewDemos.ViewModels
                 ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Cuc.Phuong.Primate.Rehab.center.jpg/320px-Cuc.Phuong.Primate.Rehab.center.jpg"
             });
         }
+
+        #region INotifyPropertyChanged
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
     }
 }

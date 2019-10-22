@@ -93,7 +93,10 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
+    <PackageReference Include="Xamarin.Essentials">
+      <Version>1.3.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -130,7 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GameOfLife\GameOfLife.csproj">
-      <Project>{052834d5-5bfa-4c22-b748-d89ef828f13a}</Project>
+      <Project>{9D2619EE-235A-4125-8CEC-97E364284B90}</Project>
       <Name>GameOfLife</Name>
     </ProjectReference>
   </ItemGroup>

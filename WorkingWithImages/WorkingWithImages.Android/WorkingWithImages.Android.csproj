@@ -39,7 +39,7 @@
     <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />

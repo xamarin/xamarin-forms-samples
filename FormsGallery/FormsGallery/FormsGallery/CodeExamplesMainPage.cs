@@ -8,7 +8,7 @@ namespace FormsGallery
         public CodeExamplesMainPage()
         {
             // Define command for the items in the TableView.
-            Command<Type> navigateCommand = 
+            Command<Type> navigateCommand =
                 new Command<Type>(async (Type pageType) =>
                 {
                     Page page = (Page)Activator.CreateInstance(pageType);
@@ -69,7 +69,7 @@ namespace FormsGallery
                             Command = navigateCommand,
                             CommandParameter = typeof(CodeExamples.MapDemoPage)
                         }
-                    }, 
+                    },
 
                     new TableSection("Views that Initiate Commands")
                     {
@@ -87,6 +87,14 @@ namespace FormsGallery
                             Detail = "Initiate a command",
                             Command = navigateCommand,
                             CommandParameter = typeof(CodeExamples.ImageButtonDemoPage)
+                        },
+
+                        new TextCell
+                        {
+                            Text = "RefreshView",
+                            Detail = "Initiate a command",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.RefreshViewDemoPage)
                         },
 
                         new TextCell
@@ -191,6 +199,14 @@ namespace FormsGallery
                     {
                         new TextCell
                         {
+                            Text = "CarouselView",
+                            Detail = "Present data in a carousel layout",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.CarouselViewDemoPage)
+                        },
+
+                        new TextCell
+                        {
                             Text = "CollectionView",
                             Detail = "Select from a list of data items",
                             Command = navigateCommand,
@@ -218,7 +234,7 @@ namespace FormsGallery
                             Text = "TableView for a menu",
                             Detail = "Show a table suitable for a menu",
                             Command = navigateCommand,
-                            CommandParameter = typeof(CodeExamples.TableViewMenuDemoPage) 
+                            CommandParameter = typeof(CodeExamples.TableViewMenuDemoPage)
                         },
 
                         new TextCell
@@ -336,14 +352,14 @@ namespace FormsGallery
                             Text = "ContentPage",
                             Detail = "Present a normal page",
                             Command = navigateCommand,
-                            CommandParameter = typeof(CodeExamples.ContentPageDemoPage) 
+                            CommandParameter = typeof(CodeExamples.ContentPageDemoPage)
                         },
                         new TextCell
                         {
                             Text = "NavigationPage",
                             Detail = "Present a navigatable page",
                             Command = navigateCommand,
-                            CommandParameter = typeof(CodeExamples.NavigationPageDemoPage) 
+                            CommandParameter = typeof(CodeExamples.NavigationPageDemoPage)
                         },
                         new TextCell
                         {

@@ -109,7 +109,7 @@
     <PackageReference Include="SQLitePCLRaw.bundle_green" Version="1.1.0" />
     <PackageReference Include="SQLitePCLRaw.core" Version="1.1.0" />
     <PackageReference Include="SQLitePCLRaw.provider.sqlite3.ios_unified" Version="1.1.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLitePCL.batteries">

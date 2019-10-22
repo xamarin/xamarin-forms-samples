@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:CarouselViewDemos.ViewModels"
+             x:Class="CarouselViewDemos.Views.CurrentItemAndPositionBindingsPage"
+             Title="Current item and position bindings">
+    <ContentPage.BindingContext>
+        <viewmodels:MonkeysViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout Margin="10">
+        <Label Text="{Binding PreviousMonkey.Name, StringFormat='Previous item: {0}', FallbackValue='Previous item:'}" />
+        <Label Text="{Binding CurrentMonkey.Name, StringFormat='Current item: {0}', FallbackValue='Current item:'}" />
+        <Label Text="{Binding PreviousPosition, StringFormat='Previous position: {0}'}" />
+        <Label Text="{Binding CurrentPosition, StringFormat='Current position: {0}'}" />
+        <CarouselView ItemsSource="{Binding Monkeys}"
+                      CurrentItemChangedCommand="{Binding ItemChangedCommand}"
+                      CurrentItemChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=CurrentItem}"
+                      PositionChangedCommand="{Binding PositionChangedCommand}"
+                      PositionChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=Position}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HasShadow="True"
+                               BorderColor="DarkGray"
+                               CornerRadius="5"
+                               Margin="20"
+                               HeightRequest="300"
+                               HorizontalOptions="Center"
+                               VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Label Text="{Binding Name}" 
+                                       FontAttributes="Bold"
+                                       FontSize="Large"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                                <Image Source="{Binding ImageUrl}" 
+                                       Aspect="AspectFill"
+                                       HeightRequest="150"
+                                       WidthRequest="150"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Location}"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Details}"
+                                       FontAttributes="Italic"
+                                       HorizontalOptions="Center"
+                                       MaxLines="5"
+                                       LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </StackLayout>
+</ContentPage>

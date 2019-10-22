@@ -13,6 +13,6 @@
     <ProjectReference Include="..\MyCompany.Controls\MyCompany.Controls.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
   </ItemGroup>
 </Project>

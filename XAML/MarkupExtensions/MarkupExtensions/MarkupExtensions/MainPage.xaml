@@ -34,17 +34,17 @@
                           CommandParameter="{x:Type local:NullDemoPage}" />
 
                 <TextCell Text="OnPlatform Demo"
-                          Detail="Specifying values per platform"
+                          Detail="Specify values per platform"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:OnPlatformDemoPage}" />
 
                 <TextCell Text="OnIdiom Demo"
-                          Detail="Specifying values per idiom"
+                          Detail="Specify values per idiom"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:OnIdiomDemoPage}" />
                 
                 <TextCell Text="FontImage Demo"
-                          Detail="Specifying font glyphs"
+                          Detail="Specify font glyphs"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:FontImageDemoPage}" />
 

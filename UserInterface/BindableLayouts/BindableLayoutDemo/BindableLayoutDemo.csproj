@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />

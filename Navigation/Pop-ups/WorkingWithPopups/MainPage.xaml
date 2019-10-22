@@ -6,5 +6,6 @@
 	<TabbedPage.Children>
 		<local:AlertPage Title="Alerts" IconImageSource="csharp.png" />
 		<local:ActionSheetPage Title="ActionSheets" IconImageSource="csharp.png" />
+        <local:PromptPage Title="Prompts" IconImageSource="csharp.png" />
 	</TabbedPage.Children>
 </TabbedPage>

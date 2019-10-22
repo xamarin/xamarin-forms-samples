@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xaminals.Data;
 using Xaminals.Views;
@@ -15,7 +16,7 @@ namespace Xaminals
         Dictionary<string, Type> routes = new Dictionary<string, Type>();
         public Dictionary<string, Type> Routes { get { return routes; } }
 
-        public ICommand HelpCommand => new Command<string>((url) => Device.OpenUri(new Uri(url)));
+        public ICommand HelpCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
         public ICommand RandomPageCommand => new Command(async () => await NavigateToRandomPageAsync());
 
         public AppShell()
