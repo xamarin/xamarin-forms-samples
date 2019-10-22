@@ -1,6 +1,5 @@
 ﻿using Foundation;
 using UIKit;
-using Xamarin.Forms;
 
 namespace CollectionViewDemos.iOS
 {
@@ -19,7 +18,6 @@ namespace CollectionViewDemos.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
