@@ -24,7 +24,10 @@ namespace VisualDemos.iOS
         {
             if (Control != null)
             {
-                Control.Layer.CornerRadius = originalRadius;
+                if(Control.Layer != null)
+                {
+                    Control.Layer.CornerRadius = originalRadius;
+                }
                 Control.ClipsToBounds = false;
             }
         }
