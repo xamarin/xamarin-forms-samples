@@ -11,7 +11,7 @@ urlFragment: effects-roundeffect
 
 # Round Effect
 
-This sample demonstrates how to create an effect that renders any control deriving from VisualElement as a circle. This can be used to create circle images, circle buttons or similar controls.
+This sample demonstrates how to create an effect that renders any control deriving from VisualElement as a circle. The RoundEffect can be used to create circle images, circle buttons or similar controls.
 
 For more information about the sample see [Xamarin.Forms RoundEffect Example](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/effects/example-roundeffect).
 
