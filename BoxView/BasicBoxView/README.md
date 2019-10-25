@@ -8,7 +8,10 @@ products:
 - xamarin
 urlFragment: boxview-basicboxview
 ---
+
 # Basic BoxView
+
+## Overview
 
 Just a `BoxView` on the page, demonstrating the `Color`, `WidthRequest`, and `HeightRequest` properties.
 
