@@ -9,26 +9,32 @@ namespace RoundEffectDemo.iOS
     public class RoundEffect : PlatformEffect
     {
         nfloat originalRadius;
+        UIKit.UIView effectTarget;
 
         protected override void OnAttached()
         {
-            if (Control != null)
+            try
             {
-                originalRadius = Control.Layer.CornerRadius;
-                Control.ClipsToBounds = true;
-                Control.Layer.CornerRadius = CalculateRadius();
+                effectTarget = Control ?? Container;
+                originalRadius = effectTarget.Layer.CornerRadius;
+                effectTarget.ClipsToBounds = true;
+                effectTarget.Layer.CornerRadius = CalculateRadius();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Failed to set corner radius: {ex.Message}");
             }
         }
 
         protected override void OnDetached()
         {
-            if (Control != null)
+            if(effectTarget != null)
             {
-                if (Control.Layer != null)
+                effectTarget.ClipsToBounds = false;
+                if(effectTarget.Layer != null)
                 {
-                    Control.Layer.CornerRadius = originalRadius;
+                    effectTarget.Layer.CornerRadius = originalRadius;
                 }
-                Control.ClipsToBounds = false;
             }
         }
 

@@ -5,11 +5,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:RoundEffectDemo"
              mc:Ignorable="d"
-             x:Class="RoundEffectDemo.MainPage">
+             x:Class="RoundEffectDemo.MainPage"
+             Padding="10,40,10,10">
 
     <StackLayout>
-        <Label Text="Some common Xamarin.Forms controls with the RoundEffect applied:" />
+        <Label Text="Some common Xamarin.Forms controls with the RoundEffect applied:"
+               HorizontalOptions="Start"/>
         <Button Text="Button"
+                BackgroundColor="Orange"
+                TextColor="White"
                 HorizontalOptions="Center"
                 HeightRequest="100"
                 WidthRequest="100">

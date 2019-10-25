@@ -11,25 +11,30 @@ namespace RoundEffectDemo.Droid
     public class RoundEffect : PlatformEffect
     {
         ViewOutlineProvider originalProvider;
+        Android.Views.View effectTarget;
 
         protected override void OnAttached()
         {
             try
             {
-                originalProvider = Control.OutlineProvider;
-                Control.OutlineProvider = new CornerRadiusOutlineProvider(Element);
-                Control.ClipToOutline = true;
+                effectTarget = Control ?? Container;
+                originalProvider = effectTarget.OutlineProvider;
+                effectTarget.OutlineProvider = new CornerRadiusOutlineProvider(Element);
+                effectTarget.ClipToOutline = true;
             }
             catch (Exception ex)
             {
-                Console.Write($"Failed to set property: {ex.Message}");
+                Console.WriteLine($"Failed to set corner radius: {ex.Message}");
             }
         }
 
         protected override void OnDetached()
         {
-            Control.OutlineProvider = originalProvider;
-            Control.ClipToOutline = false;
+            if(effectTarget != null)
+            {
+                effectTarget.OutlineProvider = originalProvider;
+                effectTarget.ClipToOutline = false;
+            }
         }
 
         class CornerRadiusOutlineProvider : ViewOutlineProvider
