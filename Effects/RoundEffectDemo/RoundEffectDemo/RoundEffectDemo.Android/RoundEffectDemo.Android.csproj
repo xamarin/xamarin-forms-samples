@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -54,7 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
-    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.3" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -88,7 +86,7 @@
   <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\RoundEffectDemo\RoundEffectDemo.csproj">
-      <Project>{944CCD03-35C8-414C-8A3A-C3E12823BD02}</Project>
+      <Project>{B33EC30C-4276-4A10-B851-A531FA9E0ECC}</Project>
       <Name>RoundEffectDemo</Name>
     </ProjectReference>
   </ItemGroup>

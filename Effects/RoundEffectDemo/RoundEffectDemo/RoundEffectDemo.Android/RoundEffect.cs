@@ -30,7 +30,7 @@ namespace RoundEffectDemo.Droid
 
         protected override void OnDetached()
         {
-            if(effectTarget != null)
+            if (effectTarget != null)
             {
                 effectTarget.OutlineProvider = originalProvider;
                 effectTarget.ClipToOutline = false;

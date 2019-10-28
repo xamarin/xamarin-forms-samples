@@ -28,10 +28,10 @@ namespace RoundEffectDemo.iOS
 
         protected override void OnDetached()
         {
-            if(effectTarget != null)
+            if (effectTarget != null)
             {
                 effectTarget.ClipsToBounds = false;
-                if(effectTarget.Layer != null)
+                if (effectTarget.Layer != null)
                 {
                     effectTarget.Layer.CornerRadius = originalRadius;
                 }
