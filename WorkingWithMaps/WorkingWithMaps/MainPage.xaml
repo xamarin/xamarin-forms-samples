@@ -11,10 +11,18 @@
     <TableView Intent="Menu">
         <TableRoot>
             <TableSection>
-                <TextCell Text="Map"
+                <TextCell Text="Map types"
                           Detail="Display a map with zooming and different map types."
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:MapPage}" />
+                          CommandParameter="{x:Type local:MapTypesPage}" />
+                <TextCell Text="Map region"
+                          Detail="Display a map at a specific location."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MapRegionPage}" />
+                <TextCell Text="Map"
+                          Detail="Display a map with other properties set."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MapPropertiesPage}" />
                 <TextCell Text="Pins"
                           Detail="Add a pin to a map in XAML."
                           Command="{Binding NavigateCommand}"
@@ -38,8 +46,8 @@
                 <TextCell Text="Geocoder demo"
                           Detail="Geocode and reverse geocode an address."
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:GeocoderPage}" />
-                <TextCell Text="Native map app demo"
+                          CommandParameter="{x:Type local:GeocoderPage}" />                
+                <TextCell Text="Native map app"
                           Detail="Launch the platform's native map app."
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:MapAppPage}" />

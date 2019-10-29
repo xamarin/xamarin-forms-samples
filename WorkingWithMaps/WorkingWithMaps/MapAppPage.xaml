@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkingWithMaps.MapAppPage"
+             Title="Native map app demo">
+    <StackLayout Margin="10">
+        <Label Text="These buttons launch the built-in Maps app for the platform." />
+        <Button Text="Open location using Maps app"
+                Clicked="OnLocationButtonClicked" />
+        <Button Text="Get directions using Maps app"
+                Clicked="OnDirectionButtonClicked" />
+    </StackLayout>
+</ContentPage>

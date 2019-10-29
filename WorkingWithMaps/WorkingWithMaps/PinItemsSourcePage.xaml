@@ -32,7 +32,6 @@
         </Grid.RowDefinitions>
         <maps:Map x:Name="map"
                   MapClicked="OnMapClicked"
-                  MoveToLastRegionOnLayoutChange="false"
                   ItemsSource="{Binding Locations}">
             <!-- Alternatively, set ItemTemplateSelector to MapItemTemplateSelector -->
             <maps:Map.ItemTemplate>

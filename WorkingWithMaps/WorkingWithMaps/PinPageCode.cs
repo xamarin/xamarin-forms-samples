@@ -12,14 +12,7 @@ namespace WorkingWithMaps
             Position position = new Position(36.9628066, -122.0194722);
             MapSpan mapSpan = new MapSpan(position, 0.01, 0.01);
 
-            Map map = new Map(mapSpan)
-            {
-                IsShowingUser = true,
-                MoveToLastRegionOnLayoutChange = false,
-                HeightRequest = 100,
-                WidthRequest = 960,
-                VerticalOptions = LayoutOptions.FillAndExpand
-            };
+            Map map = new Map(mapSpan);
 
             Pin pin = new Pin
             {

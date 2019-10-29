@@ -4,11 +4,11 @@ using Xamarin.Forms;
 
 namespace WorkingWithMaps
 {
-    public class MapAppPage : ContentPage
+    public class MapAppPageCode : ContentPage
     {
         // WARNING: when adding latitude/longitude values be careful of localization.
         // European (and other countries) use a comma as the separator, which will break the request
-        public MapAppPage()
+        public MapAppPageCode()
         {
             Title = "Native map app demo";
 
