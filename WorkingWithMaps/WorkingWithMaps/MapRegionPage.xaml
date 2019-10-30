@@ -5,7 +5,7 @@
              x:Class="WorkingWithMaps.MapRegionPage"
              Title="Map region demo">
     <StackLayout Margin="10">
-        <maps:Map x:Name="map">
+        <maps:Map>
             <x:Arguments>
                 <maps:MapSpan>
                     <x:Arguments>
