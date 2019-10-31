@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Working with Maps
-description: "This sample relates to the Working with Maps in Xamarin.Forms doc"
+description: "This sample demonstrates how to work with maps in Xamarin.Forms."
 page_type: sample
 languages:
 - csharp
@@ -14,6 +14,8 @@ urlFragment: workingwithmaps
 ---
 # Working with maps in Xamarin.Forms
 
-This sample relates to the [Working with Maps in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/map) doc.
+The `Map` control displays a map, and requires the Xamarin.Forms.Maps NuGet package.
 
-![Working with Maps application screenshot](Screenshots/01All.png "Working with Maps application screenshot")
+For more information, see [Xamarin.Forms Map](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/map).
+
+![Maps application screenshot](Screenshots/01All.png "Map application screenshot")
