@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:resources="clr-namespace:LocalizationDemo.Resx"
+             mc:Ignorable="d"
+             x:Class="LocalizationDemo.LocalizedXamlPage"
+             Padding="10,40,10,10"
+             Title="Localized XAML Page">
+    <StackLayout>
+            <Label Text="{x:Static resources:AppResources.NotesLabel}"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="Start"/>
+        <Entry Placeholder="{x:Static resources:AppResources.NotesPlaceholder}"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="Start"/>
+        <Button Text="{x:Static resources:AppResources.AddButton}"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Start"/>
+        </StackLayout>
+</ContentPage>
