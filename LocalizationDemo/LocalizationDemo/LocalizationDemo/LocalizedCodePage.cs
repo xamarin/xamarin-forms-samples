@@ -11,7 +11,7 @@ namespace LocalizationDemo
             // Note: you can override the CurrentUICulture to test other languages
             CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo("zh-Hans");
 
-            Title = "Localed Code Page";
+            Title = "Localized Code Page";
             Padding = new Thickness(10, 40, 10, 10);
 
             Label notesLabel = new Label
