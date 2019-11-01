@@ -103,6 +103,14 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\en\flag.png" />
+    <Content Include="Assets\Images\es\flag.png" />
+    <Content Include="Assets\Images\fr\flag.png" />
+    <Content Include="Assets\Images\ja\flag.png" />
+    <Content Include="Assets\Images\pt-BR\flag.png" />
+    <Content Include="Assets\Images\pt\flag.png" />
+    <Content Include="Assets\Images\zh-Hans\flag.png" />
+    <Content Include="Assets\Images\zh-Hant\flag.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
@@ -130,6 +138,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="flag.png" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +162,7 @@
       <Name>LocalizationDemo</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
