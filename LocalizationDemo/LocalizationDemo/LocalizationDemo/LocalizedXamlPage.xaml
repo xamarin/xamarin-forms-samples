@@ -9,14 +9,22 @@
              Padding="10,40,10,10"
              Title="Localized XAML Page">
     <StackLayout>
-            <Label Text="{x:Static resources:AppResources.NotesLabel}"
-                   HorizontalOptions="StartAndExpand"
-                   VerticalOptions="Start"/>
+        <Image>
+            <Image.Source>
+                <OnPlatform x:TypeArguments="ImageSource">
+                    <On Platform="iOS, Android" Value="flag.png" />
+                    <On Platform="UWP" Value="Assets/Images/flag.png" />
+                </OnPlatform>
+            </Image.Source>
+        </Image>
+        <Label Text="{x:Static resources:AppResources.NotesLabel}"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Start"/>
         <Entry Placeholder="{x:Static resources:AppResources.NotesPlaceholder}"
-                   HorizontalOptions="StartAndExpand"
-                   VerticalOptions="Start"/>
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Start"/>
         <Button Text="{x:Static resources:AppResources.AddButton}"
-                    HorizontalOptions="StartAndExpand"
-                    VerticalOptions="Start"/>
-        </StackLayout>
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Start"/>
+    </StackLayout>
 </ContentPage>
