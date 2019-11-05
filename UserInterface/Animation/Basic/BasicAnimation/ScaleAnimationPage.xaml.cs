@@ -35,9 +35,3 @@ namespace BasicAnimation
 		}
 	}
 }
-
-
-//var upAnimation = new Animation (v => image.Scale = v, 1, 2, Easing.SpringIn);
-//var rotateAnimation = new Animation (v => image.Rotation = v, 0, 360);
-//var downAnimation = new Animation (v => image.Scale = v, 2, 1, Easing.SpringOut);
-
