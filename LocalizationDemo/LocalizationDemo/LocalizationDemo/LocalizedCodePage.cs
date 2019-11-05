@@ -1,5 +1,4 @@
 ﻿using LocalizationDemo.Resx;
-using System.Globalization;
 using Xamarin.Forms;
 
 namespace LocalizationDemo
@@ -10,7 +9,6 @@ namespace LocalizationDemo
         {
             Title = "Localized Code Page";
             Padding = new Thickness(10, 40, 10, 10);
-
 
             var imgSrc = Device.RuntimePlatform == Device.UWP ? "Assets/Images/flag.png" : "flag.png";
             Image flag = new Image

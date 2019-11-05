@@ -130,4 +130,43 @@
       <Name>LocalizationDemo</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\de-CH.lproj\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\de.lproj\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\en.lproj\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\es.lproj\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fr.lproj\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\gsw-CH.lproj\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\id.lproj\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ja.lproj\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ms.lproj\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pt-PT.lproj\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pt.lproj\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\zh-Hans.lproj\flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\zh-Hant.lproj\flag.png" />
+  </ItemGroup>
 </Project>
