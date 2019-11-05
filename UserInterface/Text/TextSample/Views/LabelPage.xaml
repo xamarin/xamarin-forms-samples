@@ -14,11 +14,9 @@
             Alternatively, embed the HTML string in CDATA:
 
             <Label TextType="Html">
-                <x:String>
                     <![CDATA[
                     This is <strong style="color:red">HTML</strong> text.
                     ]]>
-                </x:String>
             </Label>
             -->
             <Label TextDecorations="Underline" Text="This is underlined text." />
