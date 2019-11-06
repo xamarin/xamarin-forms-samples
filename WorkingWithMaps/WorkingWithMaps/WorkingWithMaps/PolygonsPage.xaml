@@ -6,7 +6,7 @@
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              mc:Ignorable="d"
              x:Class="WorkingWithMaps.PolygonsPage"
-             Title="Polygon/Polyline XAML Demo">
+             Title="Polygon/Polyline Demo">
     <StackLayout>
         <Label Text="This map defines polygons and a polyline in XAML." />
         <maps:Map x:Name="map">
