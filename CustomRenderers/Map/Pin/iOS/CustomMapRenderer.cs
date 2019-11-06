@@ -57,15 +57,15 @@ namespace CustomRenderer.iOS
                 throw new Exception("Custom pin not found");
             }
 
-            annotationView = mapView.DequeueReusableAnnotation(customPin.MarkerId.ToString());
+            annotationView = mapView.DequeueReusableAnnotation(customPin.Name);
             if (annotationView == null)
             {
-                annotationView = new CustomMKAnnotationView(annotation, customPin.MarkerId.ToString());
+                annotationView = new CustomMKAnnotationView(annotation, customPin.Name);
                 annotationView.Image = UIImage.FromFile("pin.png");
                 annotationView.CalloutOffset = new CGPoint(0, 0);
                 annotationView.LeftCalloutAccessoryView = new UIImageView(UIImage.FromFile("monkey.png"));
                 annotationView.RightCalloutAccessoryView = UIButton.FromType(UIButtonType.DetailDisclosure);
-                ((CustomMKAnnotationView)annotationView).MarkerId = customPin.MarkerId.ToString();
+                ((CustomMKAnnotationView)annotationView).Name = customPin.Name;
                 ((CustomMKAnnotationView)annotationView).Url = customPin.Url;
             }
             annotationView.CanShowCallout = true;
@@ -75,7 +75,7 @@ namespace CustomRenderer.iOS
 
         void OnCalloutAccessoryControlTapped(object sender, MKMapViewAccessoryTappedEventArgs e)
         {
-            var customView = e.View as CustomMKAnnotationView;
+            CustomMKAnnotationView customView = e.View as CustomMKAnnotationView;
             if (!string.IsNullOrWhiteSpace(customView.Url))
             {
                 UIApplication.SharedApplication.OpenUrl(new Foundation.NSUrl(customView.Url));
@@ -84,10 +84,10 @@ namespace CustomRenderer.iOS
 
         void OnDidSelectAnnotationView(object sender, MKAnnotationViewEventArgs e)
         {
-            var customView = e.View as CustomMKAnnotationView;
+            CustomMKAnnotationView customView = e.View as CustomMKAnnotationView;
             customPinView = new UIView();
 
-            if (customView.MarkerId == "Xamarin")
+            if (customView.Name.Equals("Xamarin"))
             {
                 customPinView.Frame = new CGRect(0, 0, 200, 84);
                 var image = new UIImageView(new CGRect(0, 0, 200, 84));

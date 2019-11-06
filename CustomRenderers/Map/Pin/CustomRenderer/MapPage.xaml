@@ -4,6 +4,7 @@
 			 xmlns:local="clr-namespace:CustomRenderer;assembly=CustomRenderer"
 			 x:Class="CustomRenderer.MapPage">
 	<ContentPage.Content>
-		<local:CustomMap x:Name="customMap" MapType="Street" WidthRequest="{x:Static local:App.ScreenWidth}" HeightRequest="{x:Static local:App.ScreenHeight}" />
+		<local:CustomMap x:Name="customMap"
+                   MapType="Street" />
 	</ContentPage.Content>
 </ContentPage>

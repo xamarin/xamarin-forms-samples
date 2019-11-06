@@ -70,7 +70,7 @@ namespace CustomRenderer.UWP
                         throw new Exception("Custom pin not found");
                     }
 
-                    if (customPin.MarkerId.ToString() == "Xamarin")
+                    if (customPin.Name.Equals("Xamarin"))
                     {
                         if (mapOverlay == null)
                         {
