@@ -13,28 +13,32 @@ namespace LocalizationDemo
             var imgSrc = Device.RuntimePlatform == Device.UWP ? "Assets/Images/flag.png" : "flag.png";
             Image flag = new Image
             {
-                Source = ImageSource.FromFile(imgSrc)
+                Source = ImageSource.FromFile(imgSrc),
+                WidthRequest = 100
             };
 
             Label notesLabel = new Label
             {
                 Text = AppResources.NotesLabel,
                 HorizontalOptions = LayoutOptions.CenterAndExpand,
-                VerticalOptions = LayoutOptions.Start
+                VerticalOptions = LayoutOptions.Start,
+                WidthRequest = 300
             };
 
             Entry notesEntry = new Entry
             {
                 Placeholder = AppResources.NotesPlaceholder,
                 HorizontalOptions = LayoutOptions.CenterAndExpand,
-                VerticalOptions = LayoutOptions.Start
+                VerticalOptions = LayoutOptions.Start,
+                WidthRequest = 300
             };
 
             Button addButton = new Button
             {
                 Text = AppResources.AddButton,
                 HorizontalOptions = LayoutOptions.CenterAndExpand,
-                VerticalOptions = LayoutOptions.Start
+                VerticalOptions = LayoutOptions.Start,
+                WidthRequest = 300
             };
 
             Content = new StackLayout

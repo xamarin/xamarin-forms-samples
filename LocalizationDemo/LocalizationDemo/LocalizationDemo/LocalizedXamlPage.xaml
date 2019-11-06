@@ -9,7 +9,7 @@
              Padding="10,40,10,10"
              Title="Localized XAML Page">
     <StackLayout>
-        <Image>
+        <Image WidthRequest="100">
             <Image.Source>
                 <OnPlatform x:TypeArguments="ImageSource">
                     <On Platform="iOS, Android" Value="flag.png" />
@@ -18,12 +18,15 @@
             </Image.Source>
         </Image>
         <Label Text="{x:Static resources:AppResources.NotesLabel}"
+               WidthRequest="300"
                HorizontalOptions="CenterAndExpand"
                VerticalOptions="Start"/>
         <Entry Placeholder="{x:Static resources:AppResources.NotesPlaceholder}"
+               WidthRequest="300"
                HorizontalOptions="CenterAndExpand"
                VerticalOptions="Start"/>
         <Button Text="{x:Static resources:AppResources.AddButton}"
+                WidthRequest="300"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="Start"/>
     </StackLayout>
