@@ -9,7 +9,7 @@ products:
 extensions:
     tags:
     - ui
-urlFragment: userinterface-refreshview
+urlFragment: userinterface-refreshviewdemo
 ---
 # RefreshView Demo
 
