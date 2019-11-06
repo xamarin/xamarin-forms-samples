@@ -21,7 +21,6 @@ namespace CustomRenderer
                 Address = "394 Pacific Ave, San Francisco CA",
                 Name = "Xamarin",
                 Url = "http://xamarin.com/about/"
-
             };
 
             customMap.CustomPins = new List<CustomPin> { pin };
