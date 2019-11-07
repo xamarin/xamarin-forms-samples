@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:UsingResxLocalization"
+             mc:Ignorable="d"
+             x:Class="UsingResxLocalization.MainPage"
+             Padding="10,40,10,10"
+             Title="Localization Demos">
+
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="Localization Xaml Demo"
+                          Detail="Create a localized Xaml page using Resx"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:LocalizedXamlPage}" />
+                <TextCell Text="Localization Code Demo"
+                          Detail="Create a localized code page using Resx"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:LocalizedCodePage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
