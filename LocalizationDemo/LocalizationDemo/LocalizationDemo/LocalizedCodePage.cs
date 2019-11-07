@@ -10,7 +10,7 @@ namespace LocalizationDemo
             Title = "Localized Code Page";
             Padding = new Thickness(10, 40, 10, 10);
 
-            var imgSrc = Device.RuntimePlatform == Device.UWP ? "Assets/Images/flag.png" : "flag.png";
+            string imgSrc = Device.RuntimePlatform == Device.UWP ? "Assets/Images/flag.png" : "flag.png";
             Image flag = new Image
             {
                 Source = ImageSource.FromFile(imgSrc),
