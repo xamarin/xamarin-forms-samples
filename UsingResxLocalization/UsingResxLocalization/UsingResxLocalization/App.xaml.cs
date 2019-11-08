@@ -1,7 +1,4 @@
-﻿using System;
-using System.Globalization;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace UsingResxLocalization
 {
