@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{3BD62E69-70D5-4CAC-87EA-C1083A4A3630}</ProjectGuid>
+    <ProjectGuid>{15559F86-8BDA-4BAC-B66B-F97EB04AB715}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WorkingWithMaps.UWP</RootNamespace>
@@ -150,7 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WorkingWithMaps\WorkingWithMaps.csproj">
-      <Project>{D1708A48-D3EF-4FE8-A8B9-E937EF8542FA}</Project>
+      <Project>{e71c3604-f980-496d-a3ee-d2e757746e91}</Project>
       <Name>WorkingWithMaps</Name>
     </ProjectReference>
   </ItemGroup>
