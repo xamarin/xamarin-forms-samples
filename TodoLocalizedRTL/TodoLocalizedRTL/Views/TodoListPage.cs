@@ -49,7 +49,7 @@ namespace TodoLocalized
 
                 if (todos.Any())
                 {
-                    var s = L10n.Localize("SpeakTaskCount", AppResources.Culture);
+                    var s = AppResources.SpeakTaskCount;
                     tospeak = String.Format(s, todos.Count()) + tospeak;
                 }
 

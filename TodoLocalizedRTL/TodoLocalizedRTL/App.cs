@@ -11,7 +11,7 @@ namespace TodoLocalized
 
         public App()
         {
-            AppResources.Culture = DependencyService.Get<ILocale>().GetCurrentCultureInfo();
+            AppResources.Culture = System.Globalization.CultureInfo.CurrentUICulture;
             MainPage = new NavigationPage(new TodoListPageXaml());
         }
 
