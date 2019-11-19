@@ -127,7 +127,6 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="TextToSpeech_iOS.cs" />
     <Compile Include="SQLite_iOS.cs" />
-    <Compile Include="Locale_iOS.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
