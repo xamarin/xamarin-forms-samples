@@ -55,7 +55,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Justin Johnson (7Z7BVUVAR3)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignProvision>
@@ -136,7 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Azure.NotificationHubs.iOS">
-      <Version>1.2.5.2</Version>
+      <Version>2.0.4</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
   </ItemGroup>
