@@ -55,18 +55,17 @@
       <Version>12.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Azure.NotificationHubs.Android">
-      <Version>0.5.0</Version>
+      <Version>0.6.0</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Firebase.Messaging">
-      <Version>60.1142.1</Version>
+      <Version>71.1740.0</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
     <PackageReference Include="Xamarin.GooglePlayServices.Base">
-      <Version>60.1142.1</Version>
+      <Version>71.1610.0</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FirebaseRegistrationService.cs" />
     <Compile Include="FirebaseService.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
