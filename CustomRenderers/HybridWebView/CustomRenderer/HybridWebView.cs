@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace CustomRenderer
 {
-	public class HybridWebView : View
+	public class HybridWebView : WebView
 	{
 		Action<string> action;
 
@@ -13,7 +13,8 @@ namespace CustomRenderer
 			declaringType: typeof(HybridWebView),
 			defaultValue: default(string));
 		
-		public string Uri {
+		public string Uri
+        {
 			get { return (string)GetValue (UriProperty); }
 			set { SetValue (UriProperty, value); }
 		}
@@ -23,14 +24,15 @@ namespace CustomRenderer
 			action = callback;
 		}
 
-		public void Cleanup ()
+		public void Cleanup()
 		{
 			action = null;
 		}
 
 		public void InvokeAction (string data)
 		{
-			if (action == null || data == null) {
+			if (action == null || data == null)
+            {
 				return;
 			}
 			action.Invoke (data);

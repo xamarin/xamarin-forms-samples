@@ -1,6 +1,4 @@
-﻿using System;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace CustomRenderer
 {
@@ -8,7 +6,8 @@ namespace CustomRenderer
 	{
 		public HybridWebViewPageCS ()
 		{
-			var hybridWebView = new HybridWebView {
+			var hybridWebView = new HybridWebView
+            {
 				Uri = "index.html",
 				HorizontalOptions = LayoutOptions.FillAndExpand,
 				VerticalOptions = LayoutOptions.FillAndExpand

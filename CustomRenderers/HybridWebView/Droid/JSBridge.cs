@@ -21,7 +21,7 @@ namespace CustomRenderer.Droid
 
 			if (hybridWebViewRenderer != null && hybridWebViewRenderer.TryGetTarget (out hybridRenderer)) 
             {
-				hybridRenderer.Element.InvokeAction (data);
+                ((HybridWebView)hybridRenderer.Element).InvokeAction(data);
 			}
 		}
 	}
