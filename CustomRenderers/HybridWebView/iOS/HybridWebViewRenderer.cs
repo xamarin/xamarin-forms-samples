@@ -10,11 +10,11 @@ using Xamarin.Forms.Platform.iOS;
 namespace CustomRenderer.iOS
 {
     public class HybridWebViewRenderer : WkWebViewRenderer, IWKScriptMessageHandler
-	{
-		const string JavaScriptFunction = "function invokeCSharpAction(data){window.webkit.messageHandlers.invokeAction.postMessage(data);}";
-		WKUserContentController userController;
+    {
+        const string JavaScriptFunction = "function invokeCSharpAction(data){window.webkit.messageHandlers.invokeAction.postMessage(data);}";
+        WKUserContentController userController;
 
-        public HybridWebViewRenderer() : this (new WKWebViewConfiguration())
+        public HybridWebViewRenderer() : this(new WKWebViewConfiguration())
         {
         }
 

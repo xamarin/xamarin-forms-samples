@@ -2,13 +2,13 @@
 
 namespace CustomRenderer
 {
-	public partial class HybridWebViewPage : ContentPage
-	{
-		public HybridWebViewPage ()
-		{
-			InitializeComponent ();
+    public partial class HybridWebViewPage : ContentPage
+    {
+        public HybridWebViewPage()
+        {
+            InitializeComponent();
 
-			hybridWebView.RegisterAction (data => DisplayAlert ("Alert", "Hello " + data, "OK"));
-		}
-	}
+            hybridWebView.RegisterAction(data => DisplayAlert("Alert", "Hello " + data, "OK"));
+        }
+    }
 }
