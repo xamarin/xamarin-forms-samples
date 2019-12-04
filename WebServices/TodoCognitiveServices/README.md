@@ -16,7 +16,3 @@ This sample demonstrates how to use some of the Microsoft Cognitive Services API
 For more information about this sample see [Adding Intelligence with Cognitive Services](https://docs.microsoft.com/xamarin/xamarin-forms/data-cloud/azure-cognitive-services/introduction).
 
 ![Todo Cognitive Services application screenshot](Screenshots/01All.png "Todo Cognitive Services application screenshot")
-
-## Author
-
-David Britch

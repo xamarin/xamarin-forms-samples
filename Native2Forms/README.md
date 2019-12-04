@@ -15,7 +15,3 @@ This sample demonstrates how to consume Xamarin.Forms `ContentPage`s in native X
 For more information about this sample see [Native Forms](https://docs.microsoft.com/xamarin/xamarin-forms/platform/native-forms).
 
 ![Native Forms application screenshot](Screenshots/01Android.png "Native Forms application screenshot")
-
-## Author
-
-David Britch

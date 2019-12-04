@@ -16,7 +16,3 @@ Non-instantiable classes are displayed in the system accent color.
 ClassHierarchy is a handy reference for Xamarin.Forms developers, as well as demonstrating using  the StackLayout and ScrollView from code.
 
 ![ClassHierarchy application screenshot](Screenshots/01.png "ClassHierarchy application screenshot")
-
-## Author
-
-Charles Petzold

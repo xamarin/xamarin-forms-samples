@@ -21,7 +21,3 @@ SpinPaint demonstrates the use of SkiaSharp in a Xamarin.Forms application. For 
 SpinPaint uses a .NET Standard Library for the shared code. For a version that uses a Shared Project, see [SpinPaintShared](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaintShared/).
 
 ![SpinPaint application screenshot](Screenshots/Image0.png "SpinPaint application screenshot")
-
-## Author
-
-Charles Petzold
