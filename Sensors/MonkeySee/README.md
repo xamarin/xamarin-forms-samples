@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Monkey See
-description: Monkey See is a program for Xamarin.Forms that uses the cross-platform OrientationSensor included in Xamarin.Essentials. 
+description: Monkey See is a program for Xamarin.Forms that uses the cross-platform OrientationSensor included in Xamarin.Essentials.
 page_type: sample
 languages:
 - csharp
@@ -19,7 +19,3 @@ The 3D monkey was created by Vic Wang at [http://vidavic.weebly.com](http://vida
 Xamarin.Forms no longer runs on Windows Phone or Windows 10 Mobile devices, but **Monkey See** _will_ run on a Windows 10 tablet, such as a Surface Pro, and runs best in Tablet Mode. To run in Tablet Mode, all external monitors must be disconnected from the device. Sweep your finger along the right edge of the screen (or press the Notifications icon to the right of the date and time) to display the **Action Center**. Select **Tablet Mode**. Then run the program.
 
 ![Monkey See application screenshot](Screenshots/MonkeySee.png "Monkey See application screenshot")
-
-## Author
-
-Charles Petzold

@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - TodoWCF
-description: This sample demonstrates a Todo list application where the data is stored and accessed from a WCF web service. 
+description: This sample demonstrates a Todo list application where the data is stored and accessed from a WCF web service.
 page_type: sample
 languages:
 - csharp
@@ -23,7 +23,3 @@ In all cases the tasks are stored in an in-memory collection that's accessed thr
 For more information about the sample see [Consuming a Windows Communication Foundation (WCF) Web Service](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/web-services/consuming/wcf/).
 
 ![TodoWCF application screenshot](Screenshots/01All.png "TodoWCF application screenshot")
-
-## Author
-
-David Britch

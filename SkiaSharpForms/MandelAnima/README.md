@@ -33,13 +33,3 @@ When you first run the program, the `Label` at the top of the program shows whic
 For some devices, the animation runs smoother if the program is not being run under control of Visual Studio's debugger.
 
 ![Mandelbrot Animation application screenshot](Screenshots/MandelbrotAnimation.png "Mandelbrot Animation application screenshot")
-
-## Author
-Charles Petzold
-
-
-
-
-
-
-

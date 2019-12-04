@@ -4,7 +4,7 @@ namespace CustomRenderer.iOS
 {
 	public class CustomMKAnnotationView : MKAnnotationView
 	{
-		public string MarkerId { get; set; }
+		public string Name { get; set; }
 
 		public string Url { get; set; }
 

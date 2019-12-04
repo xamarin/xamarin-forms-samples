@@ -61,12 +61,10 @@ namespace TodoLocalized
             nameLabel.Text = AppResources.NameLabel;
             notesLabel.Text = AppResources.NotesLabel;
             doneLabel.Text = AppResources.DoneLabel;
-
-            // using ResourceManager
             saveButton.Text = AppResources.SaveButton;
-            deleteButton.Text = L10n.Localize("DeleteButton", AppResources.Culture);
-            cancelButton.Text = L10n.Localize("CancelButton", AppResources.Culture);
-            speakButton.Text = L10n.Localize("SpeakButton", AppResources.Culture);
+            deleteButton.Text = AppResources.DeleteButton;
+            cancelButton.Text = AppResources.CancelButton;
+            speakButton.Text = AppResources.SpeakButton;
 
             Content = new StackLayout
             {

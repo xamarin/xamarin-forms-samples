@@ -16,7 +16,3 @@ ScaleAndRotate lets you interactively experiment with these properties using a *
 *Stepper* views let you set the *AnchorX* and *AnchorY* properties to values ranging from -1 to 2, in increments of 0.5.
 
 ![ScaleAndRotate application screenshot](Screenshots/01Android.png "ScaleAndRotate application screenshot")
-
-## Author
-
-Charles Petzold

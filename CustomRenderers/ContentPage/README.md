@@ -15,7 +15,3 @@ This sample demonstrates a custom renderer for a `ContentPage`, enabling develop
 For more information about this sample see [Customizing a ContentPage](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/custom-renderer/contentpage/).
 
 ![ContentPage Custom Renderer application screenshot](Screenshots/01All.png "ContentPage Custom Renderer application screenshot")
-
-## Author
-
-David Britch

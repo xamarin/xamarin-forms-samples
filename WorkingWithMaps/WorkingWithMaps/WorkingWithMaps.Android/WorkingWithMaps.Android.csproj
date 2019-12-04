@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0F4D9C7E-7BB7-4037-A6F1-4BE3934F6329}</ProjectGuid>
+    <ProjectGuid>{9E84F0D9-45C6-4FE7-9E9C-888F5A2446EA}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
@@ -91,9 +91,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WorkingWithMaps\WorkingWithMaps.csproj">
-      <Project>{7D519B46-9EC9-4A47-B18E-B39192FC5A1C}</Project>
+      <Project>{E71C3604-F980-496D-A3EE-D2E757746E91}</Project>
       <Name>WorkingWithMaps</Name>
     </ProjectReference>
   </ItemGroup>
- <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

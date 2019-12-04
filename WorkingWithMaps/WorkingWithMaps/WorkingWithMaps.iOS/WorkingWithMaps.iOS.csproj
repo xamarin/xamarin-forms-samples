@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8C37E5A6-70AE-4ACA-860F-ADC9EC6F3177}</ProjectGuid>
+    <ProjectGuid>{08A3ABD2-03CA-4A03-8C14-0E0680A77846}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
     <OutputType>Exe</OutputType>
@@ -129,7 +129,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\WorkingWithMaps\WorkingWithMaps.csproj">
-      <Project>{7D519B46-9EC9-4A47-B18E-B39192FC5A1C}</Project>
+      <Project>{E71C3604-F980-496D-A3EE-D2E757746E91}</Project>
       <Name>WorkingWithMaps</Name>
     </ProjectReference>
   </ItemGroup>

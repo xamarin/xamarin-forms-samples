@@ -2,8 +2,11 @@
 using Android.Content;
 using Android.OS;
 using Android.Support.V4.App;
+using Android.Util;
 using Firebase.Messaging;
+using System;
 using System.Linq;
+using WindowsAzure.Messaging;
 
 namespace NotificationHubSample.Droid
 {
@@ -34,6 +37,13 @@ namespace NotificationHubSample.Droid
             SendMessageToMainPage(messageBody);
         }
 
+        public override void OnNewToken(string token)
+        {
+            // TODO: save token instance locally, or log if desired
+
+            SendRegistrationToServer(token);
+        }
+
         void SendLocalNotification(string body)
         {
             var intent = new Intent(this, typeof(MainActivity));
@@ -61,6 +71,25 @@ namespace NotificationHubSample.Droid
         void SendMessageToMainPage(string body)
         {
             (App.Current.MainPage as MainPage)?.AddMessage(body);
+        }
+
+        void SendRegistrationToServer(string token)
+        {
+            try
+            {
+                NotificationHub hub = new NotificationHub(AppConstants.NotificationHubName, AppConstants.ListenConnectionString, this);
+
+                // register device with Azure Notification Hub using the token from FCM
+                Registration registration = hub.Register(token, AppConstants.SubscriptionTags);
+
+                // subscribe to the SubscriptionTags list with a simple template.
+                string pnsHandle = registration.PNSHandle;
+                TemplateRegistration templateReg = hub.RegisterTemplate(pnsHandle, "defaultTemplate", AppConstants.FCMTemplateBody, AppConstants.SubscriptionTags);
+            }
+            catch (Exception e)
+            {
+                Log.Error(AppConstants.DebugTag, $"Error registering device: {e.Message}");
+            }
         }
     }
 }
