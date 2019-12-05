@@ -36,8 +36,6 @@ namespace Todo
 			}
 		}
 
-		public int ResumeAtTodoId { get; set; }
-
 		protected override void OnStart()
 		{
 
