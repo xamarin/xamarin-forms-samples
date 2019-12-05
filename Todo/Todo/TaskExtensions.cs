@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Todo
@@ -22,7 +20,7 @@ namespace Todo
 
             // if the provided action is not null, catch and
             // pass the thrown exception
-            catch(Exception ex) when (onException != null)
+            catch (Exception ex) when (onException != null)
             {
                 onException(ex);
             }

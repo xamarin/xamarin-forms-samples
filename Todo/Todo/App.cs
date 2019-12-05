@@ -1,13 +1,10 @@
-﻿using System;
-using System.IO;
-using System.Diagnostics;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Todo
 {
-	public class App : Application
+    public class App : Application
 	{
 		static TodoItemDatabase database;
 
