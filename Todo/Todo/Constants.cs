@@ -21,7 +21,7 @@ namespace Todo
         {
             get
             {
-                var basePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                var basePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
                 return Path.Combine(basePath, DatabaseFilename);
             }
         }
