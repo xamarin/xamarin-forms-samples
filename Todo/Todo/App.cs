@@ -30,7 +30,7 @@ namespace Todo
 			{
 				if (database == null)
 				{
-                    database = new TodoItemDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TodoSQLite.db3"));
+                    database = new TodoItemDatabase();
 				}
 				return database;
 			}
