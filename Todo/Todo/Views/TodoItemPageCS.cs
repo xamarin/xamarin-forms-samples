@@ -39,13 +39,6 @@ namespace Todo
 				await Navigation.PopAsync();
 			};
 
-			var speakButton = new Button { Text = "Speak" };
-			speakButton.Clicked += (sender, e) =>
-			{
-				var todoItem = (TodoItem)BindingContext;
-				DependencyService.Get<ITextToSpeech>().Speak(todoItem.Name + " " + todoItem.Notes);
-			};
-
 			Content = new StackLayout
 			{
 				Margin = new Thickness(20),
@@ -60,8 +53,7 @@ namespace Todo
 					doneSwitch,
 					saveButton,
 					deleteButton,
-					cancelButton,
-					speakButton
+					cancelButton
 				}
 			};
 		}

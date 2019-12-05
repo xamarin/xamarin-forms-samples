@@ -9,7 +9,6 @@
 		<Switch IsToggled="{Binding Done}" />
 		<Button Text="Save" Clicked="OnSaveClicked" />
 		<Button Text="Delete" Clicked="OnDeleteClicked" />
-		<Button Text="Cancel" Clicked="OnCancelClicked" />
-		<Button Text="Speak" Clicked="OnSpeakClicked" />
-	</StackLayout>
+        <Button Text="Cancel" Clicked="OnCancelClicked" />
+    </StackLayout>
 </ContentPage>
