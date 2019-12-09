@@ -26,7 +26,7 @@
             </Grid.ColumnDefinitions>
             <Frame IsClippedToBounds="True"
                    BorderColor="{Binding BorderColor, FallbackValue='Black'}"
-                   BackgroundColor="{Binding IconBackgroundColor, FallbackValue='Grey'}"
+                   BackgroundColor="{Binding IconBackgroundColor, FallbackValue='Gray'}"
                    CornerRadius="38"
                    HeightRequest="60"
                    WidthRequest="60"
