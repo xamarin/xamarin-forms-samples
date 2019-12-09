@@ -25,8 +25,8 @@
                 <ColumnDefinition Width="200" />
             </Grid.ColumnDefinitions>
             <Frame IsClippedToBounds="True"
-                   BorderColor="{Binding BorderColor}"
-                   BackgroundColor="{Binding IconBackgroundColor}"
+                   BorderColor="{Binding BorderColor, FallbackValue='Black'}"
+                   BackgroundColor="{Binding IconBackgroundColor, FallbackValue=Grey}"
                    CornerRadius="38"
                    HeightRequest="60"
                    WidthRequest="60"
@@ -40,19 +40,19 @@
                        Aspect="AspectFill" />
             </Frame>
             <Label Grid.Column="1"
-                   Text="{Binding CardTitle}"
+                   Text="{Binding CardTitle, FallbackValue='Card Title'}"
                    FontAttributes="Bold"
                    FontSize="Large"
                    VerticalTextAlignment="Center"
                    HorizontalTextAlignment="Start" />
             <BoxView Grid.Row="1"
                      Grid.ColumnSpan="2"
-                     BackgroundColor="{Binding BorderColor}"
+                     BackgroundColor="{Binding BorderColor, FallbackValue='Black'}"
                      HeightRequest="2"
                      HorizontalOptions="Fill" />
             <Label Grid.Row="2"
                    Grid.ColumnSpan="2"
-                   Text="{Binding CardDescription}"
+                   Text="{Binding CardDescription, FallbackValue='Card description text'}"
                    VerticalTextAlignment="Start"
                    VerticalOptions="Fill"
                    HorizontalOptions="Fill" />
