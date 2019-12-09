@@ -26,7 +26,7 @@
             </Grid.ColumnDefinitions>
             <Frame IsClippedToBounds="True"
                    BorderColor="{Binding BorderColor, FallbackValue='Black'}"
-                   BackgroundColor="{Binding IconBackgroundColor, FallbackValue=Grey}"
+                   BackgroundColor="{Binding IconBackgroundColor, FallbackValue='Grey'}"
                    CornerRadius="38"
                    HeightRequest="60"
                    WidthRequest="60"
@@ -52,7 +52,7 @@
                      HorizontalOptions="Fill" />
             <Label Grid.Row="2"
                    Grid.ColumnSpan="2"
-                   Text="{Binding CardDescription, FallbackValue='Card description text'}"
+                   Text="{Binding CardDescription, FallbackValue='Card description text.'}"
                    VerticalTextAlignment="Start"
                    VerticalOptions="Fill"
                    HorizontalOptions="Fill" />
