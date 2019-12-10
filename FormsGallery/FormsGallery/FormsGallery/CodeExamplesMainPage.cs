@@ -103,6 +103,14 @@ namespace FormsGallery
                             Detail = "Initiate a search",
                             Command = navigateCommand,
                             CommandParameter = typeof(CodeExamples.SearchBarDemoPage)
+                        },
+
+                        new TextCell
+                        {
+                            Text = "SwipeView",
+                            Detail = "Initiate a command",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.SwipeViewDemoPage)
                         }
                     },
 
