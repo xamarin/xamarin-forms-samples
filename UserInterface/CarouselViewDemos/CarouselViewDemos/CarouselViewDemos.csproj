@@ -21,6 +21,7 @@
     <Folder Include="Helpers\" />
     <Folder Include="Views\Spacing\" />
     <Folder Include="Views\Interaction\" />
+    <Folder Include="Views\Swipe\" />
   </ItemGroup>
 
   <ItemGroup>

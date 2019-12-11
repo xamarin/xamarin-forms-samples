@@ -129,4 +129,8 @@
       <Name>CarouselViewDemos</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\delete.png" />
+    <BundleResource Include="Resources\favorite.png" />
+  </ItemGroup>
 </Project>

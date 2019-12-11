@@ -131,7 +131,12 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:VerticalPullToRefreshPage}" />
             </TableSection>
-
+            <TableSection Title="Swipe">
+                <TextCell Text="Context menu items"
+                          Detail="Horizontal layout"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:HorizontalSwipeItemsPage}" />
+            </TableSection>
         </TableRoot>
     </TableView>
 </ContentPage>

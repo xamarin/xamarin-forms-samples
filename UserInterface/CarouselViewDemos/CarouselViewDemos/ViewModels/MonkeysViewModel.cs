@@ -26,6 +26,8 @@ namespace CarouselViewDemos.ViewModels
         public ICommand FilterCommand => new Command<string>(FilterItems);
         public ICommand ItemChangedCommand => new Command<Monkey>(ItemChanged);
         public ICommand PositionChangedCommand => new Command<int>(PositionChanged);
+        public ICommand DeleteCommand => new Command<Monkey>(RemoveMonkey);
+        public ICommand FavoriteCommand => new Command<Monkey>(FavoriteMonkey);
 
         public MonkeysViewModel()
         {
@@ -212,6 +214,19 @@ namespace CarouselViewDemos.ViewModels
             CurrentPosition = position;
             OnPropertyChanged("PreviousPosition");
             OnPropertyChanged("CurrentPosition");
+        }
+
+        void RemoveMonkey(Monkey monkey)
+        {
+            if (Monkeys.Contains(monkey))
+            {
+                Monkeys.Remove(monkey);
+            }
+        }
+
+        void FavoriteMonkey(Monkey monkey)
+        {
+            monkey.IsFavorite = !monkey.IsFavorite;
         }
 
         #region INotifyPropertyChanged

@@ -40,7 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
-      <Version>4.3.0.908675</Version>
+      <Version>4.4.0.991220-pre3</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +77,10 @@
     <AndroidResource Include="Resources\drawable\csharp.png" />
     <AndroidResource Include="Resources\drawable\xaml.png" />
     <AndroidResource Include="Resources\drawable\XamarinLogo.png" />
+    <AndroidResource Include="Resources\drawable\delete.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\reminders.png" />
