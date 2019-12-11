@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SwipeViewDemos.SwipeViewCustomItemPage"
+             Title="Custom SwipeViewItem demo">
+    <StackLayout Margin="20">
+        <Label Text="Questions"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <Label Text="Swipe right to answer the following questions." />
+        <SwipeView>
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItemView Invoked="OnIncorrectAnswerInvoked">
+                        <Grid WidthRequest="100">
+                            <Frame BackgroundColor="DarkGray"
+                                   CornerRadius="30">
+                                <Label Text="1"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                            </Frame>
+                        </Grid>
+                    </SwipeItemView>
+                    <SwipeItemView Invoked="OnCorrectAnswerInvoked">
+                        <Grid WidthRequest="100">
+                            <Frame BackgroundColor="DarkGray"
+                                   CornerRadius="30">
+                                <Label Text="2"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                            </Frame>
+                        </Grid>
+                    </SwipeItemView>
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <Grid HeightRequest="70"
+                  WidthRequest="300"
+                  BackgroundColor="LightGray">
+                <Label Text="What's 1+1?"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+
+        <SwipeView x:Name="swipeView2">
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItemView Command="{Binding CheckAnswerCommand}"
+                                   CommandParameter="{Binding Source={x:Reference resultEntry}, Path=Text}">
+                        <StackLayout Margin="10"
+                                     WidthRequest="300">
+                            <Entry x:Name="resultEntry"
+                                   Placeholder="Enter answer"
+                                   HorizontalOptions="CenterAndExpand" />
+                            <Label Text="Check"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center" />
+                        </StackLayout>
+                    </SwipeItemView>
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <Grid HeightRequest="70"
+                  WidthRequest="300"
+                  BackgroundColor="LightGray">
+                <Label Text="What's 2+2?"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+
+    </StackLayout>
+</ContentPage>
