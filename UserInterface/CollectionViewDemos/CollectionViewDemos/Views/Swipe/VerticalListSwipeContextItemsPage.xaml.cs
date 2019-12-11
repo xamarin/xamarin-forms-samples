@@ -8,7 +8,7 @@ namespace CollectionViewDemos.Views
         public VerticalListSwipeContextItemsPage()
         {
             InitializeComponent();
-            BindingContext = new MonkeysViewModel();
+            BindingContext = new MonkeysViewModel();            
         }
     }
 }
