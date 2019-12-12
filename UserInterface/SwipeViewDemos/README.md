@@ -11,10 +11,7 @@ extensions:
     - ui
 urlFragment: userinterface-swipeviewdemos
 ---
-
 # SwipeView
-
-## Overview
 
 This sample demonstrates how to use the Xamarin.Forms `SwipeView`.
 

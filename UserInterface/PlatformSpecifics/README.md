@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Platform Specifics
-description: "How to consume the platform-specifics that are built into Xamarin.Forms (UI)"
+description: "This sample demonstrates how to consume the platform-specifics that are built into Xamarin.Forms (UI)"
 page_type: sample
 languages:
 - csharp

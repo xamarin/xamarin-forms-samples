@@ -11,10 +11,7 @@ extensions:
     - ui
 urlFragment: userinterface-indicatorviewdemos
 ---
-
 # IndicatorView
-
-## Overview
 
 This sample demonstrates how to use the Xamarin.Forms `IndicatorView`.
 
