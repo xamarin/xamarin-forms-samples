@@ -25,6 +25,7 @@
     <Folder Include="Views\Grouping\" />
     <Folder Include="Views\HeadersAndFooters\" />
     <Folder Include="Views\PullToRefresh\" />
+    <Folder Include="Views\Swipe\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -66,6 +67,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
   </ItemGroup>
 </Project>

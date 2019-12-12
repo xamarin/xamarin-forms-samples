@@ -2,9 +2,9 @@
 
 namespace CarouselViewDemos.Views
 {
-    public partial class HorizontalLayoutMultipleItemsPage : ContentPage
+    public partial class HorizontalSwipeItemsPage : ContentPage
     {
-        public HorizontalLayoutMultipleItemsPage()
+        public HorizontalSwipeItemsPage()
         {
             InitializeComponent();
         }

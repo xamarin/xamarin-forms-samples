@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:CollectionViewDemos.ViewModels"
+             x:Class="CollectionViewDemos.Views.VerticalListSwipeContextItemsPage"
+             Title="Context menu items">
+    <StackLayout Margin="20">
+        <CollectionView x:Name="collectionView"
+                        ItemsSource="{Binding Monkeys}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.LeftItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Favorite"
+                                           IconImageSource="favorite.png"
+                                           BackgroundColor="LightGreen"
+                                           Command="{Binding Source={x:Reference collectionView}, Path=BindingContext.FavoriteCommand}"
+                                           CommandParameter="{Binding}" />
+                                <SwipeItem Text="Delete"
+                                           IconImageSource="delete.png"
+                                           BackgroundColor="LightPink"
+                                           Command="{Binding Source={x:Reference collectionView}, Path=BindingContext.DeleteCommand}"
+                                           CommandParameter="{Binding}" />
+                            </SwipeItems>
+                        </SwipeView.LeftItems>
+                        <Grid BackgroundColor="White"
+                              Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.RowSpan="2" 
+                                   Source="{Binding ImageUrl}" 
+                                   Aspect="AspectFill"
+                                   HeightRequest="60" 
+                                   WidthRequest="60" />
+                            <Label Grid.Column="1" 
+                                   Text="{Binding Name}" 
+                                   FontAttributes="Bold" />
+                            <Label Grid.Row="1"
+                                   Grid.Column="1" 
+                                   Text="{Binding Location}"
+                                   FontAttributes="Italic" 
+                                   VerticalOptions="End" />
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

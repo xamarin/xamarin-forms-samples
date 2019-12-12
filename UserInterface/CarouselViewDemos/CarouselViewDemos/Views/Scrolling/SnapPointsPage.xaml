@@ -30,8 +30,7 @@
         </StackLayout>
         <CarouselView x:Name="carouselView"
                       ItemsSource="{Binding Monkeys}"
-                      NumberOfSideItems="1">
-                    <!-- PeekAreaInsets="100" -->
+                      PeekAreaInsets="100">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>

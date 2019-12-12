@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -21,6 +21,7 @@
     <Folder Include="Helpers\" />
     <Folder Include="Views\Spacing\" />
     <Folder Include="Views\Interaction\" />
+    <Folder Include="Views\Swipe\" />
   </ItemGroup>
 
   <ItemGroup>

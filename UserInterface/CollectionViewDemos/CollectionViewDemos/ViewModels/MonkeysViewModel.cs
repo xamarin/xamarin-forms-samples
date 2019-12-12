@@ -51,6 +51,8 @@ namespace CollectionViewDemos.ViewModels
 
         public string SelectedMonkeyMessage { get; private set; }
 
+        public ICommand DeleteCommand => new Command<Monkey>(RemoveMonkey);
+        public ICommand FavoriteCommand => new Command<Monkey>(FavoriteMonkey);
         public ICommand FilterCommand => new Command<string>(FilterItems);
         public ICommand MonkeySelectionChangedCommand => new Command(MonkeySelectionChanged);
 
@@ -233,6 +235,19 @@ namespace CollectionViewDemos.ViewModels
             SelectedMonkeyMessage = $"Selection {selectionCount}: {SelectedMonkey.Name}";
             OnPropertyChanged("SelectedMonkeyMessage");
             selectionCount++;
+        }
+
+        void RemoveMonkey(Monkey monkey)
+        {
+            if (Monkeys.Contains(monkey))
+            {
+                Monkeys.Remove(monkey);
+            }
+        }
+
+        void FavoriteMonkey(Monkey monkey)
+        {
+            monkey.IsFavorite = !monkey.IsFavorite;
         }
 
         #region INotifyPropertyChanged
