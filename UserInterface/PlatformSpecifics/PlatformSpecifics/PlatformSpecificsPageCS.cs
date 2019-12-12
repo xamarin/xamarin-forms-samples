@@ -42,7 +42,8 @@ namespace PlatformSpecifics
                         new TextCell { Text = "Slider Update on Tap", Command = NavigateCommand, CommandParameter = typeof(iOSSliderUpdateOnTapPageCS) },
                         new TextCell { Text = "NavigationPage NavigationBarSeparator", Command = NavigateCommand, CommandParameter = typeof(iOSTitleViewPageCS) },
                         new TextCell { Text = "iPad Page Modal FormSheet Page", Command = NavigateCommand, CommandParameter = typeof(iOSModalFormSheetPageCS) },
-                        new TextCell { Text = "Hide Home Indicator on Page", Command = NavigateCommand, CommandParameter = typeof(iOSHideHomeIndicatorPageCS) }
+                        new TextCell { Text = "Hide Home Indicator on Page", Command = NavigateCommand, CommandParameter = typeof(iOSHideHomeIndicatorPageCS) },
+                        new TextCell { Text = "SwipeView SwipeTransitionMode", Command = NavigateCommand, CommandParameter = typeof(iOSSwipeViewTransitionModePageCS) }
                     },
                     new TableSection("Android")
                     {
@@ -58,7 +59,8 @@ namespace PlatformSpecifics
                         new TextCell { Text = "NavigationPage BarHeight", Command = NavigateCommand, CommandParameter = typeof(AndroidTitleViewPageCS) },
                         new TextCell { Text = "ImageButton Shadow Effect", Command = NavigateCommand, CommandParameter = typeof(AndroidImageButtonPageCS) },
                         new TextCell { Text = "WebView Zoom Controls", Command = NavigateCommand, CommandParameter = typeof(AndroidWebViewZoomPageCS) },
-                        new TextCell { Text = "ViewCell Context Actions", Command = NavigateCommand, CommandParameter = typeof(AndroidViewCellPageCS) }
+                        new TextCell { Text = "ViewCell Context Actions", Command = NavigateCommand, CommandParameter = typeof(AndroidViewCellPageCS) },
+                        new TextCell { Text = "SwipeView SwipeTransitionMode", Command = NavigateCommand, CommandParameter = typeof(AndroidSwipeViewTransitionModePageCS) }
                     },
                     new TableSection("UWP")
                     {

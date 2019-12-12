@@ -20,6 +20,7 @@
             <TextCell Text="NavigationPage NavigationBarSeparator" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSTitleViewPage}" />
             <TextCell Text="iPad Page Modal FormSheet Page" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSModalFormSheetPage}" />
             <TextCell Text="Hide Home Indicator on Page" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSHideHomeIndicatorPage}" />
+            <TextCell Text="SwipeView SwipeTransitionMode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSSwipeViewTransitionModePage}" />
         </TableSection>
         <TableSection Title="Android">
             <TextCell Text="Soft Input Mode Adjust" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:AndroidSoftInputModeAdjustPage}" />
@@ -35,6 +36,7 @@
             <TextCell Text="ImageButton Shadow Effect" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:AndroidImageButtonPage}" />
             <TextCell Text="WebView Zoom Controls" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:AndroidWebViewZoomPage}" />
             <TextCell Text="ViewCell Context Actions" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:AndroidViewCellPage}" />
+            <TextCell Text="SwipeView SwipeTransitionMode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:AndroidSwipeViewTransitionModePage}" />
         </TableSection>
         <TableSection Title="UWP">
             <TextCell Text="TabbedPage Toolbar Location" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsTabbedPage}" />

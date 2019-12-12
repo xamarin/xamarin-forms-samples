@@ -204,6 +204,12 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:IncrementalLoadingPage}" />
             </TableSection>
+            <TableSection Title="Swipe">
+                <TextCell Text="Context menu items"
+                          Detail="Vertical list"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VerticalListSwipeContextItemsPage}" />
+            </TableSection>
         </TableRoot>
     </TableView>
 </ContentPage>

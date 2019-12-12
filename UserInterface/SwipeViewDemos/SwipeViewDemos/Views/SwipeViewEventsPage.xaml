@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SwipeViewDemos.SwipeViewEventsPage"
+             Title="SwipeView events demo">
+    <StackLayout Margin="20">
+        <SwipeView x:Name="swipeView"
+                   SwipeStarted="OnSwipeStarted"
+                   SwipeChanging="OnSwipeChanging"
+                   SwipeEnded="OnSwipeEnded"
+                   CloseRequested="OnCloseRequested">
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem Text="Favorite"
+                               IconImageSource="favorite.png"
+                               BackgroundColor="LightGreen"
+                               Invoked="OnFavoriteSwipeItemInvoked" />
+                    <SwipeItem Text="Delete"
+                               IconImageSource="delete.png"
+                               BackgroundColor="LightPink"
+                               Invoked="OnDeleteSwipeItemInvoked" />
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <Grid HeightRequest="60"
+                  WidthRequest="300"
+                  BackgroundColor="LightGray">
+                <Label Text="Swipe right"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+        <Button Text="Close Swipe"
+                Clicked="OnCloseButtonClicked" />
+    </StackLayout>
+</ContentPage>

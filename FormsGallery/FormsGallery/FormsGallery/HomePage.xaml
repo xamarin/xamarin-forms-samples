@@ -79,6 +79,11 @@
                               Detail="Initiate a search"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.SearchBarDemoPage}" />
+
+                    <TextCell Text="SwipeView"
+                              Detail="Initiate a command"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.SwipeViewDemoPage}" />
                 </TableSection>
 
                 <TableSection Title="Views for Setting Values">

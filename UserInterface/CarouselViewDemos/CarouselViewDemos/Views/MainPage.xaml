@@ -27,10 +27,6 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:VerticalTemplateLayoutPage}" />
                 <TextCell Text="Horizontal layout"
-                          Detail="Multiple items"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type views:HorizontalLayoutMultipleItemsPage}" />
-                <TextCell Text="Horizontal layout"
                           Detail="Peek items"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:HorizontalLayoutPeekAreaPage}" />
@@ -54,10 +50,6 @@
                           CommandParameter="{x:Type views:VerticalSpacingPage}" />
             </TableSection>
             <TableSection Title="Sizing">
-                <TextCell Text="Variable size items"
-                          Detail="Horizontal layout"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type views:VariableSizeItemsPage}" />
                 <TextCell Text="Dynamic item sizing"
                           Detail="Horizontal layout"
                           Command="{Binding NavigateCommand}"
@@ -139,7 +131,12 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:VerticalPullToRefreshPage}" />
             </TableSection>
-
+            <TableSection Title="Swipe">
+                <TextCell Text="Context menu items"
+                          Detail="Horizontal layout"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:HorizontalSwipeItemsPage}" />
+            </TableSection>
         </TableRoot>
     </TableView>
 </ContentPage>
