@@ -12,6 +12,7 @@ namespace PlatformSpecifics.iOS
     {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Xamarin.Forms.Forms.SetFlags("SwipeView_Experimental");
             global::Xamarin.Forms.Forms.Init();
 
             LoadApplication(new App());
