@@ -19,6 +19,7 @@ namespace ADB2CAuthorization
             AuthenticationClient = PublicClientApplicationBuilder.Create(Constants.ClientId)
                 .WithIosKeychainSecurityGroup(Constants.IosKeychainSecurityGroups)
                 .WithB2CAuthority(Constants.AuthoritySignin)
+                .WithRedirectUri($"msal{Constants.ClientId}://auth")
                 .Build();
 
             MainPage = new NavigationPage(new LoginPage());
