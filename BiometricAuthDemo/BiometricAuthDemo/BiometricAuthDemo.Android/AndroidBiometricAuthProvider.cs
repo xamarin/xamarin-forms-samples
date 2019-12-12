@@ -25,10 +25,12 @@ namespace BiometricAuthDemo.Droid
 
         public void RequestAuthentication(Action<BiometricAuthResult> completionCallback)
         {
-            CryptoObjectHelper cryptoHelper = new CryptoObjectHelper();
+            var crypto = new CryptoObjectHelper().BuildCryptoObject();
             var cancellationSignal = new Android.Support.V4.OS.CancellationSignal();
             var authCallback = new BiometricAuthenticationCallback(completionCallback);
-            fingerprintManager.Authenticate(cryptoHelper.BuildCryptoObject(),
+
+            // TODO: fix to use crypto!
+            fingerprintManager.Authenticate(null,
                 Constants.AuthenticationFlags,
                 cancellationSignal,
                 authCallback,
@@ -47,7 +49,7 @@ namespace BiometricAuthDemo.Droid
             }
             else
             {
-                // NOTE: request permissions here
+                // NOTE: try to request permissions here
                 hasPermissions = false;
             }
         }

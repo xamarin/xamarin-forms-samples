@@ -15,7 +15,7 @@ namespace BiometricAuthDemo.Droid
 
         public override void OnAuthenticationSucceeded(FingerprintManagerCompat.AuthenticationResult result)
         {
-            if(result.CryptoObject.Cipher != null)
+            if(result.CryptoObject?.Cipher != null)
             {
                 try
                 {
