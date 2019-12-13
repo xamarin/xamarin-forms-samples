@@ -14,8 +14,7 @@ namespace IndicatorViewDemos.Droid
 
             base.OnCreate(savedInstanceState);
 
-            Xamarin.Forms.Forms.SetFlags("IndicatorView_Experimental");
-            Xamarin.Forms.Forms.SetFlags("CarouselView_Experimental");
+            Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "IndicatorView_Experimental" });
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
