@@ -10,5 +10,7 @@ namespace BiometricAuthDemo
         bool IsBiometricAuthEnabled { get; }
 
         void RequestAuthentication(Action<BiometricAuthResult> completionCallback);
+
+        void Init();
     }
 }

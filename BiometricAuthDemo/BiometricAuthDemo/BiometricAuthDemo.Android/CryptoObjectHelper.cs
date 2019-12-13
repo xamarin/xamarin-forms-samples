@@ -25,10 +25,11 @@ namespace BiometricAuthDemo.Droid
         Cipher CreateCipher(bool retry = true)
         {
             IKey key = GetKey();
+
             Cipher cipher = Cipher.GetInstance(Constants.Transformation);
             try
             {
-                cipher.Init(CipherMode.EncryptMode | CipherMode.DecryptMode, key);
+                cipher.Init(CipherMode.EncryptMode, key);
             }
             catch (KeyPermanentlyInvalidatedException e)
             {
@@ -47,19 +48,18 @@ namespace BiometricAuthDemo.Droid
 
         IKey GetKey()
         {
-            IKey secretKey;
             if (!keystore.IsKeyEntry(Constants.KeyName))
             {
                 CreateKey();
             }
 
-            secretKey = keystore.GetKey(Constants.KeyName, null);
+            IKey secretKey = keystore.GetKey(Constants.KeyName, null);
             return secretKey;
         }
 
         void CreateKey()
         {
-            KeyGenerator keyGen = KeyGenerator.GetInstance(KeyProperties.KeyAlgorithmAes, Constants.StoreName);
+            KeyGenerator keyGen = KeyGenerator.GetInstance(Constants.KeyAlgo, Constants.StoreName);
             KeyGenParameterSpec keyGenSpec =
                 new KeyGenParameterSpec.Builder(Constants.KeyName, KeyStorePurpose.Encrypt | KeyStorePurpose.Decrypt)
                     .SetBlockModes(Constants.BlockMode)

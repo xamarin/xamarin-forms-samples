@@ -15,14 +15,8 @@ namespace BiometricAuthDemo.Droid
 {
     public static class Constants
     {
-        // NOTE: this is always 0 as a reserved parameter for the auth callback
-        // as stated in Android documentation
-        public static readonly int AuthenticationFlags = 0;
-
         // Auth callback settings
-        public static readonly byte[] SecretBytes = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
-        public static readonly string Tag = "AnyStringSuchAsThisApplicationName";
-        
+        public static readonly byte[] SecretBytes = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         // Crypto helper settings
         public static readonly string KeyName = "com.xamarin.forms.biometricauth";

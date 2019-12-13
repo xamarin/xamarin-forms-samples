@@ -1,5 +1,6 @@
 ﻿using Android.Support.V4.Hardware.Fingerprint;
 using Java.Lang;
+using Javax.Crypto;
 using System;
 
 namespace BiometricAuthDemo.Droid
@@ -24,7 +25,15 @@ namespace BiometricAuthDemo.Droid
                     // If no errors occurred the attempt succeeded
                     TryPerformCallback(true, "Authentication successful!");
                 }
-                catch(System.Exception ex)
+                catch(BadPaddingException bpe)
+                {
+                    TryPerformCallback(false, "Error: Bad encryption block padding.");
+                }
+                catch(IllegalBlockSizeException ibse)
+                {
+                    TryPerformCallback(false, "Error: Illegal block size.");
+                }
+                catch (System.Exception ex)
                 {
                     TryPerformCallback(false, "Unexpected result from authentication process.");
                 }
