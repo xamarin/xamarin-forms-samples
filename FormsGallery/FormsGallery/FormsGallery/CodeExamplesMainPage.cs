@@ -231,6 +231,14 @@ namespace FormsGallery
 
                         new TextCell
                         {
+                            Text = "IndicatorView",
+                            Detail = "Display indicators for each item in a CarouselView",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.IndicatorViewDemoPage)
+                        },
+
+                        new TextCell
+                        {
                             Text = "Picker",
                             Detail = "Select from a list of text items",
                             Command = navigateCommand,

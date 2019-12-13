@@ -162,6 +162,11 @@
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.ListViewDemoPage}" />
 
+                    <TextCell Text="IndicatorView"
+                              Detail="Display indicators for each item in a CarouselView"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.IndicatorViewDemoPage}" />
+
                     <TextCell Text="Picker"
                               Detail="Select from a list of text items"
                               Command="{Binding NavigateCommand}"

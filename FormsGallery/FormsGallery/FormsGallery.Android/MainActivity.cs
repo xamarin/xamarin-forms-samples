@@ -14,8 +14,7 @@ namespace FormsGallery.Droid
 
             base.OnCreate(bundle);
 
-            Xamarin.Forms.Forms.SetFlags("SwipeView_Experimental");
-            Xamarin.Forms.Forms.SetFlags("CarouselView_Experimental");
+            Xamarin.Forms.Forms.SetFlags(new string[] {"SwipeView_Experimental", "IndicatorView_Experimental", "CarouselView_Experimental" });
             global::Xamarin.Forms.Forms.Init(this, bundle);
             global::Xamarin.FormsMaps.Init(this, bundle);
             LoadApplication(new App());
