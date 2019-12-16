@@ -12,5 +12,11 @@
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\ConfigurableIndicatorViewPage.xaml.cs">
+      <DependentUpon>ConfigurableIndicatorViewPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

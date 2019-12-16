@@ -129,4 +129,7 @@
       <Name>IndicatorViewDemos</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ionicons.ttf" />
+  </ItemGroup>
 </Project>
