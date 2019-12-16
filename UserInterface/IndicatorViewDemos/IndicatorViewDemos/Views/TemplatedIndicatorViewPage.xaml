@@ -47,7 +47,7 @@
         <IndicatorView ItemsSourceBy="carouselView"
                        Margin="0,0,0,40"
                        IndicatorColor="LightGray"
-                       SelectedIndicatorColor="DarkGray"
+                       SelectedIndicatorColor="Black"
                        HorizontalOptions="Center">
             <IndicatorView.IndicatorTemplate>
                 <DataTemplate>
