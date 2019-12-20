@@ -50,8 +50,6 @@ namespace Notes.UWP
 
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
-
-                SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
             }
 
             if (e.PrelaunchActivated == false)
@@ -65,16 +63,6 @@ namespace Notes.UWP
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
-            }
-        }
-
-        void OnBackRequested(object sender, BackRequestedEventArgs e)
-        {
-            Frame rootFrame = Window.Current.Content as Frame;
-            if (rootFrame.CanGoBack)
-            {
-                e.Handled = true;
-                rootFrame.GoBack();
             }
         }
 
