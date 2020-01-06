@@ -15,3 +15,4 @@ This sample demonstrates using attached properties to pass parameters to an effe
 For more information about the sample see [Creating an Effect](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/effects/creating), and [Passing Parameters to an Effect](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/effects/passing-parameters/).
 
 ![Shadow Effect with Runtime Parameter Change application screenshot](Screenshots/01All.png "Shadow Effect with Runtime Parameter Change application screenshot")
+

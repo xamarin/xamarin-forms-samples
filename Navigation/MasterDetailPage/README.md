@@ -15,3 +15,4 @@ This sample demonstrates how to use a `MasterDetailPage` and navigate between it
 For more information about the sample see [Master-Detail Page](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/navigation/master-detail-page).
 
 ![MasterDetailPage application screenshot](Screenshots/01All.png "MasterDetailPage application screenshot")
+

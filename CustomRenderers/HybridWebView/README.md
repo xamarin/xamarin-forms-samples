@@ -15,3 +15,4 @@ This sample demonstrates a custom renderer for a `HybridWebView` custom control,
 For more information about this sample see [Implementing a HybridWebView](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/custom-renderer/hybridwebview/).
 
 ![HybridWebView Custom Renderer application screenshot](Screenshots/01All.png "HybridWebView Custom Renderer application screenshot")
+

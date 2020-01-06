@@ -21,3 +21,4 @@ The calculations are handled in a *TipCalcModel* class, and the entire user inte
 XAML in the TipCalcPage.xaml file. Two data-binding value converters help massage the data between the data model and the XAML file.
 
 ![TipCalc application screenshot](Screenshots/01Android.png "TipCalc application screenshot")
+

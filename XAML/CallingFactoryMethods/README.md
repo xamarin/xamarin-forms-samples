@@ -33,3 +33,4 @@ For more information about this sample, see [Passing Arguments in XAML](https://
     </BoxView.Color>
 </BoxView>
 ```
+

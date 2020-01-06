@@ -23,3 +23,4 @@ In all cases the tasks are stored in an in-memory collection that's accessed thr
 For more information about the sample see [Consuming a Windows Communication Foundation (WCF) Web Service](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/web-services/consuming/wcf/).
 
 ![TodoWCF application screenshot](Screenshots/01All.png "TodoWCF application screenshot")
+

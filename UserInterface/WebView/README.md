@@ -30,3 +30,4 @@ The other tab demonstrates how to listen for and respond to changes in navigatio
 - **Navigated** - event raised when the `WebView` has completed navigating.
 
 ![Xamarin.Forms WebView application screenshot](Screenshots/load_end.png "Xamarin.Forms WebView application screenshot")
+

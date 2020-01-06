@@ -18,3 +18,4 @@ This sample demonstrates binding a layout class to a collection of items, and se
 For more information about this sample see [Bindable Layouts in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/layouts/bindable-layouts/).
 
 ![Bindable Layouts application screenshot](Screenshots/01All.png "Bindable Layouts application screenshot")
+

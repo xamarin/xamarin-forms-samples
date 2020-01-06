@@ -33,3 +33,4 @@ The accompanying Xamarin.Forms sample application consumes a Xamarin-hosted WCF 
 1. In *Visual Studio* or *Visual Studio for Mac*, load the *TodoWCF solution*, expand the *TodoWCF* project and update the `Constants.SoapUrl` property to the address of the web app created in the previous steps.
 
 For more information about publishing to an Azure Web App, see [Creating an ASP.NET web app in Azure App Service](https://azure.microsoft.com/en-gb/documentation/articles/web-sites-dotnet-get-started/#create-an-aspnet-web-application).
+

@@ -17,3 +17,4 @@ Note: to use this sample on Android, you must add your **google-services.json** 
 For more information about this sample, see [Application Indexing and Deep Linking](https://developer.xamarin.com/guides/xamarin-forms/working-with/deep-linking/).
 
 ![Deep Linking application screenshot](Screenshots/01All.png "Deep Linking application screenshot")
+

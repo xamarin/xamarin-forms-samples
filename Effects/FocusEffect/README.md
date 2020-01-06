@@ -15,3 +15,4 @@ This sample demonstrates creating an effect for the `Entry` control, that change
 For more information about the sample see [Creating an Effect](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/effects/creating).
 
 ![Focus Effect application screenshot](Screenshots/01All.png "Focus Effect application screenshot")
+

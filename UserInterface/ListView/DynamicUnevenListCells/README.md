@@ -18,3 +18,4 @@ This sample demonstrates using the `Cell.ForceUpdateSize` method to programmatic
 For more information about the sample see [List Appearance](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-list-appearance).
 
 ![Dynamic ListView Row Resizing application screenshot](Screenshots/01All.png "Dynamic ListView Row Resizing application screenshot")
+

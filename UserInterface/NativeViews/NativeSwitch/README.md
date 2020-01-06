@@ -18,3 +18,4 @@ This sample demonstrates how to add native views to a Xamarin.Forms page, and ho
 For more information about this sample see [Native Views](https://docs.microsoft.com/xamarin/xamarin-forms/platform/native-views/).
 
 ![Native Switch application screenshot](Screenshots/01All.png "Native Switch application screenshot")
+

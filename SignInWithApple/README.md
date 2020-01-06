@@ -194,3 +194,4 @@ First of all, it is very important that you should **never** store your P8 key i
 It is also considered a bad practice to use a `WebView` to host the authentication flow, and to intercept URL Navigation events to obtain the authorization code.
 
 There is currently no secure way to handle the Apple Sign In flow on non iOS13+ devices/platforms without hosting some code on a server to handle the token exchange.  We also recommend hosting the authorization url generation code on the server so you can cache the state and validate it when Apple POST's a callback to your server.
+

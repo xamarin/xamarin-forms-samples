@@ -19,3 +19,4 @@ The `Map` control displays a map, and requires the Xamarin.Forms.Maps NuGet pack
 For more information, see [Xamarin.Forms Map](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/map).
 
 ![Maps application screenshot](Screenshots/01All.png "Map application screenshot")
+

@@ -18,3 +18,4 @@ This sample demonstrates how to use the various XAML markup extensions in Xamari
 For more information about this code, see the article [XAML Markup Extensions](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/xaml/markup-extensions/).
 
 ![Markup Extensions application screenshot](Screenshots/01MainPage-Large.png "Markup Extensions application screenshot")
+

@@ -18,3 +18,4 @@ This sample relates to the [TableView in Xamarin.Forms](https://docs.microsoft.c
 The app consists of several tabs. There are four tabs with identical tables, with each demonstrating a different `TableIntent`. There is one tab demonstrating the customization options of `EntryCell`. Another tab demonstrates `SwitchCell`.
 
 ![Xamarin.Forms TableView application screenshot](Screenshots/entry.png "Xamarin.Forms TableView application screenshot")
+

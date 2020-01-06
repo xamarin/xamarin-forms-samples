@@ -15,3 +15,4 @@ This sample demonstrates creating a `DataTemplate` to specify the appearance of 
 For more information about the sample see [Data Templates](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/templates/data-templates/).
 
 ![Data Template application screenshot](Screenshots/01All.png "Data Template application screenshot")
+

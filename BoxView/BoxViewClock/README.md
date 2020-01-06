@@ -17,3 +17,4 @@ Although Xamarin.Forms doesn't have a vector graphics programming interface, it 
 This sample is described in more detail in the article on [BoxView](/guides/xamarin-forms/user-interface/boxview/).
 
 ![BoxView Clock application screenshot](Screenshots/01Triple.png "BoxView Clock application screenshot")
+

@@ -18,3 +18,4 @@ This sample demonstrates how to organize views into rows and columns, with the X
 For more information about this sample, see [Grid Tutorial](https://docs.microsoft.com/xamarin/get-started/tutorials/grid/).
 
 ![Grid Tutorial application screenshot](Screenshots/01All.png "Grid Tutorial application screenshot")
+

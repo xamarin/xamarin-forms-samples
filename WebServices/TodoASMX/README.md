@@ -23,3 +23,4 @@ In all cases the tasks are stored in an in-memory collection that's accessed thr
 For more information about the sample see [Consuming an ASP.NET Web Service (ASMX)](https://docs.microsoft.com/xamarin/xamarin-forms/data-cloud/web-services/asmx).
 
 ![TodoASMX application screenshot](Screenshots/01All.png "TodoASMX application screenshot")
+

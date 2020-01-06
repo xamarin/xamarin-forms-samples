@@ -20,3 +20,4 @@ This sample demonstrates using a `RefreshView` to refresh data that's displayed 
 For more information about this sample, see [Xamarin.Forms RefreshView](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/refreshview).
 
 ![RefreshView demo application screenshot](Screenshots/01All.png "RefreshView demo screenshot")
+

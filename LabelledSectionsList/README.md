@@ -15,3 +15,4 @@ This sample demonstrates how to create an alphabetically ordered list with label
 LabelledSections is based off of https://github.com/xamarin/monodroid-samples/tree/master/LabelledSections
 
 ![LabelledSections application screenshot](Screenshots/LabelledSections_Android.png "LabelledSections application screenshot")
+

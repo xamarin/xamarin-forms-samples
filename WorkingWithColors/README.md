@@ -16,3 +16,4 @@ urlFragment: workingwithcolors
 These samples relate to the [Working with Colors in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/colors) doc.
 
 ![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/WorkingWithColors/Screenshots/Colors-sml.png "Colors")
+

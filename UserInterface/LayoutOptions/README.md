@@ -18,3 +18,4 @@ Every Xamarin.Forms view has `HorizontalOptions` and `VerticalOptions` propertie
 For more information about the sample see [LayoutOptions](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/layouts/layout-options).
 
 ![LayoutOptions application screenshot](Screenshots/01All.png "LayoutOptions application screenshot")
+

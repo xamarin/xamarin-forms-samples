@@ -22,3 +22,4 @@ This sample demonstrates a Xamarin.Forms application that uses theming, and whic
 For more information about this sample, see [Theming a Xamarin.Forms Application](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/theming/).
 
 ![Theming application screenshot](Screenshots/01All.png "Theming application screenshot")
+

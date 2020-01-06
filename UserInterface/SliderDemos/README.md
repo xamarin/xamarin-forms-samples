@@ -16,3 +16,4 @@ urlFragment: userinterface-sliderdemos
 This program demonstrates the Xamarin.Forms Slider in code, XAML with code-behind, and XAML data-binding scenarios.
 
 ![Slider Demos application screenshot](Screenshots/01BasicSliderCode-Large.png "Slider Demos application screenshot")
+

@@ -16,3 +16,4 @@ This sample demonstrates how to create an effect that renders any control derivi
 For more information about the sample see [Xamarin.Forms Reusable RoundEffect](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/effects/reusable-roundeffect).
 
 ![Round Effect application on iOS and Android](Screenshots/round-effect.png "Round effect application on iOS and Android")
+

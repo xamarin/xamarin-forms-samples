@@ -18,3 +18,4 @@ This sample demonstrates a multi-page Xamarin.Forms application that's capable o
 For more information about the sample see [Store Data in a Local SQLite.NET Database](https://docs.microsoft.com/xamarin/get-started/quickstarts/database).
 
 ![Notes (local database) application screenshot](Screenshots/01All.png "Notes (local database) application screenshot")
+

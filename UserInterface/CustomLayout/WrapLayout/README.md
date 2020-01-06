@@ -18,3 +18,4 @@ This sample demonstrates an orientation-sensitive `WrapLayout` class that arrang
 For more information about this sample see [Creating a Custom Layout](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/layouts/custom).
 
 ![WrapLayout application screenshot](Screenshots/01All.png "WrapLayout application screenshot")
+

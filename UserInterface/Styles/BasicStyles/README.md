@@ -18,3 +18,4 @@ Xamarin.Forms applications often contain multiple controls that have an identica
 For more information about the sample see [Styles](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/styles/).
 
 ![BasicStyles application screenshot](Screenshots/01All.png "BasicStyles application screenshot")
+

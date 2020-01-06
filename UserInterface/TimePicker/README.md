@@ -18,3 +18,4 @@ This sample demonstrates how to use a `TimePicker` view to select a time, and re
 For more information about this sample, see [Xamarin.Forms TimePicker](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/timepicker).
 
 ![TimePicker application screenshot](Screenshots/01All.png "TimePicker application screenshot")
+

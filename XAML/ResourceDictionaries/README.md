@@ -18,3 +18,4 @@ This sample demonstrates creating and consuming a ResourceDictionary at the appl
 For more information about the sample see [Resource Dictionaries](https://docs.microsoft.com/xamarin/xamarin-forms/xaml/resource-dictionaries).
 
 ![Resource Dictionaries application screenshot](Screenshots/01All.png "Resource Dictionaries application screenshot")
+

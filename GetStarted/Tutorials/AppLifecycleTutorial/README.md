@@ -18,3 +18,4 @@ This sample demonstrates the Xamarin.Forms app lifecycle, and how to persist dat
 For more information about this sample, see [App Lifecycle Tutorial](https://docs.microsoft.com/xamarin/get-started/tutorials/app-lifecycle/).
 
 ![App Lifecycle Tutorial application screenshot](Screenshots/01All.png "App Lifecycle Tutorial application screenshot")
+

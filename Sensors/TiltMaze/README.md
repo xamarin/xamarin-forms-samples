@@ -19,3 +19,4 @@ Xamarin.Forms no longer runs on Windows Phone or Windows 10 Mobile devices, but 
 A different version of this program originally appeared in the book _Programming Windows Phone 7_, published in 2010. That version used XNA for the graphics. The Xamarin.Forms version uses `BoxView` elements for the maze and a custom `EllipseView` element for the ball and hole.
 
 ![Tilt Maze application screenshot](Screenshots/TiltMaze.png "Tilt Maze application screenshot")
+
