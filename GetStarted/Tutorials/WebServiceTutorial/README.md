@@ -18,3 +18,4 @@ This sample demonstrates how to consume REST-based web services from Xamarin.For
 For more information about this sample, see [Web Service Tutorial](https://docs.microsoft.com/xamarin/get-started/tutorials/web-service/).
 
 ![Web Service Tutorial application screenshot](Screenshots/01All.png "Web Service Tutorial application screenshot")
+

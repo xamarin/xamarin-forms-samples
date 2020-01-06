@@ -58,3 +58,4 @@ The Xamarin.Forms samples in the [Microsoft samples browser](https://docs.micros
 This approach ensures that all samples integrate with the Microsoft [sample code browser](https://docs.microsoft.com/samples/browse/?term=Xamarin.Forms).
 
 If you have any questions, create an issue or ask on the [Xamarin Forums](https://forums.xamarin.com/).
+

@@ -15,3 +15,4 @@ Sample code associated with the [ListView Docs](https://docs.microsoft.com/xamar
 This sample demonstrates basic use of ListView populated with just an array of strings, using the default view.
 
 ![Screenshot of Basic ListView Demo on iOS and Android](Screenshots/basic-listview-demo.png)
+

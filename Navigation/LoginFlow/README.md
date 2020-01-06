@@ -15,3 +15,4 @@ This sample demonstrates how to manipulate the navigation stack in order to only
 For more information about the sample see [Hierarchical Navigation](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/navigation/hierarchical).
 
 ![LoginFlow application screenshot](Screenshots/01All.png "LoginFlow application screenshot")
+

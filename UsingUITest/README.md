@@ -30,3 +30,4 @@ The Visual Studio for Mac test runner can run these tests in the platform simula
 ![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/UITestDemo/Screenshots/Tests.png "Test hierarchy")
 
 ![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/UITestDemo/Screenshots/Results.png "Results (ignore the ignored tests)")
+

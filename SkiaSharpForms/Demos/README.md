@@ -15,3 +15,4 @@ The SkiaSharpFormsDemos program demonstrates the use of SkiaSharp in a Xamarin.F
 For more information about this sample, see [Using SkiaSharp in Xamarin.Forms](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/).
 
 ![SkiaSharp and Xamarin.Forms application screenshot](Screenshots/Image0.png "SkiaSharp and Xamarin.Forms application screenshot")
+

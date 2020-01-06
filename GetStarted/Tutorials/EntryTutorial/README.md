@@ -18,3 +18,4 @@ This sample demonstrates how to accept single-line text input, using the Xamarin
 For more information about this sample, see [Entry Tutorial](https://docs.microsoft.com/xamarin/get-started/tutorials/entry/).
 
 ![Entry Tutorial application screenshot](Screenshots/01All.png "Entry Tutorial application screenshot")
+

@@ -29,3 +29,4 @@ The layout of the keys appears twice in the **MainPage.xaml** file, separately f
 The calculator logic is encapsulated in the **RpnCalculatorViewModel.cs** file. The XAML file and the ViewModel are linked through XAML-based data bindings, which are described in detail in the series of series of articles on [**Data Binding**](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/), and particularly the [**The Command Interface**](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/commanding) article.
 
 ![RPN Calculator application screenshot](Screenshots/01Portrait.a.png "RPN Calculator application screenshot")
+

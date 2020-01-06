@@ -15,3 +15,4 @@ This sample demonstrates a custom renderer for a `ViewCell` that's hosted inside
 For more information about this sample see [Customizing a ViewCell](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/custom-renderer/viewcell/).
 
 ![ViewCell Custom Renderer application screenshot](Screenshots/01Android.png "ViewCell Custom Renderer application screenshot")
+

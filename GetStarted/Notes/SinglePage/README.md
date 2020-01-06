@@ -18,3 +18,4 @@ This sample demonstrates a simple cross-platform Notes application that allows y
 For more information about the sample see [Create a Single Page Xamarin.Forms Application](https://docs.microsoft.com/xamarin/get-started/quickstarts/single-page).
 
 ![Notes (single page) application screenshot](Screenshots/01All.png "Notes (single page) application screenshot")
+

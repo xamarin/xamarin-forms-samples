@@ -18,3 +18,4 @@ This sample demonstrates how to use a `CheckBox` in code, XAML with code-behind,
 For more information about this sample, see [Xamarin.Forms CheckBox](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/checkbox).
 
 ![CheckBox Demos application screenshot](Screenshots/01All.png "CheckBox Demos application screenshot")
+

@@ -24,3 +24,4 @@ This application demonstrates several layout topics, from beginner to advanced, 
 - Grid
 
 ![Xamarin.Forms Layout Demos application screenshot](Screenshots/anchor_end.png "Xamarin.Forms Layout Demos application screenshot")
+

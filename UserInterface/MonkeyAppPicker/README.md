@@ -18,3 +18,4 @@ This sample demonstrates how to populate a `Picker` with data by setting the Ite
 For more information about this sample see [Setting a Picker's ItemsSource Property](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/picker/populating-itemssource).
 
 ![Monkey Picker application screenshot](Screenshots/01All.png "Monkey Picker application screenshot")
+

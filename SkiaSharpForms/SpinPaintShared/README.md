@@ -21,3 +21,4 @@ The current color of the line is indicated by the color of the title of the prog
 SpinPaint demonstrates the use of SkiaSharp in a Xamarin.Forms application. For more information about SkiaSharp see [Using SkiaSharp in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/graphics/skiasharp/). The program also uses a touch-tracking effect discussed in the article [Invoking Events from Effects](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/effects/touch-tracking).
 
 ![SpinPaintShared application screenshot](Screenshots/Image0.png "SpinPaintShared application screenshot")
+

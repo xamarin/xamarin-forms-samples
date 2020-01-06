@@ -17,3 +17,4 @@ A C# port of the [Solitaire encryption algorithm](https://www.schneier.com/solit
 This sample illustrates the inclusion of a Unit Test project in a Xamarin.Forms solution and also a custom `Button` [renderer](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/custom-renderer/).
 
 *^ The original port of this algorithm was done (by me) in 2002, and I've used that 2002-era code unchanged in this mobile app. It's kinda cool that 12-year-old C# code can just be dropped into an app that runs on iOS, Android, and the Universal Windows Platform.*
+

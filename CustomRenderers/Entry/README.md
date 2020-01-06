@@ -15,3 +15,4 @@ This sample demonstrates a custom renderer for the `Entry` control, enabling dev
 For more information about this sample see [Customizing an Entry](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/custom-renderer/entry/).
 
 ![Entry Custom Renderer application screenshot](Screenshots/01Android.png "Entry Custom Renderer application screenshot")
+

@@ -18,3 +18,4 @@ The `ViewExtensions` class provides extension methods that can be used to constr
 For more information about the sample see [Simple Animations](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/animation/simple).
 
 ![Basic snimation application](Screenshots/01All.png "Basic Animation application screenshot")
+

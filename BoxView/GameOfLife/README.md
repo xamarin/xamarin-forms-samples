@@ -22,3 +22,4 @@ For more information about the Game of Life, see the Wikipedia article [Conway's
 This sample is described in more detail in the article on [BoxView](/guides/xamarin-forms/user-interface/boxview/).
 
 ![Game of Life application screenshot](Screenshots/01Triple.png "Game of Life application screenshot")
+

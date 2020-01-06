@@ -26,3 +26,4 @@ In all cases the tasks are stored in a local SQLite database.
 For more information about the sample see [Working with a Local Database](https://docs.microsoft.com/xamarin/xamarin-forms/data-cloud/data/databases).
 
 ![Todo application screenshot](Screenshots/01All.png "Todo application screenshot")
+

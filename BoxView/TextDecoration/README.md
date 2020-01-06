@@ -15,3 +15,4 @@ One simple application of the `BoxView` element is for adorning text with horizo
 This sample is described in more detail in the article on [BoxView](/guides/xamarin-forms/user-interface/boxview/).
 
 ![Text Decoration application screenshot](Screenshots/01Triple.png "Text Decoration application screenshot")
+

@@ -18,3 +18,4 @@ This sample demonstrates how to add platform-specific controls to a Xamarin.Form
 For more information about this sample see [Native Embedding](https://docs.microsoft.com/xamarin/xamarin-forms/platform/native-views/).
 
 ![Native Embedding application screenshot](Screenshots/01All.png "Native Embedding application screenshot")
+

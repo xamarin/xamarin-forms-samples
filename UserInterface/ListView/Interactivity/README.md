@@ -21,3 +21,4 @@ This sample demonstrates how to implement interactivity in ListView. Implementat
 - Pull-to-Refresh
 - Taps
 - Selection
+

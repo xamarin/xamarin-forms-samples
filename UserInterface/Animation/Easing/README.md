@@ -18,3 +18,4 @@ Xamarin.Forms includes an `Easing` class that allows you to specify a transfer f
 For more information about the sample see [Easing Functions](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/animation/easing).
 
 ![Easing Functions application screenshot](Screenshots/01All.png "Easing Functions application screenshot")
+

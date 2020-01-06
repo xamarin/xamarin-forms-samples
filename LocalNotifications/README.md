@@ -18,3 +18,4 @@ Local notifications are alerts sent by applications installed on the mobile devi
 For more information about this sample, see [Xamarin.Forms local notifications](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/local-notifications).
 
 ![Local notifications application on iOS and Android](Screenshots/local-notifications-msg.png)
+

@@ -18,3 +18,4 @@ This program uses the Xamarin.Forms DatePicker to allow the selection of two dat
 See the article [Using DatePicker](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/datepicker) for more details.
 
 ![Days Between Dates application screenshot](Screenshots/01DaysBetweenDatesSelect-Large.png "Days Between Dates application screenshot")
+

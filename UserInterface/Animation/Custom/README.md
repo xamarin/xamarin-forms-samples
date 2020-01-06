@@ -18,3 +18,4 @@ The `Animation` class is the building block of all Xamarin.Forms animations, wit
 For more information about the sample see [Custom Animations](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/animation/custom).
 
 ![Custom Animations application screenshot](Screenshots/01All.png "Custom Animations application screenshot")
+

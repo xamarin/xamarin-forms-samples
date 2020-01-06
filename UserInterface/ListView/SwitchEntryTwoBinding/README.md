@@ -16,3 +16,4 @@ urlFragment: userinterface-listview-switchentrytwobinding
 Sample code associated with the [ListView docs](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/listview/):
 
 This sample demonstrates how to implement data collection using EntryCell and ViewCell in Xamarin.Forms. Implementations for XAML and C# provided.
+

@@ -13,3 +13,4 @@ urlFragment: workingwithfiles
 These samples relate to the [Working with Files in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/data-cloud/data/files) doc.
 
 ![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/WorkingWithFiles/Screenshots/SaveAndLoad-sml.png "Save and load a file")
+

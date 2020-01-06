@@ -24,3 +24,4 @@ In order to run this sample application an Azure Active Directory B2C tenant mus
 1. Create a sign-up and sign-in policy. This policy will define the experiences that consumers will go through during sign-up and sign-in, and the contents of tokens the application will receive on successful sign-up or sign-in. For more information, see [Extensible policy framework](https://azure.microsoft.com/documentation/articles/active-directory-b2c-reference-policies/#how-to-create-a-sign-up-policy) on the Azure documentation center.
 
 ![AzureADB2CAuth application screenshot](Screenshots/01All.png "AzureADB2CAuth application screenshot")
+

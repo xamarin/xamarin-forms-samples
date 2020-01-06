@@ -15,3 +15,4 @@ This sample demonstrates how to use the `DependencyService` class, which is a se
 For more information about this sample see [Xamarin.Forms DependencyService](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/dependency-service/).
 
 ![Dependency Service application screenshot](Screenshots/01Android.png "Dependency Service application screenshot")
+

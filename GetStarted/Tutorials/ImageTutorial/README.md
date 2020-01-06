@@ -18,3 +18,4 @@ This sample demonstrates how to display images on a page, using the Xamarin.Form
 For more information about this sample, see [Image Tutorial](https://docs.microsoft.com/xamarin/get-started/tutorials/image/).
 
 ![Image Tutorial application screenshot](Screenshots/01All.png "Image Tutorial application screenshot")
+
