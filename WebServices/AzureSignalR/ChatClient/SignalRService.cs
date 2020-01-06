@@ -1,5 +1,6 @@
 ﻿using ChatClient.Model;
 using Microsoft.AspNetCore.SignalR.Client;
+using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -52,7 +53,9 @@ namespace ChatClient
 
                 string negotiateJson = await client.GetStringAsync($"{Constants.HostName}/api/negotiate");
                 NegotiateInfo negotiate = JsonConvert.DeserializeObject<NegotiateInfo>(negotiateJson);
+
                 HubConnection connection = new HubConnectionBuilder()
+                    .AddNewtonsoftJsonProtocol()
                     .WithUrl(negotiate.Url, options =>
                     {
                         options.AccessTokenProvider = async () => negotiate.AccessToken;
