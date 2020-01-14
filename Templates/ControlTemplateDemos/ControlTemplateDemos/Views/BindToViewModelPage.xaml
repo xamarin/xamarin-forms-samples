@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ControlTemplateDemos"
+             xmlns:controls="clr-namespace:ControlTemplateDemos.Controls"
+             x:Class="ControlTemplateDemos.BindToViewModelPage"
+             Title="Bind to a ViewModel">
+    <ContentPage.BindingContext>
+        <local:PeopleViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ControlTemplate x:Key="CardViewControlTemplate">
+            <Frame BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+                   BackgroundColor="{Binding CardColor}"
+                   BorderColor="{Binding BorderColor}"
+                   CornerRadius="5"
+                   HasShadow="True"
+                   Padding="8"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="75" />
+                        <RowDefinition Height="4" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label Text="{Binding CardTitle}"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Start" />
+                    <BoxView Grid.Row="1"
+                             BackgroundColor="{Binding BorderColor}"
+                             HeightRequest="2"
+                             HorizontalOptions="Fill" />
+                    <Label Grid.Row="2"
+                           Text="{Binding CardDescription}"
+                           VerticalTextAlignment="Start"
+                           VerticalOptions="Fill"
+                           HorizontalOptions="Fill" />
+                    <Button Text="Delete"
+                            Command="{Binding Source={RelativeSource AncestorType={x:Type local:PeopleViewModel}}, Path=DeletePersonCommand}"
+                            CommandParameter="{Binding CardTitle}"
+                            HorizontalOptions="End" />
+                </Grid>
+            </Frame>
+        </ControlTemplate>
+
+        <DataTemplate x:Key="PersonTemplate">
+            <controls:CardView BorderColor="DarkGray"
+                               CardTitle="{Binding Name}"
+                               CardDescription="{Binding Description}"
+                               ControlTemplate="{StaticResource CardViewControlTemplate}" />
+        </DataTemplate>
+    </ContentPage.Resources>
+
+    <StackLayout Margin="10"
+                 BindableLayout.ItemsSource="{Binding People}"
+                 BindableLayout.ItemTemplate="{StaticResource PersonTemplate}" />
+</ContentPage>
