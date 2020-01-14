@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CognitiveSpeechService.Services;
+using CognitiveSpeechService.UWP.Services;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

@@ -7,10 +7,19 @@
              x:Class="CognitiveSpeechService.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+        <Button Text="Enable Microphone"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Start"
+                Clicked="EnableMicClicked" />
+
+        <Button Text="Start Transcribing" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="Start"
+           Clicked="StartTranscribingClicked"/>
+        <Label x:Name="transcribedText"
+              Text="Press the Start Transcribing button to begin transcribing speech..."
+              HorizontalOptions="Center"
+              VerticalOptions="CenterAndExpand" />
     </StackLayout>
 
 </ContentPage>

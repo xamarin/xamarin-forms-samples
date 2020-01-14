@@ -10,7 +10,7 @@ namespace CognitiveSpeechService
         // and can be found and regenerated in the Azure portal
         public static string CognitiveServicesApiKey = "< Enter API Key Here >";
 
-        // Endpoint is based on your configured region and should be similar to: https://westus.api.cognitive.microsoft.com/
-        public static string CognitiveServicesEndpoint = "< Enter Endpoint Here >";
+        // Endpoint is based on your configured region, for example "westus"
+        public static string CognitiveServicesRegion = "westus";
     }
 }
