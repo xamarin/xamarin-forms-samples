@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ControlTemplateDemos.Controls"
+             x:Class="ControlTemplateDemos.ReplaceTemplateCardViewPage"
+             Title="Redefine CardView UI">
+    <ContentPage.Resources>
+        <ControlTemplate x:Key="CardViewCompressed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{TemplateBinding IconImageSource}"
+                        BackgroundColor="{TemplateBinding IconBackgroundColor}"
+                        WidthRequest="100"
+                        HeightRequest="100"
+                        Aspect="AspectFill"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+                <StackLayout Grid.Column="1">
+                    <Label Text="{TemplateBinding CardTitle}"
+                           FontAttributes="Bold" />
+                    <Label Text="{TemplateBinding CardDescription}" />
+                </StackLayout>
+            </Grid>
+        </ControlTemplate>
+    </ContentPage.Resources>
+    <StackLayout Margin="30">
+        <controls:CardViewUI BorderColor="DarkGray"
+                             CardTitle="John Doe"
+                             CardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum."
+                             IconBackgroundColor="SlateGray"
+                             IconImageSource="user.png"
+                             ControlTemplate="{StaticResource CardViewCompressed}" />
+        <controls:CardViewUI BorderColor="DarkGray"
+                             CardTitle="Jane Doe"
+                             CardDescription="Phasellus eu convallis mi. In tempus augue eu dignissim fermentum. Morbi ut lacus vitae eros lacinia."
+                             IconBackgroundColor="SlateGray"
+                             IconImageSource="user.png"
+                             ControlTemplate="{StaticResource CardViewCompressed}" />
+        <controls:CardViewUI BorderColor="DarkGray"
+                             CardTitle="Xamarin Monkey"
+                             CardDescription="Aliquam sagittis, odio lacinia fermentum dictum, mi erat scelerisque erat, quis aliquet arcu."
+                             IconBackgroundColor="SlateGray"
+                             IconImageSource="user.png"
+                             ControlTemplate="{StaticResource CardViewCompressed}" />
+    </StackLayout>
+</ContentPage>
