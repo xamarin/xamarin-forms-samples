@@ -24,6 +24,7 @@
             <TextCell Text="DatePicker UpdateMode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSDatePickerPage}" />
             <TextCell Text="TimePicker UpdateMode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSTimePickerPage}" />
             <TextCell Text="VisualElement First Responder" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSFirstResponderPage}" />
+            <TextCell Text="TabbedPage Translucent TabBar" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSTranslucentTabbedPage}" />
         </TableSection>
         <TableSection Title="Android">
             <TextCell Text="Soft Input Mode Adjust" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:AndroidSoftInputModeAdjustPage}" />
