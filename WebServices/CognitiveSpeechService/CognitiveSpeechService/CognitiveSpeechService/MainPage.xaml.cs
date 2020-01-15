@@ -27,8 +27,15 @@ namespace CognitiveSpeechService
         {
             bool isMicEnabled = await micService.GetPermissionAsync();
 
+            // EARLY OUT: make sure mic is accessible
+            if (!isMicEnabled)
+            {
+                UpdateTranscription("Please grant access to the microphone!");
+                return;
+            }
+
             // Speech recognizer 
-            if(recognizer == null)
+            if (recognizer == null)
             {
                 var config = SpeechConfig.FromSubscription(Constants.CognitiveServicesApiKey, Constants.CognitiveServicesRegion);
                 recognizer = new SpeechRecognizer(config);
@@ -38,15 +45,8 @@ namespace CognitiveSpeechService
                 };
             }
 
-            // EARLY OUT: make sure mic is accessible
-            if (!isMicEnabled)
-            {
-                UpdateTranscription("Please grant access to the microphone!");
-                return;
-            }
-
             // if already transcribing, stop speech recognizer
-            if(isTranscribing)
+            if (isTranscribing)
             {
                 Device.BeginInvokeOnMainThread(() =>
                 {
@@ -96,7 +96,7 @@ namespace CognitiveSpeechService
                 if(!string.IsNullOrWhiteSpace(newText))
                 {
                     transcribedText.Text += $"{newText}\n";
-                    scroll.ScrollToAsync(0, scroll.Height, true);
+                    //scroll.ScrollToAsync(0, scroll.Height, true);
                 }
             });
             
