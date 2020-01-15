@@ -43,7 +43,9 @@ namespace PlatformSpecifics
                         new TextCell { Text = "NavigationPage NavigationBarSeparator", Command = NavigateCommand, CommandParameter = typeof(iOSTitleViewPageCS) },
                         new TextCell { Text = "iPad Page Modal FormSheet Page", Command = NavigateCommand, CommandParameter = typeof(iOSModalFormSheetPageCS) },
                         new TextCell { Text = "Hide Home Indicator on Page", Command = NavigateCommand, CommandParameter = typeof(iOSHideHomeIndicatorPageCS) },
-                        new TextCell { Text = "SwipeView SwipeTransitionMode", Command = NavigateCommand, CommandParameter = typeof(iOSSwipeViewTransitionModePageCS) }
+                        new TextCell { Text = "SwipeView SwipeTransitionMode", Command = NavigateCommand, CommandParameter = typeof(iOSSwipeViewTransitionModePageCS) },
+                        new TextCell { Text = "DatePicker UpdateMode", Command = NavigateCommand, CommandParameter = typeof(iOSDatePickerPageCS) },
+                        new TextCell { Text = "TimePicker UpdateMode", Command = NavigateCommand, CommandParameter = typeof(iOSTimePickerPageCS) }
                     },
                     new TableSection("Android")
                     {

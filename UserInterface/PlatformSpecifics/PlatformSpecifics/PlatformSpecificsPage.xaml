@@ -21,6 +21,8 @@
             <TextCell Text="iPad Page Modal FormSheet Page" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSModalFormSheetPage}" />
             <TextCell Text="Hide Home Indicator on Page" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSHideHomeIndicatorPage}" />
             <TextCell Text="SwipeView SwipeTransitionMode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSSwipeViewTransitionModePage}" />
+            <TextCell Text="DatePicker UpdateMode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSDatePickerPage}" />
+            <TextCell Text="TimePicker UpdateMode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSTimePickerPage}" />
         </TableSection>
         <TableSection Title="Android">
             <TextCell Text="Soft Input Mode Adjust" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:AndroidSoftInputModeAdjustPage}" />
