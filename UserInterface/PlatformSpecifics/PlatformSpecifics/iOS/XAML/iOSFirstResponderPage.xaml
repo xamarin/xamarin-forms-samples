@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             x:Class="PlatformSpecifics.iOSFirstResponderPage"
+             Title="VisualElement first responder">
+    <StackLayout Margin="10">
+        <Label Text="Click in the first Entry to make the keyboard appear. Then click OK and the keyboard should disappear." />
+        <Entry Placeholder="First Entry" />
+        <Button Text="OK" />
+        <Label Text="Click in the second Entry to make the keyboard appear. Then click OK and the keyboard shouldn't disappear." />
+        <Entry Placeholder="Second Entry" />
+        <Button ios:VisualElement.CanBecomeFirstResponder="True"
+                Text="OK" />
+    </StackLayout>
+</ContentPage>

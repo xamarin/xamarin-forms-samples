@@ -45,7 +45,8 @@ namespace PlatformSpecifics
                         new TextCell { Text = "Hide Home Indicator on Page", Command = NavigateCommand, CommandParameter = typeof(iOSHideHomeIndicatorPageCS) },
                         new TextCell { Text = "SwipeView SwipeTransitionMode", Command = NavigateCommand, CommandParameter = typeof(iOSSwipeViewTransitionModePageCS) },
                         new TextCell { Text = "DatePicker UpdateMode", Command = NavigateCommand, CommandParameter = typeof(iOSDatePickerPageCS) },
-                        new TextCell { Text = "TimePicker UpdateMode", Command = NavigateCommand, CommandParameter = typeof(iOSTimePickerPageCS) }
+                        new TextCell { Text = "TimePicker UpdateMode", Command = NavigateCommand, CommandParameter = typeof(iOSTimePickerPageCS) },
+                        new TextCell { Text = "VisualElement First Responder", Command = NavigateCommand, CommandParameter = typeof(iOSFirstResponderPageCS) }
                     },
                     new TableSection("Android")
                     {
