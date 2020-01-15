@@ -1,11 +1,6 @@
 ﻿using CognitiveSpeechService.Services;
 using Microsoft.CognitiveServices.Speech;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace CognitiveSpeechService
@@ -34,7 +29,7 @@ namespace CognitiveSpeechService
                 return;
             }
 
-            // Speech recognizer 
+            // initialize speech recognizer 
             if (recognizer == null)
             {
                 var config = SpeechConfig.FromSubscription(Constants.CognitiveServicesApiKey, Constants.CognitiveServicesRegion);
@@ -48,58 +43,46 @@ namespace CognitiveSpeechService
             // if already transcribing, stop speech recognizer
             if (isTranscribing)
             {
-                Device.BeginInvokeOnMainThread(() =>
-                {
-                    transcribingIndicator.IsRunning = false;
-                });
-
                 try
                 {
                     await recognizer.StopContinuousRecognitionAsync();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     UpdateTranscription(ex.Message);
                 }
-                
                 isTranscribing = false;
             }
 
-            // if not transcribing, clear existing text and start speech recognizer
+            // if not transcribing, start speech recognizer
             else
             {
                 Device.BeginInvokeOnMainThread(() =>
                 {
-                    transcribingIndicator.IsRunning = true;
                     InsertDateTimeRecord();
                 });
-
                 try
                 {
                     await recognizer.StartContinuousRecognitionAsync();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     UpdateTranscription(ex.Message);
                 }
-                
                 isTranscribing = true;
             }
-
-            UpdateButton();
+            UpdateDisplayState();
         }
 
         void UpdateTranscription(string newText)
         {
             Device.BeginInvokeOnMainThread(() =>
             {
-                if(!string.IsNullOrWhiteSpace(newText))
+                if (!string.IsNullOrWhiteSpace(newText))
                 {
                     transcribedText.Text += $"{newText}\n";
-                    //scroll.ScrollToAsync(0, scroll.Height, true);
                 }
             });
-            
         }
 
         void InsertDateTimeRecord()
@@ -108,19 +91,21 @@ namespace CognitiveSpeechService
             UpdateTranscription(msg);
         }
 
-        void UpdateButton()
+        void UpdateDisplayState()
         {
             Device.BeginInvokeOnMainThread(() =>
             {
-                if(isTranscribing)
+                if (isTranscribing)
                 {
                     transcribeButton.Text = "Stop";
                     transcribeButton.BackgroundColor = Color.Red;
+                    transcribingIndicator.IsRunning = true;
                 }
                 else
                 {
                     transcribeButton.Text = "Transcribe";
                     transcribeButton.BackgroundColor = Color.Green;
+                    transcribingIndicator.IsRunning = false;
                 }
             });
         }

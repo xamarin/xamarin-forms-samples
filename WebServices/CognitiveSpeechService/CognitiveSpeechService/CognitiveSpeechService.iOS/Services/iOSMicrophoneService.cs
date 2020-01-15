@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
-using AVFoundation;
+﻿using AVFoundation;
 using CognitiveSpeechService.iOS.Services;
 using CognitiveSpeechService.Services;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(iOSMicrophoneService))]

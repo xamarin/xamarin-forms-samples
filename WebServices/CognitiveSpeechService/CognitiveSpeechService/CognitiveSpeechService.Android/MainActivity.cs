@@ -42,7 +42,7 @@ namespace CognitiveSpeechService.Droid
 
             switch(requestCode)
             {
-                case AndroidMicService.RecordAudioPermissionCode:
+                case AndroidMicrophoneService.RecordAudioPermissionCode:
                     if(grantResults[0] == Permission.Granted)
                     {
                         micService.OnRequestPermissionResult(true);
