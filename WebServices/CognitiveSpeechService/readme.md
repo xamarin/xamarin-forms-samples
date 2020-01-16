@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Azure Speech Service demo
-description: This sample demonstrates how to use Azure Speech Service to transcribe speech to text in a Xamarin.Forms app.
+description: How to use Azure Speech Service to transcribe speech to text in a Xamarin.Forms app.
 page_type: sample
 languages:
 - csharp
