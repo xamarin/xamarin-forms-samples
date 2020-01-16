@@ -109,11 +109,14 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="contacts.png" />
-    <Content Include="csharp.png">
+    <Content Include="Assets\DotNetSource_small.png" />
+    <Content Include="Assets\net_small_purple.png" />
+    <Content Include="Assets\Xamagon.png" />
+    <Content Include="Assets\contacts.png" />
+    <Content Include="Assets\csharp.png">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="monkeyface.png" />
+    <Content Include="Assets\monkeyface.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -122,9 +125,9 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
-    <Content Include="reminders.png" />
-    <Content Include="todo.png" />
-    <Content Include="xaml.png">
+    <Content Include="Assets\reminders.png" />
+    <Content Include="Assets\todo.png" />
+    <Content Include="Assets\xaml.png">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>

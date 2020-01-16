@@ -78,7 +78,8 @@ namespace PlatformSpecifics
                         new TextCell { Text = "ListView Selection Mode", Command = NavigateCommand, CommandParameter = typeof(WindowsListViewPageCS) },
                         new TextCell { Text = "VisualElement Access Keys", Command = NavigateCommand, CommandParameter = typeof(WindowsVisualElementAccessKeysPageCS) },
                         new TextCell { Text = "TabbedPage Icons", Command = NavigateCommand, CommandParameter = typeof(WindowsTabbedPageIconsCS) },
-                        new TextCell { Text = "RefreshView Pull Direction", Command = NavigateCommand,  CommandParameter = typeof(WindowsRefreshViewPageCS) }
+                        new TextCell { Text = "RefreshView Pull Direction", Command = NavigateCommand,  CommandParameter = typeof(WindowsRefreshViewPageCS) },
+                        new TextCell { Text = "Image Search Directory", Command = NavigateCommand, CommandParameter = typeof(WindowsImageSearchDirectoryPageCS) }
                     }
                 }
             };         

@@ -54,6 +54,7 @@
             <TextCell Text="VisualElement AccessKeys" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsVisualElementAccessKeysPage}" />
             <TextCell Text="TabbedPage Icons" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsTabbedPageIcons}" />
             <TextCell Text="RefreshView Pull Direction" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsRefreshViewPage}" />
+            <TextCell Text="Image Search Directory" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsImageSearchDirectoryPage}" />
         </TableSection>
     </TableView>
 </ContentPage>

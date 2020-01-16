@@ -2,15 +2,17 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
-             xmlns:androidAppCompat="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat;assembly=Xamarin.Forms.Core"
-             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             xmlns:androidAppCompat="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat;assembly=Xamarin.Forms.Core"             
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core"
              x:Class="PlatformSpecifics.App" 
              android:Application.WindowSoftInputModeAdjust="Resize" 
              androidAppCompat:Application.SendDisappearingEventOnPause="false" 
              androidAppCompat:Application.SendAppearingEventOnResume="false" 
              androidAppCompat:Application.ShouldPreserveKeyboardOnResume="false"
              ios:Application.PanGestureRecognizerShouldRecognizeSimultaneously="true"
-             ios:Application.EnableAccessibilityScalingForNamedFontSizes="false">
+             ios:Application.EnableAccessibilityScalingForNamedFontSizes="false"
+             windows:Application.ImageDirectory="Assets">
     <!-- Add the following to direct control layout/rendering updates to the main thread on iOS:
             
             ios:Application.HandleControlUpdatesOnMainThread="true"
