@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CognitiveSpeechService
+﻿namespace CognitiveSpeechService
 {
     public static class Constants
     {

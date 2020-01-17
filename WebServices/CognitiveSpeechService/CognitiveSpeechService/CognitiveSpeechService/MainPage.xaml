@@ -18,8 +18,7 @@
                BackgroundColor="LightGray">
             <ScrollView x:Name="scroll">
                 <Label x:Name="transcribedText"
-                       Margin="10,10,10,10"
-                       />
+                       Margin="10,10,10,10" />
             </ScrollView>
         </Frame>
 

@@ -1,14 +1,9 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 using CognitiveSpeechService.Services;
 using Xamarin.Forms;
-using Android;
 using CognitiveSpeechService.Droid.Services;
 
 namespace CognitiveSpeechService.Droid
@@ -34,13 +29,14 @@ namespace CognitiveSpeechService.Droid
 
             micService = DependencyService.Resolve<IMicrophoneService>();
         }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
-            switch(requestCode)
+            switch (requestCode)
             {
                 case AndroidMicrophoneService.RecordAudioPermissionCode:
                     if(grantResults[0] == Permission.Granted)
