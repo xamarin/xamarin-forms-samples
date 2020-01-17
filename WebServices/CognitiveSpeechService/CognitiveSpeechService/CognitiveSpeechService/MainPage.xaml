@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CognitiveSpeechService.MainPage"
+             Title="Speech Services Transcription"
+             Padding="10,35,10,10">
+
+    <StackLayout>
+        <Frame BorderColor="DarkGray"
+               CornerRadius="10"
+               HeightRequest="300"
+               WidthRequest="280"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"
+               BackgroundColor="LightGray">
+            <ScrollView x:Name="scroll">
+                <Label x:Name="transcribedText"
+                       Margin="10,10,10,10" />
+            </ScrollView>
+        </Frame>
+
+        <ActivityIndicator x:Name="transcribingIndicator"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Start"
+                           WidthRequest="300"
+                           IsRunning="False" />
+        <Button x:Name="transcribeButton"
+                WidthRequest="300"
+                HeightRequest="50"
+                Text="Transcribe"
+                TextColor="White"
+                CornerRadius="10"
+                BackgroundColor="Green"
+                BorderColor="DarkGray"
+                BorderWidth="1"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                Clicked="TranscribeClicked"/>
+    </StackLayout>
+
+</ContentPage>
