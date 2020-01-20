@@ -11,9 +11,9 @@ namespace WorkingWithFonts
                 Text = "Hello, Xamarin.Forms!",
                 FontFamily = "Lobster-Regular",
                 VerticalOptions = LayoutOptions.CenterAndExpand,
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
-
+                HorizontalOptions = LayoutOptions.CenterAndExpand
             };
+
             label.FontSize = Device.RuntimePlatform == Device.iOS ? 24 :
                 Device.RuntimePlatform == Device.Android ? Device.GetNamedSize(NamedSize.Medium, label) : Device.GetNamedSize(NamedSize.Large, label);
 
