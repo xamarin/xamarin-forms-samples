@@ -6,41 +6,41 @@
     <StackLayout>
         <StackLayout.Resources>
             <Style TargetType="Entry">
-                <Setter Property="Margin" Value="20, 0" />
-                <Setter Property="FontSize" Value="18" />
+                <Setter Property="Margin"
+                        Value="20, 0" />
+                <Setter Property="FontSize"
+                        Value="18" />
             </Style>
-
             <Style TargetType="Label">
-                <Setter Property="Margin" Value="20, 30, 20, 0" />
-                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="Margin"
+                        Value="20, 30, 20, 0" />
+                <Setter Property="FontSize"
+                        Value="Large" />
             </Style>
         </StackLayout.Resources>
 
         <Label Text="Normal Entry:" />
-
         <Entry />
-
         <Label Text="Entry with VSM: " />
-
         <Entry>
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup x:Name="CommonStates">
-
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
-                            <Setter Property="BackgroundColor" Value="Lime" />
+                            <Setter Property="BackgroundColor"
+                                    Value="Lime" />
                         </VisualState.Setters>
                     </VisualState>
-
                     <VisualState x:Name="Focused">
                         <VisualState.Setters>
-                            <Setter Property="FontSize" Value="36" />
+                            <Setter Property="FontSize"
+                                    Value="36" />
                         </VisualState.Setters>
                     </VisualState>
-
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
-                            <Setter Property="BackgroundColor" Value="Pink" />
+                            <Setter Property="BackgroundColor"
+                                    Value="Pink" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -51,13 +51,12 @@
                              Binding="{Binding Source={x:Reference entry3},
                                                Path=Text.Length}"
                              Value="0">
-                    <Setter Property="IsEnabled" Value="False" />
+                    <Setter Property="IsEnabled"
+                            Value="False" />
                 </DataTrigger>
             </Entry.Triggers>
         </Entry>
-
         <Label Text="Entry to enable 2nd Entry:" />
-
         <Entry x:Name="entry3"
                Text=""
                Placeholder="Type something to enable 2nd Entry" />
