@@ -23,6 +23,9 @@
                     CommandParameter="{x:Type local:VsmInStylePage}" />
             <Button Text="VSM with Setter TargetName"
                     Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:VsmSetterTargetNamePage}" />
+            <Button Text="VSM Validation"
+                    Command="{Binding NavigateCommand}"
                     CommandParameter="{x:Type local:VsmValidationPage}" />
             <Button Text="VSM Adaptive Layout"
                     Command="{Binding NavigateCommand}"

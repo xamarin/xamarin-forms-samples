@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VsmDemos.VsmSetterTargetNamePage"
+             Title="VSM with Setter TargetName">
+    <ContentPage.Resources>
+        <Style TargetType="Entry">
+            <Setter Property="Margin"
+                    Value="20, 0" />
+            <Setter Property="FontSize"
+                    Value="18" />
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Margin"
+                    Value="20, 0" />
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout Margin="10">
+        <Label Text="What is the capital of France?" />
+        <Entry x:Name="entry"
+               Placeholder="Enter answer" />
+        <Button Text="Reveal answer">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="Scale"
+                                    Value="0.8" />
+                            <Setter TargetName="entry"
+                                    Property="Entry.Text"
+                                    Value="Paris" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Button>
+    </StackLayout>
+</ContentPage>

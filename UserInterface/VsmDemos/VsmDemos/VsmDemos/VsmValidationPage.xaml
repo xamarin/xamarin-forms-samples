@@ -2,22 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VsmDemos.VsmValidationPage"
-             Title="VSM with Setter TargetName">
-    <StackLayout Padding="10, 10">
-        <Label Text="Enter a U.S. phone number:"
-               FontSize="Large" />
-        <Entry x:Name="entry"
-               Placeholder="555-555-5555"
-               FontSize="Large"
-               Margin="30, 0, 0, 0"
-               TextChanged="OnTextChanged" />
-        <Label x:Name="helpLabel"
-               Text="Phone number must be of the form 555-555-5555, and not begin with a 0 or 1">
+             Title="VSM Validation">
+    <StackLayout x:Name="stackLayout"
+                 Padding="10, 10">
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup Name="ValidityStates">
                     <VisualState Name="Valid">
                         <VisualState.Setters>
-                            <Setter Property="TextColor"
+                            <Setter TargetName="helpLabel"
+                                    Property="Label.TextColor"
                                     Value="Transparent" />
                             <Setter TargetName="entry"
                                     Property="Entry.BackgroundColor"
@@ -36,7 +29,15 @@
                     </VisualState>
                 </VisualStateGroup>
             </VisualStateManager.VisualStateGroups>
-        </Label>
+        <Label Text="Enter a U.S. phone number:"
+               FontSize="Large" />
+        <Entry x:Name="entry"
+               Placeholder="555-555-5555"
+               FontSize="Large"
+               Margin="30, 0, 0, 0"
+               TextChanged="OnTextChanged" />
+        <Label x:Name="helpLabel"
+               Text="Phone number must be of the form 555-555-5555, and not begin with a 0 or 1" />
         <Button x:Name="submitButton"
                 Text="Submit"
                 FontSize="Large"

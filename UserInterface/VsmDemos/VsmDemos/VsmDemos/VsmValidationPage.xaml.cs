@@ -21,7 +21,7 @@ namespace VsmDemos
         void GoToState(bool isValid)
         {
             string visualState = isValid ? "Valid" : "Invalid";
-            VisualStateManager.GoToState(helpLabel, visualState);
+            VisualStateManager.GoToState(stackLayout, visualState);
         }
 	}
 }
