@@ -5,12 +5,12 @@ namespace VsmDemos
 {
     public partial class VsmValidationPage : ContentPage
     {
-	    public VsmValidationPage ()
-	    {
-		    InitializeComponent ();
+        public VsmValidationPage()
+        {
+            InitializeComponent();
 
             GoToState(false);
-	    }
+        }
 
         void OnTextChanged(object sender, TextChangedEventArgs args)
         {
@@ -23,5 +23,5 @@ namespace VsmDemos
             string visualState = isValid ? "Valid" : "Invalid";
             VisualStateManager.GoToState(stackLayout, visualState);
         }
-	}
+    }
 }
