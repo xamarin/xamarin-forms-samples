@@ -8,7 +8,7 @@
         <viewmodels:MonkeysViewModel />
     </ContentPage.BindingContext>
     <CarouselView ItemsSource="{Binding Monkeys}"
-                  PeekAreaInsets="{OnPlatform iOS='0,0,100,0', Android=300}">
+                  PeekAreaInsets="100">
         <CarouselView.ItemTemplate>
             <DataTemplate>
                 <StackLayout>
