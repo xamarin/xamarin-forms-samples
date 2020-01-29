@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xaminals.Android", "Xaminal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xaminals.iOS", "Xaminals.iOS\Xaminals.iOS.csproj", "{2EAAEE32-09F5-4390-9CA5-C67B7CE09BA2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xaminals", "Xaminals\Xaminals.csproj", "{CD4DE9E8-2721-47F3-BA95-999B6F75FF27}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xaminals", "Xaminals\Xaminals.csproj", "{CD4DE9E8-2721-47F3-BA95-999B6F75FF27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
