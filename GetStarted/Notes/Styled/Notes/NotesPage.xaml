@@ -22,9 +22,10 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding Text}"
+                          TextColor="Black"
                           Detail="{Binding Date}" />
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
-    
+
 </ContentPage>
