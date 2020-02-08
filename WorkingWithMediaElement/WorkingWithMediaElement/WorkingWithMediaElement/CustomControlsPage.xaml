@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="Black"
+             x:Class="WorkingWithMediaElement.CustomControlsPage">
+    <Grid>
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+        </Grid.GestureRecognizers>
+
+        <!-- Place new controls here, like MediaElement! -->
+        <MediaElement 
+            x:Name="VideoPlayer"
+           Source="https://sec.ch9.ms/ch9/5d93/a1eab4bf-3288-4faf-81c4-294402a85d93/XamarinShow_mid.mp4"
+            AutoPlay="True"
+            Aspect="AspectFit"
+            StateRequested="MediaElement_StateRequested"
+            MediaOpened="VideoPlayer_MediaOpened"
+            HorizontalOptions="Fill"
+            />
+
+        <Grid x:Name="PlayerHUD">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <BoxView BackgroundColor="Black" Opacity="0.6"/>
+            <Button x:Name="PlayPauseToggle" 
+                         Text="Pause"
+                         TextColor="White"
+                         Clicked="PlayPauseToggle_Clicked"
+                         BackgroundColor="Red"
+                         HorizontalOptions="Center" 
+                         VerticalOptions="Center">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup Name="PlaybackStates">
+                        <VisualState Name="paused">
+                            <VisualState.Setters>
+                                <Setter Property="Text" Value="Play"/>
+                                <Setter Property="BackgroundColor" Value="Green"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState Name="playing">
+                            <VisualState.Setters>
+                                <Setter Property="Text" Value="Pause"/>
+                                <Setter Property="BackgroundColor" Value="Red"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
+            <Label x:Name="TimeAndDuration" Text="Loading..."
+                   TextColor="White" 
+                   FontSize="14"
+                   Margin="15"
+                   VerticalOptions="End"
+                   HorizontalOptions="End"/>
+        </Grid>
+    </Grid>
+</ContentPage>

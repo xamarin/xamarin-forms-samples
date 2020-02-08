@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WorkingWithMediaElement.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="44"/>
+        </Grid.RowDefinitions>
+        
+        <MediaElement 
+            Source="https://sec.ch9.ms/ch9/5d93/a1eab4bf-3288-4faf-81c4-294402a85d93/XamarinShow_mid.mp4"
+            AutoPlay="True"
+            Aspect="AspectFit"
+            HorizontalOptions="Fill"
+            ShowsPlaybackControls="True"
+            />
+
+        <Button
+            Grid.Row="1" 
+            Text="Click for Custom Controls"
+            Clicked="Button_Clicked"
+         />
+    </Grid>
+
+</ContentPage>
