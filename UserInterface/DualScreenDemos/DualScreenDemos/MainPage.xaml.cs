@@ -40,8 +40,17 @@ namespace DualScreenDemos
                 case "Companion Pane":
                     Navigation.PushAsync(new CompanionPane());
                     break;
-                case "Two Two Pane":
-                    Navigation.PushAsync(new TwoTwoPaneView());
+                case "TwoPaneView Playground":
+                    Navigation.PushAsync(new TwoPanePropertiesGallery());
+                    break;
+                case "Nested TwoPaneView Split Across Hinge":
+                    Navigation.PushAsync(new NestedTwoPaneViewSplitAcrossHinge());
+                    break;
+                case "Open Picture in Picture Window":
+                    Navigation.PushAsync(new OpenCompactWindow());
+                    break;
+                case "DualScreenInfo with non TwoPaneView":
+                    Navigation.PushAsync(new GridUsingDualScreenInfo());
                     break;
 
             }

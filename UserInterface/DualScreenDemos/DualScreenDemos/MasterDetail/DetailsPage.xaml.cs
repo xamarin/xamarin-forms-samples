@@ -35,7 +35,7 @@ namespace DualScreenDemos
         {
             if(e.PropertyName == nameof(DualScreenInfo.Current.SpanMode) || e.PropertyName == nameof(DualScreenInfo.Current.IsLandscape))
             {
-                if (IsSpanned && !DualScreenInfo.Current.IsLandscape)
+                if (IsSpanned)
                     await Navigation.PopAsync();
             }
         }

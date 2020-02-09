@@ -143,11 +143,14 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.274-nightly" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.278-pre4" />
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.9" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
     <PackageReference Include="Xamarin.Forms.DualScreen">
-      <Version>4.6.0.274-nightly</Version>
+      <Version>4.5.0.278-pre4</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms.Visual.Material">
+      <Version>4.5.0.278-pre4</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

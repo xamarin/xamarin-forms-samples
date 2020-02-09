@@ -14,11 +14,13 @@ namespace DualScreenDemos
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TwoPage : ContentPage
     {
-        IItemsLayout linearLayout = null;
-        IItemsLayout gridLayout = null;
+		IItemsLayout horizontalLayout = null;
+        IItemsLayout verticalItemsLayout = null;
         bool disableUpdates = false;
+		private double contentWidth;
+		private double contentHeight;
 
-        public DualScreenInfo DualScreenLayoutInfo { get; }
+		public DualScreenInfo DualScreenLayoutInfo { get; }
         bool IsSpanned => DualScreenLayoutInfo.SpanningBounds.Length > 0;
 
         public TwoPage()
@@ -51,26 +53,40 @@ namespace DualScreenDemos
             if (Content == null || disableUpdates)
                 return;
 
-            if(e.PropertyName == nameof(DualScreenInfo.Current.IsLandscape))
-            {                
-                SetupColletionViewLayout();
-            }
-            else if (e.PropertyName == nameof(DualScreenInfo.Current.SpanningBounds))
-            {
-                OnPropertyChanged(nameof(ContentHeight));
-                OnPropertyChanged(nameof(ContentWidth));
-            }
-            else if (e.PropertyName == nameof(DualScreenInfo.Current.HingeBounds))
-            {
-                OnPropertyChanged(nameof(HingeWidth));
-            }
+			SetupColletionViewLayout();
+			if (e.PropertyName == nameof(DualScreenInfo.Current.HingeBounds))
+			{
+				OnPropertyChanged(nameof(HingeWidth));
+			}
         }
 
-        public double ContentHeight => (!DualScreenLayoutInfo.IsLandscape) ? Pane1Height : Pane1Height + Pane2Height;
+		public double ContentHeight
+		{
+			get => contentHeight;
+			set
+			{
+				if (contentHeight == value)
+					return;
 
-        public double ContentWidth => IsSpanned ? (DualScreenLayoutInfo.SpanningBounds[0].Width) : layout.Width;
+				contentHeight = value;
+				OnPropertyChanged(nameof(ContentHeight));
+			}
+		}
 
-        public double Pane1Height => IsSpanned ? (DualScreenLayoutInfo.SpanningBounds[0].Height) : layout.Height;
+		public double ContentWidth
+		{
+			get => contentWidth;
+			set
+			{
+				if (contentWidth == value)
+					return;
+
+				contentWidth = value;
+				OnPropertyChanged(nameof(ContentWidth));
+			}
+		}
+
+		public double Pane1Height => IsSpanned ? (DualScreenLayoutInfo.SpanningBounds[0].Height) : layout.Height;
 
         public double Pane2Height => IsSpanned ? (DualScreenLayoutInfo.SpanningBounds[1].Height) : 0d;
 
@@ -78,55 +94,37 @@ namespace DualScreenDemos
 
 
         void SetupColletionViewLayout()
-        {
-            disableUpdates = true;
-            var resetCV = cv;
-            if (linearLayout == null && cv.ItemsLayout is LinearItemsLayout linear)
-            {
-                linearLayout = cv.ItemsLayout;
-                linear.SnapPointsType = SnapPointsType.None;
-                linear.SnapPointsAlignment = SnapPointsAlignment.Start;
-            }
+		{
+			ContentWidth = IsSpanned ? (DualScreenLayoutInfo.SpanningBounds[0].Width) : layout.Width;
+			ContentHeight = (!DualScreenLayoutInfo.IsLandscape) ? Pane1Height : Pane1Height + Pane2Height;
+			disableUpdates = true;
+			if (verticalItemsLayout == null)
+			{
+				horizontalLayout = cv.ItemsLayout;
+				verticalItemsLayout = new LinearItemsLayout(ItemsLayoutOrientation.Vertical)
+				{
+					SnapPointsAlignment = SnapPointsAlignment.Start,
+					SnapPointsType = SnapPointsType.None
+				};
+			}
+			
+			if (!DualScreenLayoutInfo.IsLandscape)
+			{
+				if (cv.ItemsLayout != horizontalLayout)
+				{
+					cv.ItemsLayout = horizontalLayout;
+				}
+			}
+			else
+			{
+					
+				if (cv.ItemsLayout != verticalItemsLayout)
+				{
+					cv.ItemsLayout = verticalItemsLayout;
+				}
+			}
 
-            if (gridLayout == null && cv.ItemsLayout is GridItemsLayout)
-                gridLayout = cv.ItemsLayout;
-            
-            if (DualScreenLayoutInfo.IsLandscape)
-            {
-                if (cv.ItemsLayout != linearLayout)
-                {
-                    resetCV.ItemsSource = null;
-                    resetCV.ItemsLayout = linearLayout;
-                    Content = null;
-                }
-            }
-            else
-            {
-                if (cv.ItemsLayout != gridLayout)
-                {
-                    resetCV.ItemsSource = null;
-                    resetCV.ItemsLayout = gridLayout;
-                    Content = null;
-                }
-            }
-
-            if (Content == null)
-            {
-                Device.BeginInvokeOnMainThread(() =>
-                {
-                    Content = resetCV;
-                    resetCV.ItemsSource =
-                        Enumerable.Range(0, 1000)
-                            .Select(i => $"Page {i}")
-                            .ToList();
-
-                    disableUpdates = false;
-                });
-            }
-            else
-            {
-                disableUpdates = false;
-            }
+			disableUpdates = false;
         }
     }
 }

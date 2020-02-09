@@ -5,18 +5,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="DualScreenDemos.TwoPage"
-             xmlns:local="clr-namespace:DualScreenDemos"
              Visual="Material"
              x:Name="mainPage">
 
     <Grid x:Name="layout">
         <CollectionView x:Name="cv" BackgroundColor="LightGray">
             <CollectionView.ItemsLayout>
-                <GridItemsLayout 
+                <LinearItemsLayout 
                     SnapPointsAlignment="Start" 
                     SnapPointsType="MandatorySingle"
                     Orientation="Horizontal"
-                    HorizontalItemSpacing="{Binding Source={x:Reference mainPage}, Path=HingeWidth}" />
+                    ItemSpacing="{Binding Source={x:Reference mainPage}, Path=HingeWidth}" />
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>

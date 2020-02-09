@@ -48,7 +48,7 @@ namespace DualScreenDemos
             if (detailsPage.BindingContext == null)
                 return;
 
-            if (!IsSpanned || DualScreenInfo.Current.IsLandscape)
+            if (!IsSpanned)
             {
                 if (!Navigation.NavigationStack.Contains(detailsPagePushed))
                 {

@@ -9,7 +9,7 @@
              xmlns:dualScreen="clr-namespace:Xamarin.Forms.DualScreen;assembly=Xamarin.Forms.DualScreen"
              x:Class="DualScreenDemos.MainPage">
 
-    <dualScreen:TwoPaneView x:Name="twoPaneView" MinWideModeWidth="4000" MinTallModeHeight="4000">
+    <dualScreen:TwoPaneView x:Name="twoPaneView" MinWideModeWidth="0" MinTallModeHeight="0">
         <dualScreen:TwoPaneView.Pane1>
             <StackLayout Padding="20">
                 <Button Text="Companion Pane" Clicked="OnNavigateToSample"></Button>
@@ -17,12 +17,14 @@
                 <Button Text="Extend Canvas" Clicked="OnNavigateToSample"></Button>
                 <Button Text="Master Detail" Clicked="OnNavigateToSample"></Button>
                 <Button Text="Two Page" Clicked="OnNavigateToSample"></Button>
-                <Button Text="Two Two Pane" Clicked="OnNavigateToSample"></Button>
             </StackLayout>
         </dualScreen:TwoPaneView.Pane1>
         <dualScreen:TwoPaneView.Pane2>
-            <StackLayout>
-                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Welcome to the Duo Samples!!"></Label>
+            <StackLayout Padding="20">
+                <Button Text="TwoPaneView Playground" Clicked="OnNavigateToSample"></Button>
+                <Button Text="Nested TwoPaneView Split Across Hinge" Clicked="OnNavigateToSample"></Button>
+                <Button Text="Open Picture in Picture Window" Clicked="OnNavigateToSample"></Button>
+                <Button Text="DualScreenInfo with non TwoPaneView" Clicked="OnNavigateToSample"></Button>
             </StackLayout>
         </dualScreen:TwoPaneView.Pane2>
     </dualScreen:TwoPaneView>
