@@ -17,8 +17,6 @@
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="CurrentItem">
                                 <VisualState.Setters>
-                                    <Setter Property="Opacity"
-                                            Value="1" />
                                     <Setter Property="Scale"
                                             Value="1.1" />
                                 </VisualState.Setters>
