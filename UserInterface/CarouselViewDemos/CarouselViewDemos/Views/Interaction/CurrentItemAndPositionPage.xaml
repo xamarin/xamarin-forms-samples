@@ -12,8 +12,7 @@
         <Label x:Name="currentItemLabel" />
         <Label x:Name="previousItemPositionLabel" />
         <Label x:Name="currentItemPositionLabel" />
-        <CarouselView x:Name="carouselView"
-                      ItemsSource="{Binding Monkeys}"
+        <CarouselView ItemsSource="{Binding Monkeys}"
                       CurrentItemChanged="OnCurrentItemChanged"
                       PositionChanged="OnPositionChanged">
             <CarouselView.ItemTemplate>
