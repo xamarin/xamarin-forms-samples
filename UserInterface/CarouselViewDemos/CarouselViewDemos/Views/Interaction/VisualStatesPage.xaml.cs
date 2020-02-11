@@ -2,9 +2,9 @@
 
 namespace CarouselViewDemos.Views
 {
-    public partial class HorizontalLayoutVisualStatesPage : ContentPage
+    public partial class VisualStatesPage : ContentPage
     {
-        public HorizontalLayoutVisualStatesPage()
+        public VisualStatesPage()
         {
             InitializeComponent();
         }

@@ -35,10 +35,6 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:HorizontalLayoutDataTemplateSelectorPage}" />
                 <TextCell Text="Horizontal layout"
-                          Detail="Visual states"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type views:HorizontalLayoutVisualStatesPage} " />
-                <TextCell Text="Horizontal layout"
                           Detail="RTL FlowDirection"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:HorizontalTemplateLayoutRTLPage}" />
@@ -72,6 +68,10 @@
                           Detail="From viewmodel"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:SetCurrentItemAndPositionPage}" />
+                <TextCell Text="Visual states"
+                          Detail="DefaultItem, CurrentItem, PreviousItem, NextItem"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VisualStatesPage} " />
             </TableSection>
             <TableSection Title="EmptyView">
                 <TextCell Text="EmptyView string"
