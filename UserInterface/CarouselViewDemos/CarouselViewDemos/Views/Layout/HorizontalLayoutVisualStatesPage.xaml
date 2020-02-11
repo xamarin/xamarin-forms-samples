@@ -8,48 +8,41 @@
         <viewmodels:MonkeysViewModel />
     </ContentPage.BindingContext>
 
-    <ContentPage.Resources>
-        <Style TargetType="StackLayout">
-            <Setter Property="VisualStateManager.VisualStateGroups">
-                <VisualStateGroupList>
-                    <VisualStateGroup x:Name="CommonStates">
-                        <VisualState x:Name="CurrentItem">
-                            <VisualState.Setters>
-                                <Setter Property="Opacity"
-                                        Value="1" />
-                                <Setter Property="Scale"
-                                        Value="1.1" />
-                            </VisualState.Setters>
-                        </VisualState>
-                        <VisualState x:Name="PreviousItem">
-                            <VisualState.Setters>
-                                <Setter Property="Opacity"
-                                        Value="0.5" />
-                            </VisualState.Setters>
-                        </VisualState>
-                        <VisualState x:Name="NextItem">
-                            <VisualState.Setters>
-                                <Setter Property="Opacity"
-                                        Value="0.5" />
-                            </VisualState.Setters>
-                        </VisualState>
-                        <VisualState x:Name="DefaultItem">
-                            <VisualState.Setters>
-                                <Setter Property="Opacity"
-                                        Value="0.25" />
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateGroupList>
-            </Setter>
-        </Style>
-    </ContentPage.Resources>
-
     <CarouselView ItemsSource="{Binding Monkeys}"
                   PeekAreaInsets="100">
         <CarouselView.ItemTemplate>
             <DataTemplate>
                 <StackLayout>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="CurrentItem">
+                                <VisualState.Setters>
+                                    <Setter Property="Opacity"
+                                            Value="1" />
+                                    <Setter Property="Scale"
+                                            Value="1.1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="PreviousItem">
+                                <VisualState.Setters>
+                                    <Setter Property="Opacity"
+                                            Value="0.5" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="NextItem">
+                                <VisualState.Setters>
+                                    <Setter Property="Opacity"
+                                            Value="0.5" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="DefaultItem">
+                                <VisualState.Setters>
+                                    <Setter Property="Opacity"
+                                            Value="0.25" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
                     <Frame HasShadow="True"
                            BorderColor="DarkGray"
                            CornerRadius="5"
