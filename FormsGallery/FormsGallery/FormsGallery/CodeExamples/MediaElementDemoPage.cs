@@ -11,7 +11,7 @@ namespace FormsGallery.CodeExamples
                 RowDefinitions =
                 {
                     new RowDefinition { Height = GridLength.Auto },
-                    new RowDefinition { Height = GridLength.Auto }
+                    new RowDefinition { Height = GridLength.Star }
                 }
             };
 
