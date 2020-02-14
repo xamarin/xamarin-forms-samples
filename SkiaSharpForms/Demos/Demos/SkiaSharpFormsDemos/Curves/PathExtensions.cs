@@ -153,6 +153,7 @@ namespace SkiaSharpFormsDemos.Curves
                 float y = (1 - t) * (1 - t) * pt0.Y + 2 * weight * t * (1 - t) * pt1.Y + t * t * pt2.Y;
                 x /= denominator;
                 y /= denominator;
+                points[i] = new SKPoint(x, y);
             }
 
             return points;

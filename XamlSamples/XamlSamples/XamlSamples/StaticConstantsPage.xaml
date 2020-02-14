@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamlSamples"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="XamlSamples.StaticConstantsPage"
              Title="Static Constants Page"
              Padding="{x:Static local:AppConstants.PagePadding}">
