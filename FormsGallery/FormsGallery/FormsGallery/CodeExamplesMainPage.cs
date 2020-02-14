@@ -24,10 +24,10 @@ namespace FormsGallery
                     {
                         new TextCell
                         {
-                            Text = "Label",
-                            Detail = "Display a text string",
+                            Text = "BoxView",
+                            Detail = "Display a colored rectangle",
                             Command = navigateCommand,
-                            CommandParameter = typeof(CodeExamples.LabelDemoPage)
+                            CommandParameter = typeof(CodeExamples.BoxViewDemoPage)
                         },
 
                         new TextCell
@@ -40,18 +40,26 @@ namespace FormsGallery
 
                         new TextCell
                         {
-                            Text = "BoxView",
-                            Detail = "Display a colored rectangle",
+                            Text = "Label",
+                            Detail = "Display a text string",
                             Command = navigateCommand,
-                            CommandParameter = typeof(CodeExamples.BoxViewDemoPage)
+                            CommandParameter = typeof(CodeExamples.LabelDemoPage)
                         },
 
                         new TextCell
                         {
-                            Text = "WebView",
-                            Detail = "Display a Web page",
+                            Text = "Map",
+                            Detail = "Display a map",
                             Command = navigateCommand,
-                            CommandParameter = typeof(CodeExamples.WebViewDemoPage)
+                            CommandParameter = typeof(CodeExamples.MapDemoPage)
+                        },
+
+                        new TextCell
+                        {
+                            Text = "MediaElement",
+                            Detail = "Play video or audio",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.MediaElementDemoPage)
                         },
 
                         new TextCell
@@ -64,10 +72,10 @@ namespace FormsGallery
 
                         new TextCell
                         {
-                            Text = "Map",
-                            Detail = "Display a map",
+                            Text = "WebView",
+                            Detail = "Display a Web page",
                             Command = navigateCommand,
-                            CommandParameter = typeof(CodeExamples.MapDemoPage)
+                            CommandParameter = typeof(CodeExamples.WebViewDemoPage)
                         }
                     },
 

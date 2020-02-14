@@ -27,35 +27,40 @@
             <TableRoot>
                 <TableSection Title="Views for Presentation">
 
-                    <TextCell Text="Label"
-                              Detail="Display a text string"
+                    <TextCell Text="BoxView"
+                              Detail="Display a colored rectangle"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.LabelDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.BoxViewDemoPage}" />
 
                     <TextCell Text="Image"
                               Detail="Display a bitmap"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.ImageDemoPage}" />
 
-                    <TextCell Text="BoxView"
-                              Detail="Display a colored rectangle"
+                    <TextCell Text="Label"
+                              Detail="Display a text string"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.BoxViewDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.LabelDemoPage}" />
 
-                    <TextCell Text="WebView"
-                              Detail="Display a Web page"
+                    <TextCell Text="Map"
+                              Detail="Display a map"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.WebViewDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.MapDemoPage}" />
+
+                    <TextCell Text="MediaElement"
+                              Detail="Play video or audio"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.MediaElementDemoPage}" />
 
                     <TextCell Text="OpenGLView"
                               Detail="Display OpenGL Graphics"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.OpenGLViewDemoPage}" />
 
-                    <TextCell Text="Map"
-                              Detail="Display a map"
+                    <TextCell Text="WebView"
+                              Detail="Display a Web page"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.MapDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.WebViewDemoPage}" />
                 </TableSection>
 
                 <TableSection Title="Views that Initiate Commands">
