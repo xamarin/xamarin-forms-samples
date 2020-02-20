@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkingWithTriggers.CompareStateTriggerDemoPage"
+             Title="CompareStateTrigger demo">
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup>
+                        <VisualState x:Name="Checked">
+                            <VisualState.StateTriggers>
+                                <CompareStateTrigger Property="{Binding Source={x:Reference checkBox}, Path=IsChecked}"
+                                                     Value="True" />
+                            </VisualState.StateTriggers>
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="Black" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Unchecked">
+                            <VisualState.StateTriggers>
+                                <CompareStateTrigger Property="{Binding Source={x:Reference checkBox}, Path=IsChecked}"
+                                                     Value="False" />
+                            </VisualState.StateTriggers>
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="White" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+    <Grid>
+        <Frame BackgroundColor="White"
+               CornerRadius="12"
+               Margin="24"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+            <StackLayout Orientation="Horizontal">
+                <CheckBox x:Name="checkBox"
+                          VerticalOptions="Center" />
+                <Label Text="Check the CheckBox to modify the Grid background color."
+                       VerticalOptions="Center" />
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>
