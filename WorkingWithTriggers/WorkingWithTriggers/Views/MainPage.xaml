@@ -37,9 +37,6 @@
                 <TextCell Text="StateTrigger demo"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:StateTriggerDemoPage}" />
-                <TextCell Text="StateTrigger events demo"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:StateTriggerEventsDemoPage}" />
 
             </TableSection>
         </TableRoot>

@@ -40,7 +40,7 @@
             </Setter>
         </Style>
 
-       <!-- OrientationStateTrigger demo -->
+        <!-- OrientationStateTrigger demo -->
         <Style x:Key="OrientationStateTriggerPageStyle"
                TargetType="ContentPage">
             <Setter Property="VisualStateManager.VisualStateGroups">

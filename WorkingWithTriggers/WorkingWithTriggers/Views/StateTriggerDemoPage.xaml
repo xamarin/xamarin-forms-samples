@@ -15,7 +15,8 @@
                     <VisualStateGroup>
                         <VisualState x:Name="Checked">
                             <VisualState.StateTriggers>
-                                <StateTrigger IsActive="{Binding IsToggled}" />
+                                <StateTrigger IsActive="{Binding IsToggled}"
+                                              IsActiveChanged="OnCheckedStateIsActiveChanged" />
                             </VisualState.StateTriggers>
                             <VisualState.Setters>
                                 <Setter Property="BackgroundColor"
@@ -24,7 +25,8 @@
                         </VisualState>
                         <VisualState x:Name="Unchecked">
                             <VisualState.StateTriggers>
-                                <StateTrigger IsActive="{Binding IsToggled, Converter={StaticResource inverseBooleanConverter}}" />
+                                <StateTrigger IsActive="{Binding IsToggled, Converter={StaticResource inverseBooleanConverter}}"
+                                              IsActiveChanged="OnUncheckedStateIsActiveChanged" />
                             </VisualState.StateTriggers>
                             <VisualState.Setters>
                                 <Setter Property="BackgroundColor"
