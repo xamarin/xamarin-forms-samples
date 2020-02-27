@@ -4,8 +4,8 @@ using System.ComponentModel;
 using Windows.Storage;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Media;
+using WinControls = Windows.UI.Xaml.Controls;
+using WinMedia = Windows.UI.Xaml.Media;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.UWP;
@@ -15,7 +15,7 @@ using Xamarin.Forms.Platform.UWP;
 
 namespace FormsVideoLibrary.UWP
 {
-    public class VideoPlayerRenderer : ViewRenderer<VideoPlayer, MediaElement>
+    public class VideoPlayerRenderer : ViewRenderer<VideoPlayer, WinControls.MediaElement>
     {
         protected override void OnElementChanged(ElementChangedEventArgs<VideoPlayer> args)
         {
@@ -25,7 +25,7 @@ namespace FormsVideoLibrary.UWP
             {
                 if (Control == null)
                 {
-                    MediaElement mediaElement = new MediaElement();
+                    WinControls.MediaElement mediaElement = new WinControls.MediaElement();
                     SetNativeControl(mediaElement);
 
                     mediaElement.MediaOpened += OnMediaElementMediaOpened;
@@ -73,12 +73,12 @@ namespace FormsVideoLibrary.UWP
 
             switch (Control.CurrentState)
             {
-                case MediaElementState.Playing:
+                case WinMedia.MediaElementState.Playing:
                     videoStatus = VideoStatus.Playing;
                     break;
 
-                case MediaElementState.Paused:
-                case MediaElementState.Stopped:
+                case WinMedia.MediaElementState.Paused:
+                case WinMedia.MediaElementState.Stopped:
                     videoStatus = VideoStatus.Paused;
                     break;
             }
