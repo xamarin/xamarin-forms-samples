@@ -9,7 +9,6 @@
                HorizontalOptions="Center" />
         <!-- uses a custom Extension defined in this project for now -->
         <Image Source="{local:ImageResource WorkingWithImages.beach.jpg}" />
-
         <Label Text="This image is an embedded resource, referenced in XAML. The same image file is used, regardless of the pixel density of the device (eg. iOS Retina)." />
     </StackLayout>
 </ContentPage>

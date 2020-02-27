@@ -45,7 +45,7 @@
             </CarouselView.ItemTemplate>
         </CarouselView>
         <IndicatorView IndicatorsShape="Square"
-                       ItemsSourceBy="carouselView"
+                       IndicatorView.ItemsSourceBy="carouselView"
                        IndicatorColor="LightGray"
                        SelectedIndicatorColor="DarkGray"
                        HorizontalOptions="Center"
