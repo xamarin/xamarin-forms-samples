@@ -58,6 +58,7 @@ namespace FormsGallery.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
+                Xamarin.Forms.Forms.SetFlags(new string[] { "SwipeView_Experimental", "IndicatorView_Experimental", "CarouselView_Experimental", "MediaElement_Experimental" });
                 Xamarin.Forms.Forms.Init(e);
 
                 Xamarin.FormsMaps.Init("MAP_KEY");

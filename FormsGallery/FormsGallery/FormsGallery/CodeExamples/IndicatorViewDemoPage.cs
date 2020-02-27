@@ -17,6 +17,15 @@ namespace FormsGallery.CodeExamples
                 HorizontalOptions = LayoutOptions.Center
             };
 
+            // Create the IndicatorView.
+            IndicatorView indicatorView = new IndicatorView
+            {
+                Margin = new Thickness(0, 0, 0, 40),
+                IndicatorColor = Color.LightGray,
+                SelectedIndicatorColor = Color.DarkGray,
+                HorizontalOptions = LayoutOptions.Center
+            };
+
             // Create the CarouselView.
             CarouselView carouselView = new CarouselView
             {
@@ -78,19 +87,10 @@ namespace FormsGallery.CodeExamples
                     rootStackLayout.Children.Add(frame);
 
                     return rootStackLayout;
-                })
+                }),
+                IndicatorView = indicatorView
             };
             carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
-
-            // Create the IndicatorView.
-            IndicatorView indicatorView = new IndicatorView
-            {
-                Margin = new Thickness(0,0,0,40),
-                IndicatorColor = Color.LightGray,
-                SelectedIndicatorColor = Color.DarkGray,
-                HorizontalOptions = LayoutOptions.Center
-            };
-            IndicatorView.SetItemsSourceBy(indicatorView, carouselView);
             
             // Build the page.
             Title = "IndicatorView Demo";
