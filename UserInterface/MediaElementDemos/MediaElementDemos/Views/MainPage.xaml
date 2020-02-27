@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MediaElementDemos"
+             x:Class="MediaElementDemos.MainPage"
+             Title="MediaElement demos"
+             Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="Play Web Video"
+                          Detail="Play a video by specifying a URL"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PlayWebVideoPage}" />
+                <TextCell Text="Play Web Audio"
+                          Detail="Play audio by specifying a URL"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PlayWebAudioPage}" />
+                <TextCell Text="Select Web Video"
+                          Detail="Select a video from a CollectionView"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SelectWebVideoPage}" />
+                <TextCell Text="Bind to MediaElement"
+                          Detail="Select a video with a CollectionView binding"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BindToMediaElementPage}" />
+                <TextCell Text="Play App Package Video Resource"
+                          Detail="Play a video embedded in the app package"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PlayAppPackageVideoResourcePage}" />
+                <TextCell Text="Play App File Video Resource"
+                          Detail="Play a video from the app local or temp folder"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PlayAppFileVideoResourcePage}" />
+                <TextCell Text="Play Library Video"
+                          Detail="Play a video from the photos and videos library"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PlayLibraryVideoPage}" />
+                <TextCell Text="Change Aspect Ratio"
+                          Detail="Change the aspect ratio of a video"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:AspectVideoPage}" />
+                <TextCell Text="Custom Transport"
+                          Detail="Play a video with custom play and pause buttons"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CustomTransportPage}" />
+                <TextCell Text="Custom Volume Bar"
+                          Detail="Play a video with a custom volume bar"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CustomVolumePage}" />
+                <TextCell Text="Custom Position Bar"
+                          Detail="Play a video with a custom position bar"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CustomPositionBarPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

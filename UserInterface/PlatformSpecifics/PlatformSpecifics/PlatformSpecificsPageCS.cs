@@ -43,7 +43,11 @@ namespace PlatformSpecifics
                         new TextCell { Text = "NavigationPage NavigationBarSeparator", Command = NavigateCommand, CommandParameter = typeof(iOSTitleViewPageCS) },
                         new TextCell { Text = "iPad Page Modal FormSheet Page", Command = NavigateCommand, CommandParameter = typeof(iOSModalFormSheetPageCS) },
                         new TextCell { Text = "Hide Home Indicator on Page", Command = NavigateCommand, CommandParameter = typeof(iOSHideHomeIndicatorPageCS) },
-                        new TextCell { Text = "SwipeView SwipeTransitionMode", Command = NavigateCommand, CommandParameter = typeof(iOSSwipeViewTransitionModePageCS) }
+                        new TextCell { Text = "SwipeView SwipeTransitionMode", Command = NavigateCommand, CommandParameter = typeof(iOSSwipeViewTransitionModePageCS) },
+                        new TextCell { Text = "DatePicker UpdateMode", Command = NavigateCommand, CommandParameter = typeof(iOSDatePickerPageCS) },
+                        new TextCell { Text = "TimePicker UpdateMode", Command = NavigateCommand, CommandParameter = typeof(iOSTimePickerPageCS) },
+                        new TextCell { Text = "VisualElement First Responder", Command = NavigateCommand, CommandParameter = typeof(iOSFirstResponderPageCS) },
+                        new TextCell { Text = "TabbedPage Translucent TabBar", Command = NavigateCommand, CommandParameter = typeof(iOSTranslucentTabbedPageCS) }
                     },
                     new TableSection("Android")
                     {
@@ -74,7 +78,8 @@ namespace PlatformSpecifics
                         new TextCell { Text = "ListView Selection Mode", Command = NavigateCommand, CommandParameter = typeof(WindowsListViewPageCS) },
                         new TextCell { Text = "VisualElement Access Keys", Command = NavigateCommand, CommandParameter = typeof(WindowsVisualElementAccessKeysPageCS) },
                         new TextCell { Text = "TabbedPage Icons", Command = NavigateCommand, CommandParameter = typeof(WindowsTabbedPageIconsCS) },
-                        new TextCell { Text = "RefreshView Pull Direction", Command = NavigateCommand,  CommandParameter = typeof(WindowsRefreshViewPageCS) }
+                        new TextCell { Text = "RefreshView Pull Direction", Command = NavigateCommand,  CommandParameter = typeof(WindowsRefreshViewPageCS) },
+                        new TextCell { Text = "Image Search Directory", Command = NavigateCommand, CommandParameter = typeof(WindowsImageSearchDirectoryPageCS) }
                     }
                 }
             };         

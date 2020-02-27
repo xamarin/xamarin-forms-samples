@@ -66,8 +66,8 @@
         </Picker>
         <CarouselView Grid.Row="4"
                       Grid.ColumnSpan="2"
-                      x:Name="carouselView"
-                      ItemsSource="{Binding Monkeys}">
+                      ItemsSource="{Binding Monkeys}"
+                      IndicatorView="indicatorView">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
@@ -105,7 +105,6 @@
         <IndicatorView x:Name="indicatorView"
                        Grid.Row="5"
                        Grid.ColumnSpan="2"
-                       IndicatorView.ItemsSourceBy="carouselView"
                        Margin="0,0,0,40"
                        HorizontalOptions="Center" />
     </Grid>

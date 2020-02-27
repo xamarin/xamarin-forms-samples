@@ -3,20 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VsmDemos.VsmAdaptiveLayoutPage"
              Title="VSM Adaptive Layout">
-
     <StackLayout x:Name="mainStack">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup Name="OrientationStates">
-
                 <VisualState Name="Portrait">
                     <VisualState.Setters>
-                        <Setter Property="Orientation" Value="Vertical" />
+                        <Setter Property="Orientation"
+                                Value="Vertical" />
                     </VisualState.Setters>
                 </VisualState>
-
                 <VisualState Name="Landscape">
                     <VisualState.Setters>
-                        <Setter Property="Orientation" Value="Horizontal" />
+                        <Setter Property="Orientation"
+                                Value="Horizontal" />
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -28,13 +27,15 @@
                     
                     <VisualState Name="Portrait">
                         <VisualState.Setters>
-                            <Setter Property="Orientation" Value="Horizontal" />
+                            <Setter Property="Orientation"
+                                    Value="Horizontal" />
                         </VisualState.Setters>
                     </VisualState>
 
                     <VisualState Name="Landscape">
                         <VisualState.Setters>
-                            <Setter Property="Orientation" Value="Vertical" />
+                            <Setter Property="Orientation"
+                                    Value="Vertical" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -43,16 +44,16 @@
             <StackLayout x:Name="menuStack">
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroup Name="OrientationStates">
-
                         <VisualState Name="Portrait">
                             <VisualState.Setters>
-                                <Setter Property="Orientation" Value="Horizontal" />
+                                <Setter Property="Orientation"
+                                        Value="Horizontal" />
                             </VisualState.Setters>
                         </VisualState>
-
                         <VisualState Name="Landscape">
                             <VisualState.Setters>
-                                <Setter Property="Orientation" Value="Vertical" />
+                                <Setter Property="Orientation"
+                                        Value="Vertical" />
                             </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
@@ -63,19 +64,22 @@
                         <Setter Property="VisualStateManager.VisualStateGroups">
                             <VisualStateGroupList>
                                 <VisualStateGroup Name="OrientationStates">
-
                                     <VisualState Name="Portrait">
                                         <VisualState.Setters>
-                                            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
-                                            <Setter Property="Margin" Value="10, 5" />
+                                            <Setter Property="HorizontalOptions"
+                                                    Value="CenterAndExpand" />
+                                            <Setter Property="Margin"
+                                                    Value="10, 5" />
                                         </VisualState.Setters>
                                     </VisualState>
-
                                     <VisualState Name="Landscape">
                                         <VisualState.Setters>
-                                            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
-                                            <Setter Property="HorizontalOptions" Value="Center" />
-                                            <Setter Property="Margin" Value="10" />
+                                            <Setter Property="VerticalOptions"
+                                                    Value="CenterAndExpand" />
+                                            <Setter Property="HorizontalOptions"
+                                                    Value="Center" />
+                                            <Setter Property="Margin"
+                                                    Value="10" />
                                         </VisualState.Setters>
                                     </VisualState>
                                 </VisualStateGroup>
@@ -86,16 +90,13 @@
 
                 <Button Text="Banana"
                         Command="{Binding SelectedCommand}"
-                        CommandParameter="Banana.jpg" />
-                
+                        CommandParameter="Banana.jpg" />                
                 <Button Text="Face Palm"
                         Command="{Binding SelectedCommand}"
-                        CommandParameter="FacePalm.jpg" />
-                
+                        CommandParameter="FacePalm.jpg" />                
                 <Button Text="Monkey"
                         Command="{Binding SelectedCommand}"
-                        CommandParameter="monkey.png" />
-                
+                        CommandParameter="monkey.png" />                
                 <Button Text="Seated Monkey"
                         Command="{Binding SelectedCommand}"
                         CommandParameter="SeatedMonkey.jpg" />

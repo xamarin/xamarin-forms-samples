@@ -45,7 +45,7 @@
     <PackageReference Include="SkiaSharp" Version="1.60.0" />
     <PackageReference Include="SkiaSharp.Views" Version="1.60.0" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="1.60.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />

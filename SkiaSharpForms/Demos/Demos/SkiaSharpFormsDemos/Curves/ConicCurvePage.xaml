@@ -22,7 +22,7 @@
 
         <Label Text="{Binding Source={x:Reference weightSlider},
                               Path=Value,
-                              StringFormat='Weight = {0:F1}' }"
+                              StringFormat='Weight = {0:F1}'}"
                HorizontalTextAlignment="Center"
                Grid.Row="1" />
 

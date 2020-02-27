@@ -8,8 +8,8 @@
                FontSize="50"
                FontAttributes="Bold"
                HorizontalOptions="Center" />
-        <CarouselView x:Name="carouselView"
-                      ItemsSource="{Binding Monkeys}">
+        <CarouselView ItemsSource="{Binding Monkeys}"
+                      IndicatorView="indicatorView">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
@@ -44,7 +44,7 @@
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
-        <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
+        <IndicatorView x:Name="indicatorView"
                        Margin="0,0,0,40"
                        IndicatorColor="LightGray"
                        SelectedIndicatorColor="DarkGray"

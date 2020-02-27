@@ -68,6 +68,10 @@
                           Detail="From viewmodel"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:SetCurrentItemAndPositionPage}" />
+                <TextCell Text="Visual states"
+                          Detail="DefaultItem, CurrentItem, PreviousItem, NextItem"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VisualStatesPage} " />
             </TableSection>
             <TableSection Title="EmptyView">
                 <TextCell Text="EmptyView string"

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.MediaElementDemoPage"
+             Title="MediaElement Demo">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Text="MediaElement"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <MediaElement Grid.Row="1"
+                      Source="https://sec.ch9.ms/ch9/5d93/a1eab4bf-3288-4faf-81c4-294402a85d93/XamarinShow_mid.mp4"
+                      AutoPlay="True"
+                      ShowsPlaybackControls="True" />
+    </Grid>
+</ContentPage>
+
+

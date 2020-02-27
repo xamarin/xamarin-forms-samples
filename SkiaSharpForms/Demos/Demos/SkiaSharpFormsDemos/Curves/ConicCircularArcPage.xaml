@@ -20,7 +20,7 @@
 
         <Label Text="{Binding Source={x:Reference angleSlider},
                               Path=Value,
-                              StringFormat='Angle = {0:F1}' }"
+                              StringFormat='Angle = {0:F1}'}"
                HorizontalTextAlignment="Center"
                Grid.Row="1" />
 

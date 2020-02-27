@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MediaElementDemos.CustomVolumePage"
+             Title="Custom volume bar">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <MediaElement x:Name="mediaElement"
+                      Grid.Row="0"
+                      AutoPlay="False"
+                      Source="{StaticResource AdvancedAsync}" />
+        <StackLayout Grid.Row="1"
+                     Orientation="Horizontal"
+                     Margin="0, 10"
+                     BindingContext="{x:Reference mediaElement}">
+            <Button Text="&#x25B6;&#xFE0F; Play"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="OnPlayPauseButtonClicked">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding CurrentState}"
+                                 Value="{x:Static MediaElementState.Playing}">
+                        <Setter Property="Text"
+                                Value="&#x23F8; Pause" />
+                    </DataTrigger>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding CurrentState}"
+                                 Value="{x:Static MediaElementState.Buffering}">
+                        <Setter Property="IsEnabled"
+                                Value="False" />
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+            <Button Text="&#x23F9; Stop"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="OnStopButtonClicked">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding CurrentState}"
+                                 Value="{x:Static MediaElementState.Stopped}">
+                        <Setter Property="IsEnabled"
+                                Value="False" />
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+            <Slider Margin="0,20,0,30"
+                    Maximum="1.0"
+                    Minimum="0.0"
+                    Value="{Binding Volume}"
+                    Rotation="270"
+                    WidthRequest="100" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

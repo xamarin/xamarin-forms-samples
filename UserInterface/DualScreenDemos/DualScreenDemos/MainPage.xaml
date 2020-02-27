@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Visual="Material"
+             xmlns:local="clr-namespace:DualScreenDemos"
+             xmlns:dualScreen="clr-namespace:Xamarin.Forms.DualScreen;assembly=Xamarin.Forms.DualScreen"
+             x:Class="DualScreenDemos.MainPage">
+
+    <dualScreen:TwoPaneView x:Name="twoPaneView" MinWideModeWidth="0" MinTallModeHeight="0">
+        <dualScreen:TwoPaneView.Pane1>
+            <StackLayout Padding="20">
+                <Button Text="Companion Pane" Clicked="OnNavigateToSample"></Button>
+                <Button Text="Dual View" Clicked="OnNavigateToSample"></Button>
+                <Button Text="Extend Canvas" Clicked="OnNavigateToSample"></Button>
+                <Button Text="Master Detail" Clicked="OnNavigateToSample"></Button>
+                <Button Text="Two Page" Clicked="OnNavigateToSample"></Button>
+            </StackLayout>
+        </dualScreen:TwoPaneView.Pane1>
+        <dualScreen:TwoPaneView.Pane2>
+            <StackLayout Padding="20">
+                <Button Text="TwoPaneView Playground" Clicked="OnNavigateToSample"></Button>
+                <Button Text="Nested TwoPaneView Split Across Hinge" Clicked="OnNavigateToSample"></Button>
+                <Button Text="Open Picture in Picture Window" Clicked="OnNavigateToSample"></Button>
+                <Button Text="DualScreenInfo with non TwoPaneView" Clicked="OnNavigateToSample"></Button>
+            </StackLayout>
+        </dualScreen:TwoPaneView.Pane2>
+    </dualScreen:TwoPaneView>
+
+</ContentPage>

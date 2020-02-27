@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MediaElementDemos.Controls"
+             x:Class="MediaElementDemos.AspectVideoPage"
+             Title="Change aspect ratio">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <MediaElement x:Name="mediaElement"
+                      Grid.Row="0"
+                      AutoPlay="False"
+                      ShowsPlaybackControls="True"
+                      Source="{StaticResource AdvancedAsync}" />
+        <StackLayout Grid.Row="1"
+                     Margin="0,0,0,40"
+                     Orientation="Horizontal"
+                     HorizontalOptions="Center">
+            <Label Text="Aspect:"
+                   VerticalTextAlignment="Center" />
+            <controls:EnumPicker x:Name="aspectEnumPicker"
+                                 EnumType="{x:Type Aspect}"
+                                 SelectedIndex="0"
+                                 SelectedIndexChanged="OnAspectSelectedIndexChanged" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

@@ -21,6 +21,10 @@
             <TextCell Text="iPad Page Modal FormSheet Page" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSModalFormSheetPage}" />
             <TextCell Text="Hide Home Indicator on Page" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSHideHomeIndicatorPage}" />
             <TextCell Text="SwipeView SwipeTransitionMode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSSwipeViewTransitionModePage}" />
+            <TextCell Text="DatePicker UpdateMode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSDatePickerPage}" />
+            <TextCell Text="TimePicker UpdateMode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSTimePickerPage}" />
+            <TextCell Text="VisualElement First Responder" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSFirstResponderPage}" />
+            <TextCell Text="TabbedPage Translucent TabBar" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSTranslucentTabbedPage}" />
         </TableSection>
         <TableSection Title="Android">
             <TextCell Text="Soft Input Mode Adjust" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:AndroidSoftInputModeAdjustPage}" />
@@ -50,6 +54,7 @@
             <TextCell Text="VisualElement AccessKeys" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsVisualElementAccessKeysPage}" />
             <TextCell Text="TabbedPage Icons" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsTabbedPageIcons}" />
             <TextCell Text="RefreshView Pull Direction" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsRefreshViewPage}" />
+            <TextCell Text="Image Search Directory" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsImageSearchDirectoryPage}" />
         </TableSection>
     </TableView>
 </ContentPage>

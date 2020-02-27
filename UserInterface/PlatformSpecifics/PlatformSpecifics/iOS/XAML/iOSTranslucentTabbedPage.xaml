@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+            x:Class="PlatformSpecifics.iOSTranslucentTabbedPage"
+            Title="TabbedPage Translucent TabBar"
+            ios:TabbedPage.TranslucencyMode="Opaque">
+    <ContentPage Title="Page 1"
+                 IconImageSource="xaml.png">
+        <StackLayout Margin="20,35,20,20">
+            <Label Text="Page 1"
+                   HorizontalOptions="Center" />
+            <Button Text="Toggle TranslucencyMode"
+                    Clicked="OnToggleButtonClicked" />
+            <Button Text="Return to Platform-Specifics List"
+                    Clicked="OnReturnButtonClicked" />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Page 2"
+                 IconImageSource="xaml.png">
+        <StackLayout Margin="20,35,20,20">
+            <Label Text="Page 2"
+                   HorizontalOptions="Center" />
+            <Button Text="Return to Platform-Specifics List"
+                    Clicked="OnReturnButtonClicked" />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Page 3"
+                 IconImageSource="xaml.png">
+        <StackLayout Margin="20,35,20,20">
+            <Label Text="Page 3"
+                   HorizontalOptions="Center" />
+            <Button Text="Return to Platform-Specifics List"
+                    Clicked="OnReturnButtonClicked" />
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

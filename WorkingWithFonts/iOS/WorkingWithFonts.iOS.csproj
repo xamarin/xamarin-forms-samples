@@ -97,7 +97,7 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -124,12 +124,10 @@
     <BundleResource Include="Resources\Icon-Small%402x.png" />
     <BundleResource Include="Resources\csharp.png" />
     <BundleResource Include="Resources\xaml.png" />
-    <BundleResource Include="Resources\Lobster-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
-    <None Include="Resources\OFL.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />

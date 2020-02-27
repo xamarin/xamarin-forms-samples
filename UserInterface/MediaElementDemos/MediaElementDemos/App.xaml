@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MediaElementDemos.App">
+    <Application.Resources>
+        <UriMediaSource x:Key="CompiledBindings"
+                        Uri="https://sec.ch9.ms/ch9/b8f3/6759a97e-053a-458a-a1ec-99497794b8f3/XamarinForms101CompiledBindings_mid.mp4" />
+        <UriMediaSource x:Key="AsyncVoid"
+                        Uri="https://sec.ch9.ms/ch9/da92/e2317c58-7215-4b4b-8809-589c1a85da92/UsingAsyncVoid_mid.mp4" />
+        <UriMediaSource x:Key="AdvancedAsync"
+                        Uri="https://sec.ch9.ms/ch9/dd38/b6a43ca8-243f-4f6a-87bc-c86142dadd38/AsyncPart2_mid.mp4" />
+    </Application.Resources>
+</Application>

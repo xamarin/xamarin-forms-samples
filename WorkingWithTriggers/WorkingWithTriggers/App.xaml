@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="WorkingWithTriggers.App">
+    <Application.Resources>
+
+        <!-- DeviceStateTrigger demo -->
+        <Style x:Key="DeviceStateTriggerPageStyle"
+               TargetType="ContentPage">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup>
+                        <VisualState x:Name="iOS">
+                            <VisualState.StateTriggers>
+                                <DeviceStateTrigger Device="iOS" />
+                            </VisualState.StateTriggers>
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="Silver" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Android">
+                            <VisualState.StateTriggers>
+                                <DeviceStateTrigger Device="Android" />
+                            </VisualState.StateTriggers>
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="#2196F3" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="UWP">
+                            <VisualState.StateTriggers>
+                                <DeviceStateTrigger Device="UWP" />
+                            </VisualState.StateTriggers>
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="Aquamarine" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+
+        <!-- OrientationStateTrigger demo -->
+        <Style x:Key="OrientationStateTriggerPageStyle"
+               TargetType="ContentPage">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup>
+                        <VisualState x:Name="Portrait">
+                            <VisualState.StateTriggers>
+                                <OrientationStateTrigger Orientation="Portrait" />
+                            </VisualState.StateTriggers>
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="Silver" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Landscape">
+                            <VisualState.StateTriggers>
+                                <OrientationStateTrigger Orientation="Landscape" />
+                            </VisualState.StateTriggers>
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="White" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+
+    </Application.Resources>
+</Application>

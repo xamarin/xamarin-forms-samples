@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MediaElementDemos.SelectWebVideoPage"
+             Title="Select Web Video">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <MediaElement x:Name="mediaElement"
+                      Grid.Row="0"
+                      ShowsPlaybackControls="True" />
+        <CollectionView Grid.Row="1"
+                        Margin="20"
+                        SelectionMode="Single"
+                        SelectionChanged="OnCollectionViewSelectionChanged">
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Compiled Bindings</x:String>
+                    <x:String>Async Void</x:String>
+                    <x:String>Advanced Async</x:String>
+                </x:Array>
+            </CollectionView.ItemsSource>
+        </CollectionView>
+    </Grid>    
+</ContentPage>

@@ -18,7 +18,7 @@ namespace FormsGallery.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Xamarin.Forms.Forms.SetFlags(new string[] { "SwipeView_Experimental", "IndicatorView_Experimental", "CarouselView_Experimental" });
+            Xamarin.Forms.Forms.SetFlags(new string[] { "SwipeView_Experimental", "CarouselView_Experimental", "IndicatorView_Experimental", "MediaElement_Experimental" });
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.FormsMaps.Init();
             LoadApplication(new App());

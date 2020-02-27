@@ -9,13 +9,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\Lobster-Regular.ttf" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="FontPageXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Fonts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Lobster-Regular.ttf" />
+  </ItemGroup>
 </Project>

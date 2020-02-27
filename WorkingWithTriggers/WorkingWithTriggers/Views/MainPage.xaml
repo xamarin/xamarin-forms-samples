@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WorkingWithTriggers"
+             x:Class="WorkingWithTriggers.MainPage"
+             Title="Trigger Demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="Property trigger demo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PropertyTriggerXaml}" />
+                <TextCell Text="DataTrigger demo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:DataTriggerXaml}" />
+                <TextCell Text="EventTrigger demo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:EventTriggerXaml}" />
+                <TextCell Text="MultiTrigger demo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MultiTriggerXaml}" />
+                <TextCell Text="EnterActions and ExitActions demo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:EnterExitActionXaml}" />
+                <TextCell Text="AdaptiveTrigger demo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:AdaptiveTriggerDemoPage}" />
+                <TextCell Text="CompareStateTrigger demo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CompareStateTriggerDemoPage}" />
+                <TextCell Text="DeviceStateTrigger demo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:DeviceStateTriggerDemoPage}" />
+                <TextCell Text="OrientationStateTrigger demo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:OrientationStateTriggerDemoPage}" />
+                <TextCell Text="StateTrigger demo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:StateTriggerDemoPage}" />
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

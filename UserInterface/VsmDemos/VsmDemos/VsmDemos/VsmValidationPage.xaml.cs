@@ -1,17 +1,16 @@
-﻿using System;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using Xamarin.Forms;
 
 namespace VsmDemos
 {
     public partial class VsmValidationPage : ContentPage
     {
-	    public VsmValidationPage ()
-	    {
-		    InitializeComponent ();
+        public VsmValidationPage()
+        {
+            InitializeComponent();
 
             GoToState(false);
-	    }
+        }
 
         void OnTextChanged(object sender, TextChangedEventArgs args)
         {
@@ -22,8 +21,7 @@ namespace VsmDemos
         void GoToState(bool isValid)
         {
             string visualState = isValid ? "Valid" : "Invalid";
-            VisualStateManager.GoToState(helpLabel, visualState);
-            VisualStateManager.GoToState(submitButton, visualState);
+            VisualStateManager.GoToState(stackLayout, visualState);
         }
-	}
+    }
 }
