@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:MediaElementDemos.Models"
+             x:Class="MediaElementDemos.BindToMediaElementPage"
+             Title="Bind to MediaElement">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <MediaElement Grid.Row="0"
+                      Source="{Binding Source={x:Reference collectionView}, Path=SelectedItem.Source}"
+                      ShowsPlaybackControls="True" />
+        <CollectionView x:Name="collectionView"
+                        Grid.Row="1"
+                        Margin="20"
+                        SelectionMode="Single">
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type models:MediaInfo}">
+                    <models:MediaInfo DisplayName="Compiled Bindings"
+                                      Source="{StaticResource CompiledBindings}" />
+                    <models:MediaInfo DisplayName="Using Async Void"
+                                      Source="{StaticResource AsyncVoid}" />
+                    <models:MediaInfo DisplayName="Advanced Async"
+                                      Source="{StaticResource AdvancedAsync}" />
+                </x:Array>
+            </CollectionView.ItemsSource>
+        </CollectionView>
+    </Grid>
+</ContentPage>

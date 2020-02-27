@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MediaElementDemos.PlayWebAudioPage"
+             Title="Play web audio">
+    <MediaElement Source="https://sec.ch9.ms/ch9/94a2/1e1e55c2-8c33-4f2f-8cc0-413e8ae794a2/MemoryManagement.mp3"
+                  ShowsPlaybackControls="True" />
+</ContentPage>

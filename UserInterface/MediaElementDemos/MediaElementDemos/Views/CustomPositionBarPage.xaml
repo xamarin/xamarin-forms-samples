@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MediaElementDemos.Controls"
+             x:Class="MediaElementDemos.CustomPositionBarPage"
+             Title="Custom position bar">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*" />
+            <ColumnDefinition Width="0.25*" />
+            <ColumnDefinition Width="0.25*" />
+            <ColumnDefinition Width="0.25*" />
+        </Grid.ColumnDefinitions>
+        <MediaElement x:Name="mediaElement"
+                      Grid.Row="0"
+                      Grid.ColumnSpan="4"
+                      AutoPlay="False"
+                      Source="{StaticResource AsyncVoid}" />
+        <Grid Grid.Row="1"
+              Grid.ColumnSpan="4"
+              BindingContext="{x:Reference mediaElement}">
+            <Label x:Name="positionLabel"
+                   Margin="10,0"
+                   Text="00:00:00"
+                   VerticalOptions="Center" />
+            <Button Grid.Column="1"
+                    Text="&#x25B6;&#xFE0F; Play"
+                    HorizontalOptions="Start"
+                    Clicked="OnPlayPauseButtonClicked">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding CurrentState}"
+                                 Value="{x:Static MediaElementState.Playing}">
+                        <Setter Property="Text" Value="&#x23F8; Pause" />
+                    </DataTrigger>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding CurrentState}"
+                                 Value="{x:Static MediaElementState.Buffering}">
+                        <Setter Property="IsEnabled" Value="False" />
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+            <Button Grid.Column="2"
+                    Text="&#x23F9; Stop"
+                    HorizontalOptions="Start"
+                    Clicked="OnStopButtonClicked">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding CurrentState}"
+                                 Value="{x:Static MediaElementState.Stopped}">
+                        <Setter Property="IsEnabled" Value="False" />
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+            <Label Grid.Column="3"
+                   Margin="10,0"
+                   Text="{Binding Source={x:Reference positionSlider}, Path=TimeToEnd, StringFormat='{0:hh\\:mm\\:ss}'}"
+                   VerticalOptions="Center" />
+        </Grid>
+        <controls:PositionSlider x:Name="positionSlider"
+                                 Grid.Row="2"
+                                 Grid.ColumnSpan="4"
+                                 Margin="20,0,10,20"
+                                 BindingContext="{x:Reference mediaElement}"
+                                 Duration="{Binding Duration}"
+                                 ValueChanged="OnPositionSliderValueChanged">
+            <controls:PositionSlider.Triggers>
+                <DataTrigger TargetType="controls:PositionSlider"
+                             Binding="{Binding CurrentState}"
+                             Value="{x:Static MediaElementState.Buffering}">
+                    <Setter Property="IsEnabled" Value="False" />
+                </DataTrigger>
+            </controls:PositionSlider.Triggers>
+        </controls:PositionSlider>
+    </Grid>
+</ContentPage>
