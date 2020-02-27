@@ -25,10 +25,12 @@ namespace CustomRenderer.iOS
 			Initialize ();
 		}
 
-		public override void Draw (CGRect rect)
+		public override void LayoutSubviews()
 		{
-			base.Draw (rect);
-			previewLayer.Frame = rect;
+			base.LayoutSubviews();
+
+			if (previewLayer != null)
+				previewLayer.Frame = Bounds;
 		}
 
 		public override void TouchesBegan (NSSet touches, UIEvent evt)
