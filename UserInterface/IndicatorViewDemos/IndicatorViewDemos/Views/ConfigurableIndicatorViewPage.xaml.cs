@@ -28,6 +28,7 @@ namespace IndicatorViewDemos.Views
             selectedIndicatorColorPicker.ItemsSource = colors;
             selectedIndicatorColorPicker.SelectedIndex = 2;
             maximumVisbilePicker.SelectedIndex = 0;
+            indicatorSizePicker.SelectedIndex = 0;
         }
 
         void OnIndicatorColorChanged(object sender, EventArgs e)
@@ -56,6 +57,11 @@ namespace IndicatorViewDemos.Views
         void OnMaximumVisibleChanged(object sender, EventArgs e)
         {
             indicatorView.MaximumVisible = Convert.ToInt32((sender as Picker).SelectedItem);
+        }
+
+        void OnIndicatorSizeChanged(object sender, EventArgs e)
+        {
+            indicatorView.IndicatorSize = Convert.ToDouble((sender as Picker).SelectedItem);
         }
     }
 }

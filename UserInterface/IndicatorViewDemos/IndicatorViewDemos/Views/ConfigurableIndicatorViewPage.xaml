@@ -16,6 +16,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.5*" />
@@ -64,7 +65,24 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
-        <CarouselView Grid.Row="4"
+        <Label Grid.Row="4"
+               Text="IndicatorSize:"
+               VerticalTextAlignment="Center"
+               HorizontalOptions="End" />
+        <Picker x:Name="indicatorSizePicker"
+                Grid.Row="4"
+                Grid.Column="1"
+                HorizontalOptions="Start"
+                SelectedIndexChanged="OnIndicatorSizeChanged">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>6</x:String>
+                    <x:String>12</x:String>
+                    <x:String>18</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <CarouselView Grid.Row="5"
                       Grid.ColumnSpan="2"
                       ItemsSource="{Binding Monkeys}"
                       IndicatorView="indicatorView">
@@ -74,7 +92,7 @@
                         <Frame HasShadow="True"
                                BorderColor="DarkGray"
                                CornerRadius="5"
-                               Margin="50"
+                               Margin="10"
                                HeightRequest="300"
                                HorizontalOptions="Center"
                                VerticalOptions="CenterAndExpand">
@@ -103,7 +121,7 @@
             </CarouselView.ItemTemplate>
         </CarouselView>
         <IndicatorView x:Name="indicatorView"
-                       Grid.Row="5"
+                       Grid.Row="6"
                        Grid.ColumnSpan="2"
                        Margin="0,0,0,40"
                        HorizontalOptions="Center" />
