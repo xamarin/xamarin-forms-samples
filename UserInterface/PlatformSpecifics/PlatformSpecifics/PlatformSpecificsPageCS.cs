@@ -47,7 +47,8 @@ namespace PlatformSpecifics
                         new TextCell { Text = "DatePicker UpdateMode", Command = NavigateCommand, CommandParameter = typeof(iOSDatePickerPageCS) },
                         new TextCell { Text = "TimePicker UpdateMode", Command = NavigateCommand, CommandParameter = typeof(iOSTimePickerPageCS) },
                         new TextCell { Text = "VisualElement First Responder", Command = NavigateCommand, CommandParameter = typeof(iOSFirstResponderPageCS) },
-                        new TextCell { Text = "TabbedPage Translucent TabBar", Command = NavigateCommand, CommandParameter = typeof(iOSTranslucentTabbedPageCS) }
+                        new TextCell { Text = "TabbedPage Translucent TabBar", Command = NavigateCommand, CommandParameter = typeof(iOSTranslucentTabbedPageCS) },
+                        new TextCell { Text = "SearchBar Style", Command = NavigateCommand, CommandParameter = typeof(iOSSearchBarPageCS) }
                     },
                     new TableSection("Android")
                     {
