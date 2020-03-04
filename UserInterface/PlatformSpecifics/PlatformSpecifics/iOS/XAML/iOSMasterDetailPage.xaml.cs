@@ -17,8 +17,7 @@ namespace PlatformSpecifics
 
         void OnShadowButtonClicked(object sender, EventArgs e)
         {
-            bool isShadow = On<iOS>().GetApplyShadow();
-            On<iOS>().SetApplyShadow(!isShadow);
+            On<iOS>().SetApplyShadow(!On<iOS>().GetApplyShadow());
         }
 
         void OnReturnButtonClicked(object sender, EventArgs e)
