@@ -17,7 +17,7 @@ namespace PlatformSpecifics
             shadowButton.Clicked += (s, e) => On<iOS>().SetApplyShadow(!On<iOS>().GetApplyShadow());
 
             Button returnButton = new Button { Text = "Return to platform-specifics list" };
-            returnButton.Clicked += (s, e) => returnToPlatformSpecificsPage.Execute(null); ;
+            returnButton.Clicked += (s, e) => returnToPlatformSpecificsPage.Execute(null);
 
             On<iOS>().SetApplyShadow(true);
 
