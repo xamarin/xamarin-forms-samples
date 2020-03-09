@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace BindableLayoutDemo
+namespace BindableLayoutDemo.Controls
 {
     public class TechItemTemplateSelector : DataTemplateSelector
     {

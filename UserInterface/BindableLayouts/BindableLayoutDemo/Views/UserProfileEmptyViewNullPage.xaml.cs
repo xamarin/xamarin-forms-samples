@@ -2,9 +2,9 @@
 
 namespace BindableLayoutDemo.Views
 {
-    public partial class UserProfilePage : ContentPage
+    public partial class UserProfileEmptyViewNullPage : ContentPage
     {
-        public UserProfilePage()
+        public UserProfileEmptyViewNullPage()
         {
             InitializeComponent();
         }
