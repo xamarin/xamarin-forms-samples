@@ -12,7 +12,7 @@ namespace WorkingWithMaps
 
         public PolygonsPageCode()
         {
-            Title = "Polygon/Polyline Code Demo";
+            Title = "Polygon/Polyline Code demo";
             
             map = new Map();
 

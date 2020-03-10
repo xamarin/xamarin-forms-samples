@@ -35,6 +35,10 @@
                           Detail="Add polygons and polylines to a map."
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:PolygonsPage}" />
+                <TextCell Text="Highlight a circular area"
+                          Detail="Add a circle to a map."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CirclePage}" />
                 <TextCell Text="Geocoder demo"
                           Detail="Geocode and reverse geocode an address."
                           Command="{Binding NavigateCommand}"
