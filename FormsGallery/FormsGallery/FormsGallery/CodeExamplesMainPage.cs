@@ -99,6 +99,14 @@ namespace FormsGallery
 
                         new TextCell
                         {
+                            Text = "RadioButton",
+                            Detail = "Initiate a command",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.RadioButtonDemoPage)
+                        },
+
+                        new TextCell
+                        {
                             Text = "RefreshView",
                             Detail = "Initiate a command",
                             Command = navigateCommand,

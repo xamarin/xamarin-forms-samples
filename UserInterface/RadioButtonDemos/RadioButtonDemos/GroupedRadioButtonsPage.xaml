@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RadioButtonDemos.GroupedRadioButtonsPage"
+             Title="Grouped RadioButtons demo">
+    <StackLayout Margin="10">
+        <Label Text="What's your favorite color?" />
+        <RadioButton Text="Red"
+                     TextColor="Red"
+                     GroupName="colors"
+                     CheckedChanged="OnColorsRadioButtonCheckedChanged" />
+        <RadioButton Text="Green"
+                     TextColor="Green"
+                     GroupName="colors"
+                     CheckedChanged="OnColorsRadioButtonCheckedChanged" />
+        <RadioButton Text="Blue"
+                     TextColor="Blue"
+                     GroupName="colors"
+                     CheckedChanged="OnColorsRadioButtonCheckedChanged" />
+        <RadioButton Text="Other"
+                     GroupName="colors"
+                     CheckedChanged="OnColorsRadioButtonCheckedChanged" />
+        <Label x:Name="colorLabel"
+               Text="You have chosen:" />
+        <Label Text="What's your favorite fruit?" />
+        <RadioButton Text="Apple"
+                     GroupName="fruits"
+                     CheckedChanged="OnFruitsRadioButtonCheckedChanged" />
+        <RadioButton Text="Banana"
+                     GroupName="fruits"
+                     CheckedChanged="OnFruitsRadioButtonCheckedChanged" />
+        <RadioButton Text="Pineapple"
+                     GroupName="fruits"
+                     CheckedChanged="OnFruitsRadioButtonCheckedChanged" />
+        <RadioButton Text="Other"
+                     GroupName="fruits"
+                     CheckedChanged="OnFruitsRadioButtonCheckedChanged" />
+        <Label x:Name="fruitLabel"
+               Text="You have chosen:" />
+    </StackLayout>
+</ContentPage>
+

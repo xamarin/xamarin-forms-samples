@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RadioButtonDemos.BasicRadioButtonsPage"
+             Title="Basic RadioButtons demo">
+    <StackLayout Margin="10">
+        <Label Text="What's your favorite animal?" />
+        <RadioButton Text="Cat"
+                     CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
+        <RadioButton Text="Dog"
+                     CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
+        <RadioButton Text="Elephant"
+                     CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
+        <RadioButton Text="Monkey"
+                     CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
+        <Label x:Name="animalLabel"
+               Text="You have chosen:" />
+        <Label Text="What platform is this app running on?" />
+        <StackLayout>
+            <RadioButton Text="Android"
+                         CheckedChanged="OnPlatformRadioButtonCheckedChanged" />
+            <RadioButton Text="iOS"
+                         CheckedChanged="OnPlatformRadioButtonCheckedChanged" />      
+            <RadioButton Text="UWP"
+                         CheckedChanged="OnPlatformRadioButtonCheckedChanged" />
+            <Label x:Name="platformLabel"
+                   Text="You have chosen:" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

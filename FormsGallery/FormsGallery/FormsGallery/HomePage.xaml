@@ -75,6 +75,11 @@
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.ImageButtonDemoPage}" />
 
+                    <TextCell Text="RadioButton"
+                              Detail="Initiate a command"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.RadioButtonDemoPage}" />
+
                     <TextCell Text="RefreshView"
                               Detail="Initiate a command"
                               Command="{Binding NavigateCommand}"
