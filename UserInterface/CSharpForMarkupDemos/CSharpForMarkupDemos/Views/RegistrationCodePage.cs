@@ -84,7 +84,7 @@ namespace CSharpForMarkupDemos.Views
                                 new Label { } .Italic ()
                                     .Row (BodyRow.CodeHeader) .Column (BodyCol.FieldValidation) .Right () .Bottom () .Margin (fieldNameMargin)
                                     .Bind (nameof(vm.RegistrationCodeValidationMessage)),
-                                new Entry { Placeholder = "E.g. 123456", Keyboard = Keyboard.Numeric, BackgroundColor = Color.White, TextColor = Color.Gray } .Font (15)
+                                new Entry { Placeholder = "E.g. 123456", Keyboard = Keyboard.Numeric, BackgroundColor = Color.AliceBlue, TextColor = Color.Black } .Font (15)
                                     .Row (BodyRow.CodeEntry) .ColumnSpan (All<BodyCol>()) .Margin (fieldMargin) .Height (44)
                                     .Bind (nameof(vm.RegistrationCode), BindingMode.TwoWay),
                                 new Button { Text = "Verify" } .Style (FilledButton)
