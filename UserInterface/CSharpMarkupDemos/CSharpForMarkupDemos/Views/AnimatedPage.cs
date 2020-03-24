@@ -22,7 +22,7 @@ namespace CSharpForMarkupDemos.Views
                     new StyledLabel ("and"),
                     new StyledLabel ("UI Logic") { TextColor = Color.Red } .Bold ()
                 }
-            }.Assign(out animatedStackLayout);
+            } .Assign (out animatedStackLayout);
         }
 
         class StyledLabel : Label
@@ -30,8 +30,8 @@ namespace CSharpForMarkupDemos.Views
             public StyledLabel(string text)
             {
                 Text = text;
-                this.FontSize(32)
-                    .CenterHorizontal();
+                this .FontSize (32)
+                     .CenterHorizontal ();
             }
         }
     }
