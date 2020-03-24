@@ -48,9 +48,9 @@
 			</winControls:TextBlock.FontFamily>
 		</winControls:TextBlock>
 		<BoxView Color="{Binding SelectedColor}" HeightRequest="100" />
-		<ios:UISlider Value="{Binding Red, Mode=TwoWay, UpdateSourceEventName=ValueChanged, Converter={StaticResource doubleToSingleConverter}" ThumbTintColor="{x:Static ios:UIColor.Red}" MinimumTrackTintColor="{x:Static ios:UIColor.Black}" MaximumTrackTintColor="{x:Static ios:UIColor.Red}" />
-		<ios:UISlider Value="{Binding Green, Mode=TwoWay, UpdateSourceEventName=ValueChanged, Converter={StaticResource doubleToSingleConverter}" ThumbTintColor="{x:Static ios:UIColor.Green}" MinimumTrackTintColor="{x:Static ios:UIColor.Black}" MaximumTrackTintColor="{x:Static ios:UIColor.Green}" />
-		<ios:UISlider Value="{Binding Blue, Mode=TwoWay, UpdateSourceEventName=ValueChanged, Converter={StaticResource doubleToSingleConverter}" ThumbTintColor="{x:Static ios:UIColor.Blue}" MinimumTrackTintColor="{x:Static ios:UIColor.Black}" MaximumTrackTintColor="{x:Static ios:UIColor.Blue}" />
+		<ios:UISlider Value="{Binding Red, Mode=TwoWay, UpdateSourceEventName=ValueChanged, Converter={StaticResource doubleToSingleConverter}}" ThumbTintColor="{x:Static ios:UIColor.Red}" MinimumTrackTintColor="{x:Static ios:UIColor.Black}" MaximumTrackTintColor="{x:Static ios:UIColor.Red}" />
+		<ios:UISlider Value="{Binding Green, Mode=TwoWay, UpdateSourceEventName=ValueChanged, Converter={StaticResource doubleToSingleConverter}}" ThumbTintColor="{x:Static ios:UIColor.Green}" MinimumTrackTintColor="{x:Static ios:UIColor.Black}" MaximumTrackTintColor="{x:Static ios:UIColor.Green}" />
+		<ios:UISlider Value="{Binding Blue, Mode=TwoWay, UpdateSourceEventName=ValueChanged, Converter={StaticResource doubleToSingleConverter}}" ThumbTintColor="{x:Static ios:UIColor.Blue}" MinimumTrackTintColor="{x:Static ios:UIColor.Black}" MaximumTrackTintColor="{x:Static ios:UIColor.Blue}" />
 		<androidWidget:SeekBar x:Arguments="{x:Static androidLocal:MainActivity.Instance}" Progress="{Binding Red, Mode=TwoWay, UpdateSourceEventName=ProgressChanged, Converter={StaticResource doubleToIntConverter}}" Max="256" />
 		<androidWidget:SeekBar x:Arguments="{x:Static androidLocal:MainActivity.Instance}" Progress="{Binding Green, Mode=TwoWay, UpdateSourceEventName=ProgressChanged, Converter={StaticResource doubleToIntConverter}}" Max="256" />
 		<androidWidget:SeekBar x:Arguments="{x:Static androidLocal:MainActivity.Instance}" Progress="{Binding Blue, Mode=TwoWay, UpdateSourceEventName=ProgressChanged, Converter={StaticResource doubleToIntConverter}}" Max="256" />
