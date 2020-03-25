@@ -8,7 +8,7 @@ namespace CSharpForMarkupDemos.Views
         void Build()
         {
             Title = "Animated page demo";
-                        
+
             Content = new StackLayout
             {
                 IsVisible = false,
@@ -18,9 +18,9 @@ namespace CSharpForMarkupDemos.Views
                     new StyledLabel ("to illustrate"),
                     new StyledLabel ("separation"),
                     new StyledLabel ("of"),
-                    new StyledLabel ("UI Markup") { TextColor = Color.Green } .Bold (),
+                    new StyledLabel ("UI Markup") { TextColor = Color.Green }.Bold(),
                     new StyledLabel ("and"),
-                    new StyledLabel ("UI Logic") { TextColor = Color.Red } .Bold ()
+                    new StyledLabel ("UI Logic") { TextColor = Color.Red }.Bold()
                 }
             }.Assign(out animatedStackLayout);
         }

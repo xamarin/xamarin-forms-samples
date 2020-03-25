@@ -176,7 +176,7 @@ namespace CSharpForMarkupDemos.Views
 
                                     new Label { } .Font (14) .Bold ()
                                         .Row (Row.Piles) .Column (Col.RightPile) .CenterVertical () .TextCenterHorizontal () .TextBottom ()
-                                        .Bind (nameof(ListItem.CountText)),                                    
+                                        .Bind (nameof(ListItem.CountText)),
 
                                     new Button { Text = "-", TextColor = Color.White, BackgroundColor = Color.FromHex("#1976D2")} .Font (14)
                                         .Row (Row.Buttons) .Column (Col.LeftPileIcon, Col.LeftPile) .FillHorizontal () .CenterVertical ()
