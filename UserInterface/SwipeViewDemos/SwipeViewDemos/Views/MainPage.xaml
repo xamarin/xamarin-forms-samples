@@ -24,6 +24,10 @@
             <TextCell Text="SwipeView custom SwipeItem"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type views:SwipeViewCustomItemPage}" />
+            <TextCell Text="SwipeView programmatic open and close"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type views:SwipeViewProgrammaticPage}" />
+
         </TableSection>
     </TableView>
 </ContentPage>
