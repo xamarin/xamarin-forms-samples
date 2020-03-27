@@ -140,8 +140,12 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\XamarinLogo.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\XamarinLogo.imageset\XamarinLogo.png" />
+    <ImageAsset Include="Assets.xcassets\XamarinLogo.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\XamarinLogo.imageset\XamarinLogo.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
