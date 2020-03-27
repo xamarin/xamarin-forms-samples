@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaleAndRotate.iOS", "ScaleAndRotate\ScaleAndRotate.iOS\ScaleAndRotate.iOS.csproj", "{84F40347-D4B9-4149-BB3C-AE5A008BA7E2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaleAndRotate.Android", "ScaleAndRotate\ScaleAndRotate.Android\ScaleAndRotate.Android.csproj", "{EBA305DD-5E8D-460E-B32A-DF6C2A5349C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaleAndRotate", "ScaleAndRotate\ScaleAndRotate\ScaleAndRotate.csproj", "{49FE05FB-5F62-48CB-B483-9542F60F7999}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScaleAndRotate", "ScaleAndRotate\ScaleAndRotate\ScaleAndRotate.csproj", "{49FE05FB-5F62-48CB-B483-9542F60F7999}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CCDB7F76-039E-4DDF-821F-CA2D5671073B}"
 EndProject
@@ -269,9 +269,6 @@ Global
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|x86
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|x86
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Ad-Hoc|iPhoneSimulator.Deploy.0 = Release|x86
-		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Ad-Hoc|Mixed Platforms.ActiveCfg = Release|x86
-		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Ad-Hoc|Mixed Platforms.Build.0 = Release|x86
-		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Ad-Hoc|Mixed Platforms.Deploy.0 = Release|x86
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Ad-Hoc|x64.ActiveCfg = Release|x64
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Ad-Hoc|x64.Build.0 = Release|x64
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Ad-Hoc|x64.Deploy.0 = Release|x64
@@ -290,9 +287,6 @@ Global
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.AppStore|iPhoneSimulator.ActiveCfg = Release|x86
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.AppStore|iPhoneSimulator.Build.0 = Release|x86
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.AppStore|iPhoneSimulator.Deploy.0 = Release|x86
-		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.AppStore|Mixed Platforms.ActiveCfg = Release|x86
-		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.AppStore|Mixed Platforms.Build.0 = Release|x86
-		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.AppStore|Mixed Platforms.Deploy.0 = Release|x86
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.AppStore|x64.ActiveCfg = Release|x64
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.AppStore|x64.Build.0 = Release|x64
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.AppStore|x64.Deploy.0 = Release|x64
@@ -305,9 +299,8 @@ Global
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Debug|ARM.Deploy.0 = Debug|ARM
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Debug|iPhone.ActiveCfg = Debug|x86
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
-		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Debug|Mixed Platforms.Deploy.0 = Debug|x86
+		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Debug|iPhoneSimulator.Build.0 = Debug|x86
+		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Debug|iPhoneSimulator.Deploy.0 = Debug|x86
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Debug|x64.ActiveCfg = Debug|x64
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Debug|x64.Build.0 = Debug|x64
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Debug|x64.Deploy.0 = Debug|x64
@@ -320,9 +313,8 @@ Global
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Release|ARM.Deploy.0 = Release|ARM
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Release|iPhone.ActiveCfg = Release|x86
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Release|iPhoneSimulator.ActiveCfg = Release|x86
-		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Release|Mixed Platforms.Build.0 = Release|x86
-		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Release|Mixed Platforms.Deploy.0 = Release|x86
+		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Release|iPhoneSimulator.Build.0 = Release|x86
+		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Release|iPhoneSimulator.Deploy.0 = Release|x86
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Release|x64.ActiveCfg = Release|x64
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Release|x64.Build.0 = Release|x64
 		{96B69AC6-EC35-4474-B3F7-38A78FEC7B93}.Release|x64.Deploy.0 = Release|x64
@@ -332,6 +324,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {012C31BE-FC66-4DC4-9B37-FB4D16003FA1}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = ScaleAndRotate\ScaleAndRotate.iOS\ScaleAndRotate.iOS.csproj
