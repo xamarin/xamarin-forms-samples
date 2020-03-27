@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalc", "TipCalc\TipCalc\TipCalc.csproj", "{47465F9A-97E6-465F-AC57-030191C62C5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TipCalc", "TipCalc\TipCalc\TipCalc.csproj", "{47465F9A-97E6-465F-AC57-030191C62C5B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{9DFFA25A-94E7-43D2-978B-F58F28634629}"
 EndProject
@@ -269,9 +269,6 @@ Global
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|x64
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|x64
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Ad-Hoc|iPhoneSimulator.Deploy.0 = Release|x64
-		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Ad-Hoc|Mixed Platforms.ActiveCfg = Release|x86
-		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Ad-Hoc|Mixed Platforms.Build.0 = Release|x86
-		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Ad-Hoc|Mixed Platforms.Deploy.0 = Release|x86
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Ad-Hoc|x64.ActiveCfg = Release|x64
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Ad-Hoc|x64.Build.0 = Release|x64
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Ad-Hoc|x64.Deploy.0 = Release|x64
@@ -290,9 +287,6 @@ Global
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.AppStore|iPhoneSimulator.ActiveCfg = Release|x64
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.AppStore|iPhoneSimulator.Build.0 = Release|x64
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.AppStore|iPhoneSimulator.Deploy.0 = Release|x64
-		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.AppStore|Mixed Platforms.ActiveCfg = Release|x86
-		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.AppStore|Mixed Platforms.Build.0 = Release|x86
-		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.AppStore|Mixed Platforms.Deploy.0 = Release|x86
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.AppStore|x64.ActiveCfg = Release|x64
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.AppStore|x64.Build.0 = Release|x64
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.AppStore|x64.Deploy.0 = Release|x64
@@ -300,14 +294,13 @@ Global
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.AppStore|x86.Build.0 = Release|x86
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.AppStore|x86.Deploy.0 = Release|x86
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Debug|Any CPU.Build.0 = Debug|x86
+		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Debug|ARM.ActiveCfg = Debug|ARM
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Debug|ARM.Build.0 = Debug|ARM
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Debug|ARM.Deploy.0 = Debug|ARM
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Debug|iPhone.ActiveCfg = Debug|x86
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
-		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Debug|Mixed Platforms.Deploy.0 = Debug|x86
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Debug|x64.ActiveCfg = Debug|x64
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Debug|x64.Build.0 = Debug|x64
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Debug|x64.Deploy.0 = Debug|x64
@@ -315,14 +308,13 @@ Global
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Debug|x86.Build.0 = Debug|x86
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Debug|x86.Deploy.0 = Debug|x86
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Release|Any CPU.ActiveCfg = Release|x86
+		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Release|Any CPU.Build.0 = Release|x86
+		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Release|Any CPU.Deploy.0 = Release|x86
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Release|ARM.ActiveCfg = Release|ARM
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Release|ARM.Build.0 = Release|ARM
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Release|ARM.Deploy.0 = Release|ARM
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Release|iPhone.ActiveCfg = Release|x86
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Release|iPhoneSimulator.ActiveCfg = Release|x86
-		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Release|Mixed Platforms.Build.0 = Release|x86
-		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Release|Mixed Platforms.Deploy.0 = Release|x86
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Release|x64.ActiveCfg = Release|x64
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Release|x64.Build.0 = Release|x64
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904}.Release|x64.Deploy.0 = Release|x64
@@ -337,6 +329,9 @@ Global
 		{095830C6-27C4-4A8E-9195-519EEB2A79AD} = {9DFFA25A-94E7-43D2-978B-F58F28634629}
 		{541E5706-D876-4384-AB14-501FCB3166A3} = {9DFFA25A-94E7-43D2-978B-F58F28634629}
 		{E874B76C-E9DC-4331-8A43-BDF8CDEFD904} = {9DFFA25A-94E7-43D2-978B-F58F28634629}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9902DE6-6786-48C4-93B5-05B4836CE575}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = TipCalc\TipCalc.iOS\TipCalc.iOS.csproj
