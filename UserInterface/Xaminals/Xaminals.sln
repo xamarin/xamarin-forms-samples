@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xaminals.Android", "Xaminal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xaminals.iOS", "Xaminals.iOS\Xaminals.iOS.csproj", "{2EAAEE32-09F5-4390-9CA5-C67B7CE09BA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xaminals", "Xaminals\Xaminals.csproj", "{CD4DE9E8-2721-47F3-BA95-999B6F75FF27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xaminals", "Xaminals\Xaminals.csproj", "{CD4DE9E8-2721-47F3-BA95-999B6F75FF27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,12 +42,14 @@ Global
 		{DA067342-E7FA-4C40-8809-21401D523D47}.AppStore|iPhoneSimulator.Deploy.0 = Release|Any CPU
 		{DA067342-E7FA-4C40-8809-21401D523D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DA067342-E7FA-4C40-8809-21401D523D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA067342-E7FA-4C40-8809-21401D523D47}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{DA067342-E7FA-4C40-8809-21401D523D47}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{DA067342-E7FA-4C40-8809-21401D523D47}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{DA067342-E7FA-4C40-8809-21401D523D47}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
 		{DA067342-E7FA-4C40-8809-21401D523D47}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{DA067342-E7FA-4C40-8809-21401D523D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA067342-E7FA-4C40-8809-21401D523D47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA067342-E7FA-4C40-8809-21401D523D47}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{DA067342-E7FA-4C40-8809-21401D523D47}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{DA067342-E7FA-4C40-8809-21401D523D47}.Release|iPhone.Build.0 = Release|Any CPU
 		{DA067342-E7FA-4C40-8809-21401D523D47}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
