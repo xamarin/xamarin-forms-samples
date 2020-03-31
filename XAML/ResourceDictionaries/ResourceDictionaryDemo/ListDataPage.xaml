@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ResourceDictionaryDemo.ListDataPage"
              Title="List Data Page">
-	<ContentPage.Resources>
+    <ContentPage.Resources>
         <ResourceDictionary Source="MyResourceDictionary.xaml" />
 
         <!-- Implicit style -->
@@ -11,9 +11,9 @@
             <Setter Property="BackgroundColor"
                     Value="{StaticResource AppBackgroundColor}" />
         </Style>
-	</ContentPage.Resources>
+    </ContentPage.Resources>
 
-	<ListView x:Name="listView"
+    <ListView x:Name="listView"
               Margin="{StaticResource PageMargin}"
               ItemTemplate="{StaticResource PersonDataTemplate}" />
 </ContentPage>
