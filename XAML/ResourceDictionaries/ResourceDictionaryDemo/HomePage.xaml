@@ -2,23 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="ResourceDictionaryDemo.HomePage"
-             BackgroundColor="{StaticResource PageBackgroundColor}" 
              Title="Home Page">
-	<StackLayout Margin="0,20,0,0">
-		<StackLayout.Resources>
-			<ResourceDictionary> 
-				<Style x:Key="LabelNormalStyle" TargetType="Label">
-					<Setter Property="TextColor" Value="{StaticResource NormalTextColor}" />
-				</Style>
-				<Style x:Key="MediumBoldText" TargetType="Button">
-					<Setter Property="FontSize" Value="Medium" />
-					<Setter Property="FontAttributes" Value="Bold" />
-				</Style>
+    <StackLayout Margin="{StaticResource PageMargin}">
+        <StackLayout.Resources>
+            <!-- Implicit style -->
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="BackgroundColor" Value="#1976D2" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+        </StackLayout.Resources>
 
-			</ResourceDictionary>
-		</StackLayout.Resources>
-		<Label Text="ResourceDictionary Demo" Style="{StaticResource LabelPageHeadingStyle}" />
-		<Label Text="This app demonstrates consuming resources that have been defined in resource dictionaries." Margin="10,20,10,0" Style="{StaticResource LabelNormalStyle}" />
-		<Button Text="Navigate" Clicked="OnNavigateButtonClicked" TextColor="{StaticResource NormalTextColor}" Margin="0,20,0,0" HorizontalOptions="Center" Style="{StaticResource MediumBoldText}" />
-	</StackLayout>
+        <Label Text="This app demonstrates consuming resources that have been defined in resource dictionaries." />
+        <Button Text="Navigate"
+                Clicked="OnNavigateButtonClicked" />
+    </StackLayout>
 </ContentPage>
