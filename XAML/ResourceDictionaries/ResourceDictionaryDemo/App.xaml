@@ -1,15 +1,30 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ResourceDictionaryDemo.App">
-	<Application.Resources>
-		<ResourceDictionary>
-			<Color x:Key="PageBackgroundColor">Yellow</Color>
-			<Color x:Key="HeadingTextColor">Black</Color>
-			<Color x:Key="NormalTextColor">Blue</Color>
-			<Style x:Key="LabelPageHeadingStyle" TargetType="Label">
-				<Setter Property="FontAttributes" Value="Bold" />
-				<Setter Property="HorizontalOptions" Value="Center" />
-				<Setter Property="TextColor" Value="{StaticResource HeadingTextColor}" />
-			</Style>
-		</ResourceDictionary>
-	</Application.Resources>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ResourceDictionaryDemo.App">
+    <Application.Resources>
+
+        <Thickness x:Key="PageMargin">20</Thickness>
+
+        <!-- Colors -->
+        <Color x:Key="AppBackgroundColor">AliceBlue</Color>
+        <Color x:Key="NavigationBarColor">#1976D2</Color>
+        <Color x:Key="NavigationBarTextColor">White</Color>
+        <Color x:Key="NormalTextColor">Black</Color>
+
+        <!-- Implicit styles -->
+        <Style TargetType="{x:Type NavigationPage}">
+            <Setter Property="BarBackgroundColor"
+                    Value="{StaticResource NavigationBarColor}" />
+            <Setter Property="BarTextColor"
+                    Value="{StaticResource NavigationBarTextColor}" />
+        </Style>
+
+        <Style TargetType="{x:Type ContentPage}"
+               ApplyToDerivedTypes="True">
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource AppBackgroundColor}" />
+        </Style>
+
+    </Application.Resources>
 </Application>

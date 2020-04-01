@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:ResourceDictionaryDemo" x:Class="ResourceDictionaryDemo.ListDataPage" BackgroundColor="{StaticResource PageBackgroundColor}" Title="List Data Page">
-	<ContentPage.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <local:MyResourceDictionary />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-	</ContentPage.Resources>
-	<StackLayout Margin="0,20,0,0">
-		<Label Text="ResourceDictionary Demo" Style="{StaticResource LabelPageHeadingStyle}" />
-		<ListView x:Name="listView" ItemTemplate="{StaticResource PersonDataTemplate}" Margin="10,20,10,0" BackgroundColor="{StaticResource PageBackgroundColor}" />
-	</StackLayout>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ResourceDictionaryDemo.ListDataPage"
+             Title="List Data Page">
+    <ContentPage.Resources>
+        <ResourceDictionary Source="MyResourceDictionary.xaml" />
+
+        <!-- Implicit style -->
+        <Style TargetType="{x:Type ListView}">
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource AppBackgroundColor}" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ListView x:Name="listView"
+              Margin="{StaticResource PageMargin}"
+              ItemTemplate="{StaticResource PersonDataTemplate}" />
 </ContentPage>

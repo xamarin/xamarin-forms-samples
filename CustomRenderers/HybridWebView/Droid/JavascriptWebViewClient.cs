@@ -1,12 +1,13 @@
 ﻿using Android.Webkit;
+using Xamarin.Forms.Platform.Android;
 
 namespace CustomRenderer.Droid
 {
-    public class JavascriptWebViewClient : WebViewClient
+    public class JavascriptWebViewClient : FormsWebViewClient
     {
         string _javascript;
 
-        public JavascriptWebViewClient(string javascript)
+        public JavascriptWebViewClient(HybridWebViewRenderer renderer, string javascript) : base(renderer)
         {
             _javascript = javascript;
         }
