@@ -18,4 +18,3 @@ This sample demonstrates how to use the Xamarin.Forms `MediaElement` to play vid
 For more information about this sample, see [Xamarin.Forms MediaElement](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/mediaelement).
 
 ![MediaElement application screenshot](Screenshots/01All.png "MediaElement application screenshot")
-

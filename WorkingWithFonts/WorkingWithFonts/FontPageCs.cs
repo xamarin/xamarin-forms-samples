@@ -9,7 +9,7 @@ namespace WorkingWithFonts
             var label = new Label
             {
                 Text = "Hello, Xamarin.Forms!",
-                FontFamily = "Lobster-Regular",
+                FontFamily = "Lobster",
                 VerticalOptions = LayoutOptions.CenterAndExpand,
                 HorizontalOptions = LayoutOptions.CenterAndExpand
             };
