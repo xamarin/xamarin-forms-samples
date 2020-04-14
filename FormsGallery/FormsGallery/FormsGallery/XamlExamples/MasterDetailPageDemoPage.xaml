@@ -54,6 +54,16 @@
             </ContentPage.Resources>
 
             <StackLayout>
+                
+                <!--Provide a way for Android and Windows Phone users to return to master page by tapping the screen-->
+                <StackLayout.GestureRecognizers>
+                    <OnPlatform x:TypeArguments="TapGestureRecognizer">
+                        <On Platform="Android, UWP">
+                            <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped"/>
+                        </On>
+                    </OnPlatform>
+                </StackLayout.GestureRecognizers>
+
                 <Label Text="{Binding Name}"
                        FontSize="50"
                        HorizontalOptions="Center" />

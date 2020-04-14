@@ -18,5 +18,10 @@ namespace FormsGallery.XamlExamples
             // Show the detail page.
             IsPresented = false;
         }
+        void OnTapGestureRecognizerTapped(object sender, EventArgs e)
+        {
+            //Show the master page upon tapping the screen
+            IsPresented = true;
+        }
     }
 }
