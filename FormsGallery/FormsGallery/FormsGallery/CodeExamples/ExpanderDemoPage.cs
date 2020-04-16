@@ -14,12 +14,14 @@ namespace FormsGallery.CodeExamples
                 HorizontalOptions = LayoutOptions.Center
             };
 
-            Expander expander = new Expander();
-            expander.Header = new Label
+            Expander expander = new Expander
             {
-                Text = "Baboon",
-                FontAttributes = FontAttributes.Bold,
-                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+                Header = new Label
+                {
+                    Text = "Baboon",
+                    FontAttributes = FontAttributes.Bold,
+                    FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+                }
             };
 
             Grid grid = new Grid
