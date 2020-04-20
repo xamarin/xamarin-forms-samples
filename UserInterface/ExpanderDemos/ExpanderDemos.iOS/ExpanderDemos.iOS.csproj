@@ -113,6 +113,10 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\expand.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\expand.imageset\expand.png" />
+    <ImageAsset Include="Assets.xcassets\collapse.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\collapse.imageset\collapse.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -131,5 +135,9 @@
       <Project>{D2560BCE-6A51-4748-9772-8D1B99594620}</Project>
       <Name>ExpanderDemos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\expand.imageset\" />
+    <Folder Include="Assets.xcassets\collapse.imageset\" />
   </ItemGroup>
 </Project>

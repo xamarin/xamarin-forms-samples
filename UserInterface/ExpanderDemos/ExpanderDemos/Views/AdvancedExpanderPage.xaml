@@ -17,9 +17,23 @@
                               CollapseAnimationLength="500"
                               Spacing="10">
                         <Expander.Header>
-                            <Label Text="{Binding Name}"
-                                   FontAttributes="Bold"
-                                   FontSize="Medium" />
+                            <Grid>
+                                <Label Text="{Binding Name}"
+                                       FontAttributes="Bold"
+                                       FontSize="Medium" />
+                                <Image Source="expand.png"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Start">
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={RelativeSource AncestorType={x:Type Expander}}, Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source"
+                                                    Value="collapse.png" />
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                            </Grid>
                         </Expander.Header>
                         <Expander.ContentTemplate>
                             <DataTemplate>
