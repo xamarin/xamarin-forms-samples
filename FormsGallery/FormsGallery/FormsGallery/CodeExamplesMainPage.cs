@@ -32,6 +32,14 @@ namespace FormsGallery
 
                         new TextCell
                         {
+                            Text = "Expander",
+                            Detail = "Display content in an expandable container",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.ExpanderDemoPage)
+                        },
+
+                        new TextCell
+                        {
                             Text = "Image",
                             Detail = "Display a bitmap",
                             Command = navigateCommand,

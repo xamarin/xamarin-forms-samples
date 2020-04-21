@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithGestures", "WorkingWithGestures\WorkingWithGestures.csproj", "{7E861932-CB53-41C9-A8A7-08C5BABF867E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithGestures", "WorkingWithGestures\WorkingWithGestures.csproj", "{7E861932-CB53-41C9-A8A7-08C5BABF867E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithGestures.iOS", "iOS\WorkingWithGestures.iOS.csproj", "{CD67CA09-0F35-4CA1-9CCE-4CD1C1381A2E}"
 EndProject
@@ -267,9 +267,6 @@ Global
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|x64
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|x64
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Ad-Hoc|iPhoneSimulator.Deploy.0 = Release|x64
-		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Ad-Hoc|Mixed Platforms.ActiveCfg = Release|x86
-		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Ad-Hoc|Mixed Platforms.Build.0 = Release|x86
-		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Ad-Hoc|Mixed Platforms.Deploy.0 = Release|x86
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Ad-Hoc|x64.ActiveCfg = Release|x64
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Ad-Hoc|x64.Build.0 = Release|x64
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Ad-Hoc|x64.Deploy.0 = Release|x64
@@ -288,9 +285,6 @@ Global
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.AppStore|iPhoneSimulator.ActiveCfg = Release|x64
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.AppStore|iPhoneSimulator.Build.0 = Release|x64
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.AppStore|iPhoneSimulator.Deploy.0 = Release|x64
-		{7D9247C1-5612-4877-B648-31DBF837EDE3}.AppStore|Mixed Platforms.ActiveCfg = Release|x86
-		{7D9247C1-5612-4877-B648-31DBF837EDE3}.AppStore|Mixed Platforms.Build.0 = Release|x86
-		{7D9247C1-5612-4877-B648-31DBF837EDE3}.AppStore|Mixed Platforms.Deploy.0 = Release|x86
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.AppStore|x64.ActiveCfg = Release|x64
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.AppStore|x64.Build.0 = Release|x64
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.AppStore|x64.Deploy.0 = Release|x64
@@ -298,14 +292,13 @@ Global
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.AppStore|x86.Build.0 = Release|x86
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.AppStore|x86.Deploy.0 = Release|x86
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Debug|Any CPU.Build.0 = Debug|x86
+		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Debug|ARM.ActiveCfg = Debug|ARM
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Debug|ARM.Build.0 = Debug|ARM
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Debug|ARM.Deploy.0 = Debug|ARM
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Debug|iPhone.ActiveCfg = Debug|x86
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
-		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Debug|Mixed Platforms.Deploy.0 = Debug|x86
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Debug|x64.ActiveCfg = Debug|x64
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Debug|x64.Build.0 = Debug|x64
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Debug|x64.Deploy.0 = Debug|x64
@@ -313,14 +306,13 @@ Global
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Debug|x86.Build.0 = Debug|x86
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Debug|x86.Deploy.0 = Debug|x86
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Release|Any CPU.ActiveCfg = Release|x86
+		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Release|Any CPU.Build.0 = Release|x86
+		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Release|Any CPU.Deploy.0 = Release|x86
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Release|ARM.ActiveCfg = Release|ARM
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Release|ARM.Build.0 = Release|ARM
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Release|ARM.Deploy.0 = Release|ARM
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Release|iPhone.ActiveCfg = Release|x86
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Release|iPhoneSimulator.ActiveCfg = Release|x86
-		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Release|Mixed Platforms.Build.0 = Release|x86
-		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Release|Mixed Platforms.Deploy.0 = Release|x86
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Release|x64.ActiveCfg = Release|x64
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Release|x64.Build.0 = Release|x64
 		{7D9247C1-5612-4877-B648-31DBF837EDE3}.Release|x64.Deploy.0 = Release|x64
@@ -330,6 +322,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {313D1561-F91C-48DB-A95E-D8E1DFFBE1E9}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Android\WorkingWithGestures.Android.csproj

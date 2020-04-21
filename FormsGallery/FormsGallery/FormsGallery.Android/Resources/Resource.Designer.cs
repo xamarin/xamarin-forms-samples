@@ -15,7 +15,7 @@ namespace FormsGallery.Droid
 {
 	
 	
-	[System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
 	public partial class Resource
 	{
 		
@@ -1433,6 +1433,7 @@ namespace FormsGallery.Droid
 			global::Xamarin.Forms.Maps.Android.Resource.Style.Animation_AppCompat_DropDownUp = global::FormsGallery.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
 			global::Xamarin.Forms.Maps.Android.Resource.Style.Animation_AppCompat_Tooltip = global::FormsGallery.Droid.Resource.Style.Animation_AppCompat_Tooltip;
 			global::Xamarin.Forms.Maps.Android.Resource.Style.Animation_Design_BottomSheetDialog = global::FormsGallery.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Xamarin.Forms.Maps.Android.Resource.Style.AppCompatDialogStyle = global::FormsGallery.Droid.Resource.Style.AppCompatDialogStyle;
 			global::Xamarin.Forms.Maps.Android.Resource.Style.Base_AlertDialog_AppCompat = global::FormsGallery.Droid.Resource.Style.Base_AlertDialog_AppCompat;
 			global::Xamarin.Forms.Maps.Android.Resource.Style.Base_AlertDialog_AppCompat_Light = global::FormsGallery.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
 			global::Xamarin.Forms.Maps.Android.Resource.Style.Base_Animation_AppCompat_Dialog = global::FormsGallery.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
@@ -1625,6 +1626,8 @@ namespace FormsGallery.Droid
 			global::Xamarin.Forms.Maps.Android.Resource.Style.CardView_Dark = global::FormsGallery.Droid.Resource.Style.CardView_Dark;
 			global::Xamarin.Forms.Maps.Android.Resource.Style.CardView_Light = global::FormsGallery.Droid.Resource.Style.CardView_Light;
 			global::Xamarin.Forms.Maps.Android.Resource.Style.collectionViewStyle = global::FormsGallery.Droid.Resource.Style.collectionViewStyle;
+			global::Xamarin.Forms.Maps.Android.Resource.Style.MainTheme = global::FormsGallery.Droid.Resource.Style.MainTheme;
+			global::Xamarin.Forms.Maps.Android.Resource.Style.MainTheme_Base = global::FormsGallery.Droid.Resource.Style.MainTheme_Base;
 			global::Xamarin.Forms.Maps.Android.Resource.Style.NestedScrollBarStyle = global::FormsGallery.Droid.Resource.Style.NestedScrollBarStyle;
 			global::Xamarin.Forms.Maps.Android.Resource.Style.Platform_AppCompat = global::FormsGallery.Droid.Resource.Style.Platform_AppCompat;
 			global::Xamarin.Forms.Maps.Android.Resource.Style.Platform_AppCompat_Light = global::FormsGallery.Droid.Resource.Style.Platform_AppCompat_Light;
@@ -4029,6 +4032,7 @@ namespace FormsGallery.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Animation_AppCompat_DropDownUp = global::FormsGallery.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Animation_AppCompat_Tooltip = global::FormsGallery.Droid.Resource.Style.Animation_AppCompat_Tooltip;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Animation_Design_BottomSheetDialog = global::FormsGallery.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.AppCompatDialogStyle = global::FormsGallery.Droid.Resource.Style.AppCompatDialogStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_AlertDialog_AppCompat = global::FormsGallery.Droid.Resource.Style.Base_AlertDialog_AppCompat;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_AlertDialog_AppCompat_Light = global::FormsGallery.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_Animation_AppCompat_Dialog = global::FormsGallery.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
@@ -4221,6 +4225,8 @@ namespace FormsGallery.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.CardView_Dark = global::FormsGallery.Droid.Resource.Style.CardView_Dark;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.CardView_Light = global::FormsGallery.Droid.Resource.Style.CardView_Light;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.collectionViewStyle = global::FormsGallery.Droid.Resource.Style.collectionViewStyle;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.MainTheme = global::FormsGallery.Droid.Resource.Style.MainTheme;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.MainTheme_Base = global::FormsGallery.Droid.Resource.Style.MainTheme_Base;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.NestedScrollBarStyle = global::FormsGallery.Droid.Resource.Style.NestedScrollBarStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Platform_AppCompat = global::FormsGallery.Droid.Resource.Style.Platform_AppCompat;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Platform_AppCompat_Light = global::FormsGallery.Droid.Resource.Style.Platform_AppCompat_Light;
@@ -6592,6 +6598,7 @@ namespace FormsGallery.Droid
 			global::Xamarin.Forms.Platform.Resource.Style.Animation_AppCompat_DropDownUp = global::FormsGallery.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
 			global::Xamarin.Forms.Platform.Resource.Style.Animation_AppCompat_Tooltip = global::FormsGallery.Droid.Resource.Style.Animation_AppCompat_Tooltip;
 			global::Xamarin.Forms.Platform.Resource.Style.Animation_Design_BottomSheetDialog = global::FormsGallery.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Xamarin.Forms.Platform.Resource.Style.AppCompatDialogStyle = global::FormsGallery.Droid.Resource.Style.AppCompatDialogStyle;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_AlertDialog_AppCompat = global::FormsGallery.Droid.Resource.Style.Base_AlertDialog_AppCompat;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_AlertDialog_AppCompat_Light = global::FormsGallery.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_Animation_AppCompat_Dialog = global::FormsGallery.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
@@ -6784,6 +6791,8 @@ namespace FormsGallery.Droid
 			global::Xamarin.Forms.Platform.Resource.Style.CardView_Dark = global::FormsGallery.Droid.Resource.Style.CardView_Dark;
 			global::Xamarin.Forms.Platform.Resource.Style.CardView_Light = global::FormsGallery.Droid.Resource.Style.CardView_Light;
 			global::Xamarin.Forms.Platform.Resource.Style.collectionViewStyle = global::FormsGallery.Droid.Resource.Style.collectionViewStyle;
+			global::Xamarin.Forms.Platform.Resource.Style.MainTheme = global::FormsGallery.Droid.Resource.Style.MainTheme;
+			global::Xamarin.Forms.Platform.Resource.Style.MainTheme_Base = global::FormsGallery.Droid.Resource.Style.MainTheme_Base;
 			global::Xamarin.Forms.Platform.Resource.Style.NestedScrollBarStyle = global::FormsGallery.Droid.Resource.Style.NestedScrollBarStyle;
 			global::Xamarin.Forms.Platform.Resource.Style.Platform_AppCompat = global::FormsGallery.Droid.Resource.Style.Platform_AppCompat;
 			global::Xamarin.Forms.Platform.Resource.Style.Platform_AppCompat_Light = global::FormsGallery.Droid.Resource.Style.Platform_AppCompat_Light;

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithPopups", "WorkingWithPopups\WorkingWithPopups.csproj", "{D0BE2D9F-6571-48E9-80FA-021AFBCE6792}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithPopups", "WorkingWithPopups\WorkingWithPopups.csproj", "{D0BE2D9F-6571-48E9-80FA-021AFBCE6792}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithPopups.iOS", "iOS\WorkingWithPopups.iOS.csproj", "{A6EEA9BF-F77D-4945-9AE8-C187D0F6EDAF}"
 EndProject
@@ -267,9 +267,6 @@ Global
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|x64
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|x64
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Ad-Hoc|iPhoneSimulator.Deploy.0 = Release|x64
-		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Ad-Hoc|Mixed Platforms.ActiveCfg = Release|x86
-		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Ad-Hoc|Mixed Platforms.Build.0 = Release|x86
-		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Ad-Hoc|Mixed Platforms.Deploy.0 = Release|x86
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Ad-Hoc|x64.ActiveCfg = Release|x64
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Ad-Hoc|x64.Build.0 = Release|x64
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Ad-Hoc|x64.Deploy.0 = Release|x64
@@ -288,9 +285,6 @@ Global
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.AppStore|iPhoneSimulator.ActiveCfg = Release|x64
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.AppStore|iPhoneSimulator.Build.0 = Release|x64
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.AppStore|iPhoneSimulator.Deploy.0 = Release|x64
-		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.AppStore|Mixed Platforms.ActiveCfg = Release|x86
-		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.AppStore|Mixed Platforms.Build.0 = Release|x86
-		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.AppStore|Mixed Platforms.Deploy.0 = Release|x86
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.AppStore|x64.ActiveCfg = Release|x64
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.AppStore|x64.Build.0 = Release|x64
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.AppStore|x64.Deploy.0 = Release|x64
@@ -298,14 +292,13 @@ Global
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.AppStore|x86.Build.0 = Release|x86
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.AppStore|x86.Deploy.0 = Release|x86
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Debug|Any CPU.Build.0 = Debug|x86
+		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Debug|ARM.ActiveCfg = Debug|ARM
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Debug|ARM.Build.0 = Debug|ARM
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Debug|ARM.Deploy.0 = Debug|ARM
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Debug|iPhone.ActiveCfg = Debug|x86
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
-		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Debug|Mixed Platforms.Deploy.0 = Debug|x86
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Debug|x64.ActiveCfg = Debug|x64
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Debug|x64.Build.0 = Debug|x64
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Debug|x64.Deploy.0 = Debug|x64
@@ -313,14 +306,13 @@ Global
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Debug|x86.Build.0 = Debug|x86
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Debug|x86.Deploy.0 = Debug|x86
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Release|Any CPU.ActiveCfg = Release|x86
+		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Release|Any CPU.Build.0 = Release|x86
+		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Release|Any CPU.Deploy.0 = Release|x86
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Release|ARM.ActiveCfg = Release|ARM
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Release|ARM.Build.0 = Release|ARM
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Release|ARM.Deploy.0 = Release|ARM
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Release|iPhone.ActiveCfg = Release|x86
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Release|iPhoneSimulator.ActiveCfg = Release|x86
-		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Release|Mixed Platforms.Build.0 = Release|x86
-		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Release|Mixed Platforms.Deploy.0 = Release|x86
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Release|x64.ActiveCfg = Release|x64
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Release|x64.Build.0 = Release|x64
 		{01ECA43C-9AB0-4731-94E5-CE15E8C380D6}.Release|x64.Deploy.0 = Release|x64
@@ -330,5 +322,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B7896D5-E534-44CB-95D6-8FD08BFA01B6}
 	EndGlobalSection
 EndGlobal

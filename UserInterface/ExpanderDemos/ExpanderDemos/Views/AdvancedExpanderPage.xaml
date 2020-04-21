@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ExpanderDemos.ViewModels"
+             x:Class="ExpanderDemos.Views.AdvancedExpanderPage"
+             Title="Advanced Expander demo">
+    <ContentPage.BindingContext>
+        <viewmodels:MonkeysViewModel />
+    </ContentPage.BindingContext>
+    <ScrollView Margin="20">
+        <StackLayout BindableLayout.ItemsSource="{Binding Monkeys}">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Expander ExpandAnimationEasing="{x:Static Easing.CubicIn}"
+                              ExpandAnimationLength="500"
+                              CollapseAnimationEasing="{x:Static Easing.CubicOut}"
+                              CollapseAnimationLength="500"
+                              Spacing="10">
+                        <Expander.Header>
+                            <Grid>
+                                <Label Text="{Binding Name}"
+                                       FontAttributes="Bold"
+                                       FontSize="Medium" />
+                                <Image Source="expand.png"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Start">
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={RelativeSource AncestorType={x:Type Expander}}, Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source"
+                                                    Value="collapse.png" />
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                            </Grid>
+                        </Expander.Header>
+                        <Expander.ContentTemplate>
+                            <DataTemplate>
+                                <Grid Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding ImageUrl}" 
+                                           Aspect="AspectFill"
+                                           HeightRequest="120" 
+                                           WidthRequest="120" />
+                                    <Label Grid.Column="1"
+                                           Text="{Binding Details}"
+                                           FontAttributes="Italic">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnLabelTapped" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Grid>
+                            </DataTemplate>
+                        </Expander.ContentTemplate>
+                    </Expander>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

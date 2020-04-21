@@ -5,7 +5,7 @@
     <StackLayout VerticalOptions = "CenterAndExpand"
                  HorizontalOptions="CenterAndExpand">
         <Label Text="Hello Forms with XAML"
-               FontFamily="Lobster-Regular" />
+               FontFamily="Lobster" />
 
         <StackLayout Orientation="Horizontal">
             <Label Text="Italics"

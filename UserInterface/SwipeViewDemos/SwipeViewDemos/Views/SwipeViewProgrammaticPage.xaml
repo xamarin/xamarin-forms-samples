@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SwipeViewDemos.SwipeViewProgrammaticPage"
+             Title="SwipeView open and close demo">
+    <StackLayout Margin="10">
+        <Button Text="Open SwipeView"
+                Clicked="OnOpenSwipeViewClicked" />
+        <Button Text="Close SwipeView"
+                Clicked="OnCloseSwipeViewClicked" />
+        <SwipeView x:Name="swipeView">
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem Text="Favorite"
+                               IconImageSource="favorite.png"
+                               BackgroundColor="LightGreen"
+                               Invoked="OnFavoriteSwipeItemInvoked" />
+                    <SwipeItem Text="Delete"
+                               IconImageSource="delete.png"
+                               BackgroundColor="LightPink"
+                               Invoked="OnDeleteSwipeItemInvoked" />
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <Grid HeightRequest="60"
+                  WidthRequest="300"
+                  BackgroundColor="LightGray">
+                <Label Text="SwipeView"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+    </StackLayout>
+</ContentPage>
