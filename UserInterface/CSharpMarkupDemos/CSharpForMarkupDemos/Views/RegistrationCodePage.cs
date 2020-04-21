@@ -42,11 +42,13 @@ namespace CSharpForMarkupDemos.Views
             NavigationPage.SetHasNavigationBar(this, false);
             BackgroundColor = Color.AliceBlue;
 
-            Content = new Grid {
+            Content = new Grid
+            {
                 RowSpacing = 0,
                 RowDefinitions = Rows.Define((PageRow.Header, Auto), (PageRow.Body, Star)),
 
-                Children = {
+                Children =
+                {
                     PageHeader.Create(
                         PageMarginSize,
                         nameof(vm.RegistrationTitle), nameof(vm.RegistrationSubTitle),
@@ -54,21 +56,25 @@ namespace CSharpForMarkupDemos.Views
                         centerTitle:true
                     )  .Row (PageRow.Header),
 
-                    new ScrollView { Content = new Grid {
+                    new ScrollView
+                    {
+                        Content = new Grid
+                        {
                             RowSpacing = 0,
-                            RowDefinitions = Rows.Define (
+                            RowDefinitions = Rows.Define(
                                 (BodyRow.Prompt    , 170 ),
                                 (BodyRow.CodeHeader, 75  ),
                                 (BodyRow.CodeEntry , Auto),
                                 (BodyRow.Button    , Auto)
                             ),
 
-                            ColumnDefinitions = Columns.Define (
+                            ColumnDefinitions = Columns.Define(
                                 (BodyCol.FieldLabel     , 160 ),
                                 (BodyCol.FieldValidation, Star)
                             ),
 
-                            Children = {
+                            Children =
+                            {
                                 new Label { LineBreakMode = LineBreakMode.WordWrap } .Font (15) .Bold ()
                                            .Row (BodyRow.Prompt) .ColumnSpan (All<BodyCol>()) .FillExpandHorizontal () .CenterVertical () .Margin (fieldNameMargin) .TextCenterHorizontal ()
                                            .Bind (nameof(vm.RegistrationPrompt)),
