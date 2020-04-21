@@ -7,14 +7,30 @@
              x:Class="SystemThemesDemo.App">
     <Application.Resources>
 
-        <AppThemeColor x:Key="PageBackgroundColor" Light="White" Dark="Black" />
-        <AppThemeColor x:Key="NavigationBarColor" Light="WhiteSmoke" Dark="Teal" />
-        <AppThemeColor x:Key="PrimaryColor" Light="WhiteSmoke" Dark="Teal" />
-        <AppThemeColor x:Key="SecondaryColor" Light="Black" Dark="White" />
-        <AppThemeColor x:Key="PrimaryTextColor" Light="Black" Dark="White" />
-        <AppThemeColor x:Key="SecondaryTextColor" Light="White" Dark="White" />
-        <AppThemeColor x:Key="TertiaryTextColor" Light="Gray" Dark="WhiteSmoke" />
-        <AppThemeColor x:Key="TransparentColor" Light="Transparent" Dark="Transparent" />
+        <AppThemeColor x:Key="PageBackgroundColor"
+                       Light="White"
+                       Dark="Black" />
+        <AppThemeColor x:Key="NavigationBarColor"
+                       Light="WhiteSmoke"
+                       Dark="Teal" />
+        <AppThemeColor x:Key="PrimaryColor"
+                       Light="WhiteSmoke"
+                       Dark="Teal" />
+        <AppThemeColor x:Key="SecondaryColor"
+                       Light="Black"
+                       Dark="White" />
+        <AppThemeColor x:Key="PrimaryTextColor"
+                       Light="Black"
+                       Dark="White" />
+        <AppThemeColor x:Key="SecondaryTextColor"
+                       Light="White"
+                       Dark="White" />
+        <AppThemeColor x:Key="TertiaryTextColor"
+                       Light="Gray"
+                       Dark="WhiteSmoke" />
+        <AppThemeColor x:Key="TransparentColor"
+                       Light="Transparent"
+                       Dark="Transparent" />
 
         <Style TargetType="NavigationPage">
             <Setter Property="BarBackgroundColor"
