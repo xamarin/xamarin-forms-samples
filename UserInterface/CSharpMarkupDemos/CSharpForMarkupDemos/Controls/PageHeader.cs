@@ -52,15 +52,17 @@ namespace CSharpForMarkupDemos.Controls
                     (Row.Subtitle, rowHeight)
                 ),
 
-                Children =
+                Children = 
                 {
-                    new ContentView { Content = (returnToPreviousViewCommandPropertyName != null) ?
-                        new Button { Text = "<", TextColor = Color.White, BackgroundColor = Color.FromHex("#1976D2") } .Font (24, bold: true)
-                        .Left() .CenterVertical()
-                        .Bind(Button.CommandProperty, returnToPreviousViewCommandPropertyName)
-                        : null
-                    } .Row (Row.Title, Row.Subtitle) .Column (Col.BackButton) .Padding (pageMarginSize, 0)
-                      .Invoke(b => { if (allowBackNavigationPropertyName != null) b.Bind(ContentView.IsVisibleProperty, allowBackNavigationPropertyName); }),
+                    new ContentView
+                    { 
+                        Content = (returnToPreviousViewCommandPropertyName != null) ?
+                            new Button { Text = "<", TextColor = Color.White, BackgroundColor = Color.FromHex("#1976D2") } .Font (24, bold: true)
+                                        .Left () .CenterVertical ()
+                                        .Bind (Button.CommandProperty, returnToPreviousViewCommandPropertyName)
+                            : null
+                    }  .Row (Row.Title, Row.Subtitle) .Column (Col.BackButton) .Padding (pageMarginSize, 0)
+                       .Invoke (b => { if (allowBackNavigationPropertyName != null) b.Bind (ContentView.IsVisibleProperty, allowBackNavigationPropertyName); }),
 
                     new Label
                     {
@@ -68,22 +70,19 @@ namespace CSharpForMarkupDemos.Controls
                         HorizontalOptions = centerTitle ? LayoutOptions.Center : LayoutOptions.Start,
                         VerticalOptions = subTitlePropertyName != null ? LayoutOptions.End : LayoutOptions.Center,
                         TextColor = Color.White
-                    } .Bold ()
-                      .Row (Row.Title, subTitlePropertyName != null ? Row.Title : Row.Subtitle) .Column (centerTitle ? Col.First : Col.Title, centerTitle ? Col.Last : Col.Title)
-                      .Invoke(l => { if (titlePropertyName != null) l.Bind(titlePropertyName); })
+                    }  .Bold ()
+                       .Row (Row.Title, subTitlePropertyName != null ? Row.Title : Row.Subtitle) .Column (centerTitle ? Col.First : Col.Title, centerTitle ? Col.Last : Col.Title)
+                       .Invoke (l => { if (titlePropertyName != null) l.Bind(titlePropertyName); })
                 }
             };
 
             if (subTitlePropertyName != null) grid.Children.Add(
                 new Label
                 {
-                    LineBreakMode = LineBreakMode.TailTruncation,
-                    HorizontalOptions = centerTitle ? LayoutOptions.Center : LayoutOptions.Start,
-                    VerticalOptions = LayoutOptions.Start,
-                    TextColor = Color.White
-                }.Bold()
-                 .Row(Row.Subtitle).Column(centerTitle ? Col.First : Col.Title, centerTitle ? Col.Last : Col.Title)
-                 .Bind(subTitlePropertyName)
+                    LineBreakMode = LineBreakMode.TailTruncation, TextColor = Color.White,
+                    HorizontalOptions = centerTitle ? LayoutOptions.Center : LayoutOptions.Start } .Bold ()
+                   .Row (Row.Subtitle) .Column (centerTitle ? Col.First : Col.Title, centerTitle ? Col.Last : Col.Title) .Top ()
+                   .Bind (subTitlePropertyName)
             );
             return grid;
         }

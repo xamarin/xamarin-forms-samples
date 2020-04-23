@@ -33,26 +33,28 @@ namespace CSharpForMarkupDemos.Views
                 Children =
                 {
                     PageHeader.Create (PageMarginSize, nameof(vm.Title), nameof(vm.SubTitle))
-                        .Row (PageRow.Header),
+                                      .Row (PageRow.Header),
 
-                    new ScrollView
-                    {
-                        Content = new StackLayout
+                    new ScrollView 
+                    { 
+                        Content = new StackLayout 
                         {
-                            Margin = new Thickness(10),
-                            Children =
+                            Children = 
                             {
                                 new NavigateButton ("Registration code demo", nameof(vm.ContinueToRegistrationCommand)),
                                 new NavigateButton ("Nested list demo", nameof(vm.ContinueToNestedListCommand)),
                                 new NavigateButton ("Animated page demo", nameof(vm.ContinueToAnimatedPageCommand)),
-                                new Label { } .FormattedText (
-                                    new Span { Text = "For more information about C# Markup, see " },
-                                    new Span { Text = "C# Markup", Style = Link }
-                                        .BindTapGesture (nameof(vm.ContinueToCSharpForMarkupCommand)),
-                                    new Span { Text = "." }
-                                ) .CenterHorizontal ()
-                            }}} .Row (PageRow.Body)
-                    }
+                                new Label { }
+                                           .FormattedText (
+                                                new Span { Text = "For more information about C# Markup, see " },
+                                                new Span { Text = "C# Markup", Style = Link }
+                                                          .BindTapGesture (nameof(vm.ContinueToCSharpForMarkupCommand)),
+                                                new Span { Text = "." })
+                                           .CenterHorizontal ()
+                            }
+                        } .Margin (10)
+                    } .Row (PageRow.Body)
+                }
             };
         }
 
@@ -61,9 +63,9 @@ namespace CSharpForMarkupDemos.Views
             public NavigateButton(string text, string command)
             {
                 Text = text;
-                this.Style(FilledButton)
-                    .FillExpandHorizontal().Margin(PageMarginSize)
-                    .Bind(command);
+                this .Style (FilledButton)
+                     .FillExpandHorizontal () .Margin (PageMarginSize)
+                     .Bind (command);
             }
         }
     }

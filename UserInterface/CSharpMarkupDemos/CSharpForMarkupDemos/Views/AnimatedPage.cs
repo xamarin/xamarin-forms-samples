@@ -18,11 +18,11 @@ namespace CSharpForMarkupDemos.Views
                     new StyledLabel ("to illustrate"),
                     new StyledLabel ("separation"),
                     new StyledLabel ("of"),
-                    new StyledLabel ("UI Markup") { TextColor = Color.Green }.Bold(),
+                    new StyledLabel ("UI Markup") { TextColor = Color.Green } .Bold (),
                     new StyledLabel ("and"),
-                    new StyledLabel ("UI Logic") { TextColor = Color.Red }.Bold()
+                    new StyledLabel ("UI Logic") { TextColor = Color.Red } .Bold ()
                 }
-            }.Assign(out animatedStackLayout);
+            } .Assign (out animatedStackLayout);
         }
 
         class StyledLabel : Label
@@ -30,8 +30,8 @@ namespace CSharpForMarkupDemos.Views
             public StyledLabel(string text)
             {
                 Text = text;
-                this.FontSize(32)
-                    .CenterHorizontal();
+                this .FontSize (32)
+                     .CenterHorizontal ();
             }
         }
     }
