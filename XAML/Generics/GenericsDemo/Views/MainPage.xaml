@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:GenericsDemo.Views"
+             x:Class="GenericsDemo.MainPage"
+             Title="XAML Generics Demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="List&lt;string&gt;"
+                          Detail="A List of a primitive type."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ListOfStringDemoPage}" />
+                <TextCell Text="List&lt;Monkey&gt;"
+                          Detail="A List of objects."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ListOfMonkeyDemoPage}" />
+                <TextCell Text="List&lt;KeyValuePair&lt;string, Monkey&gt;&gt;"
+                          Detail="A List of key value pairs."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ListOfKeyValuePairDemoPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
