@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:scg="clr-namespace:System.Collections.Generic;assembly=netstandard"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="GenericsDemo.Views.ListOfStringDemoPage"
+             Title="List&lt;string&gt; demo">
+    <StackLayout Margin="20">
+        <Label Text="The CollectionView below is displaying a List&lt;string&gt; collection that is defined in XAML." />
+        <CollectionView Margin="0,20,0,0">
+            <CollectionView.ItemsSource>
+                <scg:List x:TypeArguments="x:String">
+                    <x:String>Baboon</x:String>
+                    <x:String>Capuchin Monkey</x:String>
+                    <x:String>Blue Monkey</x:String>
+                    <x:String>Squirrel Monkey</x:String>
+                    <x:String>Golden Lion Tamarin</x:String>
+                    <x:String>Howler Monkey</x:String>
+                    <x:String>Japanese Macaque</x:String>
+                </scg:List>
+            </CollectionView.ItemsSource>
+        </CollectionView>
+        
+        <!--
+
+        Equivalent code using System.String
+
+        <CollectionView>
+            <CollectionView.ItemsSource>
+                <scg:List x:TypeArguments="sys:String">
+                    <sys:String>Baboon</sys:String>
+                    <sys:String>Capuchin Monkey</sys:String>
+                    <sys:String>Blue Monkey</sys:String>
+                    <sys:String>Squirrel Monkey</sys:String>
+                    <sys:String>Golden Lion Tamarin</sys:String>
+                    <sys:String>Howler Monkey</sys:String>
+                    <sys:String>Japanese Macaque</sys:String>
+                </scg:List>
+            </CollectionView.ItemsSource>
+        </CollectionView>
+
+        -->
+
+    </StackLayout> 
+</ContentPage>

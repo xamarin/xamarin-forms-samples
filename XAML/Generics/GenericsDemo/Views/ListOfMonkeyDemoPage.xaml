@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:GenericsDemo.Models"
+             xmlns:scg="clr-namespace:System.Collections.Generic;assembly=netstandard"
+             x:Class="GenericsDemo.Views.ListOfMonkeyDemoPage"
+             Title="List &lt;Monkey&gt; demo">
+   <StackLayout Margin="20">
+        <Label Text="The CollectionView below is displaying a List&lt;Monkey&gt; collection that is defined in XAML." />
+        <CollectionView Margin="0,20,0,0">
+            <CollectionView.ItemsSource>
+                <scg:List x:TypeArguments="models:Monkey">
+                    <models:Monkey Name="Baboon"
+                                   Location="Africa and Asia"
+                                   ImageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg" />
+                    <models:Monkey Name="Capuchin Monkey"
+                                   Location="Central and South America"
+                                   ImageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Capuchin_Costa_Rica.jpg/200px-Capuchin_Costa_Rica.jpg" />
+                    <models:Monkey Name="Blue Monkey"
+                                   Location="Central and East Africa"
+                                   ImageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/BlueMonkey.jpg/220px-BlueMonkey.jpg" />
+                </scg:List>
+            </CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.RowSpan="2" 
+                               Source="{Binding ImageUrl}" 
+                               Aspect="AspectFill"
+                               HeightRequest="60" 
+                               WidthRequest="60" />
+                        <Label Grid.Column="1" 
+                               Text="{Binding Name}" 
+                               FontAttributes="Bold" />
+                        <Label Grid.Row="1"
+                               Grid.Column="1" 
+                               Text="{Binding Location}"
+                               FontAttributes="Italic" 
+                               VerticalOptions="End" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout> 
+</ContentPage>
