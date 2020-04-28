@@ -11,7 +11,7 @@ extensions:
     - ui
 urlFragment: xaml-generics
 ---
-# Generics in XAML
+# Generics in Xamarin.Forms XAML
 
 This sample demonstrates how to consume generic CLR types, from Xamarin.Forms XAML, by specifying the constraints of generics as type arguments.
 
