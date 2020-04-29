@@ -15,6 +15,6 @@ urlFragment: xaml-generics
 
 This sample demonstrates how to consume generic CLR types, from Xamarin.Forms XAML, by specifying the constraints of generics as type arguments.
 
-For more information about this sample see [Generics in Xamarin.Forms XAML](https://docs.microsoft.com/xamarin/xamarin-forms/xaml/generics/).
+For more information about this sample, see [Generics in Xamarin.Forms XAML](https://docs.microsoft.com/xamarin/xamarin-forms/xaml/generics/).
 
 ![Generics in XAML sample application](Screenshots/01All.png "Generics in XAML application screenshot")
