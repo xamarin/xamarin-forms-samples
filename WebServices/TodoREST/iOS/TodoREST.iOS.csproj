@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Xamarin.Forms.4.5.0.396\build\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.4.5.0.396\build\Xamarin.Forms.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
@@ -14,7 +13,6 @@
     <RestorePackages>true</RestorePackages>
     <NuGetPackageImportStamp>4dbe7b8e</NuGetPackageImportStamp>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,61 +28,19 @@
     <MtouchDebug>true</MtouchDebug>
     <MtouchProfiling>true</MtouchProfiling>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\Release</OutputPath>
-    <DefineConstants></DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchArch>ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
-    <PlatformTarget>anycpu</PlatformTarget>
-    <ExternalConsole>false</ExternalConsole>
-    <Commandlineparameters></Commandlineparameters>
-    <RunWithWarnings>true</RunWithWarnings>
-    <CodesignProvision></CodesignProvision>
-    <CodesignExtraArgs></CodesignExtraArgs>
-    <DeviceSpecificBuild></DeviceSpecificBuild>
-    <MtouchDebug></MtouchDebug>
-    <MtouchNoSymbolStrip></MtouchNoSymbolStrip>
-    <IOSDebugOverWiFi></IOSDebugOverWiFi>
-    <MtouchFastDev></MtouchFastDev>
-    <MtouchProfiling></MtouchProfiling>
-    <MtouchExtraArgs></MtouchExtraArgs>
-    <MtouchVerbosity></MtouchVerbosity>
-    <MtouchUseLlvm></MtouchUseLlvm>
-    <MtouchUseThumb></MtouchUseThumb>
-    <MtouchFloat32></MtouchFloat32>
-    <MtouchEnableBitcode></MtouchEnableBitcode>
-    <MtouchEnableSGenConc></MtouchEnableSGenConc>
-    <BuildIpa></BuildIpa>
-    <IpaIncludeArtwork></IpaIncludeArtwork>
-    <IpaMetadata></IpaMetadata>
-    <IpaPackageName></IpaPackageName>
-    <CrashReportingApiKey></CrashReportingApiKey>
-    <CrashReportingEnabled>false</CrashReportingEnabled>
-    <CodesignResourceRules></CodesignResourceRules>
-    <IOSDebuggerPort></IOSDebuggerPort>
-    <MtouchLink></MtouchLink>
-    <MtouchI18n></MtouchI18n>
-    <CrashReportingDelay>-1</CrashReportingDelay>
-    <OptimizePNGs></OptimizePNGs>
-    <OnDemandResourcesInitialInstallTags></OnDemandResourcesInitialInstallTags>
-    <OnDemandResourcesPrefetchOrder></OnDemandResourcesPrefetchOrder>
-    <AssemblyName></AssemblyName>
-    <NoWarn></NoWarn>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <LangVersion>Default</LangVersion>
-    <NoStdLib>false</NoStdLib>
-    <WarningsNotAsErrors></WarningsNotAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -114,14 +70,14 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.396" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="System.Net.Http" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.396" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TodoREST\TodoREST.csproj">
@@ -159,13 +115,11 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="HttpClientHandlerService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="ITunesArtwork" />
     <ITunesArtwork Include="ITunesArtwork%402x" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup />
-  </Target>
 </Project>
