@@ -5,11 +5,11 @@
              Title="Todo">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="+" Clicked="OnAddItemClicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="ImageSource">
                     <On Platform="Android, UWP" Value="plus.png" />
                 </OnPlatform>
-            </ToolbarItem.Icon>
+            </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     <ListView x:Name="listView" 
