@@ -18,13 +18,15 @@
             <TextCell Text="Application PanGestureRecognizer" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSPanGestureRecognizerPage}" />
             <TextCell Text="Slider Update on Tap" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSSliderUpdateOnTapPage}" />
             <TextCell Text="NavigationPage NavigationBarSeparator" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSTitleViewPage}" />
-            <TextCell Text="iPad Page Modal FormSheet Page" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSModalFormSheetPage}" />
+            <TextCell Text="Modal FormSheet Page" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSModalFormSheetPage}" />
             <TextCell Text="Hide Home Indicator on Page" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSHideHomeIndicatorPage}" />
             <TextCell Text="SwipeView SwipeTransitionMode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSSwipeViewTransitionModePage}" />
             <TextCell Text="DatePicker UpdateMode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSDatePickerPage}" />
             <TextCell Text="TimePicker UpdateMode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSTimePickerPage}" />
             <TextCell Text="VisualElement First Responder" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSFirstResponderPage}" />
             <TextCell Text="TabbedPage Translucent TabBar" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSTranslucentTabbedPage}" />
+            <TextCell Text="SearchBar Style" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSSearchBarPage}" />
+            <TextCell Text="MasterDetailPage Shadow" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSMasterDetailPage}" />
         </TableSection>
         <TableSection Title="Android">
             <TextCell Text="Soft Input Mode Adjust" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:AndroidSoftInputModeAdjustPage}" />

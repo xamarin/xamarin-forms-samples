@@ -5,7 +5,7 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace PlatformSpecifics
 {
-    public class iOSScrollViewPageCS : MasterDetailPage
+    public class iOSScrollViewPageCS : Xamarin.Forms.MasterDetailPage
     {
         public iOSScrollViewPageCS(ICommand restore)
         {

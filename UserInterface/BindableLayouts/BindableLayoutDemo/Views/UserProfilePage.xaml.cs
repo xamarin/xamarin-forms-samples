@@ -1,5 +1,4 @@
 ﻿using Xamarin.Forms;
-using BindableLayoutDemo.ViewModels;
 
 namespace BindableLayoutDemo.Views
 {
@@ -8,7 +7,6 @@ namespace BindableLayoutDemo.Views
         public UserProfilePage()
         {
             InitializeComponent();
-            BindingContext = new UserProfileViewModel();
         }
     }
 }

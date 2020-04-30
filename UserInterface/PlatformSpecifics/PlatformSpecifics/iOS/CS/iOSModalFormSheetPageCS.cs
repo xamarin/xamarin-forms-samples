@@ -20,7 +20,7 @@ namespace PlatformSpecifics
             {
                 Margin = new Thickness(20),
                 Children = {
-                    new Label { Text = "Modal popup as a form sheet on the iPad", HorizontalOptions = LayoutOptions.Center },
+                    new Label { Text = "Modal popup as a form sheet.", HorizontalOptions = LayoutOptions.Center },
                     button
                 }
             };

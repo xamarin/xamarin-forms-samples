@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="WorkingWithMaps.CirclePage"
+             Title="Circle demo">
+    <maps:Map>
+        <x:Arguments>
+            <maps:MapSpan>
+                <x:Arguments>
+                    <maps:Position>
+                        <x:Arguments>
+                            <x:Double>37.79752</x:Double>
+                            <x:Double>-122.40183</x:Double>
+                        </x:Arguments>
+                    </maps:Position>
+                    <x:Double>0.01</x:Double>
+                    <x:Double>0.01</x:Double>
+                </x:Arguments>
+            </maps:MapSpan>
+        </x:Arguments>
+        <maps:Map.MapElements>
+            <maps:Circle StrokeColor="#88FF0000"
+                         StrokeWidth="8"
+                         FillColor="#88FFC0CB">
+                <maps:Circle.Center>
+                    <maps:Position>
+                        <x:Arguments>
+                            <x:Double>37.79752</x:Double>
+                            <x:Double>-122.40183</x:Double>
+                        </x:Arguments>
+                    </maps:Position>
+                </maps:Circle.Center>
+                <maps:Circle.Radius>
+                    <maps:Distance>
+                        <x:Arguments>
+                            <x:Double>250</x:Double>
+                        </x:Arguments>
+                    </maps:Distance>
+                </maps:Circle.Radius>
+            </maps:Circle>             
+        </maps:Map.MapElements>
+    </maps:Map>
+</ContentPage>

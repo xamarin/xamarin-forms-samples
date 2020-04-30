@@ -10,7 +10,7 @@ namespace BindableLayoutDemo
         {
             InitializeComponent();
 
-            MainPage = new Views.UserProfilePage();
+            MainPage = new NavigationPage(new Views.MainPage());
         }
 
         protected override void OnStart()

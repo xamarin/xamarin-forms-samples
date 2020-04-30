@@ -5,7 +5,7 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace PlatformSpecifics
 {
-    public class iOSStatusBarTextColorModePageCS : MasterDetailPage
+    public class iOSStatusBarTextColorModePageCS : Xamarin.Forms.MasterDetailPage
     {
         public iOSStatusBarTextColorModePageCS(ICommand restore)
         {
@@ -30,7 +30,7 @@ namespace PlatformSpecifics
 
             IsPresentedChanged += (sender, e) =>
             {
-                var mdp = sender as MasterDetailPage;
+                var mdp = sender as Xamarin.Forms.MasterDetailPage;
                 if (mdp.IsPresented)
                     ((Xamarin.Forms.NavigationPage)mdp.Detail).On<iOS>().SetStatusBarTextColorMode(StatusBarTextColorMode.DoNotAdjust);
                 else

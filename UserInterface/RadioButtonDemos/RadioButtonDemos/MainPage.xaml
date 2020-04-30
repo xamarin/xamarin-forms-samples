@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:local="clr-namespace:RadioButtonDemos"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RadioButtonDemos.MainPage"
+             Title="RadioButton Demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="Basic RadioButtons"
+                          Detail="Implement RadioButtons in XAML"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicRadioButtonsPage}" />
+                <TextCell Text="Grouped RadioButtons"
+                          Detail="Implement grouped RadioButtons in XAML"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:GroupedRadioButtonsPage}" />
+                <TextCell Text="Grouped RadioButtons"
+                          Detail="Implement grouped RadioButtons in code"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:GroupedRadioButtonsPageCode}" />
+                <TextCell Text="Basic RadioButton Visual States"
+                          Detail="Implement visual states for RadioButtons"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicRadioButtonsVisualStatePage}" />
+
+                <!--
+                <TextCell Text="Basic CheckBox Bindings"
+                          Detail="Implement a CheckBox with data bindings"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicCheckBoxBindingsPage}" />
+
+                -->
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
