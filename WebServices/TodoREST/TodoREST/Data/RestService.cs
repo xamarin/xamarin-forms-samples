@@ -17,7 +17,11 @@ namespace TodoREST
 
         public RestService()
         {
+#if DEBUG
             client = new HttpClient(DependencyService.Get<IHttpClientHandlerService>().GetInsecureHandler());
+#else
+            client = new HttpClient();
+#endif
         }
 
         public async Task<List<TodoItem>> RefreshDataAsync()
