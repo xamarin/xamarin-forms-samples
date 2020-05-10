@@ -15,15 +15,5 @@
   <ItemGroup>
     <Folder Include="Models\" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="MainPage.xaml.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Remove="MainPage.xaml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Page1.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
+
 </Project>
