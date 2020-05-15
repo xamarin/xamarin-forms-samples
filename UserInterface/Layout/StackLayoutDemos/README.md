@@ -11,7 +11,7 @@ extensions:
     - ui
 urlFragment: userinterface-stacklayoutdemos
 ---
-# CarouselView
+# StackLayout
 
 This sample demonstrates how to use the Xamarin.Forms `StackLayout`.
 

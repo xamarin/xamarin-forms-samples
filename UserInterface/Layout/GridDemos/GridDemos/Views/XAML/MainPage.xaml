@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:GridDemos.Views"
+             x:Class="GridDemos.MainPage"
+             Title="Grid demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="XAML">
+                <TextCell Text="Basic Grid demo"
+                          Detail="Rows and columns"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:BasicGridPage}" />
+                <TextCell Text="Grid spacing demo"
+                          Detail="RowSpacing and ColumnSpacing"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:GridSpacingPage}" />
+                <TextCell Text="Grid alignment demo"
+                          Detail="HorizontalOptions and VerticalOptions"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:GridAlignmentPage}" />
+                <TextCell Text="Nested Grids demo"
+                          Detail="Color sliders"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ColorSlidersGridPage}" />
+                <TextCell Text="Calculator layout demo"
+                          Detail="Non-functioning"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:CalculatorPage}" />
+            </TableSection>
+            <TableSection Title="C#">
+                <TextCell Text="Basic Grid demo"
+                          Detail="Rows and columns"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:BasicGridPageCS}" />
+                <TextCell Text="Grid spacing demo"
+                          Detail="RowSpacing and ColumnSpacing"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:GridSpacingPageCS}" />
+                <TextCell Text="Grid alignment demo"
+                          Detail="HorizontalOptions and VerticalOptions"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:GridAlignmentPageCS}" />
+                <TextCell Text="Nested Grids demo"
+                          Detail="Color sliders"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ColorSlidersGridPageCS}" />
+                <TextCell Text="Calculator layout demo"
+                          Detail="Non-functioning"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:CalculatorPageCS}" />
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
