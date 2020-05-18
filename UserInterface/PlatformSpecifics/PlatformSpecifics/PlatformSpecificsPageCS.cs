@@ -41,7 +41,7 @@ namespace PlatformSpecifics
                         new TextCell { Text = "Application PanGestureRecognizer", Command = NavigateCommand, CommandParameter = typeof(iOSPanGestureRecognizerPageCS) },
                         new TextCell { Text = "Slider Update on Tap", Command = NavigateCommand, CommandParameter = typeof(iOSSliderUpdateOnTapPageCS) },
                         new TextCell { Text = "NavigationPage NavigationBarSeparator", Command = NavigateCommand, CommandParameter = typeof(iOSTitleViewPageCS) },
-                        new TextCell { Text = "Modal FormSheet Page", Command = NavigateCommand, CommandParameter = typeof(iOSModalFormSheetPageCS) },
+                        new TextCell { Text = "Modal Page Presentation Style", Command = NavigateCommand, CommandParameter = typeof(iOSModalPagePresentationStyleCS) },
                         new TextCell { Text = "Hide Home Indicator on Page", Command = NavigateCommand, CommandParameter = typeof(iOSHideHomeIndicatorPageCS) },
                         new TextCell { Text = "SwipeView SwipeTransitionMode", Command = NavigateCommand, CommandParameter = typeof(iOSSwipeViewTransitionModePageCS) },
                         new TextCell { Text = "DatePicker UpdateMode", Command = NavigateCommand, CommandParameter = typeof(iOSDatePickerPageCS) },
@@ -111,7 +111,7 @@ namespace PlatformSpecifics
             else
             {
                 Page page = (Xamarin.Forms.Page)Activator.CreateInstance(pageType);
-                if (page is iOSModalFormSheetPageCS)
+                if (page is iOSModalPagePresentationStyleCS)
                 {
                     await Navigation.PushModalAsync(page);
                 }

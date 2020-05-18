@@ -18,7 +18,7 @@
             <TextCell Text="Application PanGestureRecognizer" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSPanGestureRecognizerPage}" />
             <TextCell Text="Slider Update on Tap" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSSliderUpdateOnTapPage}" />
             <TextCell Text="NavigationPage NavigationBarSeparator" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSTitleViewPage}" />
-            <TextCell Text="Modal FormSheet Page" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSModalFormSheetPage}" />
+            <TextCell Text="Modal Page Presentation Style" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSModalPagePresentationStyle}" />
             <TextCell Text="Hide Home Indicator on Page" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSHideHomeIndicatorPage}" />
             <TextCell Text="SwipeView SwipeTransitionMode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSSwipeViewTransitionModePage}" />
             <TextCell Text="DatePicker UpdateMode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSDatePickerPage}" />

@@ -3,9 +3,9 @@ using Xamarin.Forms;
 
 namespace PlatformSpecifics
 {
-    public partial class iOSModalFormSheetPage : ContentPage
+    public partial class iOSModalPagePresentationStyle : ContentPage
     {
-        public iOSModalFormSheetPage()
+        public iOSModalPagePresentationStyle()
         {
             InitializeComponent();
         }
