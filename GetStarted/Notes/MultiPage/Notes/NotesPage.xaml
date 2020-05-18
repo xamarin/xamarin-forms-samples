@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="Notes.NotesPage"
+             x:Class="Notes.NotesView"
              xmlns:effects="clr-namespace:Notes"
-             Title="Notes">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="+"
-                     Clicked="OnNoteAddedClicked" />
-    </ContentPage.ToolbarItems>
+             >
+
     <ListView x:Name="listView"
               Margin="20"
+              ItemsSource="{Binding .}"
               ItemSelected="OnListViewItemSelected">
         <ListView.Effects>
             <effects:ItemDragAndDropEffect />
@@ -22,4 +20,4 @@
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
-</ContentPage>
+</ContentView>

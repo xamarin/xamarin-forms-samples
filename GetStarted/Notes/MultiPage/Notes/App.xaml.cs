@@ -12,7 +12,7 @@ namespace Notes
         {
             InitializeComponent();
             FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
-            MainPage = new NavigationPage(new NotesPage());
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

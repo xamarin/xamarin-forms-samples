@@ -51,6 +51,9 @@
     <PackageReference Include="Xamarin.Forms">
       <Version>4.6.0.726</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Forms.DualScreen">
+      <Version>4.6.0.726</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ItemDragAndDropEffect.cs" />

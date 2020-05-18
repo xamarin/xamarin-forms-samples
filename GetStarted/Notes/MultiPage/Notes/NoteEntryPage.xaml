@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="Notes.NoteEntryPage"
-             Title="Note Entry">
+             x:Class="Notes.NoteEntryView"
+             >
     <StackLayout Margin="20">
         <Editor Placeholder="Enter your note"
                 Text="{Binding Text}"
@@ -19,4 +19,4 @@
                     Clicked="OnDeleteButtonClicked"/>
         </Grid>
     </StackLayout>
-</ContentPage>
+</ContentView>

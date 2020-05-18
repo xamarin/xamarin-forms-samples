@@ -5,14 +5,14 @@ using Notes.Models;
 
 namespace Notes
 {
-    public partial class NoteEntryPage : ContentPage
+    public partial class NoteEntryView : ContentView
     {
-        public NoteEntryPage()
+        public NoteEntryView()
         {
             InitializeComponent();
         }
 
-        async void OnSaveButtonClicked(object sender, EventArgs e)
+        void OnSaveButtonClicked(object sender, EventArgs e)
         {
             var note = (Note)BindingContext;
 
@@ -21,6 +21,7 @@ namespace Notes
                 // Save
                 var filename = Path.Combine(App.FolderPath, $"{Path.GetRandomFileName()}.notes.txt");
                 File.WriteAllText(filename, note.Text);
+                ((Note)BindingContext).Filename = filename;
             }
             else
             {
@@ -28,10 +29,10 @@ namespace Notes
                 File.WriteAllText(note.Filename, note.Text);
             }
 
-            await Navigation.PopAsync();
+            MainPage.Current.RefreshData();
         }
 
-        async void OnDeleteButtonClicked(object sender, EventArgs e)
+        void OnDeleteButtonClicked(object sender, EventArgs e)
         {
             var note = (Note)BindingContext;
 
@@ -39,8 +40,8 @@ namespace Notes
             {
                 File.Delete(note.Filename);
             }
-
-            await Navigation.PopAsync();
+            BindingContext = new Note();
+            MainPage.Current.RefreshData();
         }
     }
 }

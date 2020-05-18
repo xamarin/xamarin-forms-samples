@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Xamarin.Forms.DualScreen;
 
 namespace Notes.Droid
 {
@@ -19,6 +20,7 @@ namespace Notes.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            DualScreenService.Init(this);
             LoadApplication(new App());
         }
     }
