@@ -41,8 +41,8 @@ namespace WorkingWithImages
                     new Image
                     {
                         Source = ImageSource.FromUri(new Uri("https://aka.ms/campus2.jpg")),
-                        LoadingPlaceholder = ImageSource.FromFile("loading.png"),
-                        ErrorPlaceholder = ImageSource.FromFile("error.png")
+                        LoadingPlaceholder = "loading.png",
+                        ErrorPlaceholder = "error.png"
                     }
                 },
                 Margin = new Thickness(20, 35, 20, 20),
