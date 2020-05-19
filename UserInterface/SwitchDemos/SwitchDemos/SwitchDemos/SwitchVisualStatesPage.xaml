@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SwitchDemos.SwitchVisualStatesPage"
+             Title="IsToggled Visual States">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.75*" />
+            <ColumnDefinition Width="0.25*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Text="Switch without any visual states:"
+               VerticalOptions="Center" />
+        <Switch Grid.Column="1"
+                IsToggled="True"
+                HorizontalOptions="End" />
+        <Label Grid.Row="1"
+               Text="Switch with on/off visual states:"
+               VerticalOptions="Center" />
+        <Switch Grid.Row="1"
+                Grid.Column="1"
+                IsToggled="True"
+                HorizontalOptions="End">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="On">
+                        <VisualState.Setters>
+                            <Setter Property="ThumbColor"
+                                    Value="MediumSpringGreen" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Off">
+                        <VisualState.Setters>
+                            <Setter Property="ThumbColor"
+                                    Value="Red" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Switch>
+    </Grid>
+</ContentPage>

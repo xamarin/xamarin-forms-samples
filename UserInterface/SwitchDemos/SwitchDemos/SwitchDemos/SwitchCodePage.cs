@@ -38,7 +38,7 @@ namespace SwitchDemos
             };
         }
 
-        private void SwitchControl_Toggled(object sender, ToggledEventArgs e)
+        void SwitchControl_Toggled(object sender, ToggledEventArgs e)
         {
             string stateName = e.Value ? "ON" : "OFF";
             switchStateLabel.Text = $"The switch is {stateName}";
