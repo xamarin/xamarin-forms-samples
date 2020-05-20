@@ -17,6 +17,7 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Label Text="Scroll enabled:"
                    VerticalTextAlignment="Center" />
@@ -38,9 +39,16 @@
                       x:Name="showUserCheckBox"
                       CheckedChanged="OnCheckBoxCheckedChanged"/>
             <Label Grid.Row="3"
-                   Text="Maintain last region on layout change:"
+                   Text="Show traffic:"
                    VerticalTextAlignment="Center" />
             <CheckBox Grid.Row="3"
+                      Grid.Column="1"
+                      x:Name="showTrafficCheckBox"
+                      CheckedChanged="OnCheckBoxCheckedChanged" />
+            <Label Grid.Row="4"
+                   Text="Maintain last region on layout change:"
+                   VerticalTextAlignment="Center" />
+            <CheckBox Grid.Row="4"
                       Grid.Column="1"
                       x:Name="moveRegionCheckBox"
                       IsChecked="True" />
