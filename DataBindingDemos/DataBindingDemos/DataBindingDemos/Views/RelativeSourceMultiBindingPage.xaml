@@ -16,26 +16,24 @@
                       Padding="8">
                 <Expander.IsVisible>
                     <MultiBinding Converter="{StaticResource AllTrueConverter}">
-                        <Binding Path="IsExpanded"
-                                 Source="{RelativeSource TemplatedParent}" />
-                        <Binding Path="IsEnabled"
-                                 Source="{RelativeSource TemplatedParent}" />
+                        <Binding Path="IsExpanded" />
+                        <Binding Path="IsEnabled" />
                     </MultiBinding>
                 </Expander.IsVisible>
                 <Expander.Header>
                     <Grid>
                         <Label Text="{Binding CardTitle}"
-                                FontAttributes="Bold"
-                                FontSize="Large"
-                                VerticalTextAlignment="Center"
-                                HorizontalTextAlignment="Start" />
+                               FontAttributes="Bold"
+                               FontSize="Large"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Start" />
                         <Image Source="expand.png"
-                                HorizontalOptions="End"
-                                VerticalOptions="Start">
+                               HorizontalOptions="End"
+                               VerticalOptions="Start">
                             <Image.Triggers>
                                 <DataTrigger TargetType="Image"
-                                                Binding="{Binding Source={RelativeSource AncestorType={x:Type Expander}}, Path=IsExpanded}"
-                                                Value="True">
+                                             Binding="{Binding Source={RelativeSource AncestorType={x:Type Expander}}, Path=IsExpanded}"
+                                             Value="True">
                                     <Setter Property="Source"
                                             Value="collapse.png" />
                                 </DataTrigger>
@@ -53,18 +51,18 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <Frame IsClippedToBounds="True"
-                            BorderColor="{Binding BorderColor}"
-                            BackgroundColor="{Binding IconBackgroundColor}"
-                            CornerRadius="38"
-                            HeightRequest="60"
-                            WidthRequest="60"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center">
+                           BorderColor="{Binding BorderColor}"
+                           BackgroundColor="{Binding IconBackgroundColor}"
+                           CornerRadius="38"
+                           HeightRequest="60"
+                           WidthRequest="60"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center">
                         <Image Source="{Binding IconImageSource}"
-                                Margin="-20"
-                                WidthRequest="100"
-                                HeightRequest="100"
-                                Aspect="AspectFill" />
+                               Margin="-20"
+                               WidthRequest="100"
+                               HeightRequest="100"
+                               Aspect="AspectFill" />
                     </Frame>
                     <Label Grid.Column="2"
                            Grid.RowSpan="2"
@@ -89,7 +87,6 @@
                                    IconBackgroundColor="SlateGray"
                                    IconImageSource="user.png"
                                    ControlTemplate="{StaticResource CardViewExpanderControlTemplate}"
-                                   IsEnabled="True"
                                    IsExpanded="True" />
         <controls:CardViewExpander BorderColor="DarkGray"
                                    CardTitle="Jane Doe"

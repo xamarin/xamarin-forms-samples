@@ -28,8 +28,8 @@
         </Label>
         <Label>
             <Label.Text>
-                <!-- This MultiBinding should display its FallbackValue,
-                     because the converter returns Binding.UnsetValue -->
+                <!-- This MultiBinding should return its FallbackValue,
+                     because the converter returns BindableProperty.UnsetValue -->
                 <MultiBinding FallbackValue="Name unavailable"
                               TargetNullValue="Data undefined"
                               Converter="{StaticResource StringConcatConverter}">
@@ -74,7 +74,7 @@
         </Label>
         <Label>
             <Label.Text>
-                <!-- This MultiBinding should display its TargetNullValue,
+                <!-- This MultiBinding should return its TargetNullValue,
                      because the converter returns null -->
                 <MultiBinding FallbackValue="Name unavailable"
                               TargetNullValue="Data undefined"
@@ -83,8 +83,8 @@
         </Label>
         <Label>
             <Label.Text>
-                <!-- This MultiBinding should display its FallbackValue,
-                     because the converter returns Binding.UnsetValue -->
+                <!-- This MultiBinding should return its FallbackValue,
+                     because the converter returns BindableProperty.UnsetValue -->
                 <MultiBinding FallbackValue="Name unavailable"
                               TargetNullValue="Data undefined"
                               Converter="{StaticResource StringConcatConverter}">
