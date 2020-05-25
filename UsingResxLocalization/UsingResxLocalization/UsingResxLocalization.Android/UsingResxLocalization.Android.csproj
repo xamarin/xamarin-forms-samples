@@ -124,4 +124,9 @@
     <AndroidResource Include="Resources\drawable\flag.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Target Name="_ResolveSatellitePaths" DependsOnTargets="_ResolveAssemblies">
+    <ResolveAssemblyReference AllowedAssemblyExtensions="$(AllowedReferenceAssemblyFileExtensions)" AssemblyFiles="@(ResolvedUserAssemblies)" AutoUnify="$(AutoUnifyAssemblyReferences)" FindDependencies="True" FindRelatedFiles="False" FindSatellites="True" SearchPaths="$(AssemblySearchPaths)" TargetFrameworkMoniker="$(TargetFrameworkMoniker)" TargetFrameworkMonikerDisplayName="$(TargetFrameworkMonikerDisplayName)" TargetFrameworkDirectories="$(TargetFrameworkDirectory)">
+      <Output TaskParameter="SatelliteFiles" ItemName="_AndroidResolvedSatellitePaths" />
+    </ResolveAssemblyReference>
+  </Target>
 </Project>
