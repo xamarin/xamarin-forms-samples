@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:ScrollViewDemos.Views"
+             x:Class="ScrollViewDemos.MainPage"
+             Title="ScrollView demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="XAML">
+                <TextCell Text="ScrollView as the root layout"
+                          Detail="Color list"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ColorListPage}" />
+                <TextCell Text="ScrollView as a child layout"
+                          Detail="The Black Cat short story"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:BlackCatPage}" />
+            </TableSection>
+            <TableSection Title="C#">
+                <TextCell Text="ScrollView as the root layout"
+                          Detail="Color list"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ColorListPageCS}" />
+                <TextCell Text="ScrollView as a child layout"
+                          Detail="The Black Cat short story"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:BlackCatPageCS}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
