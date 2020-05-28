@@ -28,13 +28,13 @@ namespace TodoREST
         {
             Items = new List<TodoItem>();
 
-            var uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
+            Uri uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
             try
             {
-                var response = await client.GetAsync(uri);
+                HttpResponseMessage response = await client.GetAsync(uri);
                 if (response.IsSuccessStatusCode)
                 {
-                    var content = await response.Content.ReadAsStringAsync();
+                    string content = await response.Content.ReadAsStringAsync();
                     Items = JsonConvert.DeserializeObject<List<TodoItem>>(content);
                 }
             }
@@ -48,12 +48,12 @@ namespace TodoREST
 
         public async Task SaveTodoItemAsync(TodoItem item, bool isNewItem = false)
         {
-            var uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
+            Uri uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
 
             try
             {
-                var json = JsonConvert.SerializeObject(item);
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                string json = JsonConvert.SerializeObject(item);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 HttpResponseMessage response = null;
                 if (isNewItem)
@@ -79,11 +79,11 @@ namespace TodoREST
 
         public async Task DeleteTodoItemAsync(string id)
         {
-            var uri = new Uri(string.Format(Constants.RestUrl, id));
+            Uri uri = new Uri(string.Format(Constants.RestUrl, id));
 
             try
             {
-                var response = await client.DeleteAsync(uri);
+                HttpResponseMessage response = await client.DeleteAsync(uri);
 
                 if (response.IsSuccessStatusCode)
                 {
