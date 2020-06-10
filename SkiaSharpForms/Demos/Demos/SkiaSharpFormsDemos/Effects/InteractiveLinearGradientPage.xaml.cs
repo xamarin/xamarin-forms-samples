@@ -21,7 +21,6 @@ namespace SkiaSharpFormsDemos.Effects
                 };
             }
 
-            InitializeComponent();
             baseCanvasView = canvasView;
         }
 

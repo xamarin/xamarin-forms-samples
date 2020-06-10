@@ -5,31 +5,36 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Xamarin.Forms;
 
 namespace TodoREST
 {
     public class RestService : IRestService
     {
-        HttpClient _client;
+        HttpClient client;
 
         public List<TodoItem> Items { get; private set; }
 
         public RestService()
         {
-            _client = new HttpClient();
+#if DEBUG
+            client = new HttpClient(DependencyService.Get<IHttpClientHandlerService>().GetInsecureHandler());
+#else
+            client = new HttpClient();
+#endif
         }
 
         public async Task<List<TodoItem>> RefreshDataAsync()
         {
             Items = new List<TodoItem>();
 
-            var uri = new Uri(string.Format(Constants.TodoItemsUrl, string.Empty));
+            Uri uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
             try
             {
-                var response = await _client.GetAsync(uri);
+                HttpResponseMessage response = await client.GetAsync(uri);
                 if (response.IsSuccessStatusCode)
                 {
-                    var content = await response.Content.ReadAsStringAsync();
+                    string content = await response.Content.ReadAsStringAsync();
                     Items = JsonConvert.DeserializeObject<List<TodoItem>>(content);
                 }
             }
@@ -43,21 +48,21 @@ namespace TodoREST
 
         public async Task SaveTodoItemAsync(TodoItem item, bool isNewItem = false)
         {
-            var uri = new Uri(string.Format(Constants.TodoItemsUrl, string.Empty));
+            Uri uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
 
             try
             {
-                var json = JsonConvert.SerializeObject(item);
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                string json = JsonConvert.SerializeObject(item);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 HttpResponseMessage response = null;
                 if (isNewItem)
                 {
-                    response = await _client.PostAsync(uri, content);
+                    response = await client.PostAsync(uri, content);
                 }
                 else
                 {
-                    response = await _client.PutAsync(uri, content);
+                    response = await client.PutAsync(uri, content);
                 }
 
                 if (response.IsSuccessStatusCode)
@@ -74,11 +79,11 @@ namespace TodoREST
 
         public async Task DeleteTodoItemAsync(string id)
         {
-            var uri = new Uri(string.Format(Constants.TodoItemsUrl, id));
+            Uri uri = new Uri(string.Format(Constants.RestUrl, id));
 
             try
             {
-                var response = await _client.DeleteAsync(uri);
+                HttpResponseMessage response = await client.DeleteAsync(uri);
 
                 if (response.IsSuccessStatusCode)
                 {

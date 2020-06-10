@@ -30,7 +30,7 @@ namespace DependencyServiceDemos.iOS
             // Present UIImagePickerController;
             UIWindow window = UIApplication.SharedApplication.KeyWindow;
             var viewController = window.RootViewController;
-            viewController.PresentModalViewController(imagePicker, true);
+            viewController.PresentViewController(imagePicker, true, null);
 
             // Return Task object
             taskCompletionSource = new TaskCompletionSource<Stream>();

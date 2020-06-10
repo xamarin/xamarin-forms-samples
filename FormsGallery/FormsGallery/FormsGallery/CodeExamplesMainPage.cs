@@ -32,6 +32,14 @@ namespace FormsGallery
 
                         new TextCell
                         {
+                            Text = "Expander",
+                            Detail = "Display content in an expandable container",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.ExpanderDemoPage)
+                        },
+
+                        new TextCell
+                        {
                             Text = "Image",
                             Detail = "Display a bitmap",
                             Command = navigateCommand,
@@ -95,6 +103,14 @@ namespace FormsGallery
                             Detail = "Initiate a command",
                             Command = navigateCommand,
                             CommandParameter = typeof(CodeExamples.ImageButtonDemoPage)
+                        },
+
+                        new TextCell
+                        {
+                            Text = "RadioButton",
+                            Detail = "Initiate a command",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.RadioButtonDemoPage)
                         },
 
                         new TextCell

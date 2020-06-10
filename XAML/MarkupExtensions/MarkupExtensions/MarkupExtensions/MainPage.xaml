@@ -53,6 +53,11 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:HslColorDemoPage}" />
 
+                <TextCell Text="OnAppTheme Demo"
+                          Detail="Specify resources per system theme"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:OnAppThemeDemoPage}" />
+
                 <TextCell Text="Image Resource Demo"
                           Detail="Use a custom markup extension to access bitmaps"
                           Command="{Binding NavigateCommand}"

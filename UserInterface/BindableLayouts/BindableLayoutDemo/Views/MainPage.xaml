@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:BindableLayoutDemo.Views"
+             x:Class="BindableLayoutDemo.Views.MainPage"
+             Title="BindableLayout Demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="Bindable layout demo"
+                          Detail="User profile page"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:UserProfilePage}" />
+                <TextCell Text="EmptyView string demo"
+                          Detail="String displayed in a Label"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:UserProfileEmptyViewNullPage}" />
+                <TextCell Text="EmptyView load simulation demo"
+                          Detail="Set ItemsSource after 2 seconds"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:UserProfileEmptyViewLoadSimulationPage}" />
+                <TextCell Text="EmptyView multiple views demo"
+                          Detail="Views displayed in a layout"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:UserProfileEmptyViewWithMultipleViewsPage}" />
+                <TextCell Text="EmptyViewTemplate demo"
+                          Detail="DataTemplate"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:UserProfileEmptyViewTemplatePage}" />
+                <TextCell Text="EmptyViewTemplate demo"
+                          Detail="Data template selector"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:UserProfileEmptyViewTemplateSelectorPage}" />
+                <TextCell Text="EmptyView swap demo"
+                          Detail="Swap ContentView at runtime"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:UserProfileEmptyViewSwapPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

@@ -48,6 +48,5 @@ namespace FormsGallery.CodeExamples
         {
             label.Text = string.Format("CheckBox is now {0}", e.Value);
         }
-
     }
 }

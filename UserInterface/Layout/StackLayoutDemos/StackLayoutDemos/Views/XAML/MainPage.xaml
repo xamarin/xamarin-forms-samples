@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:StackLayoutDemos.Views"
+             x:Class="StackLayoutDemos.MainPage"
+             Title="StackLayout Demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="XAML">
+                <TextCell Text="Default StackLayout"
+                          Detail="Vertical"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VerticalStackLayoutPage}" />
+                <TextCell Text="Horizontal StackLayout"
+                          Detail="Orientation property"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:HorizontalStackLayoutPage}" />
+                <TextCell Text="Child spacing"
+                          Detail="Spacing property"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:StackLayoutSpacingPage}" />
+                <TextCell Text="Combined StackLayouts"
+                          Detail="Vertical and Horizontal"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:CombinedStackLayoutPage}" />
+                <TextCell Text="Alignment in a vertical StackLayout"
+                          Detail="HorizontalOptions property"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:AlignmentPage}" />
+                <TextCell Text="Expansion in a vertical StackLayout"
+                          Detail="VerticalOptions property"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ExpansionPage}" />
+            </TableSection>
+            <TableSection Title="C#">
+                <TextCell Text="Default StackLayout"
+                          Detail="Vertical"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VerticalStackLayoutPageCS}" />
+                <TextCell Text="Horizontal StackLayout"
+                          Detail="Orientation property"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:HorizontalStackLayoutPageCS}" />
+                <TextCell Text="Child spacing"
+                          Detail="Spacing property"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:StackLayoutSpacingPageCS}" />
+                <TextCell Text="Combined StackLayouts"
+                          Detail="Vertical and Horizontal"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:CombinedStackLayoutPageCS}" />
+                <TextCell Text="Alignment in a vertical StackLayout"
+                          Detail="HorizontalOptions property"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:AlignmentPageCS}" />
+                <TextCell Text="Expansion in a vertical StackLayout"
+                          Detail="VerticalOptions property"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ExpansionPageCS}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

@@ -6,6 +6,8 @@ namespace BindableLayoutDemo.ViewModels
     {
         public User User { get; }
 
+        public User UserWithoutAchievements { get; }
+
         public UserProfileViewModel()
         {
             User = new User
@@ -29,6 +31,14 @@ namespace BindableLayoutDemo.ViewModels
                 {
                     "\uf2d2", "\uf2ba", "\uf30c"
                 }
+            };
+
+            UserWithoutAchievements = new User
+            {
+                Username = User.Username,
+                Email = User.Email,
+                TopFollowers = User.TopFollowers,
+                FavoriteTech = User.FavoriteTech
             };
         }
     }

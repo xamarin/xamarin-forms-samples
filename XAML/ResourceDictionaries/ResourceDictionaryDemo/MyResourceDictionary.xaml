@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ResourceDictionaryDemo.MyResourceDictionary">
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <DataTemplate x:Key="PersonDataTemplate">
         <ViewCell>
             <Grid>
@@ -8,9 +9,16 @@
                     <ColumnDefinition Width="0.2*" />
                     <ColumnDefinition Width="0.3*" />
                 </Grid.ColumnDefinitions>
-                <Label Text="{Binding Name}" TextColor="{StaticResource NormalTextColor}" FontAttributes="Bold" />
-                <Label Grid.Column="1" Text="{Binding Age}" TextColor="{StaticResource NormalTextColor}" />
-                <Label Grid.Column="2" Text="{Binding Location}" TextColor="{StaticResource NormalTextColor}" HorizontalTextAlignment="End" />
+                <Label Text="{Binding Name}"
+                       TextColor="{StaticResource NormalTextColor}"
+                       FontAttributes="Bold" />
+                <Label Grid.Column="1"
+                       Text="{Binding Age}"
+                       TextColor="{StaticResource NormalTextColor}" />
+                <Label Grid.Column="2"
+                       Text="{Binding Location}"
+                       TextColor="{StaticResource NormalTextColor}"
+                       HorizontalTextAlignment="End" />
             </Grid>
         </ViewCell>
     </DataTemplate>

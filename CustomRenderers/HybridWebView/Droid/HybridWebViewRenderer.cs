@@ -1,8 +1,8 @@
-﻿using CustomRenderer;
+﻿using Android.Content;
+using CustomRenderer;
 using CustomRenderer.Droid;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using Android.Content;
 
 [assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]
 namespace CustomRenderer.Droid
@@ -28,10 +28,19 @@ namespace CustomRenderer.Droid
             }
             if (e.NewElement != null)
             {
-                Control.SetWebViewClient(new JavascriptWebViewClient($"javascript: {JavascriptFunction}"));
+                Control.SetWebViewClient(new JavascriptWebViewClient(this, $"javascript: {JavascriptFunction}"));
                 Control.AddJavascriptInterface(new JSBridge(this), "jsBridge");
                 Control.LoadUrl($"file:///android_asset/Content/{((HybridWebView)Element).Uri}");
             }
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                ((HybridWebView)Element).Cleanup();
+            }
+            base.Dispose(disposing);
         }
     }
 }
