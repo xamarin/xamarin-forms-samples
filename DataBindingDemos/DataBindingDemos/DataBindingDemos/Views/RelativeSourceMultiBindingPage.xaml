@@ -6,7 +6,6 @@
              x:Class="DataBindingDemos.RelativeSourceMultiBindingPage"
              Title="RelativeSource MultiBinding demo">
     <ContentPage.Resources>
-        <local:StringConcatenationConverter x:Key="StringConcatConverter" />
         <local:AllTrueMultiConverter x:Key="AllTrueConverter" />
 
         <ControlTemplate x:Key="CardViewExpanderControlTemplate">
@@ -102,6 +101,5 @@
                                    IconImageSource="user.png"
                                    ControlTemplate="{StaticResource CardViewExpanderControlTemplate}"
                                    IsExpanded="True" />
-
     </StackLayout>
 </ContentPage>

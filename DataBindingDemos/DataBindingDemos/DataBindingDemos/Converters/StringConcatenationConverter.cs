@@ -15,7 +15,7 @@ namespace DataBindingDemos
                 return null;
             }
 
-            string concatenator = parameter as string ?? " ";
+            string separator = parameter as string ?? " ";
             StringBuilder sb = new StringBuilder();
             int i = 0;
 
@@ -39,9 +39,9 @@ namespace DataBindingDemos
                     return null;
                 }
 
-                if (i != 0 && concatenator != null)
+                if (i != 0 && separator != null)
                 {
-                    sb.Append(concatenator);
+                    sb.Append(separator);
                 }
                 sb.Append(value?.ToString());
                 i++;
@@ -57,14 +57,14 @@ namespace DataBindingDemos
                 return null;
             }
 
-            string concatenator = parameter as string ?? " ";
+            string separator = parameter as string ?? " ";
 
-            if (!targetTypes.All(t => t == typeof(string)))
+            if (!targetTypes.All(t => t == typeof(object)) && !targetTypes.All(t => t == typeof(string)))
             {
                 return null;
             }
 
-            var array = s.Split(new string[] { concatenator }, StringSplitOptions.RemoveEmptyEntries).Cast<object>().ToArray();
+            var array = s.Split(new string[] { separator }, StringSplitOptions.RemoveEmptyEntries).Cast<object>().ToArray();
             for (int i = 0; i < array.Length; i++)
             {
                 var str = array[i] as string;

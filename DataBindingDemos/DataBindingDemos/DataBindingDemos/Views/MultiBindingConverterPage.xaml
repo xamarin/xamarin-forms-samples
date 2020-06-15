@@ -41,7 +41,8 @@
                 <MultiBinding Converter="{StaticResource AllTrueConverter}">
                     <Binding Path="Employee1.IsOver16" />
                     <Binding Path="Employee1.HasPassedTest" />
-                    <Binding Path="Employee1.IsSuspended" Converter="{StaticResource InverterConverter}" />
+                    <Binding Path="Employee1.IsSuspended"
+                             Converter="{StaticResource InverterConverter}" />
                 </MultiBinding>
             </CheckBox.IsChecked>
         </CheckBox>
@@ -55,7 +56,8 @@
                 <MultiBinding Converter="{StaticResource AllTrueConverter}">
                     <Binding Path="Employee2.IsOver16" />
                     <Binding Path="Employee2.HasPassedTest" />
-                    <Binding Path="Employee2.IsSuspended" Converter="{StaticResource InverterConverter}" />
+                    <Binding Path="Employee2.IsSuspended"
+                             Converter="{StaticResource InverterConverter}" />
                 </MultiBinding>
             </CheckBox.IsChecked>
         </CheckBox>
@@ -69,7 +71,8 @@
                 <MultiBinding Converter="{StaticResource AllTrueConverter}">
                     <Binding Path="Employee3.IsOver16" />
                     <Binding Path="Employee3.HasPassedTest" />
-                    <Binding Path="Employee3.IsSuspended" Converter="{StaticResource InverterConverter}" />
+                    <Binding Path="Employee3.IsSuspended"
+                             Converter="{StaticResource InverterConverter}" />
                 </MultiBinding>
             </CheckBox.IsChecked>
         </CheckBox>
@@ -83,7 +86,8 @@
                 <MultiBinding Converter="{StaticResource AllTrueConverter}">
                     <Binding Path="Employee4.IsOver16" />
                     <Binding Path="Employee4.HasPassedTest" />
-                    <Binding Path="Employee4.IsSuspended" Converter="{StaticResource InverterConverter}" />
+                    <Binding Path="Employee4.IsSuspended"
+                             Converter="{StaticResource InverterConverter}" />
                 </MultiBinding>
             </CheckBox.IsChecked>
         </CheckBox>
@@ -97,7 +101,8 @@
                 <MultiBinding Converter="{StaticResource AllTrueConverter}">
                     <Binding Path="Employee5.IsOver16" />
                     <Binding Path="Employee5.HasPassedTest" />
-                    <Binding Path="Employee5.IsSuspended" Converter="{StaticResource InverterConverter}" />
+                    <Binding Path="Employee5.IsSuspended"
+                             Converter="{StaticResource InverterConverter}" />
                 </MultiBinding>
             </CheckBox.IsChecked>
         </CheckBox>
