@@ -128,7 +128,7 @@
                 <TextCell Text="String Formatting"
                           Detail="Combine strings from a MultiBinding"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:MultiBindingPage}" />
+                          CommandParameter="{x:Type local:MultiBindingStringFormatPage}" />
 
                 <TextCell Text="Multi Value Converters"
                           Detail="Use a multi value converter to set the CheckBox.IsChecked property"

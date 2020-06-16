@@ -2,9 +2,9 @@
 
 namespace DataBindingDemos
 {
-    public partial class MultiBindingPage : ContentPage
+    public partial class MultiBindingStringFormatPage : ContentPage
     {
-        public MultiBindingPage()
+        public MultiBindingStringFormatPage()
         {
             InitializeComponent();
         }
