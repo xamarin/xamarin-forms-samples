@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShapesDemos.OverlappingCirclesDemoPage"
+             Title="Overlapping circles demo">
+    <Path Fill="Blue"
+          Stroke="Red"
+          StrokeThickness="3"
+          Aspect="Uniform">
+        <Path.Data>
+            <GeometryGroup>
+                <EllipseGeometry RadiusX="100"
+                                 RadiusY="100"
+                                 Center="150,150" />
+                <EllipseGeometry RadiusX="100"
+                                 RadiusY="100"
+                                 Center="250,150" />
+                <EllipseGeometry RadiusX="100"
+                                 RadiusY="100"
+                                 Center="150,250" />
+                <EllipseGeometry RadiusX="100"
+                                 RadiusY="100"
+                                 Center="250,250" />                
+            </GeometryGroup>
+        </Path.Data>
+    </Path>
+</ContentPage>
