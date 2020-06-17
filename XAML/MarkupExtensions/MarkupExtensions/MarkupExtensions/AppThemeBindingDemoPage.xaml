@@ -16,6 +16,6 @@
         <Label Text="This text is green in light mode, and red in dark mode."
                TextColor="{AppThemeBinding Light=Green, Dark=Red}" />
         <Label Text="This text is black by default, blue in light mode, and teal in dark mode."
-               Style="{DynamicResource labelStyle}" />
+               Style="{StaticResource labelStyle}" />
     </StackLayout>
 </ContentPage>
