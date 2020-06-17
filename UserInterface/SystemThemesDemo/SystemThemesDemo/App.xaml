@@ -7,44 +7,39 @@
              x:Class="SystemThemesDemo.App">
     <Application.Resources>
 
-        <AppThemeColor x:Key="PageBackgroundColor"
-                       Light="White"
-                       Dark="Black" />
-        <AppThemeColor x:Key="NavigationBarColor"
-                       Light="WhiteSmoke"
-                       Dark="Teal" />
-        <AppThemeColor x:Key="PrimaryColor"
-                       Light="WhiteSmoke"
-                       Dark="Teal" />
-        <AppThemeColor x:Key="SecondaryColor"
-                       Light="Black"
-                       Dark="White" />
-        <AppThemeColor x:Key="PrimaryTextColor"
-                       Light="Black"
-                       Dark="White" />
-        <AppThemeColor x:Key="SecondaryTextColor"
-                       Light="White"
-                       Dark="White" />
-        <AppThemeColor x:Key="TertiaryTextColor"
-                       Light="Gray"
-                       Dark="WhiteSmoke" />
-        <AppThemeColor x:Key="TransparentColor"
-                       Light="Transparent"
-                       Dark="Transparent" />
+        <Color x:Key="TransparentColor">Transparent</Color>
+
+        <!-- Light colors -->
+        <Color x:Key="LightPageBackgroundColor">White</Color>
+        <Color x:Key="LightNavigationBarColor">WhiteSmoke</Color>
+        <Color x:Key="LightPrimaryColor">WhiteSmoke</Color>
+        <Color x:Key="LightSecondaryColor">Black</Color>
+        <Color x:Key="LightPrimaryTextColor">Black</Color>
+        <Color x:Key="LightSecondaryTextColor">White</Color>
+        <Color x:Key="LightTertiaryTextColor">Gray</Color>
+
+        <!-- Dark colors -->
+        <Color x:Key="DarkPageBackgroundColor">Black</Color>
+        <Color x:Key="DarkNavigationBarColor">Teal</Color>
+        <Color x:Key="DarkPrimaryColor">Teal</Color>
+        <Color x:Key="DarkSecondaryColor">White</Color>
+        <Color x:Key="DarkPrimaryTextColor">White</Color>
+        <Color x:Key="DarkSecondaryTextColor">White</Color>
+        <Color x:Key="DarkTertiaryTextColor">WhiteSmoke</Color>
 
         <Style TargetType="NavigationPage">
             <Setter Property="BarBackgroundColor"
-                    Value="{DynamicResource NavigationBarColor}" />
+                    Value="{AppThemeBinding Light={StaticResource LightNavigationBarColor}, Dark={StaticResource DarkNavigationBarColor}}" />
             <Setter Property="BarTextColor"
-                    Value="{DynamicResource SecondaryColor}" />
+                    Value="{AppThemeBinding Light={StaticResource LightSecondaryColor}, Dark={StaticResource DarkSecondaryColor}}" />
         </Style>
 
         <Style x:Key="ButtonStyle"
                TargetType="Button">
             <Setter Property="BackgroundColor"
-                    Value="{DynamicResource PrimaryColor}" />
+                    Value="{AppThemeBinding Light={StaticResource LightPrimaryColor}, Dark={StaticResource DarkPrimaryColor}}" />
             <Setter Property="TextColor"
-                    Value="{DynamicResource SecondaryColor}" />
+                    Value="{AppThemeBinding Light={StaticResource LightSecondaryColor}, Dark={StaticResource DarkSecondaryColor}}" />
             <Setter Property="HeightRequest"
                     Value="45" />
             <Setter Property="WidthRequest"
@@ -56,7 +51,7 @@
         <Style x:Key="LargeLabelStyle"
                TargetType="Label">
             <Setter Property="TextColor"
-                    Value="{DynamicResource SecondaryTextColor}" />
+                    Value="{AppThemeBinding Light={StaticResource LightSecondaryTextColor}, Dark={StaticResource DarkSecondaryTextColor}}" />
             <Setter Property="FontSize"
                     Value="30" />
         </Style>
@@ -64,7 +59,7 @@
         <Style x:Key="MediumLabelStyle"
                TargetType="Label">
             <Setter Property="TextColor"
-                    Value="{DynamicResource PrimaryTextColor}" />
+                    Value="{AppThemeBinding Light={StaticResource LightPrimaryTextColor}, Dark={StaticResource DarkPrimaryTextColor}}" />
             <Setter Property="FontSize"
                     Value="25" />
         </Style>
@@ -72,7 +67,7 @@
         <Style x:Key="SmallLabelStyle"
                TargetType="Label">
             <Setter Property="TextColor"
-                    Value="{DynamicResource TertiaryTextColor}" />
+                    Value="{AppThemeBinding Light={StaticResource LightTertiaryTextColor}, Dark={StaticResource DarkTertiaryTextColor}}" />
             <Setter Property="FontSize"
                     Value="15" />
         </Style>
