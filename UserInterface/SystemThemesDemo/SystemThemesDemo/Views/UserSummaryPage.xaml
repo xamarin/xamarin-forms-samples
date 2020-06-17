@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:SystemThemesDemo"
              x:Class="SystemThemesDemo.Views.UserSummaryPage"
              Title="User Summary"
-             BackgroundColor="{DynamicResource PageBackgroundColor}">
+             BackgroundColor="{AppThemeBinding Light={StaticResource LightPageBackgroundColor}, Dark={StaticResource DarkPageBackgroundColor}}">
     <ScrollView>
         <Grid>
             <Grid.RowDefinitions>
@@ -12,7 +12,7 @@
                 <RowDefinition Height="120" />
                 <RowDefinition Height="70" />
             </Grid.RowDefinitions>
-            <Grid BackgroundColor="{DynamicResource PrimaryColor}">
+            <Grid BackgroundColor="{AppThemeBinding Light={StaticResource LightPrimaryColor}, Dark={StaticResource DarkPrimaryColor}}">
                 <Label Text="Face-Palm Monkey"
                        VerticalOptions="Center"
                        Margin="15"

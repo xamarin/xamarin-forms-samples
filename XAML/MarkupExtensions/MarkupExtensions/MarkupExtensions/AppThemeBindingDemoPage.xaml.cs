@@ -2,9 +2,9 @@
 
 namespace MarkupExtensions
 {
-    public partial class OnAppThemeDemoPage : ContentPage
+    public partial class AppThemeBindingDemoPage : ContentPage
     {
-        public OnAppThemeDemoPage()
+        public AppThemeBindingDemoPage()
         {
             InitializeComponent();
         }

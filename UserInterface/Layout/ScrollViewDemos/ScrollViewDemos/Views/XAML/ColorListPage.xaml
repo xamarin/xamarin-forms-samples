@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ScrollViewDemos"
+             x:Class="ScrollViewDemos.Views.ColorListPage"
+             Title="ScrollView demo">
+    <ScrollView Margin="20">
+        <StackLayout BindableLayout.ItemsSource="{x:Static local:NamedColor.All}">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal">
+                        <BoxView Color="{Binding Color}"
+                                 HeightRequest="32"
+                                 WidthRequest="32"
+                                 VerticalOptions="Center" />
+                        <Label Text="{Binding FriendlyName}"
+                               FontSize="24"
+                               VerticalOptions="Center" />
+                    </StackLayout>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
