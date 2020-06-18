@@ -9,7 +9,7 @@ products:
 extensions:
     tags:
     - ui
-urlFragment: userinterface-shapedemos
+urlFragment: userinterface-shapesdemos
 ---
 # Shapes
 
