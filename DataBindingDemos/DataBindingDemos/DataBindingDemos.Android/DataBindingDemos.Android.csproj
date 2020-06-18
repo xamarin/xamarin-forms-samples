@@ -43,7 +43,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
-      <Version>4.6.0.726</Version>
+      <Version>4.7.0.968</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -69,6 +69,14 @@
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable\user.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\collapse.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\expand.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

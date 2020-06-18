@@ -123,6 +123,36 @@
                 
             </TableSection>
 
+            <TableSection Title="Multi Bindings">
+
+                <TextCell Text="String Formatting"
+                          Detail="Combine strings from a MultiBinding"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MultiBindingStringFormatPage}" />
+
+                <TextCell Text="Multi Value Converters"
+                          Detail="Use a multi value converter to set the CheckBox.IsChecked property"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MultiBindingConverterPage}" />
+
+                <TextCell Text="Nest Multi Bindings"
+                          Detail="Nest multi bindings to set the CheckBox.IsChecked property"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:NestedMultiBindingPage}" />
+
+                <TextCell Text="Binding Fallbacks"
+                          Detail="Provide values for multi bindings that fail"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MultiBindingNullAndFallbackValuePage}" />
+
+                <TextCell Text="RelativeSource Bindings"
+                          Detail="Use relative multi bindings to a templated parent"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:RelativeSourceMultiBindingPage}" />
+
+            </TableSection>
+
+
             <TableSection Title="Commanding">
 
                 <TextCell Text="Person Entry"

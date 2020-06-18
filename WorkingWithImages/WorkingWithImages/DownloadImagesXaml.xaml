@@ -8,15 +8,20 @@
                HorizontalOptions="Center" />
         <Image Source="https://aka.ms/campus.jpg" />
 
-        <!--- Alternatively you can use attached property to manually alter the cache time-->
-        <Image IsVisible="false">
+        <!--- Alternatively you can use an attached property to manually alter the cache time-->
+        <!--<Image IsVisible="false">
             <Image.Source>
                 <UriImageSource
                     Uri="https://aka.ms/campus.jpg"
                     CacheValidity="10:00:00.0" />
             </Image.Source>
-        </Image>
+        </Image>-->
 
         <Label Text="This image is downloaded from microsoft.com." />
+
+        <Label Text="Optional loading and error placeholder images can also be set." />
+        <Image Source="https://aka.ms/campus2.jpg" />
+               <!--LoadingPlaceholder="loading.png"
+               ErrorPlaceholder="error.png" />-->
     </StackLayout>
 </ContentPage>

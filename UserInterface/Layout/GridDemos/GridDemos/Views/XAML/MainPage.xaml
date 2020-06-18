@@ -11,6 +11,10 @@
                           Detail="Rows and columns"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:BasicGridPage}" />
+                <TextCell Text="Basic Grid demo"
+                          Detail="Simplified rows and columns syntax"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:BasicGridSimplifiedSyntaxPage}" />
                 <TextCell Text="Grid spacing demo"
                           Detail="RowSpacing and ColumnSpacing"
                           Command="{Binding NavigateCommand}"

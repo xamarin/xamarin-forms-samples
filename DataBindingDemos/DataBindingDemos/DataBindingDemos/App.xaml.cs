@@ -10,6 +10,7 @@ namespace DataBindingDemos
 
         public App()
         {
+            Device.SetFlags(new string[] { "Expander_Experimental" });
             InitializeComponent();
 
             Settings = new SampleSettingsViewModel(Current.Properties);

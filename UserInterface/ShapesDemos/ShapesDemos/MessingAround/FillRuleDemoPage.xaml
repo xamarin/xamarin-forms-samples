@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShapesDemos.FillRuleDemoPage"
+             Title="Fill rule demo">
+    <StackLayout Margin="20">
+        <Polygon Stroke="Red"
+                 StrokeThickness="10"
+                 Fill="Blue"
+                 FillRule="EvenOdd"
+                 HorizontalOptions="Center"
+                 Points=" 40  80,  40 160,
+                                120 160, 120  40,
+                                200  40, 200 120,
+                                 80 120,  80 200,
+                                160 200, 160  80">
+            <Polygon.Triggers>
+                <DataTrigger TargetType="Polygon"
+                             Binding="{Binding Source={x:Reference switch},
+                                               Path=IsToggled}"
+                             Value="True">
+                    <Setter Property="FillRule" Value="Nonzero" />
+                </DataTrigger>
+            </Polygon.Triggers>
+        </Polygon>
+
+        <Label Text="FillRule = EvenOdd"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand">
+            <Label.Triggers>
+                <DataTrigger TargetType="Label"
+                             Binding="{Binding Source={x:Reference switch},
+                                               Path=IsToggled}"
+                             Value="True">
+                    <Setter Property="Text"
+                            Value="FillRule = Nonzero" />
+                </DataTrigger>
+            </Label.Triggers>
+        </Label>
+
+        <Switch x:Name="switch" 
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>

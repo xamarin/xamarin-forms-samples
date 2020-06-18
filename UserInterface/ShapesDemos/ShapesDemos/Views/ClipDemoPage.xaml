@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShapesDemos.ClipDemoPage"
+             Title="Clipping demos">
+    <ScrollView>
+        <StackLayout Margin="20">
+            <Label Text="Unclipped image" />
+            <Image Source="monkeyface.png" />
+            <!--<Label Text="Clipped image with RectangleGeometry" />
+            <Image Source="monkeyface.png">
+                <Image.Clip>
+                    <RectangleGeometry Rect="0,15,150,150" />
+                </Image.Clip>
+            </Image>-->
+            <Label Text="Clipped image with EllipseGeometry" />
+            <Image Source="monkeyface.png">
+                <Image.Clip>
+                    <EllipseGeometry RadiusX="100"
+                                     RadiusY="100"
+                                     Center="175,175" />
+                </Image.Clip>
+            </Image>
+            <Label Text="Clipped image with GeometryGroup" />
+            <Image Source="monkeyface.png">
+                <Image.Clip>
+                    <GeometryGroup FillRule="EvenOdd">
+                        <EllipseGeometry RadiusX="100"
+                                         RadiusY="100"
+                                         Center="150,150" />
+                        <EllipseGeometry RadiusX="100"
+                                         RadiusY="100"
+                                         Center="250,150" />
+                        <EllipseGeometry RadiusX="100"
+                                         RadiusY="100"
+                                         Center="150,250" />
+                        <EllipseGeometry RadiusX="100"
+                                         RadiusY="100"
+                                         Center="250,250" />
+                    </GeometryGroup>
+                </Image.Clip>
+            </Image>
+            <Label Text="Clipped image with PathGeometry" />
+            <Image Source="monkeyface.png">
+                <Image.Clip>
+                    <PathGeometry Figures="M8 148 L156 148 L132 12 Z" />
+                </Image.Clip>
+            </Image>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

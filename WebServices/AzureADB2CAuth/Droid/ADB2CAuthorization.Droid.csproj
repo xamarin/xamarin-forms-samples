@@ -40,7 +40,7 @@
     <PackageReference Include="Microsoft.Identity.Client">
       <Version>4.7.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.968" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

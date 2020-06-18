@@ -39,7 +39,7 @@
     <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.968" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -72,6 +72,14 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\waterfront.jpg" />
     <AndroidResource Include="Resources\drawable\csharp.png" />
     <AndroidResource Include="Resources\drawable\xaml.png" />
+    <AndroidResource Include="Resources\drawable\error.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\loading.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />

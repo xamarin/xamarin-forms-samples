@@ -6,7 +6,6 @@
              mc:Ignorable="d"
              x:Class="SwitchDemos.SwitchBindingsPage"
              Title="Switch Bindings">
-    
         <Grid Margin="20,35,20,20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*" />

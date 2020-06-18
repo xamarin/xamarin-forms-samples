@@ -6,20 +6,17 @@
              mc:Ignorable="d"
              x:Class="SwitchDemos.SwitchXamlPage"
              Title="Switch XAML Demo">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="switchStateLabel"
-                   Text="The switch is off"
-                   VerticalOptions="CenterAndExpand" 
-                   HorizontalOptions="CenterAndExpand" />
-
-            <Switch x:Name="xamlSwitch"
-                    Toggled="XAMLSwitch_Toggled"
-                    IsToggled="False"
-                    OnColor="Orange"
-                    ThumbColor="Green"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout>
+        <Label x:Name="switchStateLabel"
+                Text="The switch is off"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        <Switch x:Name="xamlSwitch"
+                Toggled="XAMLSwitch_Toggled"
+                IsToggled="False"
+                OnColor="Orange"
+                ThumbColor="Green"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand" />
+    </StackLayout>
 </ContentPage>

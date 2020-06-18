@@ -1,18 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace WorkingWithImages
 {
     public class DownloadImages : ContentPage
     {
-        public DownloadImages() {
-			var webImage = new Image { Aspect = Aspect.AspectFit };
+        public DownloadImages()
+        {
+            var webImage = new Image { Aspect = Aspect.AspectFit };
 
-			webImage.Source = ImageSource.FromUri(new Uri("https://aka.ms/campus.jpg"));
+            webImage.Source = ImageSource.FromUri(new Uri("https://aka.ms/campus.jpg"));
 
             // Other examples of how to set the Image Source
             //			webImage.Source = "https://aka.ms/campus.jpg";
@@ -28,20 +25,30 @@ namespace WorkingWithImages
             //				CacheValidity = new TimeSpan(5,0,0,0)
             //			};
 
-            Content = new StackLayout {
-				Children = {
-					new Label {
-						Text = "Image UriSource C#",
-						FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
-						FontAttributes = FontAttributes.Bold, HorizontalOptions = LayoutOptions.Center
+            Content = new StackLayout
+            {
+                Children =
+                {
+                    new Label
+                    {
+                        Text = "Image UriSource C#",
+                        FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
+                        FontAttributes = FontAttributes.Bold, HorizontalOptions = LayoutOptions.Center
                     },
-					webImage, 
-					new Label { Text = "This image is downloaded from microsoft.com" }
-				},
-				Margin = new Thickness (20, 35, 20, 20),
-				VerticalOptions = LayoutOptions.StartAndExpand,
-				HorizontalOptions = LayoutOptions.CenterAndExpand
-			};
+                    webImage,
+                    new Label { Text = "This image is downloaded from microsoft.com" },
+                    new Label { Text = "Optional loading and error placeholder images can also be set." },
+                    new Image
+                    {
+                        Source = ImageSource.FromUri(new Uri("https://aka.ms/campus2.jpg")),                        
+                        //LoadingPlaceholder = "loading.png",
+                        //ErrorPlaceholder = "error.png"
+                    }
+                },
+                Margin = new Thickness(20, 35, 20, 20),
+                VerticalOptions = LayoutOptions.StartAndExpand,
+                HorizontalOptions = LayoutOptions.CenterAndExpand
+            };
         }
     }
 }

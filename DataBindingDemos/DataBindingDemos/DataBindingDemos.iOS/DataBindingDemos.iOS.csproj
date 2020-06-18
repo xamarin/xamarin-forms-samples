@@ -119,6 +119,8 @@
     <BundleResource Include="Resources\Icon-Small%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <BundleResource Include="Resources\user.png" />
+    <BundleResource Include="Resources\collapse.png" />
+    <BundleResource Include="Resources\expand.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -134,7 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
-      <Version>4.6.0.726</Version>
+      <Version>4.7.0.968</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
