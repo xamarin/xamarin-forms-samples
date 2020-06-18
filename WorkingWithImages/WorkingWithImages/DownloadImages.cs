@@ -40,9 +40,9 @@ namespace WorkingWithImages
                     new Label { Text = "Optional loading and error placeholder images can also be set." },
                     new Image
                     {
-                        Source = ImageSource.FromUri(new Uri("https://aka.ms/campus2.jpg")),
-                        LoadingPlaceholder = "loading.png",
-                        ErrorPlaceholder = "error.png"
+                        Source = ImageSource.FromUri(new Uri("https://aka.ms/campus2.jpg")),                        
+                        //LoadingPlaceholder = "loading.png",
+                        //ErrorPlaceholder = "error.png"
                     }
                 },
                 Margin = new Thickness(20, 35, 20, 20),
