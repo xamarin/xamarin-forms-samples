@@ -18,6 +18,7 @@
         <Label>
             <Label.Text>
                 <MultiBinding FallbackValue="Name unavailable"
+                              TargetNullValue="Data unavailable"
                               Converter="{StaticResource StringConcatConverter}">
                     <Binding Path="Employee1.Forename" />
                     <Binding Path="Employee1.MiddleName" />
@@ -30,6 +31,7 @@
                 <!-- This MultiBinding should return its FallbackValue,
                      because the converter returns BindableProperty.UnsetValue -->
                 <MultiBinding FallbackValue="Name unavailable"
+                              TargetNullValue="Data unavailable"
                               Converter="{StaticResource StringConcatConverter}">
                     <Binding Path="Employee.Forename" />
                     <Binding Path="Employee.MiddleName" />
@@ -40,6 +42,7 @@
         <Label>
             <Label.Text>
                 <MultiBinding FallbackValue="Name unavailable"
+                              TargetNullValue="Data unavailable"
                               Converter="{StaticResource StringConcatConverter}">
                     <Binding Path="Employee3.Forename" />
                     <Binding Path="Employee3.MiddleName" />
@@ -50,6 +53,7 @@
         <Label>
             <Label.Text>
                 <MultiBinding FallbackValue="Name unavailable"
+                              TargetNullValue="Data unavailable"
                               Converter="{StaticResource StringConcatConverter}">
                     <Binding Path="Employee4.Forename" />
                     <Binding Path="Employee4.MiddleName" />
@@ -60,6 +64,7 @@
         <Label>
             <Label.Text>
                 <MultiBinding FallbackValue="Name unavailable"
+                              TargetNullValue="Data unavailable"
                               Converter="{StaticResource StringConcatConverter}">
                     <Binding Path="Employee5.Forename" />
                     <Binding Path="Employee5.MiddleName" />
@@ -72,6 +77,7 @@
                 <!-- This MultiBinding should return its FallbackValue,
                      because the converter returns BindableProperty.UnsetValue -->
                 <MultiBinding FallbackValue="Name unavailable"
+                              TargetNullValue="Data unavailable"
                               Converter="{StaticResource StringConcatConverter}">
                     <Binding Path="Employee6.Forename" />
                     <Binding Path="Employee6.MiddleName" />

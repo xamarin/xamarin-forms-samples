@@ -34,7 +34,7 @@ namespace DataBindingDemos
                 {
                     return BindableProperty.UnsetValue;
                 }
-                if (value as string == "null")
+                if (value as string == null)
                 {
                     return null;
                 }
@@ -68,7 +68,7 @@ namespace DataBindingDemos
             for (int i = 0; i < array.Length; i++)
             {
                 var str = array[i] as string;
-                if (str == "null")
+                if (str == null)
                 {
                     array[i] = null;
                 }                    
