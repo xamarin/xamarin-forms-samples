@@ -14,8 +14,7 @@
                     <Expander ExpandAnimationEasing="{x:Static Easing.CubicIn}"
                               ExpandAnimationLength="500"
                               CollapseAnimationEasing="{x:Static Easing.CubicOut}"
-                              CollapseAnimationLength="500"
-                              Spacing="10">
+                              CollapseAnimationLength="500">
                         <Expander.Header>
                             <Grid>
                                 <Label Text="{Binding Name}"

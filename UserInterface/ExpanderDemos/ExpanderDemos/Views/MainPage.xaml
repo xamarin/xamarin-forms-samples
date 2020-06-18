@@ -26,10 +26,6 @@
                           Detail="Expander in an Expander"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:EmbeddedExpanderPage}" />
-                <TextCell Text="Expander spacing demo"
-                          Detail="Set the Spacing property"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type views:SpacingExpanderPage}" />
                 <TextCell Text="Expander commands demo"
                           Detail="Bind to ICommands"
                           Command="{Binding NavigateCommand}"
