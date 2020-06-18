@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DataBindingDemos"
-             x:Class="DataBindingDemos.MultiBindingNullAndFallbackValuePage"
-             Title="MultiBindings FallbackValue and TargetNullValue demo">
+             x:Class="DataBindingDemos.MultiBindingFallbackValuePage"
+             Title="MultiBindings FallbackValue demo">
     <ContentPage.Resources>
         <local:StringConcatenationConverter x:Key="StringConcatConverter" />
     </ContentPage.Resources>
@@ -18,7 +18,6 @@
         <Label>
             <Label.Text>
                 <MultiBinding FallbackValue="Name unavailable"
-                              TargetNullValue="Data undefined"
                               Converter="{StaticResource StringConcatConverter}">
                     <Binding Path="Employee1.Forename" />
                     <Binding Path="Employee1.MiddleName" />
@@ -31,7 +30,6 @@
                 <!-- This MultiBinding should return its FallbackValue,
                      because the converter returns BindableProperty.UnsetValue -->
                 <MultiBinding FallbackValue="Name unavailable"
-                              TargetNullValue="Data undefined"
                               Converter="{StaticResource StringConcatConverter}">
                     <Binding Path="Employee.Forename" />
                     <Binding Path="Employee.MiddleName" />
@@ -42,7 +40,6 @@
         <Label>
             <Label.Text>
                 <MultiBinding FallbackValue="Name unavailable"
-                              TargetNullValue="Data undefined"
                               Converter="{StaticResource StringConcatConverter}">
                     <Binding Path="Employee3.Forename" />
                     <Binding Path="Employee3.MiddleName" />
@@ -53,7 +50,6 @@
         <Label>
             <Label.Text>
                 <MultiBinding FallbackValue="Name unavailable"
-                              TargetNullValue="Data undefined"
                               Converter="{StaticResource StringConcatConverter}">
                     <Binding Path="Employee4.Forename" />
                     <Binding Path="Employee4.MiddleName" />
@@ -64,7 +60,6 @@
         <Label>
             <Label.Text>
                 <MultiBinding FallbackValue="Name unavailable"
-                              TargetNullValue="Data undefined"
                               Converter="{StaticResource StringConcatConverter}">
                     <Binding Path="Employee5.Forename" />
                     <Binding Path="Employee5.MiddleName" />
@@ -74,19 +69,9 @@
         </Label>
         <Label>
             <Label.Text>
-                <!-- This MultiBinding should return its TargetNullValue,
-                     because the converter returns null -->
-                <MultiBinding FallbackValue="Name unavailable"
-                              TargetNullValue="Data undefined"
-                              Converter="{StaticResource StringConcatConverter}" />
-            </Label.Text>
-        </Label>
-        <Label>
-            <Label.Text>
                 <!-- This MultiBinding should return its FallbackValue,
                      because the converter returns BindableProperty.UnsetValue -->
                 <MultiBinding FallbackValue="Name unavailable"
-                              TargetNullValue="Data undefined"
                               Converter="{StaticResource StringConcatConverter}">
                     <Binding Path="Employee6.Forename" />
                     <Binding Path="Employee6.MiddleName" />

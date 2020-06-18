@@ -2,9 +2,9 @@
 
 namespace DataBindingDemos
 {
-    public partial class MultiBindingNullAndFallbackValuePage : ContentPage
+    public partial class MultiBindingFallbackValuePage : ContentPage
     {
-        public MultiBindingNullAndFallbackValuePage()
+        public MultiBindingFallbackValuePage()
         {
             InitializeComponent();
         }

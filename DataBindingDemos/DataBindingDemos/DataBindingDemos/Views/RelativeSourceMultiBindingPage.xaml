@@ -14,8 +14,7 @@
                       BackgroundColor="{Binding CardColor}"
                       Padding="8">
                 <Expander.IsVisible>
-                    <MultiBinding Converter="{StaticResource AllTrueConverter}"
-                                  FallbackValue="false">
+                    <MultiBinding Converter="{StaticResource AllTrueConverter}">
                         <Binding Path="IsExpanded" />
                         <Binding Path="IsEnabled" />
                     </MultiBinding>

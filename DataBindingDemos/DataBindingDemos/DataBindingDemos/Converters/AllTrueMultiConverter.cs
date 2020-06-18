@@ -11,15 +11,16 @@ namespace DataBindingDemos
         {
             if (values == null || !targetType.IsAssignableFrom(typeof(bool)))
             {
-                // Return UnsetValue to use the binding FallbackValue
-                return BindableProperty.UnsetValue;
+                return false;
+                // Alternatively, return BindableProperty.UnsetValue to use the binding FallbackValue
             }
 
             foreach (var value in values)
             {
                 if (!(value is bool b))
                 {
-                    return BindableProperty.UnsetValue;
+                    return false;
+                    // Alternatively, return BindableProperty.UnsetValue to use the binding FallbackValue
                 }
                 else if (!b)
                 {
