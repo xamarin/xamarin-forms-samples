@@ -13,6 +13,6 @@ urlFragment: userinterface-shapedemos
 ---
 # Shapes
 
-This sample demonstrates how to use Xamarin.Forms Shapes to draw shapes.
+This sample demonstrates how to use Xamarin.Forms Shapes, to draw shapes.
 
 For more information about this sample, see [Xamarin.Forms Shapes](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/shapes/).
