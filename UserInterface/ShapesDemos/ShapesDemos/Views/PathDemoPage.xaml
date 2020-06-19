@@ -72,7 +72,7 @@
                 </Path.Data>
             </Path>
             <Label Text="Overlapping rectangles" />
-            <!--<Path Stroke="Red"
+            <Path Stroke="Red"
                   StrokeThickness="3"
                   Fill="Red"
                   Aspect="Uniform"
@@ -85,7 +85,7 @@
                         <RectangleGeometry Rect="576,192,192,192" />
                     </GeometryGroup>
                 </Path.Data>
-            </Path>-->
+            </Path>
             <Label Text="EllipseGeometry" />
             <Path Stroke="Green"
                   StrokeThickness="2"

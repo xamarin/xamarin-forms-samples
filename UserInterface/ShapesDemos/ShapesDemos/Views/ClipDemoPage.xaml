@@ -7,12 +7,12 @@
         <StackLayout Margin="20">
             <Label Text="Unclipped image" />
             <Image Source="monkeyface.png" />
-            <!--<Label Text="Clipped image with RectangleGeometry" />
+            <Label Text="Clipped image with RectangleGeometry" />
             <Image Source="monkeyface.png">
                 <Image.Clip>
                     <RectangleGeometry Rect="0,15,150,150" />
                 </Image.Clip>
-            </Image>-->
+            </Image>
             <Label Text="Clipped image with EllipseGeometry" />
             <Image Source="monkeyface.png">
                 <Image.Clip>
