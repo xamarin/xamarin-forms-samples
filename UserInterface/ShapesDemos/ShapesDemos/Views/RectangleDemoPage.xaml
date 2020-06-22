@@ -38,12 +38,14 @@
                        WidthRequest="150"
                        HeightRequest="50"
                        HorizontalOptions="Start" />
-            <Label Text="Rectangle with curved corners" />
-            <Rectangle Fill="DarkBlue"
-                       RadiusX="12"
-                       RadiusY="24"
-                       WidthRequest="150"
-                       HeightRequest="50"
+            <Label Text="Rectangle with rounded corners" />
+            <Rectangle Fill="Blue"
+                       Stroke="Black"
+                       StrokeThickness="3"
+                       RadiusX="50"
+                       RadiusY="10"
+                       WidthRequest="200"
+                       HeightRequest="100"
                        HorizontalOptions="Start" />
         </StackLayout>
     </ScrollView>
