@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShapesDemos.PathGeometryDemoPage"
+             Title="Path geometry demos">
+    <ScrollView>
+        <StackLayout Margin="20">
+            <Label Text="EllipseGeometry" />
+            <Path Fill="Blue"
+                  Stroke="Red"
+                  StrokeThickness="1">
+              <Path.Data>
+                <EllipseGeometry Center="50,50"
+                                 RadiusX="50"
+                                 RadiusY="50" />
+              </Path.Data>
+            </Path>
+            <Label Text="LineGeometry" />
+            <Path Stroke="Black"
+                  StrokeThickness="1">
+              <Path.Data>
+                <LineGeometry StartPoint="10,20"
+                              EndPoint="100,130" />
+              </Path.Data>
+            </Path>
+            <Label Text="RectangleGeometry" />
+            <Path Fill="Blue"
+                  Stroke="Red"
+                  StrokeThickness="1">
+              <Path.Data>
+                <RectangleGeometry Rect="10,10,150,100" />
+              </Path.Data>
+            </Path>
+            <Label Text="PathGeometry" />
+            <Path Stroke="Black"
+                  StrokeThickness="1"
+                  Aspect="Uniform"
+                  HorizontalOptions="Start">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigureCollection>
+                                <PathFigure IsClosed="True"
+                                            StartPoint="10,100">
+                                    <PathFigure.Segments>
+                                        <PathSegmentCollection>
+                                            <LineSegment Point="100,100" />
+                                            <LineSegment Point="100,50" />
+                                        </PathSegmentCollection>
+                                    </PathFigure.Segments>
+                                </PathFigure>
+                            </PathFigureCollection>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+            <Label Text="PathGeometry" />
+            <Path Stroke="Maroon"
+                  StrokeThickness="3"
+                  Fill="Aqua"
+                  Aspect="Uniform"
+                  HorizontalOptions="Start">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure StartPoint="144,72">
+                            <LineSegment Point="200,246" />
+                            <LineSegment Point="53,138" />
+                            <LineSegment Point="235,138" />
+                            <LineSegment Point="88,246" />
+                            <LineSegment Point="144,72" />
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+            <Label Text="GeometryGroup" />
+            <Path Stroke="Black"
+                  StrokeThickness="1"
+                  Fill="#CCCCFF"
+                  Aspect="Uniform"
+                  HorizontalOptions="Start">
+                <Path.Data>
+                    <GeometryGroup>
+                        <EllipseGeometry RadiusX="50"
+                                         RadiusY="50"
+                                         Center="75,75" />
+                        <EllipseGeometry RadiusX="70"
+                                         RadiusY="70"
+                                         Center="75,75" />
+                        <EllipseGeometry RadiusX="100"
+                                         RadiusY="100"
+                                         Center="75,75" />
+                        <EllipseGeometry RadiusX="120"
+                                         RadiusY="120"
+                                         Center="75,75" />
+                    </GeometryGroup>
+                </Path.Data>
+            </Path>
+            <Label Text="GeometryGroup" />
+            <Path Stroke="Green"
+                  StrokeThickness="2"
+                  Fill="Orange"
+                  Aspect="Uniform"
+                  HorizontalOptions="Start">
+                <Path.Data>
+                    <GeometryGroup>
+                        <EllipseGeometry RadiusX="100"
+                                         RadiusY="100"
+                                         Center="150,150" />
+                        <EllipseGeometry RadiusX="100"
+                                         RadiusY="100"
+                                         Center="250,150" />
+                        <EllipseGeometry RadiusX="100"
+                                         RadiusY="100"
+                                         Center="150,250" />
+                        <EllipseGeometry RadiusX="100"
+                                         RadiusY="100"
+                                         Center="250,250" />
+                    </GeometryGroup>
+                </Path.Data>
+            </Path>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

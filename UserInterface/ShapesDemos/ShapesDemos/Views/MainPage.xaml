@@ -31,6 +31,9 @@
                 <TextCell Text="Path demos"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:PathDemoPage}" />
+                <TextCell Text="Path geometry demos"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:PathGeometryDemoPage}" />
                 <TextCell Text="Path aspect demos"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:PathAspectDemoPage}" />
