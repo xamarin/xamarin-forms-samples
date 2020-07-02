@@ -38,17 +38,15 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:PathAspectDemoPage}" />
                 <TextCell Text="Path render transform demos"
-                          Detail="String"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type views:PathStringRenderTransformDemoPage}" />
-                <TextCell Text="Path render transform demos"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:PathRenderTransformDemoPage}" />
+                <TextCell Text="Path render transform examples"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:PathRenderTransformExamplesDemoPage}" />
             </TableSection>
 
-            <!--<TableSection Title="Messin' Around">
+            <TableSection Title="More Advanced Shapes">
                 <TextCell Text="Analog clock demo"
-                          Detail="Doesn't work at the moment"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:AnalogClockDemoPage}" />
                 <TextCell Text="Baby elephant demo"
@@ -60,41 +58,25 @@
                 <TextCell Text="Clip art man demo"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:ClipArtManDemoPage}" />
-                <TextCell Text="FillRule demo"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type views:FillRuleDemoPage}" />
                 <TextCell Text="Flower demo"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:FlowerDemoPage}" />
                 <TextCell Text="Hello demo"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:HelloDemoPage}" />
-                <TextCell Text="Man with gun demo"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type views:ManWithGunDemoPage}" />
                 <TextCell Text="Monkey face demo"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:MonkeyFaceDemoPage}" />
-                <TextCell Text="Overlapping circles demo"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type views:OverlappingCirclesDemoPage}" />
                 <TextCell Text="Spiral demo"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:SpiralDemoPage}" />
                 <TextCell Text="Moving spiral demo"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:SpiralRunnerDemoPage}" />
-                <TextCell Text="Star demo"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type views:StarDemoPage}" />
-                <TextCell Text="Xamagon demo"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type views:XamagonDemoPage}" />
-                <TextCell Text="Xamagon demo"
-                          Detail="Inverted"
+                <TextCell Text="Inverted Xamagon demo"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:InvertedXamagonDemoPage}" />
-            </TableSection>-->
+            </TableSection>
         </TableRoot>
     </TableView>
 </ContentPage>
