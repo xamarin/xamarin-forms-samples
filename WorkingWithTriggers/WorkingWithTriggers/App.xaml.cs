@@ -6,7 +6,6 @@ namespace WorkingWithTriggers
     {
         public App()
         {
-            Device.SetFlags(new string[] { "StateTriggers_Experimental" });
             InitializeComponent();
             MainPage = new NavigationPage(new MainPage());
         }
