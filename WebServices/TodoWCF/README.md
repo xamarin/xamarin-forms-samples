@@ -20,7 +20,6 @@ The app functionality is:
 
 In all cases the tasks are stored in an in-memory collection that's accessed through a WCF web service.
 
-For more information about the sample see [Consuming a Windows Communication Foundation (WCF) Web Service](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/web-services/consuming/wcf/).
+For more information about the sample see [Consuming a Windows Communication Foundation (WCF) Web Service](https://docs.microsoft.com/xamarin/xamarin-forms/data-cloud/web-services/wcf).
 
 ![TodoWCF application screenshot](Screenshots/01All.png "TodoWCF application screenshot")
-

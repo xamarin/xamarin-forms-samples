@@ -10,7 +10,7 @@ The WCF service, available at ~/TodoService.svc provides the following operation
 - EditTodoItem - updates a todo item
 - DeleteTodoItem - deletes a todo item
 
-For more information about the sample see [Consuming a Windows Communication Foundation (WCF) Web Service](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/web-services/consuming/wcf/).
+For more information about the sample see [Consuming a Windows Communication Foundation (WCF) Web Service](https://docs.microsoft.com/xamarin/xamarin-forms/data-cloud/web-services/wcf).
 
 Setting up the WCF service
 ---------------------------
@@ -33,4 +33,3 @@ The accompanying Xamarin.Forms sample application consumes a Xamarin-hosted WCF 
 1. In *Visual Studio* or *Visual Studio for Mac*, load the *TodoWCF solution*, expand the *TodoWCF* project and update the `Constants.SoapUrl` property to the address of the web app created in the previous steps.
 
 For more information about publishing to an Azure Web App, see [Creating an ASP.NET web app in Azure App Service](https://azure.microsoft.com/en-gb/documentation/articles/web-sites-dotnet-get-started/#create-an-aspnet-web-application).
-

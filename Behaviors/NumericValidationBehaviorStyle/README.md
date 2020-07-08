@@ -30,5 +30,4 @@ Xamarin.Forms behaviors can be consumed by an explicit or implicit style. This s
 
 ![NumericValidation Behavior with Style application screenshot](Screenshots/01All.png "NumericValidation Behavior with Style application screenshot")
 
-For more information about this sample, see [Behaviors](https://developer.xamarin.com/guides/xamarin-forms/behaviors/).
-
+For more information about this sample, see [Behaviors](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/behaviors/).

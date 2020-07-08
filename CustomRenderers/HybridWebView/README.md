@@ -12,7 +12,6 @@ urlFragment: customrenderers-hybridwebview
 
 This sample demonstrates a custom renderer for a `HybridWebView` custom control, that demonstrates how to enhance the platform-specific web controls to allow C# code to be invoked from JavaScript.
 
-For more information about this sample see [Implementing a HybridWebView](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/custom-renderer/hybridwebview/).
+For more information about this sample see [Implementing a HybridWebView](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/custom-renderer/hybridwebview).
 
 ![HybridWebView Custom Renderer application screenshot](Screenshots/01All.png "HybridWebView Custom Renderer application screenshot")
-
