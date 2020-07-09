@@ -29,45 +29,45 @@ namespace FormsGallery.CodeExamples
                         new PathFigure
                         {
                             IsClosed = true,
-                            StartPoint = new Point { X = 13.908992, Y = 16.207977 },
+                            StartPoint = new Point { X = 13.9, Y = 16.2 },
                             Segments = new PathSegmentCollection
                             {
-                                new LineSegment { Point = new Point { X = 32.000048, Y = 16.207977 } },
-                                new LineSegment { Point = new Point { X = 32.000049, Y = 31.999985 } },
-                                new LineSegment { Point = new Point { X = 13.908992, Y = 30.109983 } }
+                                new LineSegment { Point = new Point { X = 32, Y = 16.2 } },
+                                new LineSegment { Point = new Point { X = 32, Y = 31.9 } },
+                                new LineSegment { Point = new Point { X = 13.9, Y = 30.1 } }
                             }
                         },
                         new PathFigure
                         {
                             IsClosed = true,
-                            StartPoint = new Point { X = 0, Y = 16.207977 },
+                            StartPoint = new Point { X = 0, Y = 16.2 },
                             Segments = new PathSegmentCollection
                             {
-                                new LineSegment { Point = new Point { X = 11.904009, Y = 16.207977 } },
-                                new LineSegment { Point = new Point { X = 11.904009, Y = 29.900984 } },
-                                new LineSegment { Point = new Point { X = 0, Y = 28.657984 } }
+                                new LineSegment { Point = new Point { X = 11.9, Y = 16.2 } },
+                                new LineSegment { Point = new Point { X = 11.9, Y = 29.9 } },
+                                new LineSegment { Point = new Point { X = 0, Y = 28.6 } }
                             }
                         },
                         new PathFigure
                         {
                             IsClosed = true,
-                            StartPoint = new Point { X = 11.904036, Y = 2.0979624 },
+                            StartPoint = new Point { X = 11.9, Y = 2 },
                             Segments = new PathSegmentCollection
                             {
-                                new LineSegment { Point = new Point { X = 11.904036, Y = 14.202982 } },
-                                new LineSegment { Point = new Point { X = 2.7656555E-05, Y = 14.202982 } },
-                                new LineSegment { Point = new Point { X = 2.7656555E-05, Y = 3.3409645 } }
+                                new LineSegment { Point = new Point { X = 11.9, Y = 14.2 } },
+                                new LineSegment { Point = new Point { X = 0, Y = 14.2 } },
+                                new LineSegment { Point = new Point { X = 0, Y = 3.3 } }
                             }
                         },
                         new PathFigure
                         {
                             IsClosed = true,
-                            StartPoint = new Point { X = 32.000058, Y = 0},
+                            StartPoint = new Point { X = 32, Y = 0},
                             Segments = new PathSegmentCollection
                             {
-                                new LineSegment { Point = new Point { X = 32.000058, Y = 14.203001 } },
-                                new LineSegment { Point = new Point { X = 13.909059, Y = 14.203001 } },
-                                new LineSegment { Point = new Point { X = 13.909059, Y = 1.8890382 } }
+                                new LineSegment { Point = new Point { X = 32, Y = 14.2 } },
+                                new LineSegment { Point = new Point { X = 13.9, Y = 14.2 } },
+                                new LineSegment { Point = new Point { X = 13.9, Y = 1.8 } }
                             }
                         }
                     }
