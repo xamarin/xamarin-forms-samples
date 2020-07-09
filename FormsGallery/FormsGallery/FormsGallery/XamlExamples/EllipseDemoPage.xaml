@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.EllipseDemoPage"
+             Title="Ellipse Demo">
+    <StackLayout>
+        <Label Text="Ellipse"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <Ellipse Fill="Red"
+                 WidthRequest="150"
+                 HeightRequest="50"
+                 HorizontalOptions="Center" />
+        <Ellipse Stroke="Red"
+                 StrokeThickness="4"
+                 WidthRequest="150"
+                 HeightRequest="150"
+                 HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>

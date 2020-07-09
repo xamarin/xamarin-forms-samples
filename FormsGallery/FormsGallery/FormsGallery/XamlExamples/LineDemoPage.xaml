@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.LineDemoPage"
+             Title="Line Demo">
+    <StackLayout>
+        <Label Text="Line"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <Line X1="40"
+              Y1="0"
+              X2="0"
+              Y2="120"
+              Stroke="Red"
+              HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>
