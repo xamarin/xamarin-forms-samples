@@ -8,6 +8,11 @@
                FontSize="50"
                FontAttributes="Bold"
                HorizontalOptions="Center" />
-
+        <Line X1="40"
+              Y1="0"
+              X2="0"
+              Y2="120"
+              Stroke="Red"
+              HorizontalOptions="Center" />
     </StackLayout>
 </ContentPage>

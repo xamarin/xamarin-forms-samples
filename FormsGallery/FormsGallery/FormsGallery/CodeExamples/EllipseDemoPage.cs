@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using Xamarin.Forms.Shapes;
 
 namespace FormsGallery.CodeExamples
 {
@@ -14,13 +15,32 @@ namespace FormsGallery.CodeExamples
                 HorizontalOptions = LayoutOptions.Center
             };
 
+            Ellipse ellipse = new Ellipse
+            {
+                Fill = Color.Red,
+                WidthRequest = 150,
+                HeightRequest = 50,
+                HorizontalOptions = LayoutOptions.Center
+            };
+
+            Ellipse circle = new Ellipse
+            {
+                Stroke = Color.Red,
+                StrokeThickness = 4,
+                WidthRequest = 150,
+                HeightRequest = 150,
+                HorizontalOptions = LayoutOptions.Center
+            };
+
             // Build the page.
             Title = "Ellipse Demo";
             Content = new StackLayout
             {
                 Children =
                 {
-                    header
+                    header,
+                    ellipse,
+                    circle
                 }
             };
         }

@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using Rect = Xamarin.Forms.Shapes.Rectangle;
 
 namespace FormsGallery.CodeExamples
 {
@@ -14,13 +15,32 @@ namespace FormsGallery.CodeExamples
                 HorizontalOptions = LayoutOptions.Center
             };
 
+            Rect rectangle = new Rect
+            {
+                Fill = Color.Red,
+                WidthRequest = 150,
+                HeightRequest = 50,
+                HorizontalOptions = LayoutOptions.Center
+            };
+
+            Rect square = new Rect
+            {
+                Stroke = Color.Red,
+                StrokeThickness = 4,
+                WidthRequest = 150,
+                HeightRequest = 150,
+                HorizontalOptions = LayoutOptions.Center
+            };
+
             // Build the page.
             Title = "Rectangle Demo";
             Content = new StackLayout
             {
                 Children =
                 {
-                    header
+                    header,
+                    rectangle,
+                    square
                 }
             };
         }

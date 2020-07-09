@@ -8,6 +8,14 @@
                FontSize="50"
                FontAttributes="Bold"
                HorizontalOptions="Center" />
-
+        <Rectangle Fill="Red"
+                   WidthRequest="150"
+                   HeightRequest="50"
+                   HorizontalOptions="Center" />
+        <Rectangle Stroke="Red"
+                   StrokeThickness="4"
+                   WidthRequest="150"
+                   HeightRequest="150"
+                   HorizontalOptions="Center" />
     </StackLayout>
 </ContentPage>

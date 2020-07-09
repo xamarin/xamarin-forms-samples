@@ -8,7 +8,11 @@
                FontSize="50"
                FontAttributes="Bold"
                HorizontalOptions="Center" />
-
+        <Polygon Points="0 48, 0 144, 96 150, 100 0, 192 0, 192 96, 50 96, 48 192, 150 200 144 48"
+                 Fill="Blue"
+                 Stroke="Red"
+                 StrokeThickness="3"
+                 HorizontalOptions="Center" />
     </StackLayout>
 </ContentPage>
 
