@@ -14,4 +14,4 @@ A `ListView` displaying the system colors, each of which is illustrated with a `
 
 This sample is described in more detail in the article on [BoxView](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/boxview).
 
-![ListView Colors application screenshot](Screenshots/01Triple.png "ListView Colors application screenshot")
+![ListView Colors application screenshot](Screenshots/01All.png "ListView Colors application screenshot")

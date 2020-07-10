@@ -14,4 +14,4 @@ The `BoxView` element is ideal for creating a simulation of a dot-matrix digital
 
 This sample is described in more detail in the article on [BoxView](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/boxview).
 
-![Dot-Matrix Clock application screenshot](Screenshots/01Triple.png "Dot-Matrix Clock application screenshot")
+![Dot-Matrix Clock application screenshot](Screenshots/01All.png "Dot-Matrix Clock application screenshot")
