@@ -8,11 +8,8 @@
         <controls:SpacingModifier CV="{x:Reference collectionView}"
                                   SpacingText="0,0" />
         <CollectionView x:Name="collectionView"
-                        ItemsSource="{Binding Monkeys}">
-            <CollectionView.ItemsLayout>
-               <GridItemsLayout Orientation="Horizontal"
-                                Span="4" />
-            </CollectionView.ItemsLayout>
+                        ItemsSource="{Binding Monkeys}"
+                        ItemsLayout="HorizontalGrid, 4">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">

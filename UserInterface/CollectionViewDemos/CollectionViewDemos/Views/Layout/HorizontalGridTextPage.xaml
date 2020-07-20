@@ -4,11 +4,7 @@
              x:Class="CollectionViewDemos.Views.HorizontalGridTextPage"
              Title="Horizontal grid (text)">
     <StackLayout Margin="20">
-        <CollectionView>
-            <CollectionView.ItemsLayout>
-               <GridItemsLayout Orientation="Horizontal"
-                                Span="4" />
-            </CollectionView.ItemsLayout>
+        <CollectionView ItemsLayout="HorizontalGrid, 4">
             <CollectionView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Baboon</x:String>

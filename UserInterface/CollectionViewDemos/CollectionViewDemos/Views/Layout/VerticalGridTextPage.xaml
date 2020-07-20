@@ -4,11 +4,7 @@
              x:Class="CollectionViewDemos.Views.VerticalGridTextPage"
              Title="Vertical grid (text)">
     <StackLayout Margin="20">
-        <CollectionView>
-            <CollectionView.ItemsLayout>
-               <GridItemsLayout Orientation="Vertical"
-                                Span="2" />
-            </CollectionView.ItemsLayout>
+        <CollectionView ItemsLayout="VerticalGrid, 2">
             <CollectionView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Baboon</x:String>

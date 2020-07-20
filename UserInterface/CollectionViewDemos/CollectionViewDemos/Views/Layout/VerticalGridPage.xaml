@@ -4,11 +4,8 @@
              x:Class="CollectionViewDemos.Views.VerticalGridPage"
              Title="Vertical grid (DataTemplate)">
   <StackLayout Margin="20">
-        <CollectionView ItemsSource="{Binding Monkeys}">
-            <CollectionView.ItemsLayout>
-               <GridItemsLayout Orientation="Vertical"
-                                Span="2" />
-            </CollectionView.ItemsLayout>
+        <CollectionView ItemsSource="{Binding Monkeys}"
+                        ItemsLayout="VerticalGrid, 2">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">
