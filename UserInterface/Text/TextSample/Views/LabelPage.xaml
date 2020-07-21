@@ -22,6 +22,8 @@
             <Label TextDecorations="Underline" Text="This is underlined text." />
             <Label TextDecorations="Strikethrough" Text="This is text with strikethrough." />
             <Label TextDecorations="Underline, Strikethrough" Text="This is underlined text with strikethrough." />
+            <Label TextTransform="Uppercase" Text="This is upper case text." />
+            <Label TextTransform="Lowercase" Text="This is lower case text." />
             <Entry Placeholder="Enter line height" TextChanged="OnLineHeightChanged"/>
             <Label x:Name="_lineHeightLabel" 
                    Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
