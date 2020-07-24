@@ -117,7 +117,7 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1143-pre1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1187-pre2" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
