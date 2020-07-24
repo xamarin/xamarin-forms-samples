@@ -18,7 +18,8 @@ namespace SearchBarDemos
                 VerticalOptions = LayoutOptions.CenterAndExpand,
                 Placeholder = "Search fruits...",
                 CancelButtonColor = Color.Orange,
-                PlaceholderColor = Color.Orange
+                PlaceholderColor = Color.Orange,
+                TextTransform = TextTransform.Lowercase
             };
 
             Label label = new Label

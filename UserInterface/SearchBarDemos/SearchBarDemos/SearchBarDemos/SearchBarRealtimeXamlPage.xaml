@@ -14,6 +14,7 @@
                    Placeholder="Search fruits..."
                    CancelButtonColor="Orange"
                    PlaceholderColor="Orange"
+                   TextTransform="Lowercase"
                    HorizontalTextAlignment="Start"
                    TextChanged="OnTextChanged"/>
         <Label Text="Type in the searchbox to filter results in realtime."
