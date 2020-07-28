@@ -17,12 +17,10 @@
                 <Frame.Background>
                     <LinearGradientBrush StartPoint="0,0"
                                          EndPoint="1,0">
-                        <LinearGradientBrush.GradientStops> 
-                            <GradientStop Color="Yellow"
-                                        Offset="0.1" />
-                            <GradientStop Color="Green"
-                                        Offset="1.0" />                                                        
-                        </LinearGradientBrush.GradientStops>
+                        <GradientStop Color="Yellow"
+                                    Offset="0.1" />
+                        <GradientStop Color="Green"
+                                    Offset="1.0" />                                                        
                     </LinearGradientBrush>
                 </Frame.Background>
             </Frame>    
@@ -39,12 +37,10 @@
                 <Frame.Background>
                     <LinearGradientBrush StartPoint="0,0"
                                          EndPoint="0,1">
-                        <LinearGradientBrush.GradientStops>
-                            <GradientStop Color="Yellow"
-                                        Offset="0.1" />
-                            <GradientStop Color="Green"
-                                        Offset="1.0" />                                                         
-                        </LinearGradientBrush.GradientStops>
+                        <GradientStop Color="Yellow"
+                                    Offset="0.1" />
+                        <GradientStop Color="Green"
+                                    Offset="1.0" />
                     </LinearGradientBrush>
                 </Frame.Background>
             </Frame>                    
@@ -61,12 +57,10 @@
                 <Frame.Background>
                     <LinearGradientBrush StartPoint="0,0"
                                          EndPoint="1,1">
-                        <LinearGradientBrush.GradientStops>
-                            <GradientStop Color="Yellow"
-                                        Offset="0.1" />
-                            <GradientStop Color="Green"
-                                        Offset="1.0" />                                                         
-                        </LinearGradientBrush.GradientStops>
+                        <GradientStop Color="Yellow"
+                                    Offset="0.1" />
+                        <GradientStop Color="Green"
+                                    Offset="1.0" />
                     </LinearGradientBrush>
                 </Frame.Background>
             </Frame>                           

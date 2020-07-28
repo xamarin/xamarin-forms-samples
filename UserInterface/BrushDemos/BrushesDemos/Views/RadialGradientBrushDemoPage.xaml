@@ -17,12 +17,10 @@
                 <Frame.Background>
                     <RadialGradientBrush Center="0.0,0.0"
                                          Radius="0.5">
-                        <RadialGradientBrush.GradientStops>
-                            <GradientStop Color="Red"
-                                        Offset="0.1" />
-                            <GradientStop Color="DarkBlue"
-                                        Offset="1.0" />                                                         
-                        </RadialGradientBrush.GradientStops>
+                        <GradientStop Color="Red"
+                                    Offset="0.1" />
+                        <GradientStop Color="DarkBlue"
+                                    Offset="1.0" />
                     </RadialGradientBrush>
                 </Frame.Background>
             </Frame>    
@@ -39,12 +37,10 @@
                 <Frame.Background>
                     <RadialGradientBrush Center="0.5,0.5"
                                          Radius="0.5">
-                        <RadialGradientBrush.GradientStops>
-                            <GradientStop Color="Red"
-                                        Offset="0.1" />
-                            <GradientStop Color="DarkBlue"
-                                        Offset="1.0" />                                                         
-                        </RadialGradientBrush.GradientStops>
+                        <GradientStop Color="Red"
+                                    Offset="0.1" />
+                        <GradientStop Color="DarkBlue"
+                                    Offset="1.0" />
                     </RadialGradientBrush>
                 </Frame.Background>
             </Frame>                    
@@ -61,12 +57,10 @@
                 <Frame.Background>
                     <RadialGradientBrush Center="1.0,1.0"
                                          Radius="0.5">
-                        <RadialGradientBrush.GradientStops>
-                            <GradientStop Color="Red"
-                                        Offset="0.1" />
-                            <GradientStop Color="DarkBlue"
-                                        Offset="1.0" />                                                         
-                        </RadialGradientBrush.GradientStops>
+                        <GradientStop Color="Red"
+                                    Offset="0.1" />
+                        <GradientStop Color="DarkBlue"
+                                    Offset="1.0" />
                     </RadialGradientBrush>
                 </Frame.Background>
             </Frame>                           

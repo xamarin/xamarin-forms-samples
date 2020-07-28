@@ -58,7 +58,6 @@
                         FontSize="24" />
                     <Entry x:Name="startPointEntry"
                         Placeholder="Start point"
-
                         TextChanged="OnStartPointChanged"
                         Text="0, 0"
                         Keyboard="Numeric" />
