@@ -22,6 +22,9 @@
                 <TextCell Text="Polyline demos"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:PolylineDemoPage}" />
+                <TextCell Text="Brushes demos"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:BrushesDemoPage}" />          
                 <TextCell Text="Clipping demos"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type views:ClipDemoPage}" />

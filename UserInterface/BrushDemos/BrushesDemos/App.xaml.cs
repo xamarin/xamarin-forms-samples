@@ -1,12 +1,12 @@
 ﻿using Xamarin.Forms;
 
-namespace ShapesDemos
+namespace BrushesDemos
 {
     public partial class App : Application
     {
         public App()
         {
-            Device.SetFlags(new[] { "Shapes_Experimental", "Brush_Experimental" });
+            Device.SetFlags(new[] { "Brush_Experimental" });
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());

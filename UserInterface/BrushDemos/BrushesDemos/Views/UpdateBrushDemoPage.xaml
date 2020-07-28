@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="BrushesDemos.Views.UpdateBrushDemoPage"
+             Title="Update Brush demo">
+    <StackLayout Margin="20">
+        <Label Text="SolidColorBrush"
+               FontAttributes="Bold" />
+        <Frame x:Name="solidColorFrame"
+               Margin="0,20,0,0"
+               BorderColor="LightGray"
+               HasShadow="True"
+               CornerRadius="12"
+               HeightRequest="120"
+               WidthRequest="120" />
+        <Label Margin="0,20,0,0"
+               Text="LinearGradientBrush"
+               FontAttributes="Bold" />        
+        <Frame x:Name="linearGradientFrame"
+               Margin="0,20,0,0"
+               BorderColor="LightGray"
+               HasShadow="True"
+               CornerRadius="12"
+               HeightRequest="120"
+               WidthRequest="120" />
+        <Label Margin="0,20,0,0"
+               Text="RadialGradientBrush"
+               FontAttributes="Bold" />        
+        <Frame x:Name="radialGradientFrame"
+               Margin="0,20,0,0"
+               BorderColor="LightGray"
+               HasShadow="True"
+               CornerRadius="12"
+               HeightRequest="120"
+               WidthRequest="120" />
+        <Label Margin="0,40,0,0"
+               Text="Brushes are updated every second."
+               HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>
