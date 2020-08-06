@@ -7,13 +7,12 @@ namespace SystemThemesDemo
     {
         public App()
         {
-            Device.SetFlags(new string[] { "AppTheme_Experimental" });
             InitializeComponent();
             MainPage = new NavigationPage(new UserSummaryPage());
         }
 
         protected override void OnStart()
-        {            
+        {
         }
 
         protected override void OnSleep()

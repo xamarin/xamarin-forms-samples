@@ -8,7 +8,6 @@ namespace MarkupExtensions
     {
         public App()
         {
-            Device.SetFlags(new string[] { "AppTheme_Experimental" });
             InitializeComponent();
             MainPage = new NavigationPage(new MainPage());
         }
