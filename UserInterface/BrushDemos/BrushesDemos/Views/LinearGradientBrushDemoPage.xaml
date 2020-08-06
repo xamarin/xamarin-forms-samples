@@ -15,8 +15,8 @@
                 HeightRequest="120"
                 WidthRequest="120">
                 <Frame.Background>
-                    <LinearGradientBrush StartPoint="0,0"
-                                         EndPoint="1,0">
+                    <!-- StartPoint defaults to (0,0) -->
+                    <LinearGradientBrush EndPoint="1,0">
                         <GradientStop Color="Yellow"
                                     Offset="0.1" />
                         <GradientStop Color="Green"
@@ -35,8 +35,8 @@
                 HeightRequest="120"
                 WidthRequest="120">
                 <Frame.Background>
-                    <LinearGradientBrush StartPoint="0,0"
-                                         EndPoint="0,1">
+                    <!-- StartPoint defaults to (0,0) -->
+                    <LinearGradientBrush EndPoint="0,1">
                         <GradientStop Color="Yellow"
                                     Offset="0.1" />
                         <GradientStop Color="Green"
@@ -55,8 +55,9 @@
                 HeightRequest="120"
                 WidthRequest="120">
                 <Frame.Background>
-                    <LinearGradientBrush StartPoint="0,0"
-                                         EndPoint="1,1">
+                    <!-- StartPoint defaults to (0,0)      
+                         Endpoint defaults to (1,1) -->
+                    <LinearGradientBrush>
                         <GradientStop Color="Yellow"
                                     Offset="0.1" />
                         <GradientStop Color="Green"

@@ -32,8 +32,7 @@ namespace BrushesDemos.Views
 
             LinearGradientBrush linearGradientBrush = new LinearGradientBrush
             {
-                StartPoint = new Point(0, 0),
-                EndPoint = new Point(1, 1),
+                // StartPoint defaults to (0,0). EndPoint defaults to (1,1).
                 GradientStops =
                 {
                     new GradientStop { Color = randomColor1, Offset = 0.1f },
@@ -43,7 +42,7 @@ namespace BrushesDemos.Views
 
             RadialGradientBrush radialGradientBrush = new RadialGradientBrush
             {
-                Center = new Point(0.5, 0.5),
+                // Center defaults to (0.5,0,5).
                 Radius = 0.75,
                 GradientStops =
                 {
