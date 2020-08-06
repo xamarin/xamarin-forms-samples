@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AbsoluteLayoutDemos.Views.ProportionalCoordinateCalcDemoPage"
+             Title="Proportional coordinate calculations demo">
+    <ContentView Margin="20"
+                 SizeChanged="OnContentViewSizeChanged">
+        <AbsoluteLayout x:Name="absoluteLayout"
+                        BackgroundColor="LightCoral"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+    </ContentView>
+</ContentPage>
