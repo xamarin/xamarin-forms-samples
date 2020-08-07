@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DragAndDropGesture.TextDragDemoPage"
+             Title="Text drag and drop demo">
+    <StackLayout Margin="20">
+        <Label Text="Answer the following question by dragging your answer to the Entry." />
+        <Label Text="What's 2+2?" />
+        <Grid ColumnDefinitions="0.5*, 0.5*"
+              Margin="0,20,0,0">
+            <Label Text="3"
+                   HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <DragGestureRecognizer CanDrag="True" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="1"
+                   Text="4"
+                   HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <DragGestureRecognizer CanDrag="True" />
+                </Label.GestureRecognizers>
+            </Label>
+        </Grid>
+        <Entry Margin="0,20,0,0"
+               Placeholder="Drag your answer here">
+            <Entry.GestureRecognizers>
+                <DropGestureRecognizer AllowDrop="True"
+                                       DragOver="OnDropGestureRecognizerDragOver"
+                                       Drop="OnDropGestureRecognizerDrop" />
+            </Entry.GestureRecognizers>
+        </Entry>
+    </StackLayout>
+</ContentPage>

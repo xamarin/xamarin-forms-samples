@@ -7,6 +7,7 @@
         <StackLayout Margin="20">
             <Label Text="Path with RotateTransform" />
             <Path Stroke="Black"
+                  StrokeThickness="1"
                   Aspect="Uniform"
                   HorizontalOptions="Center"
                   HeightRequest="100"
@@ -21,6 +22,7 @@
             <Label Text="Path with ScaleTransform"
                    Margin="0,50,0,0"/>
             <Path Stroke="Black"
+                  StrokeThickness="1"
                   Aspect="Uniform"
                   HorizontalOptions="Center"
                   HeightRequest="100"
@@ -36,6 +38,7 @@
             <Label Text="Path with SkewTransform"
                    Margin="0,50,0,0" />
             <Path Stroke="Black"
+                  StrokeThickness="1"
                   Aspect="Uniform"
                   HorizontalOptions="Center"
                   HeightRequest="100"
@@ -50,6 +53,7 @@
             </Path>
             <Label Text="Path with TranslateTransform" />
             <Path Stroke="Black"
+                  StrokeThickness="1"
                   Aspect="Uniform"
                   HorizontalOptions="Center"
                   HeightRequest="100"
@@ -62,6 +66,7 @@
             </Path>
             <Label Text="Path with TransformGroup" />
             <Path Stroke="Black"
+                  StrokeThickness="1"
                   Aspect="Uniform"
                   HorizontalOptions="Center"
                   HeightRequest="100"
@@ -78,6 +83,7 @@
             <Label Text="Path with CompositeTransform"
                    Margin="0,110,0,0"/>
             <Path Stroke="Black"
+                  StrokeThickness="1"
                   Aspect="Uniform"
                   HorizontalOptions="Center"
                   HeightRequest="100"
@@ -94,6 +100,7 @@
             <Label Text="Path with MatrixTransform"
                    Margin="0,110,0,0"/>
             <Path Stroke="Black"
+                  StrokeThickness="1"
                   Aspect="Uniform"
                   HorizontalOptions="Center"
                   HeightRequest="100"
@@ -116,6 +123,7 @@
             <!-- Perform a MatrixTransform with the Matrix specified as a string
                  value to the RenderTransform property. -->
             <Path Stroke="Black"
+                  StrokeThickness="1"
                   Aspect="Uniform"
                   HorizontalOptions="Center"
                   HeightRequest="100"

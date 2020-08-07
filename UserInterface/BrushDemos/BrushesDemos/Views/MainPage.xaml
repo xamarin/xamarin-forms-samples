@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:BrushesDemos.Views"
+             x:Class="BrushesDemos.MainPage"
+             Title="Brush Demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Brushes">
+                <TextCell Text="Solid color brush demos"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:SolidColorBrushDemoPage}" />
+                <TextCell Text="All solid color brushes"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:AllSolidColorBrushesDemoPage}" />
+                <TextCell Text="Linear gradient brush demos"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:LinearGradientBrushDemoPage}" />
+                <TextCell Text="Linear gradient explorer"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:LinearGradientBrushExplorerPage}" />
+                <TextCell Text="Radial gradient brush demos"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:RadialGradientBrushDemoPage}" /> 
+                <TextCell Text="Radial gradient explorer"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:RadialGradientBrushExplorerPage}" />
+                <TextCell Text="Update brushes at runtime demo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:UpdateBrushDemoPage}" />
+                <TextCell Text="CSS demo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:CSSDemoPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

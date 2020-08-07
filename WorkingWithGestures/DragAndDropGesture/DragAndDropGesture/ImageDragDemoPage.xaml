@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DragAndDropGesture.ImageDragDemoPage"
+             Title="Image drag and drop demo">
+    <StackLayout Margin="20">
+        <Label Text="Identify the animal by dragging it to the correct box." />
+        <Image Source="monkeyface.png"
+               HorizontalOptions="Center">
+            <Image.GestureRecognizers>
+                <DragGestureRecognizer CanDrag="True" />
+            </Image.GestureRecognizers>
+        </Image>
+        <Grid ColumnDefinitions="0.5*, 0.5*"
+              RowDefinitions="*, *"
+              HeightRequest="300"
+              VerticalOptions="EndAndExpand">
+            <Image BackgroundColor="Silver"
+                   HeightRequest="300"
+                   WidthRequest="250">
+                <Image.GestureRecognizers>
+                    <DropGestureRecognizer AllowDrop="True"
+                                           Drop="OnCorrectDrop" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Grid.Row="1"
+                   HorizontalOptions="Center"
+                   Text="Monkey" />
+            <Image Grid.Column="1"
+                   BackgroundColor="Silver"
+                   HeightRequest="300"
+                   WidthRequest="250">
+                <Image.GestureRecognizers>
+                    <DropGestureRecognizer AllowDrop="True"
+                                           DragOver="OnIncorrectDragOver" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Grid.Row="1"
+                   Grid.Column="1"
+                   HorizontalOptions="Center"
+                   Text="Cat" />
+        </Grid>
+    </StackLayout>
+</ContentPage>

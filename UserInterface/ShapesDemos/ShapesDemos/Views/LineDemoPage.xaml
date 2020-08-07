@@ -10,7 +10,8 @@
                   Y1="0"
                   X2="0"
                   Y2="120"
-                  Stroke="Red" />
+                  Stroke="Red"
+                  StrokeThickness="1"/>
             <Label Text="Line with stroke" />
             <Line X1="40"
                   Y1="0"
@@ -24,6 +25,7 @@
                   X2="0"
                   Y2="120"
                   Stroke="DarkBlue"
+                  StrokeThickness="4"
                   StrokeDashArray="1,1"
                   StrokeDashOffset="6" />
             <Label Text="LineCap: Flat" />

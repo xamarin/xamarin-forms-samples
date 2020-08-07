@@ -4,11 +4,8 @@
              x:Class="CollectionViewDemos.Views.HorizontalGridHeaderFooterView"
              Title="Grid header and footer (View)">
     <StackLayout Margin="20">
-        <CollectionView ItemsSource="{Binding Monkeys}">
-            <CollectionView.ItemsLayout>
-                <GridItemsLayout Orientation="Horizontal"
-                                 Span="2" />
-            </CollectionView.ItemsLayout>
+        <CollectionView ItemsSource="{Binding Monkeys}"
+                        ItemsLayout="HorizontalGrid, 2">
             <CollectionView.Header>
                 <StackLayout BackgroundColor="LightGray">
                     <Label Margin="10,0,0,0"

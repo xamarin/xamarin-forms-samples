@@ -42,6 +42,7 @@
               WidthRequest="200"
               HorizontalOptions="Center">
             <Path Stroke="Black"
+                  StrokeThickness="1"
                   Aspect="Uniform"
                   HorizontalOptions="Center"
                   HeightRequest="100"

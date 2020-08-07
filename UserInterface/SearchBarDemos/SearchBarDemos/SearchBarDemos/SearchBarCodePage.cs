@@ -17,7 +17,7 @@ namespace SearchBarDemos
             {
                 HorizontalOptions = LayoutOptions.Fill,
                 VerticalOptions = LayoutOptions.CenterAndExpand,
-                Placeholder = "Search fruits...",
+                Placeholder = "Search fruits..."
             };
 
             Label label = new Label

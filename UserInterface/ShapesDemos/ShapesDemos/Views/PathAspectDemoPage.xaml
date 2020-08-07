@@ -8,6 +8,7 @@
             <Label Text="None" />
             <Path Aspect="None"
                   Stroke="Yellow"
+                  StrokeThickness="1"
                   Fill="Red"
                   BackgroundColor="LightGray"
                   HorizontalOptions="Start"
@@ -17,6 +18,7 @@
             <Label Text="Fill" />
             <Path Aspect="Fill"
                   Stroke="Yellow"
+                  StrokeThickness="1"
                   Fill="Red"
                   BackgroundColor="LightGray"
                   HorizontalOptions="Start"
@@ -26,6 +28,7 @@
             <Label Text="Uniform" />
             <Path Aspect="Uniform"
                   Stroke="Yellow"
+                  StrokeThickness="1"
                   Fill="Red"
                   BackgroundColor="LightGray"
                   HorizontalOptions="Start"
@@ -35,6 +38,7 @@
             <Label Text="UniformToFill" />
             <Path Aspect="UniformToFill"
                   Stroke="Yellow"
+                  StrokeThickness="1"
                   Fill="Red"
                   BackgroundColor="LightGray"
                   HorizontalOptions="Start"

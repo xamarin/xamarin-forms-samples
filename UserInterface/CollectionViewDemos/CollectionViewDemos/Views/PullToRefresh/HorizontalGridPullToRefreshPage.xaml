@@ -7,11 +7,8 @@
         <Label Text="{Binding Animals.Count, StringFormat='Number of items: {0}'}" />
         <RefreshView IsRefreshing="{Binding IsRefreshing}"
                      Command="{Binding RefreshCommand}">
-            <CollectionView ItemsSource="{Binding Animals}">
-                <CollectionView.ItemsLayout>
-                    <GridItemsLayout Orientation="Horizontal"
-                                     Span="4" />
-                </CollectionView.ItemsLayout>
+            <CollectionView ItemsSource="{Binding Animals}"
+                            ItemsLayout="HorizontalGrid, 4">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="10">

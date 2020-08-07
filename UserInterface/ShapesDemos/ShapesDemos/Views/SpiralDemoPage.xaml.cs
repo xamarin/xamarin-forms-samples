@@ -14,7 +14,7 @@ namespace ShapesDemos
 
             polyline = new Polyline
             {
-                Stroke = Color.Blue,
+                Stroke = Brush.Blue,
                 StrokeThickness = 3
             };
             Content = polyline;

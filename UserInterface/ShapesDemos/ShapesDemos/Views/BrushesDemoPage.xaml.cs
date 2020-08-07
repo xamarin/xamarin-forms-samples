@@ -2,9 +2,9 @@
 
 namespace ShapesDemos
 {
-    public partial class ClipViewsDemoPage : ContentPage
+    public partial class BrushesDemoPage : ContentPage
     {
-        public ClipViewsDemoPage()
+        public BrushesDemoPage()
         {
             InitializeComponent();
         }
