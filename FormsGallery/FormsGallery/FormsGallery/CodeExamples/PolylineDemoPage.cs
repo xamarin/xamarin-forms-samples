@@ -30,7 +30,7 @@ namespace FormsGallery.CodeExamples
                     new Point { X = 48, Y = 30 },
                     new Point { X = 100, Y = 30 }
                 },
-                Stroke = Color.Red,
+                Stroke = SolidColorBrush.Red,
                 HorizontalOptions = LayoutOptions.Center
             };
 

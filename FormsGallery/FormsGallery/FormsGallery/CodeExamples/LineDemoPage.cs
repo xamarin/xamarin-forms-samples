@@ -21,7 +21,7 @@ namespace FormsGallery.CodeExamples
                 Y1 = 0,
                 X2 = 0,
                 Y2 = 120,
-                Stroke = Color.Red,
+                Stroke = SolidColorBrush.Red,
                 HorizontalOptions = LayoutOptions.Center
             };
 

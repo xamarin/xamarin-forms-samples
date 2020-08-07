@@ -17,7 +17,7 @@ namespace FormsGallery.CodeExamples
 
             Path path = new Path
             {
-                Stroke = Color.Black,
+                Stroke = SolidColorBrush.Black,
                 Aspect = Stretch.Uniform,
                 HorizontalOptions = LayoutOptions.Center,
                 HeightRequest = 100,
