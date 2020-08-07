@@ -3,6 +3,7 @@ using Android.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
+using Rect = Android.Graphics.Rect;
 
 [assembly: ResolutionGroupName("Xamarin")]
 [assembly: ExportEffect(typeof(RoundEffectDemo.Droid.RoundEffect), nameof(RoundEffectDemo.Droid.RoundEffect))]

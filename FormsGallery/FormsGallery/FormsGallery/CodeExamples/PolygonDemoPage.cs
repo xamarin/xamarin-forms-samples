@@ -30,8 +30,8 @@ namespace FormsGallery.CodeExamples
                     new Point { X = 150, Y = 200 },
                     new Point { X = 144, Y = 48 }
                 },
-                Fill = Color.Blue,
-                Stroke = Color.Red,
+                Fill = SolidColorBrush.Blue,
+                Stroke = SolidColorBrush.Red,
                 StrokeThickness = 3,
                 HorizontalOptions = LayoutOptions.Center
             };

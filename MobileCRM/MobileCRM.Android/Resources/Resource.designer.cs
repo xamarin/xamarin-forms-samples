@@ -1420,6 +1420,7 @@ namespace MobileCRMAndroid
 			global::Xamarin.Forms.Maps.Android.Resource.String.fab_transformation_sheet_behavior = global::MobileCRMAndroid.Resource.String.fab_transformation_sheet_behavior;
 			global::Xamarin.Forms.Maps.Android.Resource.String.hide_bottom_view_on_scroll_behavior = global::MobileCRMAndroid.Resource.String.hide_bottom_view_on_scroll_behavior;
 			global::Xamarin.Forms.Maps.Android.Resource.String.mtrl_chip_close_icon_content_description = global::MobileCRMAndroid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Xamarin.Forms.Maps.Android.Resource.String.overflow_tab_title = global::MobileCRMAndroid.Resource.String.overflow_tab_title;
 			global::Xamarin.Forms.Maps.Android.Resource.String.password_toggle_content_description = global::MobileCRMAndroid.Resource.String.password_toggle_content_description;
 			global::Xamarin.Forms.Maps.Android.Resource.String.path_password_eye = global::MobileCRMAndroid.Resource.String.path_password_eye;
 			global::Xamarin.Forms.Maps.Android.Resource.String.path_password_eye_mask_strike_through = global::MobileCRMAndroid.Resource.String.path_password_eye_mask_strike_through;
@@ -4022,6 +4023,7 @@ namespace MobileCRMAndroid
 			global::Xamarin.Forms.Platform.Android.Resource.String.fab_transformation_sheet_behavior = global::MobileCRMAndroid.Resource.String.fab_transformation_sheet_behavior;
 			global::Xamarin.Forms.Platform.Android.Resource.String.hide_bottom_view_on_scroll_behavior = global::MobileCRMAndroid.Resource.String.hide_bottom_view_on_scroll_behavior;
 			global::Xamarin.Forms.Platform.Android.Resource.String.mtrl_chip_close_icon_content_description = global::MobileCRMAndroid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Xamarin.Forms.Platform.Android.Resource.String.overflow_tab_title = global::MobileCRMAndroid.Resource.String.overflow_tab_title;
 			global::Xamarin.Forms.Platform.Android.Resource.String.password_toggle_content_description = global::MobileCRMAndroid.Resource.String.password_toggle_content_description;
 			global::Xamarin.Forms.Platform.Android.Resource.String.path_password_eye = global::MobileCRMAndroid.Resource.String.path_password_eye;
 			global::Xamarin.Forms.Platform.Android.Resource.String.path_password_eye_mask_strike_through = global::MobileCRMAndroid.Resource.String.path_password_eye_mask_strike_through;
@@ -6591,6 +6593,7 @@ namespace MobileCRMAndroid
 			global::Xamarin.Forms.Platform.Resource.String.fab_transformation_sheet_behavior = global::MobileCRMAndroid.Resource.String.fab_transformation_sheet_behavior;
 			global::Xamarin.Forms.Platform.Resource.String.hide_bottom_view_on_scroll_behavior = global::MobileCRMAndroid.Resource.String.hide_bottom_view_on_scroll_behavior;
 			global::Xamarin.Forms.Platform.Resource.String.mtrl_chip_close_icon_content_description = global::MobileCRMAndroid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Xamarin.Forms.Platform.Resource.String.overflow_tab_title = global::MobileCRMAndroid.Resource.String.overflow_tab_title;
 			global::Xamarin.Forms.Platform.Resource.String.password_toggle_content_description = global::MobileCRMAndroid.Resource.String.password_toggle_content_description;
 			global::Xamarin.Forms.Platform.Resource.String.path_password_eye = global::MobileCRMAndroid.Resource.String.path_password_eye;
 			global::Xamarin.Forms.Platform.Resource.String.path_password_eye_mask_strike_through = global::MobileCRMAndroid.Resource.String.path_password_eye_mask_strike_through;
@@ -12301,25 +12304,28 @@ namespace MobileCRMAndroid
 			public const int mtrl_chip_close_icon_content_description = 2131492930;
 			
 			// aapt resource value: 0x7F0C0043
-			public const int password_toggle_content_description = 2131492931;
+			public const int overflow_tab_title = 2131492931;
 			
 			// aapt resource value: 0x7F0C0044
-			public const int path_password_eye = 2131492932;
+			public const int password_toggle_content_description = 2131492932;
 			
 			// aapt resource value: 0x7F0C0045
-			public const int path_password_eye_mask_strike_through = 2131492933;
+			public const int path_password_eye = 2131492933;
 			
 			// aapt resource value: 0x7F0C0046
-			public const int path_password_eye_mask_visible = 2131492934;
+			public const int path_password_eye_mask_strike_through = 2131492934;
 			
 			// aapt resource value: 0x7F0C0047
-			public const int path_password_strike_through = 2131492935;
+			public const int path_password_eye_mask_visible = 2131492935;
 			
 			// aapt resource value: 0x7F0C0048
-			public const int search_menu_title = 2131492936;
+			public const int path_password_strike_through = 2131492936;
 			
 			// aapt resource value: 0x7F0C0049
-			public const int status_bar_notification_info_overflow = 2131492937;
+			public const int search_menu_title = 2131492937;
+			
+			// aapt resource value: 0x7F0C004A
+			public const int status_bar_notification_info_overflow = 2131492938;
 			
 			static String()
 			{

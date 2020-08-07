@@ -17,7 +17,7 @@ namespace FormsGallery.CodeExamples
 
             Rect rectangle = new Rect
             {
-                Fill = Color.Red,
+                Fill = SolidColorBrush.Red,
                 WidthRequest = 150,
                 HeightRequest = 50,
                 HorizontalOptions = LayoutOptions.Center
@@ -25,7 +25,7 @@ namespace FormsGallery.CodeExamples
 
             Rect square = new Rect
             {
-                Stroke = Color.Red,
+                Stroke = SolidColorBrush.Red,
                 StrokeThickness = 4,
                 WidthRequest = 150,
                 HeightRequest = 150,

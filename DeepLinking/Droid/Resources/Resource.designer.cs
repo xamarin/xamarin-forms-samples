@@ -1696,6 +1696,7 @@ namespace DeepLinking.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.String.fab_transformation_sheet_behavior = global::DeepLinking.Droid.Resource.String.fab_transformation_sheet_behavior;
 			global::Xamarin.Forms.Platform.Android.Resource.String.hide_bottom_view_on_scroll_behavior = global::DeepLinking.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
 			global::Xamarin.Forms.Platform.Android.Resource.String.mtrl_chip_close_icon_content_description = global::DeepLinking.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Xamarin.Forms.Platform.Android.Resource.String.overflow_tab_title = global::DeepLinking.Droid.Resource.String.overflow_tab_title;
 			global::Xamarin.Forms.Platform.Android.Resource.String.password_toggle_content_description = global::DeepLinking.Droid.Resource.String.password_toggle_content_description;
 			global::Xamarin.Forms.Platform.Android.Resource.String.path_password_eye = global::DeepLinking.Droid.Resource.String.path_password_eye;
 			global::Xamarin.Forms.Platform.Android.Resource.String.path_password_eye_mask_strike_through = global::DeepLinking.Droid.Resource.String.path_password_eye_mask_strike_through;
@@ -4265,6 +4266,7 @@ namespace DeepLinking.Droid
 			global::Xamarin.Forms.Platform.Resource.String.fab_transformation_sheet_behavior = global::DeepLinking.Droid.Resource.String.fab_transformation_sheet_behavior;
 			global::Xamarin.Forms.Platform.Resource.String.hide_bottom_view_on_scroll_behavior = global::DeepLinking.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
 			global::Xamarin.Forms.Platform.Resource.String.mtrl_chip_close_icon_content_description = global::DeepLinking.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Xamarin.Forms.Platform.Resource.String.overflow_tab_title = global::DeepLinking.Droid.Resource.String.overflow_tab_title;
 			global::Xamarin.Forms.Platform.Resource.String.password_toggle_content_description = global::DeepLinking.Droid.Resource.String.password_toggle_content_description;
 			global::Xamarin.Forms.Platform.Resource.String.path_password_eye = global::DeepLinking.Droid.Resource.String.path_password_eye;
 			global::Xamarin.Forms.Platform.Resource.String.path_password_eye_mask_strike_through = global::DeepLinking.Droid.Resource.String.path_password_eye_mask_strike_through;
@@ -10053,28 +10055,31 @@ namespace DeepLinking.Droid
 			public const int mtrl_chip_close_icon_content_description = 2131492936;
 			
 			// aapt resource value: 0x7F0C0049
-			public const int password_toggle_content_description = 2131492937;
+			public const int overflow_tab_title = 2131492937;
 			
 			// aapt resource value: 0x7F0C004A
-			public const int path_password_eye = 2131492938;
+			public const int password_toggle_content_description = 2131492938;
 			
 			// aapt resource value: 0x7F0C004B
-			public const int path_password_eye_mask_strike_through = 2131492939;
+			public const int path_password_eye = 2131492939;
 			
 			// aapt resource value: 0x7F0C004C
-			public const int path_password_eye_mask_visible = 2131492940;
+			public const int path_password_eye_mask_strike_through = 2131492940;
 			
 			// aapt resource value: 0x7F0C004D
-			public const int path_password_strike_through = 2131492941;
+			public const int path_password_eye_mask_visible = 2131492941;
 			
 			// aapt resource value: 0x7F0C004E
-			public const int project_id = 2131492942;
+			public const int path_password_strike_through = 2131492942;
 			
 			// aapt resource value: 0x7F0C004F
-			public const int search_menu_title = 2131492943;
+			public const int project_id = 2131492943;
 			
 			// aapt resource value: 0x7F0C0050
-			public const int status_bar_notification_info_overflow = 2131492944;
+			public const int search_menu_title = 2131492944;
+			
+			// aapt resource value: 0x7F0C0051
+			public const int status_bar_notification_info_overflow = 2131492945;
 			
 			static String()
 			{

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
 using Windows.UI;
-using Windows.UI.Xaml.Media;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.UWP;
 using EffectsDemo.UWP;
+using SolidColorBrush = Windows.UI.Xaml.Media.SolidColorBrush;
 
 [assembly:ResolutionGroupName("MyCompany")]
 [assembly:ExportEffect(typeof(BackgroundColorEffect), "BackgroundColorEffect")]
