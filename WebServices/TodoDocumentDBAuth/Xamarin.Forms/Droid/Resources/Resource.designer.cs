@@ -1455,6 +1455,7 @@ namespace TodoDocumentDB.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.String.fab_transformation_sheet_behavior = global::TodoDocumentDB.Droid.Resource.String.fab_transformation_sheet_behavior;
 			global::Xamarin.Forms.Platform.Android.Resource.String.hide_bottom_view_on_scroll_behavior = global::TodoDocumentDB.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
 			global::Xamarin.Forms.Platform.Android.Resource.String.mtrl_chip_close_icon_content_description = global::TodoDocumentDB.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Xamarin.Forms.Platform.Android.Resource.String.overflow_tab_title = global::TodoDocumentDB.Droid.Resource.String.overflow_tab_title;
 			global::Xamarin.Forms.Platform.Android.Resource.String.password_toggle_content_description = global::TodoDocumentDB.Droid.Resource.String.password_toggle_content_description;
 			global::Xamarin.Forms.Platform.Android.Resource.String.path_password_eye = global::TodoDocumentDB.Droid.Resource.String.path_password_eye;
 			global::Xamarin.Forms.Platform.Android.Resource.String.path_password_eye_mask_strike_through = global::TodoDocumentDB.Droid.Resource.String.path_password_eye_mask_strike_through;
@@ -4024,6 +4025,7 @@ namespace TodoDocumentDB.Droid
 			global::Xamarin.Forms.Platform.Resource.String.fab_transformation_sheet_behavior = global::TodoDocumentDB.Droid.Resource.String.fab_transformation_sheet_behavior;
 			global::Xamarin.Forms.Platform.Resource.String.hide_bottom_view_on_scroll_behavior = global::TodoDocumentDB.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
 			global::Xamarin.Forms.Platform.Resource.String.mtrl_chip_close_icon_content_description = global::TodoDocumentDB.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Xamarin.Forms.Platform.Resource.String.overflow_tab_title = global::TodoDocumentDB.Droid.Resource.String.overflow_tab_title;
 			global::Xamarin.Forms.Platform.Resource.String.password_toggle_content_description = global::TodoDocumentDB.Droid.Resource.String.password_toggle_content_description;
 			global::Xamarin.Forms.Platform.Resource.String.path_password_eye = global::TodoDocumentDB.Droid.Resource.String.path_password_eye;
 			global::Xamarin.Forms.Platform.Resource.String.path_password_eye_mask_strike_through = global::TodoDocumentDB.Droid.Resource.String.path_password_eye_mask_strike_through;
@@ -9425,28 +9427,31 @@ namespace TodoDocumentDB.Droid
 			public const int mtrl_chip_close_icon_content_description = 2131492910;
 			
 			// aapt resource value: 0x7F0C002F
-			public const int password_toggle_content_description = 2131492911;
+			public const int overflow_tab_title = 2131492911;
 			
 			// aapt resource value: 0x7F0C0030
-			public const int path_password_eye = 2131492912;
+			public const int password_toggle_content_description = 2131492912;
 			
 			// aapt resource value: 0x7F0C0031
-			public const int path_password_eye_mask_strike_through = 2131492913;
+			public const int path_password_eye = 2131492913;
 			
 			// aapt resource value: 0x7F0C0032
-			public const int path_password_eye_mask_visible = 2131492914;
+			public const int path_password_eye_mask_strike_through = 2131492914;
 			
 			// aapt resource value: 0x7F0C0033
-			public const int path_password_strike_through = 2131492915;
+			public const int path_password_eye_mask_visible = 2131492915;
 			
 			// aapt resource value: 0x7F0C0034
-			public const int search_menu_title = 2131492916;
+			public const int path_password_strike_through = 2131492916;
 			
 			// aapt resource value: 0x7F0C0035
-			public const int status_bar_notification_info_overflow = 2131492917;
+			public const int search_menu_title = 2131492917;
 			
 			// aapt resource value: 0x7F0C0036
-			public const int title_activity_webview = 2131492918;
+			public const int status_bar_notification_info_overflow = 2131492918;
+			
+			// aapt resource value: 0x7F0C0037
+			public const int title_activity_webview = 2131492919;
 			
 			static String()
 			{

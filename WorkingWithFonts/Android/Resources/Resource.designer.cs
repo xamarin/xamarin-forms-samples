@@ -1329,6 +1329,7 @@ namespace WorkingWithFonts.Android
 			global::Xamarin.Forms.Platform.Android.Resource.String.fab_transformation_sheet_behavior = global::WorkingWithFonts.Android.Resource.String.fab_transformation_sheet_behavior;
 			global::Xamarin.Forms.Platform.Android.Resource.String.hide_bottom_view_on_scroll_behavior = global::WorkingWithFonts.Android.Resource.String.hide_bottom_view_on_scroll_behavior;
 			global::Xamarin.Forms.Platform.Android.Resource.String.mtrl_chip_close_icon_content_description = global::WorkingWithFonts.Android.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Xamarin.Forms.Platform.Android.Resource.String.overflow_tab_title = global::WorkingWithFonts.Android.Resource.String.overflow_tab_title;
 			global::Xamarin.Forms.Platform.Android.Resource.String.password_toggle_content_description = global::WorkingWithFonts.Android.Resource.String.password_toggle_content_description;
 			global::Xamarin.Forms.Platform.Android.Resource.String.path_password_eye = global::WorkingWithFonts.Android.Resource.String.path_password_eye;
 			global::Xamarin.Forms.Platform.Android.Resource.String.path_password_eye_mask_strike_through = global::WorkingWithFonts.Android.Resource.String.path_password_eye_mask_strike_through;
@@ -3898,6 +3899,7 @@ namespace WorkingWithFonts.Android
 			global::Xamarin.Forms.Platform.Resource.String.fab_transformation_sheet_behavior = global::WorkingWithFonts.Android.Resource.String.fab_transformation_sheet_behavior;
 			global::Xamarin.Forms.Platform.Resource.String.hide_bottom_view_on_scroll_behavior = global::WorkingWithFonts.Android.Resource.String.hide_bottom_view_on_scroll_behavior;
 			global::Xamarin.Forms.Platform.Resource.String.mtrl_chip_close_icon_content_description = global::WorkingWithFonts.Android.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Xamarin.Forms.Platform.Resource.String.overflow_tab_title = global::WorkingWithFonts.Android.Resource.String.overflow_tab_title;
 			global::Xamarin.Forms.Platform.Resource.String.password_toggle_content_description = global::WorkingWithFonts.Android.Resource.String.password_toggle_content_description;
 			global::Xamarin.Forms.Platform.Resource.String.path_password_eye = global::WorkingWithFonts.Android.Resource.String.path_password_eye;
 			global::Xamarin.Forms.Platform.Resource.String.path_password_eye_mask_strike_through = global::WorkingWithFonts.Android.Resource.String.path_password_eye_mask_strike_through;
@@ -9308,25 +9310,28 @@ namespace WorkingWithFonts.Android
 			public const int mtrl_chip_close_icon_content_description = 2131492912;
 			
 			// aapt resource value: 0x7F0C0031
-			public const int password_toggle_content_description = 2131492913;
+			public const int overflow_tab_title = 2131492913;
 			
 			// aapt resource value: 0x7F0C0032
-			public const int path_password_eye = 2131492914;
+			public const int password_toggle_content_description = 2131492914;
 			
 			// aapt resource value: 0x7F0C0033
-			public const int path_password_eye_mask_strike_through = 2131492915;
+			public const int path_password_eye = 2131492915;
 			
 			// aapt resource value: 0x7F0C0034
-			public const int path_password_eye_mask_visible = 2131492916;
+			public const int path_password_eye_mask_strike_through = 2131492916;
 			
 			// aapt resource value: 0x7F0C0035
-			public const int path_password_strike_through = 2131492917;
+			public const int path_password_eye_mask_visible = 2131492917;
 			
 			// aapt resource value: 0x7F0C0036
-			public const int search_menu_title = 2131492918;
+			public const int path_password_strike_through = 2131492918;
 			
 			// aapt resource value: 0x7F0C0037
-			public const int status_bar_notification_info_overflow = 2131492919;
+			public const int search_menu_title = 2131492919;
+			
+			// aapt resource value: 0x7F0C0038
+			public const int status_bar_notification_info_overflow = 2131492920;
 			
 			static String()
 			{
