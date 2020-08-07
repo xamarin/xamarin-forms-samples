@@ -27,9 +27,9 @@ namespace Todo
             {
                 if (!Database.TableMappings.Any(m => m.MappedType.Name == typeof(TodoItem).Name))
                 {
-                    await Database.CreateTablesAsync(CreateFlags.None, typeof(TodoItem)).ConfigureAwait(false);
-                    initialized = true;
+                    await Database.CreateTablesAsync(CreateFlags.None, typeof(TodoItem)).ConfigureAwait(false);                    
                 }
+                initialized = true;
             }
         }
 

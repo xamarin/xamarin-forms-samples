@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AbsoluteLayoutDemos.Views.BouncingTextDemoPage"
+             Title="Bouncing text demo">
+    <AbsoluteLayout>
+        <Label x:Name="label1"
+               Text="Bouncing text"
+               FontSize="Large"
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <Label x:Name="label2"
+               Text="Bouncing text"
+               FontSize="Large"
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+    </AbsoluteLayout>
+</ContentPage>

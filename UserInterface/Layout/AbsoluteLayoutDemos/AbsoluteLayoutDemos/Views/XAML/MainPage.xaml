@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:AbsoluteLayoutDemos.Views"
+             x:Class="AbsoluteLayoutDemos.MainPage"
+             Title="AbsoluteLayout demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="XAML">
+                <TextCell Text="Stylish header demo"
+                          Detail="Absolute positioning and sizing"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:StylishHeaderDemoPage}" />
+                <TextCell Text="Proportional demo"
+                          Detail="Position proportional, sizing absolute"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ProportionalDemoPage}" />
+                <TextCell Text="Chessboard demo"
+                          Detail="Fully proportional"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ChessboardDemoPage}" />
+                <TextCell Text="Proportional coordinate calculations demo"
+                          Detail="Fractional to proportional coordinate conversion"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ProportionalCoordinateCalcDemoPage}" />
+                <TextCell Text="Simple overlay demo"
+                          Detail="Overlap child views"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:SimpleOverlayDemoPage}" />
+                <TextCell Text="Bouncing text demo"
+                          Detail="Animate child views"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:BouncingTextDemoPage}" />
+            </TableSection>
+            <TableSection Title="C#">
+                <TextCell Text="Stylish header demo"
+                          Detail="Absolute positioning and sizing"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:StylishHeaderDemoPageCS}" />
+                <TextCell Text="Proportional demo"
+                          Detail="Position proportional, sizing absolute"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ProportionalDemoPageCS}" />
+                <TextCell Text="Chessboard demo"
+                          Detail="Fully proportional"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ChessboardDemoPageCS}" />
+                <TextCell Text="Proportional coordinate calculations demo"
+                          Detail="Fractional to proportional coordinate conversion"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ProportionalCoordinateCalcDemoPageCS}" />
+                <TextCell Text="Simple overlay demo"
+                          Detail="Overlap child views"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:SimpleOverlayDemoPageCS}" />
+                <TextCell Text="Bouncing text demo"
+                          Detail="Animate child views"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:BouncingTextDemoPageCS}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
