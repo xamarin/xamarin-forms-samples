@@ -25,6 +25,3 @@ In order to run this sample application an Azure Active Directory B2C tenant mus
 
 ![AzureADB2CAuth application screenshot](Screenshots/01All.png "AzureADB2CAuth application screenshot")
 
-## Author
-
-David Britch

@@ -18,3 +18,4 @@ This sample demonstrates how to accept multi-line text input, using the Xamarin.
 For more information about this sample, see [Editor Tutorial](https://docs.microsoft.com/xamarin/get-started/tutorials/editor/).
 
 ![Editor Tutorial application screenshot](Screenshots/01All.png "Editor Tutorial application screenshot")
+

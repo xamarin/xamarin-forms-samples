@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataBindingDemos"
+             x:Class="DataBindingDemos.RelativeSourceFindAncestorPage"
+             Title="RelativeSource FindAncestor Mode"
+             BindingContext="{Binding Source={RelativeSource Self}, Path=DefaultViewModel}">
+    <StackLayout Margin="10">
+        <!--
+        In this example, the page's BindingContext is bound to its own DefaultViewModel property.
+        -->        
+        <ListView ItemsSource="{Binding Employees}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Fullname}"
+                                   VerticalOptions="Center" />
+                            <!--
+                            In this example, the button's Command property is bound to the DeleteEmployeeCommand in its parent's view model.
+                            Therefore, the PeopleViewModel class does not need a reference to its parent, and the DataTemplate isn't dependent
+                            upon the parent type.
+                            -->
+                            <Button Text="Delete"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type local:PeopleViewModel}}, Path=DeleteEmployeeCommand}"
+                                    CommandParameter="{Binding}"
+                                    HorizontalOptions="EndAndExpand" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

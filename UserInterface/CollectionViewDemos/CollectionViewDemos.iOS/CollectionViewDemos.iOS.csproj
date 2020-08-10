@@ -156,7 +156,11 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
-      <Version>4.2.0.709249</Version>
+      <Version>4.6.0.726</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\delete.png" />
+    <BundleResource Include="Resources\favorite.png" />
   </ItemGroup>
 </Project>

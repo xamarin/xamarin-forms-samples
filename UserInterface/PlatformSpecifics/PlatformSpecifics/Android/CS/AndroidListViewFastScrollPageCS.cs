@@ -23,7 +23,7 @@ namespace PlatformSpecifics
                 grid.Children.Add(nameLabel);
                 grid.Children.Add(ageLabel, 1, 0);
 
-                return new ViewCell { View = grid };
+                return new Xamarin.Forms.ViewCell { View = grid };
             });
 
             var listView = new Xamarin.Forms.ListView { IsGroupingEnabled = true, ItemTemplate = personDataTemplate };

@@ -14,6 +14,3 @@ This samples demonstrates how to use the `Device` class. For more information, s
 
 ![Working with Platform Tweaks application screenshot](Screenshots/uwp.png "Working with Platform Tweaks application screenshot")
 
-## Author
-
-Craig Dunn

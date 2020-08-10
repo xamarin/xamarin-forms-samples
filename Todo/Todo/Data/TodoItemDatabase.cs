@@ -1,49 +1,69 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using SQLite;
 
 namespace Todo
 {
-	public class TodoItemDatabase
-	{
-		readonly SQLiteAsyncConnection database;
+    public class TodoItemDatabase
+    {
+        static readonly Lazy<SQLiteAsyncConnection> lazyInitializer = new Lazy<SQLiteAsyncConnection>(() =>
+        {
+            return new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
+        });
 
-		public TodoItemDatabase(string dbPath)
-		{
-			database = new SQLiteAsyncConnection(dbPath);
-			database.CreateTableAsync<TodoItem>().Wait();
-		}
+        static SQLiteAsyncConnection Database => lazyInitializer.Value;
+        static bool initialized = false;
 
-		public Task<List<TodoItem>> GetItemsAsync()
-		{
-			return database.Table<TodoItem>().ToListAsync();
-		}
+        public TodoItemDatabase()
+        {
+            InitializeAsync().SafeFireAndForget(false);
+        }
 
-		public Task<List<TodoItem>> GetItemsNotDoneAsync()
-		{
-			return database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
-		}
+        async Task InitializeAsync()
+        {
+            if (!initialized)
+            {
+                if (!Database.TableMappings.Any(m => m.MappedType.Name == typeof(TodoItem).Name))
+                {
+                    await Database.CreateTablesAsync(CreateFlags.None, typeof(TodoItem)).ConfigureAwait(false);
+                    initialized = true;
+                }
+            }
+        }
 
-		public Task<TodoItem> GetItemAsync(int id)
-		{
-			return database.Table<TodoItem>().Where(i => i.ID == id).FirstOrDefaultAsync();
-		}
+        public Task<List<TodoItem>> GetItemsAsync()
+        {
+            return Database.Table<TodoItem>().ToListAsync();
+        }
 
-		public Task<int> SaveItemAsync(TodoItem item)
-		{
-			if (item.ID != 0)
-			{
-				return database.UpdateAsync(item);
-			}
-			else {
-				return database.InsertAsync(item);
-			}
-		}
+        public Task<List<TodoItem>> GetItemsNotDoneAsync()
+        {
+            return Database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
+        }
 
-		public Task<int> DeleteItemAsync(TodoItem item)
-		{
-			return database.DeleteAsync(item);
-		}
-	}
+        public Task<TodoItem> GetItemAsync(int id)
+        {
+            return Database.Table<TodoItem>().Where(i => i.ID == id).FirstOrDefaultAsync();
+        }
+
+        public Task<int> SaveItemAsync(TodoItem item)
+        {
+            if (item.ID != 0)
+            {
+                return Database.UpdateAsync(item);
+            }
+            else
+            {
+                return Database.InsertAsync(item);
+            }
+        }
+
+        public Task<int> DeleteItemAsync(TodoItem item)
+        {
+            return Database.DeleteAsync(item);
+        }
+    }
 }
 

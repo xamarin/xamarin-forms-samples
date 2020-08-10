@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WorkingWithMaps"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="WorkingWithMaps.PinItemsSourcePage"
+             Title="Databinding pins demo (Collection)"
+             IconImageSource="glyphish_07_map_marker.png">
+<!--    <ContentPage.Resources>
+        <local:MapItemTemplateSelector x:Key="MapItemTemplateSelector">
+            <local:MapItemTemplateSelector.DefaultTemplate>
+                <DataTemplate>
+                    <maps:Pin Position="{Binding Position}"
+                              Address="{Binding Address}"
+                              Label="{Binding Description}" />
+                </DataTemplate>
+            </local:MapItemTemplateSelector.DefaultTemplate>
+            <local:MapItemTemplateSelector.XamarinTemplate>
+                <DataTemplate>
+                    <maps:Pin Position="{Binding Position}"
+                              Address="{Binding Address}"
+                              Label="Xamarin!" />
+                </DataTemplate>
+            </local:MapItemTemplateSelector.XamarinTemplate>    
+        </local:MapItemTemplateSelector>
+    </ContentPage.Resources>-->
+    
+    <Grid Margin="10,35,10,10">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <maps:Map x:Name="map"
+                  MapClicked="OnMapClicked"
+                  ItemsSource="{Binding Locations}">
+            <!-- Alternatively, set ItemTemplateSelector to MapItemTemplateSelector -->
+            <maps:Map.ItemTemplate>
+                <DataTemplate>
+                    <maps:Pin Position="{Binding Position}"
+                              Address="{Binding Address}"
+                              Label="{Binding Description}" />
+                </DataTemplate>    
+            </maps:Map.ItemTemplate>
+        </maps:Map>
+        <ScrollView Grid.Row="1"
+                    Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Button Text="Add"
+                        Command="{Binding AddLocationCommand}" />
+                <Button Text="Remove"
+                        Command="{Binding RemoveLocationCommand}" />
+                <Button Text="Clear"
+                        Command="{Binding ClearLocationsCommand}" />
+                <Button Text="Update"
+                        Command="{Binding UpdateLocationsCommand}" />
+                <Button Text="Replace"
+                        Command="{Binding ReplaceLocationCommand}" />
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -17,6 +17,3 @@ ClassHierarchy is a handy reference for Xamarin.Forms developers, as well as dem
 
 ![ClassHierarchy application screenshot](Screenshots/01.png "ClassHierarchy application screenshot")
 
-## Author
-
-Charles Petzold

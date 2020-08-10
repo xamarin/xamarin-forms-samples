@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MediaElementDemos.PlayAppFileVideoResourcePage"
+             Title="Play app file video resources">
+    <!--
+    This page is configured to play a video in your app data directory.
+    To play a video in your temp directory, comment out the first MediaElement
+    and uncomment the second MediaElement. In addition, modify the FileAccess
+    class to store the video file in the temp folder.
+    -->
+    <MediaElement Source="ms-appdata:///local/XamarinVideo.mp4"
+                  ShowsPlaybackControls="True"  />
+    <!--<MediaElement Source="ms-appdata:///temp/XamarinVideo.mp4"
+                  ShowsPlaybackControls="True"  />-->
+</ContentPage>

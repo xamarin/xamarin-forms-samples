@@ -121,6 +121,7 @@
     <BundleResource Include="Resources\Icon-Small%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <BundleResource Include="Resources\XamarinLogo.png" />
+    <BundleResource Include="Resources\delete.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="OpenTK-1.0" />
@@ -143,10 +144,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
-      <Version>4.2.0.709249</Version>
+      <Version>4.6.0.726</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms.Maps">
-      <Version>4.2.0.709249</Version>
+      <Version>4.6.0.726</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="..\FormsGallery.Shared\FormsGallery.Shared.projitems" Label="Shared" />

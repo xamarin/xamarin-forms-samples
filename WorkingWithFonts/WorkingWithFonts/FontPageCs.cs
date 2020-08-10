@@ -1,26 +1,7 @@
-﻿using System;
-
-// forums question
-// http://forums.xamarin.com/discussion/17278/custom-font-in-xamarin-forms-font-awesome#latest
-
-// custom fonts in iOS
-// http://blog.xamarin.com/custom-fonts-in-ios/
-
-// open-source font download
-// https://www.google.com/fonts
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace WorkingWithFonts
 {
-    /// <summary>
-    /// Using fonts in Xamarin.Forms 1.3 is slightly different to earlier versions.
-    /// The 'Font' property has been replaced with three separate properties:
-    /// - FontFamily
-    /// - FontSize
-    /// - FontAttributes
-    /// Use these three properties directly and avoid using the Font class.
-    /// </summary>
     public class FontPageCs : ContentPage
     {
         public FontPageCs()
@@ -28,12 +9,11 @@ namespace WorkingWithFonts
             var label = new Label
             {
                 Text = "Hello, Xamarin.Forms!",
-                FontFamily = Device.RuntimePlatform == Device.iOS ? "Lobster-Regular" :
-                                   Device.RuntimePlatform == Device.Android ? "Lobster-Regular.ttf#Lobster-Regular" : "Assets/Fonts/Lobster-Regular.ttf#Lobster",
+                FontFamily = "Lobster",
                 VerticalOptions = LayoutOptions.CenterAndExpand,
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
-
+                HorizontalOptions = LayoutOptions.CenterAndExpand
             };
+
             label.FontSize = Device.RuntimePlatform == Device.iOS ? 24 :
                 Device.RuntimePlatform == Device.Android ? Device.GetNamedSize(NamedSize.Medium, label) : Device.GetNamedSize(NamedSize.Large, label);
 
@@ -74,7 +54,8 @@ namespace WorkingWithFonts
             {
                 VerticalOptions = LayoutOptions.CenterAndExpand,
                 HorizontalOptions = LayoutOptions.CenterAndExpand,
-                Children = {
+                Children =
+                {
                     label, labelBold, labelItalic, labelBoldItalic, labelFormatted
                 }
             };

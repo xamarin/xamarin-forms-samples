@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.ExpanderDemoPage"
+             Title="Expander Demo">
+    <StackLayout Margin="20">
+        <Label Text="Expander"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Expander>
+            <Expander.Header>
+                <Label Text="Baboon"
+                       FontAttributes="Bold"
+                       FontSize="Medium" />
+            </Expander.Header>
+            <Grid Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg" 
+                       Aspect="AspectFill"
+                       HeightRequest="120" 
+                       WidthRequest="120" />
+                <Label Grid.Column="1"
+                       Text="Baboons are African and Arabian Old World monkeys belonging to the genus Papio, part of the subfamily Cercopithecinae."
+                       FontAttributes="Italic" />
+            </Grid>
+        </Expander>
+    </StackLayout>
+</ContentPage>

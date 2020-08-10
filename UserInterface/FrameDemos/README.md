@@ -19,6 +19,3 @@ For more information about this sample, see [Xamarin.Forms Frame](https://docs.m
 
 ![Sample Frame demo application](Screenshots/01frame-full.png "Sample Frame demo application")
 
-## Author
-
-Justin Johnson

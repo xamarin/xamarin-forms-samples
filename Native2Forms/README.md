@@ -16,6 +16,3 @@ For more information about this sample see [Native Forms](https://docs.microsoft
 
 ![Native Forms application screenshot](Screenshots/01Android.png "Native Forms application screenshot")
 
-## Author
-
-David Britch

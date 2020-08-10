@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using builtInCellsListView.Views;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly:XamlCompilation(XamlCompilationOptions.Compile)]
@@ -8,8 +9,7 @@ namespace builtInCellsListView
 	{
 		public App ()
 		{
-			// The root page of your application
-			MainPage = new NavigationPage (new ListViewXaml());
+			MainPage = new NavigationPage (new MainPage());
 		}
 
 		protected override void OnStart()

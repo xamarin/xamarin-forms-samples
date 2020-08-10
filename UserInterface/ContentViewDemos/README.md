@@ -18,3 +18,4 @@ The Xamarin.Forms `ContentView` class can be extended to create custom controls.
 For more information about this sample, see [Xamarin.Forms CardView](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/layouts/contentview)
 
 ![CardView Demo application screenshot](Screenshots/cardview-list.png "CardView demo application screenshot")
+

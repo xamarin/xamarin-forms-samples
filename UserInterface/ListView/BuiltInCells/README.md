@@ -23,3 +23,5 @@ Built-In Cells:
 - ImageCell
 - SwitchCell
 - EntryCell
+
+![Screenshot of Built-In Cells Demo on iOS and Android](Screenshots/listview-builtin-cells.png)

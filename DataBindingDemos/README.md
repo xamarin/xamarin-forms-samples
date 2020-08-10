@@ -16,6 +16,3 @@ For more information about this code, see the article [Data Binding](https://doc
 
 ![Data Binding Demos application screenshot](Screenshots/01BasicCodeBinding-Large.png "Data Binding Demos application screenshot")
 
-## Author
-
-Charles Petzold

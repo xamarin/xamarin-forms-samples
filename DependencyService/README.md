@@ -16,6 +16,3 @@ For more information about this sample see [Xamarin.Forms DependencyService](htt
 
 ![Dependency Service application screenshot](Screenshots/01Android.png "Dependency Service application screenshot")
 
-## Author
-
-David Britch

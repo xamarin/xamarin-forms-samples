@@ -16,6 +16,3 @@ For more information about this sample see [Customizing an Entry](http://develop
 
 ![Entry Custom Renderer application screenshot](Screenshots/01Android.png "Entry Custom Renderer application screenshot")
 
-## Authors
-
-Craig Dunn / David Britch

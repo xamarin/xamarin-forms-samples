@@ -2,9 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
-             xmlns:local="clr-namespace:BindableLayoutDemo"
-             x:Class="BindableLayoutDemo.Views.UserProfilePage">
-    
+             xmlns:localcontrols="clr-namespace:BindableLayoutDemo.Controls"
+             xmlns:viewmodels="clr-namespace:BindableLayoutDemo.ViewModels"
+             x:Class="BindableLayoutDemo.Views.UserProfilePage"
+             Title="User profile">
+    <ContentPage.BindingContext>
+        <viewmodels:UserProfileViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Resources>
         <!-- Global Colors -->
         <Color x:Key="primaryColor">#303030</Color>
@@ -62,19 +66,14 @@
             </Label>
         </DataTemplate>
         
-        <local:TechItemTemplateSelector x:Key="TechItemTemplateSelector"
-                                        DefaultTemplate="{StaticResource defaultTemplate}"
-                                        XamarinFormsTemplate="{StaticResource formsTemplate}" />        
+        <localcontrols:TechItemTemplateSelector x:Key="TechItemTemplateSelector"
+                                                DefaultTemplate="{StaticResource defaultTemplate}"
+                                                XamarinFormsTemplate="{StaticResource formsTemplate}" />        
     </ContentPage.Resources>
     
     <StackLayout> 
         <AbsoluteLayout BackgroundColor="#909090"
                         HeightRequest="60">
-            <AbsoluteLayout.Padding>
-                <OnPlatform x:TypeArguments="Thickness" 
-                            iOS="0,35,0,0"
-                            Android="0,0,0,0" />
-            </AbsoluteLayout.Padding>
             <Button Text="Cancel" 
                     Margin="10,10"
                     Style="{StaticResource nakedButton}" />

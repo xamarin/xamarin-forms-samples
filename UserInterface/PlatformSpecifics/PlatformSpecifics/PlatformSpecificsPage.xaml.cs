@@ -44,7 +44,7 @@ namespace PlatformSpecifics
 			else
 			{
 				Page page = (Page)Activator.CreateInstance(pageType);
-                if (page is iOSModalFormSheetPage)
+                if (page is iOSModalPagePresentationStyle)
                 {
                     await Navigation.PushModalAsync(page);
                 }

@@ -17,6 +17,3 @@ ScaleAndRotate lets you interactively experiment with these properties using a *
 
 ![ScaleAndRotate application screenshot](Screenshots/01Android.png "ScaleAndRotate application screenshot")
 
-## Author
-
-Charles Petzold

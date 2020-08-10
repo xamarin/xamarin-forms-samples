@@ -7,18 +7,16 @@
         <Thickness x:Key="PageMargin">20</Thickness>
         
         <!-- Colors -->
-        <Color x:Key="AppBackgroundColor">WhiteSmoke</Color>
-        <Color x:Key="iOSNavigationBarColor">WhiteSmoke</Color>
-        <Color x:Key="AndroidNavigationBarColor">#2196F3</Color>
-        <Color x:Key="iOSNavigationBarTextColor">Black</Color>
-        <Color x:Key="AndroidNavigationBarTextColor">White</Color>
+        <Color x:Key="AppBackgroundColor">AliceBlue</Color>
+        <Color x:Key="NavigationBarColor">#1976D2</Color>
+        <Color x:Key="NavigationBarTextColor">White</Color>
         
         <!-- Implicit styles -->
         <Style TargetType="{x:Type NavigationPage}">
             <Setter Property="BarBackgroundColor"
-                    Value="{OnPlatform iOS={StaticResource iOSNavigationBarColor}, Android={StaticResource AndroidNavigationBarColor}}" />
+                    Value="{StaticResource NavigationBarColor}" />
              <Setter Property="BarTextColor"
-                    Value="{OnPlatform iOS={StaticResource iOSNavigationBarTextColor}, Android={StaticResource AndroidNavigationBarTextColor}}" />           
+                    Value="{StaticResource NavigationBarTextColor}" />           
         </Style>
         
         <Style TargetType="{x:Type ContentPage}"

@@ -16,6 +16,3 @@ For more information about this sample see [Implementing a Video Player](https:/
 
 ![Video Player Demos application screenshot](Screenshots/01PlayWebVideo-Large.png "Video Player Demos application screenshot")
 
-## Author
-
-Charles Petzold

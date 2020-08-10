@@ -17,6 +17,3 @@ For more information about this sample see [Consuming the Azure Cosmos DB Servic
 
 ![Todo DocumentDB application screenshot](Screenshots/01All.png "Todo DocumentDB application screenshot")
 
-## Author
-
-David Britch

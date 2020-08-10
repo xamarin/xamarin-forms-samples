@@ -26,6 +26,3 @@ In order to run this sample application an Azure SignalR Service instance and an
 
 Once these steps have been performed, run any of the platform applications, click the Connect button and test sending messages once connected.
 
-## Author
-
-Justin Johnson

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VisualDemos.CustomEffectPage"
+             xmlns:local="clr-namespace:VisualDemos"
+             Title="Material Effect Demo"
+             Padding="10"
+             Visual="Material">
+    <StackLayout>
+        <Label Text="Default Material button control" />
+        <Button HeightRequest="100"
+                WidthRequest="100"
+                HorizontalOptions="Center"
+                Text="Button1" />
+        <Label Text="Material button control with RoundEffect applied" />
+        <Button HeightRequest="100"
+                WidthRequest="100"
+                HorizontalOptions="Center"
+                Text="Button2">
+            <Button.Effects>
+                <local:RoundEffect />
+            </Button.Effects>
+        </Button>
+        <Label Text="Default image control" />
+        <Image WidthRequest="100"
+               HeightRequest="100"
+               HorizontalOptions="Center"
+               Source="outdoors" />
+        <Label Text="Image control with RoundEffect applied" />
+        <Image WidthRequest="100"
+               HeightRequest="100"
+               HorizontalOptions="Center"
+               Aspect="AspectFill"
+               Source="outdoors">
+            <Image.Effects>
+                <local:RoundEffect />
+            </Image.Effects>
+        </Image>
+    </StackLayout>
+</ContentPage>

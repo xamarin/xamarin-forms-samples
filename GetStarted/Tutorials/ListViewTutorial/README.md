@@ -18,3 +18,4 @@ This sample demonstrates how to present lists of data, using the Xamarin.Forms `
 For more information about this sample, see [ListView Tutorial](https://docs.microsoft.com/xamarin/get-started/tutorials/listview/).
 
 ![ListView Tutorial application screenshot](Screenshots/01All.png "ListView Tutorial application screenshot")
+

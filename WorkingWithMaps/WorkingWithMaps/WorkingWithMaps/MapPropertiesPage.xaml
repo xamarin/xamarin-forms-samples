@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="WorkingWithMaps.MapPropertiesPage"
+             Title="Map properties demo">
+    <StackLayout Margin="10">
+        <maps:Map x:Name="map"
+                  MapClicked="OnMapClicked" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.8*" />
+                <ColumnDefinition Width="0.2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Text="Scroll enabled:"
+                   VerticalTextAlignment="Center" />
+            <CheckBox Grid.Column="1"
+                      x:Name="scrollEnabledCheckBox"
+                      IsChecked="True" />
+            <Label Grid.Row="1"
+                   Text="Zoom enabled:"
+                   VerticalTextAlignment="Center" />
+            <CheckBox Grid.Row="1"
+                      Grid.Column="1"
+                      x:Name="zoomEnabledCheckBox"
+                      IsChecked="True" />
+            <Label Grid.Row="2"
+                   Text="Show user:"
+                   VerticalTextAlignment="Center" />
+            <CheckBox Grid.Row="2"
+                      Grid.Column="1"
+                      x:Name="showUserCheckBox"
+                      CheckedChanged="OnCheckBoxCheckedChanged"/>
+            <Label Grid.Row="3"
+                   Text="Maintain last region on layout change:"
+                   VerticalTextAlignment="Center" />
+            <CheckBox Grid.Row="3"
+                      Grid.Column="1"
+                      x:Name="moveRegionCheckBox"
+                      IsChecked="True" />
+        </Grid>
+    </StackLayout>
+</ContentPage>

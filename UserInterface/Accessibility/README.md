@@ -26,3 +26,4 @@ On all platforms, tap an element once to hear accessibility values. Double tap a
 For more information about this sample see [automation properties in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/accessibility/automation-properties).
 
 ![Accessibility application screenshot](Screenshots/01All.png "Accessibility application screenshot")
+

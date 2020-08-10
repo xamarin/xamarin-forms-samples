@@ -22,6 +22,3 @@ XAML in the TipCalcPage.xaml file. Two data-binding value converters help massag
 
 ![TipCalc application screenshot](Screenshots/01Android.png "TipCalc application screenshot")
 
-## Author
-
-Charles Petzold

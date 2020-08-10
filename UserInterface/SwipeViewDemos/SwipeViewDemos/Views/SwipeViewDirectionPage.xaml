@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SwipeViewDemos.SwipeViewDirectionPage"
+             Title="SwipeView swipe direction demo">
+    <StackLayout Margin="20">
+         <SwipeView>
+            <SwipeView.RightItems>
+                <SwipeItems>
+                    <SwipeItem Text="Favorite"
+                               IconImageSource="favorite.png"
+                               BackgroundColor="LightGreen"
+                               Invoked="OnFavoriteSwipeItemInvoked" />
+                    <SwipeItem Text="Delete"
+                               IconImageSource="delete.png"
+                               BackgroundColor="LightPink"
+                               Invoked="OnDeleteSwipeItemInvoked" />
+                </SwipeItems>
+            </SwipeView.RightItems>
+            <Grid HeightRequest="60"
+                  WidthRequest="300"
+                  BackgroundColor="LightGray">
+                <Label Text="Swipe left"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+        <SwipeView>
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem Text="Favorite"
+                               IconImageSource="favorite.png"
+                               BackgroundColor="LightGreen"
+                               Invoked="OnFavoriteSwipeItemInvoked" />
+                    <SwipeItem Text="Delete"
+                               IconImageSource="delete.png"
+                               BackgroundColor="LightPink"
+                               Invoked="OnDeleteSwipeItemInvoked" />
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <Grid HeightRequest="60"
+                  WidthRequest="300"
+                  BackgroundColor="LightGray">
+                <Label Text="Swipe right"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+        <SwipeView>
+            <SwipeView.BottomItems>
+                <SwipeItems>
+                    <SwipeItem Text="Favorite"
+                               IconImageSource="favorite.png"
+                               BackgroundColor="LightGreen"
+                               Invoked="OnFavoriteSwipeItemInvoked" />
+                    <SwipeItem Text="Delete"
+                               IconImageSource="delete.png"
+                               BackgroundColor="LightPink"
+                               Invoked="OnDeleteSwipeItemInvoked" />
+                </SwipeItems>
+            </SwipeView.BottomItems>
+            <Grid HeightRequest="60"
+                  WidthRequest="300"
+                  BackgroundColor="LightGray">
+                <Label Text="Swipe up"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+        <SwipeView>
+            <SwipeView.TopItems>
+                <SwipeItems>
+                    <SwipeItem Text="Favorite"
+                               IconImageSource="favorite.png"
+                               BackgroundColor="LightGreen"
+                               Invoked="OnFavoriteSwipeItemInvoked" />
+                    <SwipeItem Text="Delete"
+                               IconImageSource="delete.png"
+                               BackgroundColor="LightPink"
+                               Invoked="OnDeleteSwipeItemInvoked" />
+                </SwipeItems>
+            </SwipeView.TopItems>
+            <Grid HeightRequest="60"
+                  WidthRequest="300"
+                  BackgroundColor="LightGray">
+                <Label Text="Swipe down"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+        <SwipeView>
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem Text="Delete"
+                               IconImageSource="delete.png"
+                               BackgroundColor="LightPink"
+                               Invoked="OnDeleteSwipeItemInvoked" />
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <SwipeView.RightItems>
+                <SwipeItems>
+                    <SwipeItem Text="Favorite"
+                               BackgroundColor="LightGreen"
+                               Invoked="OnFavoriteSwipeItemInvoked" />
+                    <SwipeItem Text="Share"
+                               BackgroundColor="LightYellow"
+                               Invoked="OnShareSwipeItemInvoked" />
+                </SwipeItems>
+            </SwipeView.RightItems>
+            <Grid HeightRequest="60"
+                  WidthRequest="300"
+                  BackgroundColor="LightGray">
+                <Label Text="Swipe left or right"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+    </StackLayout>
+</ContentPage>

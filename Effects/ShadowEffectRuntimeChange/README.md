@@ -16,6 +16,3 @@ For more information about the sample see [Creating an Effect](https://docs.micr
 
 ![Shadow Effect with Runtime Parameter Change application screenshot](Screenshots/01All.png "Shadow Effect with Runtime Parameter Change application screenshot")
 
-## Author
-
-David Britch

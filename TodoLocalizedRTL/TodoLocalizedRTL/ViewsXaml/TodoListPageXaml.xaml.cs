@@ -40,7 +40,7 @@ namespace TodoLocalized
             }
             if (notDoneItems.Any())
             {
-                var s = L10n.Localize("SpeakTaskCount", AppResources.Culture);
+                var s = AppResources.SpeakTaskCount;
                 toSpeak = string.Format(s, notDoneItems.Count()) + toSpeak;
             }
             DependencyService.Get<ITextToSpeech>().Speak(toSpeak);

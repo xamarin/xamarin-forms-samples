@@ -22,6 +22,3 @@ SpinPaint uses a .NET Standard Library for the shared code. For a version that u
 
 ![SpinPaint application screenshot](Screenshots/Image0.png "SpinPaint application screenshot")
 
-## Author
-
-Charles Petzold

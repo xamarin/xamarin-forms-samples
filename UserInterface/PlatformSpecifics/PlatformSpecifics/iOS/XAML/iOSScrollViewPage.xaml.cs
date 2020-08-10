@@ -6,7 +6,7 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace PlatformSpecifics
 {
-    public partial class iOSScrollViewPage : MasterDetailPage
+    public partial class iOSScrollViewPage : Xamarin.Forms.MasterDetailPage
     {
         ICommand _returnToPlatformSpecificsPage;
 

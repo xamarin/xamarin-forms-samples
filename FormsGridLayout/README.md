@@ -16,6 +16,3 @@ GridLayoutDemo is based off of https://github.com/xamarin/monodroid-samples/tree
 
 ![GridLayoutDemo application screenshot](Screenshots/GridLayoutAndroid.png "GridLayoutDemo application screenshot")
 
-## Author
-
-Peter Collins

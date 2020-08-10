@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Resx\AppResources.de-CH.Designer.cs" />
+    <Compile Remove="Resx\AppResources.de.Designer.cs" />
+    <Compile Remove="Resx\AppResources.es.Designer.cs" />
+    <Compile Remove="Resx\AppResources.fr.Designer.cs" />
+    <Compile Remove="Resx\AppResources.ja.Designer.cs" />
+    <Compile Remove="Resx\AppResources.pt-BR.Designer.cs" />
+    <Compile Remove="Resx\AppResources.pt.Designer.cs" />
+    <Compile Remove="Resx\AppResources.zh-Hans.Designer.cs" />
+    <Compile Remove="Resx\AppResources.zh-Hant.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="LocalizedXamlPage.xaml.cs">
+      <DependentUpon>LocalizedXamlPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Resx\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="LocalizedXamlPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resx\AppResources.es.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resx\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LocalizedPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+</Project>

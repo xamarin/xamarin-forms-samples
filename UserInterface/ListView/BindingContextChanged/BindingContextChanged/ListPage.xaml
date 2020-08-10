@@ -1,14 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:BindingContextChanged;assembly=BindingContextChanged" x:Class="BindingContextChanged.ListPage">
-	<StackLayout Padding="0,20,0,0">
-		<Label Text="Binding Context Changed Demo" HorizontalOptions="Center" FontAttributes="Bold" />
-		<ListView x:Name="listView">
-			<ListView.ItemTemplate>
-				<DataTemplate>
-					<local:CustomCell Name="{Binding Name}" Age="{Binding Age}" Location="{Binding Location}" />
-				</DataTemplate>
-			</ListView.ItemTemplate>
-		</ListView>
-		<Button Text="Change Binding Context" Clicked="OnButtonClicked" />
-	</StackLayout>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:BindingContextChanged.CustomControls"
+             x:Class="BindingContextChanged.ListPage"
+             Padding="10"
+             Title="BindingContextChanged XAML Demo">
+    <StackLayout>
+        <ListView x:Name="listView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <controls:CustomCell Name="{Binding Name}"
+                                         Age="{Binding Age}"
+                                         Location="{Binding Location}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Change Binding Context"
+                Clicked="OnButtonClicked" />
+    </StackLayout>
 </ContentPage>

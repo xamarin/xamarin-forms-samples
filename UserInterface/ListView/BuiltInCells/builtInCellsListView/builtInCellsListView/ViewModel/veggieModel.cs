@@ -1,17 +1,11 @@
-﻿using System;
-
-namespace builtInCellsListView
+﻿namespace builtInCellsListView
 {
-	public class veggieModel
-	{
-		public string name { get; set ; }
-		public string comment { get; set; }
-		public bool isReallyAVeggie { get; set; } //set false for de jure vegetables, like pizza
-		public string image {get; set;}
-
-		public veggieModel ()
-		{
-		}
-	}
+    public class VeggieModel
+    {
+        public string Name { get; set; }
+        public string Comment { get; set; }
+        public bool IsAVeggie { get; set; } //set false for de jure vegetables, like pizza
+        public string Image { get; set; }
+    }
 }
 

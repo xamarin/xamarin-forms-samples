@@ -95,6 +95,25 @@
 
             </TableSection>
 
+            <TableSection Title="Relative Bindings">
+
+                <TextCell Text="Relative bindings to self"
+                          Detail="Define the binding source using Self mode"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:RelativeSourceSelfPage}" />
+
+                <TextCell Text="Relative bindings to an ancestor"
+                          Detail="Define the binding source using FindAncestor mode"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:RelativeSourceFindAncestorPage}" />
+
+                <TextCell Text="Relative bindings to a templated parent"
+                          Detail="Define the binding source using TemplatedParent mode"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:RelativeSourceTemplatedParentPage}" />              
+
+            </TableSection>
+
             <TableSection Title="Binding Fallbacks">
 
                 <TextCell Text="TargetNullValue and FallbackValue"

@@ -18,3 +18,4 @@ XAML—the eXtensible Application Markup Language—allows developers to define 
 These samples relate to the [Xamarin.Forms XAML Basics](https://docs.microsoft.com/xamarin/xamarin-forms/xaml/xaml-basics/) article.
 
 ![XAML Samples application screenshot](Screenshots/01XamlSamples.png "XAML Samples application screenshot")
+

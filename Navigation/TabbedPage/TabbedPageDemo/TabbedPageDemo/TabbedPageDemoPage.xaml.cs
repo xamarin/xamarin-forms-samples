@@ -7,7 +7,6 @@ namespace TabbedPageDemo
 		public TabbedPageDemoPage ()
 		{
 			InitializeComponent ();
-			ItemsSource = MonkeyDataModel.All;
 		}
 	}
 }

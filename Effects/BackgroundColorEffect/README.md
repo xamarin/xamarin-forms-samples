@@ -16,6 +16,3 @@ For more information about the sample see [Creating an Effect](https://docs.micr
 
 ![BackgroundColor Effect application screenshot](Screenshots/01All.png "BackgroundColor Effect application screenshot")
 
-## Author
-
-David Britch

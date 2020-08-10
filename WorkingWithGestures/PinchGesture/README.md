@@ -16,6 +16,3 @@ For more information about the sample see [Working with Gestures](https://docs.m
 
 ![PinchGesture application screenshot](Screenshots/01All.png "PinchGesture application screenshot")
 
-## Author
-
-David Britch

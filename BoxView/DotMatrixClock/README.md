@@ -16,7 +16,3 @@ This sample is described in more detail in the article on [BoxView](/guides/xama
 
 ![Dot-Matrix Clock application screenshot](Screenshots/01Triple.png "Dot-Matrix Clock application screenshot")
 
-## Author
-
-Charles Petzold
-

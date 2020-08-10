@@ -18,3 +18,4 @@ The SearchBar is a user input control used for initiating a search. The SearchBa
 For more information about this sample, see [Xamarin.Forms SearchBar](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/searchbar).
 
 ![Android and iOS apps with a search bar](Screenshots/01SearchBars.png)
+

@@ -1,6 +1,6 @@
 ---
-name: Xamarin.Forms - Localization with RESX
-description: 'Sample code for the Xamarin.Forms Localization doc.'
+name: Xamarin.Forms - ResX Localization demo
+description: "This sample demonstrates how to localize text using Resx resource files."
 page_type: sample
 languages:
 - csharp
@@ -8,10 +8,11 @@ products:
 - xamarin
 urlFragment: usingresxlocalization
 ---
-# Xamarin.Forms Localization with RESX
 
-Sample code for the [Xamarin.Forms Localization](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/localization/) doc.
+# Xamarin.Forms Localization Demo
 
-![Example screenshots](Screenshots/all-sml.png)
+Localization is the process of adapting an application to meet the specific language or cultural requirements of a target market. This sample localizes text and images for multiple supported cultures.
 
-FYI: updated [language fallback information for Android 7/API 24](https://developer.android.com/guide/topics/resources/multilingual-support).
+For more information about this sample, see [Xamarin.Forms Localization](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/localization/text).
+
+![Screenshots of the sample application on iOS and Android](Screenshots/usingresxlocalization-screenshots.png)

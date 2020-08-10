@@ -2,6 +2,7 @@
 #define FIX_UWP_NULL_CONTENT  // Set Content of Frame to null doesn't work in UWP as of 2.3.0
 
 using System;
+using System.Reflection;
 using Xamarin.Forms;
 
 namespace BugSweeper
@@ -26,8 +27,9 @@ namespace BugSweeper
 
         static Tile()
         {
-            flagImageSource = ImageSource.FromResource("BugSweeper.Images.Xamarin120.png");
-            bugImageSource = ImageSource.FromResource("BugSweeper.Images.RedBug.png");
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            flagImageSource = ImageSource.FromResource("BugSweeper.Images.Xamarin120.png", assembly);
+            bugImageSource = ImageSource.FromResource("BugSweeper.Images.RedBug.png", assembly);
         }
 
         public Tile(int row, int col)

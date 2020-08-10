@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:RoundEffectDemo"
+             mc:Ignorable="d"
+             x:Class="RoundEffectDemo.MainPage"
+             Padding="10,40,10,10">
+
+    <StackLayout>
+        <Label Text="Some common Xamarin.Forms controls with the RoundEffect applied:"
+               HorizontalOptions="Start"/>
+        <Button Text="Button"
+                BackgroundColor="Orange"
+                TextColor="White"
+                HorizontalOptions="Center"
+                HeightRequest="100"
+                WidthRequest="100">
+            <Button.Effects>
+                <local:RoundEffect />
+            </Button.Effects>
+        </Button>
+        <BoxView Color="Purple"
+                 HorizontalOptions="Center"
+                 HeightRequest="100"
+                 WidthRequest="100">
+            <BoxView.Effects>
+                <local:RoundEffect />
+            </BoxView.Effects>
+        </BoxView>
+        <Image Source="outdoors"
+               HorizontalOptions="Center"
+               HeightRequest="100"
+               WidthRequest="100">
+            <Image.Effects>
+                <local:RoundEffect />
+            </Image.Effects>
+        </Image>
+    </StackLayout>
+
+</ContentPage>

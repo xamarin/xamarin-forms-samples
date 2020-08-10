@@ -4,13 +4,12 @@
              xmlns:local="clr-namespace:VsmDemos"
              x:Class="VsmDemos.HomePage"
              Title="VSM Demos">
-
-
-
     <ContentPage.Resources>
         <Style TargetType="Button">
-            <Setter Property="HorizontalOptions" Value="Center" />
-            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="HorizontalOptions"
+                    Value="Center" />
+            <Setter Property="VerticalOptions"
+                    Value="CenterAndExpand" />
         </Style>
     </ContentPage.Resources>
 
@@ -19,15 +18,15 @@
             <Button Text="VSM on View"
                     Command="{Binding NavigateCommand}"
                     CommandParameter="{x:Type local:VsmOnViewPage}" />
-
             <Button Text="VSM in Style"
                     Command="{Binding NavigateCommand}"
                     CommandParameter="{x:Type local:VsmInStylePage}" />
-
+            <Button Text="VSM with Setter TargetName"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="{x:Type local:VsmSetterTargetNamePage}" />
             <Button Text="VSM Validation"
                     Command="{Binding NavigateCommand}"
                     CommandParameter="{x:Type local:VsmValidationPage}" />
-
             <Button Text="VSM Adaptive Layout"
                     Command="{Binding NavigateCommand}"
                     CommandParameter="{x:Type local:VsmAdaptiveLayoutPage}" />

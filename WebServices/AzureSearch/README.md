@@ -17,6 +17,3 @@ For more information about this sample see [Search Data with Azure Search](https
 
 ![Azure Search application screenshot](Screenshots/01All.png "Azure Search application screenshot")
 
-## Author
-
-David Britch

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:CarouselViewDemos.Controls"
+             xmlns:viewmodels="clr-namespace:CarouselViewDemos.ViewModels"
+             x:Class="CarouselViewDemos.Views.HorizontalLayoutDataTemplateSelectorPage"
+             Title="Horizontal layout (DataTemplateSelector)">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="AmericanMonkeyTemplate">
+            <StackLayout>
+                <Frame HasShadow="True"
+                       BorderColor="DarkGray"
+                       CornerRadius="5"
+                       Margin="20"
+                       HeightRequest="300"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Label Text="{Binding Name}" 
+                               FontAttributes="Bold"
+                               FontSize="Large"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                        <Image Source="{Binding ImageUrl}" 
+                               Aspect="AspectFill"
+                               HeightRequest="150"
+                               WidthRequest="150"
+                               HorizontalOptions="Center" />
+                        <Label Text="{Binding Location}"
+                               HorizontalOptions="Center" />
+                        <Label Text="{Binding Details}"
+                               FontAttributes="Italic"
+                               HorizontalOptions="Center"
+                               MaxLines="5"
+                               LineBreakMode="TailTruncation" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </DataTemplate>
+
+        <DataTemplate x:Key="OtherMonkeyTemplate">
+            <StackLayout>
+                <Frame HasShadow="True"
+                       BorderColor="DarkGray"
+                       CornerRadius="5"
+                       Margin="20"
+                       HeightRequest="300"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Label Text="{Binding Name}"
+                               TextColor="Silver"
+                               FontAttributes="Bold"
+                               FontSize="Large"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                        <Image Source="{Binding ImageUrl}" 
+                               Aspect="AspectFill"
+                               Opacity="0.5"
+                               HeightRequest="150"
+                               WidthRequest="150"
+                               HorizontalOptions="Center" />
+                        <Label Text="{Binding Location}"
+                               TextColor="Silver"
+                               HorizontalOptions="Center" />
+                        <Label Text="{Binding Details}"
+                               TextColor="Silver"
+                               FontAttributes="Italic"
+                               HorizontalOptions="Center"
+                               MaxLines="5"
+                               LineBreakMode="TailTruncation" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </DataTemplate>
+
+        <controls:MonkeyDataTemplateSelector x:Key="MonkeySelector"
+                                             AmericanMonkey="{StaticResource AmericanMonkeyTemplate}"
+                                             OtherMonkey="{StaticResource OtherMonkeyTemplate}" />
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <viewmodels:MonkeysViewModel />
+    </ContentPage.BindingContext>
+
+    <CarouselView ItemsSource="{Binding Monkeys}"
+                  ItemTemplate="{StaticResource MonkeySelector}" />
+</ContentPage>

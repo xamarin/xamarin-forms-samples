@@ -14,6 +14,3 @@ This app loads an image that is embedded as a resource in a shared project, resi
 
 ![Xamarin Forms Image Resizer application screenshot](Screenshots/Android1.png "Xamarin Forms Image Resizer application screenshot")
 
-## Authors
-
-Bryan Costanich

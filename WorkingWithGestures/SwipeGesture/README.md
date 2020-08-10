@@ -16,6 +16,3 @@ For more information about this sample, see [Adding a swipe gesture recognizer](
 
 ![SwipeGesture application screenshot](Screenshots/01All.png "SwipeGesture application screenshot")
 
-## Author
-
-David Britch

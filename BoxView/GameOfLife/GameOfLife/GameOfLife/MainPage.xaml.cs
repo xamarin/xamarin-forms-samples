@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Linq;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace GameOfLife
 {
@@ -165,10 +165,10 @@ namespace GameOfLife
             aboutText.IsVisible = true;
         }
 
-        void OnHyperlinkTapped(object sender, EventArgs args)
+        async void OnHyperlinkTapped(object sender, EventArgs args)
         {
             Label label = (Label)sender;
-            Device.OpenUri(new Uri(label.Text));
+            await Launcher.OpenAsync(label.Text);
         }
 
         private void OnCloseButtonClicked(object sender, EventArgs args)

@@ -18,3 +18,4 @@ Sample code associated with the [Xamarin.Forms layout docs](https://docs.microso
 The code shows how various layouts can be used to create user interfaces that work well in portrait and landscape orientations.
 
 ![iOS screenshot showing a grid layout adjusted for horizontal/landscape layout](Screenshots/ios-grid-h.png)
+

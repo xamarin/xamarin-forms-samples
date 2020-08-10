@@ -17,6 +17,3 @@ For more information about this sample see [Storing and Accessing Data in Azure 
 
 ![Azure Storage application screenshot](Screenshots/01All.png "Azure Storage application screenshot")
 
-## Author
-
-David Britch

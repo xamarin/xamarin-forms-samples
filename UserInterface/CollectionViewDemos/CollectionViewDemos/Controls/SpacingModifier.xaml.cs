@@ -27,9 +27,9 @@ namespace CollectionViewDemos.Controls
             {
                 return;
             }
-            if (CV.ItemsLayout is ListItemsLayout listItemsLayout)
+            if (CV.ItemsLayout is LinearItemsLayout linearItemsLayout)
             {
-                listItemsLayout.ItemSpacing = indexes[0];
+                linearItemsLayout.ItemSpacing = indexes[0];
             }
             else if (CV.ItemsLayout is GridItemsLayout gridItemsLayout)
             {
@@ -40,7 +40,7 @@ namespace CollectionViewDemos.Controls
 
         bool ParseIndexes(out int[] indexes)
         {
-            if (CV.ItemsLayout is ListItemsLayout listItemsLayout)
+            if (CV.ItemsLayout is LinearItemsLayout)
             {
                 return IndexParser.ParseIndexes(entry.Text, 1, out indexes);
             }

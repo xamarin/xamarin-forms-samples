@@ -23,3 +23,4 @@ For more information about this sample, see [Behaviors](https://developer.xamari
 ```
 
 ![NumericValidation Behavior application screenshot](Screenshots/01All.png "NumericValidation Behavior application screenshot")
+

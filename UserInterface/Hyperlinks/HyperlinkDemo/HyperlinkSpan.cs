@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace HyperlinkDemo
@@ -19,7 +19,7 @@ namespace HyperlinkDemo
             TextColor = Color.Blue;
             GestureRecognizers.Add(new TapGestureRecognizer
             {
-                Command = new Command(() => Device.OpenUri(new Uri(Url)))
+                Command = new Command(async () => await Launcher.OpenAsync(Url))
             });
         }
     }

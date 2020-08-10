@@ -22,6 +22,3 @@ SpinPaint demonstrates the use of SkiaSharp in a Xamarin.Forms application. For 
 
 ![SpinPaintShared application screenshot](Screenshots/Image0.png "SpinPaintShared application screenshot")
 
-## Author
-
-Charles Petzold

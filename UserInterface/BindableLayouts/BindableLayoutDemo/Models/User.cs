@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace BindableLayoutDemo.Models
 {
@@ -9,5 +10,6 @@ namespace BindableLayoutDemo.Models
         public IEnumerable<string> TopFollowers { get; set; }
         public IEnumerable<string> FavoriteTech { get; set; }
         public IEnumerable<string> Achievements { get; set; }
+        public ObservableCollection<string> ObservableAchievements { get; set; }
     }
 }

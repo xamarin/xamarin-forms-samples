@@ -34,7 +34,3 @@ The accompanying Xamarin.Forms sample application consumes a Xamarin-hosted ASMX
 
 For more information about publishing to an Azure Web App, see [Creating an ASP.NET web app in Azure App Service](https://azure.microsoft.com/en-gb/documentation/articles/web-sites-dotnet-get-started/#create-an-aspnet-web-application).
 
-Author
-------
-
-David Britch

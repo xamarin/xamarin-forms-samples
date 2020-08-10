@@ -16,6 +16,3 @@ LabelledSections is based off of https://github.com/xamarin/monodroid-samples/tr
 
 ![LabelledSections application screenshot](Screenshots/LabelledSections_Android.png "LabelledSections application screenshot")
 
-## Author
-
-Peter Collins

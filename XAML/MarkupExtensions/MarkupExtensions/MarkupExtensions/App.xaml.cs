@@ -1,15 +1,15 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
+//[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace MarkupExtensions
 {
     public partial class App : Application
     {
         public App()
         {
+            Device.SetFlags(new string[] { "AppTheme_Experimental" });
             InitializeComponent();
-
             MainPage = new NavigationPage(new MainPage());
         }
 

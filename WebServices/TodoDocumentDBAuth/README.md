@@ -18,6 +18,3 @@ For more information about this sample see [Authenticating Users with Azure Cosm
 
 ![Todo Azure Cosmos DB Auth application screenshot](Screenshots/01All.png "Todo Azure Cosmos DB Auth application screenshot")
 
-## Author
-
-David Britch

@@ -15,3 +15,4 @@ Behaviors are a useful approach for adding an effect to a control, removing boil
 For more information about this sample, see [Behaviors](https://developer.xamarin.com/guides/xamarin-forms/behaviors/).
 
 ![Effect Behavior application screenshot](Screenshots/01All.png "Effect Behavior application screenshot")
+

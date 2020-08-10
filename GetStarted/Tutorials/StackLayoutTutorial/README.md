@@ -18,3 +18,4 @@ This sample demonstrates how to organize views in a one-dimensional stack, with 
 For more information about this sample, see [StackLayout Tutorial](https://docs.microsoft.com/xamarin/get-started/tutorials/stacklayout/).
 
 ![StackLayout Tutorial application screenshot](Screenshots/01All.png "StackLayout Tutorial application screenshot")
+

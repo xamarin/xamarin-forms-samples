@@ -14,6 +14,3 @@ These samples relate to the [Working with Files in Xamarin.Forms](https://docs.m
 
 ![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/WorkingWithFiles/Screenshots/SaveAndLoad-sml.png "Save and load a file")
 
-## Author
-
-Craig Dunn

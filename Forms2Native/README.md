@@ -16,6 +16,3 @@ For more samples, and more information about this sample see [Native Views](http
 
 ![Forms2Native application screenshot](Screenshots/01All.png "Forms2Native application screenshot")
 
-## Author
-
-Charles Petzold / David Britch

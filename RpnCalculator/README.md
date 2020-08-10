@@ -30,6 +30,3 @@ The calculator logic is encapsulated in the **RpnCalculatorViewModel.cs** file. 
 
 ![RPN Calculator application screenshot](Screenshots/01Portrait.a.png "RPN Calculator application screenshot")
 
-## Author
-
-Charles Petzold

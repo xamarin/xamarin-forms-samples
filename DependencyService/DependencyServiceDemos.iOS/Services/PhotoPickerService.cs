@@ -30,7 +30,7 @@ namespace DependencyServiceDemos.iOS
             // Present UIImagePickerController;
             UIWindow window = UIApplication.SharedApplication.KeyWindow;
             var viewController = window.RootViewController;
-            viewController.PresentModalViewController(imagePicker, true);
+            viewController.PresentViewController(imagePicker, true, null);
 
             // Return Task object
             taskCompletionSource = new TaskCompletionSource<Stream>();
@@ -44,7 +44,15 @@ namespace DependencyServiceDemos.iOS
             if (image != null)
             {
                 // Convert UIImage to .NET Stream object
-                NSData data = image.AsJPEG(1);
+                NSData data;
+                if (args.ReferenceUrl.PathExtension.Equals("PNG") || args.ReferenceUrl.PathExtension.Equals("png"))
+                {
+                    data = image.AsPNG();
+                }
+                else
+                {
+                    data = image.AsJPEG(1);
+                }
                 Stream stream = data.AsStream();
 
                 UnregisterEventHandlers();

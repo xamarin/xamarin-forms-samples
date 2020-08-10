@@ -58,17 +58,6 @@ namespace FormsGallery.CodeExamples
             NamedColorPage detailPage = new NamedColorPage (true);
             Detail = detailPage;
 
-            // For Android & Windows Phone, provide a way to get back to the master page.
-            if (Device.RuntimePlatform != Device.iOS) {
-                TapGestureRecognizer tap = new TapGestureRecognizer ();
-                tap.Tapped += (sender, args) => {
-                    IsPresented = true;
-                };
-
-                detailPage.Content.BackgroundColor = Color.Transparent;
-                detailPage.Content.GestureRecognizers.Add (tap);
-            }
-
             // Define a selected handler for the ListView.
             listView.ItemSelected += (sender, args) => {
                 // Set the BindingContext of the detail page.

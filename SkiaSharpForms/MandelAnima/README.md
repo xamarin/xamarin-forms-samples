@@ -34,12 +34,3 @@ For some devices, the animation runs smoother if the program is not being run un
 
 ![Mandelbrot Animation application screenshot](Screenshots/MandelbrotAnimation.png "Mandelbrot Animation application screenshot")
 
-## Author
-Charles Petzold
-
-
-
-
-
-
-

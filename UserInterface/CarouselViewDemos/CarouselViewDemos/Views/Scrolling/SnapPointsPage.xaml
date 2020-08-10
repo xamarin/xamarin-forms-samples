@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:CarouselViewDemos.Controls"
+             xmlns:viewmodels="clr-namespace:CarouselViewDemos.ViewModels"
+             x:Class="CarouselViewDemos.Views.SnapPointsPage"
+             Title="Snap points">
+    <ContentPage.BindingContext>
+        <viewmodels:MonkeysViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout Margin="20">
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center">
+            <Label Text="SnapPointsType: "
+                   VerticalTextAlignment="Center" />
+            <controls:EnumPicker x:Name="snapPointsTypeEnumPicker"
+                                 EnumType="{x:Type SnapPointsType}"
+                                 SelectedIndex="2"
+                                 SelectedIndexChanged="OnSnapPointsTypeSelectedIndexChanged" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center">
+            <Label Grid.Row="1" 
+                   Text="SnapPointsAlignment: "
+                   VerticalTextAlignment="Center" />
+            <controls:EnumPicker x:Name="snapPointsAlignmentEnumPicker"
+                                 EnumType="{x:Type SnapPointsAlignment}"
+                                 SelectedIndex="1"
+                                 SelectedIndexChanged="OnSnapPointsAlignmentSelectedIndexChanged" />
+        </StackLayout>
+        <CarouselView x:Name="carouselView"
+                      ItemsSource="{Binding Monkeys}"
+                      PeekAreaInsets="100">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HasShadow="True"
+                               BorderColor="DarkGray"
+                               CornerRadius="5"
+                               Margin="20"
+                               HorizontalOptions="Center"
+                               VerticalOptions="StartAndExpand">
+                            <Image Source="{Binding ImageUrl}" 
+                                   Aspect="AspectFit"
+                                   HeightRequest="100"
+                                   WidthRequest="100"
+                                   HorizontalOptions="Center" />
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </StackLayout>
+</ContentPage>

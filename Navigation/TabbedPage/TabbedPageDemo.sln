@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabbedPageDemo.iOS", "TabbedPageDemo\TabbedPageDemo.iOS\TabbedPageDemo.iOS.csproj", "{7D1FC663-9B31-4A67-8B71-8229AC3B6AA2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabbedPageDemo.Android", "TabbedPageDemo\TabbedPageDemo.Android\TabbedPageDemo.Android.csproj", "{24235403-A19F-489C-BDC5-3E2861874425}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabbedPageDemo", "TabbedPageDemo\TabbedPageDemo\TabbedPageDemo.csproj", "{E9CB8FE6-7B7F-4837-BB78-6F9198E66690}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TabbedPageDemo", "TabbedPageDemo\TabbedPageDemo\TabbedPageDemo.csproj", "{E9CB8FE6-7B7F-4837-BB78-6F9198E66690}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabbedPageDemo.UWP", "TabbedPageDemo\TabbedPageDemo.UWP\TabbedPageDemo.UWP.csproj", "{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}"
 EndProject
@@ -267,9 +267,6 @@ Global
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|x64
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|x64
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Ad-Hoc|iPhoneSimulator.Deploy.0 = Release|x64
-		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Ad-Hoc|Mixed Platforms.ActiveCfg = Release|x86
-		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Ad-Hoc|Mixed Platforms.Build.0 = Release|x86
-		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Ad-Hoc|Mixed Platforms.Deploy.0 = Release|x86
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Ad-Hoc|x64.ActiveCfg = Release|x64
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Ad-Hoc|x64.Build.0 = Release|x64
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Ad-Hoc|x64.Deploy.0 = Release|x64
@@ -288,9 +285,6 @@ Global
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.AppStore|iPhoneSimulator.ActiveCfg = Release|x64
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.AppStore|iPhoneSimulator.Build.0 = Release|x64
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.AppStore|iPhoneSimulator.Deploy.0 = Release|x64
-		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.AppStore|Mixed Platforms.ActiveCfg = Release|x86
-		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.AppStore|Mixed Platforms.Build.0 = Release|x86
-		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.AppStore|Mixed Platforms.Deploy.0 = Release|x86
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.AppStore|x64.ActiveCfg = Release|x64
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.AppStore|x64.Build.0 = Release|x64
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.AppStore|x64.Deploy.0 = Release|x64
@@ -303,9 +297,8 @@ Global
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Debug|ARM.Deploy.0 = Debug|ARM
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Debug|iPhone.ActiveCfg = Debug|x86
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
-		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Debug|Mixed Platforms.Deploy.0 = Debug|x86
+		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Debug|iPhoneSimulator.Build.0 = Debug|x86
+		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Debug|iPhoneSimulator.Deploy.0 = Debug|x86
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Debug|x64.ActiveCfg = Debug|x64
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Debug|x64.Build.0 = Debug|x64
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Debug|x64.Deploy.0 = Debug|x64
@@ -318,9 +311,8 @@ Global
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Release|ARM.Deploy.0 = Release|ARM
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Release|iPhone.ActiveCfg = Release|x86
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Release|iPhoneSimulator.ActiveCfg = Release|x86
-		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Release|Mixed Platforms.Build.0 = Release|x86
-		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Release|Mixed Platforms.Deploy.0 = Release|x86
+		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Release|iPhoneSimulator.Build.0 = Release|x86
+		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Release|iPhoneSimulator.Deploy.0 = Release|x86
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Release|x64.ActiveCfg = Release|x64
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Release|x64.Build.0 = Release|x64
 		{C7627878-B1EC-4C5C-A5CC-64D447DAB31A}.Release|x64.Deploy.0 = Release|x64
@@ -330,5 +322,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {610E4E18-8B6B-4436-9FD5-1F186606F31C}
 	EndGlobalSection
 EndGlobal

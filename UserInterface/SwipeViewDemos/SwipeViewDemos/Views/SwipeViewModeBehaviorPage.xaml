@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:SwipeViewDemos.Controls"
+             x:Class="SwipeViewDemos.SwipeViewModeBehaviorPage"
+             Title="SwipeView mode and behavior demo">
+    <StackLayout Margin="20">
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center">
+            <Label Text="SwipeMode:"
+                   VerticalTextAlignment="Center" />
+            <controls:EnumPicker x:Name="modeEnumPicker"
+                                 EnumType="{x:Type SwipeMode}"
+                                 SelectedIndex="0"
+                                 SelectedIndexChanged="OnSwipeViewModeChanged" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center">
+            <Label Text="SwipeBehaviorOnInvoked:"
+                   VerticalTextAlignment="Center" />
+            <controls:EnumPicker x:Name="behaviorEnumPicker"
+                                 EnumType="{x:Type SwipeBehaviorOnInvoked}"
+                                 SelectedIndex="0"
+                                 SelectedIndexChanged="OnSwipeViewBehaviorChanged" />
+        </StackLayout>
+        <SwipeView x:Name="swipeView1">
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem Text="Delete"
+                               IconImageSource="delete.png"
+                               BackgroundColor="LightPink"
+                               Invoked="OnDeleteSwipeItemInvoked" />
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <Grid HeightRequest="60"
+                  WidthRequest="300"
+                  BackgroundColor="LightGray">
+                <Label Text="Swipe right (1 SwipeItem)"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+        <SwipeView x:Name="swipeView2">
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem Text="Favorite"
+                               IconImageSource="favorite.png"
+                               BackgroundColor="LightGreen"
+                               Invoked="OnFavoriteSwipeItemInvoked" />
+                    <SwipeItem Text="Delete"
+                               IconImageSource="delete.png"
+                               BackgroundColor="LightPink"
+                               Invoked="OnDeleteSwipeItemInvoked" />
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <Grid HeightRequest="60"
+                  WidthRequest="300"
+                  BackgroundColor="LightGray">
+                <Label Text="Swipe right (2 SwipeItems)"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+    </StackLayout>
+</ContentPage>

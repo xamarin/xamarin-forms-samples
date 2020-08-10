@@ -1,11 +1,5 @@
-﻿using System;
-
-using Android.App;
-using Android.Content;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 
 namespace PlatformSpecifics.Droid
@@ -20,7 +14,8 @@ namespace PlatformSpecifics.Droid
 
 			base.OnCreate(bundle);
 
-			global::Xamarin.Forms.Forms.Init(this, bundle);
+            Xamarin.Forms.Forms.SetFlags("SwipeView_Experimental");
+            global::Xamarin.Forms.Forms.Init(this, bundle);
 
 			LoadApplication(new App());
 		}

@@ -18,3 +18,4 @@ This sample demonstrates a multi-page Xamarin.Forms application that's styled wi
 For more information about the sample see [Style a Cross-Platform Xamarin.Forms Application](https://docs.microsoft.com/xamarin/get-started/quickstarts/styled).
 
 ![Notes (styled) application screenshot](Screenshots/01All.png "Notes (styled) application screenshot")
+

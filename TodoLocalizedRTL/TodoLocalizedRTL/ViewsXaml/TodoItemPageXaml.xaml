@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:TodoLocalized" x:Class="TodoLocalized.TodoItemPageXaml" Title="{Binding Name}" FlowDirection="{x:Static Device.FlowDirection}">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resx="clr-namespace:TodoLocalized.Resx"
+             x:Class="TodoLocalized.TodoItemPageXaml"
+             Title="{Binding Name}"
+             FlowDirection="{x:Static Device.FlowDirection}">
     <StackLayout Margin="20">
-        <Label Text="{local:Translate NameLabel}" />
+        <Label Text="{x:Static resx:AppResources.NameLabel}" />
         <Entry Text="{Binding Path=Name}" />
-        <Label Text="{local:Translate NotesLabel}" />
+        <Label Text="{x:Static resx:AppResources.NotesLabel}" />
         <Entry Text="{Binding Path=Notes}" />
-        <Label Text="{local:Translate DoneLabel}" />
+        <Label Text="{x:Static resx:AppResources.DoneLabel}" />
         <Switch IsToggled="{Binding Path=Done}" />
-        <Button Text="{local:Translate SaveButton}" Clicked="OnSave" />
-        <Button Text="{local:Translate DeleteButton}" Clicked="OnDelete" />
-        <Button Text="{local:Translate CancelButton}" Clicked="OnCancel" />
-        <Button Text="{local:Translate SpeakButton}" Clicked="OnSpeak" />
+        <Button Text="{x:Static resx:AppResources.SaveButton}" Clicked="OnSave" />
+        <Button Text="{x:Static resx:AppResources.DeleteButton}" Clicked="OnDelete" />
+        <Button Text="{x:Static resx:AppResources.CancelButton}" Clicked="OnCancel" />
+        <Button Text="{x:Static resx:AppResources.SpeakButton}" Clicked="OnSpeak" />
     </StackLayout>
 </ContentPage>

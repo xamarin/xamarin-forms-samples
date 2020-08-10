@@ -24,6 +24,3 @@ For more information about the sample see [Consuming a RESTful Web Service](http
 
 ![TodoREST application screenshot](Screenshots/01All.png "TodoREST application screenshot")
 
-## Author
-
-David Britch

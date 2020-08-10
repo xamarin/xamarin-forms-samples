@@ -16,6 +16,3 @@ For more information about the sample see [Working with Gestures](https://docs.m
 
 ![TapGesture application screenshot](Screenshots/Android.png "TapGesture application screenshot")
 
-## Authors
-
-Charles Petzold, Craig Dunn

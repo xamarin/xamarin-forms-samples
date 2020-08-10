@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ControlTemplateDemos.Controls"
+             x:Class="ControlTemplateDemos.Controls.HeaderFooterPage">
+    <ContentPage.Resources>
+        <Style TargetType="Entry">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="FontSize"
+                                        Value="18" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Focused">
+                            <VisualState.Setters>
+                                <Setter Property="FontSize"
+                                        Value="36" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+
+        <ControlTemplate x:Key="TealTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.1*" />
+                    <RowDefinition Height="0.8*" />
+                    <RowDefinition Height="0.1*" />
+                </Grid.RowDefinitions>
+                <BoxView Color="Teal" />
+                <Label Margin="20,0,0,0"
+                       Text="{TemplateBinding HeaderText}"
+                       TextColor="White"
+                       FontSize="Title"
+                       VerticalOptions="Center" />
+                <ContentPresenter Grid.Row="1" />
+                <BoxView Grid.Row="2"
+                         Color="Teal" />
+                <Label x:Name="changeThemeLabel"
+                       Grid.Row="2"
+                       Margin="20,0,0,0"
+                       Text="Change Theme"
+                       TextColor="White"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnChangeThemeLabelTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <controls:HyperlinkLabel Grid.Row="2"
+                                         Margin="0,0,20,0"
+                                         Text="Help"
+                                         TextColor="White"
+                                         Url="https://docs.microsoft.com/xamarin/xamarin-forms/"
+                                         HorizontalOptions="End"
+                                         VerticalOptions="Center" />
+            </Grid>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="AquaTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.1*" />
+                    <RowDefinition Height="0.8*" />
+                    <RowDefinition Height="0.1*" />
+                </Grid.RowDefinitions>
+                <BoxView Color="Aqua" />
+                <Label Margin="20,0,0,0"
+                       Text="{TemplateBinding HeaderText}"
+                       TextColor="Black"
+                       FontSize="Title"
+                       VerticalOptions="Center" />
+                <ContentPresenter Grid.Row="1" />
+                <BoxView Grid.Row="2"
+                         Color="Aqua" />
+                <Label x:Name="changeThemeLabel"
+                       Grid.Row="2" 
+                       Margin="20,0,0,0"
+                       Text="Change Theme"
+                       TextColor="Black"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnChangeThemeLabelTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <controls:HyperlinkLabel Grid.Row="2"
+                                         Margin="0,0,20,0"
+                                         Text="Help"
+                                         TextColor="Black"
+                                         Url="https://docs.microsoft.com/xamarin/xamarin-forms/"
+                                         HorizontalOptions="End"
+                                         VerticalOptions="Center" />
+            </Grid>
+        </ControlTemplate>
+
+    </ContentPage.Resources>
+</ContentPage>

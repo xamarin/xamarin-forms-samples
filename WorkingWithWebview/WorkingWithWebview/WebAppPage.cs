@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace WorkingWithWebview
@@ -16,18 +16,18 @@ namespace WorkingWithWebview
             {
                 Text = "Open location using built-in Web Browser app"
             };
-            openUrl.Clicked += (sender, e) =>
+            openUrl.Clicked += async (sender, e) =>
             {
-                Device.OpenUri(new Uri("http://xamarin.com/evolve"));
+                await Launcher.OpenAsync("http://xamarin.com/evolve");
             };
 
             var makeCall = new Button
             {
                 Text = "Make call using built-in Phone app"
             };
-            makeCall.Clicked += (sender, e) =>
+            makeCall.Clicked += async (sender, e) =>
             {
-                Device.OpenUri(new Uri("tel:1855XAMARIN"));
+                await Launcher.OpenAsync("tel:1855XAMARIN");
             };
 
             Content = new StackLayout

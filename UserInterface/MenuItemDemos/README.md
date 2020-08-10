@@ -18,3 +18,4 @@ The `MenuItem` class is used to create menu items for menus such as `ListView` i
 For more information about this sample, see [Xamarin.Forms MenuItem](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/menuitem).
 
 ![Sample MenuItem application screenshot](Screenshots/01menuitem-demo-full.png "Sample MenuItem application screenshot")
+

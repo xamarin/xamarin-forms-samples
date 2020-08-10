@@ -16,6 +16,3 @@ This program was the focus of a webinar. To see the program built from the groun
 
 ![Cat Clock application screenshot](Screenshots/01CatClock.png "Cat Clock application screenshot")
 
-## Author
-
-Charles Petzold

@@ -16,6 +16,3 @@ For more information about the sample see [Adding a Pan Gesture Recognizer](http
 
 ![PanGesture application screenshot](Screenshots/01All.png "PanGesture application screenshot")
 
-## Author
-
-David Britch

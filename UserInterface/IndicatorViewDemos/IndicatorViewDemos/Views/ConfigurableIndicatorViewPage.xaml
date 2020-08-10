@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:IndicatorViewDemos.Controls"
+             xmlns:viewmodels="clr-namespace:IndicatorViewDemos.ViewModels"
+             x:Class="IndicatorViewDemos.Views.ConfigurableIndicatorViewPage"
+             Title="Configurable IndicatorView demo">
+    <ContentPage.BindingContext>
+        <viewmodels:MonkeysViewModel />
+    </ContentPage.BindingContext>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="0.5*" />
+        </Grid.ColumnDefinitions>
+        <Label Text="IndicatorColor:"
+               HorizontalOptions="End"
+               VerticalTextAlignment="Center" />
+        <Picker x:Name="indicatorColorPicker"
+                Grid.Column="1"
+                HorizontalOptions="Start"
+                SelectedIndexChanged="OnIndicatorColorChanged" />
+        <Label Grid.Row="1"
+               Text="SelectedIndicatorColor:"
+               HorizontalOptions="End"
+               VerticalTextAlignment="Center" />
+        <Picker x:Name="selectedIndicatorColorPicker"
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalOptions="Start"
+                SelectedIndexChanged="OnIndicatorColorChanged" />
+        <Label Grid.Row="2"
+               Text="IndicatorShape:"
+               VerticalTextAlignment="Center"
+               HorizontalOptions="End" />
+        <controls:EnumPicker Grid.Row="2"
+                             Grid.Column="1"
+                             EnumType="{x:Type IndicatorShape}"
+                             SelectedIndex="0"
+                             SelectedIndexChanged="OnIndicatorShapeChanged"
+                             HorizontalOptions="Start" />
+        <Label Grid.Row="3"
+               Text="MaximumVisible:"
+               VerticalTextAlignment="Center"
+               HorizontalOptions="End" />
+        <Picker x:Name="maximumVisbilePicker"
+                Grid.Row="3"
+                Grid.Column="1"
+                HorizontalOptions="Start"
+                SelectedIndexChanged="OnMaximumVisibleChanged">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>5</x:String>
+                    <x:String>10</x:String>
+                    <x:String>15</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label Grid.Row="4"
+               Text="IndicatorSize:"
+               VerticalTextAlignment="Center"
+               HorizontalOptions="End" />
+        <Picker x:Name="indicatorSizePicker"
+                Grid.Row="4"
+                Grid.Column="1"
+                HorizontalOptions="Start"
+                SelectedIndexChanged="OnIndicatorSizeChanged">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>6</x:String>
+                    <x:String>12</x:String>
+                    <x:String>18</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <CarouselView Grid.Row="5"
+                      Grid.ColumnSpan="2"
+                      ItemsSource="{Binding Monkeys}"
+                      IndicatorView="indicatorView">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HasShadow="True"
+                               BorderColor="DarkGray"
+                               CornerRadius="5"
+                               Margin="10"
+                               HeightRequest="300"
+                               HorizontalOptions="Center"
+                               VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Label Text="{Binding Name}" 
+                                       FontAttributes="Bold"
+                                       FontSize="Large"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                                <Image Source="{Binding ImageUrl}" 
+                                       Aspect="AspectFill"
+                                       HeightRequest="150"
+                                       WidthRequest="150"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Location}"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Details}"
+                                       FontAttributes="Italic"
+                                       HorizontalOptions="Center"
+                                       MaxLines="5"
+                                       LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView x:Name="indicatorView"
+                       Grid.Row="6"
+                       Grid.ColumnSpan="2"
+                       Margin="0,0,0,40"
+                       HorizontalOptions="Center" />
+    </Grid>
+</ContentPage>

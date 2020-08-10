@@ -9,7 +9,7 @@
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<application android:label="FormsGallery.Android">
-		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="INSERT_MAP_API_KEY_HERE" />
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="INSERT_MAP_API_KEY_HERE" />
 		<!-- Necessary for apps that target Android 9.0 or higher -->
 		<uses-library android:name="org.apache.http.legacy" android:required="false" />
 	</application>

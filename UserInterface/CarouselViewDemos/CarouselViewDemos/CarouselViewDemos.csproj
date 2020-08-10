@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Models\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Views\Layout\" />
+    <Folder Include="Views\Scrolling\" />
+    <Folder Include="Views\EmptyView\" />
+    <Folder Include="Views\Sizing\" />
+    <Folder Include="Views\PullToRefresh\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Views\Spacing\" />
+    <Folder Include="Views\Interaction\" />
+    <Folder Include="Views\Swipe\" />
+    <Folder Include="Views\Indicators\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Layout\HorizontalTemplateLayoutPage.xaml.cs">
+      <DependentUpon>HorizontalTemplateLayoutPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

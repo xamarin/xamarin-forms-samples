@@ -6,5 +6,3 @@ This demo is built against CocosSharp 1.7.1
 
 ![CocosSharp and Xamarin Forms application screenshot](Screenshots/01WinPhone.png "CocosSharp and Xamarin Forms application screenshot")
 
-## Authors
-Victor Chelaru

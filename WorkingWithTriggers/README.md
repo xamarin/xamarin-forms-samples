@@ -13,3 +13,4 @@ urlFragment: workingwithtriggers
 This sample relates to the [Working with Triggers in Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/triggers) doc.
 
 ![iOS screenshot of trigger-driving input validation](Screenshots/01-small.png)
+

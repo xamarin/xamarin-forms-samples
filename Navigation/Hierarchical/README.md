@@ -15,3 +15,4 @@ This sample demonstrates how to perform hierarchical navigation through a stack 
 For more information about the sample see [Hierarchical Navigation](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/navigation/hierarchical).
 
 ![Hierarchical Navigation application screenshot](Screenshots/01All.png "Hierarchical Navigation application screenshot")
+

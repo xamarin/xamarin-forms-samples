@@ -15,3 +15,4 @@ This sample demonstrates using a `DataTemplateSelector` to select a `DataTemplat
 For more information about the sample see [Data Template Selector](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/templates/data-templates/selector).
 
 ![Data Template Selector application screenshot](Screenshots/01All.png "Data Template Selector application screenshot")
+

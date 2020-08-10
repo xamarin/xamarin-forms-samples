@@ -16,7 +16,3 @@ This sample is described in more detail in the article on [BoxView](/guides/xama
 
 ![Text Decoration application screenshot](Screenshots/01Triple.png "Text Decoration application screenshot")
 
-## Author
-
-Charles Petzold
-

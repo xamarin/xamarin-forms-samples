@@ -16,6 +16,3 @@ For more information about this sample see [Implementing a View](http://develope
 
 ![View Custom Renderer application screenshot](Screenshots/01All.png "View Custom Renderer application screenshot")
 
-## Author
-
-David Britch

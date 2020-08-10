@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Monkey See
-description: Monkey See is a program for Xamarin.Forms that uses the cross-platform OrientationSensor included in Xamarin.Essentials. 
+description: Monkey See is a program for Xamarin.Forms that uses the cross-platform OrientationSensor included in Xamarin.Essentials.
 page_type: sample
 languages:
 - csharp
@@ -20,6 +20,3 @@ Xamarin.Forms no longer runs on Windows Phone or Windows 10 Mobile devices, but 
 
 ![Monkey See application screenshot](Screenshots/MonkeySee.png "Monkey See application screenshot")
 
-## Author
-
-Charles Petzold

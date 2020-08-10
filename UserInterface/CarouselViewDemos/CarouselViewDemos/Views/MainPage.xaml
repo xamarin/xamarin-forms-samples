@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:CarouselViewDemos.Views"
+             mc:Ignorable="d"
+             x:Class="CarouselViewDemos.Views.MainPage"
+             Title="CarouselView Demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Layout">
+                <TextCell Text="Horizontal layout"
+                          Detail="Text"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:HorizontalTextLayoutPage}" />
+                <TextCell Text="Vertical layout"
+                          Detail="Text"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VerticalTextLayoutPage}" />
+                <TextCell Text="Horizontal layout"
+                          Detail="DataTemplate"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:HorizontalTemplateLayoutPage}" />
+                <TextCell Text="Vertical layout"
+                          Detail="DataTemplate"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VerticalTemplateLayoutPage}" />
+                <TextCell Text="Horizontal layout"
+                          Detail="Peek items"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:HorizontalLayoutPeekAreaPage}" />
+                <TextCell Text="Horizontal layout"
+                          Detail="Data template selector"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:HorizontalLayoutDataTemplateSelectorPage}" />
+                <TextCell Text="Horizontal layout"
+                          Detail="RTL FlowDirection"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:HorizontalTemplateLayoutRTLPage}" />
+            </TableSection>
+            <TableSection Title="Spacing">
+                <TextCell Text="Horizontal layout"
+                          Detail="ItemSpacing"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:HorizontalSpacingPage}" />
+                <TextCell Text="Vertical layout"
+                          Detail="ItemSpacing"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VerticalSpacingPage}" />
+            </TableSection>
+            <TableSection Title="Sizing">
+                <TextCell Text="Dynamic item sizing"
+                          Detail="Horizontal layout"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:DynamicSizeItemsPage}" />
+            </TableSection>
+            <TableSection Title="Interaction">
+                <TextCell Text="Current item and position"
+                          Detail="Events"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:CurrentItemAndPositionPage}" />
+                <TextCell Text="Current item and position"
+                          Detail="Bindings"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:CurrentItemAndPositionBindingsPage}" />
+                <TextCell Text="Set current item and position"
+                          Detail="From viewmodel"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:SetCurrentItemAndPositionPage}" />
+                <TextCell Text="Visual states"
+                          Detail="DefaultItem, CurrentItem, PreviousItem, NextItem"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VisualStatesPage} " />
+            </TableSection>
+            <TableSection Title="EmptyView">
+                <TextCell Text="EmptyView string"
+                          Detail="ItemsSource Null"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:EmptyViewNullPage}" />
+                <TextCell Text="EmptyView string"
+                          Detail="Load simulation"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:EmptyViewLoadSimulationPage}" />
+                <TextCell Text="EmptyView string"
+                          Detail="Filtering"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:EmptyViewFilteredPage}" />
+                <TextCell Text="EmptyView with multiple views"
+                          Detail="Filtering"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:EmptyViewWithViewsFilteredPage}" />
+                <TextCell Text="EmptyView with EmptyViewTemplate"
+                          Detail="Filtering"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:EmptyViewTemplatePage}" />
+                <TextCell Text="EmptyView with EmptyViewTemplate"
+                          Detail="Data template selector"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:EmptyViewDataTemplateSelectorPage}" />
+                <TextCell Text="EmptyView swap"
+                          Detail="Filtering"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:EmptyViewSwapPage}" />
+                </TableSection>
+            <TableSection Title="Scrolling">
+                <TextCell Text="Scroll by index"
+                          Detail="ScrollTo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ScrollToByIndexPage}" />
+                <TextCell Text="Scroll by object"
+                          Detail="ScrollTo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:ScrollToByObjectPage}" />
+                <TextCell Text="Snap points"
+                          Detail="Type and alignment"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:SnapPointsPage}" />
+                <TextCell Text="Scroll mode when adding items"
+                          Detail="ItemsUpdatingScrollMode"
+                          Command="{Binding  NavigateCommand}"
+                          CommandParameter="{x:Type views:ItemsUpdatingScrollModePage}" />
+                <TextCell Text="Incremental loading on scroll"
+                          Detail="RemainingItemsThreshold"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:IncrementalLoadingPage}" />
+            </TableSection>
+            <TableSection Title="Pull to Refresh">
+                <TextCell Text="Pull to refresh using RefreshView"
+                          Detail="Horizontal layout"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:HorizontalPullToRefreshPage}" />
+                <TextCell Text="Pull to refresh using RefreshView"
+                          Detail="Vertical layout"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:VerticalPullToRefreshPage}" />
+            </TableSection>
+            <TableSection Title="Indicators">
+                <TextCell Text="Indicators"
+                          Detail="Horizontal layout"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:HorizontalLayoutWithIndicatorsPage}" />
+            </TableSection>
+            <TableSection Title="Swipe">
+                <TextCell Text="Context menu items"
+                          Detail="Horizontal layout"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:HorizontalSwipeItemsPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

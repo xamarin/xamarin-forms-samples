@@ -17,6 +17,3 @@ For more information about this sample see [Adding Intelligence with Cognitive S
 
 ![Todo Cognitive Services application screenshot](Screenshots/01All.png "Todo Cognitive Services application screenshot")
 
-## Author
-
-David Britch

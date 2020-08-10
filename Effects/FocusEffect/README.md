@@ -16,6 +16,3 @@ For more information about the sample see [Creating an Effect](https://docs.micr
 
 ![Focus Effect application screenshot](Screenshots/01All.png "Focus Effect application screenshot")
 
-## Author
-
-David Britch

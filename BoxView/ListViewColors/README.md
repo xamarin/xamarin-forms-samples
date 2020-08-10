@@ -16,7 +16,3 @@ This sample is described in more detail in the article on [BoxView](/guides/xama
 
 ![ListView Colors application screenshot](Screenshots/01Triple.png "ListView Colors application screenshot")
 
-## Author
-
-Charles Petzold
-

@@ -16,6 +16,3 @@ For more information about this sample, see [Using SkiaSharp in Xamarin.Forms](h
 
 ![SkiaSharp and Xamarin.Forms application screenshot](Screenshots/Image0.png "SkiaSharp and Xamarin.Forms application screenshot")
 
-## Author
-
-Charles Petzold

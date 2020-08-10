@@ -1,7 +1,6 @@
 ﻿using System;
 using TodoLocalized.UWP;
 using Windows.Media.SpeechSynthesis;
-using Windows.UI.Xaml.Controls;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(Speech))]
@@ -14,7 +13,7 @@ namespace TodoLocalized.UWP
             using (var speech = new SpeechSynthesizer())
             {
                 var stream = await speech.SynthesizeTextToStreamAsync(text);
-                var mediaElement = new MediaElement();
+                var mediaElement = new Windows.UI.Xaml.Controls.MediaElement();
                 mediaElement.SetSource(stream, stream.ContentType);
                 mediaElement.Play();
             }

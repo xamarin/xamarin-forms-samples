@@ -36,22 +36,17 @@ public static class App
 
 Nugets used in this solution: [PCLStorage][pclHref],
 [Xamarin.Forms][xFormsHref],
-[Microsoft.Bcl][mBclHref], 
-[Microsoft.Bcl.Build][mBclBuildHref], 
+[Microsoft.Bcl][mBclHref],
+[Microsoft.Bcl.Build][mBclBuildHref],
 [Microsoft.Net.Http][mNetHttpHref]
 
-Components used in this solution: [Xamarin.Social][xSocialHref]
+Components used in this solution:
 
-## Authors
-
-Original: Jonathan Peppers, Bryan Phillips, Frank Krueger, James Clancey, Zack Gramana
-
-Xamarin.Forms: Oleg Demchenko, Craig Dunn
-
-
+[Xamarin.Social][xSocialHref]
 [pclHref]: http://www.nuget.org/packages/PCLStorage/0.9.3
 [xFormsHref]: http://xamarin.com/forms
 [mBclHref]: https://www.nuget.org/packages/Microsoft.Bcl/1.1.8
 [mBclBuildHref]: http://www.nuget.org/packages/Microsoft.Bcl.Build/1.0.14
 [mNetHttpHref]: https://www.nuget.org/packages/Microsoft.Net.Http/2.2.22
 [xSocialHref]: http://components.xamarin.com/view/xamarin.social
+

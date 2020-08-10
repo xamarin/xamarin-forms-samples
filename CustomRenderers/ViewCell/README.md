@@ -16,6 +16,3 @@ For more information about this sample see [Customizing a ViewCell](http://devel
 
 ![ViewCell Custom Renderer application screenshot](Screenshots/01Android.png "ViewCell Custom Renderer application screenshot")
 
-## Authors
-
-Craig Dunn / David Britch

@@ -16,6 +16,3 @@ For more information about this sample see [Customizing a ContentPage](http://de
 
 ![ContentPage Custom Renderer application screenshot](Screenshots/01All.png "ContentPage Custom Renderer application screenshot")
 
-## Author
-
-David Britch

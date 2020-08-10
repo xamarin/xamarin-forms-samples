@@ -27,3 +27,4 @@ Use the numbers in the lower-right corner of each tile as a guide.
 When you successfully complete the puzzle, you'll be rewarded with an animation.
 
 ![Xuzzle application screenshot](Screenshots/01Android.png "Xuzzle application screenshot")
+

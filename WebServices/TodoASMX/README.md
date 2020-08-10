@@ -24,6 +24,3 @@ For more information about the sample see [Consuming an ASP.NET Web Service (ASM
 
 ![TodoASMX application screenshot](Screenshots/01All.png "TodoASMX application screenshot")
 
-## Author
-
-David Britch

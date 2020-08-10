@@ -1,49 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 xmlns:local="clr-namespace:WorkingWithFonts;assembly=WorkingWithFonts"
 			 x:Class="WorkingWithFonts.FontPageXaml">
-	<StackLayout 
-			VerticalOptions = "CenterAndExpand" 
-			HorizontalOptions="CenterAndExpand">
+    <StackLayout VerticalOptions = "CenterAndExpand"
+                 HorizontalOptions="CenterAndExpand">
+        <Label Text="Hello Forms with XAML"
+               FontFamily="Lobster" />
 
-		<Label Text="Hello Forms with XAML">
-		    <Label.FontFamily>
-		        <OnPlatform x:TypeArguments="x:String">
-                    <On Platform="iOS" Value="MarkerFelt-Thin" />
-                    <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                    <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
-		        </OnPlatform>
-		    </Label.FontFamily>
-		</Label>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Italics"
+                   FontAttributes="Italic" />
+            <Label Text="Bold"
+                   FontAttributes="Bold" />
+        </StackLayout>
 
-		<StackLayout Orientation="Horizontal">
-			<Label Text="Italics" FontAttributes="Italic" />
-			<Label Text="Bold" FontAttributes="Bold" />
-		</StackLayout>
+        <Label Text="Biggest NamedSize"
+               FontSize="Large" />
+        <Label Text="Use size 72"
+               FontSize="72"
+               FontAttributes="Italic" />
+        <Label Text="Specify Bold Attribute and Micro Size">
+            <Label.FontAttributes>Bold</Label.FontAttributes>
+            <Label.FontSize>Micro</Label.FontSize>
+        </Label>
+        <Label Text="Multiple FontAttributes"
+               FontAttributes="Bold, Italic" />
 
-		<Label Text="Biggest NamedSize" FontSize="Large" />
-
-		<Label Text="Use size 72" FontSize="72" FontAttributes="Italic" />
-
-		<Label Text="Specify Bold Attribute and Micro Size">
-		    <Label.FontAttributes>Bold</Label.FontAttributes>
-		    <Label.FontSize>Micro</Label.FontSize>
-		</Label>
-
-		<Label Text="Multiple FontAttributes" FontAttributes="Bold, Italic" />
-
-		<Label>
-			<Label.FormattedText>
-            	<FormattedString>
-	            	<FormattedString.Spans>
-						<Span Text="Red, " ForegroundColor="Red" FontAttributes="Italic" FontSize="20" />
-						<Span Text=" blue, " ForegroundColor="Blue" FontSize="32" />
-						<Span Text=" and green! " ForegroundColor="Green" FontSize="12"/>
-					</FormattedString.Spans>
-				</FormattedString>
-			</Label.FormattedText>
-		</Label>
-
-	</StackLayout>
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Red, "
+                              ForegroundColor="Red"
+                              FontAttributes="Italic"
+                              FontSize="20" />
+                        <Span Text=" blue, "
+                              ForegroundColor="Blue"
+                              FontSize="32" />
+                        <Span Text=" and green! "
+                              ForegroundColor="Green"
+                              FontSize="12"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
 </ContentPage>

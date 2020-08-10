@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:WorkingWithMaps"
+             mc:Ignorable="d"
+             x:Class="WorkingWithMaps.MainPage"
+             Title="Maps Table of Contents"
+             Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="Map types"
+                          Detail="Display a map with zooming and different map types."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MapTypesPage}" />
+                <TextCell Text="Map region"
+                          Detail="Display a map at a specific location."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MapRegionPage}" />
+                <TextCell Text="Map"
+                          Detail="Display a map with other properties set."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MapPropertiesPage}" />
+                <TextCell Text="Pins"
+                          Detail="Add a pin to a map."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PinPage}" />
+                <TextCell Text="Pins with data binding"
+                          Detail="Adds a pin collection to a map."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PinItemsSourcePage}" />
+                <TextCell Text="Polygon and polyline"
+                          Detail="Add polygons and polylines to a map."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PolygonsPage}" />
+                <TextCell Text="Highlight a circular area"
+                          Detail="Add a circle to a map."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CirclePage}" />
+                <TextCell Text="Geocoder demo"
+                          Detail="Geocode and reverse geocode an address."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:GeocoderPage}" />                
+                <TextCell Text="Native map app"
+                          Detail="Launch the platform's native map app."
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MapAppPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="WorkingWithMaps.PinPage"
+             Title="Pins demo">
+    <StackLayout Margin="10">
+        <maps:Map x:Name="map">
+            <x:Arguments>
+                <maps:MapSpan>
+                    <x:Arguments>
+                        <maps:Position>
+                            <x:Arguments>
+                                <x:Double>36.9628066</x:Double>
+                                <x:Double>-122.0194722</x:Double>
+                            </x:Arguments>
+                        </maps:Position>
+                        <x:Double>0.01</x:Double>
+                        <x:Double>0.01</x:Double>
+                    </x:Arguments>
+                </maps:MapSpan>
+            </x:Arguments>
+            <maps:Map.Pins>
+                <maps:Pin Label="Santa Cruz"
+                          Address="The city with a boardwalk"
+                          Type="Place">
+                    <maps:Pin.Position>
+                        <maps:Position>
+                            <x:Arguments>
+                                <x:Double>36.9628066</x:Double>
+                                <x:Double>-122.0194722</x:Double>
+                            </x:Arguments>
+                        </maps:Position>
+                    </maps:Pin.Position>
+                </maps:Pin>
+            </maps:Map.Pins>
+        </maps:Map>
+        <Button Text="Add more pins"
+                Clicked="OnButtonClicked" />
+    </StackLayout>
+</ContentPage>

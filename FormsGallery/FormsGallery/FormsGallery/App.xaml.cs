@@ -9,7 +9,6 @@ namespace FormsGallery
         public App()
         {
             InitializeComponent();
-
             MainPage = new NavigationPage(new HomePage());
         }
 
