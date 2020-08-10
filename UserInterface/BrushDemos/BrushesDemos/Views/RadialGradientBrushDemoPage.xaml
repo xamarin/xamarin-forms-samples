@@ -7,61 +7,58 @@
         <StackLayout Margin="20">
             <Label Text="RadialGradientBrush (Upper left)"
                    FontAttributes="Bold" />
-            <Frame 
-                Margin="0,20,0,0"
-                BorderColor="LightGray"
-                HasShadow="True"
-                CornerRadius="12"
-                HeightRequest="120"
-                WidthRequest="120">
+            <Frame Margin="0,20,0,0"
+                   BorderColor="LightGray"
+                   HasShadow="True"
+                   CornerRadius="12"
+                   HeightRequest="120"
+                   WidthRequest="120">
                 <Frame.Background>
                     <!-- Radius defaults to (0.5) -->
                     <RadialGradientBrush Center="0.0,0.0">
                         <GradientStop Color="Red"
-                                    Offset="0.1" />
+                                      Offset="0.1" />
                         <GradientStop Color="DarkBlue"
-                                    Offset="1.0" />
+                                      Offset="1.0" />
                     </RadialGradientBrush>
                 </Frame.Background>
             </Frame>    
             <Label Margin="0,20,0,0"
                    Text="RadialGradientBrush (Center)"
                    FontAttributes="Bold" />        
-            <Frame 
-                Margin="0,20,0,0"
-                BorderColor="LightGray"
-                HasShadow="True"
-                CornerRadius="12"
-                HeightRequest="120"
-                WidthRequest="120">
+            <Frame Margin="0,20,0,0"
+                   BorderColor="LightGray"
+                   HasShadow="True"
+                   CornerRadius="12"
+                   HeightRequest="120"
+                   WidthRequest="120">
                 <Frame.Background>
                     <!-- Center defaults to (0.5,0.5)
                          Radius defaults to (0.5) -->
                     <RadialGradientBrush>
                         <GradientStop Color="Red"
-                                    Offset="0.1" />
+                                      Offset="0.1" />
                         <GradientStop Color="DarkBlue"
-                                    Offset="1.0" />
+                                      Offset="1.0" />
                     </RadialGradientBrush>
                 </Frame.Background>
             </Frame>                    
             <Label Margin="0,20,0,0"
                    Text="RadialGradientBrush (Lower right)"
                    FontAttributes="Bold" />        
-            <Frame
-                Margin="0,20,0,0"
-                BorderColor="LightGray"
-                HasShadow="True"
-                CornerRadius="12"
-                HeightRequest="120"
-                WidthRequest="120">
+            <Frame Margin="0,20,0,0"
+                   BorderColor="LightGray"
+                   HasShadow="True"
+                   CornerRadius="12"
+                   HeightRequest="120"
+                   WidthRequest="120">
                 <Frame.Background>
                     <!-- Radius defaults to (0.5) -->
                     <RadialGradientBrush Center="1.0,1.0">
                         <GradientStop Color="Red"
-                                    Offset="0.1" />
+                                      Offset="0.1" />
                         <GradientStop Color="DarkBlue"
-                                    Offset="1.0" />
+                                      Offset="1.0" />
                     </RadialGradientBrush>
                 </Frame.Background>
             </Frame>                           

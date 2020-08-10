@@ -6,12 +6,12 @@
         <Grid Opacity="0.3"
               BackgroundColor="Black" />
         <Frame CornerRadius="12"
-                HasShadow="false"
-                Margin="35,25"
-                Padding="12"
-                BackgroundColor="White"
-                HorizontalOptions="Center"
-                VerticalOptions="Center">
+               HasShadow="false"
+               Margin="35,25"
+               Padding="12"
+               BackgroundColor="White"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
             <StackLayout Spacing="10">
                 <ScrollView>
                     <FlexLayout x:Name="colorsLayout"
@@ -21,29 +21,29 @@
                         <BindableLayout.ItemTemplate>
                             <DataTemplate>
                                 <Grid HeightRequest="50"
-                                        WidthRequest="50">
+                                      WidthRequest="50">
                                     <Grid.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="OnColorSourceTapped" />
                                     </Grid.GestureRecognizers>
                                     <BoxView Margin="5"
-                                                CornerRadius="12"
-                                                HeightRequest="50"
-                                                WidthRequest="50"
-                                                Color="{Binding Color}" />
+                                             CornerRadius="12"
+                                             HeightRequest="50"
+                                             WidthRequest="50"
+                                             Color="{Binding Color}" />
                                     <BoxView IsVisible="{Binding IsSelected}"
-                                                CornerRadius="6"
-                                                HeightRequest="12"
-                                                WidthRequest="12"
-                                                Color="White"
-                                                HorizontalOptions="Center"
-                                                VerticalOptions="Center" />
+                                             CornerRadius="6"
+                                             HeightRequest="12"
+                                             WidthRequest="12"
+                                             Color="White"
+                                             HorizontalOptions="Center"
+                                             VerticalOptions="Center" />
                                 </Grid>
                             </DataTemplate>
                         </BindableLayout.ItemTemplate>
                     </FlexLayout>
                 </ScrollView>
                 <StackLayout Orientation="Horizontal"
-                                HorizontalOptions="End">
+                             HorizontalOptions="End">
                     <Button Text="Cancel"
                             BackgroundColor="Transparent"
                             FontAttributes="Bold"

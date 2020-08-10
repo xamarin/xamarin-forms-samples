@@ -14,9 +14,9 @@
                 <DataTemplate>
                     <Grid ColumnDefinitions="0.2*, 0.5*, 0.3*">
                         <BoxView Color="{Binding Color}"
-                                    HeightRequest="20"
-                                    WidthRequest="40"
-                                    VerticalOptions="Center" />
+                                 HeightRequest="20"
+                                 WidthRequest="40"
+                                 VerticalOptions="Center" />
                         <Label Grid.Column="1"
                                Text="{Binding Name}"                                   
                                VerticalOptions="Center" />    

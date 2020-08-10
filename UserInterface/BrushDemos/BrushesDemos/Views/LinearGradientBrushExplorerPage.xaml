@@ -14,8 +14,8 @@
                        HeightRequest="120"
                        WidthRequest="120">
                     <Label Text="LinearGradientBrush"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center" />
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
                 </Frame>
             </Grid>
             <ScrollView Grid.Row="1"
@@ -23,26 +23,26 @@
                         Padding="12">
                 <StackLayout>
                     <Label Text="Gradients"
-                        FontSize="24"
-                        VerticalTextAlignment="Center" />
+                           FontSize="24"
+                           VerticalTextAlignment="Center" />
                     <StackLayout x:Name="gradientsStackLayout">
                         <BindableLayout.ItemTemplate>
                             <DataTemplate>
                                 <StackLayout Orientation="Horizontal"
-                                            Spacing="8">
+                                             Spacing="8">
                                     <Entry Placeholder="Gradient color (hex)"
-                                        BackgroundColor="{Binding Color}" 
-                                        TextChanged="OnGradientChanged"
-                                        HorizontalOptions="FillAndExpand" />
+                                           BackgroundColor="{Binding Color}" 
+                                           TextChanged="OnGradientChanged"
+                                           HorizontalOptions="FillAndExpand" />
                                     <Frame CornerRadius="6" 
-                                        HasShadow="false"
-                                        BorderColor="LightGray"
-                                        BackgroundColor="{Binding Color}">
+                                           HasShadow="false"
+                                           BorderColor="LightGray"
+                                           BackgroundColor="{Binding Color}">
                                         <Frame.GestureRecognizers>
                                             <TapGestureRecognizer Tapped="OnColorPickerTapped" />
                                         </Frame.GestureRecognizers>
                                         <Label Text="..."
-                                            HorizontalOptions="Center" />
+                                               HorizontalOptions="Center" />
                                     </Frame>
                                 </StackLayout>
                             </DataTemplate>
@@ -55,19 +55,19 @@
                                 Clicked="OnRemoveButtonClicked" />        
                     </StackLayout>
                     <Label Text="Start point" 
-                        FontSize="24" />
+                           FontSize="24" />
                     <Entry x:Name="startPointEntry"
-                        Placeholder="Start point"
-                        TextChanged="OnStartPointChanged"
-                        Text="0, 0"
-                        Keyboard="Numeric" />
+                           Placeholder="Start point"
+                           TextChanged="OnStartPointChanged"
+                           Text="0, 0"
+                           Keyboard="Numeric" />
                     <Label Text="End point" 
-                        FontSize="24" />
+                           FontSize="24" />
                     <Entry x:Name="endPointEntry"
-                        Placeholder="End point"
-                        TextChanged="OnEndPointChanged"
-                        Text="1, 1"
-                        Keyboard="Numeric" />
+                           Placeholder="End point"
+                           TextChanged="OnEndPointChanged"
+                           Text="1, 1"
+                           Keyboard="Numeric" />
                 </StackLayout>
             </ScrollView>
         </Grid>

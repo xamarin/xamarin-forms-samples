@@ -13,7 +13,7 @@ namespace AbsoluteLayoutDemos.Views
 
             absoluteLayout.Children.Add(new BoxView
             {
-                Color = Color.Silver,
+                Color = Color.Silver
             }, new Rectangle(0, 10, 200, 5));
             absoluteLayout.Children.Add(new BoxView
             {
