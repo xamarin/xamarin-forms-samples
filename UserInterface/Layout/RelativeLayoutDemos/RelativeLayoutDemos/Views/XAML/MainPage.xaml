@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:RelativeLayoutDemos.Views"
+             x:Class="RelativeLayoutDemos.MainPage"
+             Title="RelativeLayout demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="XAML">
+                <TextCell Text="Stylish header demo"
+                          Detail="Constraint based positioning and sizing"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:StylishHeaderDemoPage}" />
+                <TextCell Text="Relative positioning and sizing"
+                          Detail="Constraint markup expression"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:RelativePositioningAndSizingDemoPage}" />
+                <TextCell Text="Simple overlay demo"
+                          Detail="Overlap child views"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:SimpleOverlayDemoPage}" />
+            </TableSection>
+            <TableSection Title="C#">
+                <TextCell Text="Stylish header demo"
+                          Detail="Constraint based positioning and sizing"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:StylishHeaderDemoPageCS}" />
+                <TextCell Text="Relative positioning and sizing"
+                          Detail="Constraint methods"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:RelativePositioningAndSizingDemoPageCS}" />
+                <TextCell Text="Simple overlay demo"
+                          Detail="Overlap child views"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:SimpleOverlayDemoPageCS}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

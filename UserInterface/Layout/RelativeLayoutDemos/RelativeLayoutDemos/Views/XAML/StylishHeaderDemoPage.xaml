@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RelativeLayoutDemos.Views.StylishHeaderDemoPage"
+             Title="Stylish header demo">
+    <RelativeLayout Margin="20">
+        <BoxView Color="Silver"
+                 RelativeLayout.XConstraint="0"
+                 RelativeLayout.YConstraint="10"
+                 RelativeLayout.WidthConstraint="200"
+                 RelativeLayout.HeightConstraint="5" />
+        <BoxView Color="Silver"
+                 RelativeLayout.XConstraint="0"
+                 RelativeLayout.YConstraint="20"
+                 RelativeLayout.WidthConstraint="200"
+                 RelativeLayout.HeightConstraint="5" />
+        <BoxView Color="Silver"
+                 RelativeLayout.XConstraint="10"
+                 RelativeLayout.YConstraint="0"
+                 RelativeLayout.WidthConstraint="5"
+                 RelativeLayout.HeightConstraint="65" />
+        <BoxView Color="Silver"
+                 RelativeLayout.XConstraint="20"
+                 RelativeLayout.YConstraint="0"
+                 RelativeLayout.WidthConstraint="5"
+                 RelativeLayout.HeightConstraint="65" />
+        <Label Text="Stylish header"
+               FontSize="24"
+               RelativeLayout.XConstraint="30"
+               RelativeLayout.YConstraint="25" />
+        <Label RelativeLayout.XConstraint="0"
+               RelativeLayout.YConstraint="80">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Although " />
+                    <Span Text="RelativeLayout"
+                          FontAttributes="Italic" />
+                    <Span Text=" is usually employed for purposes other than the display of text using a " />
+                    <Span Text="Label"
+                          FontAttributes="Italic" />
+                    <Span Text=", obviously it can be used in that way. The text continues to wrap nicely within the bounds of the container and any margin that might be applied." />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </RelativeLayout>
+</ContentPage>
