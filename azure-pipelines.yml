@@ -20,10 +20,13 @@ steps:
 
 - task: NuGetToolInstaller@1
 
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '**/*.sln'
+
 - task: XamariniOS@2
   inputs:
     solutionFile: '**/*iOS.csproj'
     configuration: 'Debug'
-    runNugetRestore: true
     buildForSimulator: true
     packageApp: false
