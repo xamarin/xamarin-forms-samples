@@ -27,7 +27,7 @@ steps:
 
 - task: XamariniOS@2
   inputs:
-    solutionFile: '**/*iOS.csproj'
+    solution: '**/*iOS.csproj'
     configuration: 'Debug'
     buildForSimulator: true
     packageApp: false
