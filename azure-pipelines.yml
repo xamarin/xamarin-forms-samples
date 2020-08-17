@@ -1,4 +1,15 @@
 jobs:
+  - job: build_uwp_samples
+    displayName: Build UWP samples
+    pool:
+      vmImage: windows-2019
+    steps:
+      - task: MSBuild@1
+        displayName: Build UWP samples
+        inputs:
+          solution: '**/*.UWP.csproj'
+          configuration: 'Debug'
+          msbuildArguments: '/restore /t:Build /p:AppxPackage=false /p:ContinuousIntegrationBuild=true /p:Deterministic=false'    
   - job: build_ios_samples
     displayName: Build iOS samples
     pool:
@@ -17,14 +28,3 @@ jobs:
           solution: '**/*.iOS.csproj'
           configuration: 'Debug'
           msbuildArguments: '/restore /t:Build /p:ContinuousIntegrationBuild=true /p:Deterministic=false'
-  - job: build_uwp_samples
-    displayName: Build UWP samples
-    pool:
-      vmImage: windows-2019
-    steps:
-      - task: MSBuild@1
-        displayName: Build UWP samples
-        inputs:
-          solution: '**/*.UWP.csproj'
-          configuration: 'Debug'
-          msbuildArguments: '/restore /t:Build /p:AppxPackage=false /p:ContinuousIntegrationBuild=true /p:Deterministic=false'    
