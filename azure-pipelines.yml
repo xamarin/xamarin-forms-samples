@@ -22,6 +22,7 @@ steps:
 
 - task: NuGetCommand@2
   inputs:
+    command: 'restore'
     restoreSolution: '**/*.sln'
 
 - task: XamariniOS@2
