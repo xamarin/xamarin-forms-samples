@@ -117,7 +117,6 @@
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\Icon.png" />
-    <BundleResource Include="Resources\TodoSQLite.db3" />
     <BundleResource Include="Resources\check%402x.png" />
     <BundleResource Include="Resources\check.png" />
     <BundleResource Include="Resources\Icon-60%402x.png" />
