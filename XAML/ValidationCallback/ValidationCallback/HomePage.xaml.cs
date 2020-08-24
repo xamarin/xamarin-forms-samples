@@ -8,7 +8,17 @@ namespace ValidationCallback
 
 		public double Angle {
 			get { return (double)GetValue (AngleProperty); }
-			set { SetValue (AngleProperty, value); }
+			set 
+			{ 
+				if (IsValidValue(null, value))
+				{
+					SetValue (AngleProperty, value);
+				}
+				else
+				{
+					DisplayAlert("Alert", "Angle must be between 0-360", "OK");
+				}
+			}
 		}
 
 		public HomePage ()
@@ -19,7 +29,7 @@ namespace ValidationCallback
 		static bool IsValidValue (BindableObject view, object value)
 		{
 			double result;
-			bool isDouble = double.TryParse (value.ToString (), out result);
+			double.TryParse (value.ToString (), out result);
 			return (result >= 0 && result <= 360);
 		}
 	}
