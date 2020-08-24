@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -86,7 +85,7 @@
   <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\UsingResxLocalization\UsingResxLocalization.csproj">
-      <Project>{0EB229C2-8943-4C37-9A14-FFA7CF27EDE6}</Project>
+      <Project>{CB3C76BB-1F98-4A9A-971B-E766962DF77C}</Project>
       <Name>UsingResxLocalization</Name>
     </ProjectReference>
   </ItemGroup>
