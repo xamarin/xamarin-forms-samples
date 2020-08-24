@@ -4,7 +4,6 @@ using Foundation;
 using Notes.Controllers;
 using Notes.iOS.Models;
 using Notes.iOS.Views;
-using Notes.Views;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
@@ -34,7 +33,7 @@ namespace Notes.iOS
 
             FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
             UIViewController mainPage = new NotesPage().CreateViewController();
-            mainPage.Title = "Notes";
+            mainPage.Title = "Notes";            
 
             _navigation = new AppNavigationController(mainPage);
 
@@ -56,7 +55,9 @@ namespace Notes.iOS
 
         public void NavigateToNoteDetails(Note note)
         {
-            _navigation.PushViewController(new NoteDetailsViewController(note), true);
+            var noteDetailsPage = new NoteDetailsViewController(note);
+            noteDetailsPage.Title = "Note Details";
+            _navigation.PushViewController(noteDetailsPage, true);
         }
 
         public void NavigateBack()

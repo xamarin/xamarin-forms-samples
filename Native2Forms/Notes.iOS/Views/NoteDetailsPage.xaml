@@ -1,22 +1,40 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Notes.Views.NoteDetailsPage">
-    <ContentPage.Content>
-        <Grid VerticalOptions="Center" Margin="40" x:Name="ViewHolder" TranslationY="-2000">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Text="File:"/>
-            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Filename}" FontAttributes="Bold"/>
-            <Label Grid.Row="1" Grid.Column="0" Text="Date:"/>
-            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Date, StringFormat='{0:dd MMMM yyyy}'}" FontAttributes="Bold"/>
-            <Label Grid.Row="2" Grid.Column="0" Text="Note:"/>
-            <Label Grid.Row="2" Grid.Column="1" Text="{Binding Text}" FontAttributes="Bold"/>
-        </Grid>
-    </ContentPage.Content>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.iOS.Views.NoteDetailsPage">
+    <Grid x:Name="grid"
+          VerticalOptions="Center"
+          Margin="40"
+          TranslationY="-2000">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Text="File:"/>
+        <Label Grid.Column="1"
+               Text="{Binding Filename}"
+               FontAttributes="Bold"/>
+        <Label Grid.Row="1"
+               Text="Date:"/>
+        <Label Grid.Row="1"
+               Grid.Column="1"
+               Text="{Binding Date, StringFormat='{0:dd MMMM yyyy}'}"
+               FontAttributes="Bold"/>
+        <Label Grid.Row="2"
+               Text="Note:"/>
+        <Label Grid.Row="2"
+               Grid.Column="1"
+               Text="{Binding Text}"
+               FontAttributes="Bold"/>
+        <Button Grid.Row="3"
+                Grid.ColumnSpan="2"
+                Text="Delete" 
+                Clicked="OnDeleteButtonClicked"/>
+    </Grid>
 </ContentPage>

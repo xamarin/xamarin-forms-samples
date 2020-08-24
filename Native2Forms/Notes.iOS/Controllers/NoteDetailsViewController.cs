@@ -1,29 +1,31 @@
 using Notes.iOS.Models;
-using Notes.Views;
+using Notes.iOS.Views;
 using UIKit;
 using Xamarin.Forms;
 
 namespace Notes.Controllers
 {
-    
     public class NoteDetailsViewController : UIViewController
     {
-        private readonly Note _note;
-        private bool _appeared;
-        private ContentPage _formsContentPage;
-        private UIViewController _formsViewController;
-        private bool _disposed;
-        
+        readonly Note _note;
+        bool _appeared;
+        ContentPage _formsContentPage;
+        UIViewController _formsViewController;
+        bool _disposed;
+
         public NoteDetailsViewController(Note note)
         {
             _note = note;
         }
-        
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 
-            _formsContentPage = new NoteDetailsPage {BindingContext = _note};
+            _formsContentPage = new NoteDetailsPage
+            {
+                BindingContext = _note
+            };
 
             _formsViewController = _formsContentPage.CreateViewController();
             _formsViewController.WillMoveToParentViewController(this);
@@ -63,7 +65,7 @@ namespace Notes.Controllers
         public override void ViewWillDisappear(bool animated)
         {
             _formsContentPage?.SendDisappearing();
-            
+
             base.ViewWillDisappear(animated);
         }
 
