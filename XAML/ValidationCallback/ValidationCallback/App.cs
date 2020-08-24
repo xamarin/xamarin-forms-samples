@@ -8,7 +8,7 @@ namespace ValidationCallback
 	{
 		public App ()
 		{
-			MainPage = new HomePage ();
+			MainPage = new HomePage();
 		}
 
 		protected override void OnStart ()
