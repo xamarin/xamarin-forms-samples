@@ -13,8 +13,6 @@ namespace IndicatorViewDemos.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-
-            Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental" });
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }

@@ -6,7 +6,6 @@ namespace BrushesDemos
     {
         public App()
         {
-            Device.SetFlags(new[] { "Brush_Experimental" });
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
