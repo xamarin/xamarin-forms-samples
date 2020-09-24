@@ -428,17 +428,17 @@ namespace FormsGallery
                         },
                         new TextCell
                         {
+                            Text = "FlyoutPage",
+                            Detail = "Present two pages with a list and an item",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.FlyoutPageDemoPage)
+                        },
+                        new TextCell
+                        {
                             Text = "NavigationPage",
                             Detail = "Present a navigatable page",
                             Command = navigateCommand,
                             CommandParameter = typeof(CodeExamples.NavigationPageDemoPage)
-                        },
-                        new TextCell
-                        {
-                            Text = "MasterDetailPage",
-                            Detail = "Present two pages with a list and an item",
-                            Command = navigateCommand,
-                            CommandParameter = typeof(CodeExamples.MasterDetailPageDemoPage)
                         },
                         new TextCell
                         {

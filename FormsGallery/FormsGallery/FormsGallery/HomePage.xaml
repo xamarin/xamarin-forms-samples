@@ -295,15 +295,15 @@
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.ContentPageDemoPage}" />
 
+                    <TextCell Text="FlyoutPage"
+                              Detail="Present two pages with a list and an item"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.FlyoutPageDemoPage}" />
+
                     <TextCell Text="NavigationPage"
                               Detail="Present a navigatable page"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.NavigationPageDemoPage}" />
-
-                    <TextCell Text="MasterDetailPage"
-                              Detail="Present two pages with a list and an item"
-                              Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.MasterDetailPageDemoPage}" />
 
                     <TextCell Text="TabbedPage"
                               Detail="Present a page with tabs"

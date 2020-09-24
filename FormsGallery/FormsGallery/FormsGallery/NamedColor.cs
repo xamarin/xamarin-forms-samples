@@ -2,7 +2,7 @@
 
 namespace FormsGallery
 {
-    // Used in TabbedPageDemoPage, CarouselPageDemoPage & MasterDetailPageDemoPage.
+    // Used in TabbedPageDemoPage, CarouselPageDemoPage & FlyoutPageDemoPage.
     public class NamedColor
     {
         public NamedColor()
