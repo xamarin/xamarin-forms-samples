@@ -4,9 +4,9 @@ using Xamarin.Forms;
 
 namespace PlatformSpecifics
 {
-    public partial class ContentPageMasterPage : ContentPage
+    public partial class ContentPageFlyoutPage : ContentPage
     {
-        public static readonly BindableProperty ItemsProperty = BindableProperty.Create("Items", typeof(IList<NavigationItem>), typeof(ContentPageMasterPage), null);
+        public static readonly BindableProperty ItemsProperty = BindableProperty.Create("Items", typeof(IList<NavigationItem>), typeof(ContentPageFlyoutPage), null);
 
         public IList<NavigationItem> Items
         {
@@ -16,7 +16,7 @@ namespace PlatformSpecifics
 
         Page detailPage;
 
-        public ContentPageMasterPage(ICommand restore)
+        public ContentPageFlyoutPage(ICommand restore)
         {
             InitializeComponent();
 
@@ -26,10 +26,10 @@ namespace PlatformSpecifics
                 new NavigationItem("Delete", "\uE107", new Command(async () => await DisplayAlert("Delete", "Fake delete dialog", "OK"))),
                 new NavigationItem("Set Detail to Navigation Page", "\uE16F", new Command(() =>
                 {
-                    detailPage = (Parent as MasterDetailPage).Detail;
-                    (Parent as MasterDetailPage).Detail = new NavigationPage(new ContentPageTwo(restore));
+                    detailPage = (Parent as FlyoutPage).Detail;
+                    (Parent as FlyoutPage).Detail = new NavigationPage(new ContentPageTwo(restore));
                 })),
-                new NavigationItem("Set Detail to Content Page", "\uE160", new Command(() => (Parent as MasterDetailPage).Detail = (detailPage == null) ? (Parent as MasterDetailPage).Detail : detailPage)),
+                new NavigationItem("Set Detail to Content Page", "\uE160", new Command(() => (Parent as FlyoutPage).Detail = (detailPage == null) ? (Parent as FlyoutPage).Detail : detailPage)),
                 new NavigationItem("Back", "\uE106", restore)
             };
         }

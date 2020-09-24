@@ -5,11 +5,11 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace PlatformSpecifics
 {
-    public class iOSMasterDetailPageCS : Xamarin.Forms.MasterDetailPage
+    public class iOSFlyoutPageCS : Xamarin.Forms.FlyoutPage
     {
         ICommand returnToPlatformSpecificsPage;
 
-        public iOSMasterDetailPageCS(ICommand restore)
+        public iOSFlyoutPageCS(ICommand restore)
         {
             returnToPlatformSpecificsPage = restore;
 
@@ -21,8 +21,8 @@ namespace PlatformSpecifics
 
             On<iOS>().SetApplyShadow(true);
 
-            Title = "MasterDetailPage Shadow";
-            Master = new ContentPage
+            Title = "FlyoutPage Shadow";
+            Flyout = new ContentPage
             {
                 Title = "Menu",
                 BackgroundColor = Color.AliceBlue,

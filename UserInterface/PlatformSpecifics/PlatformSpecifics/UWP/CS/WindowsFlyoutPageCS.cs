@@ -7,24 +7,24 @@ using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
 
 namespace PlatformSpecifics
 {
-    public partial class WindowsMasterDetailPageCS : Xamarin.Forms.MasterDetailPage
+    public partial class WindowsFlyoutPageCS : Xamarin.Forms.FlyoutPage
     {
         Xamarin.Forms.Page detailPage;
         ICommand _returnToPlatformSpecificsPage;
 
-        public WindowsMasterDetailPageCS(ICommand restore)
+        public WindowsFlyoutPageCS(ICommand restore)
         {
             _returnToPlatformSpecificsPage = restore;
 
             On<Windows>().SetCollapseStyle(CollapseStyle.Partial);
-            MasterBehavior = MasterBehavior.Popover;
+            FlyoutLayoutBehavior = FlyoutLayoutBehavior.Popover;
 
-            Master = CreateMasterPage();
+            Flyout = CreateFlyoutPage();
             Detail = detailPage = CreateDetailPage();
             WindowsPlatformSpecificsHelpers.AddToolBarItems(this);
         }
 
-        ContentPage CreateMasterPage()
+        ContentPage CreateFlyoutPage()
         {
             var items = new List<NavigationItem>
             {
@@ -68,7 +68,7 @@ namespace PlatformSpecifics
 
             return new ContentPage
             {
-                Title = "Master Page",
+                Title = "Flyout Page",
                 Content = new StackLayout
                 {
                     Margin = new Thickness(0, 10, 5, 0),
@@ -122,7 +122,7 @@ namespace PlatformSpecifics
             };
         }
 
-        static Layout CreateCollapseStyleChanger(Xamarin.Forms.MasterDetailPage page)
+        static Layout CreateCollapseStyleChanger(Xamarin.Forms.FlyoutPage page)
         {
             var enumType = typeof(CollapseStyle);
 
@@ -132,7 +132,7 @@ namespace PlatformSpecifics
             }, "Select Collapse Style");
         }
 
-        static Layout CreateCollapseWidthAdjuster(Xamarin.Forms.MasterDetailPage page)
+        static Layout CreateCollapseWidthAdjuster(Xamarin.Forms.FlyoutPage page)
         {
             var label = new Xamarin.Forms.Label
             {

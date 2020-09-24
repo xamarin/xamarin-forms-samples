@@ -3,12 +3,12 @@ using System.Windows.Input;
 
 namespace PlatformSpecifics
 {
-    public partial class WindowsMasterDetailPage : Xamarin.Forms.MasterDetailPage
+    public partial class WindowsFlyoutPage : Xamarin.Forms.FlyoutPage
     {
-        public WindowsMasterDetailPage(ICommand restore)
+        public WindowsFlyoutPage(ICommand restore)
         {
             InitializeComponent();
-            Master = new ContentPageMasterPage(restore);
+            Flyout = new ContentPageFlyoutPage(restore);
             Detail = new ContentPageDetailPage(restore);
         }
 

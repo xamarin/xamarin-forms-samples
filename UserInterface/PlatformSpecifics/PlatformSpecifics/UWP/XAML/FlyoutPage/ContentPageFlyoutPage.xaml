@@ -3,8 +3,8 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:PlatformSpecifics"
-             x:Class="PlatformSpecifics.ContentPageMasterPage"
-             Title="Master Page">
+             x:Class="PlatformSpecifics.ContentPageFlyoutPage"
+             Title="Flyout Page">
   <StackLayout Margin="0,10,5,0" Spacing="10">
     <ListView BindingContext="{x:Reference page}" ItemsSource="{Binding Items}" ItemTapped="OnListViewItemTapped">
       <ListView.ItemTemplate>

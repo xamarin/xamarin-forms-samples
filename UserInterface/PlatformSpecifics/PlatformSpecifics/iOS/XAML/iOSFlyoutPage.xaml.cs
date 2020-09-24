@@ -5,11 +5,11 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace PlatformSpecifics
 {
-    public partial class iOSMasterDetailPage : Xamarin.Forms.MasterDetailPage
+    public partial class iOSFlyoutPage : Xamarin.Forms.FlyoutPage
     {
         ICommand returnToPlatformSpecificsPage;
 
-        public iOSMasterDetailPage(ICommand restore)
+        public iOSFlyoutPage(ICommand restore)
         {
             InitializeComponent();
             returnToPlatformSpecificsPage = restore;
