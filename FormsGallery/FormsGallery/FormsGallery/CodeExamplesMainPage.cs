@@ -40,14 +40,6 @@ namespace FormsGallery
 
                         new TextCell
                         {
-                            Text = "Expander",
-                            Detail = "Display content in an expandable container",
-                            Command = navigateCommand,
-                            CommandParameter = typeof(CodeExamples.ExpanderDemoPage)
-                        },
-
-                        new TextCell
-                        {
                             Text = "Image",
                             Detail = "Display a bitmap",
                             Command = navigateCommand,
@@ -76,14 +68,6 @@ namespace FormsGallery
                             Detail = "Display a map",
                             Command = navigateCommand,
                             CommandParameter = typeof(CodeExamples.MapDemoPage)
-                        },
-
-                        new TextCell
-                        {
-                            Text = "MediaElement",
-                            Detail = "Play video or audio",
-                            Command = navigateCommand,
-                            CommandParameter = typeof(CodeExamples.MediaElementDemoPage)
                         },
 
                         new TextCell
