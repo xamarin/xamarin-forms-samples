@@ -5,9 +5,8 @@ namespace FlyoutPageNavigation
 {
     public class FlyoutMenuPageCS : ContentPage
     {
-        public ListView ListView { get { return listView; } }
-
         ListView listView;
+        public ListView ListView { get { return listView; } }
 
         public FlyoutMenuPageCS()
         {
