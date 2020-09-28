@@ -31,14 +31,23 @@
                     <RectangleGeometry Rect="10,10,150,100" />
                 </Path.Data>
             </Path>
-            <!--<Label Text="PathGeometry with an ArcSegment" />
+            <Label Text="RoundRectangleGeometry" />
+            <Path Fill="Blue"
+                  Stroke="Red"
+                  StrokeThickness="1">
+                <Path.Data>
+                    <RoundRectangleGeometry CornerRadius="5"
+                                            Rect="10,10,150,100" />
+                </Path.Data>
+            </Path>
+            <Label Text="PathGeometry with an ArcSegment" />
             <Path Stroke="Black"
                   StrokeThickness="1">
                 <Path.Data>
                     <PathGeometry>
                         <PathGeometry.Figures>
                             <PathFigureCollection>
-                                <PathFigure StartPoint="10,100">
+                                <PathFigure StartPoint="10,10">
                                     <PathFigure.Segments>
                                         <PathSegmentCollection>
                                             <ArcSegment Size="100,50"
@@ -53,7 +62,7 @@
                         </PathGeometry.Figures>
                     </PathGeometry>
                 </Path.Data>
-            </Path>-->
+            </Path>
             <Label Text="PathGeometry with a BezierSegment" />
             <Path Stroke="Black"
                   StrokeThickness="1">
