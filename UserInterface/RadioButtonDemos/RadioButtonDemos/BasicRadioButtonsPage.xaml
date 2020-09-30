@@ -5,26 +5,31 @@
              Title="Basic RadioButtons demo">
     <StackLayout Margin="10">
         <Label Text="What's your favorite animal?" />
-        <RadioButton Text="Cat"
+        <!-- RadioButtons with no group name are mutually exclusive at the parent level. -->
+        <RadioButton Content="Cat"
                      CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
-        <RadioButton Text="Dog"
+        <RadioButton Content="Dog"
                      CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
-        <RadioButton Text="Elephant"
+        <RadioButton Content="Elephant"
                      CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
-        <RadioButton Text="Monkey"
+        <RadioButton Content="Monkey"
+                     IsChecked="True"
                      CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
         <Label x:Name="animalLabel"
-               Text="You have chosen:" />
+               Text="You have chosen: Monkey" />
         <Label Text="What platform is this app running on?" />
         <StackLayout>
-            <RadioButton Text="Android"
+            <RadioButton Content="Android"
+                         Value="Google"
                          CheckedChanged="OnPlatformRadioButtonCheckedChanged" />
-            <RadioButton Text="iOS"
+            <RadioButton Content="iOS"
+                         Value="Apple"
                          CheckedChanged="OnPlatformRadioButtonCheckedChanged" />      
-            <RadioButton Text="UWP"
+            <RadioButton Content="UWP"
+                         Value="Microsoft"
                          CheckedChanged="OnPlatformRadioButtonCheckedChanged" />
-            <Label x:Name="platformLabel"
-                   Text="You have chosen:" />
         </StackLayout>
+        <Label x:Name="platformLabel"
+                Text="You have chosen:" />
     </StackLayout>
 </ContentPage>

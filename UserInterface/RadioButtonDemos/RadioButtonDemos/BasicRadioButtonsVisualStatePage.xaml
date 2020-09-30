@@ -2,26 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RadioButtonDemos.BasicRadioButtonsVisualStatePage"
-             Title="Visual State demo">
+             Title="RadioButton VisualState demo">
     <ContentPage.Resources>
         <Style TargetType="RadioButton">
             <Setter Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList>
-                    <VisualStateGroup x:Name="CommonStates">
-                        <VisualState x:Name="Normal">
-                            <VisualState.Setters>
-                                <Setter Property="TextColor"
-                                        Value="Red" />
-                                <Setter Property="Opacity"
-                                        Value="0.5" />
-                            </VisualState.Setters>
-                        </VisualState>
-                        <VisualState x:Name="IsChecked">
+                    <VisualStateGroup x:Name="CheckedStates">
+                        <VisualState x:Name="Checked">
                             <VisualState.Setters>
                                 <Setter Property="TextColor"
                                         Value="Green" />
                                 <Setter Property="Opacity"
                                         Value="1" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Unchecked">
+                            <VisualState.Setters>
+                                <Setter Property="TextColor"
+                                        Value="Red" />
+                                <Setter Property="Opacity"
+                                        Value="0.5" />
                             </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
@@ -31,13 +31,13 @@
     </ContentPage.Resources>
     <StackLayout Margin="10">
         <Label Text="What's your favorite mode of transport?" />
-        <RadioButton Text="Car"
+        <RadioButton Content="Car"
                      CheckedChanged="OnRadioButtonCheckedChanged" />
-        <RadioButton Text="Bike"
+        <RadioButton Content="Bike"
                      CheckedChanged="OnRadioButtonCheckedChanged" />
-        <RadioButton Text="Train"
+        <RadioButton Content="Train"
                      CheckedChanged="OnRadioButtonCheckedChanged" />
-        <RadioButton Text="Walking"
+        <RadioButton Content="Walking"
                      CheckedChanged="OnRadioButtonCheckedChanged" />
         <Label x:Name="resultLabel"
                Text="You have chosen:" />

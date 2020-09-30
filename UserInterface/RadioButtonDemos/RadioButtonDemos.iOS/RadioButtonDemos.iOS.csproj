@@ -132,6 +132,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\xaml.png" />
+    <BundleResource Include="Resources\cat.png" />
+    <BundleResource Include="Resources\dog.png" />
+    <BundleResource Include="Resources\elephant.png" />
+    <BundleResource Include="Resources\monkey.png" />
   </ItemGroup>
 </Project>

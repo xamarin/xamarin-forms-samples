@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RadioButtonDemos.GroupedRadioButtonsViewModelPage"
+             Title="Grouped RadioButtons ViewModel demo">
+    <StackLayout Margin="10"
+                 RadioButtonGroup.GroupName="{Binding GroupName}"
+                 RadioButtonGroup.SelectedValue="{Binding Selection}">
+        <Label Text="What's your favorite animal?" />
+        <RadioButton Content="Cat"
+                     Value="Cat" />
+        <RadioButton Content="Dog"
+                     Value="Dog" />
+        <RadioButton Content="Elephant"
+                     Value="Elephant" />
+        <RadioButton Content="Monkey"
+                     Value="Monkey"/>
+        <Label x:Name="animalLabel">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="You have chosen:" />
+                    <Span Text="{Binding Selection}" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentPage>
