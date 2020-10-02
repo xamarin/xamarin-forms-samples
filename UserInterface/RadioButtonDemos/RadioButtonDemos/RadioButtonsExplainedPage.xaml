@@ -26,7 +26,7 @@
             </On>
         </OnPlatform>
 
-        <Label Text="When RadioButton.Content is a View, it will be displayed on suported platforms and will otherwise fall back to a string representation:" />
+        <Label Text="When RadioButton.Content is a View, it will be displayed on supported platforms and will otherwise fallback to a string representation:" />
         <RadioButton>
             <RadioButton.Content>
                 <Image Source="elephant.png"

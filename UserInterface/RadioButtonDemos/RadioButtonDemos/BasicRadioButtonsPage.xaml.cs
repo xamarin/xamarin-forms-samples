@@ -15,10 +15,10 @@ namespace RadioButtonDemos
             animalLabel.Text = $"You have chosen: {button.Content}";
         }
 
-        void OnPlatformRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
+        void OnAnimalImageRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
             RadioButton button = sender as RadioButton;
-            platformLabel.Text = $"You have chosen: {button.Content}, which is provided by {button.Value}.";
+            animalImageLabel.Text = $"You have chosen: {button.Value}";
         }
     }
 }

@@ -17,19 +17,34 @@
                      CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
         <Label x:Name="animalLabel"
                Text="You have chosen: Monkey" />
-        <Label Text="What platform is this app running on?" />
+        <Label Text="What's your favorite animal?" />
         <StackLayout>
-            <RadioButton Content="Android"
-                         Value="Google"
-                         CheckedChanged="OnPlatformRadioButtonCheckedChanged" />
-            <RadioButton Content="iOS"
-                         Value="Apple"
-                         CheckedChanged="OnPlatformRadioButtonCheckedChanged" />      
-            <RadioButton Content="UWP"
-                         Value="Microsoft"
-                         CheckedChanged="OnPlatformRadioButtonCheckedChanged" />
+            <RadioButton Value="Cat"
+                         CheckedChanged="OnAnimalImageRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <Image Source="cat.png" />
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Value="Dog"
+                         CheckedChanged="OnAnimalImageRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <Image Source="dog.png" />
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Value="Elephant"
+                         CheckedChanged="OnAnimalImageRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <Image Source="elephant.png" />
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Value="Monkey"
+                         CheckedChanged="OnAnimalImageRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <Image Source="monkey.png" />
+                </RadioButton.Content>
+            </RadioButton>
         </StackLayout>
-        <Label x:Name="platformLabel"
-                Text="You have chosen:" />
+        <Label x:Name="animalImageLabel"
+               Text="You have chosen:" />
     </StackLayout>
 </ContentPage>
