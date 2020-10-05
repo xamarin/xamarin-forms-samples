@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SwipeViewDemos.SwipeViewThresholdPage"
+             Title="SwipeView threshold demo">
+    <StackLayout Margin="20">
+        <Label Text="Use the Slider to set the SwipeView threshold." />
+        <Slider x:Name="slider"
+                Maximum="200"
+                Minimum="50"
+                Value="100"
+                MaximumTrackColor="Silver"
+                MinimumTrackColor="#2E249E"
+                ThumbColor="#2E249E"
+                ValueChanged="OnSliderValueChanged" />
+        <Label Text="{Binding Source={x:Reference slider}, Path=Value,StringFormat='{0:F2}'}"
+               HorizontalOptions="Center" />
+        <SwipeView x:Name="swipeView"
+                   Threshold="{Binding Source={x:Reference slider}, Path=Value}">
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem Text="Favorite"
+                               IconImageSource="favorite.png"
+                               BackgroundColor="LightGreen" />
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <Grid HeightRequest="60"
+                  WidthRequest="300"
+                  BackgroundColor="LightGray">
+                <Label Text="Swipe right"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+    </StackLayout>
+</ContentPage>
