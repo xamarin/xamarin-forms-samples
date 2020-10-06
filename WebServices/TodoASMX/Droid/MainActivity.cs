@@ -11,8 +11,6 @@ namespace TodoASMX.Droid
 
         protected override void OnCreate(Bundle bundle)
         {
-            ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(bundle);
             Instance = this;
             global::Xamarin.Forms.Forms.Init(this, bundle);

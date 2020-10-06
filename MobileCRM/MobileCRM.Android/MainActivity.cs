@@ -42,8 +42,6 @@ namespace MobileCRMAndroid
 
         protected override void OnCreate(Bundle bundle)
         {
-            ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(bundle);
 
             // init Forms components

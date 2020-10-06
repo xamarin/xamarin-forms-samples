@@ -20,8 +20,6 @@ namespace WorkingWithMaps.Droid
 
         protected override async void OnCreate(Bundle savedInstanceState)
         {
-            ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);

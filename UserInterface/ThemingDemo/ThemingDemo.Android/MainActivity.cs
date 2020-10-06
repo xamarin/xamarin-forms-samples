@@ -11,8 +11,6 @@ namespace ThemingDemo.Droid
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(savedInstanceState);
             Instance = this;
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

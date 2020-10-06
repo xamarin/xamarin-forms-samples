@@ -9,8 +9,6 @@ namespace FormsGallery.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
-            ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(bundle);
 
             Xamarin.Forms.Forms.SetFlags(new string[] { "RadioButton_Experimental" });

@@ -10,8 +10,6 @@ namespace Xaminals.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(savedInstanceState);
 
             Window.SetStatusBarColor(Android.Graphics.Color.Argb(255, 0, 0, 0));
