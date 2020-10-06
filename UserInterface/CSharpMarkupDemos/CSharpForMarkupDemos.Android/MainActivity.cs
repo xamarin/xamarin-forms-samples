@@ -12,7 +12,6 @@ namespace CSharpForMarkupDemos.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             TaskHelper.InitializeFromUIThread();
-            TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);

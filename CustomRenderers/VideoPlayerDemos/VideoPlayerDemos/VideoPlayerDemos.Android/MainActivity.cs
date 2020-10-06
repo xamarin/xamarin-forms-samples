@@ -17,8 +17,6 @@ namespace VideoPlayerDemos.Droid
         protected override void OnCreate(Bundle bundle)
         {
             Current = this;
-
-            TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
