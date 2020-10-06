@@ -69,17 +69,22 @@ namespace Xaminals
             Shell.Current.FlyoutIsPresented = false;
         }
 
-        void OnNavigating(object sender, ShellNavigatingEventArgs e)
-        {
-            // Cancel any back navigation
-            //if (e.Source == ShellNavigationSource.Pop)
-            //{
-            //    e.Cancel();
-            //}
-        }
+        //protected override void OnNavigating(ShellNavigatingEventArgs args)
+        //{
+        //    base.OnNavigating(args);
 
-        void OnNavigated(object sender, ShellNavigatedEventArgs e)
-        {
-        }
+        //    // Cancel any back navigation
+        //    //if (e.Source == ShellNavigationSource.Pop)
+        //    //{
+        //    //    e.Cancel();
+        //    //}
+        //}
+
+        //protected override void OnNavigated(ShellNavigatedEventArgs args)
+        //{
+        //    base.OnNavigated(args);
+
+        //    // Perform required logic
+        //}
     }
 }
