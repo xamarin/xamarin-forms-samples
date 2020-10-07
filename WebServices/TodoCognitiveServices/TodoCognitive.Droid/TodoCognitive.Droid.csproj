@@ -40,14 +40,14 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="PCLStorage" Version="1.0.2" />
-    <PackageReference Include="Plugin.CurrentActivity" Version="1.0.1" />
-    <PackageReference Include="Plugin.Permissions" Version="1.2.1" />
+    <PackageReference Include="Plugin.CurrentActivity" Version="2.1.0.4" />
+    <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
     <PackageReference Include="sqlite-net-pcl" Version="1.2.1" />
     <PackageReference Include="SQLitePCLRaw.bundle_green" Version="1.1.0" />
     <PackageReference Include="SQLitePCLRaw.core" Version="1.1.0" />
     <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.android" Version="1.1.0" />
     <PackageReference Include="SQLitePCLRaw.provider.e_sqlite3.android" Version="1.1.0" />
-    <PackageReference Include="Xam.Plugin.Media" Version="2.6.1" />
+    <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.1487-pre1" />
   </ItemGroup>
   <ItemGroup>
