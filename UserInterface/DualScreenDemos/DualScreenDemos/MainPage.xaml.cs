@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace DualScreenDemos
@@ -45,9 +41,6 @@ namespace DualScreenDemos
                     break;
                 case "Nested TwoPaneView Split Across Hinge":
                     Navigation.PushAsync(new NestedTwoPaneViewSplitAcrossHinge());
-                    break;
-                case "Open Picture in Picture Window":
-                    Navigation.PushAsync(new OpenCompactWindow());
                     break;
                 case "DualScreenInfo with non TwoPaneView":
                     Navigation.PushAsync(new GridUsingDualScreenInfo());
