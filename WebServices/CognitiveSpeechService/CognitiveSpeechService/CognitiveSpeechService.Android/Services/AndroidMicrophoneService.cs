@@ -1,12 +1,12 @@
-﻿using Android;
+﻿using System.Threading.Tasks;
+using Android;
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Android.Support.Design.Widget;
-using Android.Support.V4.App;
+using AndroidX.Core.App;
 using CognitiveSpeechService.Droid.Services;
 using CognitiveSpeechService.Services;
-using System.Threading.Tasks;
+using Google.Android.Material.Snackbar;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(AndroidMicrophoneService))]
