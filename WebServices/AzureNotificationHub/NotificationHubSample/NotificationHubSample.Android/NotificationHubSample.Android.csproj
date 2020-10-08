@@ -60,7 +60,7 @@
     <PackageReference Include="Xamarin.Firebase.Messaging">
       <Version>71.1740.4</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1487-pre1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1539-pre2" />
     <PackageReference Include="Xamarin.GooglePlayServices.Base">
       <Version>71.1610.4</Version>
     </PackageReference>

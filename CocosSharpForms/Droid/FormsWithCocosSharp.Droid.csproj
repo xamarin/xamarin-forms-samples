@@ -40,7 +40,7 @@
   <ItemGroup>
     <PackageReference Include="CocosSharp" Version="1.7.1.0" />
     <PackageReference Include="CocosSharp.Forms" Version="1.7.1.0" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1487-pre1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1539-pre2" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

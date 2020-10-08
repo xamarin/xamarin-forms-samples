@@ -90,7 +90,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.5" />
     <PackageReference Include="Xamarin.Forms">
-      <Version>5.0.0.1487-pre1</Version>
+      <Version>5.0.0.1539-pre2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup />
