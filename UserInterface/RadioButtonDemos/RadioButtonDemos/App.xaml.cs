@@ -8,7 +8,6 @@ namespace RadioButtonDemos
         {
             InitializeComponent();
 
-            Device.SetFlags(new string[] { "RadioButton_Experimental" });
             MainPage = new NavigationPage(new MainPage());
         }
 

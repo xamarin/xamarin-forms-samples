@@ -11,11 +11,9 @@ namespace FormsGallery.Droid
         {
             base.OnCreate(bundle);
 
-            Xamarin.Forms.Forms.SetFlags(new string[] { "RadioButton_Experimental" });
             global::Xamarin.Forms.Forms.Init(this, bundle);
             global::Xamarin.FormsMaps.Init(this, bundle);
             LoadApplication(new App());
         }
     }
 }
-
