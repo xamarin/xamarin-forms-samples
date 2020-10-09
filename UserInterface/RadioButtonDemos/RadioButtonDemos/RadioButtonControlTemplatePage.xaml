@@ -46,7 +46,6 @@
                           HorizontalOptions="End"
                           VerticalOptions="Start">
                         <Ellipse Stroke="Blue"
-                                 StrokeThickness="1"
                                  Fill="White"
                                  WidthRequest="16"
                                  HeightRequest="16"
