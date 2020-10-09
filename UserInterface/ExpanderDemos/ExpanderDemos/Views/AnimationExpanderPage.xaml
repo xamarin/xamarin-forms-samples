@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
+             xmlns:controls="clr-namespace:ExpanderDemos.Controls"
+             xmlns:local="clr-namespace:ExpanderDemos"
+             x:Class="ExpanderDemos.Views.AnimationExpanderPage"
+             Title="Expander animation demo">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.7*" />
+            <ColumnDefinition Width="0.3*" />
+        </Grid.ColumnDefinitions>
+        <Label Text="ExpandAnimation:"
+               VerticalTextAlignment="Center" />
+        <controls:EnumPicker Grid.Column="1"
+                             EnumType="{x:Type local:EasingFunction}"
+                             SelectedIndex="0"
+                             SelectedIndexChanged="OnExpandAnimationSelectedIndexChanged" />
+        <Label Grid.Row="1"
+               Text="ExpandAnimationLength:"
+               VerticalTextAlignment="Center" />
+        <Picker x:Name="expandAnimationLengthPicker"
+                Grid.Row="1"
+                Grid.Column="1"
+                SelectedIndexChanged="OnExpandAnimationLengthSelectedIndexChanged">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>250</x:String>
+                    <x:String>500</x:String>
+                    <x:String>750</x:String>
+                    <x:String>1000</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label Grid.Row="2"
+               Text="CollapseAnimation: "
+               VerticalTextAlignment="Center" />
+        <controls:EnumPicker Grid.Row="2"
+                             Grid.Column="1"
+                             EnumType="{x:Type local:EasingFunction}"
+                             SelectedIndex="0"
+                             SelectedIndexChanged="OnCollapseAnimationSelectedIndexChanged" />
+        <Label Grid.Row="3"
+               Text="CollapseAnimationLength:"
+               VerticalTextAlignment="Center" />
+        <Picker x:Name="collapseAnimationLengthPicker"
+                Grid.Row="3"
+                Grid.Column="1"
+                SelectedIndex="0"
+                SelectedIndexChanged="OnCollapseAnimationLengthSelectedIndexChanged">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>250</x:String>
+                    <x:String>500</x:String>
+                    <x:String>750</x:String>
+                    <x:String>1000</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label Grid.Row="4"
+               Grid.ColumnSpan="2"
+               Text="Expand/collapse the item below." />
+        <xct:Expander x:Name="expander"
+                      Grid.Row="5"
+                      Grid.ColumnSpan="2">
+            <xct:Expander.Header>
+                <Label Text="Baboon"
+                       FontAttributes="Bold"
+                       FontSize="Medium" />
+            </xct:Expander.Header>
+            <Grid Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg" 
+                       Aspect="AspectFill"
+                       HeightRequest="120" 
+                       WidthRequest="120" />
+                <Label Grid.Column="1"
+                       Text="Baboons are African and Arabian Old World monkeys belonging to the genus Papio, part of the subfamily Cercopithecinae."
+                       FontAttributes="Italic" />
+            </Grid>
+        </xct:Expander>
+    </Grid>
+</ContentPage>

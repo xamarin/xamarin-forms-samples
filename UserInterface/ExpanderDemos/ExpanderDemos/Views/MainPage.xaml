@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:ExpanderDemos.Views"
+             mc:Ignorable="d"
+             x:Class="ExpanderDemos.MainPage"
+             Title="Expander demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="Basic Expander demo"
+                          Detail="A single Expander"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:BasicExpanderPage}" />
+                <TextCell Text="Lazy initialization Expander demo"
+                          Detail="Multiple Expanders in a BindableLayout"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:BasicExpanderContentTemplatePage}" />
+                <TextCell Text="Advanced Expander demo"
+                          Detail="Set multiple properties"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:AdvancedExpanderPage}" />
+                <TextCell Text="Embedded Expander demo"
+                          Detail="Expander in an Expander"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:EmbeddedExpanderPage}" />
+                <TextCell Text="Expander commands demo"
+                          Detail="Bind to ICommands"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:CommandExpanderPage}" />
+                <TextCell Text="Expander animation demo"
+                          Detail="Set easing functions"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:AnimationExpanderPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
