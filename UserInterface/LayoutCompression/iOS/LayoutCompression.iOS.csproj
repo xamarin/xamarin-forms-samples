@@ -80,7 +80,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="1.8.1" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1539-pre2" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1558-pre3" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
