@@ -8,17 +8,29 @@
         <TableRoot>
             <TableSection Title="Drag and drop">
                 <TextCell Text="Text drag demo"
+                          Detail="Events"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:TextDragDemoPage}" />
                 <TextCell Text="Image drag demo"
+                          Detail="Events"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:ImageDragDemoPage}" />
                 <TextCell Text="Data package drag demo"
+                          Detail="Events"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:DataPackageDemoPage}" />
+                <TextCell Text="Data package drag demo"
+                          Detail="Commands"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:DataPackageCommandDemoPage}" />
                 <TextCell Text="Custom data package drag demo"
+                          Detail="Events"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:CustomDataPackageDemoPage}" />
+                <TextCell Text="Custom data package drag demo"
+                          Detail="Commands"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CustomDataPackageCommandDemoPage}" />
             </TableSection>
         </TableRoot>
     </TableView>
