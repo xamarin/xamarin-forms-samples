@@ -31,7 +31,7 @@ namespace NotificationHubSample.iOS
             if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
             {
                 UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert |
-                    UNAuthorizationOptions.Sound |
+                    UNAuthorizationOptions.Badge |
                     UNAuthorizationOptions.Sound,
                     (granted, error) =>
                     {
@@ -42,8 +42,8 @@ namespace NotificationHubSample.iOS
             else if (UIDevice.CurrentDevice.CheckSystemVersion(8, 0))
             {
                 var pushSettings = UIUserNotificationSettings.GetSettingsForTypes(
-                UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound,
-                new NSSet());
+                    UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound,
+                    new NSSet());
 
                 UIApplication.SharedApplication.RegisterUserNotificationSettings(pushSettings);
                 UIApplication.SharedApplication.RegisterForRemoteNotifications();
