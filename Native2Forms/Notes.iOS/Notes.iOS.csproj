@@ -127,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AppNavigationController.cs" />
+    <Compile Include="Controllers\NoteDetailsViewController.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Views\NotesPage.xaml.cs">
@@ -136,6 +137,9 @@
       <DependentUpon>NoteEntryPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Note.cs" />
+    <Compile Include="Views\NoteDetailsPage.xaml.cs">
+      <DependentUpon>NoteDetailsPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\NotesPage.xaml">
@@ -143,6 +147,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NoteEntryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NoteDetailsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

@@ -33,7 +33,7 @@ namespace Notes.iOS
 
             FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
             UIViewController mainPage = new NotesPage().CreateViewController();
-            mainPage.Title = "Notes";
+            mainPage.Title = "Notes";            
 
             _navigation = new AppNavigationController(mainPage);
 
@@ -43,14 +43,21 @@ namespace Notes.iOS
             return true;
         }
 
-        public void NavigateToNoteEntryPage(Note note)
+        public void NavigateToNoteEntryPage()
         {
             var noteEntryPage = new NoteEntryPage
             {
-                BindingContext = note
+                BindingContext = new Note()
             }.CreateViewController();
             noteEntryPage.Title = "Note Entry";
             _navigation.PushViewController(noteEntryPage, true);
+        }
+
+        public void NavigateToNoteDetails(Note note)
+        {
+            var noteDetailsPage = new NoteDetailsViewController(note);
+            noteDetailsPage.Title = "Note Details";
+            _navigation.PushViewController(noteDetailsPage, true);
         }
 
         public void NavigateBack()

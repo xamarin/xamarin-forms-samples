@@ -32,17 +32,5 @@ namespace Notes.iOS.Views
 
             AppDelegate.Instance.NavigateBack();
         }
-
-        void OnDeleteButtonClicked(object sender, EventArgs e)
-        {
-            var note = (Note)BindingContext;
-
-            if (File.Exists(note.Filename))
-            {
-                File.Delete(note.Filename);
-            }
-
-            AppDelegate.Instance.NavigateBack();
-        }
     }
 }

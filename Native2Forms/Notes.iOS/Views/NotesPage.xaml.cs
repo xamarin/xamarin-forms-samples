@@ -40,14 +40,14 @@ namespace Notes.iOS.Views
 
         void OnNoteAddedClicked(object sender, EventArgs e)
         {
-            AppDelegate.Instance.NavigateToNoteEntryPage(new Note());
+            AppDelegate.Instance.NavigateToNoteEntryPage();
         }
 
         void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem != null)
             {
-                AppDelegate.Instance.NavigateToNoteEntryPage(e.SelectedItem as Note);
+                AppDelegate.Instance.NavigateToNoteDetails(e.SelectedItem as Note);
             }
         }
     }
