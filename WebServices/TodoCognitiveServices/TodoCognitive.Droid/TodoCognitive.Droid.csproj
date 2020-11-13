@@ -48,7 +48,7 @@
     <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.android" Version="1.1.0" />
     <PackageReference Include="SQLitePCLRaw.provider.e_sqlite3.android" Version="1.1.0" />
     <PackageReference Include="Xam.Plugin.Media" Version="2.6.1" />
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Faker.Net.Portable" Version="2.6.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
   </ItemGroup>
 
   <ItemGroup>

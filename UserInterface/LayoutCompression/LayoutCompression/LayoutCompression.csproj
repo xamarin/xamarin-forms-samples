@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="1.8.1" />
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
   </ItemGroup>
 
   <ItemGroup>
