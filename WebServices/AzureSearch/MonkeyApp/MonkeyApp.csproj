@@ -14,7 +14,7 @@
     <PackageReference Include="Microsoft.Rest.ClientRuntime.Azure" Version="2.5.2" />
     <PackageReference Include="Microsoft.Spatial" Version="6.13.0" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
   </ItemGroup>
 
   <ItemGroup>

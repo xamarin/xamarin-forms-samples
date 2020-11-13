@@ -19,6 +19,6 @@
   <ItemGroup>
     <PackageReference Include="UrhoSharp.Forms" Version="1.9.67" />
     <PackageReference Include="Xamarin.Essentials" Version="1.0.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
   </ItemGroup>
 </Project>

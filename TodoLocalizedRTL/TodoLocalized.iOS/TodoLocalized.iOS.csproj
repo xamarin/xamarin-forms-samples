@@ -104,7 +104,7 @@
     <PackageReference Include="SQLitePCL.raw" Version="0.9.3" />
     <PackageReference Include="SQLitePCLRaw.bundle_green" Version="1.1.0" />
     <PackageReference Include="SQLitePCLRaw.core" Version="1.1.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\TodoSQLite.db3" />
