@@ -5,11 +5,8 @@ namespace LocalNotifications
     public interface INotificationManager
     {
         event EventHandler NotificationReceived;
-
         void Initialize();
-
-        int ScheduleNotification(string title, string message);
-
+        void SendNotification(string title, string message, DateTime? notifyTime = null);
         void ReceiveNotification(string title, string message);
     }
 }

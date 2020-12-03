@@ -20,12 +20,20 @@ namespace LocalNotifications
             };
         }
 
+        void OnSendClick(object sender, EventArgs e)
+        {
+            notificationNumber++;
+            string title = $"Local Notification #{notificationNumber}";
+            string message = $"You have now received {notificationNumber} notifications!";
+            notificationManager.SendNotification(title, message);
+        }
+
         void OnScheduleClick(object sender, EventArgs e)
         {
             notificationNumber++;
             string title = $"Local Notification #{notificationNumber}";
             string message = $"You have now received {notificationNumber} notifications!";
-            notificationManager.ScheduleNotification(title, message);
+            notificationManager.SendNotification(title, message, DateTime.Now.AddSeconds(10));
         }
 
         void ShowNotification(string title, string message)
