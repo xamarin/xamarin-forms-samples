@@ -9,7 +9,6 @@ namespace LocalNotifications.iOS
     public class iOSNotificationManager : INotificationManager
     {
         int messageId = 0;
-
         bool hasNotificationsPermission;
 
         public event EventHandler NotificationReceived;

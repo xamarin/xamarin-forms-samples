@@ -70,7 +70,7 @@ namespace LocalNotifications.Droid
 
                 PendingIntent pendingIntent = PendingIntent.GetBroadcast(AndroidApp.Context, pendingIntentId++, intent, PendingIntentFlags.CancelCurrent);
                 long triggerTime = GetNotifyTime(notifyTime.Value);
-                AlarmManager alarmManager = GetAlarmManager();
+                AlarmManager alarmManager = AndroidApp.Context.GetSystemService(Context.AlarmService) as AlarmManager;
                 alarmManager.Set(AlarmType.RtcWakeup, triggerTime, pendingIntent);
             }
             else
@@ -104,12 +104,6 @@ namespace LocalNotifications.Droid
             }
 
             channelInitialized = true;
-        }
-
-        AlarmManager GetAlarmManager()
-        {
-            AlarmManager alarmManager = Android.App.Application.Context.GetSystemService(Context.AlarmService) as AlarmManager;
-            return alarmManager;
         }
 
         long GetNotifyTime(DateTime notifyTime)
