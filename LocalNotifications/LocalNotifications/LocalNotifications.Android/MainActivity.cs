@@ -36,8 +36,8 @@ namespace LocalNotifications.Droid
         {
             if (intent?.Extras != null)
             {
-                string title = intent.Extras.GetString(AndroidNotificationManager.TitleKey);
-                string message = intent.Extras.GetString(AndroidNotificationManager.MessageKey);
+                string title = intent.GetStringExtra(AndroidNotificationManager.TitleKey);
+                string message = intent.GetStringExtra(AndroidNotificationManager.MessageKey);
 
                 DependencyService.Get<INotificationManager>().ReceiveNotification(title, message);
             }

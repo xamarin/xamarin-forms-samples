@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -60,6 +59,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AlarmHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -87,7 +87,7 @@
   <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\LocalNotifications\LocalNotifications.csproj">
-      <Project>{48AB845E-F987-41F0-B81A-1C178087A374}</Project>
+      <Project>{A7BE66D7-177D-4188-87A1-E6948B3D1C7C}</Project>
       <Name>LocalNotifications</Name>
     </ProjectReference>
   </ItemGroup>
