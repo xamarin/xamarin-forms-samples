@@ -1,4 +1,5 @@
 ﻿using System;
+using Foundation;
 using UserNotifications;
 using Xamarin.Forms;
 
@@ -7,8 +8,7 @@ namespace LocalNotifications.iOS
 {
     public class iOSNotificationManager : INotificationManager
     {
-        int messageId = -1;
-
+        int messageId = 0;
         bool hasNotificationsPermission;
 
         public event EventHandler NotificationReceived;
@@ -22,12 +22,12 @@ namespace LocalNotifications.iOS
             });
         }
 
-        public int ScheduleNotification(string title, string message)
+        public void SendNotification(string title, string message, DateTime? notifyTime = null)
         {
             // EARLY OUT: app doesn't have permissions
-            if(!hasNotificationsPermission)
+            if (!hasNotificationsPermission)
             {
-                return -1;
+                return;
             }
 
             messageId++;
@@ -40,9 +40,17 @@ namespace LocalNotifications.iOS
                 Badge = 1
             };
 
-            // Local notifications can be time or location based
-            // Create a time-based trigger, interval is in seconds and must be greater than 0
-            var trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(0.25, false);
+            UNNotificationTrigger trigger;
+            if (notifyTime != null)
+            {
+                // Create a calendar-based trigger.
+                trigger = UNCalendarNotificationTrigger.CreateTrigger(GetNSDateComponents(notifyTime.Value), false);
+            }
+            else
+            {
+                // Create a time-based trigger, interval is in seconds and must be greater than 0.
+                trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(0.25, false);
+            }
 
             var request = UNNotificationRequest.FromIdentifier(messageId.ToString(), content, trigger);
             UNUserNotificationCenter.Current.AddNotificationRequest(request, (err) =>
@@ -52,8 +60,6 @@ namespace LocalNotifications.iOS
                     throw new Exception($"Failed to schedule notification: {err}");
                 }
             });
-
-            return messageId;
         }
 
         public void ReceiveNotification(string title, string message)
@@ -64,6 +70,19 @@ namespace LocalNotifications.iOS
                 Message = message
             };
             NotificationReceived?.Invoke(null, args);
+        }
+
+        NSDateComponents GetNSDateComponents(DateTime dateTime)
+        {
+            return new NSDateComponents
+            {
+                Month = dateTime.Month,
+                Day = dateTime.Day,
+                Year = dateTime.Year,
+                Hour = dateTime.Hour,
+                Minute = dateTime.Minute,
+                Second = dateTime.Second
+            };
         }
     }
 }
