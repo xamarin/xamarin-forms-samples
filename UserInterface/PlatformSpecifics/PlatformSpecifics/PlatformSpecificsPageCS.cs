@@ -73,7 +73,7 @@ namespace PlatformSpecifics
                         new TextCell { Text = "TabbedPage Toolbar Location", Command = NavigateCommand, CommandParameter = typeof(WindowsTabbedPageCS) },
                         new TextCell { Text = "NavigationPage Toolbar Location", Command = NavigateCommand, CommandParameter = typeof(WindowsNavigationPageCS) },
                         new TextCell { Text = "FlyoutPage Toolbar Location", Command = NavigateCommand, CommandParameter = typeof(WindowsFlyoutPageCS) },
-                        new TextCell { Text = "WebView JavaScript Alert", Command = NavigateCommand, CommandParameter = typeof(WindowsWebViewPageCS) },
+                        new TextCell { Text = "WebView JavaScript Alert, and Execution Mode", Command = NavigateCommand, CommandParameter = typeof(WindowsWebViewPageCS) },
                         new TextCell { Text = "Text Reading Order", Command = NavigateCommand, CommandParameter = typeof(WindowsReadingOrderPageCS) },
                         new TextCell { Text = "SearchBar Spell Check", Command = NavigateCommand, CommandParameter = typeof(WindowsSearchBarPageCS) },
                         new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(WindowsLegacyColorModePageCS) },
