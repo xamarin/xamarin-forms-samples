@@ -7,8 +7,7 @@
         <StackLayout Margin="20">
             <Label Text="EllipseGeometry" />
             <Path Fill="Blue"
-                  Stroke="Red"
-                  StrokeThickness="1">
+                  Stroke="Red">
                 <Path.Data>
                     <EllipseGeometry Center="50,50"
                                  RadiusX="50"
@@ -16,8 +15,7 @@
                 </Path.Data>
             </Path>
             <Label Text="LineGeometry" />
-            <Path Stroke="Black"
-                  StrokeThickness="1">
+            <Path Stroke="Black">
                 <Path.Data>
                     <LineGeometry StartPoint="10,20"
                               EndPoint="100,130" />
@@ -25,20 +23,26 @@
             </Path>
             <Label Text="RectangleGeometry" />
             <Path Fill="Blue"
-                  Stroke="Red"
-                  StrokeThickness="1">
+                  Stroke="Red">
                 <Path.Data>
                     <RectangleGeometry Rect="10,10,150,100" />
                 </Path.Data>
             </Path>
-            <!--<Label Text="PathGeometry with an ArcSegment" />
-            <Path Stroke="Black"
-                  StrokeThickness="1">
+            <Label Text="RoundRectangleGeometry" />
+            <Path Fill="Blue"
+                  Stroke="Red">
+                <Path.Data>
+                    <RoundRectangleGeometry CornerRadius="5"
+                                            Rect="10,10,150,100" />
+                </Path.Data>
+            </Path>
+            <Label Text="PathGeometry with an ArcSegment" />
+            <Path Stroke="Black">
                 <Path.Data>
                     <PathGeometry>
                         <PathGeometry.Figures>
                             <PathFigureCollection>
-                                <PathFigure StartPoint="10,100">
+                                <PathFigure StartPoint="10,10">
                                     <PathFigure.Segments>
                                         <PathSegmentCollection>
                                             <ArcSegment Size="100,50"
@@ -53,10 +57,9 @@
                         </PathGeometry.Figures>
                     </PathGeometry>
                 </Path.Data>
-            </Path>-->
+            </Path>
             <Label Text="PathGeometry with a BezierSegment" />
-            <Path Stroke="Black"
-                  StrokeThickness="1">
+            <Path Stroke="Black">
                 <Path.Data>
                     <PathGeometry>
                         <PathGeometry.Figures>
@@ -77,7 +80,6 @@
             </Path>
             <Label Text="PathGeometry with LineSegments" />
             <Path Stroke="Black"
-                  StrokeThickness="1"
                   Aspect="Uniform"
                   HorizontalOptions="Start">
                 <Path.Data>
@@ -117,8 +119,7 @@
                 </Path.Data>
             </Path>
             <Label Text="PathGeometry with a PolyBezierSegment" />
-            <Path Stroke="Black"
-                  StrokeThickness="1">
+            <Path Stroke="Black">
                 <Path.Data>
                     <PathGeometry>
                         <PathGeometry.Figures>
@@ -136,8 +137,7 @@
                 </Path.Data>
             </Path>
             <Label Text="PathGeometry with a PolyLineSegment" />
-            <Path Stroke="Black"
-                  StrokeThickness="1">
+            <Path Stroke="Black">
                 <Path.Data>
                     <PathGeometry>
                         <PathGeometry.Figures>
@@ -151,8 +151,7 @@
                 </Path.Data>
             </Path>
             <Label Text="PathGeometry with a PolyQuadraticBezierSegment" />
-            <Path Stroke="Black"
-                  StrokeThickness="1">
+            <Path Stroke="Black">
                 <Path.Data>
                     <PathGeometry>
                         <PathGeometry.Figures>
@@ -170,8 +169,7 @@
                 </Path.Data>
             </Path>
             <Label Text="PathGeometry with a QuadraticBezierSegment" />
-            <Path Stroke="Black"
-                  StrokeThickness="1">
+            <Path Stroke="Black">
                 <Path.Data>
                     <PathGeometry>
                         <PathGeometry.Figures>
@@ -235,7 +233,6 @@
             </Path>
             <Label Text="GeometryGroup" />
             <Path Stroke="Black"
-                  StrokeThickness="1"
                   Fill="#CCCCFF"
                   Aspect="Uniform"
                   HorizontalOptions="Start">
@@ -258,8 +255,7 @@
                 </Path.Data>
             </Path>
             <Label Text="GeometryGroup" />
-            <Path Stroke="Black"
-                  StrokeThickness="1"
+            <Path Stroke="Black"                  
                   Fill="#CCCCFF"
                   TranslationY="-30"
                   HorizontalOptions="Start">

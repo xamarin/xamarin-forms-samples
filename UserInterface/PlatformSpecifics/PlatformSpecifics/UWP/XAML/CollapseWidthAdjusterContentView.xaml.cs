@@ -7,11 +7,11 @@ namespace PlatformSpecifics
 {
     public partial class CollapseWidthAdjusterContentView : ContentView
     {
-        public static readonly BindableProperty ParentPageProperty = BindableProperty.Create("ParentPage", typeof(Xamarin.Forms.MasterDetailPage), typeof(CollapseWidthAdjusterContentView), null, propertyChanged:OnParentPagePropertyChanged);
+        public static readonly BindableProperty ParentPageProperty = BindableProperty.Create("ParentPage", typeof(Xamarin.Forms.FlyoutPage), typeof(CollapseWidthAdjusterContentView), null, propertyChanged:OnParentPagePropertyChanged);
 
-        public Xamarin.Forms.MasterDetailPage ParentPage
+        public Xamarin.Forms.FlyoutPage ParentPage
         {
-            get { return (Xamarin.Forms.MasterDetailPage)GetValue(ParentPageProperty); }
+            get { return (Xamarin.Forms.FlyoutPage)GetValue(ParentPageProperty); }
             set { SetValue(ParentPageProperty, value); }
         }
 

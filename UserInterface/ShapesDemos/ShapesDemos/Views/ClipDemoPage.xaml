@@ -13,6 +13,13 @@
                     <RectangleGeometry Rect="40,100,300,150" />
                 </Image.Clip>
             </Image>
+            <Label Text="Clipped image with RoundRectangleGeometry" />
+            <Image Source="monkeyface.png">
+                <Image.Clip>
+                    <RoundRectangleGeometry CornerRadius="5"
+                                            Rect="40,100,300,150" />
+                </Image.Clip>
+            </Image>
             <Label Text="Clipped image with EllipseGeometry" />
             <Image Source="monkeyface.png">
                 <Image.Clip>

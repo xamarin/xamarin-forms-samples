@@ -5,26 +5,46 @@
              Title="Basic RadioButtons demo">
     <StackLayout Margin="10">
         <Label Text="What's your favorite animal?" />
-        <RadioButton Text="Cat"
+        <!-- RadioButtons with no group name are mutually exclusive at the parent level. -->
+        <RadioButton Content="Cat"
                      CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
-        <RadioButton Text="Dog"
+        <RadioButton Content="Dog"
                      CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
-        <RadioButton Text="Elephant"
+        <RadioButton Content="Elephant"
                      CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
-        <RadioButton Text="Monkey"
+        <RadioButton Content="Monkey"
+                     IsChecked="True"
                      CheckedChanged="OnAnimalRadioButtonCheckedChanged" />
         <Label x:Name="animalLabel"
-               Text="You have chosen:" />
-        <Label Text="What platform is this app running on?" />
+               Text="You have chosen: Monkey" />
+        <Label Text="What's your favorite animal?" />
         <StackLayout>
-            <RadioButton Text="Android"
-                         CheckedChanged="OnPlatformRadioButtonCheckedChanged" />
-            <RadioButton Text="iOS"
-                         CheckedChanged="OnPlatformRadioButtonCheckedChanged" />      
-            <RadioButton Text="UWP"
-                         CheckedChanged="OnPlatformRadioButtonCheckedChanged" />
-            <Label x:Name="platformLabel"
-                   Text="You have chosen:" />
+            <RadioButton Value="Cat"
+                         CheckedChanged="OnAnimalImageRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <Image Source="cat.png" />
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Value="Dog"
+                         CheckedChanged="OnAnimalImageRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <Image Source="dog.png" />
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Value="Elephant"
+                         CheckedChanged="OnAnimalImageRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <Image Source="elephant.png" />
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Value="Monkey"
+                         CheckedChanged="OnAnimalImageRadioButtonCheckedChanged">
+                <RadioButton.Content>
+                    <Image Source="monkey.png" />
+                </RadioButton.Content>
+            </RadioButton>
         </StackLayout>
+        <Label x:Name="animalImageLabel"
+               Text="You have chosen:" />
     </StackLayout>
 </ContentPage>

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
              xmlns:models="clr-namespace:MediaElementDemos.Models"
              x:Class="MediaElementDemos.BindToMediaElementPage"
              Title="Bind to MediaElement">
@@ -9,9 +10,9 @@
             <RowDefinition Height="2*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <MediaElement Grid.Row="0"
-                      Source="{Binding Source={x:Reference collectionView}, Path=SelectedItem.Source}"
-                      ShowsPlaybackControls="True" />
+        <xct:MediaElement Grid.Row="0"
+                          Source="{Binding Source={x:Reference collectionView}, Path=SelectedItem.Source}"
+                          ShowsPlaybackControls="True" />
         <CollectionView x:Name="collectionView"
                         Grid.Row="1"
                         Margin="20"

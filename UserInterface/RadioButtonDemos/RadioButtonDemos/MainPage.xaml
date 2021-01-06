@@ -14,6 +14,10 @@
                           Detail="Implement RadioButtons in XAML"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:BasicRadioButtonsPage}" />
+                <TextCell Text="Basic RadioButton Visual States"
+                          Detail="Implement visual states for RadioButtons"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BasicRadioButtonsVisualStatePage}" />
                 <TextCell Text="Grouped RadioButtons"
                           Detail="Implement grouped RadioButtons in XAML"
                           Command="{Binding NavigateCommand}"
@@ -22,18 +26,18 @@
                           Detail="Implement grouped RadioButtons in code"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:GroupedRadioButtonsPageCode}" />
-                <TextCell Text="Basic RadioButton Visual States"
-                          Detail="Implement visual states for RadioButtons"
+                <TextCell Text="Grouped RadioButtons"
+                          Detail="Binding to a ViewModel"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:BasicRadioButtonsVisualStatePage}" />
-
-                <!--
-                <TextCell Text="Basic CheckBox Bindings"
-                          Detail="Implement a CheckBox with data bindings"
+                          CommandParameter="{x:Type local:GroupedRadioButtonsViewModelPage}" />
+                <TextCell Text="RadioButton Content"
+                          Detail="Assign a View to the Content property"
                           Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type local:BasicCheckBoxBindingsPage}" />
-
-                -->
+                          CommandParameter="{x:Type local:RadioButtonsExplainedPage}" />
+                <TextCell Text="RadioButton ControlTemplate"
+                          Detail="Define appearance with a ControlTemplate"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:RadioButtonControlTemplatePage}" />
             </TableSection>
         </TableRoot>
     </TableView>

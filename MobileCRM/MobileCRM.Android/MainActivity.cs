@@ -6,8 +6,8 @@ using Xamarin;
 using MobileCRM;
 using Android.Content.PM;
 using Android.Gms.Common;
-using Android.Support.V4.App;
-using Android.Support.V4.Content;
+using AndroidX.Core.App;
+using AndroidX.Core.Content;
 using Android.Views;
 using Android.Widget;
 
@@ -42,9 +42,6 @@ namespace MobileCRMAndroid
 
         protected override void OnCreate(Bundle bundle)
         {
-			TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(bundle);
 
             // init Forms components

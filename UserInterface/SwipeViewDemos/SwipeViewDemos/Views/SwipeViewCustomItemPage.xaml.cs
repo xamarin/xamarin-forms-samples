@@ -22,7 +22,7 @@ namespace SwipeViewDemos
 
         async void OnCorrectAnswerInvoked(object sender, EventArgs e)
         {
-            await DisplayAlert("Correct!", "The answer is 2.", "OK");
+            await DisplayAlert("Correct!", "The answer is 4.", "OK");
         }
 
         void CheckAnswer(string result)
@@ -30,7 +30,7 @@ namespace SwipeViewDemos
             if (!string.IsNullOrWhiteSpace(result))
             {
                 int number = Convert.ToInt32(resultEntry.Text);
-                if (number.Equals(2))
+                if (number.Equals(4))
                     OnCorrectAnswerInvoked(swipeView2, EventArgs.Empty);
                 else
                     OnIncorrectAnswerInvoked(swipeView2, EventArgs.Empty);

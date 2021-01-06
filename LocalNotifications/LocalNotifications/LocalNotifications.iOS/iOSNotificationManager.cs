@@ -38,7 +38,7 @@ namespace LocalNotifications.iOS
                 Subtitle = "",
                 Body = message,
                 Badge = 1
-            };            
+            };
 
             UNNotificationTrigger trigger;
             if (notifyTime != null)
@@ -50,7 +50,7 @@ namespace LocalNotifications.iOS
             {
                 // Create a time-based trigger, interval is in seconds and must be greater than 0.
                 trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(0.25, false);
-            }                      
+            }
 
             var request = UNNotificationRequest.FromIdentifier(messageId.ToString(), content, trigger);
             UNUserNotificationCenter.Current.AddNotificationRequest(request, (err) =>

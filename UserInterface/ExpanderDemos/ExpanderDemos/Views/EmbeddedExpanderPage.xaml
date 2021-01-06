@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
              xmlns:viewmodels="clr-namespace:ExpanderDemos.ViewModels"
              x:Class="ExpanderDemos.Views.EmbeddedExpanderPage"
              Title="Expander in an Expander demo">
@@ -11,18 +12,18 @@
         <StackLayout BindableLayout.ItemsSource="{Binding Monkeys}">
             <BindableLayout.ItemTemplate>
                 <DataTemplate>
-                    <Expander>
-                        <Expander.Header>
+                    <xct:Expander>
+                        <xct:Expander.Header>
                             <Label Text="{Binding Name}"
                                    FontAttributes="Bold"
                                    FontSize="Medium" />
-                        </Expander.Header>
-                        <Expander Padding="10">
-                            <Expander.Header>
+                        </xct:Expander.Header>
+                        <xct:Expander Padding="10">
+                            <xct:Expander.Header>
                                 <Label Text="{Binding Location}"
                                        FontSize="Medium" />
-                            </Expander.Header>
-                                <Expander.ContentTemplate>
+                            </xct:Expander.Header>
+                                <xct:Expander.ContentTemplate>
                                     <DataTemplate>
                                         <Grid>
                                             <Grid.ColumnDefinitions>
@@ -38,9 +39,9 @@
                                                    FontAttributes="Italic" />
                                         </Grid>
                                     </DataTemplate>
-                                </Expander.ContentTemplate>
-                        </Expander>
-                    </Expander>
+                                </xct:Expander.ContentTemplate>
+                        </xct:Expander>
+                    </xct:Expander>
                 </DataTemplate>
             </BindableLayout.ItemTemplate>
         </StackLayout>

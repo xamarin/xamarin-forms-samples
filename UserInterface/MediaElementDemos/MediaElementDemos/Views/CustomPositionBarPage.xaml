@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
              xmlns:controls="clr-namespace:MediaElementDemos.Controls"
              x:Class="MediaElementDemos.CustomPositionBarPage"
              Title="Custom position bar">
@@ -16,11 +17,11 @@
             <ColumnDefinition Width="0.25*" />
             <ColumnDefinition Width="0.25*" />
         </Grid.ColumnDefinitions>
-        <MediaElement x:Name="mediaElement"
-                      Grid.Row="0"
-                      Grid.ColumnSpan="4"
-                      AutoPlay="False"
-                      Source="{StaticResource AsyncVoid}" />
+        <xct:MediaElement x:Name="mediaElement"
+                          Grid.Row="0"
+                          Grid.ColumnSpan="4"
+                          AutoPlay="False"
+                          Source="{StaticResource AsyncVoid}" />
         <Grid Grid.Row="1"
               Grid.ColumnSpan="4"
               BindingContext="{x:Reference mediaElement}">
@@ -35,12 +36,12 @@
                 <Button.Triggers>
                     <DataTrigger TargetType="Button"
                                  Binding="{Binding CurrentState}"
-                                 Value="{x:Static MediaElementState.Playing}">
+                                 Value="{x:Static xct:MediaElementState.Playing}">
                         <Setter Property="Text" Value="&#x23F8; Pause" />
                     </DataTrigger>
                     <DataTrigger TargetType="Button"
                                  Binding="{Binding CurrentState}"
-                                 Value="{x:Static MediaElementState.Buffering}">
+                                 Value="{x:Static xct:MediaElementState.Buffering}">
                         <Setter Property="IsEnabled" Value="False" />
                     </DataTrigger>
                 </Button.Triggers>
@@ -52,7 +53,7 @@
                 <Button.Triggers>
                     <DataTrigger TargetType="Button"
                                  Binding="{Binding CurrentState}"
-                                 Value="{x:Static MediaElementState.Stopped}">
+                                 Value="{x:Static xct:MediaElementState.Stopped}">
                         <Setter Property="IsEnabled" Value="False" />
                     </DataTrigger>
                 </Button.Triggers>
@@ -72,7 +73,7 @@
             <controls:PositionSlider.Triggers>
                 <DataTrigger TargetType="controls:PositionSlider"
                              Binding="{Binding CurrentState}"
-                             Value="{x:Static MediaElementState.Buffering}">
+                             Value="{x:Static xct:MediaElementState.Buffering}">
                     <Setter Property="IsEnabled" Value="False" />
                 </DataTrigger>
             </controls:PositionSlider.Triggers>

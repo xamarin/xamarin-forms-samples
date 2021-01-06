@@ -40,14 +40,6 @@ namespace FormsGallery
 
                         new TextCell
                         {
-                            Text = "Expander",
-                            Detail = "Display content in an expandable container",
-                            Command = navigateCommand,
-                            CommandParameter = typeof(CodeExamples.ExpanderDemoPage)
-                        },
-
-                        new TextCell
-                        {
                             Text = "Image",
                             Detail = "Display a bitmap",
                             Command = navigateCommand,
@@ -76,14 +68,6 @@ namespace FormsGallery
                             Detail = "Display a map",
                             Command = navigateCommand,
                             CommandParameter = typeof(CodeExamples.MapDemoPage)
-                        },
-
-                        new TextCell
-                        {
-                            Text = "MediaElement",
-                            Detail = "Play video or audio",
-                            Command = navigateCommand,
-                            CommandParameter = typeof(CodeExamples.MediaElementDemoPage)
                         },
 
                         new TextCell
@@ -444,17 +428,17 @@ namespace FormsGallery
                         },
                         new TextCell
                         {
+                            Text = "FlyoutPage",
+                            Detail = "Present two pages with a list and an item",
+                            Command = navigateCommand,
+                            CommandParameter = typeof(CodeExamples.FlyoutPageDemoPage)
+                        },
+                        new TextCell
+                        {
                             Text = "NavigationPage",
                             Detail = "Present a navigatable page",
                             Command = navigateCommand,
                             CommandParameter = typeof(CodeExamples.NavigationPageDemoPage)
-                        },
-                        new TextCell
-                        {
-                            Text = "MasterDetailPage",
-                            Detail = "Present two pages with a list and an item",
-                            Command = navigateCommand,
-                            CommandParameter = typeof(CodeExamples.MasterDetailPageDemoPage)
                         },
                         new TextCell
                         {

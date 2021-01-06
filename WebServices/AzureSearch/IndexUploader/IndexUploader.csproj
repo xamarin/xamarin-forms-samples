@@ -7,7 +7,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>IndexUploader</RootNamespace>
     <AssemblyName>IndexUploader</AssemblyName>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

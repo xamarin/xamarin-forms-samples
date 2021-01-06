@@ -10,8 +10,7 @@
                   Y1="0"
                   X2="0"
                   Y2="120"
-                  Stroke="Red"
-                  StrokeThickness="1"/>
+                  Stroke="Red" />
             <Label Text="Line with stroke" />
             <Line X1="40"
                   Y1="0"

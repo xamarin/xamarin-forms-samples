@@ -23,7 +23,6 @@
             <StackLayout Padding="20">
                 <Button Text="TwoPaneView Playground" Clicked="OnNavigateToSample"></Button>
                 <Button Text="Nested TwoPaneView Split Across Hinge" Clicked="OnNavigateToSample"></Button>
-                <Button Text="Open Picture in Picture Window" Clicked="OnNavigateToSample"></Button>
                 <Button Text="DualScreenInfo with non TwoPaneView" Clicked="OnNavigateToSample"></Button>
             </StackLayout>
         </dualScreen:TwoPaneView.Pane2>

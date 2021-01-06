@@ -6,7 +6,6 @@ namespace DragAndDropGesture
     {
         public App()
         {
-            Device.SetFlags(new string[] { "DragAndDrop_Experimental", "Shapes_Experimental" });
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());

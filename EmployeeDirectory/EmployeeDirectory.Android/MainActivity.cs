@@ -1,17 +1,17 @@
 ﻿using System;
-using Android.App;
-using Android.OS;
 using System.IO;
-using EmployeeDirectoryUI;
+using Android.App;
 using Android.Content.PM;
-using Android.Support.V4.Content;
-using Android.Support.V4.App;
+using Android.OS;
 using Android.Widget;
+using AndroidX.Core.App;
+using AndroidX.Core.Content;
+using EmployeeDirectoryUI;
 using Xamarin.Forms.Platform.Android;
 
 namespace EmployeeDirectory.Android
 {
-	[Activity(Label = "EmployeeDirectory", Theme = "@style/MainTheme", MainLauncher = true,
+    [Activity(Label = "EmployeeDirectory", Theme = "@style/MainTheme", MainLauncher = true,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : FormsAppCompatActivity
     {
@@ -28,9 +28,6 @@ namespace EmployeeDirectory.Android
 
         protected override void OnCreate(Bundle bundle)
         {
-			TabLayoutResource = Resource.Layout.Tabbar;
-			ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(bundle);
             Instance = this;
 

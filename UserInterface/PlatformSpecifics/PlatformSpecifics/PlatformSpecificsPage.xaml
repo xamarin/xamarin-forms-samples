@@ -26,7 +26,7 @@
             <TextCell Text="VisualElement First Responder" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSFirstResponderPage}" />
             <TextCell Text="TabbedPage Translucent TabBar" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSTranslucentTabbedPage}" />
             <TextCell Text="SearchBar Style" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSSearchBarPage}" />
-            <TextCell Text="MasterDetailPage Shadow" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSMasterDetailPage}" />
+            <TextCell Text="FlyoutPage Shadow" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:iOSFlyoutPage}" />
         </TableSection>
         <TableSection Title="Android">
             <TextCell Text="Soft Input Mode Adjust" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:AndroidSoftInputModeAdjustPage}" />
@@ -47,8 +47,8 @@
         <TableSection Title="UWP">
             <TextCell Text="TabbedPage Toolbar Location" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsTabbedPage}" />
             <TextCell Text="NavigationPage Toolbar Location" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsNavigationPage}" />
-            <TextCell Text="MasterDetailPage Toolbar Location" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsMasterDetailPage}" />
-            <TextCell Text="WebView JavaScript Alert" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsWebViewPage}" />
+            <TextCell Text="FlyoutPage Toolbar Location" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsFlyoutPage}" />
+            <TextCell Text="WebView JavaScript Alert, and ExecutionMode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsWebViewPage}" />
             <TextCell Text="Text Reading Order" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsReadingOrderPage}" />
             <TextCell Text="SearchBar Spell Check" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsSearchBarPage}" />
             <TextCell Text="VisualElement Legacy Color Mode" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WindowsLegacyColorModePage}" />

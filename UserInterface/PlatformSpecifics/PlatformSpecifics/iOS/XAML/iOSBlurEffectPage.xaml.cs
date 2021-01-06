@@ -14,22 +14,22 @@ namespace PlatformSpecifics
 
         void OnNoBlurButtonClicked(object sender, EventArgs e)
         {
-            boxView.On<iOS>().UseBlurEffect(BlurEffectStyle.None);
+            image.On<iOS>().UseBlurEffect(BlurEffectStyle.None);
         }
 
         void OnExtraLightBlurButtonClicked(object sender, EventArgs e)
         {
-            boxView.On<iOS>().UseBlurEffect(BlurEffectStyle.ExtraLight);
+            image.On<iOS>().UseBlurEffect(BlurEffectStyle.ExtraLight);
         }
 
         void OnLightBlurButtonClicked(object sender, EventArgs e)
         {
-            boxView.On<iOS>().UseBlurEffect(BlurEffectStyle.Light);
+            image.On<iOS>().UseBlurEffect(BlurEffectStyle.Light);
         }
 
         void OnDarkBlurButtonClicked(object sender, EventArgs e)
         {
-            boxView.On<iOS>().UseBlurEffect(BlurEffectStyle.Dark);
+            image.On<iOS>().UseBlurEffect(BlurEffectStyle.Dark);
         }
     }
 }

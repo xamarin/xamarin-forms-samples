@@ -9,16 +9,11 @@ namespace FormsGallery.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(bundle);
 
-            Xamarin.Forms.Forms.SetFlags(new string[] {"SwipeView_Experimental", "CarouselView_Experimental", "MediaElement_Experimental", "RadioButton_Experimental", "Expander_Experimental", "Shapes_Experimental" });
             global::Xamarin.Forms.Forms.Init(this, bundle);
             global::Xamarin.FormsMaps.Init(this, bundle);
             LoadApplication(new App());
         }
     }
 }
-

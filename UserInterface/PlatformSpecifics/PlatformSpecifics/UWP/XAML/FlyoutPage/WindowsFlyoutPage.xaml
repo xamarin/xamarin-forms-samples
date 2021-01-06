@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms" 
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                  xmlns:local="clr-namespace:PlatformSpecifics"
+                  xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core" 
+                  x:Class="PlatformSpecifics.WindowsFlyoutPage" 
+                  FlyoutLayoutBehavior="Popover"
+                  windows:FlyoutPage.CollapseStyle="Partial"
+                  windows:FlyoutPage.CollapsedPaneWidth="48">
+  <FlyoutPage.ToolbarItems>
+    <ToolbarItem Name="Primary 1" IconImageSource="reminders.png" Order="Primary" Clicked="OnToolbarItemClicked" />
+    <ToolbarItem Name="Primary 2" IconImageSource="reminders.png" Order="Primary" Clicked="OnToolbarItemClicked" />
+    <ToolbarItem Name="Secondary 1" IconImageSource="reminders.png" Order="Secondary" Clicked="OnToolbarItemClicked" />
+    <ToolbarItem Name="Secondary 2" IconImageSource="reminders.png" Order="Secondary" Clicked="OnToolbarItemClicked" />
+  </FlyoutPage.ToolbarItems>
+</FlyoutPage>

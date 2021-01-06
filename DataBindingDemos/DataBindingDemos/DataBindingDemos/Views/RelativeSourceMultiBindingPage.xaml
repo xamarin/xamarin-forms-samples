@@ -3,23 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DataBindingDemos"
              xmlns:controls="clr-namespace:DataBindingDemos.Controls"
+             xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
              x:Class="DataBindingDemos.RelativeSourceMultiBindingPage"
              Title="RelativeSource MultiBinding demo">
     <ContentPage.Resources>
         <local:AllTrueMultiConverter x:Key="AllTrueConverter" />
 
         <ControlTemplate x:Key="CardViewExpanderControlTemplate">
-            <Expander BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
-                      IsExpanded="{Binding IsExpanded, Source={RelativeSource TemplatedParent}}"
-                      BackgroundColor="{Binding CardColor}"
-                      Padding="8">
-                <Expander.IsVisible>
+            <xct:Expander BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+                          IsExpanded="{Binding IsExpanded, Source={RelativeSource TemplatedParent}}"
+                          BackgroundColor="{Binding CardColor}"
+                          Padding="8">
+                <xct:Expander.IsVisible>
                     <MultiBinding Converter="{StaticResource AllTrueConverter}">
                         <Binding Path="IsExpanded" />
                         <Binding Path="IsEnabled" />
                     </MultiBinding>
-                </Expander.IsVisible>
-                <Expander.Header>
+                </xct:Expander.IsVisible>
+                <xct:Expander.Header>
                     <Grid>
                         <Label Text="{Binding CardTitle}"
                                FontAttributes="Bold"
@@ -31,7 +32,7 @@
                                VerticalOptions="Start">
                             <Image.Triggers>
                                 <DataTrigger TargetType="Image"
-                                             Binding="{Binding Source={RelativeSource AncestorType={x:Type Expander}}, Path=IsExpanded}"
+                                             Binding="{Binding Source={RelativeSource AncestorType={x:Type xct:Expander}}, Path=IsExpanded}"
                                              Value="True">
                                     <Setter Property="Source"
                                             Value="collapse.png" />
@@ -39,7 +40,7 @@
                             </Image.Triggers>
                         </Image>
                     </Grid>
-                </Expander.Header>
+                </xct:Expander.Header>
                 <Grid Padding="10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="75" />
@@ -69,7 +70,7 @@
                            HorizontalOptions="Start">
                     </Label>
                 </Grid>
-            </Expander>
+            </xct:Expander>
         </ControlTemplate>
 
     </ContentPage.Resources>

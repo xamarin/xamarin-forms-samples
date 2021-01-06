@@ -1,4 +1,5 @@
 ﻿using System;
+using Xamarin.CommunityToolkit.UI.Views;
 using Xamarin.Forms;
 
 namespace ExpanderDemos.Views

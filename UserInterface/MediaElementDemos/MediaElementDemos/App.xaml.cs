@@ -7,7 +7,6 @@ namespace MediaElementDemos
     {
         public App()
         {
-            Device.SetFlags(new string[] { "MediaElement_Experimental" });
             InitializeComponent();
         }
 

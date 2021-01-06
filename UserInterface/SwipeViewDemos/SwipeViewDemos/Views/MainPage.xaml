@@ -18,6 +18,9 @@
             <TextCell Text="Swipe direction"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type views:SwipeViewDirectionPage}" />
+            <TextCell Text="Swipe threshold"
+                      Command="{Binding NavigateCommand}"
+                      CommandParameter="{x:Type views:SwipeViewThresholdPage}" />
             <TextCell Text="SwipeView resources"
                       Command="{Binding NavigateCommand}"
                       CommandParameter="{x:Type views:SwipeViewResourcePage}" />

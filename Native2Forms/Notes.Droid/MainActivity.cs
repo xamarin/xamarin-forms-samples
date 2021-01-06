@@ -2,12 +2,12 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Android.Support.V7.App;
+using AndroidX.AppCompat.App;
 using Notes.Droid.Models;
 using Notes.Droid.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
+using Toolbar = AndroidX.AppCompat.Widget.Toolbar;
 
 namespace Notes.Droid
 {
@@ -35,7 +35,7 @@ namespace Notes.Droid
             SupportActionBar.Title = "Notes";
 
             FolderPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData));
-            Android.Support.V4.App.Fragment mainPage = new NotesPage().CreateSupportFragment(this);
+            AndroidX.Fragment.App.Fragment mainPage = new NotesPage().CreateSupportFragment(this);
             SupportFragmentManager
                 .BeginTransaction()
                 .Replace(Resource.Id.fragment_frame_layout, mainPage)
@@ -62,7 +62,7 @@ namespace Notes.Droid
 
         public void NavigateToNoteEntryPage(Note note)
         {
-            Android.Support.V4.App.Fragment noteEntryPage = new NoteEntryPage
+            AndroidX.Fragment.App.Fragment noteEntryPage = new NoteEntryPage
             {
                 BindingContext = note
             }.CreateSupportFragment(this);

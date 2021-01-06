@@ -5,7 +5,7 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace PlatformSpecifics
 {
-    public class iOSScrollViewPageCS : Xamarin.Forms.MasterDetailPage
+    public class iOSScrollViewPageCS : Xamarin.Forms.FlyoutPage
     {
         public iOSScrollViewPageCS(ICommand restore)
         {
@@ -23,7 +23,7 @@ namespace PlatformSpecifics
             };
             scrollView.On<iOS>().SetShouldDelayContentTouches(false);
 
-            Master = new ContentPage { Title = "Menu", BackgroundColor = Color.Blue };
+            Flyout = new ContentPage { Title = "Menu", BackgroundColor = Color.Blue };
             Detail = new ContentPage { Content = scrollView };
         }
     }

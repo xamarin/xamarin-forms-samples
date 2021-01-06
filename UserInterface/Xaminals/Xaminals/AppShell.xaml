@@ -2,13 +2,12 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:controls="clr-namespace:Xaminals.Controls"
+       xmlns:sys="clr-namespace:System;assembly=netstandard"
        xmlns:views="clr-namespace:Xaminals.Views"
+       x:Class="Xaminals.AppShell"
        FlyoutBackgroundImage="photo.jpg"
        FlyoutBackgroundImageAspect="AspectFill"
-       FlyoutHeaderBehavior="CollapseOnScroll"
-       Navigating="OnNavigating"
-       Navigated="OnNavigated"
-       x:Class="Xaminals.AppShell">
+       FlyoutHeaderBehavior="CollapseOnScroll">
     <Shell.Resources>
         <Style x:Key="BaseStyle"
                TargetType="Element">
@@ -61,6 +60,10 @@
         <controls:FlyoutHeader />
     </Shell.FlyoutHeader>
 
+    <Shell.FlyoutFooter>
+        <controls:FlyoutFooter />
+    </Shell.FlyoutFooter>
+
     <!-- Template for FlyoutHeader -->
     <!-- Not required, as the FlyoutHeader is set above -->
     <!--    <Shell.FlyoutHeaderTemplate>
@@ -78,6 +81,22 @@
             </Grid>            
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>-->
+
+    <!-- Template for FlyoutFooter -->
+    <!-- Not required, as the FlyoutFooter is set above -->
+    <!--<Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <StackLayout>
+                <Label Text="Xaminals"
+                       TextColor="GhostWhite"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" />
+                <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}"
+                       TextColor="GhostWhite"
+                       HorizontalOptions="Center" />
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>-->
 
     <!-- Template each FlyoutItem -->
     <!--    <Shell.ItemTemplate>

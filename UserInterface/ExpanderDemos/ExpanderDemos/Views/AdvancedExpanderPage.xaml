@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
              xmlns:viewmodels="clr-namespace:ExpanderDemos.ViewModels"
              x:Class="ExpanderDemos.Views.AdvancedExpanderPage"
              Title="Advanced Expander demo">
@@ -11,11 +12,11 @@
         <StackLayout BindableLayout.ItemsSource="{Binding Monkeys}">
             <BindableLayout.ItemTemplate>
                 <DataTemplate>
-                    <Expander ExpandAnimationEasing="{x:Static Easing.CubicIn}"
-                              ExpandAnimationLength="500"
-                              CollapseAnimationEasing="{x:Static Easing.CubicOut}"
-                              CollapseAnimationLength="500">
-                        <Expander.Header>
+                    <xct:Expander ExpandAnimationEasing="CubicIn"
+                                  ExpandAnimationLength="500"
+                                  CollapseAnimationEasing="CubicOut"
+                                  CollapseAnimationLength="500">
+                        <xct:Expander.Header>
                             <Grid>
                                 <Label Text="{Binding Name}"
                                        FontAttributes="Bold"
@@ -25,7 +26,7 @@
                                        VerticalOptions="Start">
                                     <Image.Triggers>
                                         <DataTrigger TargetType="Image"
-                                                     Binding="{Binding Source={RelativeSource AncestorType={x:Type Expander}}, Path=IsExpanded}"
+                                                     Binding="{Binding Source={RelativeSource AncestorType={x:Type xct:Expander}}, Path=IsExpanded}"
                                                      Value="True">
                                             <Setter Property="Source"
                                                     Value="collapse.png" />
@@ -33,8 +34,8 @@
                                     </Image.Triggers>
                                 </Image>
                             </Grid>
-                        </Expander.Header>
-                        <Expander.ContentTemplate>
+                        </xct:Expander.Header>
+                        <xct:Expander.ContentTemplate>
                             <DataTemplate>
                                 <Grid Padding="10">
                                     <Grid.ColumnDefinitions>
@@ -54,8 +55,8 @@
                                     </Label>
                                 </Grid>
                             </DataTemplate>
-                        </Expander.ContentTemplate>
-                    </Expander>
+                        </xct:Expander.ContentTemplate>
+                    </xct:Expander>
                 </DataTemplate>
             </BindableLayout.ItemTemplate>
         </StackLayout>
