@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DragAndDropGesture"
+             x:Class="DragAndDropGesture.CustomDataPackageCommandDemoPage"
+             Title="Custom data package demo">
+    <ContentPage.BindingContext>
+        <local:CustomDataPackageViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <local:Square x:Key="bigSquare">
+            <x:Arguments>
+                <x:Double>200</x:Double>
+                <x:Double>200</x:Double>
+            </x:Arguments>
+        </local:Square>
+        <local:Square x:Key="smallSquare">
+            <x:Arguments>
+                <x:Double>150</x:Double>
+                <x:Double>150</x:Double>
+            </x:Arguments>
+        </local:Square>
+    </ContentPage.Resources>
+    <StackLayout Margin="20">
+        <Label Text="Drag the square with the largest area to the grey rectangle." />
+        <Rectangle Stroke="Red"
+                   Fill="DarkBlue"
+                   StrokeThickness="4"
+                   HeightRequest="200"
+                   WidthRequest="200"
+                   HorizontalOptions="Center">
+            <Rectangle.GestureRecognizers>
+                <DragGestureRecognizer CanDrag="True"
+                                       DragStartingCommand="{Binding DragStartingCommand}"
+                                       DragStartingCommandParameter="{StaticResource bigSquare}" />
+            </Rectangle.GestureRecognizers>
+        </Rectangle>
+        <Rectangle Stroke="DarkBlue"
+                    Fill="Red"                     
+                    StrokeThickness="4"
+                    HeightRequest="150"
+                    WidthRequest="150"
+                    HorizontalOptions="Center">
+            <Rectangle.GestureRecognizers>
+                <DragGestureRecognizer CanDrag="True"
+                                       DragStartingCommand="{Binding DragStartingCommand}"
+                                       DragStartingCommandParameter="{StaticResource smallSquare}" />
+            </Rectangle.GestureRecognizers>
+        </Rectangle>
+        <Frame CornerRadius="0"
+               HasShadow="False"
+               BackgroundColor="Silver"
+               HeightRequest="200">
+            <Frame.GestureRecognizers>
+                <DropGestureRecognizer AllowDrop="True"
+                                       DropCommand="{Binding DropCommand}"
+                                       DropCommandParameter="{StaticResource bigSquare}" />
+            </Frame.GestureRecognizers>
+        </Frame>
+    </StackLayout>
+</ContentPage>

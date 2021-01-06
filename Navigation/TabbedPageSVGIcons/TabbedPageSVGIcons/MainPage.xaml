@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:MyTabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:local="clr-namespace:TabbedPageSVGIcons"
+                    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+                    x:Class="TabbedPageSVGIcons.MainPage"
+                    android:TabbedPage.ToolbarPlacement="Bottom">
+    <ContentPage Title="Tab 1"
+                 IconImageSource="{OnPlatform iOS=apple.svg, Android=ic_apple}">
+        <StackLayout Margin="20">
+            <Label Text="Tab 1"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Tab 2"
+                 IconImageSource="{OnPlatform iOS=android.svg, Android=ic_android}">
+        <StackLayout Margin="20">
+            <Label Text="Tab 2"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Tab 3"
+                 IconImageSource="{OnPlatform iOS=windows.svg, Android=ic_windows}">
+        <StackLayout Margin="20">
+            <Label Text="Tab 3"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage>
+</local:MyTabbedPage>

@@ -8,7 +8,7 @@ namespace LocalNotifications
         {
             InitializeComponent();
 
-            // use the dependency service to get a platform-specific implementation and initialize it
+            // Use the dependency service to get a platform-specific implementation and initialize it.
             DependencyService.Get<INotificationManager>().Initialize();
 
             MainPage = new MainPage();

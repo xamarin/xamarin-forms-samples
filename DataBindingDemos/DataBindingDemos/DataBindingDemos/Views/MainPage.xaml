@@ -130,10 +130,20 @@
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:MultiBindingStringFormatPage}" />
 
+                <TextCell Text="String Formatting (Code)"
+                          Detail="Combine strings from a MultiBinding"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MultiBindingStringFormatCodePage}" />
+
                 <TextCell Text="Multi Value Converters"
                           Detail="Use a multi value converter to set the CheckBox.IsChecked property"
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:MultiBindingConverterPage}" />
+
+                <TextCell Text="Multi Value Converters (Code)"
+                          Detail="Use a multi value converter to set the CheckBox.IsChecked property"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:MultiBindingConverterCodePage}" />
 
                 <TextCell Text="Nest Multi Bindings"
                           Detail="Nest multi bindings to set the CheckBox.IsChecked property"

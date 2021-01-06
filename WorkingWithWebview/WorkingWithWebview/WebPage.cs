@@ -7,7 +7,7 @@ namespace WorkingWithWebview
         public WebPage()
         {
             var browser = new WebView();
-            browser.Source = "http://xamarin.com";
+            browser.Source = "https://dotnet.microsoft.com/apps/xamarin";
             Content = browser;
         }
     }
