@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
-//using AndroidX.Fragment.App;
-using Android.Support.V4.App;
+using AndroidX.Fragment.App;
 using Android.Content;
 using Android.Views;
 using Android.Widget;
