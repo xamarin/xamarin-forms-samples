@@ -82,10 +82,7 @@ namespace NotificationHubSample.iOS
                 {
                     if (errorCallback != null)
                     {
-                        if (errorCallback != null)
-                        {
-                            Debug.WriteLine($"RegisterTemplateAsync error: {errorCallback}");
-                        }
+                        Debug.WriteLine($"RegisterTemplateAsync error: {errorCallback}");
                     }
                 });
             });
