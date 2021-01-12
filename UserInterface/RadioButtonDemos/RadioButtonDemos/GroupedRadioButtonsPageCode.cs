@@ -35,8 +35,8 @@ namespace RadioButtonDemos
                 Children = { appleRadioButton, bananaRadioButton, pineappleRadioButton, otherFruitRadioButton }
             };
 
-            // All of the RadioButtons in this StackLayout will automatically be given the GroupName 'fruits`.
-            fruitStackLayout.SetValue(RadioButtonGroup.GroupNameProperty, "fruits");
+            // All of the RadioButtons in this StackLayout will automatically be given the GroupName 'fruits'.
+            RadioButtonGroup.SetGroupName(fruitStackLayout, "fruits");
 
             Title = "Grouped RadioButtons demo (code)";
             Content = new StackLayout
