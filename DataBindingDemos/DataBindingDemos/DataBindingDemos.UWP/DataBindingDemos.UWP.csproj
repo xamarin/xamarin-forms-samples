@@ -91,6 +91,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.12" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.0.0" />    
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

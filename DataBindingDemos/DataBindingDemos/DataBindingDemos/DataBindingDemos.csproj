@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
-    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.0.0-pre6" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
