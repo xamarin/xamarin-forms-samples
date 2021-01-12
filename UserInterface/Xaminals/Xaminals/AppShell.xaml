@@ -5,6 +5,7 @@
        xmlns:sys="clr-namespace:System;assembly=netstandard"
        xmlns:views="clr-namespace:Xaminals.Views"
        x:Class="Xaminals.AppShell"
+       x:Name="shell"
        FlyoutBackgroundImage="photo.jpg"
        FlyoutBackgroundImageAspect="AspectFill"
        FlyoutHeaderBehavior="CollapseOnScroll">
@@ -97,6 +98,40 @@
             </StackLayout>
         </DataTemplate>
     </Shell.FlyoutFooterTemplate>-->
+
+    <!-- FlyoutContent -->
+    <!-- Not required, just an example -->
+    <!--<Shell.FlyoutContent>
+        <CollectionView BindingContext="{x:Reference shell}"
+                        IsGrouped="True"
+                        ItemsSource="{Binding FlyoutItems}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Title}"
+                           TextColor="White"
+                           FontSize="Large" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Shell.FlyoutContent>-->
+
+    <!-- Template for FlyoutContent -->
+    <!-- Not required, just an example -->
+    <!--<Shell.FlyoutContentTemplate>
+        <DataTemplate>
+            <CollectionView BindingContext="{x:Reference shell}"
+                            IsGrouped="True"
+                            ItemsSource="{Binding FlyoutItems}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding Title}"
+                               TextColor="White"
+                               FontSize="Large" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </DataTemplate>
+    </Shell.FlyoutContentTemplate>-->
 
     <!-- Template each FlyoutItem -->
     <!--    <Shell.ItemTemplate>
