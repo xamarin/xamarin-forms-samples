@@ -22,27 +22,21 @@
                         SelectionChanged="OnSelectionChanged">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
+                    <Grid Padding="10"
+                          RowDefinitions="Auto, *"
+                          ColumnDefinitions="Auto, *">
                         <Image Grid.RowSpan="2" 
-                                Source="{Binding ImageUrl}" 
-                                Aspect="AspectFill"
-                                HeightRequest="60"
-                                WidthRequest="60" />
+                               Source="{Binding ImageUrl}" 
+                               Aspect="AspectFill"
+                               HeightRequest="60"
+                               WidthRequest="60" />
                         <Label Grid.Column="1" 
-                                Text="{Binding Name}"
-                                FontAttributes="Bold" />
+                               Text="{Binding Name}"
+                               FontAttributes="Bold" />
                         <Label Grid.Row="1" 
-                                Grid.Column="1" 
-                                Text="{Binding Location}"
-                                VerticalOptions="End" />
+                               Grid.Column="1" 
+                               Text="{Binding Location}"
+                               VerticalOptions="End" />
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
