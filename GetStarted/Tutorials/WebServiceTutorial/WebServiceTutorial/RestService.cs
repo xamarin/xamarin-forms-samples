@@ -16,7 +16,7 @@ namespace WebServiceTutorial
             _client = new HttpClient();
         }
 
-        public async Task<List<Repository>> GetRepositories(string uri)
+        public async Task<List<Repository>> GetRepositoriesAsync(string uri)
         {
             List<Repository> repositories = null;
             try

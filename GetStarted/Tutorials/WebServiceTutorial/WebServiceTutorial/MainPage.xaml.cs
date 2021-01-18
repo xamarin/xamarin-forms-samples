@@ -16,7 +16,7 @@ namespace WebServiceTutorial
 
         async void OnButtonClicked(object sender, EventArgs e)
         {
-            List<Repository> repositories = await _restService.GetRepositories(Constants.GitHubReposEndpoint);
+            List<Repository> repositories = await _restService.GetRepositoriesAsync(Constants.GitHubReposEndpoint);
             collectionView.ItemsSource = repositories;
         }
     }
