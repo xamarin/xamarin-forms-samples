@@ -13,7 +13,7 @@ namespace LocalDatabaseTutorial
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            listView.ItemsSource = await App.Database.GetPeopleAsync();
+            collectionView.ItemsSource = await App.Database.GetPeopleAsync();
         }
 
         async void OnButtonClicked(object sender, EventArgs e)
@@ -27,7 +27,7 @@ namespace LocalDatabaseTutorial
                 });
 
                 nameEntry.Text = ageEntry.Text = string.Empty;
-                listView.ItemsSource = await App.Database.GetPeopleAsync();
+                collectionView.ItemsSource = await App.Database.GetPeopleAsync();
             }
         }
     }

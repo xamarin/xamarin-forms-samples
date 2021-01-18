@@ -9,13 +9,18 @@
                Placeholder="Enter age" />
         <Button Text="Add to Database"
                 Clicked="OnButtonClicked" />
-        <ListView x:Name="listView">
-            <ListView.ItemTemplate>
+        <CollectionView x:Name="collectionView">
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Name}"
-                              Detail="{Binding Age}" />
+                    <StackLayout>
+                        <Label Text="{Binding Name}"
+                               FontSize="Medium" />
+                        <Label Text="{Binding Age}"
+                               TextColor="Silver"
+                               FontSize="Small" />
+                    </StackLayout>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </StackLayout>
 </ContentPage>
