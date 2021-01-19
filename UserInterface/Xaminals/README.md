@@ -6,9 +6,6 @@ languages:
 - csharp
 products:
 - xamarin
-extendedZipContent:
-- path: LICENSE
-  target: LICENSE
 extensions:
     tags:
     - ui
