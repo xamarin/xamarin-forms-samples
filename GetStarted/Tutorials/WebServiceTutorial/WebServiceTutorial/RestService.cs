@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -15,16 +16,16 @@ namespace WebServiceTutorial
             _client = new HttpClient();
         }
 
-        public async Task<WeatherData> GetWeatherDataAsync(string uri)
+        public async Task<List<Repository>> GetRepositoriesAsync(string uri)
         {
-            WeatherData weatherData = null;
+            List<Repository> repositories = null;
             try
             {
                 HttpResponseMessage response = await _client.GetAsync(uri);
                 if (response.IsSuccessStatusCode)
                 {
                     string content = await response.Content.ReadAsStringAsync();
-                    weatherData = JsonConvert.DeserializeObject<WeatherData>(content);
+                    repositories = JsonConvert.DeserializeObject<List<Repository>>(content);
                 }
             }
             catch (Exception ex)
@@ -32,7 +33,7 @@ namespace WebServiceTutorial
                 Debug.WriteLine("\tERROR {0}", ex.Message);
             }
 
-            return weatherData;
+            return repositories;
         }
     }
 }
