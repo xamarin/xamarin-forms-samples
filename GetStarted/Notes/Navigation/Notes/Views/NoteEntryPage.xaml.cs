@@ -24,16 +24,16 @@ namespace Notes.Views
             BindingContext = new Note();
         }
 
-        void LoadNote(string itemId)
+        void LoadNote(string filename)
         {
             try
             {
                 // Retrieve the note and set it as the BindingContext of the page.
                 Note note = new Note
                 {
-                    Filename = itemId,
-                    Text = File.ReadAllText(itemId),
-                    Date = File.GetCreationTime(itemId)
+                    Filename = filename,
+                    Text = File.ReadAllText(filename),
+                    Date = File.GetCreationTime(filename)
                 };
                 BindingContext = note;
             }

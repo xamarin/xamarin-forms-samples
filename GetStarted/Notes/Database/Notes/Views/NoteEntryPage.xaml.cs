@@ -11,7 +11,7 @@ namespace Notes.Views
         {
             set
             {
-                LoadNoteAsync(value);
+                LoadNote(value);
             }
         }
 
@@ -23,7 +23,7 @@ namespace Notes.Views
             BindingContext = new Note();
         }
 
-        async void LoadNoteAsync(string itemId)
+        async void LoadNote(string itemId)
         {
             try
             {

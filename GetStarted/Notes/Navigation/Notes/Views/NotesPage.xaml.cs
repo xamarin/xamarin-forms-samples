@@ -52,7 +52,6 @@ namespace Notes.Views
                 // Navigate to the NoteEntryPage, passing the filename as a query parameter.
                 Note note = (Note)e.CurrentSelection.FirstOrDefault();
                 await Shell.Current.GoToAsync($"{nameof(NoteEntryPage)}?{nameof(NoteEntryPage.ItemId)}={note.Filename}");
-
             }
         }
     }
