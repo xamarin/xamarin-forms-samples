@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Newtonsoft.Json;
 using Notes.Models;
 using Xamarin.Forms;
 
@@ -50,11 +49,10 @@ namespace Notes.Views
         {
             if (e.CurrentSelection != null)
             {
-                // Serialize the Note object into a JSON string.
-                string navigationData = JsonConvert.SerializeObject(e.CurrentSelection.FirstOrDefault() as Note);
+                // Navigate to the NoteEntryPage, passing the filename as a query parameter.
+                Note note = (Note)e.CurrentSelection.FirstOrDefault();
+                await Shell.Current.GoToAsync($"{nameof(NoteEntryPage)}?{nameof(NoteEntryPage.ItemId)}={note.Filename}");
 
-                // Navigate to the NoteEntryPage, passing navigationData as a query parameter.
-                await Shell.Current.GoToAsync($"{nameof(NoteEntryPage)}?{nameof(NoteEntryPage.NavigationData)}={navigationData}");
             }
         }
     }

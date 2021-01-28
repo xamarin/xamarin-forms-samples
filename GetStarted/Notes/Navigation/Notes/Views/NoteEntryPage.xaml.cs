@@ -1,21 +1,18 @@
 ﻿using System;
 using System.IO;
-using Newtonsoft.Json;
 using Notes.Models;
 using Xamarin.Forms;
 
 namespace Notes.Views
 {
-    [QueryProperty(nameof(NavigationData), nameof(NavigationData))]
+    [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public partial class NoteEntryPage : ContentPage
     {
-        public string NavigationData
+        public string ItemId
         {
             set
             {
-                // URL-decode the JSON string passed to the page, deserialize it into
-                // a Note object, and set it as the BindingContext of the page.
-                BindingContext = JsonConvert.DeserializeObject<Note>(Uri.UnescapeDataString(value));
+                LoadNote(value);
             }
         }
 
@@ -25,6 +22,25 @@ namespace Notes.Views
 
             // Set the BindingContext of the page to a new Note.
             BindingContext = new Note();
+        }
+
+        void LoadNote(string itemId)
+        {
+            try
+            {
+                // Retrieve the note and set it as the BindingContext of the page.
+                Note note = new Note
+                {
+                    Filename = itemId,
+                    Text = File.ReadAllText(itemId),
+                    Date = File.GetCreationTime(itemId)
+                };
+                BindingContext = note;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Failed to load note.");
+            }
         }
 
         async void OnSaveButtonClicked(object sender, EventArgs e)
