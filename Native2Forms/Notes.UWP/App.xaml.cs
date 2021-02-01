@@ -43,6 +43,10 @@ namespace Notes.UWP
 
                 Xamarin.Forms.Forms.Init(e);
 
+                // Create app-level resource dictionary.
+                Xamarin.Forms.Application.Current = new Xamarin.Forms.Application();
+                Xamarin.Forms.Application.Current.Resources = new MyDictionary();
+
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
                     //TODO: Load state from previously suspended application
