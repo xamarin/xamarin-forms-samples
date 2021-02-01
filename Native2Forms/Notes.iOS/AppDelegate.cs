@@ -22,6 +22,8 @@ namespace Notes.iOS
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
             Forms.Init();
+
+            // Create app-level resource dictionary.
             Xamarin.Forms.Application.Current = new Xamarin.Forms.Application();
             Xamarin.Forms.Application.Current.Resources = new MyDictionary();
 
@@ -37,6 +39,7 @@ namespace Notes.iOS
 
             NotesPage notesPage = new NotesPage()
             {
+                // Set the parent so that the app-level resource dictionary can be located.
                 Parent = Xamarin.Forms.Application.Current
             };
 
@@ -57,6 +60,7 @@ namespace Notes.iOS
             NoteEntryPage noteEntryPage = new NoteEntryPage
             {
                 BindingContext = note,
+                // Set the parent so that the app-level resource dictionary can be located.
                 Parent = Xamarin.Forms.Application.Current
             };
 

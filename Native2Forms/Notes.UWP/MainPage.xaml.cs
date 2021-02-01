@@ -26,6 +26,7 @@ namespace Notes.UWP
             FolderPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData));
             notesPage = new Notes.UWP.Views.NotesPage
             {
+                // Set the parent so that the app-level resource dictionary can be located.
                 Parent = Xamarin.Forms.Application.Current
             };
             this.Content = notesPage.CreateFrameworkElement();
@@ -63,6 +64,7 @@ namespace Notes.UWP
             noteEntryPage = new Notes.UWP.Views.NoteEntryPage
             {
                 BindingContext = note,
+                // Set the parent so that the app-level resource dictionary can be located.
                 Parent = Xamarin.Forms.Application.Current
             };
             this.Frame.Navigate(noteEntryPage);

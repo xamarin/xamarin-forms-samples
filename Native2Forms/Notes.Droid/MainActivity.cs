@@ -27,8 +27,11 @@ namespace Notes.Droid
             base.OnCreate(bundle);
 
             Forms.Init(this, bundle);
+
+            // Create app-level resource dictionary.
             Xamarin.Forms.Application.Current = new Xamarin.Forms.Application();
             Xamarin.Forms.Application.Current.Resources = new MyDictionary();
+
             Instance = this;
 
             SetContentView(Resource.Layout.Main);
@@ -40,6 +43,7 @@ namespace Notes.Droid
 
             NotesPage notesPage = new NotesPage()
             {
+                // Set the parent so that the app-level resource dictionary can be located.
                 Parent = Xamarin.Forms.Application.Current
             };
             AndroidX.Fragment.App.Fragment notesPageFragment = notesPage.CreateSupportFragment(this);
@@ -75,6 +79,7 @@ namespace Notes.Droid
             NoteEntryPage noteEntryPage = new NoteEntryPage
             {
                 BindingContext = note,
+                // Set the parent so that the app-level resource dictionary can be located.
                 Parent = Xamarin.Forms.Application.Current
             };
 
