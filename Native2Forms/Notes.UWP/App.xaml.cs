@@ -42,6 +42,8 @@ namespace Notes.UWP
                 rootFrame.Navigated += OnNavigated;
 
                 Xamarin.Forms.Forms.Init(e);
+                Xamarin.Forms.Application.Current = new Xamarin.Forms.Application();
+                Xamarin.Forms.Application.Current.Resources = new MyDictionary();
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
