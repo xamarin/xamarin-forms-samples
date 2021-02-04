@@ -32,7 +32,7 @@ namespace TodoAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            // FOr mobile apps we want to allow http traffic through
+            // For mobile apps we want to allow http traffic through
 #if !DEBUG
             app.UseHttpsRedirection();
 #endif
