@@ -61,5 +61,10 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>TodoREST</string>
+	<key>NSAppTransportSecurity</key>    
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

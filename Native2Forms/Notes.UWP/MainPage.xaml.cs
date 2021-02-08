@@ -20,16 +20,21 @@ namespace Notes.UWP
 
         public MainPage()
         {
-            this.InitializeComponent();
             this.NavigationCacheMode = NavigationCacheMode.Enabled;
 
             Instance = this;
             FolderPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData));
-            notesPage = new Notes.UWP.Views.NotesPage();
+            notesPage = new Notes.UWP.Views.NotesPage
+            {
+                // Set the parent so that the app-level resource dictionary can be located.
+                Parent = Xamarin.Forms.Application.Current
+            };
             this.Content = notesPage.CreateFrameworkElement();
 
             this.Loaded += OnMainPageLoaded;
             SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+
+            notesPage.Parent = null;
         }
 
         void OnBackRequested(object sender, BackRequestedEventArgs e)
@@ -58,9 +63,12 @@ namespace Notes.UWP
         {
             noteEntryPage = new Notes.UWP.Views.NoteEntryPage
             {
-                BindingContext = note
+                BindingContext = note,
+                // Set the parent so that the app-level resource dictionary can be located.
+                Parent = Xamarin.Forms.Application.Current
             };
             this.Frame.Navigate(noteEntryPage);
+            noteEntryPage.Parent = null;
         }
 
         public void NavigateBack()

@@ -16,8 +16,9 @@ namespace TodoAPI.Controllers
         CouldNotDeleteItem
     }
 
+    [ApiController]
     [Route("api/[controller]")]
-    public class TodoItemsController : Controller
+    public class TodoItemsController : ControllerBase
     {
         private readonly ITodoRepository _todoRepository;
 
