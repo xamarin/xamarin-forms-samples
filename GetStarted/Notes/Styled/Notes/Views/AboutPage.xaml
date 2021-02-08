@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.Views.AboutPage"
+             Title="About">
+    <!-- Layout children in two rows -->
+    <Grid RowDefinitions="Auto,*">
+        <Image Source="xamarin_logo.png"
+               BackgroundColor="{StaticResource AppPrimaryColor}"
+               Opacity="0.85"
+               VerticalOptions="Center" 
+               HeightRequest="64" />
+        <!-- Layout children vertically -->
+        <StackLayout Grid.Row="1"
+                     Margin="{StaticResource PageMargin}"
+                     Spacing="20">
+            <Label FontSize="22">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Notes" 
+                                  FontAttributes="Bold" 
+                                  FontSize="22" />
+                            <Span Text=" v1.0" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="This app is written in XAML and C# with the Xamarin Platform." />
+            <Button Text="Learn more"
+                    Clicked="OnButtonClicked" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

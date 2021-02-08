@@ -7,22 +7,24 @@ namespace Notes.Data
 {
     public class NoteDatabase
     {
-        readonly SQLiteAsyncConnection _database;
+        readonly SQLiteAsyncConnection database;
 
         public NoteDatabase(string dbPath)
         {
-            _database = new SQLiteAsyncConnection(dbPath);
-            _database.CreateTableAsync<Note>().Wait();
+            database = new SQLiteAsyncConnection(dbPath);
+            database.CreateTableAsync<Note>().Wait();
         }
 
         public Task<List<Note>> GetNotesAsync()
         {
-            return _database.Table<Note>().ToListAsync();
+            //Get all notes.
+            return database.Table<Note>().ToListAsync();
         }
 
         public Task<Note> GetNoteAsync(int id)
         {
-            return _database.Table<Note>()
+            // Get a specific note.
+            return database.Table<Note>()
                             .Where(i => i.ID == id)
                             .FirstOrDefaultAsync();
         }
@@ -31,17 +33,20 @@ namespace Notes.Data
         {
             if (note.ID != 0)
             {
-                return _database.UpdateAsync(note);
+                // Update an existing note.
+                return database.UpdateAsync(note);
             }
             else
             {
-                return _database.InsertAsync(note);
+                // Save a new note.
+                return database.InsertAsync(note);
             }
         }
 
         public Task<int> DeleteNoteAsync(Note note)
         {
-            return _database.DeleteAsync(note);
+            // Delete a note.
+            return database.DeleteAsync(note);
         }
     }
 }
