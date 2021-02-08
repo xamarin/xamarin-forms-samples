@@ -15,7 +15,6 @@ urlFragment: getstarted-notes-app
 
 This sample demonstrates a simple cross-platform Notes application that allows you to enter a note and persist it to device storage.
 
-For more information about the sample see [Create a Single Page Xamarin.Forms Application](https://docs.microsoft.com/xamarin/get-started/quickstarts/single-page).
+For more information about the sample see [Create a Xamarin.Forms Application](https://docs.microsoft.com/xamarin/get-started/quickstarts/app).
 
 ![Notes application screenshot](Screenshots/01All.png "Notes application screenshot")
-
