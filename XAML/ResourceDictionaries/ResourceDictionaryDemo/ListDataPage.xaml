@@ -6,7 +6,9 @@
              x:Class="ResourceDictionaryDemo.ListDataPage"
              Title="List Data Page">
     <ContentPage.Resources>
+        <!--<ResourceDictionary Source="/AppResources.xaml;assembly=Xamarin.Forms.Controls" />-->
         <ResourceDictionary Source="MyResourceDictionary.xaml" />
+
 
         <!-- Implicit style -->
         <Style TargetType="{x:Type ListView}">
