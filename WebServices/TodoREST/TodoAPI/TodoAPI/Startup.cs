@@ -26,17 +26,18 @@ namespace TodoAPI
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        #region snippet
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            // For mobile apps we want to allow http traffic through
-#if !DEBUG
-            app.UseHttpsRedirection();
-#endif
+            else
+            {
+                // For mobile apps, allow http traffic.
+                app.UseHttpsRedirection();
+            }
 
             app.UseRouting();
 
@@ -47,6 +48,7 @@ namespace TodoAPI
                 endpoints.MapControllers();
             });
         }
+        #endregion
     }
 }
 
