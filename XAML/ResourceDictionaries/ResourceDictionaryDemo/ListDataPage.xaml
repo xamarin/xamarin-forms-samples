@@ -6,7 +6,7 @@
              x:Class="ResourceDictionaryDemo.ListDataPage"
              Title="List Data Page">
     <ContentPage.Resources>
-        <ResourceDictionary Source="MyResourceDictionary.xaml;assembly=MyLibrary" />
+        <ResourceDictionary Source="/MyResourceDictionary.xaml;assembly=MyLibrary" />
 
         <!-- Implicit style -->
         <Style TargetType="{x:Type ListView}">
