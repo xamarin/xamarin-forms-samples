@@ -18,6 +18,7 @@ namespace TodoAPI.Controllers
     }
     #endregion
 
+    #region snippetDI
     [ApiController]
     [Route("api/[controller]")]
     public class TodoItemsController : ControllerBase
@@ -28,6 +29,7 @@ namespace TodoAPI.Controllers
         {
             _todoRepository = todoRepository;
         }
+        #endregion
 
         #region snippet
         [HttpGet]
