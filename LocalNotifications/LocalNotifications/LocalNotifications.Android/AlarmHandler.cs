@@ -12,7 +12,8 @@ namespace LocalNotifications.Droid
                 string title = intent.GetStringExtra(AndroidNotificationManager.TitleKey);
                 string message = intent.GetStringExtra(AndroidNotificationManager.MessageKey);
 
-                AndroidNotificationManager.Instance.Show(title, message);
+                AndroidNotificationManager manager = AndroidNotificationManager.Instance ?? new AndroidNotificationManager();
+                manager.Show(title, message);
             }
         }
     }

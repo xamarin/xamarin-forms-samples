@@ -29,10 +29,15 @@ namespace LocalNotifications.Droid
 
         public static AndroidNotificationManager Instance { get; private set; }
 
+        public AndroidNotificationManager() => Initialize();
+
         public void Initialize()
         {
-            CreateNotificationChannel();
-            Instance = this;
+            if (Instance == null)
+            {
+                CreateNotificationChannel();
+                Instance = this;
+            }
         }
 
         public void SendNotification(string title, string message, DateTime? notifyTime = null)
@@ -87,6 +92,14 @@ namespace LocalNotifications.Droid
 
             Notification notification = builder.Build();
             manager.Notify(messageId++, notification);
+        }
+
+        public void DeleteNotification(int id)
+        {
+            Intent intent = new Intent(AndroidApp.Context, typeof(AlarmHandler));
+            PendingIntent pendingIntent = PendingIntent.GetBroadcast(AndroidApp.Context, id, intent, PendingIntentFlags.CancelCurrent);
+            AlarmManager alarmManager = AndroidApp.Context.GetSystemService(Context.AlarmService) as AlarmManager;
+            alarmManager.Cancel(pendingIntent);
         }
 
         void CreateNotificationChannel()
