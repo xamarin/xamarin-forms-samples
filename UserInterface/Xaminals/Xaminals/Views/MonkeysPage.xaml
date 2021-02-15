@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:controls="clr-namespace:Xaminals.Controls"
              xmlns:data="clr-namespace:Xaminals.Data"
+             xmlns:views="clr-namespace:Xaminals.Views"
              x:Class="Xaminals.Views.MonkeysPage"
              Title="Monkeys">
     <ContentPage.Resources>
@@ -24,9 +25,11 @@
     </ContentPage.Resources>
     
     <Shell.SearchHandler>
-        <controls:MonkeySearchHandler Placeholder="Enter search term"
+        <controls:AnimalSearchHandler Placeholder="Enter search term"
                                       ShowsResults="true"
-                                      DisplayMemberName="Name" />
+                                      ItemTemplate="{StaticResource AnimalSearchTemplate}"
+                                      Animals="{x:Static data:MonkeyData.Monkeys}"
+                                      SelectedItemNavigationTarget="{x:Type views:MonkeyDetailPage}" />
     </Shell.SearchHandler>
     
     <CollectionView Margin="20"

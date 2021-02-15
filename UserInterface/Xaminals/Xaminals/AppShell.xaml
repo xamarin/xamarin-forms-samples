@@ -136,11 +136,7 @@
     <!-- Template each FlyoutItem -->
     <!--    <Shell.ItemTemplate>
         <DataTemplate>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.2*" />
-                    <ColumnDefinition Width="0.8*" />
-                </Grid.ColumnDefinitions>
+            <Grid ColumnDefinitions="0.2*,0.8*">
                 <Image Source="{Binding Icon}"
                        Margin="5"
                        HeightRequest="45" />
@@ -155,11 +151,7 @@
     <!-- Template each MenuItem -->
     <!--    <Shell.MenuItemTemplate>
         <DataTemplate>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.2*" />
-                    <ColumnDefinition Width="0.8*" />
-                </Grid.ColumnDefinitions>
+            <Grid ColumnDefinitions="0.2*,0.8*">
                 <Image Source="{Binding Icon}"
                        Margin="5"
                        HeightRequest="45" />
@@ -172,7 +164,6 @@
     </Shell.MenuItemTemplate>-->
 
     <FlyoutItem Route="animals"
-                Title="Animals"
                 FlyoutDisplayOptions="AsMultipleItems">
         <Tab Title="Domestic"
              Route="domestic"
@@ -223,9 +214,6 @@
                   Icon="info.png"
                   ContentTemplate="{DataTemplate views:AboutPage}" />
 
-    <MenuItem Text="Random"
-              IconImageSource="random.png"
-              Command="{Binding RandomPageCommand}" />
     <MenuItem Text="Help"
               IconImageSource="help.png"
               Command="{Binding HelpCommand}"

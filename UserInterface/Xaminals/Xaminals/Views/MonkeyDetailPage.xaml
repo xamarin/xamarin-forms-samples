@@ -5,11 +5,11 @@
              x:Name="self"
              Title="Monkey Details">
     
-    <Shell.BackButtonBehavior>
+    <!--<Shell.BackButtonBehavior>
         <BackButtonBehavior Command="{Binding BackCommand}"
                             BindingContext="{Binding Source={x:Reference self}, Path=BindingContext}"
                             IconOverride="back.png" />   
-    </Shell.BackButtonBehavior>
+    </Shell.BackButtonBehavior>-->
    
     <ScrollView>
         <StackLayout Margin="20">
