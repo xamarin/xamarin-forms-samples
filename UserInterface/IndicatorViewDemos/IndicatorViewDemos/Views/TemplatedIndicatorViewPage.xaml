@@ -7,6 +7,31 @@
     <ContentPage.BindingContext>
         <viewmodels:MonkeysViewModel />
     </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <Style x:Key="IndicatorLabelStyle"
+               TargetType="Label">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="TextColor"
+                                        Value="LightGray" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="TextColor"
+                                        Value="Black" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
     <StackLayout Margin="10">
         <CarouselView ItemsSource="{Binding Monkeys}"
                       IndicatorView="indicatorView">
@@ -44,14 +69,17 @@
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
+
         <IndicatorView x:Name="indicatorView"
                        Margin="0,0,0,40"
-                       IndicatorColor="LightGray"
-                       SelectedIndicatorColor="Black"
+                       IndicatorColor="Transparent"
+                       SelectedIndicatorColor="Transparent"
                        HorizontalOptions="Center">
             <IndicatorView.IndicatorTemplate>
                 <DataTemplate>
-                    <Image Source="{FontImage &#xf30c;, FontFamily={OnPlatform iOS=Ionicons, Android=ionicons.ttf#}, Size=12}" />
+                    <Label Text="&#xf30c;"
+                           FontFamily="{OnPlatform iOS=Ionicons, Android=ionicons.ttf#}, Size=12}"
+                           Style="{StaticResource IndicatorLabelStyle}" />
                 </DataTemplate>
             </IndicatorView.IndicatorTemplate>
         </IndicatorView>
