@@ -9,8 +9,7 @@
     </ContentPage.BindingContext>
 
     <ContentPage.Resources>
-        <Style x:Key="IndicatorLabelStyle"
-               TargetType="Label">
+        <Style TargetType="Label">
             <Setter Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList>
                     <VisualStateGroup x:Name="CommonStates">
@@ -78,8 +77,7 @@
             <IndicatorView.IndicatorTemplate>
                 <DataTemplate>
                     <Label Text="&#xf30c;"
-                           FontFamily="{OnPlatform iOS=Ionicons, Android=ionicons.ttf#}, Size=12}"
-                           Style="{StaticResource IndicatorLabelStyle}" />
+                           FontFamily="{OnPlatform iOS=Ionicons, Android=ionicons.ttf#}, Size=12}" />
                 </DataTemplate>
             </IndicatorView.IndicatorTemplate>
         </IndicatorView>
