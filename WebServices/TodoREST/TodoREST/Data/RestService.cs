@@ -3,26 +3,21 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Xamarin.Forms;
 
 namespace TodoREST
 {
     public class RestService : IRestService
     {
         HttpClient client;
-        JsonSerializerOptions serializerOptions;
 
         public List<TodoItem> Items { get; private set; }
 
         public RestService()
         {
             client = new HttpClient();
-            serializerOptions = new JsonSerializerOptions
-            {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                WriteIndented = true
-            };
         }
 
         public async Task<List<TodoItem>> RefreshDataAsync()
@@ -36,7 +31,7 @@ namespace TodoREST
                 if (response.IsSuccessStatusCode)
                 {
                     string content = await response.Content.ReadAsStringAsync();
-                    Items = JsonSerializer.Deserialize<List<TodoItem>>(content, serializerOptions);
+                    Items = JsonConvert.DeserializeObject<List<TodoItem>>(content);
                 }
             }
             catch (Exception ex)
@@ -53,7 +48,7 @@ namespace TodoREST
 
             try
             {
-                string json = JsonSerializer.Serialize<TodoItem>(item, serializerOptions);
+                string json = JsonConvert.SerializeObject(item);
                 StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 HttpResponseMessage response = null;
