@@ -21,7 +21,8 @@ namespace Todo
             saveButton.Clicked += async (sender, e) =>
             {
                 var todoItem = (TodoItem)BindingContext;
-                await App.Database.SaveItemAsync(todoItem);
+                TodoItemDatabase database = await TodoItemDatabase.Instance;
+                await database.SaveItemAsync(todoItem);
                 await Navigation.PopAsync();
             };
 
@@ -29,7 +30,8 @@ namespace Todo
             deleteButton.Clicked += async (sender, e) =>
             {
                 var todoItem = (TodoItem)BindingContext;
-                await App.Database.DeleteItemAsync(todoItem);
+                TodoItemDatabase database = await TodoItemDatabase.Instance;
+                await database.DeleteItemAsync(todoItem);
                 await Navigation.PopAsync();
             };
 
