@@ -32,16 +32,6 @@
                                       SelectedItemNavigationTarget="{x:Type views:BearDetailPage}" />
     </Shell.SearchHandler>
    
-<!--    <Shell.SearchHandler>
-        <SearchHandler x:Name="searchHandler"
-                       Placeholder="Enter search term"
-                       ShowsResults="true"
-                       Command="{Binding SearchCommand}"
-                       CommandParameter="{Binding Source={x:Reference searchHandler}, Path=Query}"
-                       ItemsSource="{Binding SearchResults}"
-                       ItemTemplate="{StaticResource AnimalSearchTemplate}" />
-    </Shell.SearchHandler>-->
-    
     <CollectionView Margin="20"
                     ItemsSource="{x:Static data:BearData.Bears}"
                     ItemTemplate="{StaticResource AnimalTemplate}"
