@@ -13,14 +13,16 @@ namespace Todo
         async void OnSaveClicked(object sender, EventArgs e)
         {
             var todoItem = (TodoItem)BindingContext;
-            await App.Database.SaveItemAsync(todoItem);
+            TodoItemDatabase database = await TodoItemDatabase.Instance;
+            await database.SaveItemAsync(todoItem);
             await Navigation.PopAsync();
         }
 
         async void OnDeleteClicked(object sender, EventArgs e)
         {
             var todoItem = (TodoItem)BindingContext;
-            await App.Database.DeleteItemAsync(todoItem);
+            TodoItemDatabase database = await TodoItemDatabase.Instance;
+            await database.DeleteItemAsync(todoItem);
             await Navigation.PopAsync();
         }
 

@@ -73,7 +73,8 @@ namespace Todo
         {
             base.OnAppearing();
 
-            listView.ItemsSource = await App.Database.GetItemsAsync();
+            TodoItemDatabase database = await TodoItemDatabase.Instance;
+            listView.ItemsSource = await database.GetItemsAsync();
         }
     }
 }

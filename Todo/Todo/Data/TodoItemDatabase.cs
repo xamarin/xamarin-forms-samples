@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using SQLite;
 
@@ -8,33 +6,22 @@ namespace Todo
 {
     public class TodoItemDatabase
     {
-        static readonly Lazy<SQLiteAsyncConnection> lazyInitializer = new Lazy<SQLiteAsyncConnection>(() =>
-        {
-            return new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
-        });
+        static SQLiteAsyncConnection Database;
 
-        static SQLiteAsyncConnection Database => lazyInitializer.Value;
-        static bool initialized = false;
+        public static readonly AsyncLazy<TodoItemDatabase> Instance = new AsyncLazy<TodoItemDatabase>(async () =>
+        {
+            var instance = new TodoItemDatabase();
+            CreateTableResult result = await Database.CreateTableAsync<TodoItem>();
+            return instance;
+        });
 
         public TodoItemDatabase()
         {
-            InitializeAsync().SafeFireAndForget(false);
-        }
-
-        async Task InitializeAsync()
-        {
-            if (!initialized)
-            {
-                if (!Database.TableMappings.Any(m => m.MappedType.Name == typeof(TodoItem).Name))
-                {
-                    await Database.CreateTablesAsync(CreateFlags.None, typeof(TodoItem)).ConfigureAwait(false);                    
-                }
-                initialized = true;
-            }
+            Database = new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
         }
 
         public Task<List<TodoItem>> GetItemsAsync()
-        {
+        {            
             return Database.Table<TodoItem>().ToListAsync();
         }
 
