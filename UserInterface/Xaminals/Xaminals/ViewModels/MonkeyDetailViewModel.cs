@@ -17,7 +17,7 @@ namespace Xaminals.ViewModels
         public void ApplyQueryAttributes(IDictionary<string, string> query)
         {
             // Only a single query parameter is passed, which needs URL decoding.
-            string name = HttpUtility.UrlDecode(query.FirstOrDefault().Value);
+            string name = HttpUtility.UrlDecode(query["name"]);
             LoadAnimal(name);
         }
 
