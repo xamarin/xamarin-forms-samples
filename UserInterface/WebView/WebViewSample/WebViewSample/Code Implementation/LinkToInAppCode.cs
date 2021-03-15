@@ -28,7 +28,7 @@ namespace WebViewSample
 		/// </summary>
 		void navButtonClicked (object sender, EventArgs e)
 		{
-			this.Navigation.PushAsync (new InAppBrowserCode ("http://www.xamarin.com/"));
+			this.Navigation.PushAsync (new InAppBrowserCode ("https://dotnet.microsoft.com/apps/xamarin"));
 		}
 	}
 }

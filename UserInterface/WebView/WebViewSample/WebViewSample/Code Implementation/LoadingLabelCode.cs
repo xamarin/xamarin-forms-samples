@@ -19,7 +19,7 @@ namespace WebViewSample
 			//Loading label should not render by default.
 			labelLoading = new Label () { Text = "Loading...", IsVisible = false};
 
-			webView = new WebView () { HeightRequest = 1000, WidthRequest = 1000, Source = "http://www.xamarin.com/" };
+			webView = new WebView () { HeightRequest = 1000, WidthRequest = 1000, Source = "https://dotnet.microsoft.com/apps/xamarin" };
 
 			webView.Navigated += webviewNavigated;
 			webView.Navigating += webviewNavigating;
