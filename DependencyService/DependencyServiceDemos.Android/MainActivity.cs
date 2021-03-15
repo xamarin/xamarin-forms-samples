@@ -20,6 +20,7 @@ namespace DependencyServiceDemos.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
             DependencyService.Register<ITextToSpeechService, TextToSpeechService>();
+            DependencyService.Register<IDeviceOrientationService, DeviceOrientationService>();
         }
 
         // Field, property, and method for Picture Picker
