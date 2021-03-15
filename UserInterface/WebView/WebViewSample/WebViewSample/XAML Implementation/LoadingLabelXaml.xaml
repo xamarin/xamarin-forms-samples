@@ -6,6 +6,6 @@
 	<StackLayout>
 		<!--Loading label should not render by default.-->
 		<Label x:Name="labelLoading" Text="Loading..." IsVisible="false" />
-		<WebView HeightRequest="1000" WidthRequest="1000" Source="http://www.xamarin.com" Navigated="webviewNavigated" Navigating="webviewNavigating" />
+		<WebView HeightRequest="1000" WidthRequest="1000" Source="https://dotnet.microsoft.com/apps/xamarin" Navigated="webviewNavigated" Navigating="webviewNavigating" />
 	</StackLayout>
 </ContentPage>
