@@ -12,8 +12,7 @@
         <Image Source="monkeyface.png"
                HorizontalOptions="Center">
             <Image.GestureRecognizers>
-                <DragGestureRecognizer CanDrag="True"
-                                       DragStartingCommand="{Binding DragCommand}"
+                <DragGestureRecognizer DragStartingCommand="{Binding DragCommand}"
                                        DragStartingCommandParameter="Monkey" />
             </Image.GestureRecognizers>
         </Image>
@@ -22,8 +21,7 @@
               RenderTransform="0.5 0 0 0.5 0 0"
               HorizontalOptions="Center">
             <Path.GestureRecognizers>
-                <DragGestureRecognizer CanDrag="True"
-                                       DragStartingCommand="{Binding DragCommand}"
+                <DragGestureRecognizer DragStartingCommand="{Binding DragCommand}"
                                        DragStartingCommandParameter="Cat" />
             </Path.GestureRecognizers>
             <Path.Data>
@@ -51,8 +49,7 @@
                BackgroundColor="Silver"
                HeightRequest="200">
             <Frame.GestureRecognizers>
-                <DropGestureRecognizer AllowDrop="True"
-                                       DropCommand="{Binding DropCommand}" />
+                <DropGestureRecognizer DropCommand="{Binding DropCommand}" />
             </Frame.GestureRecognizers>
         </Frame>
     </StackLayout>

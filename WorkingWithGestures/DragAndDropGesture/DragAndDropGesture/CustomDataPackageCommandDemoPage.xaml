@@ -30,8 +30,7 @@
                    WidthRequest="200"
                    HorizontalOptions="Center">
             <Rectangle.GestureRecognizers>
-                <DragGestureRecognizer CanDrag="True"
-                                       DragStartingCommand="{Binding DragStartingCommand}"
+                <DragGestureRecognizer DragStartingCommand="{Binding DragStartingCommand}"
                                        DragStartingCommandParameter="{StaticResource bigSquare}" />
             </Rectangle.GestureRecognizers>
         </Rectangle>
@@ -42,8 +41,7 @@
                     WidthRequest="150"
                     HorizontalOptions="Center">
             <Rectangle.GestureRecognizers>
-                <DragGestureRecognizer CanDrag="True"
-                                       DragStartingCommand="{Binding DragStartingCommand}"
+                <DragGestureRecognizer DragStartingCommand="{Binding DragStartingCommand}"
                                        DragStartingCommandParameter="{StaticResource smallSquare}" />
             </Rectangle.GestureRecognizers>
         </Rectangle>
@@ -52,8 +50,7 @@
                BackgroundColor="Silver"
                HeightRequest="200">
             <Frame.GestureRecognizers>
-                <DropGestureRecognizer AllowDrop="True"
-                                       DropCommand="{Binding DropCommand}"
+                <DropGestureRecognizer DropCommand="{Binding DropCommand}"
                                        DropCommandParameter="{StaticResource bigSquare}" />
             </Frame.GestureRecognizers>
         </Frame>

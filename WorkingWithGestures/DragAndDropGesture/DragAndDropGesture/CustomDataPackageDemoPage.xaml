@@ -12,8 +12,7 @@
                    WidthRequest="200"
                    HorizontalOptions="Center">
             <Rectangle.GestureRecognizers>
-                <DragGestureRecognizer CanDrag="True"
-                                       DragStarting="OnDragStarting" />
+                <DragGestureRecognizer DragStarting="OnDragStarting" />
             </Rectangle.GestureRecognizers>
         </Rectangle>
         <Rectangle Stroke="DarkBlue"
@@ -23,8 +22,7 @@
                     WidthRequest="150"
                     HorizontalOptions="Center">
             <Rectangle.GestureRecognizers>
-                <DragGestureRecognizer CanDrag="True"
-                                       DragStarting="OnDragStarting" />
+                <DragGestureRecognizer DragStarting="OnDragStarting" />
             </Rectangle.GestureRecognizers>
         </Rectangle>
         <Frame CornerRadius="0"
@@ -32,8 +30,7 @@
                BackgroundColor="Silver"
                HeightRequest="200">
             <Frame.GestureRecognizers>
-                <DropGestureRecognizer AllowDrop="True"
-                                       Drop="OnDrop" />
+                <DropGestureRecognizer Drop="OnDrop" />
             </Frame.GestureRecognizers>
         </Frame>
     </StackLayout>

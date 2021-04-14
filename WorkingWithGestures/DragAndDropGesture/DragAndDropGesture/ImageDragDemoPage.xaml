@@ -8,7 +8,7 @@
         <Image Source="monkeyface.png"
                HorizontalOptions="Center">
             <Image.GestureRecognizers>
-                <DragGestureRecognizer CanDrag="True" />
+                <DragGestureRecognizer />
             </Image.GestureRecognizers>
         </Image>
         <Grid ColumnDefinitions="0.5*, 0.5*"
@@ -19,8 +19,7 @@
                    HeightRequest="300"
                    WidthRequest="250">
                 <Image.GestureRecognizers>
-                    <DropGestureRecognizer AllowDrop="True"
-                                           Drop="OnCorrectDrop" />
+                    <DropGestureRecognizer Drop="OnCorrectDrop" />
                 </Image.GestureRecognizers>
             </Image>
             <Label Grid.Row="1"
@@ -31,8 +30,7 @@
                    HeightRequest="300"
                    WidthRequest="250">
                 <Image.GestureRecognizers>
-                    <DropGestureRecognizer AllowDrop="True"
-                                           DragOver="OnIncorrectDragOver" />
+                    <DropGestureRecognizer DragOver="OnIncorrectDragOver" />
                 </Image.GestureRecognizers>
             </Image>
             <Label Grid.Row="1"

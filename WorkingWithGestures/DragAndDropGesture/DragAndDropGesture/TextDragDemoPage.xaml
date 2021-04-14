@@ -11,22 +11,21 @@
             <Label Text="3"
                    HorizontalOptions="Center">
                 <Label.GestureRecognizers>
-                    <DragGestureRecognizer CanDrag="True" />
+                    <DragGestureRecognizer />
                 </Label.GestureRecognizers>
             </Label>
             <Label Grid.Column="1"
                    Text="4"
                    HorizontalOptions="Center">
                 <Label.GestureRecognizers>
-                    <DragGestureRecognizer CanDrag="True" />
+                    <DragGestureRecognizer />
                 </Label.GestureRecognizers>
             </Label>
         </Grid>
         <Entry Margin="0,20,0,0"
                Placeholder="Drag your answer here">
             <Entry.GestureRecognizers>
-                <DropGestureRecognizer AllowDrop="True"
-                                       DragOver="OnDropGestureRecognizerDragOver"
+                <DropGestureRecognizer DragOver="OnDropGestureRecognizerDragOver"
                                        Drop="OnDropGestureRecognizerDrop" />
             </Entry.GestureRecognizers>
         </Entry>
