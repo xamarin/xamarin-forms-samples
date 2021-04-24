@@ -35,7 +35,7 @@ Add your domain and click **Register**
 
 ![Register your Domain](Images/readme-signin-domain-configure.png)
 
-> NOTE: If you see an error about your domain not being _SPF Compliant_, you will need to add a _SPF_ DNS TXT Record to your domain and wait for it to propogate before continuing:
+> NOTE: If you see an error about your domain not being _SPF Compliant_, you will need to add a _SPF_ DNS TXT Record to your domain and wait for it to propagate before continuing:
 >
 > The SPF TXT may look something like this:
 > ```
