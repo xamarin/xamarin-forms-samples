@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Todo
 {
-    public class AsyncLazy<T> : Lazy<Task<T>>
+    public class AsyncLazy<T>
     {
         readonly Lazy<Task<T>> instance;
 
@@ -21,6 +21,11 @@ namespace Todo
         public TaskAwaiter<T> GetAwaiter()
         {
             return instance.Value.GetAwaiter();
+        }
+
+        public void Start()
+        {
+            var unused = instance.Value;
         }
     }
 }
