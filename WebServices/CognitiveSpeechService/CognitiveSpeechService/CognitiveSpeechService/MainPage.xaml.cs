@@ -105,12 +105,12 @@ namespace CognitiveSpeechService
                         await StopSpeechRecognition();
 
                         // Speak secret phrase 
-                        string success = "It works!";
+                        string TextForTextToSpeechAfterSpeechToText = "Foo Bar Baz et al.";
                         var settings = new SpeechOptions()
                         {
                             Volume = 1.0f,
                         };
-                        await TextToSpeech.SpeakAsync(success, settings);
+                        await TextToSpeech.SpeakAsync(TextForTextToSpeechAfterSpeechToText, settings);
 
                         // continue recording 
                         await StartSpeechRecognition();
@@ -147,6 +147,17 @@ namespace CognitiveSpeechService
                     transcribingIndicator.IsRunning = false;
                 }
             });
+        }
+
+        private async void TextToSpeechWithoutSpeechToText_Clicked(System.Object sender, System.EventArgs e)
+        {
+            // Speak secret phrase 
+            string testString = "Foo Bar Baz et al.";
+            var settings = new SpeechOptions()
+            {
+                Volume = 1.0f,
+            };
+            await TextToSpeech.SpeakAsync(testString, settings);
         }
     }
 }
