@@ -40,6 +40,7 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Start"
                 Clicked="TranscribeClicked"/>
+
     </StackLayout>
 
 </ContentPage>

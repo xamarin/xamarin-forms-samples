@@ -1,6 +1,8 @@
 ﻿using CognitiveSpeechService.Services;
 using Microsoft.CognitiveServices.Speech;
 using System;
+using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace CognitiveSpeechService
@@ -30,6 +32,12 @@ namespace CognitiveSpeechService
             }
 
             // initialize speech recognizer 
+            await StartSpeechRecognition();
+        }
+
+        private async Task StartSpeechRecognition()
+        {
+
             if (recognizer == null)
             {
                 var config = SpeechConfig.FromSubscription(Constants.CognitiveServicesApiKey, Constants.CognitiveServicesRegion);
@@ -43,15 +51,7 @@ namespace CognitiveSpeechService
             // if already transcribing, stop speech recognizer
             if (isTranscribing)
             {
-                try
-                {
-                    await recognizer.StopContinuousRecognitionAsync();
-                }
-                catch (Exception ex)
-                {
-                    UpdateTranscription(ex.Message);
-                }
-                isTranscribing = false;
+                await StopSpeechRecognition();
             }
 
             // if not transcribing, start speech recognizer
@@ -74,13 +74,52 @@ namespace CognitiveSpeechService
             UpdateDisplayState();
         }
 
-        void UpdateTranscription(string newText)
+        private async Task StopSpeechRecognition()
         {
-            Device.BeginInvokeOnMainThread(() =>
+            if (recognizer != null)
+            {
+                try
+                {
+                    await recognizer.StopContinuousRecognitionAsync();
+                }
+                catch (Exception ex)
+                {
+                    UpdateTranscription(ex.Message);
+                }
+                isTranscribing = false;
+                UpdateDisplayState();
+            }
+        }
+
+        private void UpdateTranscription(string newText)
+        {
+            Device.BeginInvokeOnMainThread(async () =>
             {
                 if (!string.IsNullOrWhiteSpace(newText))
                 {
-                    transcribedText.Text += $"{newText}\n";
+                    if (newText.ToLower().Contains("secret phrase"))
+                    {
+                        Console.WriteLine("secret phrase detected");
+
+                        // stop speech recognition
+                        await StopSpeechRecognition();
+
+                        // Speak secret phrase 
+                        string success = "It works!";
+                        var settings = new SpeechOptions()
+                        {
+                            Volume = 1.0f,
+                        };
+                        await TextToSpeech.SpeakAsync(success, settings);
+
+                        // continue recording 
+                        await StartSpeechRecognition();
+
+                    }
+                    else
+                    {
+                        transcribedText.Text += $"{newText}\n";
+                    }
                 }
             });
         }
