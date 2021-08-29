@@ -55,7 +55,7 @@
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
                 VerticalOptions="Start"
-                Clicked="TextToSpeechWithoutSpeechToText_Clicked"/>
+                Clicked="TextToSpeechWithoutSpeechToText_Clicked_1"/>
 
     </StackLayout>
 
