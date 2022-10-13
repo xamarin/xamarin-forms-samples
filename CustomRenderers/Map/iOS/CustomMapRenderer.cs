@@ -93,7 +93,7 @@ namespace CustomRenderer.iOS
                 var image = new UIImageView(new CGRect(0, 0, 200, 84));
                 image.Image = UIImage.FromFile("xamarin.png");
                 customPinView.AddSubview(image);
-                customPinView.Center = new CGPoint(0, -(e.View.Frame.Height + 75));
+                customPinView.Center = new CGPoint(e.View.Frame.Width / 2, -(e.View.Frame.Height + 75));
                 e.View.AddSubview(customPinView);
             }
         }
