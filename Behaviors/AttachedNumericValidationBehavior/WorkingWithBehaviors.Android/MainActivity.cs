@@ -12,9 +12,6 @@ namespace AttachedNumericValidationBehavior.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
-            //TabLayoutResource = Resource.Layout.Tabbar;
-            //ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(bundle);
 
             Xamarin.Forms.Forms.Init(this, bundle);
@@ -23,4 +20,3 @@ namespace AttachedNumericValidationBehavior.Droid
         }
     }
 }
-

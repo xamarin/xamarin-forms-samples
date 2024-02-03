@@ -18,7 +18,7 @@ namespace WorkingWithWebview
             };
             openUrl.Clicked += async (sender, e) =>
             {
-                await Launcher.OpenAsync("http://xamarin.com/evolve");
+                await Launcher.OpenAsync("https://dotnet.microsoft.com/apps/xamarin");
             };
 
             var makeCall = new Button

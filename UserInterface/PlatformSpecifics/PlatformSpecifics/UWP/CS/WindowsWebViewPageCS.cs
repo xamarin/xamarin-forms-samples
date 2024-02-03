@@ -17,6 +17,7 @@ namespace PlatformSpecifics
                 }
 			};
 			webView.On<Windows>().SetIsJavaScriptAlertEnabled(true);
+            webView.On<Windows>().SetExecutionMode(WebViewExecutionMode.SeparateThread);
 
             var toggleButton = new Button { Text = "Toggle JavaScript alert" };
             toggleButton.Clicked += (sender, e) => webView.On<Windows>().SetIsJavaScriptAlertEnabled(!webView.On<Windows>().IsJavaScriptAlertEnabled());

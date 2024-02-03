@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataBindingDemos"
+             x:Class="DataBindingDemos.MultiBindingStringFormatPage"
+             Title="MultiBinding demo">
+    <ContentPage.BindingContext>
+        <local:GroupViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Text="Employee"
+               FontAttributes="Bold" />
+        <Label Grid.Row="1">
+            <Label.Text>
+                <MultiBinding StringFormat="{}{0} {1} {2}">
+                    <Binding Path="Employee1.Forename" />
+                    <Binding Path="Employee1.MiddleName" />
+                    <Binding Path="Employee1.Surname" />
+                </MultiBinding>
+            </Label.Text>
+        </Label>
+        <Label Grid.Row="2">
+            <Label.Text>
+                <MultiBinding StringFormat="{}{0} {1} {2}">
+                    <Binding Path="Employee2.Forename" />
+                    <Binding Path="Employee2.MiddleName" />
+                    <Binding Path="Employee2.Surname" />
+                </MultiBinding>
+            </Label.Text>
+        </Label>
+        <Label Grid.Row="3">
+            <Label.Text>
+                <MultiBinding StringFormat="{}{0} {1} {2}">
+                    <Binding Path="Employee3.Forename" />
+                    <Binding Path="Employee3.MiddleName" />
+                    <Binding Path="Employee3.Surname" />
+                </MultiBinding>
+            </Label.Text>
+        </Label>
+        <Label Grid.Row="4">
+            <Label.Text>
+                <MultiBinding StringFormat="{}{0} {1} {2}">
+                    <Binding Path="Employee4.Forename" />
+                    <Binding Path="Employee4.MiddleName" />
+                    <Binding Path="Employee4.Surname" />
+                </MultiBinding>
+            </Label.Text>
+        </Label>
+        <Label Grid.Row="5">
+            <Label.Text>
+                <MultiBinding StringFormat="{}{0} {1} {2}">
+                    <Binding Path="Employee5.Forename" />
+                    <Binding Path="Employee5.MiddleName" />
+                    <Binding Path="Employee5.Surname" />
+                </MultiBinding>
+            </Label.Text>
+        </Label>
+    </Grid>
+</ContentPage>

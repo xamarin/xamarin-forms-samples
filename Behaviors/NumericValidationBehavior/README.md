@@ -12,7 +12,7 @@ urlFragment: behaviors-numericvalidationbehavior
 
 Xamarin.Forms behaviors are created in a class that derives from the Behavior, or Behavior&lt;T&gt; class. This sample demonstrates how to create and consume a Xamarin.Forms behavior.
 
-For more information about this sample, see [Behaviors](https://developer.xamarin.com/guides/xamarin-forms/behaviors/).
+For more information about this sample, see [Behaviors](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/behaviors/).
 
 ```xaml
 <Entry Placeholder="Enter a System.Double">
@@ -23,4 +23,3 @@ For more information about this sample, see [Behaviors](https://developer.xamari
 ```
 
 ![NumericValidation Behavior application screenshot](Screenshots/01All.png "NumericValidation Behavior application screenshot")
-

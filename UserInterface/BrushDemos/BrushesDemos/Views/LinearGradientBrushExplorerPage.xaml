@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:BrushesDemos.Controls" 
+             x:Class="BrushesDemos.Views.LinearGradientBrushExplorerPage"
+             Title="Linear gradient brush explorer">
+    <Grid>
+        <Grid RowDefinitions="Auto, *">
+            <Grid Margin="12,0"
+                  Padding="12">
+                <Frame x:Name="gradientFrame"
+                       HasShadow="True"
+                       CornerRadius="12"
+                       HeightRequest="120"
+                       WidthRequest="120">
+                    <Label Text="LinearGradientBrush"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Frame>
+            </Grid>
+            <ScrollView Grid.Row="1"
+                        Margin="12,0"
+                        Padding="12">
+                <StackLayout>
+                    <Label Text="Gradients"
+                           FontSize="24"
+                           VerticalTextAlignment="Center" />
+                    <StackLayout x:Name="gradientsStackLayout">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Orientation="Horizontal"
+                                             Spacing="8">
+                                    <Entry Placeholder="Gradient color (hex)"
+                                           BackgroundColor="{Binding Color}" 
+                                           TextChanged="OnGradientChanged"
+                                           HorizontalOptions="FillAndExpand" />
+                                    <Frame CornerRadius="6" 
+                                           HasShadow="false"
+                                           BorderColor="LightGray"
+                                           BackgroundColor="{Binding Color}">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnColorPickerTapped" />
+                                        </Frame.GestureRecognizers>
+                                        <Label Text="..."
+                                               HorizontalOptions="Center" />
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Add"
+                                Clicked="OnAddButtonClicked" />
+                        <Button Text="Remove"
+                                Clicked="OnRemoveButtonClicked" />        
+                    </StackLayout>
+                    <Label Text="Start point" 
+                           FontSize="24" />
+                    <Entry x:Name="startPointEntry"
+                           Placeholder="Start point"
+                           TextChanged="OnStartPointChanged"
+                           Text="0, 0"
+                           Keyboard="Numeric" />
+                    <Label Text="End point" 
+                           FontSize="24" />
+                    <Entry x:Name="endPointEntry"
+                           Placeholder="End point"
+                           TextChanged="OnEndPointChanged"
+                           Text="1, 1"
+                           Keyboard="Numeric" />
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+        <controls:GradientColorPicker x:Name="gradientColorPicker"
+                                      Opacity="0"
+                                      TranslationY="1000" />
+    </Grid>
+</ContentPage>

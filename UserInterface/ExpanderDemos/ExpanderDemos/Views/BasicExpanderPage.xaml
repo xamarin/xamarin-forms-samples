@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
              x:Class="ExpanderDemos.Views.BasicExpanderPage"
              Title="Basic Expander demo">
     <StackLayout Margin="20">
         <Label Text="Expand/collapse the item below by tapping it." />
-        <Expander Tapped="OnExpanderTapped">
-            <Expander.Header>
+        <xct:Expander Tapped="OnExpanderTapped">
+            <xct:Expander.Header>
                 <Label Text="Baboon"
                        FontAttributes="Bold"
                        FontSize="Medium" />
-            </Expander.Header>
+            </xct:Expander.Header>
             <Grid Padding="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -24,6 +25,6 @@
                        Text="Baboons are African and Arabian Old World monkeys belonging to the genus Papio, part of the subfamily Cercopithecinae."
                        FontAttributes="Italic" />
             </Grid>
-        </Expander>
+        </xct:Expander>
     </StackLayout>
 </ContentPage>

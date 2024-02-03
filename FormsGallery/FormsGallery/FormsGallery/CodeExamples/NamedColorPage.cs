@@ -4,7 +4,7 @@ using Xamarin.Forms;
 namespace FormsGallery.CodeExamples
 {
     // Used in:
-    //      MasterDetailPageDemoPage (as a page)
+    //      FlyoutPageDemoPage (as a page)
     //      TabbedPageDemoPage (as a page template)
     //      CarouselPageDemoPage (as a page template)
     //
@@ -26,7 +26,7 @@ namespace FormsGallery.CodeExamples
             boxView.SetBinding (BoxView.ColorProperty, "Color");
 
             // Function to create six Labels.
-            Func<string, string, Label> CreateLabel = (string source, string fmt) => 
+            Func<string, string, Label> CreateLabel = (string source, string fmt) =>
             {
                 Label label = new Label
                 {
@@ -45,7 +45,7 @@ namespace FormsGallery.CodeExamples
                 Children =
                 {
                     new StackLayout
-                    {   
+                    {
                         HorizontalOptions = LayoutOptions.Center,
                         VerticalOptions = LayoutOptions.CenterAndExpand,
                         Children =
@@ -57,7 +57,7 @@ namespace FormsGallery.CodeExamples
                     },
                     boxView,
                     new StackLayout
-                    {   
+                    {
                         HorizontalOptions = LayoutOptions.Center,
                         VerticalOptions = LayoutOptions.CenterAndExpand,
                         Children =

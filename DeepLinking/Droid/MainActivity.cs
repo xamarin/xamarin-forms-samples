@@ -24,9 +24,6 @@ namespace DeepLinking.Droid
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
-            ToolbarResource = Resource.Layout.Toolbar;
-            TabLayoutResource = Resource.Layout.Tabbar;
-
             base.OnCreate (bundle);
 
             // Check that the data has been retrieved from google-services.json

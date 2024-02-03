@@ -20,7 +20,6 @@ The app functionality is:
 
 In all cases the tasks are stored in an in-memory collection that's accessed through a RESTful web service.
 
-For more information about the sample see [Consuming a RESTful Web Service](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/web-services/consuming/rest/).
+For more information about the sample see [Consuming a RESTful Web Service](https://docs.microsoft.com/xamarin/xamarin-forms/data-cloud/web-services/rest).
 
 ![TodoREST application screenshot](Screenshots/01All.png "TodoREST application screenshot")
-

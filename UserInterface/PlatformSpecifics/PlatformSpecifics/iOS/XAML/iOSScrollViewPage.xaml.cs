@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Windows.Input;
-using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace PlatformSpecifics
 {
-    public partial class iOSScrollViewPage : Xamarin.Forms.MasterDetailPage
+    public partial class iOSScrollViewPage : Xamarin.Forms.FlyoutPage
     {
         ICommand _returnToPlatformSpecificsPage;
 

@@ -32,10 +32,10 @@
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.BoxViewDemoPage}" />
 
-                    <TextCell Text="Expander"
-                              Detail="Display content in an expandable container"
+                    <TextCell Text="Ellipse"
+                              Detail="Display an ellipse or circle"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.ExpanderDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.EllipseDemoPage}"/>
 
                     <TextCell Text="Image"
                               Detail="Display a bitmap"
@@ -47,20 +47,40 @@
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.LabelDemoPage}" />
 
+                    <TextCell Text="Line"
+                              Detail="Display a line"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.LineDemoPage}" />
+
                     <TextCell Text="Map"
                               Detail="Display a map"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.MapDemoPage}" />
 
-                    <TextCell Text="MediaElement"
-                              Detail="Play video or audio"
-                              Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.MediaElementDemoPage}" />
-
                     <TextCell Text="OpenGLView"
                               Detail="Display OpenGL Graphics"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.OpenGLViewDemoPage}" />
+
+                    <TextCell Text="Path"
+                              Detail="Display curves and complex shapes"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.PathDemoPage}" />
+
+                    <TextCell Text="Polygon"
+                              Detail="Display a polygon"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.PolygonDemoPage}" />
+
+                    <TextCell Text="Polyline"
+                              Detail="Display a series of connected straight lines"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.PolylineDemoPage}" />
+
+                    <TextCell Text="Rectangle"
+                              Detail="Display a rectangle or square"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.RectangleDemoPage}" />
 
                     <TextCell Text="WebView"
                               Detail="Display a Web page"
@@ -275,15 +295,15 @@
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.ContentPageDemoPage}" />
 
+                    <TextCell Text="FlyoutPage"
+                              Detail="Present two pages with a list and an item"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type local:XamlExamples.FlyoutPageDemoPage}" />
+
                     <TextCell Text="NavigationPage"
                               Detail="Present a navigatable page"
                               Command="{Binding NavigateCommand}"
                               CommandParameter="{x:Type local:XamlExamples.NavigationPageDemoPage}" />
-
-                    <TextCell Text="MasterDetailPage"
-                              Detail="Present two pages with a list and an item"
-                              Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.MasterDetailPageDemoPage}" />
 
                     <TextCell Text="TabbedPage"
                               Detail="Present a page with tabs"

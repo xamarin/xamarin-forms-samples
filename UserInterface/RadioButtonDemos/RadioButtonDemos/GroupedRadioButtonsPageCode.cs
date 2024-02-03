@@ -12,25 +12,33 @@ namespace RadioButtonDemos
             fruitLabel = new Label { Text = "You have chosen:" };
             colorLabel = new Label { Text = "You have chosen:" };
 
-            RadioButton redRadioButton = new RadioButton { Text = "Red", TextColor = Color.Red, GroupName="colors" };
+            RadioButton redRadioButton = new RadioButton { Content = "Red", TextColor = Color.Red, GroupName="colors" };
             redRadioButton.CheckedChanged += OnColorsRadioButtonCheckedChanged;
-            RadioButton greenRadioButton = new RadioButton { Text = "Green", TextColor = Color.Green, GroupName = "colors" };
+            RadioButton greenRadioButton = new RadioButton { Content = "Green", TextColor = Color.Green, GroupName = "colors" };
             greenRadioButton.CheckedChanged += OnColorsRadioButtonCheckedChanged;
-            RadioButton blueRadioButton = new RadioButton { Text = "Blue", TextColor = Color.Blue, GroupName = "colors" };
+            RadioButton blueRadioButton = new RadioButton { Content = "Blue", TextColor = Color.Blue, GroupName = "colors" };
             blueRadioButton.CheckedChanged += OnColorsRadioButtonCheckedChanged;
-            RadioButton otherColorRadioButton = new RadioButton { Text = "Other", GroupName = "colors" };
+            RadioButton otherColorRadioButton = new RadioButton { Content = "Other", GroupName = "colors" };
             otherColorRadioButton.CheckedChanged += OnColorsRadioButtonCheckedChanged;
 
-            RadioButton appleRadioButton = new RadioButton { Text = "Apple", GroupName = "fruits" };
+            RadioButton appleRadioButton = new RadioButton { Content = "Apple" };
             appleRadioButton.CheckedChanged += OnFruitsRadioButtonCheckedChanged;
-            RadioButton bananaRadioButton = new RadioButton { Text = "Banana", GroupName = "fruits" };
+            RadioButton bananaRadioButton = new RadioButton { Content = "Banana" };
             bananaRadioButton.CheckedChanged += OnFruitsRadioButtonCheckedChanged;
-            RadioButton pineappleRadioButton = new RadioButton { Text = "Pineapple", GroupName = "fruits" };
+            RadioButton pineappleRadioButton = new RadioButton { Content = "Pineapple" };
             pineappleRadioButton.CheckedChanged += OnFruitsRadioButtonCheckedChanged;
-            RadioButton otherFruitRadioButton = new RadioButton { Text = "Other", GroupName = "fruits" };
+            RadioButton otherFruitRadioButton = new RadioButton { Content = "Other" };
             otherFruitRadioButton.CheckedChanged += OnFruitsRadioButtonCheckedChanged;
 
-            Title = "Grouped RadioButtons demo";
+            StackLayout fruitStackLayout = new StackLayout
+            {
+                Children = { appleRadioButton, bananaRadioButton, pineappleRadioButton, otherFruitRadioButton }
+            };
+
+            // All of the RadioButtons in this StackLayout will automatically be given the GroupName 'fruits'.
+            RadioButtonGroup.SetGroupName(fruitStackLayout, "fruits");
+
+            Title = "Grouped RadioButtons demo (code)";
             Content = new StackLayout
             {
                 Margin = new Thickness(10),
@@ -43,10 +51,7 @@ namespace RadioButtonDemos
                     otherColorRadioButton,
                     colorLabel,
                     new Label { Text = "What's your favorite fruit?" },
-                    appleRadioButton,
-                    bananaRadioButton,
-                    pineappleRadioButton,
-                    otherFruitRadioButton,
+                    fruitStackLayout,
                     fruitLabel
                 }
             };
@@ -55,13 +60,13 @@ namespace RadioButtonDemos
         void OnColorsRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
             RadioButton button = sender as RadioButton;
-            colorLabel.Text = $"You have chosen: {button.Text}";
+            colorLabel.Text = $"You have chosen: {button.Content}";
         }
 
         void OnFruitsRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
             RadioButton button = sender as RadioButton;
-            fruitLabel.Text = $"You have chosen: {button.Text}";
+            fruitLabel.Text = $"You have chosen: {button.Content}";
         }
     }
 }

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="BrushesDemos.Views.LinearGradientBrushDemoPage"
+             Title="Linear gradient brush demos">
+    <ScrollView>
+        <StackLayout Margin="20">
+            <Label Text="LinearGradientBrush (Horizontal)"
+                   FontAttributes="Bold" />
+            <Frame Margin="0,20,0,0"
+                   BorderColor="LightGray"
+                   HasShadow="True"
+                   CornerRadius="12"
+                   HeightRequest="120"
+                   WidthRequest="120">                
+                <Frame.Background>
+                    <!-- StartPoint defaults to (0,0) -->
+                    <LinearGradientBrush EndPoint="1,0">
+                        <GradientStop Color="Yellow"
+                                      Offset="0.1" />
+                        <GradientStop Color="Green"
+                                      Offset="1.0" />                                                        
+                    </LinearGradientBrush>
+                </Frame.Background>
+            </Frame>    
+            <Label Margin="0,20,0,0"
+                   Text="LinearGradientBrush (Vertical)"
+                   FontAttributes="Bold" />        
+            <Frame Margin="0,20,0,0"
+                   BorderColor="LightGray"
+                   HasShadow="True"
+                   CornerRadius="12"
+                   HeightRequest="120"
+                   WidthRequest="120">
+                <Frame.Background>
+                    <!-- StartPoint defaults to (0,0) -->
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="Yellow"
+                                      Offset="0.1" />
+                        <GradientStop Color="Green"
+                                      Offset="1.0" />
+                    </LinearGradientBrush>
+                </Frame.Background>
+            </Frame>                    
+            <Label Margin="0,20,0,0"
+                   Text="LinearGradientBrush (Diagonal)"
+                   FontAttributes="Bold" />        
+            <Frame Margin="0,20,0,0"
+                   BorderColor="LightGray"
+                   HasShadow="True"
+                   CornerRadius="12"
+                   HeightRequest="120"
+                   WidthRequest="120">
+                <Frame.Background>
+                    <!-- StartPoint defaults to (0,0)      
+                         Endpoint defaults to (1,1) -->
+                    <LinearGradientBrush>
+                        <GradientStop Color="Yellow"
+                                      Offset="0.1" />
+                        <GradientStop Color="Green"
+                                      Offset="1.0" />
+                    </LinearGradientBrush>
+                </Frame.Background>
+            </Frame>                           
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

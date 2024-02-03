@@ -4,7 +4,7 @@ using MonoTouch.UIKit;
 using Xamarin.QuickUI;
 using Meetum.iOS;
 
-[assembly: ExportRenderer (typeof (MasterDetailPage), typeof (CustomTabletMasterDetailRenderer), UIUserInterfaceIdiom.Pad)]
+[assembly: ExportRenderer (typeof (FlyoutPage), typeof (CustomTabletFlyoutRenderer), UIUserInterfaceIdiom.Pad)]
 [assembly: ExportRenderer (typeof (NavigationPage), typeof (CustomNavigationRenderer))]
 
 namespace Meetum.iOS
@@ -17,7 +17,7 @@ namespace Meetum.iOS
             UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes { TextColor = UIColor.White });
         }
     }
-    public class CustomTabletMasterDetailRenderer : TabletMasterDetailRenderer
+    public class CustomTabletFlyoutRenderer : TabletMasterDetailRenderer
     {
         public override void ViewWillLayoutSubviews ()
         {
@@ -27,4 +27,3 @@ namespace Meetum.iOS
         }
     }
 }
-

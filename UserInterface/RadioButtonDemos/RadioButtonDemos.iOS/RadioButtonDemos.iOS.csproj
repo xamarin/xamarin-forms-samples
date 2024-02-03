@@ -122,7 +122,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -132,6 +132,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\xaml.png" />
+    <BundleResource Include="Resources\cat.png" />
+    <BundleResource Include="Resources\dog.png" />
+    <BundleResource Include="Resources\elephant.png" />
+    <BundleResource Include="Resources\monkey.png" />
   </ItemGroup>
 </Project>

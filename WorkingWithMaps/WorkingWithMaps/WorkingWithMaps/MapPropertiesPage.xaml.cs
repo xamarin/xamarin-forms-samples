@@ -35,6 +35,9 @@ namespace WorkingWithMaps
                 case "showUserCheckBox":
                     map.IsShowingUser = !map.IsShowingUser;
                     break;
+                case "showTrafficCheckBox":
+                    map.TrafficEnabled = !map.TrafficEnabled;
+                    break;
                 case "moveRegionCheckBox":
                     map.MoveToLastRegionOnLayoutChange = !map.MoveToLastRegionOnLayoutChange;
                     break;

@@ -5,25 +5,25 @@
              x:Name="self"
              Title="Monkey Details">
     
-    <Shell.BackButtonBehavior>
+    <!--<Shell.BackButtonBehavior>
         <BackButtonBehavior Command="{Binding BackCommand}"
                             BindingContext="{Binding Source={x:Reference self}, Path=BindingContext}"
                             IconOverride="back.png" />   
-    </Shell.BackButtonBehavior>
+    </Shell.BackButtonBehavior>-->
    
     <ScrollView>
         <StackLayout Margin="20">
-            <Label Text="{Binding Name}" 
+            <Label Text="{Binding Monkey.Name}" 
                    HorizontalOptions="Center" 
                    Style="{DynamicResource TitleStyle}" />
-            <Label Text="{Binding Location}" 
+            <Label Text="{Binding Monkey.Location}" 
                    FontAttributes="Italic" 
                    HorizontalOptions="Center" />
-            <Image Source="{Binding ImageUrl}" 
+            <Image Source="{Binding Monkey.ImageUrl}" 
                    HeightRequest="200" 
                    WidthRequest="200" 
                    HorizontalOptions="CenterAndExpand" />
-            <Label Text="{Binding Details}" 
+            <Label Text="{Binding Monkey.Details}" 
                    Style="{DynamicResource BodyStyle}" />
         </StackLayout>
     </ScrollView>

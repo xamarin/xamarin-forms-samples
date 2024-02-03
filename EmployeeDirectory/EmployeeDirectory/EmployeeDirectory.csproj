@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="PCLStorage" Version="1.0.2" />
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
   </ItemGroup>
 
 </Project>

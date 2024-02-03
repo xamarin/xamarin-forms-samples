@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>soltest</RootNamespace>
     <AssemblyName>sol-test</AssemblyName>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

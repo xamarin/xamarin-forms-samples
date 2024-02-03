@@ -1,4 +1,5 @@
 ﻿using System;
+using Xamarin.CommunityToolkit.Core;
 using Xamarin.Forms;
 
 namespace MediaElementDemos

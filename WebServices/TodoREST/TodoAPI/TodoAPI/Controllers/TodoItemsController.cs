@@ -6,6 +6,7 @@ using TodoAPI.Models;
 
 namespace TodoAPI.Controllers
 {
+    #region snippetErrorCode
     public enum ErrorCode
     {
         TodoItemNameAndNotesRequired,
@@ -15,9 +16,12 @@ namespace TodoAPI.Controllers
         CouldNotUpdateItem,
         CouldNotDeleteItem
     }
+    #endregion
 
+    #region snippetDI
+    [ApiController]
     [Route("api/[controller]")]
-    public class TodoItemsController : Controller
+    public class TodoItemsController : ControllerBase
     {
         private readonly ITodoRepository _todoRepository;
 
@@ -25,13 +29,17 @@ namespace TodoAPI.Controllers
         {
             _todoRepository = todoRepository;
         }
+        #endregion
 
+        #region snippet
         [HttpGet]
         public IActionResult List()
         {
             return Ok(_todoRepository.All);
         }
+        #endregion
 
+        #region snippetCreate
         [HttpPost]
         public IActionResult Create([FromBody]TodoItem item)
         {
@@ -54,7 +62,9 @@ namespace TodoAPI.Controllers
             }
             return Ok(item);
         }
+        #endregion
 
+        #region snippetEdit
         [HttpPut]
         public IActionResult Edit([FromBody] TodoItem item)
         {
@@ -77,7 +87,9 @@ namespace TodoAPI.Controllers
             }
             return NoContent();
         }
-
+        #endregion
+        
+        #region snippetDelete
         [HttpDelete("{id}")]
         public IActionResult Delete(string id)
         {
@@ -96,5 +108,6 @@ namespace TodoAPI.Controllers
             }
             return NoContent();
         }
+        #endregion
     }
 }

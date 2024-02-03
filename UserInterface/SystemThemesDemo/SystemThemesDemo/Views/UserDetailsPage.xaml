@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:SystemThemesDemo"
              x:Class="SystemThemesDemo.Views.UserDetailsPage"
              Title="User Details"
-             BackgroundColor="{DynamicResource PageBackgroundColor}">
+             BackgroundColor="{AppThemeBinding Light={StaticResource LightPageBackgroundColor}, Dark={StaticResource DarkPageBackgroundColor}}">
     <ScrollView>
         <Grid>
             <Grid.RowDefinitions>
@@ -15,7 +15,7 @@
             </Grid.RowDefinitions>
             <Image Source="{local:ImageResource SystemThemesDemo.Images.FacePalm.jpg}"
                    Aspect="AspectFill" />
-            <Grid BackgroundColor="{DynamicResource TransparentBackgroundColor}">
+            <Grid BackgroundColor="{StaticResource TransparentColor}">
                 <Label VerticalOptions="End"
                        Margin="15"
                        Style="{StaticResource LargeLabelStyle}">

@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
+using Xamarin.Forms;
 
 namespace WebServiceTutorial
 {
@@ -13,18 +16,23 @@ namespace WebServiceTutorial
         public RestService()
         {
             _client = new HttpClient();
+            if (Device.RuntimePlatform == Device.UWP)
+            {
+                _client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
+                _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
+            }
         }
 
-        public async Task<WeatherData> GetWeatherDataAsync(string uri)
+        public async Task<List<Repository>> GetRepositoriesAsync(string uri)
         {
-            WeatherData weatherData = null;
+            List<Repository> repositories = null;
             try
             {
                 HttpResponseMessage response = await _client.GetAsync(uri);
                 if (response.IsSuccessStatusCode)
                 {
                     string content = await response.Content.ReadAsStringAsync();
-                    weatherData = JsonConvert.DeserializeObject<WeatherData>(content);
+                    repositories = JsonConvert.DeserializeObject<List<Repository>>(content);
                 }
             }
             catch (Exception ex)
@@ -32,7 +40,7 @@ namespace WebServiceTutorial
                 Debug.WriteLine("\tERROR {0}", ex.Message);
             }
 
-            return weatherData;
+            return repositories;
         }
     }
 }

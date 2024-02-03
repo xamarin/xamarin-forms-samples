@@ -27,7 +27,6 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -127,7 +126,7 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.2</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.0" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
@@ -137,7 +136,7 @@
       <Name>Xamarin.AppleSignIn</Name>
     </ProjectReference>
     <ProjectReference Include="..\XamarinFormsAppleSignIn\XamarinFormsAppleSignIn.csproj">
-      <Project>{200A5384-0471-4356-93B3-C021A827E139}</Project>
+      <Project>{6E2CA9EF-74FC-42F2-AC28-66F0D9280C07}</Project>
       <Name>XamarinFormsAppleSignIn</Name>
     </ProjectReference>
   </ItemGroup>

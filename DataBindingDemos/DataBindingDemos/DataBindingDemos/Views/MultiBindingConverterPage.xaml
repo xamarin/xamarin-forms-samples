@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataBindingDemos"
+             x:Class="DataBindingDemos.MultiBindingConverterPage"
+             Title="MultiBinding Converter demo">
+    <ContentPage.BindingContext>
+        <local:GroupViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <local:AllTrueMultiConverter x:Key="AllTrueConverter" />
+        <local:InverterConverter x:Key="InverterConverter" />
+    </ContentPage.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.75*" />
+            <ColumnDefinition Width="0.25*" />
+        </Grid.ColumnDefinitions>
+        <Label Text="Employee"
+               FontAttributes="Bold" />
+        <Label Grid.Column="1"
+               Text="Can drive?"
+               FontAttributes="Bold" />
+        <Label Grid.Row="1"
+               Text="{Binding Employee1.FullName}"
+               VerticalTextAlignment="Center" />
+        <CheckBox Grid.Row="1"
+                  Grid.Column="1"
+                  HorizontalOptions="End">
+            <CheckBox.IsChecked>
+                <MultiBinding Converter="{StaticResource AllTrueConverter}">
+                    <Binding Path="Employee1.IsOver16" />
+                    <Binding Path="Employee1.HasPassedTest" />
+                    <Binding Path="Employee1.IsSuspended"
+                             Converter="{StaticResource InverterConverter}" />
+                </MultiBinding>
+            </CheckBox.IsChecked>
+        </CheckBox>
+        <Label Grid.Row="2"
+               Text="{Binding Employee2.FullName}"
+               VerticalTextAlignment="Center" />
+        <CheckBox Grid.Row="2"
+                  Grid.Column="1"
+                  HorizontalOptions="End">
+            <CheckBox.IsChecked>
+                <MultiBinding Converter="{StaticResource AllTrueConverter}">
+                    <Binding Path="Employee2.IsOver16" />
+                    <Binding Path="Employee2.HasPassedTest" />
+                    <Binding Path="Employee2.IsSuspended"
+                             Converter="{StaticResource InverterConverter}" />
+                </MultiBinding>
+            </CheckBox.IsChecked>
+        </CheckBox>
+        <Label Grid.Row="3"
+               Text="{Binding Employee3.FullName}"
+               VerticalTextAlignment="Center" />
+        <CheckBox Grid.Row="3"
+                  Grid.Column="1"
+                  HorizontalOptions="End">
+            <CheckBox.IsChecked>
+                <MultiBinding Converter="{StaticResource AllTrueConverter}">
+                    <Binding Path="Employee3.IsOver16" />
+                    <Binding Path="Employee3.HasPassedTest" />
+                    <Binding Path="Employee3.IsSuspended"
+                             Converter="{StaticResource InverterConverter}" />
+                </MultiBinding>
+            </CheckBox.IsChecked>
+        </CheckBox>
+        <Label Grid.Row="4"
+               Text="{Binding Employee4.FullName}"
+               VerticalTextAlignment="Center" />
+        <CheckBox Grid.Row="4"
+                  Grid.Column="1"
+                  HorizontalOptions="End">
+            <CheckBox.IsChecked>
+                <MultiBinding Converter="{StaticResource AllTrueConverter}">
+                    <Binding Path="Employee4.IsOver16" />
+                    <Binding Path="Employee4.HasPassedTest" />
+                    <Binding Path="Employee4.IsSuspended"
+                             Converter="{StaticResource InverterConverter}" />
+                </MultiBinding>
+            </CheckBox.IsChecked>
+        </CheckBox>
+        <Label Grid.Row="5"
+               Text="{Binding Employee5.FullName}"
+               VerticalTextAlignment="Center" />
+        <CheckBox Grid.Row="5"
+                  Grid.Column="1"
+                  HorizontalOptions="End">
+            <CheckBox.IsChecked>
+                <MultiBinding Converter="{StaticResource AllTrueConverter}">
+                    <Binding Path="Employee5.IsOver16" />
+                    <Binding Path="Employee5.HasPassedTest" />
+                    <Binding Path="Employee5.IsSuspended"
+                             Converter="{StaticResource InverterConverter}" />
+                </MultiBinding>
+            </CheckBox.IsChecked>
+        </CheckBox>
+    </Grid>
+</ContentPage>

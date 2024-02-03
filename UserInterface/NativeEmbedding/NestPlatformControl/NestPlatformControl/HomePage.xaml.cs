@@ -14,14 +14,11 @@ using NestPlatformControl.Droid;
 #endif
 
 #if WINDOWS_UWP
-using System;
-using Windows.Foundation;
-using Windows.Graphics.Display;
-using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Xamarin.Forms.Platform.UWP;
+using Rect = Windows.Foundation.Rect;
 #endif
 
 namespace NestPlatformControl

@@ -1,6 +1,6 @@
 ---
-name: Xamarin.Forms - MediaElement
-description: "This sample demonstrates how to use the Xamarin.Forms MediaElement control to play media (UI)"
+name: Xamarin Community Toolkit - MediaElement
+description: "This sample demonstrates how to use the Xamarin Community Toolkit MediaElement control to play media (UI)"
 page_type: sample
 languages:
 - csharp
@@ -13,8 +13,6 @@ urlFragment: userinterface-mediaelementdemos
 ---
 # MediaElement
 
-This sample demonstrates how to use the Xamarin.Forms `MediaElement` to play video and audio.
-
-For more information about this sample, see [Xamarin.Forms MediaElement](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/mediaelement).
+This sample demonstrates how to use the Xamarin Community Toolkit `MediaElement` to play video and audio.
 
 ![MediaElement application screenshot](Screenshots/01All.png "MediaElement application screenshot")

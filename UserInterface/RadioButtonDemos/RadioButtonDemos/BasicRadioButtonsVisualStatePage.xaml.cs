@@ -12,7 +12,7 @@ namespace RadioButtonDemos
         void OnRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
             RadioButton button = sender as RadioButton;
-            resultLabel.Text = $"You have chosen: {button.Text}";
+            resultLabel.Text = $"You have chosen: {button.Content}";
         }
     }
 }

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.PathDemoPage"
+             Title="Path Demo">
+    <StackLayout>
+        <Label Text="Path"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <Path Stroke="Black"
+              Aspect="Uniform"
+              HorizontalOptions="Center"
+              HeightRequest="100"
+              WidthRequest="100"
+              Data="M13.9,16.2
+                    L32,16.2 32,31.9 13.9,30.1Z
+                    M0,16.2
+                    L11.9,16.2 11.9,29.9 0,28.6Z
+                    M11.9,2
+                    L11.9,14.2 0,14.2 0,3.3Z
+                    M32,0
+                    L32,14.2 13.9,14.2 13.9,1.8Z" />
+       </StackLayout>
+</ContentPage>

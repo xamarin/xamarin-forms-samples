@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataBindingDemos"
+             x:Class="DataBindingDemos.MultiBindingFallbackValuePage"
+             Title="MultiBindings FallbackValue demo">
+    <ContentPage.Resources>
+        <local:StringConcatenationConverter x:Key="StringConcatConverter" />
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <local:GroupViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Margin="20">
+        <Label Text="Employees"
+               FontAttributes="Bold" />
+        <Label>
+            <Label.Text>
+                <MultiBinding FallbackValue="Name unavailable"
+                              TargetNullValue="Data unavailable"
+                              Converter="{StaticResource StringConcatConverter}">
+                    <Binding Path="Employee1.Forename" />
+                    <Binding Path="Employee1.MiddleName" />
+                    <Binding Path="Employee1.Surname" />
+                </MultiBinding>
+            </Label.Text>
+        </Label>
+        <Label>
+            <Label.Text>
+                <!-- This MultiBinding should return its FallbackValue,
+                     because the converter returns BindableProperty.UnsetValue -->
+                <MultiBinding FallbackValue="Name unavailable"
+                              TargetNullValue="Data unavailable"
+                              Converter="{StaticResource StringConcatConverter}">
+                    <Binding Path="Employee.Forename" />
+                    <Binding Path="Employee.MiddleName" />
+                    <Binding Path="Employee.Surname" />
+                </MultiBinding>
+            </Label.Text>
+        </Label>
+        <Label>
+            <Label.Text>
+                <MultiBinding FallbackValue="Name unavailable"
+                              TargetNullValue="Data unavailable"
+                              Converter="{StaticResource StringConcatConverter}">
+                    <Binding Path="Employee3.Forename" />
+                    <Binding Path="Employee3.MiddleName" />
+                    <Binding Path="Employee3.Surname" />
+                </MultiBinding>
+            </Label.Text>
+        </Label>
+        <Label>
+            <Label.Text>
+                <MultiBinding FallbackValue="Name unavailable"
+                              TargetNullValue="Data unavailable"
+                              Converter="{StaticResource StringConcatConverter}">
+                    <Binding Path="Employee4.Forename" />
+                    <Binding Path="Employee4.MiddleName" />
+                    <Binding Path="Employee4.Surname" />
+                </MultiBinding>
+            </Label.Text>
+        </Label>
+        <Label>
+            <Label.Text>
+                <MultiBinding FallbackValue="Name unavailable"
+                              TargetNullValue="Data unavailable"
+                              Converter="{StaticResource StringConcatConverter}">
+                    <Binding Path="Employee5.Forename" />
+                    <Binding Path="Employee5.MiddleName" />
+                    <Binding Path="Employee5.Surname" />
+                </MultiBinding>
+            </Label.Text>
+        </Label>
+        <Label>
+            <Label.Text>
+                <!-- This MultiBinding should return its FallbackValue,
+                     because the converter returns BindableProperty.UnsetValue -->
+                <MultiBinding FallbackValue="Name unavailable"
+                              TargetNullValue="Data unavailable"
+                              Converter="{StaticResource StringConcatConverter}">
+                    <Binding Path="Employee6.Forename" />
+                    <Binding Path="Employee6.MiddleName" />
+                    <Binding Path="Employee6.Surname" />
+                </MultiBinding>
+            </Label.Text>
+        </Label>
+    </StackLayout>
+</ContentPage>

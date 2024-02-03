@@ -3,7 +3,7 @@ using Android.App;
 using Android.Content;
 using Android.Graphics;
 using Android.OS;
-using Android.Support.V4.App;
+using AndroidX.Core.App;
 using Xamarin.Forms;
 using AndroidApp = Android.App.Application;
 
@@ -15,49 +15,53 @@ namespace LocalNotifications.Droid
         const string channelId = "default";
         const string channelName = "Default";
         const string channelDescription = "The default channel for notifications.";
-        const int pendingIntentId = 0;
 
         public const string TitleKey = "title";
         public const string MessageKey = "message";
 
         bool channelInitialized = false;
-        int messageId = -1;
+        int messageId = 0;
+        int pendingIntentId = 0;
+
         NotificationManager manager;
 
         public event EventHandler NotificationReceived;
 
+        public static AndroidNotificationManager Instance { get; private set; }
+
+        public AndroidNotificationManager() => Initialize();
+
         public void Initialize()
         {
-            CreateNotificationChannel();
+            if (Instance == null)
+            {
+                CreateNotificationChannel();
+                Instance = this;
+            }
         }
 
-        public int ScheduleNotification(string title, string message)
+        public void SendNotification(string title, string message, DateTime? notifyTime = null)
         {
             if (!channelInitialized)
             {
                 CreateNotificationChannel();
             }
 
-            messageId++;
+            if (notifyTime != null)
+            {
+                Intent intent = new Intent(AndroidApp.Context, typeof(AlarmHandler));
+                intent.PutExtra(TitleKey, title);
+                intent.PutExtra(MessageKey, message);
 
-            Intent intent = new Intent(AndroidApp.Context, typeof(MainActivity));
-            intent.PutExtra(TitleKey, title);
-            intent.PutExtra(MessageKey, message);
-
-            PendingIntent pendingIntent = PendingIntent.GetActivity(AndroidApp.Context, pendingIntentId, intent, PendingIntentFlags.OneShot);
-
-            NotificationCompat.Builder builder = new NotificationCompat.Builder(AndroidApp.Context, channelId)
-                .SetContentIntent(pendingIntent)
-                .SetContentTitle(title)
-                .SetContentText(message)
-                .SetLargeIcon(BitmapFactory.DecodeResource(AndroidApp.Context.Resources, Resource.Drawable.xamagonBlue))
-                .SetSmallIcon(Resource.Drawable.xamagonBlue)
-                .SetDefaults((int)NotificationDefaults.Sound | (int)NotificationDefaults.Vibrate);
-
-            Notification notification = builder.Build();
-            manager.Notify(messageId, notification);
-
-            return messageId;
+                PendingIntent pendingIntent = PendingIntent.GetBroadcast(AndroidApp.Context, pendingIntentId++, intent, PendingIntentFlags.CancelCurrent);
+                long triggerTime = GetNotifyTime(notifyTime.Value);
+                AlarmManager alarmManager = AndroidApp.Context.GetSystemService(Context.AlarmService) as AlarmManager;
+                alarmManager.Set(AlarmType.RtcWakeup, triggerTime, pendingIntent);
+            }
+            else
+            {
+                Show(title, message);
+            }
         }
 
         public void ReceiveNotification(string title, string message)
@@ -68,6 +72,34 @@ namespace LocalNotifications.Droid
                 Message = message,
             };
             NotificationReceived?.Invoke(null, args);
+        }
+
+        public void Show(string title, string message)
+        {
+            Intent intent = new Intent(AndroidApp.Context, typeof(MainActivity));
+            intent.PutExtra(TitleKey, title);
+            intent.PutExtra(MessageKey, message);
+
+            PendingIntent pendingIntent = PendingIntent.GetActivity(AndroidApp.Context, pendingIntentId++, intent, PendingIntentFlags.UpdateCurrent);
+
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(AndroidApp.Context, channelId)
+                .SetContentIntent(pendingIntent)
+                .SetContentTitle(title)
+                .SetContentText(message)
+                .SetLargeIcon(BitmapFactory.DecodeResource(AndroidApp.Context.Resources, Resource.Drawable.xamagonBlue))
+                .SetSmallIcon(Resource.Drawable.xamagonBlue)
+                .SetDefaults((int)NotificationDefaults.Sound | (int)NotificationDefaults.Vibrate);
+
+            Notification notification = builder.Build();
+            manager.Notify(messageId++, notification);
+        }
+
+        public void DeleteNotification(int id)
+        {
+            Intent intent = new Intent(AndroidApp.Context, typeof(AlarmHandler));
+            PendingIntent pendingIntent = PendingIntent.GetBroadcast(AndroidApp.Context, id, intent, PendingIntentFlags.CancelCurrent);
+            AlarmManager alarmManager = AndroidApp.Context.GetSystemService(Context.AlarmService) as AlarmManager;
+            alarmManager.Cancel(pendingIntent);
         }
 
         void CreateNotificationChannel()
@@ -85,6 +117,14 @@ namespace LocalNotifications.Droid
             }
 
             channelInitialized = true;
+        }
+
+        long GetNotifyTime(DateTime notifyTime)
+        {
+            DateTime utcTime = TimeZoneInfo.ConvertTimeToUtc(notifyTime);
+            double epochDiff = (new DateTime(1970, 1, 1) - DateTime.MinValue).TotalSeconds;
+            long utcAlarmTime = utcTime.AddSeconds(-epochDiff).Ticks / 10000;
+            return utcAlarmTime; // milliseconds
         }
     }
 }

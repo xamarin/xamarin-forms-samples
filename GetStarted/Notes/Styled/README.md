@@ -1,6 +1,6 @@
 ---
 name: Xamarin.Forms - Notes (styled)
-description: "A multi-page Xamarin.Forms application that's styled with XAML styles (get started)"
+description: "A Xamarin.Forms application that's styled with XAML styles (get started)"
 page_type: sample
 languages:
 - csharp
@@ -13,7 +13,7 @@ urlFragment: getstarted-notes-styled
 ---
 # Notes (styled)
 
-This sample demonstrates a multi-page Xamarin.Forms application that's styled with XAML styles.
+This sample demonstrates a Xamarin.Forms application that's styled with XAML styles.
 
 For more information about the sample see [Style a Cross-Platform Xamarin.Forms Application](https://docs.microsoft.com/xamarin/get-started/quickstarts/styled).
 

@@ -11,7 +11,7 @@ namespace LocalNotifications.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            // set a delegate to handle incoming notifications
+            // Set a delegate to handle incoming notifications.
             UNUserNotificationCenter.Current.Delegate = new iOSNotificationReceiver();
 
             LoadApplication(new App());

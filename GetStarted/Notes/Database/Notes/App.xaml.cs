@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
-using Xamarin.Forms;
 using Notes.Data;
+using Xamarin.Forms;
 
 namespace Notes
 {
@@ -9,6 +9,7 @@ namespace Notes
     {
         static NoteDatabase database;
 
+        // Create the database connection as a singleton.
         public static NoteDatabase Database
         {
             get
@@ -24,22 +25,19 @@ namespace Notes
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new NotesPage());
+            MainPage = new AppShell();
         }
 
         protected override void OnStart()
         {
-            // Handle when your app starts
         }
 
         protected override void OnSleep()
         {
-            // Handle when your app sleeps
         }
 
         protected override void OnResume()
         {
-            // Handle when your app resumes
         }
     }
 }

@@ -1,0 +1,9 @@
+pool:
+  vmImage: windows-2019
+steps:
+  - task: MSBuild@1
+    displayName: Build UWP samples
+    inputs:
+      solution: '**/*.UWP.csproj'
+      configuration: 'Debug'
+      msbuildArguments: '/restore /t:Build /p:AppxPackage=false /p:ContinuousIntegrationBuild=true /p:Deterministic=false'    

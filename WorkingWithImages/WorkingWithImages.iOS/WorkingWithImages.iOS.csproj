@@ -89,7 +89,7 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -168,6 +168,8 @@
   <ItemGroup>
     <BundleResource Include="Resources\csharp.png" />
     <BundleResource Include="Resources\xaml.png" />
+    <BundleResource Include="Resources\error.png" />
+    <BundleResource Include="Resources\loading.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="Resources\iTunesArtwork.png" />

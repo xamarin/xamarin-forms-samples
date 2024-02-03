@@ -2,12 +2,12 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Android.Support.V7.App;
+using AndroidX.AppCompat.App;
 using Notes.Droid.Models;
 using Notes.Droid.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
+using Toolbar = AndroidX.AppCompat.Widget.Toolbar;
 
 namespace Notes.Droid
 {
@@ -27,6 +27,11 @@ namespace Notes.Droid
             base.OnCreate(bundle);
 
             Forms.Init(this, bundle);
+
+            // Create app-level resource dictionary.
+            Xamarin.Forms.Application.Current = new Xamarin.Forms.Application();
+            Xamarin.Forms.Application.Current.Resources = new MyDictionary();
+
             Instance = this;
 
             SetContentView(Resource.Layout.Main);
@@ -35,10 +40,17 @@ namespace Notes.Droid
             SupportActionBar.Title = "Notes";
 
             FolderPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData));
-            Android.Support.V4.App.Fragment mainPage = new NotesPage().CreateSupportFragment(this);
+
+            NotesPage notesPage = new NotesPage()
+            {
+                // Set the parent so that the app-level resource dictionary can be located.
+                Parent = Xamarin.Forms.Application.Current
+            };
+            AndroidX.Fragment.App.Fragment notesPageFragment = notesPage.CreateSupportFragment(this);
+
             SupportFragmentManager
                 .BeginTransaction()
-                .Replace(Resource.Id.fragment_frame_layout, mainPage)
+                .Replace(Resource.Id.fragment_frame_layout, notesPageFragment)
                 .Commit();
 
             SupportFragmentManager.BackStackChanged += (sender, e) =>
@@ -48,6 +60,8 @@ namespace Notes.Droid
                 SupportActionBar.SetDisplayHomeAsUpEnabled(hasBack);
                 SupportActionBar.Title = hasBack ? "Note Entry" : "Notes";
             };
+
+            notesPage.Parent = null;
         }
 
         public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
@@ -62,15 +76,21 @@ namespace Notes.Droid
 
         public void NavigateToNoteEntryPage(Note note)
         {
-            Android.Support.V4.App.Fragment noteEntryPage = new NoteEntryPage
+            NoteEntryPage noteEntryPage = new NoteEntryPage
             {
-                BindingContext = note
-            }.CreateSupportFragment(this);
+                BindingContext = note,
+                // Set the parent so that the app-level resource dictionary can be located.
+                Parent = Xamarin.Forms.Application.Current
+            };
+
+            AndroidX.Fragment.App.Fragment noteEntryFragment = noteEntryPage.CreateSupportFragment(this);
             SupportFragmentManager
                 .BeginTransaction()
                 .AddToBackStack(null)
-                .Replace(Resource.Id.fragment_frame_layout, noteEntryPage)
+                .Replace(Resource.Id.fragment_frame_layout, noteEntryFragment)
                 .Commit();
+
+            noteEntryPage.Parent = null;
         }
 
         public void NavigateBack()

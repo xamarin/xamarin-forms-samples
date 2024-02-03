@@ -4,14 +4,17 @@
 		xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
 		x:Class="PlatformSpecifics.iOSBlurEffectPage" 
 		Title="Blur Effect">
-	<StackLayout Margin="20">
-		<AbsoluteLayout HorizontalOptions="Center">
-			<Image Source="monkeyface.png" />
-			<BoxView x:Name="boxView" ios:VisualElement.BlurEffect="ExtraLight" HeightRequest="300" WidthRequest="300" />
-		</AbsoluteLayout>
-		<Button Text="No Blur" Clicked="OnNoBlurButtonClicked" />
-		<Button Text="Extra Light Blur" Clicked="OnExtraLightBlurButtonClicked" />
-		<Button Text="Light Blur" Clicked="OnLightBlurButtonClicked" />
-		<Button Text="Dark Blur" Clicked="OnDarkBlurButtonClicked" />
-	</StackLayout>
+    <StackLayout Margin="20">
+        <Image x:Name="image"
+               Source="monkeyface.png"
+               ios:VisualElement.BlurEffect="ExtraLight" />
+        <Button Text="No Blur"
+                Clicked="OnNoBlurButtonClicked" />
+        <Button Text="Extra Light Blur"
+                Clicked="OnExtraLightBlurButtonClicked" />
+        <Button Text="Light Blur"
+                Clicked="OnLightBlurButtonClicked" />
+        <Button Text="Dark Blur"
+                Clicked="OnDarkBlurButtonClicked" />
+    </StackLayout>
 </ContentPage>

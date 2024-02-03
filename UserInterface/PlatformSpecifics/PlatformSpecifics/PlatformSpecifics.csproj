@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Faker.Net.Portable" Version="2.6.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
   </ItemGroup>
 
   <ItemGroup>
@@ -68,7 +68,7 @@
     <EmbeddedResource Update="UWP\XAML\TabbedPage\WindowsTabbedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="UWP\XAML\MasterDetailPage\WindowsMasterDetailPage.xaml">
+    <EmbeddedResource Update="UWP\XAML\FlyoutPage\WindowsFlyoutPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="UWP\XAML\TabbedPage\ContentPageOneInTabbedPage.xaml">
@@ -89,10 +89,7 @@
     <EmbeddedResource Update="UWP\XAML\NavigationPage\ContentPageOneInNavigationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="UWP\XAML\MasterDetailPage\ContentPageDetailPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="UWP\XAML\MasterDetailPage\ContentPageMasterPage.xaml">
+    <EmbeddedResource Update="UWP\XAML\FlyoutPage\ContentPageDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="UWP\XAML\CollapseStyleChangerContentView.xaml">

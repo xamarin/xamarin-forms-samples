@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DragAndDropGesture"
+             x:Class="DragAndDropGesture.MainPage"
+             Title="Drag and drop demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Drag and drop">
+                <TextCell Text="Text drag demo"
+                          Detail="Events"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:TextDragDemoPage}" />
+                <TextCell Text="Image drag demo"
+                          Detail="Events"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:ImageDragDemoPage}" />
+                <TextCell Text="Data package drag demo"
+                          Detail="Events"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:DataPackageDemoPage}" />
+                <TextCell Text="Data package drag demo"
+                          Detail="Commands"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:DataPackageCommandDemoPage}" />
+                <TextCell Text="Custom data package drag demo"
+                          Detail="Events"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CustomDataPackageDemoPage}" />
+                <TextCell Text="Custom data package drag demo"
+                          Detail="Commands"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:CustomDataPackageCommandDemoPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="BrushesDemos.Views.SolidColorBrushDemoPage"
+             Title="Solid color brush demos">
+    <ScrollView>
+        <StackLayout Margin="20">
+            <Label Text="SolidColorBrush (Predefined Brush)"
+                   FontAttributes="Bold" />
+             <Frame Margin="0,20,0,0"
+                    Background="{x:Static Brush.Indigo}"
+                    BorderColor="LightGray"
+                    HasShadow="True"
+                    CornerRadius="12"
+                    HeightRequest="120"
+                    WidthRequest="120" />                   
+            <Label Text="SolidColorBrush (Color)"
+                   FontAttributes="Bold" />
+            <Frame Margin="0,20,0,0"
+                   Background="DarkBlue"
+                   BorderColor="LightGray"
+                   HasShadow="True"
+                   CornerRadius="12"
+                   HeightRequest="120"
+                   WidthRequest="120" /> 
+            <Label Margin="0,20,0,0"
+                   Text="SolidColorBrush (Hex)"
+                   FontAttributes="Bold" />        
+            <Frame Margin="0,20,0,0"
+                   BorderColor="LightGray"
+                   Background="#FF9988"
+                   HasShadow="True"
+                   CornerRadius="12"
+                   HeightRequest="120"
+                   WidthRequest="120" />      
+            <Label Margin="0,20,0,0"
+                   Text="SolidColorBrush (Property Tag Syntax)"
+                   FontAttributes="Bold" />
+            <Frame Margin="0,20,0,0"
+                   BorderColor="LightGray"
+                   HasShadow="True"
+                   CornerRadius="12"
+                   HeightRequest="120"
+                   WidthRequest="120">
+                <Frame.Background>
+                    <SolidColorBrush Color="LightSteelBlue" />
+                </Frame.Background>
+            </Frame>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+

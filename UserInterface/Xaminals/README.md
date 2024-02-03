@@ -21,4 +21,3 @@ This sample demonstrates a Xamarin.Forms Shell application.
 For more information about this sample, see [Xamarin.Forms Shell](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/).
 
 ![Xaminals application screenshot](Screenshots/01All.png "Xaminals application screenshot")
-

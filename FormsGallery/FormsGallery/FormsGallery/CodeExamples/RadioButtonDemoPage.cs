@@ -20,22 +20,22 @@ namespace FormsGallery.CodeExamples
             fruitLabel = new Label { Text = "You have chosen:" };
             colorLabel = new Label { Text = "You have chosen:" };
 
-            RadioButton redRadioButton = new RadioButton { Text = "Red", TextColor = Color.Red, GroupName = "colors" };
+            RadioButton redRadioButton = new RadioButton { Content = "Red", TextColor = Color.Red, GroupName = "colors" };
             redRadioButton.CheckedChanged += OnColorsRadioButtonCheckedChanged;
-            RadioButton greenRadioButton = new RadioButton { Text = "Green", TextColor = Color.Green, GroupName = "colors" };
+            RadioButton greenRadioButton = new RadioButton { Content = "Green", TextColor = Color.Green, GroupName = "colors" };
             greenRadioButton.CheckedChanged += OnColorsRadioButtonCheckedChanged;
-            RadioButton blueRadioButton = new RadioButton { Text = "Blue", TextColor = Color.Blue, GroupName = "colors" };
+            RadioButton blueRadioButton = new RadioButton { Content = "Blue", TextColor = Color.Blue, GroupName = "colors" };
             blueRadioButton.CheckedChanged += OnColorsRadioButtonCheckedChanged;
-            RadioButton otherColorRadioButton = new RadioButton { Text = "Other", GroupName = "colors" };
+            RadioButton otherColorRadioButton = new RadioButton { Content = "Other", GroupName = "colors" };
             otherColorRadioButton.CheckedChanged += OnColorsRadioButtonCheckedChanged;
 
-            RadioButton appleRadioButton = new RadioButton { Text = "Apple", GroupName = "fruits" };
+            RadioButton appleRadioButton = new RadioButton { Content = "Apple", GroupName = "fruits" };
             appleRadioButton.CheckedChanged += OnFruitsRadioButtonCheckedChanged;
-            RadioButton bananaRadioButton = new RadioButton { Text = "Banana", GroupName = "fruits" };
+            RadioButton bananaRadioButton = new RadioButton { Content = "Banana", GroupName = "fruits" };
             bananaRadioButton.CheckedChanged += OnFruitsRadioButtonCheckedChanged;
-            RadioButton pineappleRadioButton = new RadioButton { Text = "Pineapple", GroupName = "fruits" };
+            RadioButton pineappleRadioButton = new RadioButton { Content = "Pineapple", GroupName = "fruits" };
             pineappleRadioButton.CheckedChanged += OnFruitsRadioButtonCheckedChanged;
-            RadioButton otherFruitRadioButton = new RadioButton { Text = "Other", GroupName = "fruits" };
+            RadioButton otherFruitRadioButton = new RadioButton { Content = "Other", GroupName = "fruits" };
             otherFruitRadioButton.CheckedChanged += OnFruitsRadioButtonCheckedChanged;
 
             // Build the page.
@@ -65,13 +65,13 @@ namespace FormsGallery.CodeExamples
         void OnColorsRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
             RadioButton button = sender as RadioButton;
-            colorLabel.Text = $"You have chosen: {button.Text}";
+            colorLabel.Text = $"You have chosen: {button.Content}";
         }
 
         void OnFruitsRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
         {
             RadioButton button = sender as RadioButton;
-            fruitLabel.Text = $"You have chosen: {button.Text}";
+            fruitLabel.Text = $"You have chosen: {button.Content}";
         }
     }
 }

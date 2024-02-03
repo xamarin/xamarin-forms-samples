@@ -4,11 +4,8 @@
              x:Class="CollectionViewDemos.Views.HorizontalGridPage"
              Title="Horizontal grid (DataTemplate)">
     <StackLayout Margin="20">
-        <CollectionView ItemsSource="{Binding Monkeys}">
-            <CollectionView.ItemsLayout>
-               <GridItemsLayout Orientation="Horizontal"
-                                Span="4" />
-            </CollectionView.ItemsLayout>
+        <CollectionView ItemsSource="{Binding Monkeys}"
+                        ItemsLayout="HorizontalGrid, 4">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">

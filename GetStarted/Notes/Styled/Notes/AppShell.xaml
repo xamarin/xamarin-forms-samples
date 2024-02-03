@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:Notes.Views"
+       x:Class="Notes.AppShell">
+
+    <Shell.Resources>
+        <!-- Style Shell elements -->
+        <Style x:Key="BaseStyle"
+                TargetType="Element">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="{StaticResource AppPrimaryColor}" />
+            <Setter Property="Shell.ForegroundColor"
+                    Value="{StaticResource SecondaryColor}" />
+            <Setter Property="Shell.TitleColor"
+                    Value="{StaticResource SecondaryColor}" />
+            <Setter Property="Shell.TabBarUnselectedColor"
+                    Value="#95FFFFFF"/>
+        </Style>
+        <Style TargetType="TabBar"
+               BasedOn="{StaticResource BaseStyle}" />
+    </Shell.Resources>
+
+    <!-- Display a bottom tab bar containing two tabs -->
+    <TabBar>
+        <ShellContent Title="Notes"
+                      Icon="icon_feed.png"
+                      ContentTemplate="{DataTemplate views:NotesPage}" />
+        <ShellContent Title="About"
+                      Icon="icon_about.png"
+                      ContentTemplate="{DataTemplate views:AboutPage}" />
+    </TabBar>
+</Shell>

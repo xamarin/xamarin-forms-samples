@@ -49,7 +49,7 @@ namespace PlatformSpecifics
                         new TextCell { Text = "VisualElement First Responder", Command = NavigateCommand, CommandParameter = typeof(iOSFirstResponderPageCS) },
                         new TextCell { Text = "TabbedPage Translucent TabBar", Command = NavigateCommand, CommandParameter = typeof(iOSTranslucentTabbedPageCS) },
                         new TextCell { Text = "SearchBar Style", Command = NavigateCommand, CommandParameter = typeof(iOSSearchBarPageCS) },
-                        new TextCell { Text = "MasterDetailPage Shadow", Command = NavigateCommand, CommandParameter = typeof(iOSMasterDetailPageCS) }
+                        new TextCell { Text = "FlyoutPage Shadow", Command = NavigateCommand, CommandParameter = typeof(iOSFlyoutPageCS) }
                     },
                     new TableSection("Android")
                     {
@@ -72,8 +72,8 @@ namespace PlatformSpecifics
                     {
                         new TextCell { Text = "TabbedPage Toolbar Location", Command = NavigateCommand, CommandParameter = typeof(WindowsTabbedPageCS) },
                         new TextCell { Text = "NavigationPage Toolbar Location", Command = NavigateCommand, CommandParameter = typeof(WindowsNavigationPageCS) },
-                        new TextCell { Text = "MasterDetailPage Toolbar Location", Command = NavigateCommand, CommandParameter = typeof(WindowsMasterDetailPageCS) },
-                        new TextCell { Text = "WebView JavaScript Alert", Command = NavigateCommand, CommandParameter = typeof(WindowsWebViewPageCS) },
+                        new TextCell { Text = "FlyoutPage Toolbar Location", Command = NavigateCommand, CommandParameter = typeof(WindowsFlyoutPageCS) },
+                        new TextCell { Text = "WebView JavaScript Alert, and Execution Mode", Command = NavigateCommand, CommandParameter = typeof(WindowsWebViewPageCS) },
                         new TextCell { Text = "Text Reading Order", Command = NavigateCommand, CommandParameter = typeof(WindowsReadingOrderPageCS) },
                         new TextCell { Text = "SearchBar Spell Check", Command = NavigateCommand, CommandParameter = typeof(WindowsSearchBarPageCS) },
                         new TextCell { Text = "VisualElement Legacy Color Mode", Command = NavigateCommand, CommandParameter = typeof(WindowsLegacyColorModePageCS) },

@@ -15,9 +15,6 @@ namespace DependencyServiceDemos.Droid
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(savedInstanceState);
             Instance = this;
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

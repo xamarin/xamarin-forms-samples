@@ -16,9 +16,6 @@ namespace LocalNotifications.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(savedInstanceState);
 
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
@@ -36,8 +33,8 @@ namespace LocalNotifications.Droid
         {
             if (intent?.Extras != null)
             {
-                string title = intent.Extras.GetString(AndroidNotificationManager.TitleKey);
-                string message = intent.Extras.GetString(AndroidNotificationManager.MessageKey);
+                string title = intent.GetStringExtra(AndroidNotificationManager.TitleKey);
+                string message = intent.GetStringExtra(AndroidNotificationManager.MessageKey);
 
                 DependencyService.Get<INotificationManager>().ReceiveNotification(title, message);
             }

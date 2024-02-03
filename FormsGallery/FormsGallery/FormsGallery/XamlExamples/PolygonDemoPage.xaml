@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsGallery.XamlExamples.PolygonDemoPage"
+             Title="Polygon Demo">
+    <StackLayout>
+        <Label Text="Polygon"
+               FontSize="50"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <Polygon Points="0 48, 0 144, 96 150, 100 0, 192 0, 192 96, 50 96, 48 192, 150 200 144 48"
+                 Fill="Blue"
+                 Stroke="Red"
+                 StrokeThickness="3"
+                 HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>
+

@@ -132,7 +132,7 @@
     <EmbeddedResource Update="XamlExamples\NavigationPageDemoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="XamlExamples\MasterDetailPageDemoPage.xaml">
+    <EmbeddedResource Update="XamlExamples\FlyoutPageDemoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="XamlExamples\CarouselPageDemoPage.xaml">
@@ -144,7 +144,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="5.0.0.1874" />
   </ItemGroup>
 </Project>

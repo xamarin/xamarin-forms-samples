@@ -2,9 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DotMatrixClock"
+             xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              x:Class="DotMatrixClock.MainPage"
              Padding="10"
-             SizeChanged="OnPageSizeChanged">
+             SizeChanged="OnPageSizeChanged"
+             iOS:Page.UseSafeArea="True">
 
     <AbsoluteLayout x:Name="absoluteLayout"
                     VerticalOptions="Center" />

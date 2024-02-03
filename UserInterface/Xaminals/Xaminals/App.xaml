@@ -5,16 +5,11 @@
              x:Class="Xaminals.App"
              windows:Application.ImageDirectory="Assets">
     <Application.Resources>
+
         <DataTemplate x:Key="AnimalTemplate">
-            <Grid Padding="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
+            <Grid Padding="10"
+                  RowDefinitions="Auto,Auto"
+                  ColumnDefinitions="Auto,Auto">
                 <Image Grid.RowSpan="2" 
                        Source="{Binding ImageUrl}" 
                        Aspect="AspectFill"
@@ -32,18 +27,15 @@
         </DataTemplate>
         
         <DataTemplate x:Key="AnimalSearchTemplate">
-            <Grid Padding="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.15*" />
-                    <ColumnDefinition Width="0.85*" />
-                </Grid.ColumnDefinitions>
-                <Image Source="{Binding ImageUrl}" 
-                       Aspect="AspectFill"
-                       HeightRequest="40" 
+            <Grid Padding="10"
+                  ColumnDefinitions="0.15*,0.85*">
+                <Image Source="{Binding ImageUrl}"
+                       HeightRequest="40"
                        WidthRequest="40" />
                 <Label Grid.Column="1" 
                        Text="{Binding Name}" 
-                       FontAttributes="Bold" />
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
             </Grid>
         </DataTemplate>
         

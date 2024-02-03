@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RelativeLayoutDemos.Views.SimpleOverlayDemoPage"
+             Title="Simple overlay demo">
+    <RelativeLayout>
+        <StackLayout Margin="20">
+            <Label Text="This might be a page of UI objects except that the only functional UI object on the page is a Button." />
+            <Button Text="Simulate 5-second work item"
+                    Clicked="OnButtonClicked" />
+        </StackLayout>
+
+        <!-- Overlay -->
+        <ContentView x:Name="overlay"
+                     BackgroundColor="#C0808080"
+                     IsVisible="False"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
+            <ProgressBar x:Name="progressBar"
+                         Margin="20"
+                         VerticalOptions="Center" />
+        </ContentView>
+    </RelativeLayout>
+</ContentPage>

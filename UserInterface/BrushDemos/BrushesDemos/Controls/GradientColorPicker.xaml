@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="BrushesDemos.Controls.GradientColorPicker">
+    <Grid>
+        <Grid Opacity="0.3"
+              BackgroundColor="Black" />
+        <Frame CornerRadius="12"
+               HasShadow="false"
+               Margin="35,25"
+               Padding="12"
+               BackgroundColor="White"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+            <StackLayout Spacing="10">
+                <ScrollView>
+                    <FlexLayout x:Name="colorsLayout"
+                                Direction="Row"
+                                JustifyContent="Center"
+                                Wrap="Wrap">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Grid HeightRequest="50"
+                                      WidthRequest="50">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnColorSourceTapped" />
+                                    </Grid.GestureRecognizers>
+                                    <BoxView Margin="5"
+                                             CornerRadius="12"
+                                             HeightRequest="50"
+                                             WidthRequest="50"
+                                             Color="{Binding Color}" />
+                                    <BoxView IsVisible="{Binding IsSelected}"
+                                             CornerRadius="6"
+                                             HeightRequest="12"
+                                             WidthRequest="12"
+                                             Color="White"
+                                             HorizontalOptions="Center"
+                                             VerticalOptions="Center" />
+                                </Grid>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </FlexLayout>
+                </ScrollView>
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="End">
+                    <Button Text="Cancel"
+                            BackgroundColor="Transparent"
+                            FontAttributes="Bold"
+                            TextColor="Purple"
+                            Clicked="OnCancelButtonClicked" />
+                    <Button Text="OK"
+                            BackgroundColor="Transparent"
+                            FontAttributes="Bold"
+                            TextColor="Purple"
+                            Clicked="OnOKButtonClicked" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentView>
